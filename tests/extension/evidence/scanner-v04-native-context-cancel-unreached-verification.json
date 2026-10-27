@@ -1,0 +1,32 @@
+{
+  "status": "UNREACHED",
+  "scope": "Real compact capture occurred but fixture never requested STOP; this is not a cancellation lifecycle pass. Hidden controller timer throttling is a hypothesis, not measured causality.",
+  "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+  "jobId": "c7829847-0037-4402-acfb-c1e7149c9e41",
+  "stopReason": "QUEUE_EXHAUSTED",
+  "fixtureErrors": [],
+  "verificationError": "AssertionError [ERR_ASSERTION]: Cancellation must be exercised, not inferred from natural completion.",
+  "strictPublicSchema": "PASS",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-unreached-evidence.json",
+      "bytes": 187525,
+      "sha256": "c23624dc09d5f23f0204645015a25b5fd8bc74c267ecb322dd0ca91ae997bf00"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-unreached-local-job.json",
+      "bytes": 35156,
+      "sha256": "e49f31da8d428addcf5ac28f95c3b0b11f626f235c2edcbebce8be61ae5ad4b2"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-unreached-capture.json",
+      "bytes": 22650,
+      "sha256": "ae6ed5cd2b9d37c67fce59acb385e6013046963191ca69c9e8ca504446c75379"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-unreached-environment.json",
+      "bytes": 1637,
+      "sha256": "b8184ef76964446f8081f04efe7d7fadbce7d041ad9da93e5c89999adc27b63e"
+    }
+  ]
+}

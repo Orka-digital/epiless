@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "scope": "One genuine native encoded-video current-profile control, same-build targeted site-content fix and recurrence. No normative, broad video, hardware or causal guarantee.",
+  "scannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "5d2e1616e4e42c65a69966be4f9fe97bd316baa04e99cedb6c1fd79b5af7bf8e",
+    "embeddedScannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c"
+  },
+  "anchor": {
+    "taskId": "4da15f47-2fc0-43a0-abca-7e2dbe402814",
+    "observationId": "66f697b4-ebb1-4ad2-977c-985fbc5d56e2",
+    "findingId": "candidate-1"
+  },
+  "comparison": {
+    "fixed": "NOT_OBSERVED",
+    "recurrence": "REOBSERVED"
+  },
+  "measurements": [
+    {
+      "jobId": "8b3c4a0b-83b5-4dd3-a54d-495555d5e225",
+      "observationId": "66f697b4-ebb1-4ad2-977c-985fbc5d56e2",
+      "fixed": false,
+      "frames": 307,
+      "fps": 59.98941363737461,
+      "maxGapMs": 18.399999618530273,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "phase": {
+        "start": {
+          "documentMs": 20387.10000038147,
+          "timelineMs": 20378.7,
+          "epochMs": 1793132692749.9001
+        },
+        "end": {
+          "documentMs": 25508.20000076294,
+          "timelineMs": 25495.7,
+          "epochMs": 1793132697871
+        },
+        "mode": "DOCUMENT",
+        "animationCount": 1
+      },
+      "postMeasurementRestoration": []
+    },
+    {
+      "jobId": "30158b47-5152-4088-afbc-f29f2c7103d1",
+      "observationId": "ffd784eb-e0cf-411f-a99f-19c39d66bce1",
+      "fixed": true,
+      "frames": 315,
+      "fps": 59.99465015639821,
+      "maxGapMs": 18.299999237060547,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "phase": {
+        "start": {
+          "documentMs": 20267.5,
+          "timelineMs": 20253.7,
+          "epochMs": 1793132816444.2
+        },
+        "end": {
+          "documentMs": 25513.599999427795,
+          "timelineMs": 25504.8,
+          "epochMs": 1793132821690.3
+        },
+        "mode": "DOCUMENT",
+        "animationCount": 1
+      },
+      "postMeasurementRestoration": [
+        {
+          "atEpochMs": 1793132821699.4,
+          "afterMeasurementMs": 8.099853515625,
+          "afterObservationMs": 7.39990234375,
+          "restoredTimeMs": 0
+        }
+      ]
+    },
+    {
+      "jobId": "ad1a026f-ea8a-462c-9b50-58c11ba33afe",
+      "observationId": "b5f3c082-fbfe-4253-8771-3eac66b4caae",
+      "fixed": false,
+      "frames": 315,
+      "fps": 59.991211474200945,
+      "maxGapMs": 18,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "phase": {
+        "start": {
+          "documentMs": 20274.39999961853,
+          "timelineMs": 20272,
+          "epochMs": 1793132977191.5999
+        },
+        "end": {
+          "documentMs": 25512.800000190735,
+          "timelineMs": 25506.1,
+          "epochMs": 1793132982430
+        },
+        "mode": "DOCUMENT",
+        "animationCount": 1
+      },
+      "postMeasurementRestoration": [
+        {
+          "atEpochMs": 1793132982443.5999,
+          "afterMeasurementMs": 12.699951171875,
+          "afterObservationMs": 9.599853515625,
+          "restoredTimeMs": 0
+        }
+      ]
+    }
+  ],
+  "independentDocuments": [
+    {
+      "documentId": "d4ae0499-fabf-4cde-a0db-3f0ca12352e0",
+      "sourceSha256": "03bf0717f3b337b11a91c92f7caa31337a38d0644b795a8ae7e3ea4e74240092",
+      "servedHtmlSha256": "ecb61897f61687095167db53641fc961cc1b851ed56b4205d026ede9b476bfb1"
+    },
+    {
+      "documentId": "c6ecf772-4bd5-4852-aaff-e4eb13de2de9",
+      "sourceSha256": "f43fcae9859f69770c5726639bb681c67d333e95a576d51d7de0443de1a8248f",
+      "servedHtmlSha256": "1bef2a617b11da813c9c464f76d61db4120bcf89c464e3f2d212ccc7e9f55559"
+    },
+    {
+      "documentId": "572c6684-6300-4970-8551-aa741b3c575c",
+      "sourceSha256": "03bf0717f3b337b11a91c92f7caa31337a38d0644b795a8ae7e3ea4e74240092",
+      "servedHtmlSha256": "638480053126aa010e8f8e06da8370331ee6bfe8696fcd0d3808a3917ed7c9eb"
+    }
+  ],
+  "sourceIdentity": "The same URL intentionally serves different source bytes during the fix. Independent manifest/request hashes prove this fixture change; the scanner only proves locator and observed media-interval compatibility.",
+  "sourceManifestSha256": "c6ffd34d863227489ea8bcd3924cc5e520f9e67ca11bac05a3f9f2c076acb73c"
+}

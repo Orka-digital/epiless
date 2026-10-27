@@ -1,0 +1,32 @@
+{
+  "mode": "cancel",
+  "origin": "http://127.0.0.1:62694",
+  "preparedAt": "2026-10-27T17:27:54.703Z",
+  "headless": false,
+  "playwrightAttached": false,
+  "machine": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "extensionBuild": {
+    "productionSha256": "920ccf2b2eab127b6c1f700a95eb2ab78bced93c7b97d26b7d7d75a008b61071",
+    "instrumentedSha256": "ccc25dc5ba2243911082362ae44d623f61c2db31fc729011d6ad8d4a6f68788d",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "b074a6f64f3903ed0e51e3fcea0e866a20226c377a169731b409218793f558ba",
+      "native-context-controller.js": "c89e728b042fc0de2dd46eaeb4c6bd1381cd2e0aa980152a577661ee5b4a02cf",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "5462d5a6e77087f6ac35913066ac3f5f41d90273171d44512526669c1342f00c"
+    }
+  },
+  "instrumentation": "Copied-build passive Worker message/real-stream observers; no frame reads, modification or synthesis. Separate extension page queries actual state and performs the selected zoom/resize or STOP. Production manifest and permissions unchanged. Actual toolbar authorization required. Instrumented run is not a throughput benchmark.",
+  "clock": "Date.now receipt/action epochs, not exact compositor exposure time."
+}

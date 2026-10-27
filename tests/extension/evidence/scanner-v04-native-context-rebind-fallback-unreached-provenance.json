@@ -1,0 +1,132 @@
+{
+  "classification": "FALLBACK_UNREACHED_NO_EXECUTED_LAYOUT_REBIND",
+  "recordedAt": "2026-10-27T20:24:10.755702+00:00",
+  "jobId": "b74246f9-c60b-4c75-ace0-029a9a489ad6",
+  "scannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c",
+  "extensionBuild": {
+    "productionSha256": "ea2a1d2e23e7c5c022f7c428c3d126a2fcf26241362844dc8e98e0f81c5b9288",
+    "instrumentedSha256": "43e7261ddf717c198585db26da878f86251436d5d1a9495d748d7b634bb3949b",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "b4b7c4ff6a656ae9f9e3745b2f0f5f82997e49770fe76e3b60fc883ad7314a7d",
+      "native-context-controller.js": "e5aee12578d92827ec23919160423b5c3783d2b7c0e52d2755331ae8ebd8bea6",
+      "native-context-background.js": "edf2a72d9e4bacf63763d9508e7b0fa2f4d2db37c4c639eed3db48de79fbc602",
+      "native-context-tab-switch.mjs": "8bfe8bd5d64af7beafb52f52c03fc4cf83109098b69e66772bc448386a53abde",
+      "native-context-placeholder.html": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622"
+    }
+  },
+  "files": [
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-q2IYgS/evidence.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-fallback-unreached-evidence.json",
+      "bytes": 220561,
+      "sha256": "fe2483d1637e8b7e7c548d8982b477f967d8a0cd921854d5e80b46040704f597"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-q2IYgS/report.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-fallback-unreached-capture.json",
+      "bytes": 21194,
+      "sha256": "a6b1c76942c9d083f43e9f4f8541a65a2b75a96cedf038f0222dffdaeb645b61"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-q2IYgS/local-job.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-fallback-unreached-local-job.json",
+      "bytes": 57141,
+      "sha256": "019153094f5976e96a8339e60e510d236163455973d3f1e3d253136b9e67dae4"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-q2IYgS/environment-start.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-fallback-unreached-environment.json",
+      "bytes": 2041,
+      "sha256": "7ccc6eba9a8579d6c62e7a9c514f1c862c8f911203c12dde89412c3f5ddca696"
+    }
+  ],
+  "verification": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-rebind-fallback-unreached-verification.json",
+    "sha256": "56362b02fb834fbc3c328bb2e445642cc56c663728693e2c8c9956035082e031"
+  },
+  "fixtureSources": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-rebind-fallback-unreached-fixture-sources.json.gz",
+    "sha256": "9b73c041df612d5f26b3e2c6df614596be55d039eca0ccdd2ce2f006d37d70d0",
+    "fileCount": 8,
+    "reconstruction": "gzip-decompress JSON; exact UTF-8 text entries, byte lengths and SHA256 match all eight environment fixture-source identities."
+  },
+  "scannerSources": {
+    "file": "tests/extension/evidence/scanner-v04-7fc0a67c-source.json.gz",
+    "sha256": "fbe6e1b11616dca631607ab06204673e061d2dfb63dd3f3699d6e781f46aaf35",
+    "fileCount": 69,
+    "recomputedScannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c"
+  },
+  "observed": {
+    "jobState": "INTERRUPTED",
+    "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+    "rebindPhaseEvents": [],
+    "placeholderCreationOrActivationObserved": false,
+    "beforeViewport": {
+      "at": 1793132416231,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    "afterViewport": {
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "scrollX": 0,
+      "scrollY": 0,
+      "visualScale": 1,
+      "visualOffsetLeft": 0,
+      "visualOffsetTop": 0
+    },
+    "afterTab": {
+      "id": 717291044,
+      "windowId": 717291041,
+      "index": 2,
+      "active": false
+    },
+    "originalWindowId": 717291041,
+    "foregroundPreserved": true,
+    "workspaceStillOpen": false,
+    "retainedOwnershipKeys": [],
+    "debuggerDetached": true,
+    "capturedTabs": [
+      {
+        "tabId": 717291044,
+        "status": "stopped",
+        "fullscreen": false
+      }
+    ],
+    "tracks": {
+      "context": "OPEN",
+      "at": 1793132497025,
+      "streams": [
+        {
+          "active": false,
+          "tracks": [
+            {
+              "readyState": "ended",
+              "settings": {}
+            }
+          ]
+        },
+        {
+          "active": false,
+          "tracks": [
+            {
+              "readyState": "ended",
+              "settings": {}
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interpretation": "No persisted REBIND phase or rebind residue was observed. The source returned inactive to its original window/index and the workspace closed, but actual CSS remained 900x450 versus pre-capture 900x507. Therefore the fallback helper was not demonstrably executed and this is not an executed layout-rebind result. The canRebind eligibility path remains under separate investigation; this archive does not assign an unproven root cause. Foreground was preserved, real tracks ended, debugger detached and ownership records cleared. The strict cancellation verifier failed and the public report schema passed.",
+  "retention": "Byte-exact raw metadata and numeric diagnostics; no screenshots/raw frames/browser profile archived. Production source and fixture snapshots are separately hash bound."
+}

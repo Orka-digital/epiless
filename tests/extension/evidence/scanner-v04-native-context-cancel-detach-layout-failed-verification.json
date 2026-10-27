@@ -1,0 +1,31 @@
+{
+  "status": "FAILED",
+  "scope": "Confirmed native producer/debugger release and ownership return; measured pre-attach CSS height still not restored. Strict native cancellation gate remains failed.",
+  "scannerBuildSha256": "af5d4da032b7a92cfbb090a1fe59adfc4601334d0d3547e6a5b9ff776c9637ce",
+  "jobId": "5216d3b8-048a-420b-b09c-62044ea8e58c",
+  "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+  "strictPublicSchema": "PASS",
+  "verificationError": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'INTERRUPTED'\n- 'PARTIAL'\n",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-detach-layout-failed-evidence.json",
+      "bytes": 189619,
+      "sha256": "8ff50974edfb336b521fff4fe0c3ebf9e6fc697e9f5d1928601f12e320d0b2c0"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-detach-layout-failed-local-job.json",
+      "bytes": 31900,
+      "sha256": "c89487f5a7b3150ab711da727a0e21b3f0aa84c7a1bba329b76b6bf579386995"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-detach-layout-failed-capture.json",
+      "bytes": 21277,
+      "sha256": "5f2b2003fa29bf01f60fabe80f74303b563c3c2dc1d3f601d3d98135f4147bf6"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-detach-layout-failed-environment.json",
+      "bytes": 1637,
+      "sha256": "64b42beeef5471aecb68a1c03b23c21437a84ac9acf9eb4bc828def1b80e504a"
+    }
+  ]
+}

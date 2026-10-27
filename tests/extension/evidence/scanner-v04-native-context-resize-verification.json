@@ -1,0 +1,69 @@
+{
+  "mode": "resize",
+  "jobId": "5516b2ae-82a4-4502-a037-c56724e1c8bf",
+  "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+  "productionBundleSha256": "cf73f5e64a74c80499467a15db38d537e7d1a715ac33406011cc0af6df82f269",
+  "instrumentedBundleSha256": "e6445d653bdd6f9716552abde3f393f82d8739c0fba96112bd22a6f87af476bd",
+  "segmentId": "f27284a1-34bb-41e9-95bb-01ef94ed7e0c",
+  "candidateId": "candidate-1",
+  "candidateRetained": true,
+  "cssReferenceRemoved": true,
+  "endpointGeometryRestored": true,
+  "quality": {
+    "frameCount": 306,
+    "effectiveFps": 59.79923142612003,
+    "maxGapMs": 33.5,
+    "width": 1200,
+    "height": 1014,
+    "downsampled": false,
+    "interrupted": true,
+    "spatial": {
+      "mode": "NATIVE_PIXELS",
+      "sourceWidth": 1200,
+      "sourceHeight": 1014,
+      "retainedResolutionRatio": 1,
+      "stateBytes": 118788886,
+      "stateBudgetBytes": 268435456,
+      "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+      "colorAssumption": "SDR_SRGB_8BIT"
+    },
+    "processing": {
+      "measuredFrames": 306,
+      "meanMs": 6.079738514096129,
+      "maxMs": 56.60000038146973,
+      "framesOver16_7Ms": 2,
+      "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+      "conversionMeanMs": 3.011764697779238,
+      "analysisMeanMs": 3.063071852415995,
+      "conversionMethods": [
+        "VIDEOFRAME_COPY_RGBA"
+      ],
+      "decoded": {
+        "codedWidth": 1200,
+        "codedHeight": 1014,
+        "displayWidth": 1200,
+        "displayHeight": 1014,
+        "visibleRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1200,
+          "height": 1014
+        },
+        "format": "I420",
+        "primaries": "bt709",
+        "transfer": "bt709",
+        "matrix": "bt709"
+      },
+      "track": {
+        "width": 1200,
+        "height": 1014,
+        "frameRate": 60,
+        "resizeMode": "none"
+      }
+    },
+    "captureWindowMs": 5111.5,
+    "leadingIdleMs": 0.5,
+    "trailingIdleMs": 10.800000190734863
+  },
+  "scope": "Instrumented real-toolbar transient context guard; no uninterrupted-capture or performance claim."
+}

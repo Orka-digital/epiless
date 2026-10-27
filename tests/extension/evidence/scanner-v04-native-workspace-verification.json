@@ -1,0 +1,25 @@
+{
+  "scope": "One actual PHYSICAL compact workspace: known sampled pixels, adequate compact cadence and sampled focus/restoration; no whole-job or device-matrix claim.",
+  "scannerBuildSha256": "3be52f9f550fd43e528459133bc147a3b28130f22ef563f303b6a46327ddd640",
+  "jobId": "9ca26618-fc49-4715-a23d-25d6018c745a",
+  "jobState": "PARTIAL",
+  "compact": [
+    {
+      "scenario": "compact-viewport",
+      "frames": 300,
+      "fps": 59.99077064607759,
+      "width": 1200,
+      "height": 900
+    },
+    {
+      "scenario": "compact-accordion",
+      "frames": 307,
+      "fps": 59.98941363737461,
+      "width": 1200,
+      "height": 900
+    }
+  ],
+  "cornerTolerancePerChannel": 4,
+  "focusEvidence": "One-second state-change samples; separate browser helper verifies activation/focus events.",
+  "restoration": "Original outer window and inactive target retained. CSS matches the debugger-attached measurement baseline; pre-start geometry after notice removal is not inferred."
+}

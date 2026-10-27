@@ -1,0 +1,13 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "27863be33776031e995c6839ad1cf8ea1436342e0ee4dfad4d65bea3f27bea5f"
+  },
+  "fixture": "static content plus low-contrast 4px marker moving slowly without flashes",
+  "headless": false,
+  "interpretation": "Initial native 0.4 performance failure, not release acceptance. Real toolbar capture on non-flashing fixture; source resolution 6720x3780 unexpectedly differs from emulated CSS viewport1150x850. 6.36fps with800skippedframes. Investigation pending.",
+  "concurrentWork": "Other local automated browser and FFV1 reference validation jobs were running; this is not an isolated throughput benchmark."
+}

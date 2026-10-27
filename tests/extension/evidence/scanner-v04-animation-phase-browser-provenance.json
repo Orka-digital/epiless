@@ -1,0 +1,15 @@
+{
+  "scope": "Actual Chrome document/WAAPI/colour sampling; synthetic pixel findings, candidate frame clock and quality. Not native tabCapture evidence.",
+  "evidenceSha256": "4ac646b0b47eae37c2348864173728755bb454fe411a82150952f969bb269374",
+  "executedBundleHashes": {
+    "nodeBundleSha256": "e659d577c279204363e3949e26bae6ff0e8ee195db5bf5a4756cf8bb090766bc",
+    "contentBundleSha256": "bab8932b773ce8674f733423f52a3c68fc06357a019279967b5086e7ba40ab01",
+    "fixtureScriptSha256": "5851c134e27cf8a7fb1929438295d6aeb38c57e243fd0931520fd155759426d3"
+  },
+  "sourceFiles": {
+    "apps/chrome-extension/src/animation-phase.ts": "40f80a985de4b648a7cd596d7d15c751f57682f7b555ba18a59f8047eb5812d7",
+    "apps/chrome-extension/src/animation-phase-content.ts": "80548d904dbcd17912e020ed070817df62f86c8a2ba1164c1c3cd3e9a9b1bad3",
+    "apps/chrome-extension/src/verification.ts": "3533d5663c064500d1f11fea90c6e0cf8017bd40d820f87ab98726b961080e9d",
+    "tests/extension/animation-phase-browser.mjs": "5851c134e27cf8a7fb1929438295d6aeb38c57e243fd0931520fd155759426d3"
+  }
+}

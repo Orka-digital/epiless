@@ -1,0 +1,183 @@
+{
+  "status": "FAILED_NATIVE_GEOMETRY_RESTORE",
+  "recordedAt": "2026-10-27T19:26:03.106892+00:00",
+  "scannerBuildSha256": "8bb425ee27efea6a506866825a951dab8713b4efdfe2f3d98e7153159c77cda2",
+  "extensionBuild": {
+    "productionSha256": "16edc8a030f75b85c428e20b40a80174a77793b6a7e0f6dedbebccb00be218f3",
+    "instrumentedSha256": "6716d62a4f6e1b7ee93a9a518cd03122b3cdd96001a4cdc273cdbe96940ef2d5",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "8b2ea567aa3ae26b56464dc85bcfd8fd6cb6bace08c1327ad36a215722085440",
+      "native-context-controller.js": "c89e728b042fc0de2dd46eaeb4c6bd1381cd2e0aa980152a577661ee5b4a02cf",
+      "native-context-background.js": "c33725e186616fe9706546d8c405dade366c257848a77079084fa83f53a1e9ca",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "5462d5a6e77087f6ac35913066ac3f5f41d90273171d44512526669c1342f00c"
+    }
+  },
+  "jobId": "c928e2fa-5a48-49eb-993a-f9a3150e54cf",
+  "files": [
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-Tv9exS/evidence.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-notice-wait-failed-evidence.json",
+      "bytes": 255689,
+      "sha256": "71f2ed68208f680d9bf511ed288b35698eae4e7e6cd3eeeedb60c6ab71012622"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-Tv9exS/report.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-notice-wait-failed-capture.json",
+      "bytes": 21251,
+      "sha256": "763f89fd072944be357c8f7676e88fecf2540ea67b657e522a5adafb17375fca"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-Tv9exS/local-job.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-notice-wait-failed-local-job.json",
+      "bytes": 34620,
+      "sha256": "395090739fb12985c92daad6314a566f7b493e6de667da50ebbba95f2d9a3ff7"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-Tv9exS/environment-start.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-notice-wait-failed-environment.json",
+      "bytes": 1769,
+      "sha256": "72cda5442eba8d2063615947896208831627529e4aed3cf2664c597932cb7470"
+    }
+  ],
+  "verification": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-cancel-notice-wait-failed-verification.json",
+    "sha256": "1d51866f8074425e80ebdeb9ca0931360bf0e62fb7b5a4e1243916f14f0afca6"
+  },
+  "candidateSources": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-cancel-notice-wait-failed-candidate-sources.json.gz",
+    "sha256": "5af4dfe870615f864636ac9231617b3af24bb4258b4fcf7ef10224aa9592b2da",
+    "files": {
+      "apps/chrome-extension/src/viewport-driver.ts": "ee82d5fbc38f0ed8dbeb5f7b1a74d50a064828bc0ea796daa8291d56bf5d5980",
+      "apps/chrome-extension/src/viewport-workspace.ts": "6e655e0e8a987ae2cb42e6c8ab591257335ea6199e6fdebf4960f23da842016a",
+      "tests/extension/viewport-driver.test.ts": "b9311bde8dd3fe6f6a0237532e71b75238f7de3426d7217c5e20421293e10f7c",
+      "tests/extension/viewport-workspace.test.ts": "7b3dde517089ae1f9151c9594bb07f09152967f5860fd121fd30247e05da8563"
+    },
+    "reconstruction": "gzip-decompress JSON; each entry text reconstructs the exact four scoped candidate source/test files."
+  },
+  "timingAndGeometry": {
+    "stopRequestedEpochMs": 1793128962991,
+    "debuggerDetachReplyEpochMs": 1793128963307,
+    "terminalJobEndedEpochMs": 1793128970360.0,
+    "detachToTerminalMs": 7053.0,
+    "preAttachViewport": {
+      "at": 1793128922556,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    "expected": {
+      "dpr": 2,
+      "height": 507,
+      "width": 900
+    },
+    "actualFinal": {
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "scrollX": 0,
+      "scrollY": 0,
+      "visualScale": 1,
+      "visualOffsetLeft": 0,
+      "visualOffsetTop": 0
+    },
+    "actualAfterNoticeDelay": [
+      {
+        "at": 1793128968047,
+        "width": 900,
+        "height": 450,
+        "dpr": 2,
+        "outerWidth": 600,
+        "outerHeight": 650,
+        "visibility": "hidden"
+      },
+      {
+        "at": 1793128969047,
+        "width": 900,
+        "height": 450,
+        "dpr": 2,
+        "outerWidth": 600,
+        "outerHeight": 650,
+        "visibility": "hidden"
+      },
+      {
+        "at": 1793128970047,
+        "width": 900,
+        "height": 450,
+        "dpr": 2,
+        "outerWidth": 600,
+        "outerHeight": 650,
+        "visibility": "hidden"
+      }
+    ],
+    "finalResources": {
+      "tab": {
+        "id": 1669550531,
+        "windowId": 1669550528,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1669550528,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1669550528,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1669550532,
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1669550531,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "ownershipKeys": [],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793129017051,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "interpretation": "The actual debugger detach reply precedes terminal failure by7053ms. The7s candidate really outlasted the known5s browser notice delay, yet actual CSS stayed900x450 instead of measured900x507. Delay alone does not explain or solve the defect. An occluded renderer/layout update remains a hypothesis; no focus/visibility diagnostic was performed in this proof.",
+  "retention": "Original metadata/numeric diagnostics only; no raw frames or screenshots retained in this bundle.",
+  "primarySources": [
+    "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.4/chrome/browser/extensions/api/debugger/extension_dev_tools_infobar_delegate.h",
+    "https://raw.githubusercontent.com/chromium/chromium/156.0.8078.4/chrome/browser/extensions/api/debugger/debugger_apitest.cc"
+  ]
+}

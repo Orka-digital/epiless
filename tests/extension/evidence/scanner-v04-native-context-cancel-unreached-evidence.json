@@ -1,0 +1,7112 @@
+{
+  "schemaVersion": 1,
+  "mode": "cancel",
+  "events": [
+    {
+      "at": 1793120223626,
+      "kind": "REAL_STREAM_CREATED"
+    },
+    {
+      "at": 1793120223760,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "028de0b8-6509-451f-aefd-4d11f5949816",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120223836,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "028de0b8-6509-451f-aefd-4d11f5949816",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120224283,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "028de0b8-6509-451f-aefd-4d11f5949816",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120224783,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "028de0b8-6509-451f-aefd-4d11f5949816",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120225283,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "028de0b8-6509-451f-aefd-4d11f5949816",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120225571,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "028de0b8-6509-451f-aefd-4d11f5949816",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120225571,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "028de0b8-6509-451f-aefd-4d11f5949816",
+      "kind": "WORKER_RESULT",
+      "frames": 107,
+      "findings": [],
+      "quality": {
+        "frameCount": 107,
+        "effectiveFps": 60.005660911406736,
+        "maxGapMs": 22.200000762939453,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 107,
+          "meanMs": 7.128037336830781,
+          "maxMs": 40.39999961853027,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.2635513466095256,
+          "analysisMeanMs": 3.8616822501209294,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120225581,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120225636,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120226100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120226600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120227100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120227600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120228100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120228600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120229100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120229600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120230100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120230600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120231100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 330
+    },
+    {
+      "at": 1793120231600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 360
+    },
+    {
+      "at": 1793120232100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 390
+    },
+    {
+      "at": 1793120232600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 420
+    },
+    {
+      "at": 1793120233100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 450
+    },
+    {
+      "at": 1793120233600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 480
+    },
+    {
+      "at": 1793120234100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 510
+    },
+    {
+      "at": 1793120234600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 540
+    },
+    {
+      "at": 1793120235100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 570
+    },
+    {
+      "at": 1793120235600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 600
+    },
+    {
+      "at": 1793120236100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 630
+    },
+    {
+      "at": 1793120236600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 660
+    },
+    {
+      "at": 1793120237100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 690
+    },
+    {
+      "at": 1793120237600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 720
+    },
+    {
+      "at": 1793120238100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 750
+    },
+    {
+      "at": 1793120238600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 780
+    },
+    {
+      "at": 1793120239100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 810
+    },
+    {
+      "at": 1793120239600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 840
+    },
+    {
+      "at": 1793120240100,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 870
+    },
+    {
+      "at": 1793120240600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "FRAME_DONE",
+      "frames": 900
+    },
+    {
+      "at": 1793120240600,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120240601,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+      "kind": "WORKER_RESULT",
+      "frames": 900,
+      "findings": [],
+      "quality": {
+        "frameCount": 900,
+        "effectiveFps": 59.999733035603924,
+        "maxGapMs": 18,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 900,
+          "meanMs": 6.738333318498399,
+          "maxMs": 25.699999809265137,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.1947777525583905,
+          "analysisMeanMs": 3.537777787314521,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120240610,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120240656,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120241117,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120241619,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120242117,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120242617,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120243117,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120243618,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120244117,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120244249,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120244251,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+      "kind": "WORKER_RESULT",
+      "frames": 218,
+      "findings": [],
+      "quality": {
+        "frameCount": 218,
+        "effectiveFps": 59.99778809681385,
+        "maxGapMs": 17.90000057220459,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 218,
+          "meanMs": 6.846330231482829,
+          "maxMs": 28.199999809265137,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.1743118916082818,
+          "analysisMeanMs": 3.6651376059295933,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120244259,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120244307,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120244767,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120245268,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120245767,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120246268,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120246766,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120247268,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120247677,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120247677,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "6a354408-cecf-436c-b1ed-c16904d95454",
+      "kind": "WORKER_RESULT",
+      "frames": 204,
+      "findings": [],
+      "quality": {
+        "frameCount": 204,
+        "effectiveFps": 59.99527130190141,
+        "maxGapMs": 18.200000762939453,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 204,
+          "meanMs": 6.7700980130363915,
+          "maxMs": 29.09999942779541,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.1553920998292813,
+          "analysisMeanMs": 3.6102941410214293,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120247686,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120247725,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120248184,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120248684,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120249185,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120249684,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120250185,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120250684,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120251184,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120251685,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120252184,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120252685,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120252801,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120252801,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "f212d6dd-4b8c-4858-80dd-653889405823",
+      "kind": "WORKER_RESULT",
+      "frames": 307,
+      "findings": [],
+      "quality": {
+        "frameCount": 307,
+        "effectiveFps": 60.00235303120817,
+        "maxGapMs": 18.300000190734863,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 307,
+          "meanMs": 6.811074909247482,
+          "maxMs": 30.600000381469727,
+          "framesOver16_7Ms": 2,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.1964169418384665,
+          "analysisMeanMs": 3.6107491670291663,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120252811,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120252857,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120253318,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120253820,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120254318,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120254819,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120255318,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120255818,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120256318,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120256819,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120257318,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120257818,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120258319,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 330
+    },
+    {
+      "at": 1793120258818,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 360
+    },
+    {
+      "at": 1793120259319,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 390
+    },
+    {
+      "at": 1793120259817,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120259818,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "FRAME_DONE",
+      "frames": 420
+    },
+    {
+      "at": 1793120259819,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "WORKER_RESULT",
+      "frames": 420,
+      "findings": [],
+      "quality": {
+        "frameCount": 420,
+        "effectiveFps": 59.99856805326842,
+        "maxGapMs": 17.800000190734863,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 420,
+          "meanMs": 6.755714243934268,
+          "maxMs": 28.800000190734863,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.1938094729468935,
+          "analysisMeanMs": 3.5583333514985585,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120260599,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120261674,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120261696,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+      "kind": "REAL_STREAM_CREATED"
+    },
+    {
+      "at": 1793120261716,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 600,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120261771,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120262234,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120262734,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120263234,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120263734,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120264234,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120264733,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120265233,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120265734,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120266234,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120266734,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120266735,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120266735,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+      "kind": "WORKER_RESULT",
+      "frames": 300,
+      "findings": [],
+      "quality": {
+        "frameCount": 300,
+        "effectiveFps": 59.99317802637927,
+        "maxGapMs": 17.800000190734863,
+        "width": 1200,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1200,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 107415586,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 300,
+          "meanMs": 5.1833333396911625,
+          "maxMs": 25.09999942779541,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 2.720666650136312,
+          "analysisMeanMs": 2.458666690190633,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1200,
+            "codedHeight": 900,
+            "displayWidth": 1200,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1200,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120266746,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 600,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120266781,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120267251,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120267751,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120268250,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120268751,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120269251,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120269750,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120270251,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120270750,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120271250,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120271750,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120271868,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120271868,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "WORKER_RESULT",
+      "frames": 307,
+      "findings": [],
+      "quality": {
+        "frameCount": 307,
+        "effectiveFps": 59.996470804810244,
+        "maxGapMs": 17.800000190734863,
+        "width": 1200,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1200,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 107415586,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 307,
+          "meanMs": 5.100977186271344,
+          "maxMs": 18.200000762939453,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 2.687947829305543,
+          "analysisMeanMs": 2.4071661548428116,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1200,
+            "codedHeight": 900,
+            "displayWidth": 1200,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1200,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120271873,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120273090,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120273091,
+      "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+      "segmentId": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+      "kind": "CAPTURE_STOP_REQUEST"
+    }
+  ],
+  "zoomEvents": [
+    {
+      "at": 1793120185341,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1711767410,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120185341,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1711767411,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120185341,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1711767412,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120223694,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1711767413,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120223806,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1711767412,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120259833,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 1711767412,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    }
+  ],
+  "errors": [],
+  "cleanup": [
+    {
+      "at": 1793120303096,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120303099,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120304087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120304090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120305088,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120305093,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120306087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120306090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120307087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120307091,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120308087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120308090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120309087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120309090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120310087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120310091,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120311087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120311089,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120312087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120312091,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120313086,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120313090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120314086,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120314090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120315087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120315091,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120316087,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120316091,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120317086,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 1711767412,
+        "windowId": 1711767409,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1711767409,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1711767413,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61023/",
+        "documentToken": "00d70366-9ead-4d08-9903-286139f769a4",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1711767409
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1711767412,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120317090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "job": {
+    "id": "c7829847-0037-4402-acfb-c1e7149c9e41",
+    "engineVersion": "0.4.0-candidate",
+    "runnerVersion": "0.4.0",
+    "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+    "advancedPointer": true,
+    "tabId": 1711767412,
+    "origin": "http://127.0.0.1:61023",
+    "startUrl": "http://127.0.0.1:61023/",
+    "startedAt": "2026-10-27T16:57:02.599Z",
+    "updatedAt": "2026-10-27T16:57:53.094Z",
+    "state": "PARTIAL",
+    "stopIntent": false,
+    "generation": "3c580221-1d1f-4b87-8e8e-acf9a42bfe03",
+    "elapsedMs": 49439,
+    "tasks": [
+      {
+        "id": "10912bb7-f114-4976-bdfc-3e45c14a3b02",
+        "url": "http://127.0.0.1:61023/",
+        "depth": 0,
+        "state": "PARTIAL",
+        "observations": [
+          {
+            "id": "028de0b8-6509-451f-aefd-4d11f5949816",
+            "scenario": "navigation-transition",
+            "startedAt": "2026-10-27T16:57:03.744Z",
+            "endedAt": "2026-10-27T16:57:05.571Z",
+            "achieved": true,
+            "navigation": {
+              "from": "http://127.0.0.1:61023/",
+              "to": "http://127.0.0.1:61023/"
+            },
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 107,
+                "effectiveFps": 60.005660911406736,
+                "maxGapMs": 22.200000762939453,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 107,
+                  "meanMs": 7.128037336830781,
+                  "maxMs": 40.39999961853027,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.2635513466095256,
+                  "analysisMeanMs": 3.8616822501209294,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 1777.3999996185303,
+                "leadingIdleMs": 1.3000001907348633,
+                "trailingIdleMs": 11.5
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+                "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE"
+              ]
+            },
+            "coverage": "TESTED"
+          },
+          {
+            "id": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+            "scenario": "initial-viewport",
+            "startedAt": "2026-10-27T16:57:05.578Z",
+            "endedAt": "2026-10-27T16:57:20.601Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 900,
+                "effectiveFps": 59.999733035603924,
+                "maxGapMs": 18,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 900,
+                  "meanMs": 6.738333318498399,
+                  "maxMs": 25.699999809265137,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.1947777525583905,
+                  "analysisMeanMs": 3.537777787314521,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 15001.10000038147,
+                "leadingIdleMs": 10.5,
+                "trailingIdleMs": 7.199999809265137
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61023/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [],
+              "durationMs": 15000,
+              "stateKey": "[1,\"http://127.0.0.1:61023/\",\"current\",900,450,2,15000,null,[]]"
+            }
+          },
+          {
+            "id": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+            "scenario": "hover-1",
+            "startedAt": "2026-10-27T16:57:20.607Z",
+            "endedAt": "2026-10-27T16:57:24.251Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 218,
+                "effectiveFps": 59.99778809681385,
+                "maxGapMs": 17.90000057220459,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 218,
+                  "meanMs": 6.846330231482829,
+                  "maxMs": 28.199999809265137,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.1743118916082818,
+                  "analysisMeanMs": 3.6651376059295933,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 3633.5,
+                "leadingIdleMs": 11.399999618530273,
+                "trailingIdleMs": 5.40000057220459
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61023/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                }
+              ],
+              "durationMs": 3000,
+              "measuredStep": 1,
+              "stateKey": "[1,\"http://127.0.0.1:61023/\",\"current\",900,450,2,3000,1,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"]]]"
+            }
+          },
+          {
+            "id": "6a354408-cecf-436c-b1ed-c16904d95454",
+            "scenario": "focus-2",
+            "startedAt": "2026-10-27T16:57:24.256Z",
+            "endedAt": "2026-10-27T16:57:27.677Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 204,
+                "effectiveFps": 59.99527130190141,
+                "maxGapMs": 18.200000762939453,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 204,
+                  "meanMs": 6.7700980130363915,
+                  "maxMs": 29.09999942779541,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.1553920998292813,
+                  "analysisMeanMs": 3.6102941410214293,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 3412,
+                "leadingIdleMs": 12.90000057220459,
+                "trailingIdleMs": 15.399999618530273
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61023/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "focus",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "focus:accordion:false:false"
+                }
+              ],
+              "durationMs": 3000,
+              "measuredStep": 3,
+              "stateKey": "[1,\"http://127.0.0.1:61023/\",\"current\",900,450,2,3000,3,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"]]]"
+            }
+          },
+          {
+            "id": "f212d6dd-4b8c-4858-80dd-653889405823",
+            "scenario": "accordion-3",
+            "startedAt": "2026-10-27T16:57:27.682Z",
+            "endedAt": "2026-10-27T16:57:32.801Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 307,
+                "effectiveFps": 60.00235303120817,
+                "maxGapMs": 18.300000190734863,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 307,
+                  "meanMs": 6.811074909247482,
+                  "maxMs": 30.600000381469727,
+                  "framesOver16_7Ms": 2,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.1964169418384665,
+                  "analysisMeanMs": 3.6107491670291663,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 5109.400000572205,
+                "leadingIdleMs": 3.1999998092651367,
+                "trailingIdleMs": 6.600000381469727
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61023/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "focus",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "focus:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "control",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "accordion:true:true"
+                }
+              ],
+              "durationMs": 5000,
+              "measuredStep": 5,
+              "stateKey": "[1,\"http://127.0.0.1:61023/\",\"current\",900,450,2,5000,5,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"]]]"
+            }
+          },
+          {
+            "id": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+            "scenario": "delayed-state",
+            "startedAt": "2026-10-27T16:57:32.807Z",
+            "endedAt": "2026-10-27T16:57:39.819Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 420,
+                "effectiveFps": 59.99856805326842,
+                "maxGapMs": 17.800000190734863,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 420,
+                  "meanMs": 6.755714243934268,
+                  "maxMs": 28.800000190734863,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.1938094729468935,
+                  "analysisMeanMs": 3.5583333514985585,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 7001.60000038147,
+                "leadingIdleMs": 12.40000057220459,
+                "trailingIdleMs": 5.800000190734863
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61023/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "focus",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "focus:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "control",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "accordion:true:true"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 5000
+                }
+              ],
+              "durationMs": 7000,
+              "stateKey": "[1,\"http://127.0.0.1:61023/\",\"current\",900,450,2,7000,null,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"],[\"wait\",5000]]]"
+            }
+          },
+          {
+            "id": "0ec42361-96bb-411e-9052-9a2e1bffac08",
+            "scenario": "compact-resize-transition",
+            "startedAt": "2026-10-27T16:57:40.597Z",
+            "endedAt": "2026-10-27T16:57:40.597Z",
+            "achieved": false,
+            "reason": "VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+            "coverage": "SKIPPED"
+          },
+          {
+            "id": "80fff884-711c-4eb7-8aea-92585d3d06ec",
+            "scenario": "compact-viewport-capture-source-transition",
+            "startedAt": "2026-10-27T16:57:41.672Z",
+            "endedAt": "2026-10-27T16:57:41.672Z",
+            "achieved": false,
+            "reason": "NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+            "coverage": "SKIPPED"
+          },
+          {
+            "id": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+            "scenario": "compact-viewport",
+            "startedAt": "2026-10-27T16:57:41.668Z",
+            "endedAt": "2026-10-27T16:57:46.735Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 300,
+                "effectiveFps": 59.99317802637927,
+                "maxGapMs": 17.800000190734863,
+                "width": 1200,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1200,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 107415586,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 300,
+                  "meanMs": 5.1833333396911625,
+                  "maxMs": 25.09999942779541,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 2.720666650136312,
+                  "analysisMeanMs": 2.458666690190633,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1200,
+                    "codedHeight": 900,
+                    "displayWidth": 1200,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1200,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1200,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 5002.800000190735,
+                "leadingIdleMs": 13.5,
+                "trailingIdleMs": 5.600000381469727
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61023/",
+              "viewport": {
+                "width": 600,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "compact",
+              "viewportMethod": "PHYSICAL",
+              "steps": [],
+              "durationMs": 5000,
+              "stateKey": "[1,\"http://127.0.0.1:61023/\",\"compact\",600,450,2,5000,null,[]]"
+            }
+          },
+          {
+            "id": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+            "scenario": "compact-accordion",
+            "startedAt": "2026-10-27T16:57:46.742Z",
+            "endedAt": "2026-10-27T16:57:51.868Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 307,
+                "effectiveFps": 59.996470804810244,
+                "maxGapMs": 17.800000190734863,
+                "width": 1200,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1200,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 107415586,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 307,
+                  "meanMs": 5.100977186271344,
+                  "maxMs": 18.200000762939453,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 2.687947829305543,
+                  "analysisMeanMs": 2.4071661548428116,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1200,
+                    "codedHeight": 900,
+                    "displayWidth": 1200,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1200,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1200,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 5110.800000190735,
+                "leadingIdleMs": 5.5,
+                "trailingIdleMs": 5.09999942779541
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61023/",
+              "viewport": {
+                "width": 600,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "compact",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 5000
+                },
+                {
+                  "kind": "control",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "accordion:true:true"
+                }
+              ],
+              "durationMs": 5000,
+              "measuredStep": 1,
+              "stateKey": "[1,\"http://127.0.0.1:61023/\",\"compact\",600,450,2,5000,1,[[\"wait\",5000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"]]]"
+            }
+          },
+          {
+            "id": "2e13c1cb-f8ee-4a9b-a96e-1e599b1b4e82",
+            "scenario": "compact-additional-states",
+            "startedAt": "2026-10-27T16:57:51.873Z",
+            "endedAt": "2026-10-27T16:57:51.873Z",
+            "achieved": false,
+            "reason": "COMPACT_SINGLE_INTERACTION_SAMPLE_LIMIT",
+            "coverage": "SKIPPED"
+          }
+        ],
+        "reasons": [
+          "Navigation transition from http://127.0.0.1:61023/ to http://127.0.0.1:61023/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.",
+          "Viewport at route inventory: 900 × 450 CSS pixels; device pixel ratio 2.",
+          "compact-resize-transition: VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+          "compact-viewport-capture-source-transition: NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+          "compact-additional-states: COMPACT_SINGLE_INTERACTION_SAMPLE_LIMIT"
+        ],
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        }
+      }
+    ],
+    "skippedLinks": 0,
+    "limitations": [
+      "SUPPORTED_UI_PATTERNS_ONLY",
+      "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+      "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element."
+    ],
+    "mode": "AUTONOMOUS",
+    "viewportDurationMs": 15000,
+    "limits": {
+      "maxRoutes": 50,
+      "maxDepth": 4,
+      "maxDurationMs": 1200000,
+      "maxActionsPerRoute": 12
+    },
+    "sitemapChecked": true,
+    "stopReason": "QUEUE_EXHAUSTED",
+    "endedAt": "2026-10-27T16:57:53.094Z"
+  },
+  "report": {
+    "schemaVersion": 1,
+    "id": "c7829847-0037-4402-acfb-c1e7149c9e41",
+    "origin": "http://127.0.0.1:61023",
+    "startedAt": "2026-10-27T16:57:02.599Z",
+    "endedAt": "2026-10-27T16:57:53.094Z",
+    "engineVersion": "0.4.0-candidate",
+    "runnerVersion": "0.4.0",
+    "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+    "status": "INCONCLUSIVE",
+    "passed": null,
+    "job": {
+      "state": "PARTIAL",
+      "stopReason": "QUEUE_EXHAUSTED",
+      "maxRoutes": 50,
+      "maxDepth": 4,
+      "maxDurationMs": 1200000,
+      "discoveredRoutes": 1,
+      "visitedRoutes": 1
+    },
+    "routes": [
+      {
+        "url": "http://127.0.0.1:61023/",
+        "status": "PARTIAL",
+        "reason": "Navigation transition from http://127.0.0.1:61023/ to http://127.0.0.1:61023/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Viewport at route inventory: 900 × 450 CSS pixels; device pixel ratio 2.; compact-resize-transition: VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT; compact-viewport-capture-source-transition: NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT; compact-additional-states: COMPACT_SINGLE_INTERACTION_SAMPLE_LIMIT",
+        "coverage": [
+          {
+            "id": "028de0b8-6509-451f-aefd-4d11f5949816",
+            "scenario": "navigation-transition",
+            "outcome": "TESTED"
+          },
+          {
+            "id": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+            "scenario": "initial-viewport",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+            "scenario": "hover-1",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "6a354408-cecf-436c-b1ed-c16904d95454",
+            "scenario": "focus-2",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "f212d6dd-4b8c-4858-80dd-653889405823",
+            "scenario": "accordion-3",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+            "scenario": "delayed-state",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "0ec42361-96bb-411e-9052-9a2e1bffac08",
+            "scenario": "compact-resize-transition",
+            "outcome": "SKIPPED",
+            "reason": "VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT"
+          },
+          {
+            "id": "80fff884-711c-4eb7-8aea-92585d3d06ec",
+            "scenario": "compact-viewport-capture-source-transition",
+            "outcome": "SKIPPED",
+            "reason": "NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT"
+          },
+          {
+            "id": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+            "scenario": "compact-viewport",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 600,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+            "scenario": "compact-accordion",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 600,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "2e13c1cb-f8ee-4a9b-a96e-1e599b1b4e82",
+            "scenario": "compact-additional-states",
+            "outcome": "SKIPPED",
+            "reason": "COMPACT_SINGLE_INTERACTION_SAMPLE_LIMIT"
+          }
+        ],
+        "scenarios": [
+          {
+            "id": "028de0b8-6509-451f-aefd-4d11f5949816",
+            "type": "navigation-transition",
+            "startedAt": "2026-10-27T16:57:03.744Z",
+            "endedAt": "2026-10-27T16:57:05.571Z",
+            "quality": {
+              "frameCount": 107,
+              "effectiveFps": 60.005660911406736,
+              "maxGapMs": 22.200000762939453,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 1777.3999996185303,
+              "leadingIdleMs": 1.3000001907348633,
+              "trailingIdleMs": 11.5,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 107,
+                "meanMs": 7.128037336830781,
+                "maxMs": 40.39999961853027,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.2635513466095256,
+                "analysisMeanMs": 3.8616822501209294,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "ee3a669a-c30e-4397-b1a5-543bdabe0a6c",
+            "type": "initial-viewport",
+            "startedAt": "2026-10-27T16:57:05.578Z",
+            "endedAt": "2026-10-27T16:57:20.601Z",
+            "quality": {
+              "frameCount": 900,
+              "effectiveFps": 59.999733035603924,
+              "maxGapMs": 18,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 15001.10000038147,
+              "leadingIdleMs": 10.5,
+              "trailingIdleMs": 7.199999809265137,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 900,
+                "meanMs": 6.738333318498399,
+                "maxMs": 25.699999809265137,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1947777525583905,
+                "analysisMeanMs": 3.537777787314521,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "bfa74b02-d5ab-443d-a368-0903ffdac4f2",
+            "type": "hover-1",
+            "startedAt": "2026-10-27T16:57:20.607Z",
+            "endedAt": "2026-10-27T16:57:24.251Z",
+            "quality": {
+              "frameCount": 218,
+              "effectiveFps": 59.99778809681385,
+              "maxGapMs": 17.90000057220459,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 3633.5,
+              "leadingIdleMs": 11.399999618530273,
+              "trailingIdleMs": 5.40000057220459,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 218,
+                "meanMs": 6.846330231482829,
+                "maxMs": 28.199999809265137,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1743118916082818,
+                "analysisMeanMs": 3.6651376059295933,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "6a354408-cecf-436c-b1ed-c16904d95454",
+            "type": "focus-2",
+            "startedAt": "2026-10-27T16:57:24.256Z",
+            "endedAt": "2026-10-27T16:57:27.677Z",
+            "quality": {
+              "frameCount": 204,
+              "effectiveFps": 59.99527130190141,
+              "maxGapMs": 18.200000762939453,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 3412,
+              "leadingIdleMs": 12.90000057220459,
+              "trailingIdleMs": 15.399999618530273,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 204,
+                "meanMs": 6.7700980130363915,
+                "maxMs": 29.09999942779541,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1553920998292813,
+                "analysisMeanMs": 3.6102941410214293,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "f212d6dd-4b8c-4858-80dd-653889405823",
+            "type": "accordion-3",
+            "startedAt": "2026-10-27T16:57:27.682Z",
+            "endedAt": "2026-10-27T16:57:32.801Z",
+            "quality": {
+              "frameCount": 307,
+              "effectiveFps": 60.00235303120817,
+              "maxGapMs": 18.300000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 5109.400000572205,
+              "leadingIdleMs": 3.1999998092651367,
+              "trailingIdleMs": 6.600000381469727,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 307,
+                "meanMs": 6.811074909247482,
+                "maxMs": 30.600000381469727,
+                "framesOver16_7Ms": 2,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1964169418384665,
+                "analysisMeanMs": 3.6107491670291663,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "7b42ec37-a134-4531-9be9-3e41a5c28708",
+            "type": "delayed-state",
+            "startedAt": "2026-10-27T16:57:32.807Z",
+            "endedAt": "2026-10-27T16:57:39.819Z",
+            "quality": {
+              "frameCount": 420,
+              "effectiveFps": 59.99856805326842,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 7001.60000038147,
+              "leadingIdleMs": 12.40000057220459,
+              "trailingIdleMs": 5.800000190734863,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 420,
+                "meanMs": 6.755714243934268,
+                "maxMs": 28.800000190734863,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1938094729468935,
+                "analysisMeanMs": 3.5583333514985585,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "60c544b7-036c-4f79-b33b-9805fb5e1699",
+            "type": "compact-viewport",
+            "startedAt": "2026-10-27T16:57:41.668Z",
+            "endedAt": "2026-10-27T16:57:46.735Z",
+            "quality": {
+              "frameCount": 300,
+              "effectiveFps": 59.99317802637927,
+              "maxGapMs": 17.800000190734863,
+              "width": 1200,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 5002.800000190735,
+              "leadingIdleMs": 13.5,
+              "trailingIdleMs": 5.600000381469727,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1200,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 107415586,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 300,
+                "meanMs": 5.1833333396911625,
+                "maxMs": 25.09999942779541,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 2.720666650136312,
+                "analysisMeanMs": 2.458666690190633,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1200,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1200,
+                  "codedHeight": 900,
+                  "displayWidth": 1200,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1200,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "a0d5e5e0-cea0-48bd-b666-384b0961e2e2",
+            "type": "compact-accordion",
+            "startedAt": "2026-10-27T16:57:46.742Z",
+            "endedAt": "2026-10-27T16:57:51.868Z",
+            "quality": {
+              "frameCount": 307,
+              "effectiveFps": 59.996470804810244,
+              "maxGapMs": 17.800000190734863,
+              "width": 1200,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 5110.800000190735,
+              "leadingIdleMs": 5.5,
+              "trailingIdleMs": 5.09999942779541,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1200,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 107415586,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 307,
+                "meanMs": 5.100977186271344,
+                "maxMs": 18.200000762939453,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 2.687947829305543,
+                "analysisMeanMs": 2.4071661548428116,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1200,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1200,
+                  "codedHeight": 900,
+                  "displayWidth": 1200,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1200,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "SUPPORTED_UI_PATTERNS_ONLY",
+      "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+      "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+      "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+      "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+      "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+      "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+      "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+      "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE"
+    ]
+  },
+  "actualPermissions": {
+    "origins": [
+      "http://127.0.0.1:61023/*"
+    ],
+    "permissions": [
+      "activeTab",
+      "debugger",
+      "devtools",
+      "storage",
+      "tabCapture",
+      "scripting",
+      "offscreen"
+    ]
+  },
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "completedAt": 1793120318096,
+  "environment": {
+    "mode": "cancel",
+    "origin": "http://127.0.0.1:61023",
+    "preparedAt": "2026-10-27T16:55:40.886Z",
+    "headless": false,
+    "playwrightAttached": false,
+    "machine": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "release": "25.4.0",
+      "cpuModel": "Apple M2 Max",
+      "logicalCpus": 12
+    },
+    "requestedWindow": {
+      "width": 900,
+      "height": 650
+    },
+    "extensionBuild": {
+      "productionSha256": "cf73f5e64a74c80499467a15db38d537e7d1a715ac33406011cc0af6df82f269",
+      "instrumentedSha256": "4151ce81fe99cd1642743878fa63ff433ab32145417a131cd6577b41694e6cbb",
+      "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+      "fixtureSourceSha256": {
+        "native-context-guard.mjs": "b074a6f64f3903ed0e51e3fcea0e866a20226c377a169731b409218793f558ba",
+        "native-context-controller.js": "33bd4b534f0c583a53cfbd822a83b719eb5dbe6fac3551d84ac75deac8b41d31",
+        "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+        "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+        "verify-native-context-guard.mjs": "31fbee72f2eff22d39d002f588169eeecb9bd0237595e315745378e3cd235c79"
+      }
+    },
+    "instrumentation": "Copied-build passive Worker message/real-stream observers; no frame reads, modification or synthesis. Separate extension page queries actual state and performs the selected zoom/resize or STOP. Production manifest and permissions unchanged. Actual toolbar authorization required. Instrumented run is not a throughput benchmark.",
+    "clock": "Date.now receipt/action epochs, not exact compositor exposure time."
+  },
+  "pageGeometry": [
+    {
+      "at": 1793120142304,
+      "width": 1200,
+      "height": 1624,
+      "dpr": 2,
+      "outerWidth": 1200,
+      "outerHeight": 1711,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120142325,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120142806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120143307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120143806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120144307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120144807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120145307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120145807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120146307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120146807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120147307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120147807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120148307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120148806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120149306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120149806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120150306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120150807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120151306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120151806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120152307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120152807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120153307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120153806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120154307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120154806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120155307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120155807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120156307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120156807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120157307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120157807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120158307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120158806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120159307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120159807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120160306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120160807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120161306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120161806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120162306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120162807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120163306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120163806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120164306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120164806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120165306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120165807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120166306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120166806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120167306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120167807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120168307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120168806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120169307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120169807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120170307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120170807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120171306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120171807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120172307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120172807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120173307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120173807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120174307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120174807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120175306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120175807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120176306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120176807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120177306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120177806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120178307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120178806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120179307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120179807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120180306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120180806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120181306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120181806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120182307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120182806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120183307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120183807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120184306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120184807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120185306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120185807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120186307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120186806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120187307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120187807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120188307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120188807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120189307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120189806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120190307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120190807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120191307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120191807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120192307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120192807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120193307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120193807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120194306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120194807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120195306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120195807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120196306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120196806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120197307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120197806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120198306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120198806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120199307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120199806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120200306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120200806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120201306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120201806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120202306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120202807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120203306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120203807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120204307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120204807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120205307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120205807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120206307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120206807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120207306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120207806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120208307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120208807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120209307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120209806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120210306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120210807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120211307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120211807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120212306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120212806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120213307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120213806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120214307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120214807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120215306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120215807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120216306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120216806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120217306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120217806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120218307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120218806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120219306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120219807,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120220307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120220806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120221306,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120221806,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222307,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222639,
+      "width": 900,
+      "height": 503,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222657,
+      "width": 900,
+      "height": 495,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222673,
+      "width": 900,
+      "height": 487,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222689,
+      "width": 900,
+      "height": 479,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222707,
+      "width": 900,
+      "height": 471,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222723,
+      "width": 900,
+      "height": 463,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222739,
+      "width": 900,
+      "height": 455,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222756,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120222807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120223307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120223806,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 0,
+      "outerHeight": 0,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120224307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120224807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120225307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120225807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120226307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120226807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120227307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120227807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120228307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120228807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120229307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120229807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120230307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120230807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120231307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120231807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120232307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120232807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120233307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120233807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120234307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120234807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120235307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120235807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120236308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120236808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120237308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120237807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120238307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120238808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120239307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120239808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120240307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120240808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120241308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120241807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120242307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120242807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120243308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120243807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120244307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120244808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120245308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120245807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120246307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120246808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120247308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120247808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120248308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120248808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120249308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120249807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120250308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120250808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120251308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120251808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120252308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120252807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120253308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120253808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120254308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120254807,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120255309,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120255808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120256308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120256808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120257308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120257809,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120258307,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120258808,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120259308,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120259809,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120259833,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 0,
+      "outerHeight": 0,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120260334,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120260876,
+      "width": 900,
+      "height": 563,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120260890,
+      "width": 900,
+      "height": 563,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120260925,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120261159,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120261334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120261833,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120262334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120262834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120263334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120263834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120264335,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120264834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120265334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120265834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120266334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120266834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120267334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120267834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120268334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120268834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120269334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120269834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120270334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120270834,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120271334,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120271835,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120273087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120274087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120275086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120276087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120277086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120278086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120279086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120280087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120281087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120282086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120283086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120284087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120285087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120286087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120287087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120288086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120289087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120290087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120291087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120292087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120293091,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120294087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120295086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120296087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120297087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120298088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120299087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120300087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120301087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120302087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120303087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120304087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120305086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120306087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120307087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120308087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120309087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120310088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120311087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120312087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120313086,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120314087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120315087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120316087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120317087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120318092,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    }
+  ],
+  "geometryBeforeStart": {
+    "at": 1793120222307,
+    "width": 900,
+    "height": 507,
+    "dpr": 2,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "visibility": "visible"
+  }
+}

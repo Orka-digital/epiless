@@ -1,0 +1,288 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-27T20:31:54.337351+00:00",
+  "scope": "Three genuine ordinary toolbar-authorized captures on one Mac. Only the anchored current-profile encoded-video control and its targeted fix/recurrence are accepted; whole-job states and unrelated capture gaps are preserved.",
+  "sourceDirectory": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab",
+  "scannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "5d2e1616e4e42c65a69966be4f9fe97bd316baa04e99cedb6c1fd79b5af7bf8e",
+    "embeddedScannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c"
+  },
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "tests/extension/verify-native-media-recheck.mjs",
+    "tests/extension/evidence/scanner-v04-native-phase-media-recheck-baseline-local-job.json",
+    "tests/extension/evidence/scanner-v04-native-phase-media-recheck-baseline-environment.json",
+    "tests/extension/evidence/scanner-v04-native-phase-media-recheck-fixed-local-job.json",
+    "tests/extension/evidence/scanner-v04-native-phase-media-recheck-fixed-environment.json",
+    "tests/extension/evidence/scanner-v04-native-phase-media-recheck-recurrence-local-job.json",
+    "tests/extension/evidence/scanner-v04-native-phase-media-recheck-recurrence-environment.json"
+  ],
+  "verificationExecution": "Parent executed the unchanged current strict verifier with phase evidence required; exit0 result copied byte-for-byte. This archival task independently checked source identities, raw copies and all public report schemas without repeating native capture.",
+  "files": [
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/8b3c4a0b-83b5-4dd3-a54d-495555d5e225.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-baseline-capture.json",
+      "bytes": 175687,
+      "sha256": "2e77ef71c3db4ed65e428dd55ac9c6aaf19c7abb862e516d330075770cdb0303"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/8b3c4a0b-83b5-4dd3-a54d-495555d5e225-local-job.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-baseline-local-job.json",
+      "bytes": 535097,
+      "sha256": "537e4083ef3b53f06c71f1785260282073c9c00e0f44b7323bcea55f8f86a717"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/8b3c4a0b-83b5-4dd3-a54d-495555d5e225-environment.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-baseline-environment.json",
+      "bytes": 380489,
+      "sha256": "1b79dfc18f1d72931357380634e1b83328717b7150aba2010d1eeb7a36f50a68"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/30158b47-5152-4088-afbc-f29f2c7103d1.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-fixed-capture.json",
+      "bytes": 8031,
+      "sha256": "a6cbfc3f780f6270415afe182cdf59dd3692cfd7beb2c133899ee38c5dd33173"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/30158b47-5152-4088-afbc-f29f2c7103d1-local-job.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-fixed-local-job.json",
+      "bytes": 80421,
+      "sha256": "86dda1780514c9edc7202c4a1824bedf9d799386a3b3a9e128b45d81586573ab"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/30158b47-5152-4088-afbc-f29f2c7103d1-environment.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-fixed-environment.json",
+      "bytes": 468920,
+      "sha256": "415efae390c4dcb85b679ac6068067a6930792228062d53348c49e095f715bd2"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/ad1a026f-ea8a-462c-9b50-58c11ba33afe.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-recurrence-capture.json",
+      "bytes": 72359,
+      "sha256": "8f7d7c8cab72f0b5182e20c80b3ddeb7addbbc8f60bbf34a66d0f338363f9760"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/ad1a026f-ea8a-462c-9b50-58c11ba33afe-local-job.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-recurrence-local-job.json",
+      "bytes": 148048,
+      "sha256": "bd1ed1968770f087a331f1e010108bf31d324c3688a3958edf2918180bdae517"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/ad1a026f-ea8a-462c-9b50-58c11ba33afe-environment.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-recurrence-environment.json",
+      "bytes": 556787,
+      "sha256": "932df9d8432d432a1a2206e3859dcc0d43f86ef9fa2a00a99ee514bc79a68f44"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/requests.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-requests.json",
+      "bytes": 2364,
+      "sha256": "001eaadb1a4877b214007382969c1024cc223ef61c3408719b4c31e01e30f1cf"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/recheck-anchor.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-recheck-anchor.json",
+      "bytes": 156,
+      "sha256": "da929afdf54a33680f8cd1d28fe4cc10ed1823e1febe9d7863f803cb8655dfcd"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/command-phase-fixed-prepare.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-command-phase-fixed-prepare.json",
+      "bytes": 57,
+      "sha256": "f5146049418b5808a14ddf8c7a2d158f4698cc63c68692630604fd1cc7be5f83"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-22cBab/command-phase-recurrence-prepare.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-command-phase-recurrence-prepare.json",
+      "bytes": 57,
+      "sha256": "67efd8854f129410fe8e007a451167b03fbb4c6d6acf5cd4f1054409ac790928"
+    },
+    {
+      "source": "/tmp/epiless-native-phase-media-verification.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-verification.json",
+      "bytes": 5126,
+      "sha256": "37978effd3a891d4081472c5ea0491fa22c4d711afca2893c76fc92e5937470f"
+    }
+  ],
+  "fixtureSources": {
+    "file": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-fixture-sources.json.gz",
+    "sha256": "c908c194e005b3ea2a6998447efef630dc2c77c6ddfa1660843ce99c5242b97a",
+    "fileCount": 9,
+    "reconstruction": "gzip-decompress JSON; eight exact UTF-8 fixture/verifier modules plus unchanged encoded-source manifest. Production verifier dependencies are bound to the 69-file scanner source snapshot.",
+    "files": {
+      "tests/extension/native-fixture.mjs": "2cc4b2735966d021e778ea75c3fef262a048c6eee5c923e9829d9071706e1d00",
+      "tests/extension/interactive-fixture.mjs": "39640959a340864a320dd34a1bef818ac31e8a7853fef3f4317553840182fc9c",
+      "tests/extension/native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "tests/extension/native-encoded-recheck-source.mjs": "3ad082a89f3ffca0a04dd286e35df1d24fd29187cacaf7b80d6ee2a8f4e6ba47",
+      "tests/extension/native-encoded-source.mjs": "cbb6068e5fd56a549beb87a38a5e6961334c5dd0ff7640be6b1d3c726dc8e1f0",
+      "tests/extension/native-loop-page.mjs": "1cc6b1183870cbb4742e9f99c0ca86b50ac7d5609ff987ec5647b52c8284ee1e",
+      "tests/extension/native-loop-cadence-page.mjs": "f7b73201008cd0d72d486d9d4b3afe586d80da7a2e46fb6c9510dc1168cdbf2e",
+      "tests/extension/verify-native-media-recheck.mjs": "0c615add427e7581c349f51bd53921dc7055301c6bb514d0a0ee54b720582ed3",
+      "tests/extension/fixtures/native-encoded/manifest.json": "c6ffd34d863227489ea8bcd3924cc5e520f9e67ca11bac05a3f9f2c076acb73c"
+    }
+  },
+  "scannerSources": {
+    "file": "tests/extension/evidence/scanner-v04-7fc0a67c-source.json.gz",
+    "sha256": "fbe6e1b11616dca631607ab06204673e061d2dfb63dd3f3699d6e781f46aaf35",
+    "fileCount": 69,
+    "recomputedScannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c"
+  },
+  "publicReportSchema": [
+    {
+      "status": "PASS",
+      "id": "8b3c4a0b-83b5-4dd3-a54d-495555d5e225",
+      "path": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-baseline-capture.json"
+    },
+    {
+      "status": "PASS",
+      "id": "30158b47-5152-4088-afbc-f29f2c7103d1",
+      "path": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-fixed-capture.json"
+    },
+    {
+      "status": "PASS",
+      "id": "ad1a026f-ea8a-462c-9b50-58c11ba33afe",
+      "path": "tests/extension/evidence/scanner-v04-native-phase-media-recheck-recurrence-capture.json"
+    }
+  ],
+  "jobStates": {
+    "baseline": "PARTIAL",
+    "fixed": "COMPLETED",
+    "recurrence": "COMPLETED"
+  },
+  "comparison": {
+    "fixed": "NOT_OBSERVED",
+    "recurrence": "REOBSERVED"
+  },
+  "measurements": [
+    {
+      "jobId": "8b3c4a0b-83b5-4dd3-a54d-495555d5e225",
+      "observationId": "66f697b4-ebb1-4ad2-977c-985fbc5d56e2",
+      "fixed": false,
+      "frames": 307,
+      "fps": 59.98941363737461,
+      "maxGapMs": 18.399999618530273,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "phase": {
+        "start": {
+          "documentMs": 20387.10000038147,
+          "timelineMs": 20378.7,
+          "epochMs": 1793132692749.9001
+        },
+        "end": {
+          "documentMs": 25508.20000076294,
+          "timelineMs": 25495.7,
+          "epochMs": 1793132697871
+        },
+        "mode": "DOCUMENT",
+        "animationCount": 1
+      },
+      "postMeasurementRestoration": []
+    },
+    {
+      "jobId": "30158b47-5152-4088-afbc-f29f2c7103d1",
+      "observationId": "ffd784eb-e0cf-411f-a99f-19c39d66bce1",
+      "fixed": true,
+      "frames": 315,
+      "fps": 59.99465015639821,
+      "maxGapMs": 18.299999237060547,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "phase": {
+        "start": {
+          "documentMs": 20267.5,
+          "timelineMs": 20253.7,
+          "epochMs": 1793132816444.2
+        },
+        "end": {
+          "documentMs": 25513.599999427795,
+          "timelineMs": 25504.8,
+          "epochMs": 1793132821690.3
+        },
+        "mode": "DOCUMENT",
+        "animationCount": 1
+      },
+      "postMeasurementRestoration": [
+        {
+          "atEpochMs": 1793132821699.4,
+          "afterMeasurementMs": 8.099853515625,
+          "afterObservationMs": 7.39990234375,
+          "restoredTimeMs": 0
+        }
+      ]
+    },
+    {
+      "jobId": "ad1a026f-ea8a-462c-9b50-58c11ba33afe",
+      "observationId": "b5f3c082-fbfe-4253-8771-3eac66b4caae",
+      "fixed": false,
+      "frames": 315,
+      "fps": 59.991211474200945,
+      "maxGapMs": 18,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "phase": {
+        "start": {
+          "documentMs": 20274.39999961853,
+          "timelineMs": 20272,
+          "epochMs": 1793132977191.5999
+        },
+        "end": {
+          "documentMs": 25512.800000190735,
+          "timelineMs": 25506.1,
+          "epochMs": 1793132982430
+        },
+        "mode": "DOCUMENT",
+        "animationCount": 1
+      },
+      "postMeasurementRestoration": [
+        {
+          "atEpochMs": 1793132982443.5999,
+          "afterMeasurementMs": 12.699951171875,
+          "afterObservationMs": 9.599853515625,
+          "restoredTimeMs": 0
+        }
+      ]
+    }
+  ],
+  "phaseEvidence": "Each selected observation has complete DOCUMENT phase evidence with one CSS animation. Fixed and recurrence span the full original document interval; every original measured video PTS0..2080ms in40ms steps is actually presented in order. The current phase/media comparison guards return no incompatibility.",
+  "limits": [
+    "The baseline whole job is PARTIAL. Its separate initial-viewport observation is interrupted (900frames,33.3msmaximumgap); targeted success does not validate that observation or the whole route.",
+    "Whole-job states are PARTIAL, COMPLETED, COMPLETED. Only the selected matched observations establish NOT_OBSERVED then REOBSERVED.",
+    "The ordinary20second low-contrast marker is unchanged; no stronger-cadence variant, synthetic START, synthetic capture or raw frame replacement.",
+    "Source locator equality is not content equality. Independent immutable asset/request/served-HTML hashes establish this intentional signal/fixed/signal fixture change.",
+    "One Mac/browser and tiny encoded source only; no general60fps, arbitrary media, causal attribution, conformance or advanced-cleanup guarantee."
+  ],
+  "retention": "Raw JSON bytes and hashes preserved; no PNG/screenshots/browser profile or capture frames copied. Earlier evidence remains unchanged."
+}

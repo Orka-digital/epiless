@@ -1,0 +1,21 @@
+{
+  "scope": "Isolated headless Chrome extension API check. Production manifest unchanged, no tabs permission, origins empty; no capture, debugger attach, native layout or focus acceptance. First attempt queried before navigation commit and correctly failed; second waited boundedly for committed URL and passed exact URL/opener/id checks across active-source-active/removal.",
+  "files": [
+    {
+      "raw": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/epiless-fixture-tab-identity-wcNUGN/evidence.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-tab-identity-pending-url-unreached.json",
+      "sha256": "06420fa0eb1c89d81f1a2fe4d185af57e85f8e42e2c7cee08be2b8806d733844",
+      "fixture": "tests/extension/evidence/scanner-v04-native-context-tab-identity-pending-url-unreached-fixture.json.gz",
+      "fixtureSha256": "b19c9e561a8a326f813508198d50d4d8bde7ce320e90aee780f82a9873c0d5f6",
+      "status": "FAIL"
+    },
+    {
+      "raw": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/epiless-fixture-tab-identity-FtB1Lu/evidence.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-tab-identity-committed-url-pass.json",
+      "sha256": "792fa8f05d3016002c748f7c0fb4175ec6575239521ed37cea71b83e2676ec1f",
+      "fixture": "tests/extension/evidence/scanner-v04-native-context-tab-identity-committed-url-pass-fixture.json.gz",
+      "fixtureSha256": "6b4ddc561cf762840b5ea9332ae0c4a15b6c03462e52825d9c6de780f860eb91",
+      "status": "PASS"
+    }
+  ]
+}

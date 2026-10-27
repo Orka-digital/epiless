@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "id": "903ffae6-d85a-44d9-8f1a-af216631f808",
+  "origin": "http://127.0.0.1:47819",
+  "startedAt": "2026-10-27T01:46:03.663Z",
+  "endedAt": "2026-10-27T01:48:35.166Z",
+  "engineVersion": "0.2.0-candidate",
+  "runnerVersion": "0.2.0",
+  "status": "INCONCLUSIVE",
+  "passed": null,
+  "job": {
+    "state": "PARTIAL",
+    "stopReason": "QUEUE_EXHAUSTED",
+    "maxRoutes": 50,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "discoveredRoutes": 5,
+    "visitedRoutes": 5
+  },
+  "routes": [
+    {
+      "url": "http://127.0.0.1:47819/",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/ to http://127.0.0.1:47819/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "fc240ed4-0e3b-42a0-b15f-5ffafdf60db2",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:46:03.829Z",
+          "endedAt": "2026-10-27T01:46:05.640Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 1797.1999998092651,
+            "leadingIdleMs": 117.5,
+            "trailingIdleMs": 1679.6999998092651
+          },
+          "findings": []
+        },
+        {
+          "id": "68d94682-064c-41d4-8989-adafef300fd1",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:46:05.646Z",
+          "endedAt": "2026-10-27T01:46:20.648Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": true,
+            "captureWindowMs": 15001.5,
+            "leadingIdleMs": 15001.5,
+            "trailingIdleMs": 15001.5
+          },
+          "findings": []
+        },
+        {
+          "id": "48e00787-4e3c-4d5b-9b5d-5167d8cc0396",
+          "type": "consent-reject-1",
+          "startedAt": "2026-10-27T01:46:20.656Z",
+          "endedAt": "2026-10-27T01:46:26.070Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 5412.799999237061,
+            "leadingIdleMs": 177.79999923706055,
+            "trailingIdleMs": 5235
+          },
+          "findings": []
+        },
+        {
+          "id": "809f52ec-bb5e-4218-93c2-886ce45f1a1f",
+          "type": "scroll-1",
+          "startedAt": "2026-10-27T01:46:26.077Z",
+          "endedAt": "2026-10-27T01:46:29.082Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 3004.3999996185303,
+            "leadingIdleMs": 57.39999961853027,
+            "trailingIdleMs": 2947
+          },
+          "findings": []
+        },
+        {
+          "id": "ca956c22-41b0-4f1f-8854-3dbe5fbc8626",
+          "type": "scroll-2",
+          "startedAt": "2026-10-27T01:46:29.090Z",
+          "endedAt": "2026-10-27T01:46:32.093Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 3002.199999809265,
+            "leadingIdleMs": 44.40000057220459,
+            "trailingIdleMs": 2957.7999992370605
+          },
+          "findings": []
+        },
+        {
+          "id": "416fcb97-3cee-4a23-b8a8-8a4831c6bb8a",
+          "type": "scroll-3",
+          "startedAt": "2026-10-27T01:46:32.100Z",
+          "endedAt": "2026-10-27T01:46:35.108Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 3006.3999996185303,
+            "leadingIdleMs": 44.10000038146973,
+            "trailingIdleMs": 2962.2999992370605
+          },
+          "findings": []
+        },
+        {
+          "id": "00e98704-0eae-4f0a-aa07-6d7a4ea65c33",
+          "type": "menu-5",
+          "startedAt": "2026-10-27T01:46:35.115Z",
+          "endedAt": "2026-10-27T01:46:40.525Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 9.70873786407767,
+            "maxGapMs": 103,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 5408.39999961853,
+            "leadingIdleMs": 46.09999942779541,
+            "trailingIdleMs": 5271.10000038147
+          },
+          "findings": []
+        },
+        {
+          "id": "9a742ce3-6a49-4912-b6ad-097c5ecf3f9e",
+          "type": "scroll-4",
+          "startedAt": "2026-10-27T01:46:40.532Z",
+          "endedAt": "2026-10-27T01:46:43.541Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 3008,
+            "leadingIdleMs": 45.40000057220459,
+            "trailingIdleMs": 2962.5999994277954
+          },
+          "findings": []
+        },
+        {
+          "id": "919111cc-229c-4e7a-9f09-10ad5475b894",
+          "type": "tab-7",
+          "startedAt": "2026-10-27T01:46:43.549Z",
+          "endedAt": "2026-10-27T01:46:48.963Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 6.313131328335028,
+            "maxGapMs": 158.39999961853027,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 5412.39999961853,
+            "leadingIdleMs": 40.39999961853027,
+            "trailingIdleMs": 5218.89999961853
+          },
+          "findings": []
+        },
+        {
+          "id": "898b50d1-e8d4-44d2-97f5-75dfecc04a27",
+          "type": "scroll-5",
+          "startedAt": "2026-10-27T01:46:48.970Z",
+          "endedAt": "2026-10-27T01:46:51.978Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 3006.800000190735,
+            "leadingIdleMs": 48.10000038146973,
+            "trailingIdleMs": 2958.699999809265
+          },
+          "findings": []
+        },
+        {
+          "id": "bf058997-bf93-4ad9-abfb-0f6aa4ed79a4",
+          "type": "media-9",
+          "startedAt": "2026-10-27T01:46:51.986Z",
+          "endedAt": "2026-10-27T01:47:07.153Z",
+          "quality": {
+            "frameCount": 302,
+            "effectiveFps": 19.893986860966443,
+            "maxGapMs": 105.60000038146973,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 15164.400000572205,
+            "leadingIdleMs": 50.30000019073486,
+            "trailingIdleMs": 0.10000038146972656
+          },
+          "findings": []
+        },
+        {
+          "id": "64fb5846-0079-4575-9fad-9ad5e7044c9f",
+          "type": "carousel-10",
+          "startedAt": "2026-10-27T01:47:07.157Z",
+          "endedAt": "2026-10-27T01:47:12.567Z",
+          "quality": {
+            "frameCount": 108,
+            "effectiveFps": 19.96603907230385,
+            "maxGapMs": 60.10000038146973,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 5408.60000038147,
+            "leadingIdleMs": 33.10000038146973,
+            "trailingIdleMs": 15.600000381469727
+          },
+          "findings": []
+        },
+        {
+          "id": "e16fafac-51a6-4a7b-9435-26314d213558",
+          "type": "carousel-11",
+          "startedAt": "2026-10-27T01:47:12.571Z",
+          "endedAt": "2026-10-27T01:47:17.981Z",
+          "quality": {
+            "frameCount": 108,
+            "effectiveFps": 20.000373836624178,
+            "maxGapMs": 51,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false,
+            "captureWindowMs": 5409.800000190735,
+            "leadingIdleMs": 29.90000057220459,
+            "trailingIdleMs": 30.600000381469727
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/sitemap-only",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/ to http://127.0.0.1:47819/sitemap-only; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "ab9fe943-ac11-4754-aed9-6229839b1cf2",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:47:18.747Z",
+          "endedAt": "2026-10-27T01:47:20.533Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 1785.1000003814697,
+            "leadingIdleMs": 72.80000019073486,
+            "trailingIdleMs": 1712.3000001907349
+          },
+          "findings": []
+        },
+        {
+          "id": "c071b720-71dc-4533-96a9-f000d82d1a42",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:47:20.541Z",
+          "endedAt": "2026-10-27T01:47:35.545Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": true,
+            "captureWindowMs": 15002.20000076294,
+            "leadingIdleMs": 15002.20000076294,
+            "trailingIdleMs": 15002.20000076294
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/reached",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/sitemap-only to http://127.0.0.1:47819/redirect; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Same-origin redirect: http://127.0.0.1:47819/redirect \u2192 http://127.0.0.1:47819/reached. Subsequent viewport observations belong to the reached URL.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.; Navigation transition from http://127.0.0.1:47819/reached to http://127.0.0.1:47819/redirect-again; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Same-origin redirect: http://127.0.0.1:47819/redirect-again \u2192 http://127.0.0.1:47819/reached. Subsequent viewport observations belong to the reached URL.; A redirect alias reached this previously measured route; its transition is retained without repeating the viewport scan.",
+      "scenarios": [
+        {
+          "id": "65489668-08ea-4bb3-8f44-7ec2532b7f71",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:47:36.315Z",
+          "endedAt": "2026-10-27T01:47:38.205Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 9.980039939157102,
+            "maxGapMs": 100.19999980926514,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 1889.6000003814697,
+            "leadingIdleMs": 187.60000038146973,
+            "trailingIdleMs": 1624.2000007629395
+          },
+          "findings": []
+        },
+        {
+          "id": "9ee0ed23-7b6e-47c8-8886-f94e530f6a41",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:47:38.209Z",
+          "endedAt": "2026-10-27T01:47:53.216Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": true,
+            "captureWindowMs": 15005.39999961853,
+            "leadingIdleMs": 15005.39999961853,
+            "trailingIdleMs": 15005.39999961853
+          },
+          "findings": []
+        },
+        {
+          "id": "6cd823b0-822a-4000-a65f-c55377b8f33f",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:47:53.987Z",
+          "endedAt": "2026-10-27T01:47:55.876Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 10.050251256281408,
+            "maxGapMs": 99.5,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 1888.1999998092651,
+            "leadingIdleMs": 193.89999961853027,
+            "trailingIdleMs": 1624.6999998092651
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/lazy-observed",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/reached to http://127.0.0.1:47819/lazy-observed; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Navigation restored discovery source http://127.0.0.1:47819/ before activating its rendered link; this transition includes intermediate source-page frames.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "c63a8108-2527-4100-bbfd-3a045ce16a18",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:47:56.647Z",
+          "endedAt": "2026-10-27T01:48:00.102Z",
+          "quality": {
+            "frameCount": 5,
+            "effectiveFps": 2.408912978018669,
+            "maxGapMs": 869.4000005722046,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 3452.8999996185303,
+            "leadingIdleMs": 75.19999980926514,
+            "trailingIdleMs": 1726
+          },
+          "findings": []
+        },
+        {
+          "id": "3b2e0674-ec27-4405-9031-d2f50534d98d",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:48:00.111Z",
+          "endedAt": "2026-10-27T01:48:15.114Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": true,
+            "captureWindowMs": 15001.39999961853,
+            "leadingIdleMs": 15001.39999961853,
+            "trailingIdleMs": 15001.39999961853
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/spa/client",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/lazy-observed to http://127.0.0.1:47819/spa/client; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Navigation restored discovery source http://127.0.0.1:47819/ before activating its rendered link; this transition includes intermediate source-page frames.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "5335a625-d250-457f-8731-849f66417e87",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:48:15.883Z",
+          "endedAt": "2026-10-27T01:48:19.373Z",
+          "quality": {
+            "frameCount": 4,
+            "effectiveFps": 1.787203621659857,
+            "maxGapMs": 844.4000005722046,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 3489.699999809265,
+            "leadingIdleMs": 86.90000057220459,
+            "trailingIdleMs": 1735.0999994277954
+          },
+          "findings": []
+        },
+        {
+          "id": "4dec9989-4be2-42de-a99b-14cc93ada9c5",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:48:19.385Z",
+          "endedAt": "2026-10-27T01:48:34.393Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": true,
+            "captureWindowMs": 15006.599999427795,
+            "leadingIdleMs": 15006.599999427795,
+            "trailingIdleMs": 15006.599999427795
+          },
+          "findings": []
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+    "HASH_ROUTER_ROUTES_UNOBSERVED",
+    "CAROUSEL_SAMPLING_LIMIT: each supported next/previous control is sampled once; other slide states remain untested.",
+    "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+    "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+    "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+    "Capture was rescaled. Small flashing regions may have been lost and area is not validated.",
+    "Less than one second of usable capture was observed.",
+    "Effective sampling was below 50 fps; fast flashes may be missed.",
+    "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+    "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+    "The capture window began 117.5 ms before its first submitted decoded frame. This leading interval is unobserved.",
+    "No new decoded source frame was submitted during the final 1679.7 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "Candidate start/end times are relative to the first analyzed decoded frame, not the scenario start. Leading capture delay is reported separately; source and wall-clock timestamps are not interchangeable.",
+    "No decoded source frame was submitted during the 15001.5 ms capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "The capture window began 177.8 ms before its first submitted decoded frame. This leading interval is unobserved.",
+    "No new decoded source frame was submitted during the final 5235.0 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 2947.0 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 2957.8 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 2962.3 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "Capture gaps exceeded 100 ms; transitions across gaps were discarded.",
+    "No new decoded source frame was submitted during the final 5271.1 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 2962.6 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 5218.9 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 2958.7 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "1 source/analysis frames were skipped or unavailable.",
+    "2 source/analysis frames were skipped or unavailable.",
+    "No new decoded source frame was submitted during the final 1712.3 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No decoded source frame was submitted during the 15002.2 ms capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "The capture window began 187.6 ms before its first submitted decoded frame. This leading interval is unobserved.",
+    "No new decoded source frame was submitted during the final 1624.2 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No decoded source frame was submitted during the 15005.4 ms capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "The capture window began 193.9 ms before its first submitted decoded frame. This leading interval is unobserved.",
+    "No new decoded source frame was submitted during the final 1624.7 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 1726.0 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No decoded source frame was submitted during the 15001.4 ms capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No new decoded source frame was submitted during the final 1735.1 ms of the capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed.",
+    "No decoded source frame was submitted during the 15006.6 ms capture window. Static source suppression and capture loss cannot be distinguished; continuity is unconfirmed."
+  ]
+}

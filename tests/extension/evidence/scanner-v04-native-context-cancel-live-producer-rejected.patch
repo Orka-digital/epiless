@@ -1,0 +1,1055 @@
+--- a/apps/chrome-extension/src/background.ts
++++ b/apps/chrome-extension/src/background.ts
+@@ -114,6 +114,7 @@
+ } from './viewport-workspace';
+ import type { CaptureViewport } from './capture-quality';
+ import { stopRequestedCapture } from './capture-stop';
++import { cleanupTimeRemaining, withinCleanupDeadline } from './capture-cleanup';
+ 
+ declare const __WEB_ORIGIN__: string;
+ let running: Promise<void> | undefined;
+@@ -192,6 +193,135 @@
+     active: boolean;
+   }
+ >();
++const terminalCaptureCleanups = new Map<
++  string,
++  { generation: string; ready: Promise<boolean>; done: Promise<void> }
++>();
++
++function beginTerminalCaptureCleanup(job: ScanJob): Promise<boolean> {
++  const existing = terminalCaptureCleanups.get(job.id);
++  if (existing?.generation === job.generation) return existing.ready;
++  const workspace = viewportWorkspaces.get(job.id);
++  const source = captureSources.get(job.id);
++  const pointer = pointerSessions.get(job.id);
++  if (
++    job.state !== 'STOPPING' ||
++    job.advancedPointer !== true ||
++    emulatedViewports.has(job.id) ||
++    !workspace?.detachedViewport ||
++    !source?.active ||
++    source.generation !== job.generation ||
++    pointer?.generation !== job.generation ||
++    pointer.tabId !== workspace.tabId
++  )
++    return Promise.resolve(false);
++  // Only the existing source can be held. This never obtains a token, opens an
++  // offscreen document, activates a tab, or resurrects an already stopped stream.
++  const hold = timed(
++    offscreen('CAPTURE_CLEANUP_HOLD', {
++      generation: job.generation,
++      sourceId: source.sourceId,
++    }),
++    500,
++  ) as Promise<{ deadlineEpochMs: number }>;
++  const ready = hold
++    .then((value) => {
++      cleanupTimeRemaining(value.deadlineEpochMs);
++      return true;
++    })
++    .catch(() => false);
++  const entry = { generation: job.generation, ready, done: Promise.resolve() };
++  terminalCaptureCleanups.set(job.id, entry);
++  entry.done = (async () => {
++    if (!(await ready)) {
++      // Any concurrent runner-finally waiting on this entry must still observe
++      // actual producer release when HOLD was refused or never acknowledged.
++      await releaseCaptureSource(job.id, job.generation);
++      return;
++    }
++    const { deadlineEpochMs } = await hold;
++    let geometry: Promise<string | undefined> | undefined;
++    try {
++      if (
++        (await withinCleanupDeadline(deadlineEpochMs, () => getJob(job.id)))
++          ?.state !== 'STOPPING' ||
++        viewportWorkspaces.get(job.id) !== workspace ||
++        captureSources.get(job.id) !== source ||
++        pointerSessions.get(job.id) !== pointer
++      )
++        throw new Error('CAPTURE_CLEANUP_OWNERSHIP_CHANGED');
++      await withinCleanupDeadline(deadlineEpochMs, () =>
++        assertViewportWorkspace(workspace),
++      );
++      await restoreWorkspace(job.id, true, {
++        generation: job.generation,
++        deadlineEpochMs,
++        guard: async () => {
++          cleanupTimeRemaining(deadlineEpochMs);
++          const current = await withinCleanupDeadline(deadlineEpochMs, () =>
++            getJob(job.id),
++          );
++          if (
++            current?.generation !== job.generation ||
++            current.state !== 'STOPPING' ||
++            captureSources.get(job.id) !== source
++          )
++            throw new Error('CAPTURE_CLEANUP_OWNERSHIP_CHANGED');
++          cleanupTimeRemaining(deadlineEpochMs);
++        },
++        afterDetach: () => {
++          geometry = withinCleanupDeadline(deadlineEpochMs, () =>
++            offscreen('CAPTURE_CLEANUP_GEOMETRY', {
++              generation: job.generation,
++              sourceId: source.sourceId,
++              viewport: workspace.detachedViewport,
++            }),
++          ).then(
++            () => undefined,
++            (error) => errorText(error),
++          );
++        },
++        release: async () => {
++          const diagnostic = await geometry;
++          await releaseCaptureSource(job.id, job.generation);
++          if (diagnostic)
++            await mutateJob(job.id, (state) => {
++              if (state.generation !== job.generation) return;
++              state.limitations.push(
++                `POST_STOP_CAPTURE_RASTER_NOT_CONFIRMED: ${diagnostic}. These cleanup frames were not analyzed.`,
++              );
++            });
++        },
++      });
++    } catch (error) {
++      await mutateJob(job.id, (state) => {
++        if (state.generation !== job.generation) return;
++        state.limitations.push(
++          `VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED: ${errorText(error)}`,
++        );
++        state.state = 'INTERRUPTED';
++        state.stopReason = 'VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED';
++        state.endedAt = now();
++      });
++    } finally {
++      // The offscreen watchdog is independent; this additionally confirms the
++      // browser producer release on every ordinary success/error path.
++      await releaseCaptureSource(job.id, job.generation);
++    }
++  })().catch(async (error) => {
++    await mutateJob(job.id, (state) => {
++      if (state.generation !== job.generation) return;
++      state.limitations.push(
++        `CAPTURE_SOURCE_RELEASE_UNCONFIRMED: ${errorText(error)}`,
++      );
++      state.state = 'INTERRUPTED';
++      state.stopReason = 'CAPTURE_SOURCE_RELEASE_UNCONFIRMED';
++      state.endedAt = now();
++    });
++  });
++  return ready;
++}
++
+ async function releaseCaptureSource(id: string, generation: string) {
+   const source = captureSources.get(id);
+   if (!source || source.generation !== generation) return;
+@@ -430,38 +560,76 @@
+   }
+ }
+ 
+-async function restoreWorkspace(id: string, releaseDebugger = false) {
++async function restoreWorkspace(
++  id: string,
++  releaseDebugger = false,
++  live?: {
++    generation: string;
++    deadlineEpochMs: number;
++    guard(): Promise<void>;
++    afterDetach(): void;
++    release(): Promise<void>;
++  },
++) {
+   const workspace = viewportWorkspaces.get(id);
+   if (!workspace) return;
+   // Guard checks must not prevent terminal cleanup, including an explicit stop.
+   viewportWorkspaces.delete(id);
++  let producerReleased = false;
+   try {
+     await restoreViewportWorkspace({
+       workspace,
+       read: async () => {
+-        const reply = await timed(
+-          chrome.tabs.sendMessage(workspace.tabId, {
+-            type: 'FG_DIAGNOSTIC_CONTEXT',
+-          }),
+-          1500,
+-        );
++        const read = () =>
++          timed(
++            chrome.tabs.sendMessage(workspace.tabId, {
++              type: 'FG_DIAGNOSTIC_CONTEXT',
++            }),
++            1500,
++          );
++        const reply =
++          live && !producerReleased
++            ? await withinCleanupDeadline(live.deadlineEpochMs, read)
++            : await read();
+         if (!reply?.ok)
+           throw new Error('VIEWPORT_WORKSPACE_CONTEXT_UNAVAILABLE');
+         return reply.value.viewport;
+       },
+-      wait: sleep,
++      wait: (ms) =>
++        live && !producerReleased
++          ? withinCleanupDeadline(live.deadlineEpochMs, () => sleep(ms))
++          : sleep(ms),
++      ...(live
++        ? {
++            guardRestoration: live.guard,
++            releaseBeforeReturn: async () => {
++              await live.release();
++              producerReleased = true;
++            },
++          }
++        : {}),
+       ...(releaseDebugger
+         ? {
+             releaseDebugger: async () => {
+-              const session = pointerSessions.get(id);
+-              if (session) await releasePointerOwner(id, session);
+-              else await detachPointerSessionAndConfirm(workspace.tabId);
++              const release = async () => {
++                const session = pointerSessions.get(id);
++                if (session) await releasePointerOwner(id, session);
++                else await detachPointerSessionAndConfirm(workspace.tabId);
++              };
++              await live?.guard();
++              // Never race a browser mutation against a timer: wait for its
++              // actual completion, while the independent offscreen watchdog
++              // bounds capture. The next guard prevents any late resize.
++              await release();
++              await live?.guard();
++              live?.afterDetach();
+             },
+           }
+         : {}),
+     });
+   } catch (error) {
+     await mutateJob(id, (job) => {
++      if (live && job.generation !== live.generation) return;
+       job.limitations.push(
+         `VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED: ${errorText(error)}`,
+       );
+@@ -2193,7 +2361,10 @@
+                   throw error;
+               } finally {
+                 try {
+-                  if (
++                  const terminalCleanup = terminalCaptureCleanups.get(id);
++                  if (terminalCleanup?.generation === generation)
++                    await terminalCleanup.done;
++                  else if (
+                     emulatedViewports.has(id) ||
+                     restoreWindows.has(id) ||
+                     viewportWorkspaces.has(id)
+@@ -2282,6 +2453,11 @@
+   } finally {
+     // Cancellation and targeted replay must release the browser producer too;
+     // track.stop() alone can leave its size constraints active during restore.
++    const terminalCleanup = terminalCaptureCleanups.get(id);
++    if (terminalCleanup?.generation === generation) {
++      await terminalCleanup.done;
++      terminalCaptureCleanups.delete(id);
++    }
+     try {
+       await releaseCaptureSource(id, generation);
+     } catch {
+@@ -2784,6 +2960,7 @@
+       mutate: mutateJob,
+       cancel: (tabId) => chrome.tabs.sendMessage(tabId, { type: 'FG_CANCEL' }),
+       stop: (generation) => offscreen('CAPTURE_STOP', { generation }),
++      holdForCleanup: beginTerminalCaptureCleanup,
+     });
+     return {};
+   }
+--- a/apps/chrome-extension/src/offscreen.ts
++++ b/apps/chrome-extension/src/offscreen.ts
+@@ -14,6 +14,13 @@
+ let heartbeat: ReturnType<typeof setInterval> | undefined;
+ let callback = 0;
+ let collecting = false;
++let candidateEventsOpen = false;
++const GEOMETRY_CLEANUP_LIMIT_MS = 2500;
++let cleanupHold:
++  { deadlineEpochMs: number; timer: ReturnType<typeof setTimeout> } | undefined;
++let sealedSegment:
++  | { generation: string; sourceId: string; result: Promise<AnalysisResult> }
++  | undefined;
+ // Includes the frame currently being analysed. FIFO worker message ordering
+ // allows brief processing spikes to catch up without unbounded frame retention.
+ const MAX_IN_FLIGHT_FRAMES = 3;
+@@ -71,6 +78,9 @@
+ async function stopCapture() {
+   captureRevision++;
+   collecting = false;
++  candidateEventsOpen = false;
++  if (cleanupHold) clearTimeout(cleanupHold.timer);
++  cleanupHold = undefined;
+   coverage = undefined;
+   sourceFrameClock.reset();
+   lastDecodedGeometry = undefined;
+@@ -173,6 +183,59 @@
+   if (revision !== captureRevision)
+     throw new Error('CAPTURE_SOURCE_CHANGED_DURING_NEGOTIATION');
+ }
++async function finishSegment(
++  interruption?: string,
++  sealed = false,
++): Promise<AnalysisResult> {
++  const generation = captureGeneration,
++    sourceId = captureSourceId,
++    revision = captureRevision;
++  const settings = stream?.getVideoTracks()[0]?.getSettings();
++  collecting = false;
++  const window = coverage?.finish(performance.now());
++  coverage = undefined;
++  const skippedBeforeEnd = skipped;
++  const measurement = (await workerRequest(
++    'END',
++    geometryMismatches && expectedViewport
++      ? `CAPTURE_VIEWPORT_MISMATCH: ${geometryMismatches} decoded frames (${lastMismatchedGeometry} latest) did not match ${Math.round(expectedViewport.width * expectedViewport.dpr)}x${Math.round(expectedViewport.height * expectedViewport.dpr)} source pixels for the requested ${expectedViewport.width}x${expectedViewport.height} CSS viewport at DPR ${expectedViewport.dpr}. Those frames were not analyzed.`
++      : interruption ||
++          (skipped
++            ? `${skipped} source/analysis frames were skipped or unavailable.`
++            : undefined),
++  )) as AnalysisResult;
++  if (
++    generation !== captureGeneration ||
++    sourceId !== captureSourceId ||
++    (!sealed && (revision !== captureRevision || !stream?.active))
++  )
++    throw new Error('Capture session ended while draining analysis');
++  // END is queued behind every transferred frame. A queued conversion can
++  // still fail after END was requested; retain that failure in the result.
++  if (skipped > skippedBeforeEnd) {
++    measurement.status = 'INCONCLUSIVE';
++    measurement.quality.interrupted = true;
++    measurement.limitations.push(
++      `${skipped - skippedBeforeEnd} queued source/analysis frames failed while completing the segment; ${skipped} total frames were skipped or unavailable.`,
++    );
++  }
++
++  if (measurement.quality.processing && settings) {
++    const details = settings as MediaTrackSettings & {
++      resizeMode?: string;
++    };
++    measurement.quality.processing.track = {
++      ...(settings.width ? { width: settings.width } : {}),
++      ...(settings.height ? { height: settings.height } : {}),
++      ...(Number.isFinite(settings.frameRate)
++        ? { frameRate: settings.frameRate }
++        : {}),
++      ...(details.resizeMode ? { resizeMode: details.resizeMode } : {}),
++    };
++  }
++  return window ? withCaptureCoverage(measurement, window) : measurement;
++}
++
+ async function startCapture(
+   streamId: string,
+   generation: string,
+@@ -180,6 +243,7 @@
+   viewportInput?: unknown,
+ ) {
+   await stopCapture();
++  sealedSegment = undefined;
+   const revision = captureRevision;
+   captureGeneration = generation;
+   captureSourceId = sourceId;
+@@ -229,6 +293,7 @@
+     if (!current()) return;
+     const message = event.data;
+     if (message.type === 'CANDIDATE_EVENT') {
++      if (!candidateEventsOpen) return;
+       const finding = message.finding;
+       const diagnostic = finding?.diagnostic;
+       if (
+@@ -284,6 +349,7 @@
+   };
+   worker.onerror = () => {
+     if (!current()) return;
++    if (cleanupHold) void stopCapture();
+     void chrome.runtime.sendMessage({
+       target: 'background',
+       type: 'CAPTURE_LOST',
+@@ -503,6 +569,13 @@
+       return {};
+     }
+     if (
++      message.type === 'SEGMENT_END' &&
++      sealedSegment &&
++      message.generation === sealedSegment.generation &&
++      message.sourceId === sealedSegment.sourceId
++    )
++      return sealedSegment.result;
++    if (
+       message.generation !== captureGeneration ||
+       (message.sourceId && message.sourceId !== captureSourceId) ||
+       !stream?.active ||
+@@ -510,7 +583,59 @@
+     )
+       throw new Error('Capture session is unavailable');
+     const commandRevision = captureRevision;
++    if (message.type === 'CAPTURE_CLEANUP_HOLD') {
++      if (message.sourceId !== captureSourceId)
++        throw new Error('CAPTURE_SOURCE_ID_REQUIRED');
++      if (!cleanupHold) {
++        if (!collecting) throw new Error('CAPTURE_NOT_MEASURING');
++        // Stop submitting pixels and forwarding even queued worker candidates
++        // immediately. Only already-submitted real frames may finish the END.
++        collecting = false;
++        candidateEventsOpen = false;
++        const deadlineEpochMs = Date.now() + GEOMETRY_CLEANUP_LIMIT_MS;
++        cleanupHold = {
++          deadlineEpochMs,
++          // This lives outside the background/analysis workers. Their crashes,
++          // stalled DOM queries and repeated HOLD messages cannot extend it.
++          timer: setTimeout(
++            () => void stopCapture(),
++            GEOMETRY_CLEANUP_LIMIT_MS,
++          ),
++        };
++        const result = finishSegment('USER_STOP', true);
++        void result.catch(() => undefined);
++        sealedSegment = {
++          generation: captureGeneration,
++          sourceId: captureSourceId,
++          result,
++        };
++      }
++      return { deadlineEpochMs: cleanupHold.deadlineEpochMs };
++    }
++    if (message.type === 'CAPTURE_CLEANUP_GEOMETRY') {
++      if (!cleanupHold || Date.now() >= cleanupHold.deadlineEpochMs)
++        throw new Error('CAPTURE_CLEANUP_EXPIRED');
++      const viewport = validateCaptureViewport(message.viewport);
++      // Require a newly decoded frame after this request; track settings or a
++      // stale frame are not proof of the restoration raster. Never analyse it.
++      lastDecodedGeometry = undefined;
++      await negotiateViewport(viewport);
++      const width = Math.round(viewport.width * viewport.dpr),
++        height = Math.round(viewport.height * viewport.dpr);
++      const decoded = lastDecodedGeometry as
++        { width: number; height: number } | undefined;
++      if (
++        !cleanupHold ||
++        Date.now() >= cleanupHold.deadlineEpochMs ||
++        decoded?.width !== width ||
++        decoded.height !== height
++      )
++        throw new Error('CAPTURE_CLEANUP_GEOMETRY_UNCONFIRMED');
++      return { width, height };
++    }
+     if (message.type === 'SEGMENT_BEGIN') {
++      if (cleanupHold || sealedSegment)
++        throw new Error('CAPTURE_ANALYSIS_STOPPED');
+       collecting = false;
+       const requestedViewport =
+         message.expectedViewport ?? message.sourceViewport;
+@@ -523,7 +648,9 @@
+         message.generation !== captureGeneration ||
+         commandRevision !== captureRevision ||
+         !analysis ||
+-        !stream?.active
++        !stream?.active ||
++        cleanupHold ||
++        sealedSegment
+       )
+         throw new Error('Capture session ended during viewport negotiation');
+       const sourceGeometry = validatedViewport
+@@ -544,7 +671,9 @@
+         message.generation !== captureGeneration ||
+         commandRevision !== captureRevision ||
+         !analysis ||
+-        !stream?.active
++        !stream?.active ||
++        cleanupHold ||
++        sealedSegment
+       )
+         throw new Error('Capture session ended during analysis preparation');
+       inFlightFrames = 0;
+@@ -559,53 +688,11 @@
+       presentedFrames = 0;
+       coverage = new CaptureCoverage(performance.now());
+       collecting = true;
++      candidateEventsOpen = true;
+       return {};
+     }
+-    if (message.type === 'SEGMENT_END') {
+-      collecting = false;
+-      const window = coverage?.finish(performance.now());
+-      coverage = undefined;
+-      const skippedBeforeEnd = skipped;
+-      const measurement = (await workerRequest(
+-        'END',
+-        geometryMismatches && expectedViewport
+-          ? `CAPTURE_VIEWPORT_MISMATCH: ${geometryMismatches} decoded frames (${lastMismatchedGeometry} latest) did not match ${Math.round(expectedViewport.width * expectedViewport.dpr)}x${Math.round(expectedViewport.height * expectedViewport.dpr)} source pixels for the requested ${expectedViewport.width}x${expectedViewport.height} CSS viewport at DPR ${expectedViewport.dpr}. Those frames were not analyzed.`
+-          : message.interruption ||
+-              (skipped
+-                ? `${skipped} source/analysis frames were skipped or unavailable.`
+-                : undefined),
+-      )) as AnalysisResult;
+-      if (
+-        message.generation !== captureGeneration ||
+-        commandRevision !== captureRevision ||
+-        !stream?.active
+-      )
+-        throw new Error('Capture session ended while draining analysis');
+-      // END is queued behind every transferred frame. A queued conversion can
+-      // still fail after END was requested; retain that failure in the result.
+-      if (skipped > skippedBeforeEnd) {
+-        measurement.status = 'INCONCLUSIVE';
+-        measurement.quality.interrupted = true;
+-        measurement.limitations.push(
+-          `${skipped - skippedBeforeEnd} queued source/analysis frames failed while completing the segment; ${skipped} total frames were skipped or unavailable.`,
+-        );
+-      }
+-      const settings = stream.getVideoTracks()[0]?.getSettings();
+-      if (measurement.quality.processing && settings) {
+-        const details = settings as MediaTrackSettings & {
+-          resizeMode?: string;
+-        };
+-        measurement.quality.processing.track = {
+-          ...(settings.width ? { width: settings.width } : {}),
+-          ...(settings.height ? { height: settings.height } : {}),
+-          ...(Number.isFinite(settings.frameRate)
+-            ? { frameRate: settings.frameRate }
+-            : {}),
+-          ...(details.resizeMode ? { resizeMode: details.resizeMode } : {}),
+-        };
+-      }
+-      return window ? withCaptureCoverage(measurement, window) : measurement;
+-    }
++    if (message.type === 'SEGMENT_END')
++      return finishSegment(message.interruption);
+     throw new Error('Unknown capture command');
+   })().then(
+     (value) => respond({ ok: true, value }),
+--- a/apps/chrome-extension/src/capture-stop.ts
++++ b/apps/chrome-extension/src/capture-stop.ts
+@@ -12,6 +12,9 @@
+   ): Promise<ScanJob | undefined>;
+   cancel(tabId: number): Promise<unknown>;
+   stop(generation: string): Promise<unknown>;
++  /** Only an already-running advanced STOP may keep its existing producer
++   * briefly, with analysis closed and an independent offscreen watchdog. */
++  holdForCleanup?(job: ScanJob): Promise<boolean>;
+ }): Promise<void> {
+   let changed = false;
+   const stopped = await options.mutate(options.id, (job) => {
+@@ -28,6 +31,17 @@
+     if (job.state === 'PARTIAL') job.endedAt = options.now();
+   });
+   if (!changed || !stopped) return;
+-  await options.cancel(stopped.tabId).catch(() => undefined);
+-  await options.stop(stopped.generation).catch(() => undefined);
++  const capture = (async () => {
++    const held =
++      options.type === 'STOP' &&
++      options.running &&
++      stopped.state === 'STOPPING' &&
++      stopped.advancedPointer === true &&
++      (await options.holdForCleanup?.(stopped).catch(() => false));
++    if (!held) await options.stop(stopped.generation).catch(() => undefined);
++  })();
++  // A slow content response must not keep ordinary capture alive, nor delay
++  // closing analysis in the special geometry-cleanup path.
++  const cancellation = options.cancel(stopped.tabId).catch(() => undefined);
++  await Promise.all([capture, cancellation]);
+ }
+--- a/apps/chrome-extension/src/viewport-workspace.ts
++++ b/apps/chrome-extension/src/viewport-workspace.ts
+@@ -255,6 +255,12 @@
+   /** Release the job-owned debugger while the tab can still recompute layout.
+    * Normal between-route restoration deliberately leaves this absent. */
+   releaseDebugger?(): Promise<void>;
++  /** A terminal geometry-only producer must be confirmed released before the
++   * tab is returned inactive, including when actual CSS restoration failed. */
++  releaseBeforeReturn?(): Promise<void>;
++  /** Only gates pre-return geometry mutation; producer release and safe return
++   * still run after an expired restoration deadline. */
++  guardRestoration?(): Promise<unknown>;
+ }): Promise<void> {
+   const driver = options.driver ?? browser;
+   const workspace = options.workspace;
+@@ -275,6 +281,7 @@
+     workspace.originalViewport;
+   try {
+     // Do not resize a workspace that the user has brought to the foreground.
++    await options.guardRestoration?.();
+     await assertViewportWorkspace(workspace, driver);
+     if (options.releaseDebugger) {
+       try {
+@@ -291,7 +298,9 @@
+       // any resize or move; never activate the page in the foreground.
+       await assertViewportWorkspace(workspace, driver);
+     }
++    await options.guardRestoration?.();
+     await driver.resize(workspace.windowId, workspace.originalWindow);
++    await options.guardRestoration?.();
+     await waitForStableViewport({
+       read: options.read,
+       wait: options.wait,
+@@ -302,6 +311,7 @@
+     failure ??= error;
+   }
+   // Original user-owned window dimensions are never overwritten during cleanup.
++  await options.releaseBeforeReturn?.();
+   const current = await driver.tab(workspace.tabId);
+   if (current.windowId !== workspace.windowId)
+     throw new Error('VIEWPORT_WORKSPACE_TAB_MOVED');
+--- /dev/null
++++ b/apps/chrome-extension/src/capture-cleanup.ts
+@@ -0,0 +1,32 @@
++/** A cleanup timeout bounds waiting; it never grants a new capture or extends
++ * the independent offscreen watchdog. A late read is ignored by its caller. */
++export function cleanupTimeRemaining(
++  deadlineEpochMs: number,
++  now = Date.now(),
++): number {
++  const remaining = deadlineEpochMs - now;
++  if (!Number.isFinite(remaining) || remaining <= 0 || remaining > 2500)
++    throw new Error('CAPTURE_CLEANUP_EXPIRED');
++  return remaining;
++}
++
++export async function withinCleanupDeadline<T>(
++  deadlineEpochMs: number,
++  action: () => Promise<T>,
++): Promise<T> {
++  const remaining = cleanupTimeRemaining(deadlineEpochMs);
++  let timer: ReturnType<typeof setTimeout> | undefined;
++  try {
++    return await Promise.race([
++      action(),
++      new Promise<never>((_, reject) => {
++        timer = setTimeout(
++          () => reject(new Error('CAPTURE_CLEANUP_EXPIRED')),
++          remaining,
++        );
++      }),
++    ]);
++  } finally {
++    if (timer) clearTimeout(timer);
++  }
++}
+--- a/tests/extension/capture-quality.test.ts
++++ b/tests/extension/capture-quality.test.ts
+@@ -94,6 +94,7 @@
+ afterEach(async () => {
+   await shutdown?.();
+   shutdown = undefined;
++  vi.useRealTimers();
+   vi.restoreAllMocks();
+   vi.unstubAllGlobals();
+ });
+@@ -110,6 +111,7 @@
+   const notifications = vi.fn(async () => ({}));
+   let constraintFailure: Error | undefined;
+   let pendingStart: Promise<void> | undefined;
++  let pendingConstraints: Promise<void> | undefined;
+   const tracks: { stop: ReturnType<typeof vi.fn> }[] = [];
+   vi.stubGlobal('chrome', {
+     runtime: {
+@@ -127,12 +129,13 @@
+     onerror?: () => void;
+     failFrame = false;
+     errorWhileEnding = false;
++    holdResponses = false;
+     frames = 0;
+     requests: { type: string; timestampMs?: number }[] = [];
+     constructor() {
+       workers.push(this);
+     }
+-    terminate() {}
++    terminate = vi.fn();
+     postMessage(message: {
+       type: string;
+       id?: string;
+@@ -145,6 +148,7 @@
+         this.frames++;
+         return;
+       }
++      if (this.holdResponses) return;
+       queueMicrotask(() => {
+         if (message.type === 'END' && this.errorWhileEnding)
+           this.onmessage?.({ data: { type: 'FRAME_ERROR' } });
+@@ -200,6 +204,7 @@
+         pendingStart = undefined;
+         const track = {
+           applyConstraints: async () => {
++            if (pendingConstraints) await pendingConstraints;
+             if (constraintFailure) throw constraintFailure;
+           },
+           getSettings: () => ({
+@@ -282,6 +287,16 @@
+       });
+       return release;
+     },
++    delayConstraints: () => {
++      let release!: () => void;
++      pendingConstraints = new Promise<void>((resolve) => {
++        release = resolve;
++      });
++      return () => {
++        pendingConstraints = undefined;
++        release();
++      };
++    },
+     frame,
+     settle,
+     time: (value: number) => (now = value),
+@@ -481,3 +496,130 @@
+     expect(result.limitations.join(' ')).toContain('3 total frames');
+   });
+ });
++
++describe('bounded geometry-only producer after STOP', () => {
++  it('immediately rejects new analysis and queued candidates, retaining only the real pre-STOP segment', async () => {
++    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
++    const h = await captureHarness();
++    await h.send('CAPTURE_START');
++    await h.send('SEGMENT_BEGIN', 'one', { segmentId: 's1' });
++    h.time(50);
++    h.readers[0].emit({ done: false, value: h.frame(1000) });
++    await h.settle();
++    const event = {
++      type: 'CANDIDATE_EVENT',
++      sourceTimestampOrigin: 1,
++      finding: {
++        id: 'real-before-stop',
++        region: { x: 0, y: 0, width: 1, height: 1 },
++        diagnostic: {
++          windowStartMs: 0,
++          windowEndMs: 0,
++          analysisWidth: 1,
++          analysisHeight: 1,
++          sourceWidth: 1,
++          sourceHeight: 1,
++        },
++      },
++    };
++    h.workers[0].onmessage?.({ data: event });
++    expect(
++      h.notifications.mock.calls.filter(([m]) => m.type === 'CANDIDATE_EVENT'),
++    ).toHaveLength(1);
++    h.time(100);
++    expect((await h.send('CAPTURE_CLEANUP_HOLD')).ok).toBe(true);
++    h.workers[0].onmessage?.({ data: event });
++    h.readers[0].emit({ done: false, value: h.frame(2000) });
++    await h.settle();
++    expect(h.workers[0].frames).toBe(1);
++    expect(
++      h.notifications.mock.calls.filter(([m]) => m.type === 'CANDIDATE_EVENT'),
++    ).toHaveLength(1);
++    expect((await h.send('SEGMENT_BEGIN')).ok).toBe(false);
++    h.time(2600);
++    await vi.advanceTimersByTimeAsync(2500);
++    expect(h.tracks[0].stop).toHaveBeenCalledOnce();
++    const result = await h.send('SEGMENT_END');
++    expect(result.ok).toBe(true);
++    expect((result.value as AnalysisResult).quality.captureWindowMs).toBe(100);
++    expect((result.value as AnalysisResult).quality.interrupted).toBe(true);
++    expect((result.value as AnalysisResult).limitations).toContain('USER_STOP');
++    expect(h.tracks).toHaveLength(1);
++  });
++
++  it('cannot extend its absolute watchdog with repeated holds or a stuck geometry request', async () => {
++    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
++    const h = await captureHarness();
++    await h.send('CAPTURE_START');
++    await h.send('SEGMENT_BEGIN');
++    const first = await h.send('CAPTURE_CLEANUP_HOLD');
++    await vi.advanceTimersByTimeAsync(1000);
++    const again = await h.send('CAPTURE_CLEANUP_HOLD');
++    expect(again.value).toEqual(first.value);
++    const finishConstraints = h.delayConstraints();
++    const geometry = h.send('CAPTURE_CLEANUP_GEOMETRY', 'one', {
++      viewport: { width: 900, height: 507, dpr: 2 },
++    });
++    await vi.advanceTimersByTimeAsync(1499);
++    expect(h.tracks[0].stop).not.toHaveBeenCalled();
++    await vi.advanceTimersByTimeAsync(1);
++    expect(h.tracks[0].stop).toHaveBeenCalledOnce();
++    finishConstraints();
++    expect((await geometry).ok).toBe(false);
++    expect(h.tracks).toHaveLength(1);
++  });
++
++  it('confirms only a newly decoded cleanup raster without submitting it to analysis', async () => {
++    const h = await captureHarness();
++    await h.send('CAPTURE_START');
++    await h.send('SEGMENT_BEGIN');
++    await h.send('CAPTURE_CLEANUP_HOLD');
++    const request = h.send('CAPTURE_CLEANUP_GEOMETRY', 'one', {
++      viewport: { width: 900, height: 507, dpr: 2 },
++    });
++    await h.settle();
++    const frame = h.frame(2000);
++    frame.displayWidth = 1800;
++    frame.displayHeight = 1014;
++    h.readers[0].emit({ done: false, value: frame });
++    await h.settle();
++    expect(await request).toEqual({
++      ok: true,
++      value: { width: 1800, height: 1014 },
++    });
++    expect(frame.close).toHaveBeenCalledOnce();
++    expect(h.workers[0].frames).toBe(0);
++    expect(h.tracks).toHaveLength(1);
++  });
++
++  it('stops independently when the analysis worker crashes and does not fabricate a completed measurement', async () => {
++    const h = await captureHarness();
++    await h.send('CAPTURE_START');
++    await h.send('SEGMENT_BEGIN');
++    h.workers[0].holdResponses = true;
++    await h.send('CAPTURE_CLEANUP_HOLD');
++    h.workers[0].onerror?.();
++    expect(h.tracks[0].stop).toHaveBeenCalledOnce();
++    const end = await h.send('SEGMENT_END');
++    expect(end.ok).toBe(false);
++    expect(end.error).toContain('Capture ended');
++  });
++
++  it('rejects stale/absent holds and cannot stop a newer generation with the old watchdog', async () => {
++    vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
++    const h = await captureHarness();
++    expect((await h.send('CAPTURE_CLEANUP_HOLD')).ok).toBe(false);
++    expect(h.tracks).toHaveLength(0);
++    await h.send('CAPTURE_START');
++    await h.send('SEGMENT_BEGIN');
++    expect((await h.send('CAPTURE_CLEANUP_HOLD', 'stale')).ok).toBe(false);
++    await h.send('CAPTURE_CLEANUP_HOLD');
++    await h.send('CAPTURE_START', 'two');
++    await h.send('SEGMENT_BEGIN', 'two');
++    await vi.advanceTimersByTimeAsync(2500);
++    expect(h.tracks[0].stop).toHaveBeenCalledOnce();
++    expect(h.tracks[1].stop).not.toHaveBeenCalled();
++    expect((await h.send('SEGMENT_END', 'one')).ok).toBe(false);
++    expect(h.tracks).toHaveLength(2);
++  });
++});
+--- a/tests/extension/capture-stop.test.ts
++++ b/tests/extension/capture-stop.test.ts
+@@ -28,6 +28,7 @@
+ function fixture(value: ScanJob | undefined, running = true) {
+   let activeGeneration = 'another-active-lease';
+   let currentCaptureStopped = false;
++  const stoppedProducers: string[] = [];
+   const options = {
+     id: 'old-dashboard-job',
+     type: 'STOP' as 'STOP' | 'PAUSE',
+@@ -41,13 +42,18 @@
+     }),
+     cancel: vi.fn(async (_tabId: number) => {}),
+     stop: vi.fn(async (generation: string) => {
+-      if (generation === activeGeneration) currentCaptureStopped = true;
++      if (generation === activeGeneration) {
++        currentCaptureStopped = true;
++        stoppedProducers.push(generation);
++      }
+     }),
+   };
+   return {
+     options,
++    stoppedProducers,
+     setActiveGeneration: (generation: string) => {
+       activeGeneration = generation;
++      currentCaptureStopped = false;
+     },
+     get currentCaptureStopped() {
+       return currentCaptureStopped;
+@@ -89,7 +95,7 @@
+       expect(tabId).toBe(current.tabId);
+       expect(current.state).toBe('STOPPING');
+       expect(current.stopIntent).toBe(true);
+-      expect(f.options.stop).not.toHaveBeenCalled();
++      expect(f.options.stop).toHaveBeenCalledExactlyOnceWith('requested-lease');
+     });
+     await stopRequestedCapture(f.options);
+     expect(current.stopReason).toBe('USER_STOP');
+@@ -109,6 +115,7 @@
+     });
+     await stopRequestedCapture(f.options);
+     expect(f.options.stop).toHaveBeenCalledExactlyOnceWith('requested-lease');
++    expect(f.stoppedProducers).toEqual(['requested-lease']);
+     expect(f.currentCaptureStopped).toBe(false);
+   });
+ 
+@@ -148,4 +155,61 @@
+     expect(f.options.cancel).not.toHaveBeenCalled();
+     expect(f.options.stop).not.toHaveBeenCalled();
+   });
++
++  it('closes ordinary capture immediately while content cancellation remains unresolved', async () => {
++    const f = fixture(job());
++    let finish!: () => void;
++    f.options.cancel.mockImplementation(
++      () =>
++        new Promise<void>((resolve) => {
++          finish = resolve;
++        }),
++    );
++    const stopped = stopRequestedCapture(f.options);
++    await Promise.resolve();
++    await Promise.resolve();
++    expect(f.options.stop).toHaveBeenCalledExactlyOnceWith('requested-lease');
++    finish();
++    await stopped;
++  });
++
++  it('only permits the existing advanced running STOP lease to request bounded geometry cleanup', async () => {
++    for (const kind of [
++      'advanced-stop',
++      'standard-stop',
++      'pause',
++      'not-running',
++    ] as const) {
++      const value = job();
++      value.advancedPointer = kind !== 'standard-stop';
++      const f = fixture(value, kind !== 'not-running');
++      if (kind === 'pause') f.options.type = 'PAUSE';
++      const holdForCleanup = vi.fn(async (lease: ScanJob) => {
++        expect(lease.state).toBe('STOPPING');
++        expect(lease.generation).toBe('requested-lease');
++        return true;
++      });
++      await stopRequestedCapture({ ...f.options, holdForCleanup });
++      if (kind === 'advanced-stop') {
++        expect(holdForCleanup).toHaveBeenCalledOnce();
++        expect(f.options.stop).not.toHaveBeenCalled();
++      } else {
++        expect(holdForCleanup).not.toHaveBeenCalled();
++        expect(f.options.stop).toHaveBeenCalledOnce();
++      }
++    }
++  });
++
++  it('falls back to an immediate scoped stop when no existing source can be held', async () => {
++    const value = job();
++    value.advancedPointer = true;
++    const f = fixture(value);
++    await stopRequestedCapture({
++      ...f.options,
++      holdForCleanup: async () => {
++        throw new Error('Capture absent');
++      },
++    });
++    expect(f.options.stop).toHaveBeenCalledExactlyOnceWith('requested-lease');
++  });
+ });
+--- /dev/null
++++ b/tests/extension/capture-cleanup.test.ts
+@@ -0,0 +1,44 @@
++import { afterEach, describe, expect, it, vi } from 'vitest';
++import {
++  cleanupTimeRemaining,
++  withinCleanupDeadline,
++} from '../../apps/chrome-extension/src/capture-cleanup';
++
++afterEach(() => vi.useRealTimers());
++
++describe('absolute live-capture cleanup deadline', () => {
++  it('rejects an expired, unbounded or renewed deadline before starting another read', async () => {
++    vi.useFakeTimers();
++    vi.setSystemTime(10_000);
++    const read = vi.fn(async () => 1);
++    for (const deadline of [10_000, 9999, 12_501, Infinity, NaN])
++      await expect(withinCleanupDeadline(deadline, read)).rejects.toThrow(
++        'CAPTURE_CLEANUP_EXPIRED',
++      );
++    expect(read).not.toHaveBeenCalled();
++    expect(cleanupTimeRemaining(12_500)).toBe(2500);
++  });
++
++  it('ignores a delayed DOM response after timeout, without running its following restore mutation', async () => {
++    vi.useFakeTimers();
++    vi.setSystemTime(10_000);
++    let resolve!: (value: number) => void;
++    const resize = vi.fn();
++    const task = (async () => {
++      const value = await withinCleanupDeadline(
++        12_500,
++        () =>
++          new Promise<number>((done) => {
++            resolve = done;
++          }),
++      );
++      resize(value);
++    })();
++    const rejected = expect(task).rejects.toThrow('CAPTURE_CLEANUP_EXPIRED');
++    await vi.advanceTimersByTimeAsync(2500);
++    await rejected;
++    resolve(507);
++    await Promise.resolve();
++    expect(resize).not.toHaveBeenCalled();
++  });
++});
+--- a/tests/extension/viewport-workspace.test.ts
++++ b/tests/extension/viewport-workspace.test.ts
+@@ -323,6 +323,62 @@
+     await restoreViewportWorkspace({ workspace, ...f.options });
+     expect(await f.options.read()).toEqual(workspace.originalViewport);
+   });
++  it('releases the temporary producer before inactive return even when CSS restoration fails', async () => {
++    const f = fixture();
++    const workspace = await createViewportWorkspace(f.options);
++    workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
++    let released = false;
++    const move = f.driver.move;
++    f.driver.move = vi.fn(async (...args) => {
++      expect(released).toBe(true);
++      return move(...args);
++    });
++    await expect(
++      restoreViewportWorkspace({
++        workspace,
++        ...f.options,
++        releaseDebugger: async () => {},
++        releaseBeforeReturn: async () => {
++          released = true;
++        },
++      }),
++    ).rejects.toThrow('VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED');
++    expect(f.target).toMatchObject({ windowId: 1, active: false });
++    expect(released).toBe(true);
++  });
++  it('never races a late debugger release with resize or inactive return', async () => {
++    const f = fixture();
++    const workspace = await createViewportWorkspace(f.options);
++    workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
++    let expired = false,
++      release!: () => void;
++    const producer = vi.fn(async () => {});
++    const restore = restoreViewportWorkspace({
++      workspace,
++      ...f.options,
++      releaseDebugger: () =>
++        new Promise<void>((resolve) => {
++          release = resolve;
++        }),
++      guardRestoration: async () => {
++        if (expired) throw new Error('CAPTURE_CLEANUP_EXPIRED');
++      },
++      releaseBeforeReturn: producer,
++    });
++    // Let the actual detach begin. No timer race may advance the restore flow.
++    for (let i = 0; i < 20 && !release; i++) await Promise.resolve();
++    expect(release).toBeTypeOf('function');
++    expired = true;
++    expect(f.driver.resize).not.toHaveBeenCalled();
++    expect(f.driver.move).not.toHaveBeenCalled();
++    expect(producer).not.toHaveBeenCalled();
++    const rejected = expect(restore).rejects.toThrow('CAPTURE_CLEANUP_EXPIRED');
++    release();
++    await rejected;
++    expect(f.driver.resize).not.toHaveBeenCalled();
++    expect(producer).toHaveBeenCalledOnce();
++    expect(f.target).toMatchObject({ windowId: 1, active: false });
++  });
+   it('does not invent a pre-attach baseline and still restores the owned outer bounds before reporting failure', async () => {
+     const f = fixture();
+     const workspace = await createViewportWorkspace(f.options);

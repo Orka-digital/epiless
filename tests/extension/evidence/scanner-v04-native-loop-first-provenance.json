@@ -1,0 +1,32 @@
+{
+  "status": "FAIL",
+  "scope": "Byte-exact first real-toolbar autonomous existing-loop observation on one Mac. Media clock and compositor wraps confirmed; strict native capture cadence gate failed. No source, fixture, report or verifier threshold changed during preservation. Screenshot and browser profile are not copied.",
+  "jobId": "2eb99add-d911-4450-8d80-2b23b0949eff",
+  "scannerBuildSha256": "8a8f9e067bbe94c1de2396bc27a9200abcaff498edca1363b8514a271bff9d27",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-first-capture.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-HPxiSm/2eb99add-d911-4450-8d80-2b23b0949eff.json",
+      "bytes": 25378,
+      "sha256": "065752b0ac94478d8fc561ecf1b39ebb3d75fcc665730b65a893e3995c0687d0"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-first-local-job.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-HPxiSm/2eb99add-d911-4450-8d80-2b23b0949eff-local-job.json",
+      "bytes": 750848,
+      "sha256": "1a9b976ef8f5e1ba2ae8d29209ce7109c075717c6beb8692fe2ece98a89cb270"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-first-environment.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-HPxiSm/2eb99add-d911-4450-8d80-2b23b0949eff-environment.json",
+      "bytes": 1686220,
+      "sha256": "3ab5f47a0d02463c6c4657e6dc64da4b70dd71d44bc91cf33b2a3975608d0cc4"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-first-verification.json",
+      "original": "/tmp/epiless-native-loop-first.json",
+      "bytes": 3203,
+      "sha256": "6970711b421012c29e06051d0f6732844e3bb073806fd37891a249d3099b0881"
+    }
+  ]
+}

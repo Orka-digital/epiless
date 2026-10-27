@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "486bde71-3ad5-4140-ae3b-3149c607b472",
+  "origin": "http://127.0.0.1:47819",
+  "startedAt": "2026-10-27T12:43:54.075Z",
+  "endedAt": "2026-10-27T12:44:09.370Z",
+  "engineVersion": "0.4.0-candidate",
+  "runnerVersion": "0.4.0",
+  "status": "INCONCLUSIVE",
+  "passed": null,
+  "job": {
+    "state": "PARTIAL",
+    "stopReason": "QUEUE_EXHAUSTED",
+    "maxRoutes": 1,
+    "maxDepth": 4,
+    "maxDurationMs": 45000,
+    "discoveredRoutes": 1,
+    "visitedRoutes": 1
+  },
+  "routes": [
+    {
+      "url": "http://127.0.0.1:47819/",
+      "status": "PARTIAL",
+      "reason": "Viewport at route inventory: 900 × 563 CSS pixels; device pixel ratio 4.",
+      "coverage": [
+        {
+          "id": "695a4705-b3a0-4a3b-8914-8baa78a6ff8b",
+          "scenario": "initial-viewport",
+          "outcome": "TESTED",
+          "viewport": {
+            "width": 900,
+            "height": 563,
+            "dpr": 4
+          }
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "695a4705-b3a0-4a3b-8914-8baa78a6ff8b",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T12:43:54.292Z",
+          "endedAt": "2026-10-27T12:44:09.363Z",
+          "quality": {
+            "frameCount": 433,
+            "effectiveFps": 28.82882882882883,
+            "maxGapMs": 200.5999994277954,
+            "width": 1920,
+            "height": 1080,
+            "downsampled": true,
+            "interrupted": true,
+            "captureWindowMs": 15001.599999427795,
+            "leadingIdleMs": 1.1999998092651367,
+            "trailingIdleMs": 24.299999237060547,
+            "spatial": {
+              "mode": "RESCALED_PIXELS",
+              "sourceWidth": 6720,
+              "sourceHeight": 3780,
+              "retainedResolutionRatio": 0.08163265306122448,
+              "stateBytes": 189508236,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 433,
+              "meanMs": 22.215242456343653,
+              "maxMs": 180.4000005722046,
+              "framesOver16_7Ms": 433,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 17.118475722385607,
+              "analysisMeanMs": 5.087990754195779,
+              "conversionMethods": [
+                "CANVAS2D_SRGB"
+              ],
+              "track": {
+                "width": 6720,
+                "height": 3780,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 6720,
+                "codedHeight": 3780,
+                "displayWidth": 6720,
+                "displayHeight": 3780,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 6720,
+                  "height": 3780
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": []
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "VIEWPORT_ONLY: only the current rendered viewport is measured; no automatic route discovery, navigation or scrolling.",
+    "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+    "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+    "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+    "Capture was rescaled. Small flashing regions may have been lost and area is not validated.",
+    "468 source/analysis frames were skipped or unavailable.",
+    "Effective sampling was below 50 fps; fast flashes may be missed.",
+    "Capture gaps exceeded 100 ms; transitions across gaps were discarded.",
+    "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+    "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+  ]
+}

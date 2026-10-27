@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "preservedAt": "2026-10-27T18:51:06.761904+00:00",
+  "scope": "One tiny canvas-stream video candidate over a five-second low-contrast GPU RGB workload, verified with --require-wasm at desktop and compact geometry. Temporary copied extension adds periodic numeric corner readback; production dist is unchanged. One Apple M2 Max and Chrome configuration only; not arbitrary content, codec, colour, physical display or hardware validation. No raw frame, screenshot or browser profile retained.",
+  "jobId": "c749bfce-a10e-46a5-886c-d674318c8ae1",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "engineTreeSha256": "c216fbe2c9de76354061c35ba4df09e7e0a25731e5be247f3a7092aca2ca687a",
+  "extensionArtifactSha256": "d0ac12bb19825c77f5d796bdbfa8b06eb965d539d53c4144c2fc2ff25ad8a7fc",
+  "strictPublicSchema": "PASS",
+  "verificationExitCode": 0,
+  "verificationArguments": [
+    "--require-wasm"
+  ],
+  "mediaReplayBoundary": "Both positive observations retain MEDIA_REPLAY_NOT_REPRODUCIBLE; this does not validate a compatible negative media recheck. Source-to-DOM latency remains unknown.",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-dense-capture.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-YaLPoD/c749bfce-a10e-46a5-886c-d674318c8ae1.json",
+      "bytes": 211564,
+      "sha256": "6a3dc1b9f2492c6970f880484076d61f25666ee27af48bfc2c324babdc9c3033"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-dense-local-job.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-YaLPoD/c749bfce-a10e-46a5-886c-d674318c8ae1-local-job.json",
+      "bytes": 1030449,
+      "sha256": "058d3e5044eecb2d7437f98b5a31002f824da190e4f2faca95f1314e4881cb11"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-dense-environment.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-YaLPoD/c749bfce-a10e-46a5-886c-d674318c8ae1-environment.json",
+      "bytes": 197019,
+      "sha256": "682d1d3454c6761487177ae0d54bbdd9bdade63d75635f0b2978fccfc3a9d434"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-dense-verification.json",
+      "original": "/tmp/epiless-native-current-dense-verification.json",
+      "bytes": 6005,
+      "sha256": "233008741929073bfb7d2aef96cb0c4ff3910bcdaed60b5a0e9936275fcd8305"
+    }
+  ],
+  "fixtureOffscreenSha256": "a753afbe5d7dbab57ddd3a14988c4e0daaf574def5e80cb06a61601403a40b8c"
+}

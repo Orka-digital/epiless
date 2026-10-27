@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "id": "e91bd1f2-917f-4a37-a2f5-326000790286",
+  "origin": "http://127.0.0.1:47819",
+  "startedAt": "2026-10-26T23:12:18.366Z",
+  "endedAt": "2026-10-26T23:13:33.468Z",
+  "engineVersion": "0.1.0-candidate",
+  "runnerVersion": "0.1.0",
+  "status": "INCONCLUSIVE",
+  "passed": null,
+  "job": {
+    "state": "PARTIAL",
+    "stopReason": "QUEUE_EXHAUSTED",
+    "maxRoutes": 50,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "discoveredRoutes": 3,
+    "visitedRoutes": 3
+  },
+  "routes": [
+    {
+      "url": "http://127.0.0.1:47819/",
+      "status": "PARTIAL",
+      "scenarios": [
+        {
+          "id": "246467c7-dcda-46bd-829f-5b207a6c7b04",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-26T23:12:19.431Z",
+          "endedAt": "2026-10-26T23:12:34.441Z",
+          "quality": {
+            "frameCount": 446,
+            "effectiveFps": 29.73128265505977,
+            "maxGapMs": 92.39999961853027,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        },
+        {
+          "id": "f5960678-06eb-480d-92cf-07bb2816b177",
+          "type": "scroll-1",
+          "startedAt": "2026-10-26T23:12:34.442Z",
+          "endedAt": "2026-10-26T23:12:37.453Z",
+          "quality": {
+            "frameCount": 90,
+            "effectiveFps": 30.006743088334456,
+            "maxGapMs": 34.80000019073486,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        },
+        {
+          "id": "17889119-ec0f-4700-b7cd-fc167bad9996",
+          "type": "accordion-2",
+          "startedAt": "2026-10-26T23:12:37.456Z",
+          "endedAt": "2026-10-26T23:12:42.786Z",
+          "quality": {
+            "frameCount": 160,
+            "effectiveFps": 29.98529023282192,
+            "maxGapMs": 36,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/about",
+      "status": "PARTIAL",
+      "scenarios": [
+        {
+          "id": "c51c348b-fa76-4c76-87df-292c073d0574",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-26T23:12:44.415Z",
+          "endedAt": "2026-10-26T23:12:59.421Z",
+          "quality": {
+            "frameCount": 449,
+            "effectiveFps": 29.928718875994537,
+            "maxGapMs": 51.90000057220459,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        },
+        {
+          "id": "e7c7881d-491d-44ea-9414-cdcb4a9efced",
+          "type": "scroll-1",
+          "startedAt": "2026-10-26T23:12:59.423Z",
+          "endedAt": "2026-10-26T23:13:02.435Z",
+          "quality": {
+            "frameCount": 90,
+            "effectiveFps": 30.01888828732945,
+            "maxGapMs": 37.60000038146973,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        },
+        {
+          "id": "023f6ce2-6555-413b-a423-80bef48605b4",
+          "type": "accordion-2",
+          "startedAt": "2026-10-26T23:13:02.438Z",
+          "endedAt": "2026-10-26T23:13:07.746Z",
+          "quality": {
+            "frameCount": 159,
+            "effectiveFps": 29.99867094169903,
+            "maxGapMs": 35.89999961853027,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/guide",
+      "status": "PARTIAL",
+      "scenarios": [
+        {
+          "id": "1616d3f8-2c3f-4575-b6c5-e68e3e137de4",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-26T23:13:09.374Z",
+          "endedAt": "2026-10-26T23:13:24.382Z",
+          "quality": {
+            "frameCount": 450,
+            "effectiveFps": 29.99472253364447,
+            "maxGapMs": 52.10000038146973,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        },
+        {
+          "id": "fa7b6039-e08d-4493-8993-e10332336340",
+          "type": "scroll-1",
+          "startedAt": "2026-10-26T23:13:24.385Z",
+          "endedAt": "2026-10-26T23:13:27.394Z",
+          "quality": {
+            "frameCount": 90,
+            "effectiveFps": 29.984502393948887,
+            "maxGapMs": 37.30000019073486,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        },
+        {
+          "id": "9b7d81cb-0fb5-4eea-a98f-3438ae337889",
+          "type": "accordion-2",
+          "startedAt": "2026-10-26T23:13:27.397Z",
+          "endedAt": "2026-10-26T23:13:32.704Z",
+          "quality": {
+            "frameCount": 159,
+            "effectiveFps": 29.908948071475056,
+            "maxGapMs": 50.80000019073486,
+            "width": 640,
+            "height": 360,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "INITIAL_NAVIGATION_TRANSITION_UNOBSERVED",
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "NO_SITEMAP_DISCOVERY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+    "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+    "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+    "Capture was rescaled. Small flashing regions may have been lost and area is not validated.",
+    "451 source/analysis frames were skipped or unavailable.",
+    "Effective sampling was below 50 fps; fast flashes may be missed.",
+    "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+    "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+    "90 source/analysis frames were skipped or unavailable.",
+    "159 source/analysis frames were skipped or unavailable.",
+    "450 source/analysis frames were skipped or unavailable.",
+    "160 source/analysis frames were skipped or unavailable."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "status": "FAILED",
+  "scope": "Genuine STOP and resource release occurred, but returned hidden tab retained pre-detach CSS height. This is not a complete cleanup pass.",
+  "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+  "jobId": "bec4514c-bfa2-4a52-a045-a54a01162f6e",
+  "stopReason": "USER_STOP",
+  "verificationError": "AssertionError [ERR_ASSERTION]: Actual CSS height must return to pre-capture geometry after debugger release.\n\n450 !== 507\n",
+  "strictPublicSchema": "PASS",
+  "expectedCss": {
+    "at": 1793120567604,
+    "width": 900,
+    "height": 507,
+    "dpr": 2,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "visibility": "visible"
+  },
+  "actualCss": {
+    "width": 900,
+    "height": 450,
+    "dpr": 2,
+    "scrollX": 0,
+    "scrollY": 0,
+    "visualScale": 1,
+    "visualOffsetLeft": 0,
+    "visualOffsetTop": 0
+  },
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-layout-failed-evidence.json",
+      "bytes": 181546,
+      "sha256": "e2d2a638a2e07bdd4b041c6c9d7eaab610f342776f61ea254f6c6038d5a7943d"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-layout-failed-local-job.json",
+      "bytes": 28408,
+      "sha256": "505a17b7524d1b3dd2260635f109af0cd12bb3346babd029b0014e21df00baaa"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-layout-failed-capture.json",
+      "bytes": 17932,
+      "sha256": "6bb85807cccff48b826b3109b7ea0ec0c9c1a8a2ef7b5e23ad088e8804cb2342"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-layout-failed-environment.json",
+      "bytes": 1637,
+      "sha256": "4b51fa729d0ecb908ac9f6879fdcdaacd8a0e632d6fe6f58afa2acdf0e7d7fef"
+    }
+  ]
+}

@@ -1,0 +1,823 @@
+{
+  "id": "e69cfe6b-3d73-4b03-b4f4-ac48d8a4492a",
+  "engineVersion": "0.4.0-candidate",
+  "runnerVersion": "0.4.0",
+  "scannerBuildSha256": "548d819c3f6459ed3fd61fd9b6ad6e5ff6a0c71763e93ca72fd62e8514dc297f",
+  "advancedPointer": true,
+  "tabId": 542549631,
+  "origin": "http://127.0.0.1:63741",
+  "startUrl": "http://127.0.0.1:63741/",
+  "startedAt": "2026-10-27T17:51:02.416Z",
+  "updatedAt": "2026-10-27T17:51:49.156Z",
+  "state": "INTERRUPTED",
+  "stopIntent": true,
+  "generation": "d2c2235d-339e-4688-a499-6b2e0db6def5",
+  "elapsedMs": 38583.800000190735,
+  "tasks": [
+    {
+      "id": "c1b99412-918f-4abb-96e0-c092c0a08f01",
+      "url": "http://127.0.0.1:63741/",
+      "depth": 0,
+      "state": "PARTIAL",
+      "observations": [
+        {
+          "id": "3785a781-1fa3-4596-89b0-4f50a32eb7ce",
+          "scenario": "navigation-transition",
+          "startedAt": "2026-10-27T17:51:03.753Z",
+          "endedAt": "2026-10-27T17:51:05.618Z",
+          "achieved": true,
+          "navigation": {
+            "from": "http://127.0.0.1:63741/",
+            "to": "http://127.0.0.1:63741/"
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 106,
+              "effectiveFps": 59.46986858706052,
+              "maxGapMs": 33.19999980926514,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 106,
+                "meanMs": 7.043396122050735,
+                "maxMs": 35.80000019073486,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.2339621939749086,
+                "analysisMeanMs": 3.800943374633789,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 1775.6000003814697,
+              "leadingIdleMs": 8.100000381469727,
+              "trailingIdleMs": 2.6000003814697266
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+              "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE"
+            ]
+          },
+          "coverage": "TESTED"
+        },
+        {
+          "id": "cc212a1e-d914-4898-bb2a-bbfce6a92ba6",
+          "scenario": "initial-viewport",
+          "startedAt": "2026-10-27T17:51:05.623Z",
+          "endedAt": "2026-10-27T17:51:20.669Z",
+          "achieved": true,
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 901,
+              "effectiveFps": 59.996800169894705,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 901,
+                "meanMs": 6.705105423795,
+                "maxMs": 26.5,
+                "framesOver16_7Ms": 2,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.180577103490967,
+                "analysisMeanMs": 3.518423992838632,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 15003.5,
+              "leadingIdleMs": 2.3000001907348633,
+              "trailingIdleMs": 0.5
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:63741/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [],
+            "durationMs": 15000,
+            "stateKey": "[1,\"http://127.0.0.1:63741/\",\"current\",900,450,2,15000,null,[]]"
+          }
+        },
+        {
+          "id": "b0ba8462-13da-4b6b-9c7b-4f8950783942",
+          "scenario": "hover-1",
+          "startedAt": "2026-10-27T17:51:20.675Z",
+          "endedAt": "2026-10-27T17:51:24.320Z",
+          "achieved": true,
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 217,
+              "effectiveFps": 59.988335588700124,
+              "maxGapMs": 18.100000381469727,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 217,
+                "meanMs": 6.773271890279884,
+                "maxMs": 28.800000190734863,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1751151810043967,
+                "analysisMeanMs": 3.593548409949799,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 3623.8999996185303,
+              "leadingIdleMs": 15.800000190734863,
+              "trailingIdleMs": 7.59999942779541
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:63741/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              }
+            ],
+            "durationMs": 3000,
+            "measuredStep": 1,
+            "stateKey": "[1,\"http://127.0.0.1:63741/\",\"current\",900,450,2,3000,1,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"]]]"
+          }
+        },
+        {
+          "id": "8f157081-ad05-4dba-9c66-356fc092b2eb",
+          "scenario": "focus-2",
+          "startedAt": "2026-10-27T17:51:24.326Z",
+          "endedAt": "2026-10-27T17:51:27.758Z",
+          "achieved": true,
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 204,
+              "effectiveFps": 59.99704448056746,
+              "maxGapMs": 17.700000762939453,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 204,
+                "meanMs": 6.789705870198269,
+                "maxMs": 26.300000190734863,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1725490280226167,
+                "analysisMeanMs": 3.6107843062456917,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 3410.3999996185303,
+              "leadingIdleMs": 15.09999942779541,
+              "trailingIdleMs": 11.899999618530273
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:63741/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "focus",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "focus:accordion:false:false"
+              }
+            ],
+            "durationMs": 3000,
+            "measuredStep": 3,
+            "stateKey": "[1,\"http://127.0.0.1:63741/\",\"current\",900,450,2,3000,3,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"]]]"
+          }
+        },
+        {
+          "id": "6a1c0273-cfbe-4b6d-be4a-e0c069065532",
+          "scenario": "accordion-3",
+          "startedAt": "2026-10-27T17:51:27.764Z",
+          "endedAt": "2026-10-27T17:51:32.891Z",
+          "achieved": true,
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 306,
+              "effectiveFps": 59.98977222655117,
+              "maxGapMs": 18.5,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 306,
+                "meanMs": 6.773529414257972,
+                "maxMs": 27.399999618530273,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.171895419850069,
+                "analysisMeanMs": 3.597712420170603,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 5110.800000190735,
+              "leadingIdleMs": 15.700000762939453,
+              "trailingIdleMs": 10.800000190734863
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:63741/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "focus",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "focus:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "control",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "accordion:true:true"
+              }
+            ],
+            "durationMs": 5000,
+            "measuredStep": 5,
+            "stateKey": "[1,\"http://127.0.0.1:63741/\",\"current\",900,450,2,5000,5,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"]]]"
+          }
+        },
+        {
+          "id": "96eeda63-57a2-4389-8735-817449b5354c",
+          "scenario": "delayed-state",
+          "startedAt": "2026-10-27T17:51:32.897Z",
+          "endedAt": "2026-10-27T17:51:39.920Z",
+          "achieved": true,
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 420,
+              "effectiveFps": 60.00458268725369,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 420,
+                "meanMs": 6.780238069806781,
+                "maxMs": 31.40000057220459,
+                "framesOver16_7Ms": 2,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1773808910733177,
+                "analysisMeanMs": 3.5978571846371605,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 7002.199999809265,
+              "leadingIdleMs": 12.199999809265137,
+              "trailingIdleMs": 7.399999618530273
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:63741/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "focus",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "focus:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "control",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "accordion:true:true"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 5000
+              }
+            ],
+            "durationMs": 7000,
+            "stateKey": "[1,\"http://127.0.0.1:63741/\",\"current\",900,450,2,7000,null,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"],[\"wait\",5000]]]"
+          }
+        },
+        {
+          "id": "d4411750-7ead-499e-8bb4-5cebf5adff8c",
+          "scenario": "compact-resize-transition",
+          "startedAt": "2026-10-27T17:51:40.696Z",
+          "endedAt": "2026-10-27T17:51:40.696Z",
+          "achieved": false,
+          "reason": "VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+          "coverage": "SKIPPED"
+        },
+        {
+          "id": "77581d62-5a07-4a4d-8aa7-c2a5075ad55c",
+          "scenario": "compact-viewport-capture-source-transition",
+          "startedAt": "2026-10-27T17:51:41.787Z",
+          "endedAt": "2026-10-27T17:51:41.787Z",
+          "achieved": false,
+          "reason": "NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+          "coverage": "SKIPPED"
+        },
+        {
+          "id": "4a84370f-db9a-4fa2-90a2-bced19784b66",
+          "scenario": "compact-viewport",
+          "startedAt": "2026-10-27T17:51:41.785Z",
+          "endedAt": "2026-10-27T17:51:42.664Z",
+          "achieved": false,
+          "reason": "RUNNER_CANCELLED",
+          "coverage": "UNREACHED"
+        },
+        {
+          "id": "3493d883-c033-472c-aaf5-0386ca5396d5",
+          "scenario": "compact-controls",
+          "startedAt": "2026-10-27T17:51:42.667Z",
+          "endedAt": "2026-10-27T17:51:42.667Z",
+          "achieved": false,
+          "reason": "COMPACT_VIEWPORT_UNREACHED",
+          "coverage": "SKIPPED"
+        }
+      ],
+      "reasons": [
+        "Navigation transition from http://127.0.0.1:63741/ to http://127.0.0.1:63741/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.",
+        "Viewport at route inventory: 900 × 450 CSS pixels; device pixel ratio 2.",
+        "compact-resize-transition: VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+        "compact-viewport-capture-source-transition: NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+        "compact-viewport: RUNNER_CANCELLED",
+        "compact-controls: COMPACT_VIEWPORT_UNREACHED",
+        "RUNNER_CANCELLED"
+      ],
+      "viewport": {
+        "width": 900,
+        "height": 450,
+        "dpr": 2
+      }
+    }
+  ],
+  "skippedLinks": 0,
+  "limitations": [
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+    "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED: VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED: expected {\"dpr\":2,\"height\":507,\"width\":900}, reached {\"width\":900,\"height\":460,\"dpr\":2,\"scrollX\":0,\"scrollY\":0,\"visualScale\":1,\"visualOffsetLeft\":0,\"visualOffsetTop\":0}"
+  ],
+  "mode": "AUTONOMOUS",
+  "viewportDurationMs": 15000,
+  "limits": {
+    "maxRoutes": 50,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "maxActionsPerRoute": 12
+  },
+  "sitemapChecked": true,
+  "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+  "interruptedTaskId": "c1b99412-918f-4abb-96e0-c092c0a08f01",
+  "endedAt": "2026-10-27T17:51:49.149Z"
+}

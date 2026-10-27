@@ -1,0 +1,62 @@
+{
+  "classification": "INSTRUMENTATION_IDENTITY_FAILURE_NOT_LAYOUT_TEST",
+  "recordedAt": "2026-10-27T19:41:50.112336+00:00",
+  "jobId": "25f5cf57-7583-4166-afa1-ed38ad81e060",
+  "scannerBuildSha256": "8bb425ee27efea6a506866825a951dab8713b4efdfe2f3d98e7153159c77cda2",
+  "extensionBuild": {
+    "productionSha256": "16edc8a030f75b85c428e20b40a80174a77793b6a7e0f6dedbebccb00be218f3",
+    "instrumentedSha256": "35079eb20eb60f8ca32683f7da1d92291303c6175f57c7582a2bb479c3c424be",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "5ea998478b3d44e511924f8450d4e795f3fb1c54492052301e005f69241e8b51",
+      "native-context-controller.js": "fa0fc92c198eb12af130f19aac2c5dd1fb546bb49c01c48cfc27dce2ef2fa4ce",
+      "native-context-background.js": "25d09bb60b7c1191dfe94d17ef05ddbb7eea654aae97d117365869ca936b94f5",
+      "native-context-tab-switch.mjs": "6bb67aaf18aa3db0f20692d8ab276a79de6e4042c29c35eb3887a927ff1ebdcc",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622"
+    }
+  },
+  "files": [
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-FnitMM/evidence.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-tab-switch-identity-unreached-evidence.json",
+      "bytes": 212940,
+      "sha256": "200cb8394d1690721f7261a9340d0e73b01e6ee43be45bb79b96904c9b43b4f6"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-FnitMM/report.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-tab-switch-identity-unreached-capture.json",
+      "bytes": 21165,
+      "sha256": "2499a7a63dc37fe509329a5601dbf7bf4b3ad4aa07f06346f846b310a3964630"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-FnitMM/local-job.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-tab-switch-identity-unreached-local-job.json",
+      "bytes": 34513,
+      "sha256": "50b30878dc5456f4a07cdaccc746a7d44bd87a0b62b063b6e1131ec97449fd71"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-FnitMM/environment-start.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-tab-switch-identity-unreached-environment.json",
+      "bytes": 2185,
+      "sha256": "edd06600fd26876901347e674aa083f6cf59b4147897e4d354f30394937fa5eb"
+    }
+  ],
+  "verification": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-tab-switch-identity-unreached-verification.json",
+    "sha256": "d3a92f21fead123f50b9b39301464f8c312f6ee44971c33e1e15cd821cd8d522"
+  },
+  "fixtureSources": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-tab-switch-identity-unreached-fixture-sources.json.gz",
+    "sha256": "d1a28db51a24955eb571f6cc20918ce4ae5b907f978638348753d81e45846fda",
+    "reconstruction": "gzip-decompress JSON; each text field is the exact pre-repair fixture source whose SHA256 matches the native environment."
+  },
+  "probeStatus": "ABORTED",
+  "probeError": "Error: TAB_SWITCH_PROBE_OWNED_BLANK_CHANGED",
+  "performedMutations": [
+    "CREATE_INACTIVE_BLANK"
+  ],
+  "interpretation": "The known fixture-created about:blank tab had no exposed url/pendingUrl under the unchanged permission set. The strict ownership gate aborted before any active-tab switch. This does not test the proposed layout repair; the old restore failure is not a disproof of the unexercised switch hypothesis. The returned created-tab metadata had height507 while source DOM remained450; this is diagnostic, not proof of causality.",
+  "retention": "Metadata and numeric diagnostics only; no raw images or frames. The isolated browser was closed by root."
+}

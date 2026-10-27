@@ -1,0 +1,65 @@
+{
+  "scope": "Actual extension runtime commands from fixture dashboard, persisted IndexedDB reviews after real toolbar captures; review buttons themselves were not clicked in this run",
+  "scannerBuildSha256": "fea8073dd5f05b2a36164962cb1428627578d324fb8cc9385c058b18bbfbc753",
+  "jobId": "44c1692c-db41-4a89-9ea1-07c6302f9e31",
+  "reviews": [
+    {
+      "id": "3bde25a0-1957-414b-936f-2549eb9312ce",
+      "at": "2026-10-27T14:01:06.007Z",
+      "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+      "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+      "findingId": "candidate-1",
+      "decision": "CONFIRMED",
+      "note": "Bewuste fout in lokale fixture: CSS-keyframes veranderen de markering van 2 bij 2 CSS-pixels; native pixels en animatietijdlijn bevestigen de bedoelde kandidaat."
+    },
+    {
+      "id": "d86b1680-8855-4e0c-b400-98cc1b8903db",
+      "at": "2026-10-27T14:01:36.015Z",
+      "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+      "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+      "findingId": "candidate-1",
+      "decision": "RESOLVED",
+      "note": "Kleurwisseling verwijderd. Dezelfde native hercontrole bereikte de actie zonder opnieuw de kandidaat te vinden; handmatig opgelost voor deze fixture.",
+      "verificationJobId": "8093001d-2260-4acb-b0b1-a0d11aea16b2"
+    },
+    {
+      "id": "3f19963c-a143-4617-b102-f8573e55ffe0",
+      "at": "2026-10-27T14:03:36.022Z",
+      "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+      "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+      "findingId": "candidate-1",
+      "decision": "REOPENED",
+      "note": "Dezelfde kleurwisseling bewust teruggezet. De gerichte native hercontrole vindt de kandidaat opnieuw op dezelfde plaats.",
+      "verificationJobId": "981c1d31-8798-446c-a1ee-948c2ba3c24a"
+    }
+  ],
+  "commandResponses": {
+    "review-resolved": {
+      "ok": false,
+      "error": "Bevestig eerst dat deze kandidaat een te herstellen probleem is."
+    },
+    "review-confirmed": {
+      "ok": true,
+      "value": {
+        "saved": true
+      }
+    },
+    "review-resolved-after-confirmation": {
+      "ok": true,
+      "value": {
+        "saved": true
+      }
+    },
+    "review-reopened": {
+      "ok": true,
+      "value": {
+        "saved": true
+      }
+    },
+    "reject-old-negative-after-reopening": {
+      "ok": false,
+      "error": "Opgelost vereist een nieuwe hercontrole na de laatste opgeloste of heropende beoordeling."
+    }
+  },
+  "assertions": "PASS: confirmation required, same-build negative accepted for manual resolution, newer recurrence accepted for reopening, stale negative rejected, exactly three persisted review events"
+}

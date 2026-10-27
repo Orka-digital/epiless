@@ -1,0 +1,26 @@
+{
+  "scope": "Original bytes copied exclusively from real toolbar run; verifier and strict public schema passed. Frozen pre-WASM build only.",
+  "strictPublicSchema": "PASS",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-zoom-evidence.json",
+      "bytes": 542906,
+      "sha256": "6469c258646c0386158a73594933006a128c61897f4a28f767dc8d1310ed5880"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-zoom-local-job.json",
+      "bytes": 224403,
+      "sha256": "4f3007b663861cfce3a1ee3ee2d6f20cb09c0eab063d20a23a2c7bf78e19bb7e"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-zoom-capture.json",
+      "bytes": 204602,
+      "sha256": "cf1bcce3eb09982e5237b9ee89d47e96d6d28b02519f1dc7e2ab1fad031abf7c"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-zoom-environment.json",
+      "bytes": 1635,
+      "sha256": "7680b3f2d3e123921fe5981cf80689fff91761b5282f06e7f365a42c754fd858"
+    }
+  ]
+}

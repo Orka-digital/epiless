@@ -1,0 +1,153 @@
+{
+  "scope": "Two separate real dashboard UI-transition tests over retained native capture jobs. A: current CONFIRMED -> RESOLVED clicks; old recurrence correctly cannot reopen that new resolution. B: original historical CONFIRMED/RESOLVED review prefix restored, then a real REOPENED click and stale-negative button refusal. No new end-to-end capture lifecycle, no synthetic captures, no clock/timestamp/hash changes.",
+  "result": "PASS",
+  "recordedAt": "2026-10-27T15:26:04.754Z",
+  "browser": "156.0.8078.4",
+  "headless": true,
+  "nativeEvidenceScannerBuildSha256": "fea8073dd5f05b2a36164962cb1428627578d324fb8cc9385c058b18bbfbc753",
+  "testedExtensionFilesSha256": {
+    "analysis-worker.js": "ce7862d5d87740f1d7935bb52331981febc92cac9428d1657e79419141b82011",
+    "background.js": "19e4a34bd80023ed6f1d1108d9985ed2a63349e922b3e6df29b570d4aa864530",
+    "content.js": "1a1270b23d1e99e1449d6bfb96e9637bf663c196cebf6890189ff61dd71937a9",
+    "dashboard.html": "431360cefb00dcaab8ef299e8444cac34064516b0b332f1ca394af4853444d17",
+    "devtools.html": "1328d617b288b2b17e0c1c49b230db8e84f8b2dbd1c2fc22e7116afc033556e4",
+    "devtools.js": "25a624ae7210aafa85b03762e4e877489b1e4bdc40f69d87e867b300bcee7800",
+    "manifest.json": "70f2390f3c22767caa5f6372c4a7ecb0c88c7f934625d6dc67a5e66e0ab7c0fa",
+    "offscreen.html": "20e63ae1dd935b818684c38a87fe6f807c0f32b24300c82b9aef02ee5842670d",
+    "offscreen.js": "a4c80ac963ad081525ec8b6b38c7db96debee69be0a715d66b0ce126b5badb59",
+    "panel.html": "f784394c5f5cf784beeda80460597efcc04bf95e7c7d9a837aedfd1728c538c5",
+    "popup.html": "3e9d87784aba6db54d0de745ee9e2b379aa5a2374c515e29533b3876e7f07712",
+    "ui.css": "e03f91633c0a75f5437da09683c9131ea9650e64f39b12b7872c0376a02d65b5",
+    "ui.js": "d240444b32c9a3616e503acc7842a7d55605788ab5d5c272d657423f9bc2c9c2"
+  },
+  "sourceFiles": [
+    {
+      "name": "scanner-v04-native-detail-local-job.json",
+      "sha256": "5c7c626741fbe0d6032264ad14129bef704003b04dd85ccf392ae60b78a8d388"
+    },
+    {
+      "name": "scanner-v04-native-fixed-local-job.json",
+      "sha256": "eeb3d73ac510a24e41692c3f637b169b3598df2c966eaa0602a1f3be2f8ddbcd"
+    },
+    {
+      "name": "scanner-v04-native-recurrence-local-job.json",
+      "sha256": "256adc598a5a1e2dfc7d50b330196faa0337d1092bedde7622d1bd2a4b6d9f3a"
+    },
+    {
+      "name": "scanner-v04-native-review-verification.json",
+      "sha256": "4c3dae4fb582e87dc9f245612a09d8ba09407ab1588cb0c5b652d3aee322bd74"
+    }
+  ],
+  "anchor": {
+    "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+    "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+    "findingId": "candidate-1"
+  },
+  "actions": [
+    {
+      "phase": "A",
+      "action": "REAL_DASHBOARD_BUTTON_CLICK",
+      "label": "Probleem bevestigen",
+      "at": "2026-10-27T15:26:03.722Z"
+    },
+    {
+      "phase": "A",
+      "action": "REAL_DASHBOARD_BUTTON_CLICK",
+      "label": "Als opgelost beoordelen",
+      "at": "2026-10-27T15:26:03.796Z"
+    },
+    {
+      "phase": "B",
+      "action": "REAL_DASHBOARD_BUTTON_CLICK",
+      "label": "Terugkeer bevestigen",
+      "at": "2026-10-27T15:26:04.333Z"
+    }
+  ],
+  "phaseA": {
+    "reviews": [
+      {
+        "id": "b2a2504c-dfdd-4af0-9cbe-9375896f7559",
+        "at": "2026-10-27T15:26:03.743Z",
+        "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+        "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+        "findingId": "candidate-1",
+        "decision": "CONFIRMED",
+        "note": "UI-regressie op bewaard nativebewijs: bedoelde kandidaat in de oorspronkelijke fixture bevestigd."
+      },
+      {
+        "id": "12afa7f3-56c0-44c9-8f14-b22aeeec6371",
+        "at": "2026-10-27T15:26:03.828Z",
+        "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+        "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+        "findingId": "candidate-1",
+        "decision": "RESOLVED",
+        "note": "UI-regressie: de bewaarde vergelijkbare native hercontrole vond de verwijderde kleurwisseling niet opnieuw.",
+        "verificationJobId": "8093001d-2260-4acb-b0b1-a0d11aea16b2"
+      }
+    ],
+    "historicalRecurrenceReopenDisabled": true
+  },
+  "phaseB": {
+    "originalReviewPrefix": [
+      {
+        "id": "3bde25a0-1957-414b-936f-2549eb9312ce",
+        "at": "2026-10-27T14:01:06.007Z",
+        "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+        "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+        "findingId": "candidate-1",
+        "decision": "CONFIRMED",
+        "note": "Bewuste fout in lokale fixture: CSS-keyframes veranderen de markering van 2 bij 2 CSS-pixels; native pixels en animatietijdlijn bevestigen de bedoelde kandidaat."
+      },
+      {
+        "id": "d86b1680-8855-4e0c-b400-98cc1b8903db",
+        "at": "2026-10-27T14:01:36.015Z",
+        "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+        "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+        "findingId": "candidate-1",
+        "decision": "RESOLVED",
+        "note": "Kleurwisseling verwijderd. Dezelfde native hercontrole bereikte de actie zonder opnieuw de kandidaat te vinden; handmatig opgelost voor deze fixture.",
+        "verificationJobId": "8093001d-2260-4acb-b0b1-a0d11aea16b2"
+      }
+    ],
+    "reviews": [
+      {
+        "id": "3bde25a0-1957-414b-936f-2549eb9312ce",
+        "at": "2026-10-27T14:01:06.007Z",
+        "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+        "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+        "findingId": "candidate-1",
+        "decision": "CONFIRMED",
+        "note": "Bewuste fout in lokale fixture: CSS-keyframes veranderen de markering van 2 bij 2 CSS-pixels; native pixels en animatietijdlijn bevestigen de bedoelde kandidaat."
+      },
+      {
+        "id": "d86b1680-8855-4e0c-b400-98cc1b8903db",
+        "at": "2026-10-27T14:01:36.015Z",
+        "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+        "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+        "findingId": "candidate-1",
+        "decision": "RESOLVED",
+        "note": "Kleurwisseling verwijderd. Dezelfde native hercontrole bereikte de actie zonder opnieuw de kandidaat te vinden; handmatig opgelost voor deze fixture.",
+        "verificationJobId": "8093001d-2260-4acb-b0b1-a0d11aea16b2"
+      },
+      {
+        "id": "565586aa-c5a3-4726-b993-5e8bff023121",
+        "at": "2026-10-27T15:26:04.361Z",
+        "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+        "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+        "findingId": "candidate-1",
+        "decision": "REOPENED",
+        "note": "UI-regressie vanuit de oorspronkelijke beoordelingsprefix: de bewaarde native terugkeer volgde na het oorspronkelijke herstel.",
+        "verificationJobId": "981c1d31-8798-446c-a1ee-948c2ba3c24a"
+      }
+    ],
+    "staleNegativeResolutionDisabled": true
+  },
+  "originalCapturePayloadsUnchanged": true,
+  "newCaptureJobs": 0,
+  "activeCapturedTabs": 0,
+  "screenshots": [
+    "phase-a-confirmed-resolved.png",
+    "phase-b-reopened-stale-negative-disabled.png"
+  ],
+  "trace": "review-ui-trace.zip"
+}

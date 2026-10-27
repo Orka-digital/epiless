@@ -1,0 +1,36 @@
+{
+  "status": "FAILED",
+  "scope": "Rejected bounded terminal height-refresh experiment. Real capture/debugger/ownership release completed, but actual CSS remained 900x450 instead of measured pre-attach 900x507. Strict verifier and production expectation unchanged; experiment reverted.",
+  "scannerBuildSha256": "4eb21010e0ac03a8787b53583d2d2b0a32873bf14e6dddf8a46a071698b455ff",
+  "jobId": "4ee115b4-641a-4fa4-9497-2917463c8acb",
+  "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+  "strictPublicSchema": "PASS",
+  "verificationError": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'INTERRUPTED'\n- 'PARTIAL'\n",
+  "restoredProductionSha256": "af5d4da032b7a92cfbb090a1fe59adfc4601334d0d3547e6a5b9ff776c9637ce",
+  "experiment": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-cancel-nudge-rejected.patch",
+    "sha256": "59c274864b0222df4fbb2c93a26a9d689d7dd5659cb2ddcb3958cc89afd004cd"
+  },
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-nudge-rejected-evidence.json",
+      "bytes": 187898,
+      "sha256": "5e14675ed01aa973f5612933ec0847d4cc0013534bc56598cd273bb649c188a4"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-nudge-rejected-local-job.json",
+      "bytes": 31835,
+      "sha256": "44504c0eb57d32ced42bc784574271f3bc8bf42bf476e65a307cdbe3253f7d46"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-nudge-rejected-capture.json",
+      "bytes": 21201,
+      "sha256": "db0c138a4ed180b9cdbf108c6b9f8850572e8f7b15ccbeef4ab9fcae60727f64"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-nudge-rejected-environment.json",
+      "bytes": 1637,
+      "sha256": "6912e76c9f650a759ea43181b74126ee5fbf5d040751f6ed8f327d6ebb3f95f2"
+    }
+  ]
+}

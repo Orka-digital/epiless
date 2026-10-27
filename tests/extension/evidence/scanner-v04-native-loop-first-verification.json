@@ -1,0 +1,106 @@
+{
+  "scope": "One actual toolbar-started autonomous near-end observation of an existing seekable constant VP9 loop. Page clocks and rVFC independently confirm the boundary; no flash detection, whole-site, state-of-the-art, physical safety or frame-atomic attribution claim.",
+  "status": "FAIL",
+  "jobId": "2eb99add-d911-4450-8d80-2b23b0949eff",
+  "scannerBuildSha256": "8a8f9e067bbe94c1de2396bc27a9200abcaff498edca1363b8514a271bff9d27",
+  "sourceSha256": "f43fcae9859f69770c5726639bb681c67d333e95a576d51d7de0443de1a8248f",
+  "manifestSha256": "c6ffd34d863227489ea8bcd3924cc5e520f9e67ca11bac05a3f9f2c076acb73c",
+  "scenario": "media-loop-boundary-1",
+  "achieved": true,
+  "coverage": "TESTED",
+  "mediaInterval": {
+    "startMs": 1120,
+    "endMs": 6278.6,
+    "wraps": 2,
+    "presentedWraps": 2,
+    "presentations": 128,
+    "presentedEndMs": 6240
+  },
+  "localSamples": 105,
+  "independentPageEvidence": {
+    "documentId": "4644f316-e2ac-4ea0-a2d7-9abe080340e0",
+    "currentTimeSamples": 103,
+    "presentations": 128,
+    "currentTimeWraps": 2,
+    "presentedWraps": 2,
+    "matchedPresentations": 104
+  },
+  "quality": {
+    "frameCount": 184,
+    "effectiveFps": 35.527082119976704,
+    "maxGapMs": 84.80000019073486,
+    "width": 1800,
+    "height": 1126,
+    "downsampled": false,
+    "interrupted": false,
+    "spatial": {
+      "mode": "NATIVE_PIXELS",
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "retainedResolutionRatio": 1,
+      "stateBytes": 194358672,
+      "stateBudgetBytes": 268435456,
+      "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+      "colorAssumption": "SDR_SRGB_8BIT"
+    },
+    "processing": {
+      "measuredFrames": 184,
+      "meanMs": 7.858152171839839,
+      "maxMs": 27.5,
+      "framesOver16_7Ms": 1,
+      "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+      "conversionMeanMs": 4.0375000134758325,
+      "analysisMeanMs": 3.8108695278997007,
+      "conversionMethods": [
+        "VIDEOFRAME_COPY_RGBA"
+      ],
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 0,
+        "inputCopiedBytes": 0,
+        "inputCopyMs": 0,
+        "kernelMs": 0,
+        "wasmMemoryBytes": 160759808,
+        "migratedStateBytes": 152536336,
+        "extraStateBytes": 8223472,
+        "engineStateBytes": 194358672,
+        "embeddedKernelBytes": 2239
+      },
+      "decoded": {
+        "codedWidth": 1800,
+        "codedHeight": 1126,
+        "displayWidth": 1800,
+        "displayHeight": 1126,
+        "visibleRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1800,
+          "height": 1126
+        },
+        "format": "I420",
+        "primaries": "bt709",
+        "transfer": "bt709",
+        "matrix": "bt709"
+      },
+      "track": {
+        "width": 1800,
+        "height": 1126,
+        "frameRate": 60,
+        "resizeMode": "none"
+      }
+    },
+    "captureWindowMs": 5168.299999237061,
+    "leadingIdleMs": 6.699999809265137,
+    "trailingIdleMs": 9.899999618530273
+  },
+  "wholeJobState": "PARTIAL",
+  "wholeReportStatus": "INCONCLUSIVE",
+  "passed": null,
+  "errors": [
+    {
+      "scope": "native-capture-and-export",
+      "reason": "false == true"
+    }
+  ]
+}

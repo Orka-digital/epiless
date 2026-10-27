@@ -1,0 +1,134 @@
+{
+  "classification": "EARLY_OWNERSHIP_GUARD_ABORT_NO_EXECUTED_LAYOUT_REBIND",
+  "recordedAt": "2026-10-27T20:16:28.034796+00:00",
+  "jobId": "c1b9c32b-03ca-4dee-8afa-f192fd8ed278",
+  "scannerBuildSha256": "9ec6b92250246f055b70fa54047078874f3f6f7b63c47ca9f5df97376867150f",
+  "extensionBuild": {
+    "productionSha256": "da5837530c4977fa007b74ea9fd196d54c221db8e9ed394d749ca498e84df28a",
+    "instrumentedSha256": "a62ee3a14af6c33cab6f4a108cf782ad9d0312755633a8be358a4384b9f6e41e",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "b4b7c4ff6a656ae9f9e3745b2f0f5f82997e49770fe76e3b60fc883ad7314a7d",
+      "native-context-controller.js": "e5aee12578d92827ec23919160423b5c3783d2b7c0e52d2755331ae8ebd8bea6",
+      "native-context-background.js": "edf2a72d9e4bacf63763d9508e7b0fa2f4d2db37c4c639eed3db48de79fbc602",
+      "native-context-tab-switch.mjs": "8bfe8bd5d64af7beafb52f52c03fc4cf83109098b69e66772bc448386a53abde",
+      "native-context-placeholder.html": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622"
+    }
+  },
+  "files": [
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-P3YoyL/evidence.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-owner-unreached-evidence.json",
+      "bytes": 233622,
+      "sha256": "5088751ffc86581c77a00c58f252a7acb133cda5e609e893c43bcb502d9f7e94"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-P3YoyL/report.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-owner-unreached-capture.json",
+      "bytes": 21105,
+      "sha256": "b5b4b2ea5ef32f1d31c877afc87ab95daafd42f8181e3b58128abfed97342178"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-P3YoyL/local-job.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-owner-unreached-local-job.json",
+      "bytes": 57098,
+      "sha256": "453302f230e9a6158ff3c9fead77c2b583ed4f593032284e45559a1d02a8f51c"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-P3YoyL/environment-start.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-owner-unreached-environment.json",
+      "bytes": 2041,
+      "sha256": "3f9ce4f9a349ac8e8341bb69e43e7e8700e16b4cd4445a9f3b0efb17653d3fbb"
+    }
+  ],
+  "verification": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-rebind-owner-unreached-verification.json",
+    "sha256": "e8a9711491e397e2b9f0218be5bc7ea5543d2341dee36e4ea812a7f3346e3089"
+  },
+  "fixtureSources": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-rebind-owner-unreached-fixture-sources.json.gz",
+    "sha256": "9b73c041df612d5f26b3e2c6df614596be55d039eca0ccdd2ce2f006d37d70d0",
+    "fileCount": 8,
+    "reconstruction": "gzip-decompress JSON; exact UTF-8 text entries, byte lengths and SHA256 match all eight environment fixture-source identities."
+  },
+  "scannerSources": {
+    "file": "tests/extension/evidence/scanner-v04-9ec6b922-source.json.gz",
+    "sha256": "443727d07eeb0041f6b9ee9586c6208e7373ae1d8f34e90cd4585911e5b4cf14",
+    "fileCount": 69,
+    "recomputedScannerBuildSha256": "9ec6b92250246f055b70fa54047078874f3f6f7b63c47ca9f5df97376867150f"
+  },
+  "observed": {
+    "jobState": "INTERRUPTED",
+    "stopReason": "VIEWPORT_WORKSPACE_MANUAL_RESTORE_REQUIRED",
+    "rebindPhaseEvents": [],
+    "placeholderCreationOrActivationObserved": false,
+    "beforeViewport": {
+      "at": 1793131965500,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    "afterViewport": {
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "scrollX": 0,
+      "scrollY": 0,
+      "visualScale": 1,
+      "visualOffsetLeft": 0,
+      "visualOffsetTop": 0
+    },
+    "afterTab": {
+      "id": 1566876273,
+      "windowId": 1566876275,
+      "index": 0,
+      "active": true
+    },
+    "originalWindowId": 1566876270,
+    "foregroundPreserved": true,
+    "workspaceStillOpen": true,
+    "retainedOwnershipKeys": [
+      "viewport-workspace-intent:c1b9c32b-03ca-4dee-8afa-f192fd8ed278"
+    ],
+    "debuggerDetached": true,
+    "capturedTabs": [
+      {
+        "tabId": 1566876273,
+        "status": "stopped",
+        "fullscreen": false
+      }
+    ],
+    "tracks": {
+      "context": "OPEN",
+      "at": 1793132077050,
+      "streams": [
+        {
+          "active": false,
+          "tracks": [
+            {
+              "readyState": "ended",
+              "settings": {}
+            }
+          ]
+        },
+        {
+          "active": false,
+          "tracks": [
+            {
+              "readyState": "ended",
+              "settings": {}
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interpretation": "The production ownership/release guard aborted before any persisted REBIND phase, placeholder creation or tab activation. No layout rebind was executed, so this result does not test whether a completed sequential rebind restores layout. The source remained in its unfocused workspace with actual CSS 900x450 versus pre-capture 900x507; the foreground was preserved, real tracks ended and debugger detached. Only a manual-placement intent remained. The strict cancellation verifier failed and the public report schema passed. The exact failed ownership predicate was not independently established by this archive; property-order comparison is under separate investigation.",
+  "retention": "Byte-exact raw metadata and numeric diagnostics; no screenshots/raw frames/browser profile archived. Production source and fixture snapshots are separately hash bound."
+}

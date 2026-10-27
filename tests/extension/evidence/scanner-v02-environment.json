@@ -1,0 +1,37 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "e056c7307bd768b07c320a66eee774419413cd8c5f312af065b912f8601412a1"
+  },
+  "fixture": "static DOM menu/tab/carousel/consent, muted grey canvas-stream video, pushState links, redirect and lazy growth; no flashing/audio",
+  "headless": false,
+  "requestCounts": {
+    "/": 4,
+    "/favicon.ico": 9,
+    "/lazy-observed": 1,
+    "/reached": 2,
+    "/redirect": 1,
+    "/redirect-again": 1,
+    "/robots.txt": 1,
+    "/sitemap-only": 1,
+    "/sitemap.xml": 1
+  },
+  "sourceBoundary": "Scanner quality build with engine0.2.0-candidate and runner0.2.0, open-shadow/occlusion-aware content adapter and capture-window evidence; publication origin http://localhost:4387. Nested shadow states have separate DOM regression evidence.",
+  "observed": {
+    "canonicalRoutes": 5,
+    "scenarios": 22,
+    "analysedFrames": 543,
+    "realToolbarStart": true,
+    "dashboardForeground": true,
+    "captureWindowFieldsOnEveryScenario": true,
+    "visibleCaptureWindowDisplayVerified": true,
+    "noLogoutRequest": true,
+    "spaNavigatedWithoutDocumentRequest": true,
+    "lazyLinkActuallyRequested": true,
+    "redirectAliasesRequestedOnceEach": true,
+    "hashRouteFragmentAbsentFromReport": true
+  }
+}

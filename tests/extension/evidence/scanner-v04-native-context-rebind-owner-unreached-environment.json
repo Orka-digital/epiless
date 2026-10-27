@@ -1,0 +1,36 @@
+{
+  "mode": "cancel",
+  "tabSwitchProbe": false,
+  "origin": "http://127.0.0.1:54942",
+  "preparedAt": "2026-10-27T20:11:45.985Z",
+  "headless": false,
+  "playwrightAttached": false,
+  "machine": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "extensionBuild": {
+    "productionSha256": "da5837530c4977fa007b74ea9fd196d54c221db8e9ed394d749ca498e84df28a",
+    "instrumentedSha256": "a62ee3a14af6c33cab6f4a108cf782ad9d0312755633a8be358a4384b9f6e41e",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "b4b7c4ff6a656ae9f9e3745b2f0f5f82997e49770fe76e3b60fc883ad7314a7d",
+      "native-context-controller.js": "e5aee12578d92827ec23919160423b5c3783d2b7c0e52d2755331ae8ebd8bea6",
+      "native-context-background.js": "edf2a72d9e4bacf63763d9508e7b0fa2f4d2db37c4c639eed3db48de79fbc602",
+      "native-context-tab-switch.mjs": "8bfe8bd5d64af7beafb52f52c03fc4cf83109098b69e66772bc448386a53abde",
+      "native-context-placeholder.html": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622"
+    }
+  },
+  "instrumentation": "Copied-build passive Worker message/real-stream, debugger-detach reply and persisted restoration-phase observers; no frame reads, modification or synthesis. Separate extension page queries actual state and performs the selected zoom/resize or STOP. Production manifest and permissions unchanged. Actual toolbar authorization required. Instrumented run is not a throughput benchmark.",
+  "clock": "Date.now receipt/action epochs, not exact compositor exposure time."
+}

@@ -1,0 +1,107 @@
+{
+  "scope": "Headless chrome.storage.session roundtrip only; no tab actions, scanner, capture, debugger or native layout claim.",
+  "headless": true,
+  "playwrightAttached": false,
+  "productionSha256": "da5837530c4977fa007b74ea9fd196d54c221db8e9ed394d749ca498e84df28a",
+  "manifestSha256": "d0f86c785a4a11f4f21b86bdc90100cf2de22c4afcf7804e76b96c29ba6dcdf9",
+  "fixtureScriptSha256": "9819127fe2dace327395459c8e6d5e76407789477a2d7ee66aeb790b365c159b",
+  "placeholderSha256": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c",
+  "generatedBackgroundSha256": "7eb51ccab76d9bab9d264bf0a5d701614aecbf8c6b50ef462d25101e4e950daf",
+  "correctedOwnership": {
+    "scope": "Pure source comparator on real returned values, not the copied production background bundle.",
+    "sourceSha256": "f7ddb1738a0d293ac3094858b6b6f1e1f0a2caddc8fafdf066f43102c0a7c82a",
+    "equal": true
+  },
+  "manifestUnchanged": true,
+  "result": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+    "before": {
+      "tabId": 11,
+      "windowId": 2,
+      "originalWindowId": 1,
+      "originalIndex": 2,
+      "originalViewport": {
+        "width": 900,
+        "height": 450,
+        "dpr": 2,
+        "scrollX": 0,
+        "scrollY": 0,
+        "visualScale": 1,
+        "visualOffsetLeft": 0,
+        "visualOffsetTop": 0
+      },
+      "originalWindow": {
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52
+      },
+      "detachedViewport": {
+        "width": 900,
+        "height": 507,
+        "dpr": 2
+      }
+    },
+    "after": {
+      "detachedViewport": {
+        "dpr": 2,
+        "height": 507,
+        "width": 900
+      },
+      "originalIndex": 2,
+      "originalViewport": {
+        "dpr": 2,
+        "height": 450,
+        "scrollX": 0,
+        "scrollY": 0,
+        "visualOffsetLeft": 0,
+        "visualOffsetTop": 0,
+        "visualScale": 1,
+        "width": 900
+      },
+      "originalWindow": {
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "width": 900
+      },
+      "originalWindowId": 1,
+      "tabId": 11,
+      "windowId": 2
+    },
+    "beforeKeys": [
+      "tabId",
+      "windowId",
+      "originalWindowId",
+      "originalIndex",
+      "originalViewport",
+      "originalWindow",
+      "detachedViewport"
+    ],
+    "afterKeys": [
+      "detachedViewport",
+      "originalIndex",
+      "originalViewport",
+      "originalWindow",
+      "originalWindowId",
+      "tabId",
+      "windowId"
+    ],
+    "beforeJson": "{\"tabId\":11,\"windowId\":2,\"originalWindowId\":1,\"originalIndex\":2,\"originalViewport\":{\"width\":900,\"height\":450,\"dpr\":2,\"scrollX\":0,\"scrollY\":0,\"visualScale\":1,\"visualOffsetLeft\":0,\"visualOffsetTop\":0},\"originalWindow\":{\"width\":900,\"height\":650,\"left\":22,\"top\":52},\"detachedViewport\":{\"width\":900,\"height\":507,\"dpr\":2}}",
+    "afterJson": "{\"detachedViewport\":{\"dpr\":2,\"height\":507,\"width\":900},\"originalIndex\":2,\"originalViewport\":{\"dpr\":2,\"height\":450,\"scrollX\":0,\"scrollY\":0,\"visualOffsetLeft\":0,\"visualOffsetTop\":0,\"visualScale\":1,\"width\":900},\"originalWindow\":{\"height\":650,\"left\":22,\"top\":52,\"width\":900},\"originalWindowId\":1,\"tabId\":11,\"windowId\":2}",
+    "oldGuardEqual": false,
+    "permissions": {
+      "origins": [],
+      "permissions": [
+        "activeTab",
+        "debugger",
+        "devtools",
+        "storage",
+        "tabCapture",
+        "scripting",
+        "offscreen"
+      ]
+    },
+    "storageCleared": true
+  }
+}

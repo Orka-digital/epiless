@@ -1,0 +1,2167 @@
+{
+  "id": "7811c915-1f18-4dfe-9985-2f8111e89805",
+  "engineVersion": "0.4.0-candidate",
+  "runnerVersion": "0.4.0",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "advancedPointer": false,
+  "tabId": 103076962,
+  "origin": "http://127.0.0.1:47819",
+  "startUrl": "http://127.0.0.1:47819/",
+  "startedAt": "2026-10-27T19:02:26.981Z",
+  "updatedAt": "2026-10-27T19:02:53.264Z",
+  "state": "COMPLETED",
+  "stopIntent": false,
+  "generation": "f3878387-dca8-434d-9eab-df29d23af13d",
+  "elapsedMs": 26251.10000038147,
+  "tasks": [
+    {
+      "id": "9e6be1d5-08da-4e97-9949-5ae809d7e34b",
+      "url": "http://127.0.0.1:47819/",
+      "depth": 0,
+      "state": "OBSERVED",
+      "observations": [
+        {
+          "id": "17c1914f-9c28-4810-8f93-debc0ff29334",
+          "scenario": "navigation-transition",
+          "startedAt": "2026-10-27T19:02:27.076Z",
+          "endedAt": "2026-10-27T19:02:28.914Z",
+          "achieved": true,
+          "navigation": {
+            "from": "http://127.0.0.1:47819/",
+            "to": "http://127.0.0.1:47819/"
+          },
+          "mediaEvidence": {
+            "version": 1,
+            "complete": false,
+            "reasons": [
+              "MEDIA_OBSERVATION_UNAVAILABLE"
+            ],
+            "items": []
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 107,
+              "effectiveFps": 60.02944840216915,
+              "maxGapMs": 22.5,
+              "width": 1800,
+              "height": 1126,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 1126,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 194358672,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 107,
+                "meanMs": 8.395327095673464,
+                "maxMs": 45.30000019073486,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 4.005607506939184,
+                "analysisMeanMs": 4.385046691538017,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 160759808,
+                  "migratedStateBytes": 152536336,
+                  "extraStateBytes": 8223472,
+                  "engineStateBytes": 194358672,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 1126,
+                  "displayWidth": 1800,
+                  "displayHeight": 1126,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 1126
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 1126,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 1779.3000001907349,
+              "leadingIdleMs": 7.200000762939453,
+              "trailingIdleMs": 9.199999809265137
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+              "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE"
+            ]
+          },
+          "coverage": "TESTED"
+        },
+        {
+          "id": "71a2f196-4b51-4ca3-aecf-c4f88dbb4595",
+          "scenario": "targeted-recheck",
+          "startedAt": "2026-10-27T19:02:47.346Z",
+          "endedAt": "2026-10-27T19:02:52.503Z",
+          "achieved": true,
+          "mediaEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "startedEpochMs": 1793127767392,
+            "endedEpochMs": 1793127772502.4,
+            "items": [
+              {
+                "before": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                  ],
+                  "sourceKind": "URL",
+                  "locatorSha256": "59aca411b6aa1e82adb9bb1a698eddd72840db592127d6d30d8b20acc4433f8f",
+                  "durationMs": 2120,
+                  "timeMs": 0,
+                  "playbackRate": 1,
+                  "loop": false,
+                  "paused": true,
+                  "seekable": [
+                    [
+                      0,
+                      2120
+                    ]
+                  ]
+                },
+                "after": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                  ],
+                  "sourceKind": "URL",
+                  "locatorSha256": "59aca411b6aa1e82adb9bb1a698eddd72840db592127d6d30d8b20acc4433f8f",
+                  "durationMs": 2120,
+                  "timeMs": 2120,
+                  "playbackRate": 1,
+                  "loop": false,
+                  "paused": true,
+                  "seekable": [
+                    [
+                      0,
+                      2120
+                    ]
+                  ]
+                },
+                "presentations": [
+                  {
+                    "atMs": 113,
+                    "timeMs": 0,
+                    "presentedFrames": 2
+                  },
+                  {
+                    "atMs": 129.19999980926514,
+                    "timeMs": 40,
+                    "presentedFrames": 3
+                  },
+                  {
+                    "atMs": 162.30000019073486,
+                    "timeMs": 80,
+                    "presentedFrames": 4
+                  },
+                  {
+                    "atMs": 196.19999980926514,
+                    "timeMs": 120,
+                    "presentedFrames": 5
+                  },
+                  {
+                    "atMs": 246.30000019073486,
+                    "timeMs": 160,
+                    "presentedFrames": 6
+                  },
+                  {
+                    "atMs": 295.30000019073486,
+                    "timeMs": 200,
+                    "presentedFrames": 7
+                  },
+                  {
+                    "atMs": 346.30000019073486,
+                    "timeMs": 240,
+                    "presentedFrames": 8
+                  },
+                  {
+                    "atMs": 362.19999980926514,
+                    "timeMs": 280,
+                    "presentedFrames": 9
+                  },
+                  {
+                    "atMs": 396.3999996185303,
+                    "timeMs": 320,
+                    "presentedFrames": 10
+                  },
+                  {
+                    "atMs": 462.19999980926514,
+                    "timeMs": 360,
+                    "presentedFrames": 11
+                  },
+                  {
+                    "atMs": 496.19999980926514,
+                    "timeMs": 400,
+                    "presentedFrames": 12
+                  },
+                  {
+                    "atMs": 546.3000001907349,
+                    "timeMs": 440,
+                    "presentedFrames": 13
+                  },
+                  {
+                    "atMs": 562.8999996185303,
+                    "timeMs": 480,
+                    "presentedFrames": 14
+                  },
+                  {
+                    "atMs": 596.3999996185303,
+                    "timeMs": 520,
+                    "presentedFrames": 15
+                  },
+                  {
+                    "atMs": 662.8999996185303,
+                    "timeMs": 560,
+                    "presentedFrames": 16
+                  },
+                  {
+                    "atMs": 679.6000003814697,
+                    "timeMs": 600,
+                    "presentedFrames": 17
+                  },
+                  {
+                    "atMs": 746.3000001907349,
+                    "timeMs": 640,
+                    "presentedFrames": 18
+                  },
+                  {
+                    "atMs": 762,
+                    "timeMs": 680,
+                    "presentedFrames": 19
+                  },
+                  {
+                    "atMs": 796.3000001907349,
+                    "timeMs": 720,
+                    "presentedFrames": 20
+                  },
+                  {
+                    "atMs": 846.1999998092651,
+                    "timeMs": 760,
+                    "presentedFrames": 21
+                  },
+                  {
+                    "atMs": 879.6000003814697,
+                    "timeMs": 800,
+                    "presentedFrames": 22
+                  },
+                  {
+                    "atMs": 929.1999998092651,
+                    "timeMs": 840,
+                    "presentedFrames": 23
+                  },
+                  {
+                    "atMs": 962.8999996185303,
+                    "timeMs": 880,
+                    "presentedFrames": 24
+                  },
+                  {
+                    "atMs": 996.1999998092651,
+                    "timeMs": 920,
+                    "presentedFrames": 25
+                  },
+                  {
+                    "atMs": 1062.3000001907349,
+                    "timeMs": 960,
+                    "presentedFrames": 26
+                  },
+                  {
+                    "atMs": 1079.6000003814697,
+                    "timeMs": 1000,
+                    "presentedFrames": 27
+                  },
+                  {
+                    "atMs": 1129.6999998092651,
+                    "timeMs": 1040,
+                    "presentedFrames": 28
+                  },
+                  {
+                    "atMs": 1162.1999998092651,
+                    "timeMs": 1080,
+                    "presentedFrames": 29
+                  },
+                  {
+                    "atMs": 1212.8999996185303,
+                    "timeMs": 1120,
+                    "presentedFrames": 30
+                  },
+                  {
+                    "atMs": 1262.1999998092651,
+                    "timeMs": 1160,
+                    "presentedFrames": 31
+                  },
+                  {
+                    "atMs": 1279.6000003814697,
+                    "timeMs": 1200,
+                    "presentedFrames": 32
+                  },
+                  {
+                    "atMs": 1329.1999998092651,
+                    "timeMs": 1240,
+                    "presentedFrames": 33
+                  },
+                  {
+                    "atMs": 1362.3000001907349,
+                    "timeMs": 1280,
+                    "presentedFrames": 34
+                  },
+                  {
+                    "atMs": 1412.8999996185303,
+                    "timeMs": 1320,
+                    "presentedFrames": 35
+                  },
+                  {
+                    "atMs": 1462.1999998092651,
+                    "timeMs": 1360,
+                    "presentedFrames": 36
+                  },
+                  {
+                    "atMs": 1479.1999998092651,
+                    "timeMs": 1400,
+                    "presentedFrames": 37
+                  },
+                  {
+                    "atMs": 1546.3000001907349,
+                    "timeMs": 1440,
+                    "presentedFrames": 38
+                  },
+                  {
+                    "atMs": 1562.1000003814697,
+                    "timeMs": 1480,
+                    "presentedFrames": 39
+                  },
+                  {
+                    "atMs": 1596.3999996185303,
+                    "timeMs": 1520,
+                    "presentedFrames": 40
+                  },
+                  {
+                    "atMs": 1663,
+                    "timeMs": 1560,
+                    "presentedFrames": 41
+                  },
+                  {
+                    "atMs": 1679.8000001907349,
+                    "timeMs": 1600,
+                    "presentedFrames": 42
+                  },
+                  {
+                    "atMs": 1729.1999998092651,
+                    "timeMs": 1640,
+                    "presentedFrames": 43
+                  },
+                  {
+                    "atMs": 1762.1999998092651,
+                    "timeMs": 1680,
+                    "presentedFrames": 44
+                  },
+                  {
+                    "atMs": 1813,
+                    "timeMs": 1720,
+                    "presentedFrames": 45
+                  },
+                  {
+                    "atMs": 1846.3000001907349,
+                    "timeMs": 1760,
+                    "presentedFrames": 46
+                  },
+                  {
+                    "atMs": 1879.6000003814697,
+                    "timeMs": 1800,
+                    "presentedFrames": 47
+                  },
+                  {
+                    "atMs": 1929.6999998092651,
+                    "timeMs": 1840,
+                    "presentedFrames": 48
+                  },
+                  {
+                    "atMs": 1962.8999996185303,
+                    "timeMs": 1880,
+                    "presentedFrames": 49
+                  },
+                  {
+                    "atMs": 1996.3000001907349,
+                    "timeMs": 1920,
+                    "presentedFrames": 50
+                  },
+                  {
+                    "atMs": 2063,
+                    "timeMs": 1960,
+                    "presentedFrames": 51
+                  },
+                  {
+                    "atMs": 2079.699999809265,
+                    "timeMs": 2000,
+                    "presentedFrames": 52
+                  },
+                  {
+                    "atMs": 2146.199999809265,
+                    "timeMs": 2040,
+                    "presentedFrames": 53
+                  },
+                  {
+                    "atMs": 2162.199999809265,
+                    "timeMs": 2080,
+                    "presentedFrames": 54
+                  }
+                ],
+                "samples": [
+                  {
+                    "atMs": 0,
+                    "timeMs": 0,
+                    "paused": true,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false
+                  },
+                  {
+                    "atMs": 51.10000038146973,
+                    "timeMs": 0,
+                    "paused": true,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false
+                  },
+                  {
+                    "atMs": 101,
+                    "timeMs": 0,
+                    "paused": true,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false
+                  },
+                  {
+                    "atMs": 150.89999961853027,
+                    "timeMs": 45.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 40,
+                      "count": 2,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 200.89999961853027,
+                    "timeMs": 95.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 120,
+                      "count": 4,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 250.80000019073486,
+                    "timeMs": 145.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 160,
+                      "count": 5,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 301,
+                    "timeMs": 195.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 200,
+                      "count": 6,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 350.8999996185303,
+                    "timeMs": 245.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 240,
+                      "count": 7,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 401,
+                    "timeMs": 295.9,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 320,
+                      "count": 9,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 450.80000019073486,
+                    "timeMs": 345.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 320,
+                      "count": 9,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 500.8999996185303,
+                    "timeMs": 395.6,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 400,
+                      "count": 11,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 551.1999998092651,
+                    "timeMs": 446.1,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 440,
+                      "count": 12,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 601,
+                    "timeMs": 495.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 520,
+                      "count": 14,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 650.8999996185303,
+                    "timeMs": 545.6999999999999,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 520,
+                      "count": 14,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 701,
+                    "timeMs": 595.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 600,
+                      "count": 16,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 751,
+                    "timeMs": 645.8000000000001,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 640,
+                      "count": 17,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 801,
+                    "timeMs": 695.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 720,
+                      "count": 19,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 850.8999996185303,
+                    "timeMs": 745.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 760,
+                      "count": 20,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 901,
+                    "timeMs": 795.6999999999999,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 800,
+                      "count": 21,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 950.8000001907349,
+                    "timeMs": 845.6,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 840,
+                      "count": 22,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1001,
+                    "timeMs": 895.8000000000001,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 920,
+                      "count": 24,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1050.8000001907349,
+                    "timeMs": 945.6999999999999,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 920,
+                      "count": 24,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1100.8999996185303,
+                    "timeMs": 995.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1000,
+                      "count": 26,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1150.8000001907349,
+                    "timeMs": 1045.6000000000001,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1040,
+                      "count": 27,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1200.8999996185303,
+                    "timeMs": 1095.6999999999998,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1080,
+                      "count": 28,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1250.8999996185303,
+                    "timeMs": 1145.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1120,
+                      "count": 29,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1301,
+                    "timeMs": 1195.8999999999999,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1200,
+                      "count": 31,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1350.8999996185303,
+                    "timeMs": 1245.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1240,
+                      "count": 32,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1400.6999998092651,
+                    "timeMs": 1295.5,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1280,
+                      "count": 33,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1450.8999996185303,
+                    "timeMs": 1345.6999999999998,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1320,
+                      "count": 34,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1501,
+                    "timeMs": 1395.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1400,
+                      "count": 36,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1550.8999996185303,
+                    "timeMs": 1445.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1440,
+                      "count": 37,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1601,
+                    "timeMs": 1495.9,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1520,
+                      "count": 39,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1651,
+                    "timeMs": 1545.9,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1520,
+                      "count": 39,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1700.8999996185303,
+                    "timeMs": 1595.6999999999998,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1600,
+                      "count": 41,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1751.1000003814697,
+                    "timeMs": 1645.8999999999999,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1640,
+                      "count": 42,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1800.8999996185303,
+                    "timeMs": 1695.6,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1680,
+                      "count": 43,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1851.1999998092651,
+                    "timeMs": 1746.1,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1760,
+                      "count": 45,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1900.8999996185303,
+                    "timeMs": 1795.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1800,
+                      "count": 46,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 1951,
+                    "timeMs": 1845.8000000000002,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1840,
+                      "count": 47,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2001,
+                    "timeMs": 1895.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1920,
+                      "count": 49,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2051.1000003814697,
+                    "timeMs": 1945.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 1920,
+                      "count": 49,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2100.8999996185303,
+                    "timeMs": 1995.8,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2000,
+                      "count": 51,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2150.8999996185303,
+                    "timeMs": 2045.7,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2040,
+                      "count": 52,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2200.800000190735,
+                    "timeMs": 2095.6,
+                    "paused": false,
+                    "ended": false,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2250.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2301.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2351.1000003814697,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2400.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2451,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2500.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2550.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2601,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2650.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2700.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2751,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2801,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2851,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2900.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 2950.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3000.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3050.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3101.1000003814697,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3151.1000003814697,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3200.699999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3251,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3300.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3350.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3401,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3451,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3501.1000003814697,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3550.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3601.300000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3651,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3700.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3751,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3800.8999996185303,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3851.300000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3901.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 3951,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4001.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4051.1000003814697,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4100.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4151.300000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4201.10000038147,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4250.89999961853,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4301.10000038147,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4351,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4401.10000038147,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4450.89999961853,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4500.89999961853,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4551.5,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4601.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4651,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4701.10000038147,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4751.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4800.89999961853,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4851.10000038147,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4901.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 4951.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 5001.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 5050.800000190735,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 5101.10000038147,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 5109.199999809265,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  },
+                  {
+                    "atMs": 5110.39999961853,
+                    "timeMs": 2120,
+                    "paused": true,
+                    "ended": true,
+                    "seeking": false,
+                    "playbackRate": 1,
+                    "loop": false,
+                    "presentation": {
+                      "timeMs": 2080,
+                      "count": 53,
+                      "wraps": 0
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 306,
+              "effectiveFps": 59.990952179759496,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 1126,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 1126,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 194358672,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 306,
+                "meanMs": 7.837254882637971,
+                "maxMs": 28.600000381469727,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.944117683211183,
+                "analysisMeanMs": 3.8882352386424746,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 160759808,
+                  "migratedStateBytes": 152536336,
+                  "extraStateBytes": 8223472,
+                  "engineStateBytes": 194358672,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 1126,
+                  "displayWidth": 1800,
+                  "displayHeight": 1126,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 1126
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 1126,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 5112.599999427795,
+              "leadingIdleMs": 16.59999942779541,
+              "trailingIdleMs": 11.800000190734863
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:47819/",
+            "viewport": {
+              "width": 900,
+              "height": 563,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "focus",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "focus:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "control",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "accordion:true:true"
+              }
+            ],
+            "durationMs": 5000,
+            "measuredStep": 3,
+            "stateKey": "[1,\"http://127.0.0.1:47819/\",\"current\",900,563,2,5000,3,[[\"wait\",15000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"]],[1,\"REPLAYABLE\",[],[[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(5)\"],\"URL\",\"59aca411b6aa1e82adb9bb1a698eddd72840db592127d6d30d8b20acc4433f8f\",2120,0,1,false,true]],[[2120,0,2080,0]]]]",
+            "mediaPlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "items": [
+                {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                  ],
+                  "sourceKind": "URL",
+                  "locatorSha256": "59aca411b6aa1e82adb9bb1a698eddd72840db592127d6d30d8b20acc4433f8f",
+                  "durationMs": 2120,
+                  "timeMs": 0,
+                  "playbackRate": 1,
+                  "loop": false,
+                  "paused": true,
+                  "seekable": [
+                    [
+                      0,
+                      2120
+                    ]
+                  ]
+                }
+              ],
+              "coverage": [
+                {
+                  "endMs": 2120,
+                  "wraps": 0,
+                  "presentedEndMs": 2080,
+                  "presentedWraps": 0
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "reasons": [
+        "Navigation transition from http://127.0.0.1:47819/ to http://127.0.0.1:47819/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.",
+        "Viewport at route inventory: 900 × 563 CSS pixels; device pixel ratio 2."
+      ],
+      "viewport": {
+        "width": 900,
+        "height": 563,
+        "dpr": 2
+      }
+    }
+  ],
+  "skippedLinks": 0,
+  "limitations": [
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+    "TARGETED_RECHECK_ONLY: one stored scenario is repeated; other states are not evaluated."
+  ],
+  "mode": "AUTONOMOUS",
+  "viewportDurationMs": 15000,
+  "replayTarget": {
+    "version": 1,
+    "route": "http://127.0.0.1:47819/",
+    "viewport": {
+      "width": 900,
+      "height": 563,
+      "dpr": 2
+    },
+    "profile": "current",
+    "viewportMethod": "PHYSICAL",
+    "steps": [
+      {
+        "kind": "wait",
+        "durationMs": 15000
+      },
+      {
+        "kind": "focus",
+        "target": {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+          ],
+          "kind": "accordion"
+        },
+        "expectedState": "focus:accordion:false:false"
+      },
+      {
+        "kind": "wait",
+        "durationMs": 3000
+      },
+      {
+        "kind": "control",
+        "target": {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+          ],
+          "kind": "accordion"
+        },
+        "expectedState": "accordion:true:true"
+      }
+    ],
+    "durationMs": 5000,
+    "measuredStep": 3,
+    "stateKey": "[1,\"http://127.0.0.1:47819/\",\"current\",900,563,2,5000,3,[[\"wait\",15000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"]],[1,\"REPLAYABLE\",[],[[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(5)\"],\"URL\",\"59aca411b6aa1e82adb9bb1a698eddd72840db592127d6d30d8b20acc4433f8f\",2120,0,1,false,true]],[[2120,0,2080,0]]]]",
+    "mediaPlan": {
+      "version": 1,
+      "status": "REPLAYABLE",
+      "reasons": [],
+      "items": [
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+          ],
+          "sourceKind": "URL",
+          "locatorSha256": "59aca411b6aa1e82adb9bb1a698eddd72840db592127d6d30d8b20acc4433f8f",
+          "durationMs": 2120,
+          "timeMs": 0,
+          "playbackRate": 1,
+          "loop": false,
+          "paused": true,
+          "seekable": [
+            [
+              0,
+              2120
+            ]
+          ]
+        }
+      ],
+      "coverage": [
+        {
+          "endMs": 2120,
+          "wraps": 0,
+          "presentedEndMs": 2080,
+          "presentedWraps": 0
+        }
+      ]
+    }
+  },
+  "verificationOf": {
+    "jobId": "3753361c-8a26-4e87-8d1c-77a7833225e1",
+    "taskId": "0212337e-c0cd-41b0-8e0c-83c880712a19",
+    "observationId": "25d7f496-ea6a-4c30-a013-a784c99fe0b5"
+  },
+  "limits": {
+    "maxRoutes": 1,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "maxActionsPerRoute": 12
+  },
+  "stopReason": "QUEUE_EXHAUSTED",
+  "endedAt": "2026-10-27T19:02:53.264Z"
+}

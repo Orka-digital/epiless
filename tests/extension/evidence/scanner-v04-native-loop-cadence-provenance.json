@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "preservedAt": "2026-10-27T18:42:03.704914+00:00",
+  "scope": "Byte-exact real-toolbar autonomous existing-loop observation with an explicit 2-second, 4 x 4-pixel low-contrast cadence marker. Constant encoded source unchanged. The prior 20-second-marker failure used a different scanner build; this is not a controlled causal comparison explaining its inadequate cadence. No raw frame, screenshot or browser profile retained.",
+  "jobId": "ac202974-efe9-49b7-947b-16c9e945e40e",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "engineTreeSha256": "c216fbe2c9de76354061c35ba4df09e7e0a25731e5be247f3a7092aca2ca687a",
+  "extensionArtifactSha256": "d0ac12bb19825c77f5d796bdbfa8b06eb965d539d53c4144c2fc2ff25ad8a7fc",
+  "fixtureVariant": {
+    "pageModuleSha256": "1cc6b1183870cbb4742e9f99c0ca86b50ac7d5609ff987ec5647b52c8284ee1e",
+    "servedHtmlSha256": "38bfb93ab49ae861e0b8063ec3644923bde6c713195bd3260eafe3b9a80ad79b",
+    "cadenceVariant": {
+      "moduleSha256": "f7b73201008cd0d72d486d9d4b3afe586d80da7a2e46fb6c9510dc1168cdbf2e",
+      "policy": {
+        "id": "CONSTANT_VIDEO_GENTLE_MARKER_2S",
+        "markerWidthCssPx": 4,
+        "markerHeightCssPx": 4,
+        "markerColor": "#e8e8e8",
+        "backgroundColor": "#eee",
+        "travelCssPx": 180,
+        "oneWayDurationMs": 2000,
+        "timing": "linear",
+        "direction": "alternate",
+        "boundary": "Explicit capture-cadence stimulus only; the constant encoded video is unchanged. This does not establish why the original slow-marker capture had inadequate cadence."
+      }
+    },
+    "source": "EXISTING_FIXED_VP9_LOOP",
+    "pageTrace": "Independent page currentTime and rVFC metadata, bounded per document over localhost; no scanner generation IDs or raw frames."
+  },
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-cadence-capture.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-EUgF3F/ac202974-efe9-49b7-947b-16c9e945e40e.json",
+      "bytes": 25250,
+      "sha256": "4389631ce311c74c6059e18d9ec2ba37429b4df483f04a2b86ce871dfbdd1614"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-cadence-local-job.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-EUgF3F/ac202974-efe9-49b7-947b-16c9e945e40e-local-job.json",
+      "bytes": 751659,
+      "sha256": "e7dbec165baf828c660e48973ac6dcd9fd1b4901f7c1d25a1e91057bf573ced2"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-cadence-environment.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-EUgF3F/ac202974-efe9-49b7-947b-16c9e945e40e-environment.json",
+      "bytes": 1689907,
+      "sha256": "80e0fb90c2cbaf6ee2ed0e7a2b203e9abb73d5db4227ac8e6e5d5c12c5a86526"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-loop-cadence-verification.json",
+      "original": "/tmp/epiless-native-loop-cadence-verification.json",
+      "bytes": 3737,
+      "sha256": "33b95612a8707fda1d142d9a98da34d8e98b338c4787a200446061ff84fc0642"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "status": "FAILED",
+  "scope": "Rejected bounded existing-producer hold after STOP. Analysis closed, resources released, original focus/bounds/placement preserved; actual CSS remained 900x450 instead of pre-attach 900x507. No geometry or verifier threshold was relaxed. HOLD/geometry-only candidate reverted; independent producer-first STOP with bounded content cancellation retained.",
+  "scannerBuildSha256": "5ecdc445abed75a44a5ae3f56b7d36a231f0aa8516e1b3127e3e6e1afe188c3b",
+  "jobId": "cf35ee17-0348-4917-b8e8-899435b37be3",
+  "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+  "strictPublicSchema": "PASS",
+  "verificationError": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'INTERRUPTED'\n- 'PARTIAL'\n",
+  "observed": {
+    "originalCss": {
+      "width": 900,
+      "height": 507,
+      "dpr": 2
+    },
+    "finalCss": {
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "scrollX": 0,
+      "scrollY": 0,
+      "visualScale": 1,
+      "visualOffsetLeft": 0,
+      "visualOffsetTop": 0
+    },
+    "firstReleasedSnapshotAfterStopMs": 2565,
+    "resourceRelease": "Tracks ended, captured tab stopped, debugger detached, owned workspace/leases gone; original inactive tab/index and foreground bounds/focus preserved.",
+    "failureReasons": [
+      "POST_STOP_CAPTURE_RASTER_NOT_CONFIRMED: Error: CAPTURE_VIEWPORT_CONSTRAINT_FAILED: {\"requested\":{\"width\":1800,\"height\":1014,\"resizeMode\":\"none\"},\"constraint\":\"width\",\"settings\":{\"width\":1200,\"height\":900,\"frameRate\":60,\"resizeMode\":\"none\"},\"capabilities\":{\"width\":{\"max\":1200,\"min\":1},\"height\":{\"max\":900,\"min\":1},\"frameRate\":{\"max\":60,\"min\":0},\"resizeMode\":[\"none\",\"crop-and-scale\"]}}; OverconstrainedError: Cannot satisfy constraints. These cleanup frames were not analyzed.",
+      "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED: CAPTURE_CLEANUP_EXPIRED"
+    ]
+  },
+  "restoredProductionSha256": "6ccaccb162249408afadc02c0be6a5a2b32e9d18c5b8e00cf3fcbc3e364666ec",
+  "experiment": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected.patch",
+    "sha256": "7f2c4e3af48cdc0bb8fb2a6421b78e40088a10c8b2883663f35b3df7f4dd7d40",
+    "reconstruction": "git apply to the scoped pre-HOLD baseline reconstructed all nine candidate files byte-for-byte"
+  },
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-evidence.json",
+      "bytes": 195678,
+      "sha256": "606f4acc1a41c03d2d65ace7fff96291caf6af075422941227b0db1b6934add0",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/evidence.json"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-capture.json",
+      "bytes": 24285,
+      "sha256": "f0c0bd2a4e09f1b225d828ed1b8672da0baa7710b34ace8c58823591783b4004",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/report.json"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-local-job.json",
+      "bytes": 38152,
+      "sha256": "9fa8e4af37f80828df34a4499989a431e3478569d8a111fe1e722237c81ed0fd",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/local-job.json"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-environment.json",
+      "bytes": 1637,
+      "sha256": "4eca3a830bf6715128a58e156c606b85aed432009bae0b61b420bfb1108f31b3",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/environment-start.json"
+    }
+  ]
+}

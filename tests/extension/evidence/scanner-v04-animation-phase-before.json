@@ -1,0 +1,2944 @@
+{
+  "scope": "Actual browser CSS/document clocks; synthetic capture quality and candidate; no native tabCapture evidence",
+  "baselineTrace": {
+    "startAgeMs": 3017,
+    "endAgeMs": 5030.800000190735,
+    "samples": [
+      {
+        "ageMs": 3017,
+        "epochMs": 1793129121029,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 2999.9060004130006,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3030.5,
+        "epochMs": 1793129121042.5,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3016.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3046.800000190735,
+        "epochMs": 1793129121058.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3033.2060004130008,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3064.2000007629395,
+        "epochMs": 1793129121076.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3049.9060004130006,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3080,
+        "epochMs": 1793129121092,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3066.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3097.6000003814697,
+        "epochMs": 1793129121109.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3083.2060004130003,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3114,
+        "epochMs": 1793129121126,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3099.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3130.300000190735,
+        "epochMs": 1793129121142.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3116.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3146.9000005722046,
+        "epochMs": 1793129121158.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3133.2060004130008,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3163.7000007629395,
+        "epochMs": 1793129121175.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3149.9060004130006,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3179.800000190735,
+        "epochMs": 1793129121191.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3166.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3196.800000190735,
+        "epochMs": 1793129121208.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3183.2060004130003,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3213.800000190735,
+        "epochMs": 1793129121225.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3199.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3230.7000007629395,
+        "epochMs": 1793129121242.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3216.6060004130004,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3246.800000190735,
+        "epochMs": 1793129121258.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3233.2060004130008,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3263.9000005722046,
+        "epochMs": 1793129121275.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3249.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3280,
+        "epochMs": 1793129121292,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3266.606000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3296.9000005722046,
+        "epochMs": 1793129121308.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3283.1060004130004,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3314.1000003814697,
+        "epochMs": 1793129121326.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3299.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3330.4000005722046,
+        "epochMs": 1793129121342.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3316.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3347.4000005722046,
+        "epochMs": 1793129121359.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3333.2060004130003,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3364.1000003814697,
+        "epochMs": 1793129121376.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3349.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3380.800000190735,
+        "epochMs": 1793129121392.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3366.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3397.4000005722046,
+        "epochMs": 1793129121409.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3383.2060004130008,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3413.9000005722046,
+        "epochMs": 1793129121425.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3399.9060004130006,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3430.2000007629395,
+        "epochMs": 1793129121442.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3416.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3447.4000005722046,
+        "epochMs": 1793129121459.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3433.2060004130003,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3464.1000003814697,
+        "epochMs": 1793129121476.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3449.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3479.9000005722046,
+        "epochMs": 1793129121491.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3466.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3497.300000190735,
+        "epochMs": 1793129121509.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3483.2060004130008,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3514.1000003814697,
+        "epochMs": 1793129121526.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3499.9060004130006,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3529.800000190735,
+        "epochMs": 1793129121541.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3516.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3546.9000005722046,
+        "epochMs": 1793129121558.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3533.1060004130004,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3564.1000003814697,
+        "epochMs": 1793129121576.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3549.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3579.9000005722046,
+        "epochMs": 1793129121591.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3566.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3597.1000003814697,
+        "epochMs": 1793129121609.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3583.106000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3613.1000003814697,
+        "epochMs": 1793129121625.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3599.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3629.9000005722046,
+        "epochMs": 1793129121641.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3616.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3646.9000005722046,
+        "epochMs": 1793129121658.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3633.2060004130008,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3663.800000190735,
+        "epochMs": 1793129121675.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3649.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3680.7000007629395,
+        "epochMs": 1793129121692.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3666.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3696.9000005722046,
+        "epochMs": 1793129121708.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3683.2060004130003,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3713.9000005722046,
+        "epochMs": 1793129121725.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3699.9060004130006,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3729.800000190735,
+        "epochMs": 1793129121741.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3716.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3747.4000005722046,
+        "epochMs": 1793129121759.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3733.1060004130004,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3764.1000003814697,
+        "epochMs": 1793129121776.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3749.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3779.9000005722046,
+        "epochMs": 1793129121791.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3766.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3797.4000005722046,
+        "epochMs": 1793129121809.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3783.1060004130004,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3813.800000190735,
+        "epochMs": 1793129121825.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3799.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3830.6000003814697,
+        "epochMs": 1793129121842.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3816.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3847.5,
+        "epochMs": 1793129121859.5,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3833.2060004130003,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3863.9000005722046,
+        "epochMs": 1793129121875.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3849.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3879.9000005722046,
+        "epochMs": 1793129121891.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3866.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3897.4000005722046,
+        "epochMs": 1793129121909.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3883.2060004130008,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3913.7000007629395,
+        "epochMs": 1793129121925.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3899.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3930.7000007629395,
+        "epochMs": 1793129121942.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3916.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3947.1000003814697,
+        "epochMs": 1793129121959.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3933.106000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3964,
+        "epochMs": 1793129121976,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3949.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3980.6000003814697,
+        "epochMs": 1793129121992.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3966.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 3996.800000190735,
+        "epochMs": 1793129122008.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3983.1060004130004,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4013.800000190735,
+        "epochMs": 1793129122025.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 3999.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4030.800000190735,
+        "epochMs": 1793129122042.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4016.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4046.9000005722046,
+        "epochMs": 1793129122058.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4033.2060004130003,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4063.9000005722046,
+        "epochMs": 1793129122075.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4049.8060004130007,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4079.800000190735,
+        "epochMs": 1793129122091.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4066.5060004130005,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4096.900000572205,
+        "epochMs": 1793129122108.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4083.1060004130004,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4114.10000038147,
+        "epochMs": 1793129122126.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4099.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4129.800000190735,
+        "epochMs": 1793129122141.8,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4116.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4146.900000572205,
+        "epochMs": 1793129122158.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4133.106000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4163.900000572205,
+        "epochMs": 1793129122175.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4149.906000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4180.800000190735,
+        "epochMs": 1793129122192.8,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4166.506000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4196.800000190735,
+        "epochMs": 1793129122208.8,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4183.206000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4214.10000038147,
+        "epochMs": 1793129122226.1,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4199.806000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4230.10000038147,
+        "epochMs": 1793129122242.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4216.506000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4247.400000572205,
+        "epochMs": 1793129122259.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4233.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4264.10000038147,
+        "epochMs": 1793129122276.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4249.806000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4279.900000572205,
+        "epochMs": 1793129122291.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4266.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4296.900000572205,
+        "epochMs": 1793129122308.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4283.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4313.900000572205,
+        "epochMs": 1793129122325.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4299.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4330.800000190735,
+        "epochMs": 1793129122342.8,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4316.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4346.900000572205,
+        "epochMs": 1793129122358.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4333.206000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4363.900000572205,
+        "epochMs": 1793129122375.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4349.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4379.900000572205,
+        "epochMs": 1793129122391.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4366.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4397,
+        "epochMs": 1793129122409,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4383.206000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4413.300000190735,
+        "epochMs": 1793129122425.3,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4399.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4429.800000190735,
+        "epochMs": 1793129122441.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4416.506000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4446.900000572205,
+        "epochMs": 1793129122458.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4433.206000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4463.900000572205,
+        "epochMs": 1793129122475.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4449.806000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4480.700000762939,
+        "epochMs": 1793129122492.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4466.506000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4497.400000572205,
+        "epochMs": 1793129122509.4,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4483.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4513.60000038147,
+        "epochMs": 1793129122525.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4499.806000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4529.900000572205,
+        "epochMs": 1793129122541.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4516.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4546.900000572205,
+        "epochMs": 1793129122558.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4533.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4563.900000572205,
+        "epochMs": 1793129122575.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4549.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4580.5,
+        "epochMs": 1793129122592.5,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4566.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4596.900000572205,
+        "epochMs": 1793129122608.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4583.206000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4613.800000190735,
+        "epochMs": 1793129122625.8,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4599.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4630,
+        "epochMs": 1793129122642,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4616.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4647.300000190735,
+        "epochMs": 1793129122659.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4633.106000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4663.900000572205,
+        "epochMs": 1793129122675.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4649.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4679.900000572205,
+        "epochMs": 1793129122691.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4666.406000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4696.900000572205,
+        "epochMs": 1793129122708.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4683.206000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4713.900000572205,
+        "epochMs": 1793129122725.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4699.806000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4729.900000572205,
+        "epochMs": 1793129122741.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4716.406000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4747.400000572205,
+        "epochMs": 1793129122759.4,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4733.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4763.700000762939,
+        "epochMs": 1793129122775.7,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4749.806000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4779.800000190735,
+        "epochMs": 1793129122791.8,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4766.406000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4796.700000762939,
+        "epochMs": 1793129122808.7,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4783.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4813.900000572205,
+        "epochMs": 1793129122825.9,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4799.706000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4829.900000572205,
+        "epochMs": 1793129122841.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4816.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4846.900000572205,
+        "epochMs": 1793129122858.9,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4833.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4864,
+        "epochMs": 1793129122876,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4849.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4879.800000190735,
+        "epochMs": 1793129122891.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4866.506000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4897.10000038147,
+        "epochMs": 1793129122909.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4883.106000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4914,
+        "epochMs": 1793129122926,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 4899.806000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4930.5,
+        "epochMs": 1793129122942.5,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4916.406000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4947.400000572205,
+        "epochMs": 1793129122959.4,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4933.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4963.700000762939,
+        "epochMs": 1793129122975.7,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4949.706000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4980.60000038147,
+        "epochMs": 1793129122992.6,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4966.406000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 4996.800000190735,
+        "epochMs": 1793129123008.8,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4983.106000413,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 5014.10000038147,
+        "epochMs": 1793129123026.1,
+        "background": "rgb(125, 125, 125)",
+        "animation": {
+          "currentTimeMs": 4999.806000413001,
+          "startTimeMs": 13.093999586999416,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 5030.800000190735,
+        "epochMs": 1793129123042.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": null
+      }
+    ]
+  },
+  "replayTrace": {
+    "startAgeMs": 19.199999809265137,
+    "endAgeMs": 2025.1000003814697,
+    "samples": [
+      {
+        "ageMs": 19.199999809265137,
+        "epochMs": 1793129123079,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 0,
+          "startTimeMs": null,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 25.800000190734863,
+        "epochMs": 1793129123085.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 16.632000203430653,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 42.40000057220459,
+        "epochMs": 1793129123102.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 33.33200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 59,
+        "epochMs": 1793129123118.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 50.032000203430655,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 75.69999980926514,
+        "epochMs": 1793129123135.5,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 66.63200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 92.40000057220459,
+        "epochMs": 1793129123152.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 83.23200020343064,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 109,
+        "epochMs": 1793129123168.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 99.93200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 125.90000057220459,
+        "epochMs": 1793129123185.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 116.63200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 142.5,
+        "epochMs": 1793129123202.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 133.23200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 159.10000038146973,
+        "epochMs": 1793129123218.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 150.03200020343067,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 175.69999980926514,
+        "epochMs": 1793129123235.5,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 166.63200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 192.4000005722046,
+        "epochMs": 1793129123252.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 183.23200020343063,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 209,
+        "epochMs": 1793129123268.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 199.93200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 225.69999980926514,
+        "epochMs": 1793129123285.5,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 216.63200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 242.5,
+        "epochMs": 1793129123302.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 233.23200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 259.1000003814697,
+        "epochMs": 1793129123318.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 249.93200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 275.80000019073486,
+        "epochMs": 1793129123335.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 266.73200020343063,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 292.5,
+        "epochMs": 1793129123352.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 283.33200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 309.19999980926514,
+        "epochMs": 1793129123369,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 299.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 325.80000019073486,
+        "epochMs": 1793129123385.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 316.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 342.5,
+        "epochMs": 1793129123402.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 333.23200020343063,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 359.1000003814697,
+        "epochMs": 1793129123418.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 349.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 375.80000019073486,
+        "epochMs": 1793129123435.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 366.63200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 392.5,
+        "epochMs": 1793129123452.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 383.33200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 409.19999980926514,
+        "epochMs": 1793129123469,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 400.03200020343064,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 425.80000019073486,
+        "epochMs": 1793129123485.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 416.63200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 442.5,
+        "epochMs": 1793129123502.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 433.33200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 459.19999980926514,
+        "epochMs": 1793129123519,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 449.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 475.9000005722046,
+        "epochMs": 1793129123535.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 466.63200020343066,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 492.5,
+        "epochMs": 1793129123552.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 483.33200020343065,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 509.19999980926514,
+        "epochMs": 1793129123569,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 499.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 525.9000005722046,
+        "epochMs": 1793129123585.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 516.6320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 542.5,
+        "epochMs": 1793129123602.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 533.2320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 559.1000003814697,
+        "epochMs": 1793129123618.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 549.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 575.9000005722046,
+        "epochMs": 1793129123635.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 566.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 592.5,
+        "epochMs": 1793129123652.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 583.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 609.1999998092651,
+        "epochMs": 1793129123669,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 599.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 625.8000001907349,
+        "epochMs": 1793129123685.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 616.6320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 642.6000003814697,
+        "epochMs": 1793129123702.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 633.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 659.3000001907349,
+        "epochMs": 1793129123719.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 649.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 676.1000003814697,
+        "epochMs": 1793129123735.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 666.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 692.6000003814697,
+        "epochMs": 1793129123752.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 683.2320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 709.1999998092651,
+        "epochMs": 1793129123769,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 700.0320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 725.9000005722046,
+        "epochMs": 1793129123785.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 716.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 742.6000003814697,
+        "epochMs": 1793129123802.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 733.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 759.3000001907349,
+        "epochMs": 1793129123819.1,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 749.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 775.9000005722046,
+        "epochMs": 1793129123835.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 766.5320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 792.6000003814697,
+        "epochMs": 1793129123852.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 783.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 809.1999998092651,
+        "epochMs": 1793129123869,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 799.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 825.9000005722046,
+        "epochMs": 1793129123885.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 816.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 842.6000003814697,
+        "epochMs": 1793129123902.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 833.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 859.1999998092651,
+        "epochMs": 1793129123919,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 849.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 875.9000005722046,
+        "epochMs": 1793129123935.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 866.6320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 892.5,
+        "epochMs": 1793129123952.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 883.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 909.1999998092651,
+        "epochMs": 1793129123969,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 900.0320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 925.8000001907349,
+        "epochMs": 1793129123985.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 916.5320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 942.6000003814697,
+        "epochMs": 1793129124002.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 933.2320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 959.1999998092651,
+        "epochMs": 1793129124019,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 949.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 975.8000001907349,
+        "epochMs": 1793129124035.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 966.5320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 992.5,
+        "epochMs": 1793129124052.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 983.2320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1009.1999998092651,
+        "epochMs": 1793129124069,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 999.9320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1025.8000001907349,
+        "epochMs": 1793129124085.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1016.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1042.5,
+        "epochMs": 1793129124102.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1033.2320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1059.1999998092651,
+        "epochMs": 1793129124119,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1049.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1075.9000005722046,
+        "epochMs": 1793129124135.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1066.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1092.5,
+        "epochMs": 1793129124152.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1083.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1109.1999998092651,
+        "epochMs": 1793129124169,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1099.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1125.8000001907349,
+        "epochMs": 1793129124185.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1116.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1142.5,
+        "epochMs": 1793129124202.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1133.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1159.1999998092651,
+        "epochMs": 1793129124219,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1149.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1175.8000001907349,
+        "epochMs": 1793129124235.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1166.5320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1192.5,
+        "epochMs": 1793129124252.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1183.2320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1209.1999998092651,
+        "epochMs": 1793129124269,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1199.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1225.8000001907349,
+        "epochMs": 1793129124285.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1216.6320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1242.6000003814697,
+        "epochMs": 1793129124302.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1233.2320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1259.1999998092651,
+        "epochMs": 1793129124319,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1249.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1275.9000005722046,
+        "epochMs": 1793129124335.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1266.5320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1292.6000003814697,
+        "epochMs": 1793129124352.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1283.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1309.1999998092651,
+        "epochMs": 1793129124369,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1299.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1325.9000005722046,
+        "epochMs": 1793129124385.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1316.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1342.5,
+        "epochMs": 1793129124402.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1333.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1359.1999998092651,
+        "epochMs": 1793129124419,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1349.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1375.9000005722046,
+        "epochMs": 1793129124435.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1366.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1392.6000003814697,
+        "epochMs": 1793129124452.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1383.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1409.1999998092651,
+        "epochMs": 1793129124469,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1399.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1425.8000001907349,
+        "epochMs": 1793129124485.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1416.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1442.6000003814697,
+        "epochMs": 1793129124502.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1433.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1459.1999998092651,
+        "epochMs": 1793129124519,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1449.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1475.9000005722046,
+        "epochMs": 1793129124535.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1466.5320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1492.5,
+        "epochMs": 1793129124552.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1483.2320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1509.1999998092651,
+        "epochMs": 1793129124569,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1499.8320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1525.6999998092651,
+        "epochMs": 1793129124585.5,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1516.5320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1542.4000005722046,
+        "epochMs": 1793129124602.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1533.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1559.1000003814697,
+        "epochMs": 1793129124618.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1549.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1575.8000001907349,
+        "epochMs": 1793129124635.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1566.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1592.1000003814697,
+        "epochMs": 1793129124651.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1583.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1609.1000003814697,
+        "epochMs": 1793129124668.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1599.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1625.1000003814697,
+        "epochMs": 1793129124684.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1616.5320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1642.5,
+        "epochMs": 1793129124702.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1633.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1659.1000003814697,
+        "epochMs": 1793129124718.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1649.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1675,
+        "epochMs": 1793129124734.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1666.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1692.6000003814697,
+        "epochMs": 1793129124752.4001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1683.2320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1709.1000003814697,
+        "epochMs": 1793129124768.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1699.8320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1725.9000005722046,
+        "epochMs": 1793129124785.7,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1716.6320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1742,
+        "epochMs": 1793129124801.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1733.2320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1759,
+        "epochMs": 1793129124818.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1749.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1775.4000005722046,
+        "epochMs": 1793129124835.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1766.5320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1792.1000003814697,
+        "epochMs": 1793129124851.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1783.2320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1809.1000003814697,
+        "epochMs": 1793129124868.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1799.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1825.8000001907349,
+        "epochMs": 1793129124885.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1816.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1842,
+        "epochMs": 1793129124901.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1833.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1859.1999998092651,
+        "epochMs": 1793129124919,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1849.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1875.5,
+        "epochMs": 1793129124935.3,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1866.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1892.1000003814697,
+        "epochMs": 1793129124951.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1883.2320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1908.8000001907349,
+        "epochMs": 1793129124968.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1899.8320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1925.8000001907349,
+        "epochMs": 1793129124985.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1916.6320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1942.4000005722046,
+        "epochMs": 1793129125002.2,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1933.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1958.1000003814697,
+        "epochMs": 1793129125017.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1949.9320002034306,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1975.8000001907349,
+        "epochMs": 1793129125035.6,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1966.5320002034305,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 1992.1000003814697,
+        "epochMs": 1793129125051.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1983.3320002034307,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 2009,
+        "epochMs": 1793129125068.8,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 1999.9320002034308,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      },
+      {
+        "ageMs": 2025.1000003814697,
+        "epochMs": 1793129125084.9001,
+        "background": "rgb(35, 35, 35)",
+        "animation": {
+          "currentTimeMs": 2016.532000203431,
+          "startTimeMs": 8.167999796569347,
+          "playState": "running",
+          "durationMs": 200,
+          "delayMs": 4000
+        }
+      }
+    ]
+  },
+  "comparison": {
+    "status": "NOT_OBSERVED",
+    "reasons": [],
+    "baselineJobId": "baseline",
+    "verificationJobId": "repeated",
+    "matchingFindingIds": []
+  }
+}

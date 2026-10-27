@@ -1,0 +1,38 @@
+{
+  "mode": "cancel",
+  "tabSwitchProbe": true,
+  "hypothesis": "POST_DETACH_INFOBAR_CONTAINER_REBIND",
+  "productionAcceptance": false,
+  "origin": "http://127.0.0.1:53621",
+  "preparedAt": "2026-10-27T19:47:18.002Z",
+  "headless": false,
+  "playwrightAttached": false,
+  "machine": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "extensionBuild": {
+    "productionSha256": "16edc8a030f75b85c428e20b40a80174a77793b6a7e0f6dedbebccb00be218f3",
+    "instrumentedSha256": "97a074d60bf287ad1e0b3d27ed2f8fdcb29e658e36a6265e4d121811e922b42d",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "7c26e831ec13a3ffbba6c02887349858abd94f045e3b806aa3497ec82a6ff597",
+      "native-context-controller.js": "2704a86f083fed92436483714d883db82d571cb01ee0b8cc224366d17c713288",
+      "native-context-background.js": "25d09bb60b7c1191dfe94d17ef05ddbb7eea654aae97d117365869ca936b94f5",
+      "native-context-tab-switch.mjs": "8bfe8bd5d64af7beafb52f52c03fc4cf83109098b69e66772bc448386a53abde",
+      "native-context-placeholder.html": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622"
+    }
+  },
+  "instrumentation": "Copied-build passive Worker message/real-stream and debugger-detach reply observers; no frame reads, modification or synthesis. Separate extension page queries actual state and performs the selected zoom/resize or STOP. Production manifest and permissions unchanged. Actual toolbar authorization required. Instrumented run is not a throughput benchmark. OPT-IN HYPOTHESIS: one guarded fixture-owned blank-tab switch at detach+5200ms, within the existing covered workspace. Any PASS describes this intervention, never unmodified production cleanup.",
+  "clock": "Date.now receipt/action epochs, not exact compositor exposure time."
+}

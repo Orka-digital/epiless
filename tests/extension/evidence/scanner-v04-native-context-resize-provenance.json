@@ -1,0 +1,26 @@
+{
+  "scope": "Exclusive byte-preserving copy from real toolbar run; frozen pre-WASM build only. Capture interruption is retained.",
+  "strictPublicSchema": "PASS",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-evidence.json",
+      "bytes": 740936,
+      "sha256": "4276cdfd2917e00573d6519a9f57e5a158a8520a8fddb642c95a44f2331dc0f4"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-local-job.json",
+      "bytes": 304491,
+      "sha256": "9d1f2b15817d40298575362a21d660af0176d8eee94bace6cbd80cfe043572e6"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-capture.json",
+      "bytes": 280410,
+      "sha256": "fcfe66296de5bf3f4e46867112d810135bb51c519783bc3d872d49c9e09fc5c9"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-environment.json",
+      "bytes": 1637,
+      "sha256": "26e30da17e09707a8b297f624329c019c3b832c7b80e8b58e9a329edf2894a6e"
+    }
+  ]
+}

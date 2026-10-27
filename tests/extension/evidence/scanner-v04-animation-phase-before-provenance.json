@@ -1,0 +1,9 @@
+{
+  "scope": "Browser-clock regression; synthetic capture quality/candidate; no native tabCapture claim",
+  "evidenceSha256": "b51ef55bbeba482dc460e02110034fb976f9418526af805a75428a2bb1364122",
+  "sources": {
+    "tests/extension/animation-phase-repro.mjs": "bef76f4f82b54182cea2947412b142e74231ac386561eebcfe58dc8046eba2d8",
+    "apps/chrome-extension/src/verification.ts": "9e583d5c66f5a175d6d4b5d1142e1d1e903223ad42633caf269ce4c163497145",
+    "apps/chrome-extension/src/background.ts": "f2651f364fa7b2f212fc06f670bbc578ae019477430e0161698ef5beaa5ac6f8"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "mode": "zoom",
+  "jobId": "54f53aae-4d17-463d-9220-09d3da4b7809",
+  "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+  "productionBundleSha256": "cf73f5e64a74c80499467a15db38d537e7d1a715ac33406011cc0af6df82f269",
+  "instrumentedBundleSha256": "696e5ea3aaadacbee2e248e0a7f3effc6ff96855cb96426938758929b03fea25",
+  "segmentId": "6517df0c-2108-4614-ba2e-89fdc57dd01b",
+  "candidateId": "candidate-1",
+  "candidateRetained": true,
+  "cssReferenceRemoved": true,
+  "endpointGeometryRestored": true,
+  "quality": {
+    "frameCount": 307,
+    "effectiveFps": 59.996470804810244,
+    "maxGapMs": 18.800000190734863,
+    "width": 1800,
+    "height": 1014,
+    "downsampled": false,
+    "interrupted": false,
+    "spatial": {
+      "mode": "NATIVE_PIXELS",
+      "sourceWidth": 1800,
+      "sourceHeight": 1014,
+      "retainedResolutionRatio": 1,
+      "stateBytes": 169371811,
+      "stateBudgetBytes": 268435456,
+      "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+      "colorAssumption": "SDR_SRGB_8BIT"
+    },
+    "processing": {
+      "measuredFrames": 307,
+      "meanMs": 7.984364810906326,
+      "maxMs": 32.80000019073486,
+      "framesOver16_7Ms": 5,
+      "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+      "conversionMeanMs": 3.497719854795972,
+      "analysisMeanMs": 4.477850162245163,
+      "conversionMethods": [
+        "VIDEOFRAME_COPY_RGBA"
+      ],
+      "decoded": {
+        "codedWidth": 1800,
+        "codedHeight": 1014,
+        "displayWidth": 1800,
+        "displayHeight": 1014,
+        "visibleRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1800,
+          "height": 1014
+        },
+        "format": "I420",
+        "primaries": "bt709",
+        "transfer": "bt709",
+        "matrix": "bt709"
+      },
+      "track": {
+        "width": 1800,
+        "height": 1014,
+        "frameRate": 60,
+        "resizeMode": "none"
+      }
+    },
+    "captureWindowMs": 5111.700000762939,
+    "leadingIdleMs": 9.600000381469727,
+    "trailingIdleMs": 2
+  },
+  "scope": "Instrumented real-toolbar transient context guard; no uninterrupted-capture or performance claim."
+}

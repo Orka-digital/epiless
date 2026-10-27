@@ -1,0 +1,133 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "machine": {
+    "arch": "arm64",
+    "os": "darwin",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "recordedAt": "2026-10-27T12:54:30.759Z",
+  "emulateViewport": false,
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "initialGeometry": {
+    "innerWidth": 900,
+    "innerHeight": 563,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "devicePixelRatio": 2,
+    "screen": {
+      "width": 3360,
+      "height": 1890,
+      "availWidth": 3360,
+      "availHeight": 1755
+    },
+    "visibility": "visible"
+  },
+  "finalGeometry": {
+    "innerWidth": 900,
+    "innerHeight": 563,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "devicePixelRatio": 2,
+    "screen": {
+      "width": 3360,
+      "height": 1890,
+      "availWidth": 3360,
+      "availHeight": 1755
+    },
+    "visibility": "visible"
+  },
+  "pixelProbe": {
+    "instrumentation": "Temporary copied extension samples four static corners once per source geometry, adding first-frame overhead; production dist is unchanged.",
+    "expectedColors": [
+      [
+        40,
+        80,
+        120,
+        255
+      ],
+      [
+        140,
+        180,
+        220,
+        255
+      ],
+      [
+        80,
+        120,
+        160,
+        255
+      ],
+      [
+        180,
+        140,
+        100,
+        255
+      ]
+    ],
+    "samples": [
+      {
+        "colors": [
+          [
+            40,
+            80,
+            118,
+            255
+          ],
+          [
+            140,
+            180,
+            219,
+            255
+          ],
+          [
+            80,
+            119,
+            158,
+            255
+          ],
+          [
+            180,
+            140,
+            102,
+            255
+          ]
+        ],
+        "height": 1126,
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "sourceTimestampMs": 4813607957.4,
+        "width": 1800
+      }
+    ]
+  },
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "1bd8a0daa5549f92d1972b7f4cdfd1e60c3966c7892b368535b28be4c3b2a44f",
+    "fixtureOffscreenSha256": "4cf0513d3a03c74556dbf76c572b8bc1d6c5ec89196d304967f28f856496bc97"
+  },
+  "fixture": "static content plus low-contrast 4px marker moving slowly without flashes",
+  "headless": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "classification": "NATIVE_GEOMETRY_RESTORE_FAILED",
+  "verifierSha256": "5462d5a6e77087f6ac35913066ac3f5f41d90273171d44512526669c1342f00c",
+  "command": [
+    "node",
+    "tests/extension/verify-native-context-guard.mjs",
+    "tests/extension/evidence/scanner-v04-native-context-cancel-notice-wait-failed-evidence.json"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'INTERRUPTED'\n- 'PARTIAL'\n\n    at verifyCancellation (file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:319:10)\n    at verifyNativeContextGuard (file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:61:42)\n    at file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:398:7 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 'INTERRUPTED',\n  expected: 'PARTIAL',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n"
+}

@@ -1,0 +1,156 @@
+{
+  "scope": "One instrumented native 2x2 CSS-pixel video candidate over a five-second low-contrast GPU RGB workload, at desktop and compact geometry on one machine. Not natural-video or cross-machine validation.",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "acceptance": "NATIVE_DENSE_WASM_FIXTURE_PASSED",
+  "jobId": "c749bfce-a10e-46a5-886c-d674318c8ae1",
+  "jobState": "PARTIAL",
+  "instrumentation": "Temporary copied extension samples four corner RGB values on first/every29th submitted frame, at most120 samples, adding periodic readback overhead. No images retained. Production dist unchanged; timings include fixture instrumentation.",
+  "measurements": [
+    {
+      "scenario": "accordion-2",
+      "status": "NEEDS_REVIEW",
+      "frames": 306,
+      "fps": 59.99685263087782,
+      "maximumGapMs": 18.100000381469727,
+      "interrupted": false,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "worker": {
+        "measuredFrames": 306,
+        "meanMs": 14.392483667610518,
+        "maxMs": 25.5,
+        "framesOver16_7Ms": 26,
+        "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+        "conversionMeanMs": 3.935620928122327,
+        "analysisMeanMs": 10.450653581058278,
+        "conversionMethods": [
+          "VIDEOFRAME_COPY_RGBA"
+        ],
+        "analysisBackend": {
+          "backend": "WASM_DENSE",
+          "selectionReason": "READY",
+          "denseFrames": 301,
+          "inputCopiedBytes": 0,
+          "inputCopyMs": 0.20000076293945312,
+          "kernelMs": 2682.600015640259,
+          "wasmMemoryBytes": 160759808,
+          "migratedStateBytes": 152536336,
+          "extraStateBytes": 8223472,
+          "engineStateBytes": 194358672,
+          "embeddedKernelBytes": 2239
+        },
+        "decoded": {
+          "codedWidth": 1800,
+          "codedHeight": 1126,
+          "displayWidth": 1800,
+          "displayHeight": 1126,
+          "visibleRect": {
+            "x": 0,
+            "y": 0,
+            "width": 1800,
+            "height": 1126
+          },
+          "format": "I420",
+          "primaries": "bt709",
+          "transfer": "bt709",
+          "matrix": "bt709"
+        },
+        "track": {
+          "width": 1800,
+          "height": 1126,
+          "frameRate": 60,
+          "resizeMode": "none"
+        }
+      },
+      "limitations": [
+        "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+        "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+        "Candidate start/end times are relative to the first analyzed decoded frame, not the scenario start. Leading capture delay is reported separately; source and wall-clock timestamps are not interchangeable.",
+        "MEDIA_REPLAY_NOT_REPRODUCIBLE"
+      ],
+      "tinyCandidateObserved": true,
+      "videoSourceCandidateRetained": true,
+      "referenceBasis": "W3C_CSS_REFERENCE",
+      "capturedBackgroundProbes": 10,
+      "distinctCapturedBackgroundSamples": 10,
+      "adequateCapture": true
+    },
+    {
+      "scenario": "compact-accordion",
+      "status": "NEEDS_REVIEW",
+      "frames": 307,
+      "fps": 59.79131657911519,
+      "maximumGapMs": 33.39999961853027,
+      "interrupted": false,
+      "sourceWidth": 1200,
+      "sourceHeight": 1126,
+      "worker": {
+        "measuredFrames": 307,
+        "meanMs": 10.268403910658646,
+        "maxMs": 18.600000381469727,
+        "framesOver16_7Ms": 2,
+        "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+        "conversionMeanMs": 3.296742700210223,
+        "analysisMeanMs": 6.961563483123283,
+        "conversionMethods": [
+          "VIDEOFRAME_COPY_RGBA"
+        ],
+        "analysisBackend": {
+          "backend": "WASM_DENSE",
+          "selectionReason": "READY",
+          "denseFrames": 300,
+          "inputCopiedBytes": 0,
+          "inputCopyMs": 0,
+          "kernelMs": 1768.8000164031982,
+          "wasmMemoryBytes": 107347968,
+          "migratedStateBytes": 101866336,
+          "extraStateBytes": 5481632,
+          "engineStateBytes": 135446857,
+          "embeddedKernelBytes": 2239
+        },
+        "decoded": {
+          "codedWidth": 1200,
+          "codedHeight": 1126,
+          "displayWidth": 1200,
+          "displayHeight": 1126,
+          "visibleRect": {
+            "x": 0,
+            "y": 0,
+            "width": 1200,
+            "height": 1126
+          },
+          "format": "I420",
+          "primaries": "bt709",
+          "transfer": "bt709",
+          "matrix": "bt709"
+        },
+        "track": {
+          "width": 1200,
+          "height": 1126,
+          "frameRate": 60,
+          "resizeMode": "none"
+        }
+      },
+      "limitations": [
+        "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+        "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+        "Candidate start/end times are relative to the first analyzed decoded frame, not the scenario start. Leading capture delay is reported separately; source and wall-clock timestamps are not interchangeable.",
+        "MEDIA_REPLAY_NOT_REPRODUCIBLE"
+      ],
+      "tinyCandidateObserved": true,
+      "videoSourceCandidateRetained": true,
+      "referenceBasis": "W3C_CSS_REFERENCE",
+      "capturedBackgroundProbes": 9,
+      "distinctCapturedBackgroundSamples": 9,
+      "adequateCapture": true
+    }
+  ],
+  "matchingCompactPresentations": 21,
+  "compactProducer": {
+    "draws": 300,
+    "fps": 60.00521608103181,
+    "maxGapMs": 17.7001953125,
+    "scope": "Final compact document only; main-thread draw submission, not proof of display or capture latency."
+  },
+  "bothCaptureProfilesAdequate": true
+}

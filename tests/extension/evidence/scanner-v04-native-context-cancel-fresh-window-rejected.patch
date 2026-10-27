@@ -1,0 +1,481 @@
+--- a/apps/chrome-extension/src/viewport-workspace.ts
++++ b/apps/chrome-extension/src/viewport-workspace.ts
+@@ -10,6 +10,9 @@
+   /** Measured before this job attached its debugger, at these exact original
+    * window bounds. Used only after confirmed terminal debugger release. */
+   detachedViewport?: PageInventory['viewport'];
++  /** A fresh post-detach window was already attempted. Persisted so restart
++   * recovery can never turn a failed layout restore into a window-create loop. */
++  detachedWindowRecreated?: true;
+   originalWindow: { width: number; height: number; left: number; top: number };
+ }
+ export interface ViewportMoveIntent {
+@@ -245,6 +248,63 @@
+   });
+ }
+ 
++interface DetachedWorkspaceRecovery {
++  /** Confirm this job still owns cleanup and no capture/debugger is attached. */
++  guard(): Promise<unknown>;
++  /** Revoke the old automatic lease and persist the ORIGINAL manual location
++   * atomically, before Chrome can move the tab into an as-yet unknown window. */
++  rememberIntent(intent: ViewportMoveIntent): Promise<void>;
++  /** Persist the new window ID before any other read/guard can fail. */
++  remember(workspace: ViewportWorkspace): Promise<void>;
++}
++
++async function recreateDetachedWorkspace(options: {
++  workspace: ViewportWorkspace;
++  driver: WorkspaceDriver;
++  recovery: DetachedWorkspaceRecovery;
++  remember(workspace: ViewportWorkspace): Promise<void>;
++}): Promise<ViewportWorkspace> {
++  const { workspace, driver, recovery } = options;
++  const guard = async () => {
++    await recovery.guard();
++    await assertViewportWorkspace(workspace, driver);
++    const tab = await driver.tab(workspace.tabId);
++    if (tab.pinned || tab.groupId >= 0)
++      throw new Error('VIEWPORT_WORKSPACE_ORGANIZATION_CHANGED');
++  };
++  await guard();
++  await recovery.rememberIntent({
++    tabId: workspace.tabId,
++    originalWindowId: workspace.originalWindowId,
++    originalIndex: workspace.originalIndex,
++  });
++  await guard();
++  // Reparent the same document into a freshly initialized, unfocused browser
++  // window. No reload, frame fabrication, focus change or chrome-height guess.
++  const window = await driver.create(workspace.tabId, workspace.originalWindow);
++  if (window.id === undefined)
++    throw new Error('VIEWPORT_WORKSPACE_WINDOW_UNAVAILABLE');
++  const replacement: ViewportWorkspace = {
++    ...workspace,
++    windowId: window.id,
++    detachedWindowRecreated: true,
++  };
++  // A worker death between create() and this write leaves only manual intent.
++  // The caller adopts the ID synchronously before the persistence await, so a
++  // failed write still permits safe in-process return of the actual moved tab.
++  await options.remember(replacement);
++  await recovery.guard();
++  await assertViewportWorkspace(replacement, driver);
++  const reached = await driver.window(replacement.windowId);
++  if (
++    (['width', 'height', 'left', 'top'] as const).some(
++      (key) => reached[key] !== replacement.originalWindow[key],
++    )
++  )
++    throw new Error('VIEWPORT_RECREATED_WINDOW_BOUNDS_UNCONFIRMED');
++  return replacement;
++}
++
+ /** Restore while the tab is still active in its unfocused workspace, then move
+  * it back as an inactive tab. Never activate it in the foreground to fix layout. */
+ export async function restoreViewportWorkspace(options: {
+@@ -255,9 +315,12 @@
+   /** Release the job-owned debugger while the tab can still recompute layout.
+    * Normal between-route restoration deliberately leaves this absent. */
+   releaseDebugger?(): Promise<void>;
++  /** One terminal recovery attempt after confirmed detach and stale actual
++   * CSS. Normal between-route restoration does not provide this capability. */
++  recreateAfterDetach?: DetachedWorkspaceRecovery;
+ }): Promise<void> {
+   const driver = options.driver ?? browser;
+-  const workspace = options.workspace;
++  let workspace = options.workspace;
+   const tab = await driver.tab(workspace.tabId);
+   if (tab.windowId !== workspace.windowId)
+     throw new Error('VIEWPORT_WORKSPACE_TAB_MOVED');
+@@ -271,6 +334,7 @@
+   if (!foreground || foreground.id === workspace.tabId)
+     throw new Error('VIEWPORT_WORKSPACE_RETURN_TARGET_UNAVAILABLE');
+   let failure: unknown;
++  let debuggerReleased = false;
+   let expected: PageInventory['viewport'] | undefined =
+     workspace.originalViewport;
+   try {
+@@ -279,6 +343,7 @@
+     if (options.releaseDebugger) {
+       try {
+         await options.releaseDebugger();
++        debuggerReleased = true;
+         expected = workspace.detachedViewport;
+         if (!expected)
+           failure = new Error('VIEWPORT_PRE_DEBUGGER_GEOMETRY_UNAVAILABLE');
+@@ -292,16 +357,45 @@
+       await assertViewportWorkspace(workspace, driver);
+     }
+     await driver.resize(workspace.windowId, workspace.originalWindow);
+-    await waitForStableViewport({
+-      read: options.read,
+-      wait: options.wait,
+-      guard: () => assertViewportWorkspace(workspace, driver),
+-      expected,
+-    });
++    const settle = () =>
++      waitForStableViewport({
++        read: options.read,
++        wait: options.wait,
++        guard: async () => {
++          if (debuggerReleased) await options.recreateAfterDetach?.guard();
++          await assertViewportWorkspace(workspace, driver);
++        },
++        expected,
++      });
++    try {
++      await settle();
++    } catch (error) {
++      if (
++        !debuggerReleased ||
++        failure ||
++        !expected ||
++        !options.recreateAfterDetach ||
++        workspace.detachedWindowRecreated ||
++        !(error instanceof Error) ||
++        !error.message.startsWith('VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED:')
++      )
++        throw error;
++      await recreateDetachedWorkspace({
++        workspace,
++        driver,
++        recovery: options.recreateAfterDetach,
++        remember: async (replacement) => {
++          workspace = replacement;
++          await options.recreateAfterDetach!.remember(replacement);
++        },
++      });
++      await settle();
++    }
+   } catch (error) {
+     failure ??= error;
+   }
+   // Original user-owned window dimensions are never overwritten during cleanup.
++  if (debuggerReleased) await options.recreateAfterDetach?.guard();
+   const current = await driver.tab(workspace.tabId);
+   if (current.windowId !== workspace.windowId)
+     throw new Error('VIEWPORT_WORKSPACE_TAB_MOVED');
+--- a/apps/chrome-extension/src/background.ts
++++ b/apps/chrome-extension/src/background.ts
+@@ -421,8 +421,10 @@
+ }
+ 
+ async function restoreWorkspace(id: string, releaseDebugger = false) {
+-  const workspace = viewportWorkspaces.get(id);
+-  if (!workspace) return;
++  const ownedWorkspace = viewportWorkspaces.get(id);
++  if (!ownedWorkspace) return;
++  let workspace = ownedWorkspace;
++  let releasedGeneration: string | undefined;
+   // Guard checks must not prevent terminal cleanup, including an explicit stop.
+   viewportWorkspaces.delete(id);
+   try {
+@@ -443,9 +445,60 @@
+       ...(releaseDebugger
+         ? {
+             releaseDebugger: async () => {
++              const job = await getJob(id);
++              if (!job) throw new Error('DEBUGGER_RESTORE_OWNERSHIP_CHANGED');
+               const session = pointerSessions.get(id);
+-              if (session) await releasePointerOwner(id, session);
+-              else await detachPointerSessionAndConfirm(workspace.tabId);
++              if (session) {
++                if (session.generation !== job.generation)
++                  throw new Error('DEBUGGER_RESTORE_OWNERSHIP_CHANGED');
++                await releasePointerOwner(id, session);
++              } else await detachPointerSessionAndConfirm(workspace.tabId);
++              releasedGeneration = job.generation;
++            },
++            recreateAfterDetach: {
++              guard: async () => {
++                if (
++                  !releasedGeneration ||
++                  (await getJob(id))?.generation !== releasedGeneration
++                )
++                  throw new Error('DEBUGGER_RESTORE_OWNERSHIP_CHANGED');
++                const [captures, targets] = await Promise.all([
++                  chrome.tabCapture.getCapturedTabs(),
++                  chrome.debugger.getTargets(),
++                ]);
++                if (
++                  captures.some(
++                    (value) =>
++                      value.tabId === workspace.tabId &&
++                      ['active', 'pending'].includes(value.status),
++                  )
++                )
++                  throw new Error('CAPTURE_SOURCE_RELEASE_UNCONFIRMED');
++                if (
++                  targets.some(
++                    (value) =>
++                      value.tabId === workspace.tabId && value.attached,
++                  )
++                )
++                  throw new Error('DEBUGGER_RELEASE_UNCONFIRMED');
++              },
++              rememberIntent: async (intent: ViewportMoveIntent) => {
++                // Atomically revoke stale automatic authority before the tab
++                // can move to a not-yet-known replacement window. A crash in
++                // that gap retains only the original manual return location.
++                await chrome.storage.session.set({
++                  [workspaceKey(id)]: null,
++                  [workspaceIntentKey(id)]: intent,
++                });
++              },
++              remember: async (replacement: ViewportWorkspace) => {
++                // Adopt before await so finally cleans up the actual window
++                // even if persisting the replacement lease fails.
++                workspace = replacement;
++                await chrome.storage.session.set({
++                  [workspaceKey(id)]: replacement,
++                });
++              },
+             },
+           }
+         : {}),
+--- a/tests/extension/viewport-workspace.test.ts
++++ b/tests/extension/viewport-workspace.test.ts
+@@ -421,3 +421,242 @@
+     expect(f.target.windowId).toBe(2);
+   });
+ });
++
++describe('one fresh workspace after confirmed debugger release', () => {
++  async function setup() {
++    const f = fixture();
++    const workspace = await createViewportWorkspace(f.options);
++    workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
++    const storage: Record<string, unknown> = {
++      lease: structuredClone(workspace),
++    };
++    let released = false;
++    let latest = workspace;
++    f.driver.create = vi.fn(async (tabId, bounds) => {
++      expect(released).toBe(true);
++      expect(storage.lease).toBe(null);
++      expect(storage.intent).toEqual({
++        tabId: 11,
++        originalWindowId: 1,
++        originalIndex: 2,
++      });
++      expect(tabId).toBe(11);
++      expect(bounds).toEqual(workspace.originalWindow);
++      f.target.windowId = 3;
++      f.target.active = true;
++      f.target.index = 0;
++      const win = { ...f.original, ...bounds, id: 3, focused: false };
++      f.windows.set(3, win);
++      f.setGeometry({ width: 900, height: 507, dpr: 2 });
++      return win;
++    });
++    const recovery = {
++      guard: vi.fn(async () => {
++        expect(released).toBe(true);
++      }),
++      rememberIntent: vi.fn(async (intent) => {
++        expect(f.target.windowId).toBe(2);
++        Object.assign(storage, { lease: null, intent });
++      }),
++      remember: vi.fn(async (replacement: ViewportWorkspace) => {
++        latest = replacement;
++        expect(f.target.windowId).toBe(3);
++        expect(replacement.detachedWindowRecreated).toBe(true);
++        expect(replacement.originalWindowId).toBe(1);
++        expect(replacement.originalViewport).toEqual(
++          workspace.originalViewport,
++        );
++        expect(replacement.detachedViewport).toEqual(
++          workspace.detachedViewport,
++        );
++        storage.lease = structuredClone(replacement);
++      }),
++    };
++    return {
++      f,
++      workspace,
++      storage,
++      recovery,
++      get latest() {
++        return latest;
++      },
++      options: {
++        workspace,
++        ...f.options,
++        releaseDebugger: async () => {
++          released = true;
++        },
++        recreateAfterDetach: recovery,
++      },
++    };
++  }
++
++  it('persists original intent before reparenting and the new lease before reading actual CSS, then returns inactive', async () => {
++    const s = await setup();
++    const read = s.f.options.read;
++    s.options.read = vi.fn(async () => {
++      if (s.f.target.windowId === 3)
++        expect(s.storage.lease).toMatchObject({
++          windowId: 3,
++          detachedWindowRecreated: true,
++        });
++      return read();
++    });
++    s.f.addUserTab();
++    await restoreViewportWorkspace(s.options);
++    expect(s.f.driver.create).toHaveBeenCalledOnce();
++    expect(s.recovery.remember).toHaveBeenCalledOnce();
++    expect(s.latest).toMatchObject({
++      windowId: 3,
++      originalWindowId: 1,
++      originalIndex: 2,
++    });
++    expect(s.f.target).toMatchObject({ windowId: 1, index: 2, active: false });
++    expect(s.f.windows.get(2)).toBeDefined(); // No windows.remove can delete user tabs.
++    expect(s.f.original).toMatchObject({
++      width: 900,
++      height: 650,
++      focused: true,
++    });
++    expect(await s.options.read()).toEqual(s.workspace.detachedViewport);
++  });
++
++  it('retains only original manual intent if native creation fails before a new ID is known', async () => {
++    const s = await setup();
++    s.f.driver.create = vi.fn(async () => {
++      throw new Error('CREATE_FAILED');
++    });
++    await expect(restoreViewportWorkspace(s.options)).rejects.toThrow(
++      'CREATE_FAILED',
++    );
++    expect(s.storage).toEqual({
++      lease: null,
++      intent: { tabId: 11, originalWindowId: 1, originalIndex: 2 },
++    });
++    expect(s.recovery.remember).not.toHaveBeenCalled();
++    expect(s.f.target).toMatchObject({ windowId: 1, active: false });
++  });
++
++  it('adopts the real new window even if persisting its lease fails, and safely returns the moved tab', async () => {
++    const s = await setup();
++    s.recovery.remember.mockImplementation(async () => {
++      throw new Error('STORAGE_FAILED');
++    });
++    await expect(restoreViewportWorkspace(s.options)).rejects.toThrow(
++      'STORAGE_FAILED',
++    );
++    expect(s.f.driver.create).toHaveBeenCalledOnce();
++    expect(s.storage.lease).toBe(null);
++    expect(s.f.target).toMatchObject({ windowId: 1, index: 2, active: false });
++  });
++
++  it('leaves the new workspace alone if its user or a new capture/debugger takes over', async () => {
++    for (const takeover of ['focus', 'producer'] as const) {
++      const s = await setup();
++      const remember = s.recovery.remember.getMockImplementation()!;
++      s.recovery.remember.mockImplementation(async (workspace) => {
++        await remember(workspace);
++        if (takeover === 'focus') s.f.windows.get(3)!.focused = true;
++        else
++          s.recovery.guard.mockRejectedValue(
++            new Error('CAPTURE_SOURCE_RELEASE_UNCONFIRMED'),
++          );
++      });
++      await expect(restoreViewportWorkspace(s.options)).rejects.toThrow(
++        takeover === 'focus'
++          ? 'VIEWPORT_WORKSPACE_BECAME_USER_WINDOW'
++          : 'CAPTURE_SOURCE_RELEASE_UNCONFIRMED',
++      );
++      expect(s.f.driver.move).not.toHaveBeenCalled();
++      expect(s.f.target.windowId).toBe(3);
++      expect(s.storage.lease).toMatchObject({
++        windowId: 3,
++        detachedWindowRecreated: true,
++      });
++    }
++  });
++
++  it('does not create after an intent-write race changes the foreground cover', async () => {
++    const s = await setup();
++    const rememberIntent = s.recovery.rememberIntent.getMockImplementation()!;
++    s.recovery.rememberIntent.mockImplementation(async (intent) => {
++      await rememberIntent(intent);
++      s.f.original.height = 700;
++    });
++    await expect(restoreViewportWorkspace(s.options)).rejects.toThrow(
++      'VIEWPORT_WORKSPACE_COVER_CHANGED',
++    );
++    expect(s.f.driver.create).not.toHaveBeenCalled();
++    expect(s.f.original.height).toBe(700);
++    expect(s.f.target).toMatchObject({ windowId: 1, active: false });
++  });
++
++  it.each(['focus', 'tab-location'] as const)(
++    'rechecks actual ownership after the asynchronous final release guard: %s',
++    async (takeover) => {
++      const s = await setup();
++      let restoredReads = 0;
++      const read = s.options.read;
++      s.options.read = vi.fn(async () => {
++        if (s.f.target.windowId === 3) restoredReads++;
++        return read();
++      });
++      s.recovery.guard.mockImplementation(async () => {
++        if (restoredReads < 3) return;
++        if (takeover === 'focus') s.f.windows.get(3)!.focused = true;
++        else s.f.target.windowId = 4;
++      });
++      await expect(restoreViewportWorkspace(s.options)).rejects.toThrow(
++        takeover === 'focus'
++          ? 'VIEWPORT_WORKSPACE_BECAME_USER_WINDOW'
++          : 'VIEWPORT_WORKSPACE_TAB_MOVED',
++      );
++      expect(s.f.driver.move).not.toHaveBeenCalled();
++      expect(s.f.target.windowId).toBe(takeover === 'focus' ? 3 : 4);
++    },
++  );
++
++  it('keeps stale CSS as failure and persists a one-shot flag that prevents another window after restart', async () => {
++    const s = await setup();
++    const create = s.f.driver.create;
++    s.f.driver.create = vi.fn(async (...args) => {
++      const win = await create(...args);
++      s.f.setGeometry({ width: 900, height: 450, dpr: 2 });
++      return win;
++    });
++    await expect(restoreViewportWorkspace(s.options)).rejects.toThrow(
++      'VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED',
++    );
++    expect(s.f.driver.create).toHaveBeenCalledOnce();
++    const persisted = structuredClone(s.storage.lease) as ViewportWorkspace;
++    s.f.target.windowId = 3;
++    s.f.target.active = true;
++    s.f.target.index = 0;
++    await expect(
++      restoreViewportWorkspace({ ...s.options, workspace: persisted }),
++    ).rejects.toThrow('VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED');
++    expect(s.f.driver.create).toHaveBeenCalledOnce();
++    expect(s.f.target).toMatchObject({ windowId: 1, active: false });
++  });
++
++  it('never grants fresh-window authority to normal between-route restoration or a failed detach', async () => {
++    const s = await setup();
++    await restoreViewportWorkspace({
++      ...s.options,
++      releaseDebugger: undefined,
++    });
++    expect(s.f.driver.create).not.toHaveBeenCalled();
++    expect(s.recovery.guard).not.toHaveBeenCalled();
++    const other = await setup();
++    await expect(
++      restoreViewportWorkspace({
++        ...other.options,
++        releaseDebugger: async () => {
++          throw new Error('DEBUGGER_RELEASE_UNCONFIRMED');
++        },
++      }),
++    ).rejects.toThrow('DEBUGGER_RELEASE_UNCONFIRMED');
++    expect(other.f.driver.create).not.toHaveBeenCalled();
++    expect(other.recovery.rememberIntent).not.toHaveBeenCalled();
++  });
++});

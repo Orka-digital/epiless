@@ -1,0 +1,35 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "6881488df5376f887ec4f3f9a7f36283134ce74b929d6c790bd6558afb7c48ea"
+  },
+  "fixture": "static DOM menu/tab/carousel/consent, muted grey canvas-stream video, pushState links, redirect and lazy growth; no flashing/audio",
+  "headless": false,
+  "requestCounts": {
+    "/": 4,
+    "/favicon.ico": 9,
+    "/lazy-observed": 1,
+    "/reached": 2,
+    "/redirect": 1,
+    "/redirect-again": 1,
+    "/robots.txt": 1,
+    "/sitemap-only": 1,
+    "/sitemap.xml": 1
+  },
+  "sourceBoundary": "Final local P0 extension build, including SPA discovery-source restoration, bounded lazy-link scroll restoration and redirect alias deduplication; configured publication origin http://localhost:4387.",
+  "observed": {
+    "canonicalRoutes": 5,
+    "scenarios": 22,
+    "analysedFrames": 544,
+    "realToolbarStart": true,
+    "dashboardForeground": true,
+    "noLogoutRequest": true,
+    "spaNavigatedWithoutDocumentRequest": true,
+    "lazyLinkActuallyRequested": true,
+    "redirectAliasesRequestedOnceEach": true,
+    "hashRouteFragmentAbsentFromReport": true
+  }
+}

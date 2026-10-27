@@ -1,0 +1,5566 @@
+{
+  "execution": {
+    "nodeBundleSha256": "e659d577c279204363e3949e26bae6ff0e8ee195db5bf5a4756cf8bb090766bc",
+    "contentBundleSha256": "bab8932b773ce8674f733423f52a3c68fc06357a019279967b5086e7ba40ab01",
+    "fixtureScriptSha256": "5851c134e27cf8a7fb1929438295d6aeb38c57e243fd0931520fd155759426d3"
+  },
+  "scope": "Actual browser document, animation and colour sampling; explicitly synthetic candidate/quality and source boundary clock, no tabCapture or native detector proof",
+  "early": {
+    "comparison": {
+      "status": "INCOMPARABLE",
+      "reasons": [
+        "DOCUMENT_PHASE_INTERVAL_NOT_COVERED"
+      ],
+      "baselineJobId": "baseline",
+      "verificationJobId": "repeated",
+      "matchingFindingIds": []
+    },
+    "phasePlan": {
+      "version": 1,
+      "status": "REPLAYABLE",
+      "reasons": [],
+      "mode": "DOCUMENT",
+      "startDocumentMs": 3009,
+      "endDocumentMs": 5069.60000038147,
+      "animations": [
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+          ],
+          "kind": "CSS_ANIMATION",
+          "ordinal": 0,
+          "origin": "DOCUMENT",
+          "first": {
+            "clock": {
+              "documentMs": 3011.1000003814697,
+              "timelineMs": 3002.6,
+              "epochMs": 1793129866959.3
+            },
+            "currentTimeMs": 2966.492000727356,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          },
+          "last": {
+            "clock": {
+              "documentMs": 5069.60000038147,
+              "timelineMs": 5052.6,
+              "epochMs": 1793129869017.8
+            },
+            "currentTimeMs": 5000,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "finished",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          }
+        }
+      ]
+    }
+  },
+  "aligned": {
+    "comparison": {
+      "status": "REOBSERVED",
+      "reasons": [],
+      "baselineJobId": "baseline",
+      "verificationJobId": "repeated",
+      "matchingFindingIds": [
+        "finding"
+      ]
+    },
+    "phasePlan": {
+      "version": 1,
+      "status": "REPLAYABLE",
+      "reasons": [],
+      "mode": "DOCUMENT",
+      "startDocumentMs": 3009,
+      "endDocumentMs": 5069.60000038147,
+      "animations": [
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+          ],
+          "kind": "CSS_ANIMATION",
+          "ordinal": 0,
+          "origin": "DOCUMENT",
+          "first": {
+            "clock": {
+              "documentMs": 3011.1000003814697,
+              "timelineMs": 3002.6,
+              "epochMs": 1793129866959.3
+            },
+            "currentTimeMs": 2966.492000727356,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          },
+          "last": {
+            "clock": {
+              "documentMs": 5069.60000038147,
+              "timelineMs": 5052.6,
+              "epochMs": 1793129869017.8
+            },
+            "currentTimeMs": 5000,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "finished",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          }
+        }
+      ]
+    }
+  },
+  "fixed": {
+    "comparison": {
+      "status": "NOT_OBSERVED",
+      "reasons": [],
+      "baselineJobId": "baseline",
+      "verificationJobId": "repeated",
+      "matchingFindingIds": []
+    },
+    "phasePlan": {
+      "version": 1,
+      "status": "REPLAYABLE",
+      "reasons": [],
+      "mode": "DOCUMENT",
+      "startDocumentMs": 3009,
+      "endDocumentMs": 5069.60000038147,
+      "animations": [
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+          ],
+          "kind": "CSS_ANIMATION",
+          "ordinal": 0,
+          "origin": "DOCUMENT",
+          "first": {
+            "clock": {
+              "documentMs": 3011.1000003814697,
+              "timelineMs": 3002.6,
+              "epochMs": 1793129866959.3
+            },
+            "currentTimeMs": 2966.492000727356,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          },
+          "last": {
+            "clock": {
+              "documentMs": 5069.60000038147,
+              "timelineMs": 5052.6,
+              "epochMs": 1793129869017.8
+            },
+            "currentTimeMs": 5000,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "finished",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          }
+        }
+      ]
+    }
+  },
+  "removed": {
+    "comparison": {
+      "status": "NOT_OBSERVED",
+      "reasons": [],
+      "baselineJobId": "baseline",
+      "verificationJobId": "repeated",
+      "matchingFindingIds": []
+    },
+    "phasePlan": {
+      "version": 1,
+      "status": "REPLAYABLE",
+      "reasons": [],
+      "mode": "DOCUMENT",
+      "startDocumentMs": 3009,
+      "endDocumentMs": 5069.60000038147,
+      "animations": [
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+          ],
+          "kind": "CSS_ANIMATION",
+          "ordinal": 0,
+          "origin": "DOCUMENT",
+          "first": {
+            "clock": {
+              "documentMs": 3011.1000003814697,
+              "timelineMs": 3002.6,
+              "epochMs": 1793129866959.3
+            },
+            "currentTimeMs": 2966.492000727356,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          },
+          "last": {
+            "clock": {
+              "documentMs": 5069.60000038147,
+              "timelineMs": 5052.6,
+              "epochMs": 1793129869017.8
+            },
+            "currentTimeMs": 5000,
+            "startTimeMs": 36.10799927264452,
+            "playbackRate": 1,
+            "playState": "finished",
+            "durationMs": 200,
+            "delayMs": 4000,
+            "iterations": 5
+          }
+        }
+      ]
+    }
+  },
+  "triggerFixed": {
+    "comparison": {
+      "status": "NOT_OBSERVED",
+      "reasons": [],
+      "baselineJobId": "baseline",
+      "verificationJobId": "repeated",
+      "matchingFindingIds": []
+    },
+    "phasePlan": {
+      "version": 1,
+      "status": "REPLAYABLE",
+      "reasons": [],
+      "mode": "TRIGGER",
+      "startDocumentMs": 2006.5,
+      "endDocumentMs": 3411.8999996185303,
+      "triggerDurationMs": 1405.0999994277954,
+      "animations": [
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+          ],
+          "kind": "CSS_ANIMATION",
+          "ordinal": 0,
+          "origin": "TRIGGER",
+          "first": {
+            "clock": {
+              "documentMs": 2039,
+              "timelineMs": 2037.1,
+              "epochMs": 1793129888506.3
+            },
+            "currentTimeMs": 16.69099989384426,
+            "startTimeMs": 2020.4090001061559,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 200,
+            "delayMs": 0,
+            "iterations": 5
+          },
+          "last": {
+            "clock": {
+              "documentMs": 3411.8999996185303,
+              "timelineMs": 3403.7,
+              "epochMs": 1793129889879.2
+            },
+            "currentTimeMs": 1000,
+            "startTimeMs": 2020.4090001061559,
+            "playbackRate": 1,
+            "playState": "finished",
+            "durationMs": 200,
+            "delayMs": 0,
+            "iterations": 5
+          }
+        }
+      ]
+    }
+  },
+  "mixed": {
+    "comparison": {
+      "status": "REOBSERVED",
+      "reasons": [],
+      "baselineJobId": "baseline",
+      "verificationJobId": "repeated",
+      "matchingFindingIds": [
+        "finding"
+      ]
+    },
+    "phasePlan": {
+      "version": 1,
+      "status": "REPLAYABLE",
+      "reasons": [],
+      "mode": "DOCUMENT",
+      "startDocumentMs": 13.5,
+      "endDocumentMs": 1417.1999998092651,
+      "animations": [
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+          ],
+          "kind": "CSS_ANIMATION",
+          "ordinal": 0,
+          "origin": "DOCUMENT",
+          "first": {
+            "clock": {
+              "documentMs": 21,
+              "timelineMs": 20,
+              "epochMs": 1793129891533.1
+            },
+            "currentTimeMs": 16.65299989283085,
+            "startTimeMs": 3.3470001071691513,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 10000,
+            "delayMs": 0,
+            "iterations": null
+          },
+          "last": {
+            "clock": {
+              "documentMs": 1417.1999998092651,
+              "timelineMs": 1403.2,
+              "epochMs": 1793129892929.3
+            },
+            "currentTimeMs": 1399.852999892831,
+            "startTimeMs": 3.3470001071691513,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 10000,
+            "delayMs": 0,
+            "iterations": null
+          }
+        },
+        {
+          "selectorPath": [
+            "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+          ],
+          "kind": "CSS_ANIMATION",
+          "ordinal": 0,
+          "origin": "TRIGGER",
+          "first": {
+            "clock": {
+              "documentMs": 38.29999923706055,
+              "timelineMs": 36.6,
+              "epochMs": 1793129891550.4001
+            },
+            "currentTimeMs": 16.607000267505647,
+            "startTimeMs": 19.992999732494354,
+            "playbackRate": 1,
+            "playState": "running",
+            "durationMs": 200,
+            "delayMs": 0,
+            "iterations": 5
+          },
+          "last": {
+            "clock": {
+              "documentMs": 1417.1999998092651,
+              "timelineMs": 1403.2,
+              "epochMs": 1793129892929.3
+            },
+            "currentTimeMs": 1000,
+            "startTimeMs": 19.992999732494354,
+            "playbackRate": 1,
+            "playState": "finished",
+            "durationMs": 200,
+            "delayMs": 0,
+            "iterations": 5
+          }
+        }
+      ]
+    }
+  },
+  "inputs": {
+    "unresolved": {
+      "evidence": {
+        "version": 1,
+        "complete": false,
+        "reasons": [
+          "ANIMATION_PHASE_UNRESOLVED"
+        ],
+        "start": {
+          "documentMs": 16.5,
+          "timelineMs": 4.1,
+          "epochMs": 1793129892954.3
+        },
+        "end": {
+          "documentMs": 219.39999961853027,
+          "timelineMs": 204.1,
+          "epochMs": 1793129893157.2
+        },
+        "animations": []
+      },
+      "colors": [
+        {
+          "documentMs": 16.699999809265137,
+          "epochMs": 1793129892954.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 21.300000190734863,
+          "epochMs": 1793129892959.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 38.30000019073486,
+          "epochMs": 1793129892976.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 54.39999961853027,
+          "epochMs": 1793129892992.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 72,
+          "epochMs": 1793129893009.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 88.30000019073486,
+          "epochMs": 1793129893026.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 105.30000019073486,
+          "epochMs": 1793129893043.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 122.10000038146973,
+          "epochMs": 1793129893059.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 138.30000019073486,
+          "epochMs": 1793129893076.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 154.39999961853027,
+          "epochMs": 1793129893092.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 172.69999980926514,
+          "epochMs": 1793129893110.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 189.5,
+          "epochMs": 1793129893127.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 204.39999961853027,
+          "epochMs": 1793129893142.2,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "baseline": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 3009,
+          "timelineMs": 3002.6,
+          "epochMs": 1793129866958.5
+        },
+        "end": {
+          "documentMs": 5069.60000038147,
+          "timelineMs": 5052.6,
+          "epochMs": 1793129869017.8
+        },
+        "animations": [
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "DOCUMENT",
+            "first": {
+              "clock": {
+                "documentMs": 3011.1000003814697,
+                "timelineMs": 3002.6,
+                "epochMs": 1793129866959.3
+              },
+              "currentTimeMs": 2966.492000727356,
+              "startTimeMs": 36.10799927264452,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            },
+            "last": {
+              "clock": {
+                "documentMs": 5069.60000038147,
+                "timelineMs": 5052.6,
+                "epochMs": 1793129869017.8
+              },
+              "currentTimeMs": 5000,
+              "startTimeMs": 36.10799927264452,
+              "playbackRate": 1,
+              "playState": "finished",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            }
+          }
+        ]
+      },
+      "colors": [
+        {
+          "documentMs": 3016.300000190735,
+          "epochMs": 1793129866964.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3021.6000003814697,
+          "epochMs": 1793129866969.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3036.800000190735,
+          "epochMs": 1793129866985,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3054,
+          "epochMs": 1793129867002.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3069.699999809265,
+          "epochMs": 1793129867017.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3088.1000003814697,
+          "epochMs": 1793129867036.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3104.1000003814697,
+          "epochMs": 1793129867052.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3120.1000003814697,
+          "epochMs": 1793129867068.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3137.1000003814697,
+          "epochMs": 1793129867085.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3155.1000003814697,
+          "epochMs": 1793129867103.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3170,
+          "epochMs": 1793129867118.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3188.1000003814697,
+          "epochMs": 1793129867136.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3204.3999996185303,
+          "epochMs": 1793129867152.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3221,
+          "epochMs": 1793129867169.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3238.199999809265,
+          "epochMs": 1793129867186.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3253,
+          "epochMs": 1793129867201.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3271.199999809265,
+          "epochMs": 1793129867219.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3288.300000190735,
+          "epochMs": 1793129867236.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3303.3999996185303,
+          "epochMs": 1793129867251.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3321,
+          "epochMs": 1793129867269.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3337,
+          "epochMs": 1793129867285.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3353.1000003814697,
+          "epochMs": 1793129867301.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3370.3999996185303,
+          "epochMs": 1793129867318.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3386.8999996185303,
+          "epochMs": 1793129867335.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3404,
+          "epochMs": 1793129867352.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3419.8999996185303,
+          "epochMs": 1793129867368.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3438.199999809265,
+          "epochMs": 1793129867386.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3454.8999996185303,
+          "epochMs": 1793129867403.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3471.1000003814697,
+          "epochMs": 1793129867419.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3486.8999996185303,
+          "epochMs": 1793129867435.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3505.199999809265,
+          "epochMs": 1793129867453.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3520.8999996185303,
+          "epochMs": 1793129867469.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3538.300000190735,
+          "epochMs": 1793129867486.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3554,
+          "epochMs": 1793129867502.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3571,
+          "epochMs": 1793129867519.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3586.8999996185303,
+          "epochMs": 1793129867535.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3605,
+          "epochMs": 1793129867553.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3619.699999809265,
+          "epochMs": 1793129867567.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3636.3999996185303,
+          "epochMs": 1793129867584.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3653.8999996185303,
+          "epochMs": 1793129867602.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3670.800000190735,
+          "epochMs": 1793129867619,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3687.8999996185303,
+          "epochMs": 1793129867636.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3703.1000003814697,
+          "epochMs": 1793129867651.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3719.800000190735,
+          "epochMs": 1793129867668,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3736.8999996185303,
+          "epochMs": 1793129867685.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3752.8999996185303,
+          "epochMs": 1793129867701.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3770.8999996185303,
+          "epochMs": 1793129867719.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3787,
+          "epochMs": 1793129867735.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3803.1000003814697,
+          "epochMs": 1793129867751.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3821.5,
+          "epochMs": 1793129867769.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3838,
+          "epochMs": 1793129867786.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3853.8999996185303,
+          "epochMs": 1793129867802.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3871.5,
+          "epochMs": 1793129867819.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3888,
+          "epochMs": 1793129867836.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3903.300000190735,
+          "epochMs": 1793129867851.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3920.3999996185303,
+          "epochMs": 1793129867868.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3937.8999996185303,
+          "epochMs": 1793129867886.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3954.8999996185303,
+          "epochMs": 1793129867903.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3971.5,
+          "epochMs": 1793129867919.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3987.5,
+          "epochMs": 1793129867935.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4003.800000190735,
+          "epochMs": 1793129867952,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4020,
+          "epochMs": 1793129867968.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4037.8999996185303,
+          "epochMs": 1793129867986.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4055.300000190735,
+          "epochMs": 1793129868003.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4071.6000003814697,
+          "epochMs": 1793129868019.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4088,
+          "epochMs": 1793129868036.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4103.10000038147,
+          "epochMs": 1793129868051.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4121.5,
+          "epochMs": 1793129868069.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4138.10000038147,
+          "epochMs": 1793129868086.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4152.89999961853,
+          "epochMs": 1793129868101.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4171.60000038147,
+          "epochMs": 1793129868119.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4188.199999809265,
+          "epochMs": 1793129868136.4,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4205,
+          "epochMs": 1793129868153.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4221.5,
+          "epochMs": 1793129868169.7,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4238.199999809265,
+          "epochMs": 1793129868186.4,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4252.89999961853,
+          "epochMs": 1793129868201.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4271.5,
+          "epochMs": 1793129868219.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4287.89999961853,
+          "epochMs": 1793129868236.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4303.60000038147,
+          "epochMs": 1793129868251.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4319.89999961853,
+          "epochMs": 1793129868268.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4337.89999961853,
+          "epochMs": 1793129868286.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4354.800000190735,
+          "epochMs": 1793129868303,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4371.5,
+          "epochMs": 1793129868319.7,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4386.89999961853,
+          "epochMs": 1793129868335.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4405,
+          "epochMs": 1793129868353.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4420.89999961853,
+          "epochMs": 1793129868369.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4438,
+          "epochMs": 1793129868386.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4454,
+          "epochMs": 1793129868402.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4471.5,
+          "epochMs": 1793129868419.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4488.10000038147,
+          "epochMs": 1793129868436.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4503.5,
+          "epochMs": 1793129868451.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4520.89999961853,
+          "epochMs": 1793129868469.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4538,
+          "epochMs": 1793129868486.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4553.89999961853,
+          "epochMs": 1793129868502.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4570.89999961853,
+          "epochMs": 1793129868519.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4587,
+          "epochMs": 1793129868535.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4605,
+          "epochMs": 1793129868553.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4619.699999809265,
+          "epochMs": 1793129868567.9,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4637.89999961853,
+          "epochMs": 1793129868586.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4654.800000190735,
+          "epochMs": 1793129868603,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4671.39999961853,
+          "epochMs": 1793129868619.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4687,
+          "epochMs": 1793129868635.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4704.60000038147,
+          "epochMs": 1793129868652.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4719.5,
+          "epochMs": 1793129868667.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4736.89999961853,
+          "epochMs": 1793129868685.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4754.199999809265,
+          "epochMs": 1793129868702.4,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4769.800000190735,
+          "epochMs": 1793129868718,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4786.800000190735,
+          "epochMs": 1793129868735,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4804.39999961853,
+          "epochMs": 1793129868752.5999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4820.89999961853,
+          "epochMs": 1793129868769.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4838.199999809265,
+          "epochMs": 1793129868786.4,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4854.699999809265,
+          "epochMs": 1793129868802.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4871.5,
+          "epochMs": 1793129868819.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4887.89999961853,
+          "epochMs": 1793129868836.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4904.89999961853,
+          "epochMs": 1793129868853.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4919.89999961853,
+          "epochMs": 1793129868868.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4937.5,
+          "epochMs": 1793129868885.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4952.89999961853,
+          "epochMs": 1793129868901.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4970.39999961853,
+          "epochMs": 1793129868918.5999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4987.39999961853,
+          "epochMs": 1793129868935.7,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 5005,
+          "epochMs": 1793129868953.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 5019.89999961853,
+          "epochMs": 1793129868968.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 5036.89999961853,
+          "epochMs": 1793129868985.0999,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 5053.89999961853,
+          "epochMs": 1793129869002.0999,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "early": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 20.90000057220459,
+          "timelineMs": 6.1,
+          "epochMs": 1793129869051.8
+        },
+        "end": {
+          "documentMs": 2023.2000007629395,
+          "timelineMs": 2022.7,
+          "epochMs": 1793129871053.9
+        },
+        "animations": [
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "DOCUMENT",
+            "first": {
+              "clock": {
+                "documentMs": 123.5,
+                "timelineMs": 122.8,
+                "epochMs": 1793129869154.2
+              },
+              "currentTimeMs": 116.69000050723554,
+              "startTimeMs": 6.109999492764473,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            },
+            "last": {
+              "clock": {
+                "documentMs": 2023.2000007629395,
+                "timelineMs": 2022.7,
+                "epochMs": 1793129871053.9
+              },
+              "currentTimeMs": 2016.5900005072356,
+              "startTimeMs": 6.109999492764473,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            }
+          }
+        ]
+      },
+      "colors": [
+        {
+          "documentMs": 21.100000381469727,
+          "epochMs": 1793129869051.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 23,
+          "epochMs": 1793129869053.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 40.5,
+          "epochMs": 1793129869071.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 56.30000019073486,
+          "epochMs": 1793129869087,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 73.40000057220459,
+          "epochMs": 1793129869104.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 91.40000057220459,
+          "epochMs": 1793129869122.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 107.30000019073486,
+          "epochMs": 1793129869138,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 123.60000038146973,
+          "epochMs": 1793129869154.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 140.4000005722046,
+          "epochMs": 1793129869171.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 157.5,
+          "epochMs": 1793129869188.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 173.5,
+          "epochMs": 1793129869204.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 191.70000076293945,
+          "epochMs": 1793129869222.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 208.20000076293945,
+          "epochMs": 1793129869239,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 223.60000038146973,
+          "epochMs": 1793129869254.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 241.60000038146973,
+          "epochMs": 1793129869272.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 257.6000003814697,
+          "epochMs": 1793129869288.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 274,
+          "epochMs": 1793129869304.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 291.4000005722046,
+          "epochMs": 1793129869322.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 306.5,
+          "epochMs": 1793129869337.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 324.9000005722046,
+          "epochMs": 1793129869355.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 339.6000003814697,
+          "epochMs": 1793129869370.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 358.20000076293945,
+          "epochMs": 1793129869389,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 374.5,
+          "epochMs": 1793129869405.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 391.5,
+          "epochMs": 1793129869422.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 407.9000005722046,
+          "epochMs": 1793129869438.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 424.6000003814697,
+          "epochMs": 1793129869455.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 440.5,
+          "epochMs": 1793129869471.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 457.6000003814697,
+          "epochMs": 1793129869488.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 474.9000005722046,
+          "epochMs": 1793129869505.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 491.6000003814697,
+          "epochMs": 1793129869522.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 507.6000003814697,
+          "epochMs": 1793129869538.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 523.7000007629395,
+          "epochMs": 1793129869554.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 541.5,
+          "epochMs": 1793129869572.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 556.5,
+          "epochMs": 1793129869587.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 574.7000007629395,
+          "epochMs": 1793129869605.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 591.6000003814697,
+          "epochMs": 1793129869622.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 607.4000005722046,
+          "epochMs": 1793129869638.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 623.6000003814697,
+          "epochMs": 1793129869654.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 639.6000003814697,
+          "epochMs": 1793129869670.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 657.9000005722046,
+          "epochMs": 1793129869688.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 674.5,
+          "epochMs": 1793129869705.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 691.5,
+          "epochMs": 1793129869722.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 706.4000005722046,
+          "epochMs": 1793129869737.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 724.6000003814697,
+          "epochMs": 1793129869755.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 741.6000003814697,
+          "epochMs": 1793129869772.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 757.6000003814697,
+          "epochMs": 1793129869788.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 773.5,
+          "epochMs": 1793129869804.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 791.6000003814697,
+          "epochMs": 1793129869822.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 806.5,
+          "epochMs": 1793129869837.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 825,
+          "epochMs": 1793129869855.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 841.6000003814697,
+          "epochMs": 1793129869872.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 856.5,
+          "epochMs": 1793129869887.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 874.9000005722046,
+          "epochMs": 1793129869905.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 891.5,
+          "epochMs": 1793129869922.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 907.5,
+          "epochMs": 1793129869938.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 923.5,
+          "epochMs": 1793129869954.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 940.5,
+          "epochMs": 1793129869971.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 958.2000007629395,
+          "epochMs": 1793129869988.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 974.9000005722046,
+          "epochMs": 1793129870005.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 989.6000003814697,
+          "epochMs": 1793129870020.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1006.6000003814697,
+          "epochMs": 1793129870037.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1023.5,
+          "epochMs": 1793129870054.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1041.4000005722046,
+          "epochMs": 1793129870072.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1056.3000001907349,
+          "epochMs": 1793129870087,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1073.5,
+          "epochMs": 1793129870104.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1090.5,
+          "epochMs": 1793129870121.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1106.5,
+          "epochMs": 1793129870137.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1123.2000007629395,
+          "epochMs": 1793129870153.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1140.5,
+          "epochMs": 1793129870171.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1156.5,
+          "epochMs": 1793129870187.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1174.6000003814697,
+          "epochMs": 1793129870205.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1190.2000007629395,
+          "epochMs": 1793129870220.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1207.3000001907349,
+          "epochMs": 1793129870238,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1224.4000005722046,
+          "epochMs": 1793129870255.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1240.3000001907349,
+          "epochMs": 1793129870271,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1257.6000003814697,
+          "epochMs": 1793129870288.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1274.9000005722046,
+          "epochMs": 1793129870305.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1290.5,
+          "epochMs": 1793129870321.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1306.7000007629395,
+          "epochMs": 1793129870337.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1323.6000003814697,
+          "epochMs": 1793129870354.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1340.3000001907349,
+          "epochMs": 1793129870371,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1358.2000007629395,
+          "epochMs": 1793129870388.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1373.5,
+          "epochMs": 1793129870404.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1390.5,
+          "epochMs": 1793129870421.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1408.2000007629395,
+          "epochMs": 1793129870438.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1423.4000005722046,
+          "epochMs": 1793129870454.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1441.3000001907349,
+          "epochMs": 1793129870472,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1457.5,
+          "epochMs": 1793129870488.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1474.6000003814697,
+          "epochMs": 1793129870505.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1490.5,
+          "epochMs": 1793129870521.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1508.2000007629395,
+          "epochMs": 1793129870538.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1523.1000003814697,
+          "epochMs": 1793129870553.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1539.7000007629395,
+          "epochMs": 1793129870570.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1558.3000001907349,
+          "epochMs": 1793129870589,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1573.8000001907349,
+          "epochMs": 1793129870604.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1590.6000003814697,
+          "epochMs": 1793129870621.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1606.5,
+          "epochMs": 1793129870637.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1623.7000007629395,
+          "epochMs": 1793129870654.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1641.5,
+          "epochMs": 1793129870672.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1657.3000001907349,
+          "epochMs": 1793129870688,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1673.4000005722046,
+          "epochMs": 1793129870704.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1690.5,
+          "epochMs": 1793129870721.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1707.5,
+          "epochMs": 1793129870738.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1724.9000005722046,
+          "epochMs": 1793129870755.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1741.5,
+          "epochMs": 1793129870772.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1756.4000005722046,
+          "epochMs": 1793129870787.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1774.5,
+          "epochMs": 1793129870805.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1790.3000001907349,
+          "epochMs": 1793129870821,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1806.4000005722046,
+          "epochMs": 1793129870837.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1824.5,
+          "epochMs": 1793129870855.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1840.4000005722046,
+          "epochMs": 1793129870871.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1856.4000005722046,
+          "epochMs": 1793129870887.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1873.4000005722046,
+          "epochMs": 1793129870904.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1891.3000001907349,
+          "epochMs": 1793129870922,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1907.9000005722046,
+          "epochMs": 1793129870938.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1923.4000005722046,
+          "epochMs": 1793129870954.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1940.4000005722046,
+          "epochMs": 1793129870971.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1956.4000005722046,
+          "epochMs": 1793129870987.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1974,
+          "epochMs": 1793129871004.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1989.4000005722046,
+          "epochMs": 1793129871020.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2008.1000003814697,
+          "epochMs": 1793129871038.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2023.1000003814697,
+          "epochMs": 1793129871053.8,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "aligned": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 2873.5,
+          "timelineMs": 2870,
+          "epochMs": 1793129873934.2
+        },
+        "end": {
+          "documentMs": 5126.5,
+          "timelineMs": 5119.9,
+          "epochMs": 1793129876187.1
+        },
+        "animations": [
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "DOCUMENT",
+            "first": {
+              "clock": {
+                "documentMs": 2873.699999809265,
+                "timelineMs": 2870,
+                "epochMs": 1793129873934.2
+              },
+              "currentTimeMs": 2866.5030001476407,
+              "startTimeMs": 3.496999852359295,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            },
+            "last": {
+              "clock": {
+                "documentMs": 5126.5,
+                "timelineMs": 5119.9,
+                "epochMs": 1793129876187.1
+              },
+              "currentTimeMs": 5000,
+              "startTimeMs": 3.496999852359295,
+              "playbackRate": 1,
+              "playState": "finished",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            }
+          }
+        ]
+      },
+      "colors": [
+        {
+          "documentMs": 2874.0999994277954,
+          "epochMs": 1793129873934.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2888.800000190735,
+          "epochMs": 1793129873949.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2904.800000190735,
+          "epochMs": 1793129873965.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2922.0999994277954,
+          "epochMs": 1793129873982.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2938,
+          "epochMs": 1793129873998.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2955.300000190735,
+          "epochMs": 1793129874015.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2971.5,
+          "epochMs": 1793129874032,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2988.699999809265,
+          "epochMs": 1793129874049.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3004.699999809265,
+          "epochMs": 1793129874065.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3022,
+          "epochMs": 1793129874082.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3038,
+          "epochMs": 1793129874098.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3055.300000190735,
+          "epochMs": 1793129874115.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3071.5,
+          "epochMs": 1793129874132,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3088.5999994277954,
+          "epochMs": 1793129874149.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3104.699999809265,
+          "epochMs": 1793129874165.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3122,
+          "epochMs": 1793129874182.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3138,
+          "epochMs": 1793129874198.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3155.199999809265,
+          "epochMs": 1793129874215.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3171.3999996185303,
+          "epochMs": 1793129874231.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3188.699999809265,
+          "epochMs": 1793129874249.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3204.699999809265,
+          "epochMs": 1793129874265.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3221.8999996185303,
+          "epochMs": 1793129874282.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3238,
+          "epochMs": 1793129874298.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3255.300000190735,
+          "epochMs": 1793129874315.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3271.5,
+          "epochMs": 1793129874332,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3288.699999809265,
+          "epochMs": 1793129874349.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3304.699999809265,
+          "epochMs": 1793129874365.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3322,
+          "epochMs": 1793129874382.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3338.0999994277954,
+          "epochMs": 1793129874398.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3355.300000190735,
+          "epochMs": 1793129874415.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3371.3999996185303,
+          "epochMs": 1793129874431.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3388.5999994277954,
+          "epochMs": 1793129874449.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3404.800000190735,
+          "epochMs": 1793129874465.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3422,
+          "epochMs": 1793129874482.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3438.0999994277954,
+          "epochMs": 1793129874498.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3455.3999996185303,
+          "epochMs": 1793129874515.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3471.5,
+          "epochMs": 1793129874532,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3488.699999809265,
+          "epochMs": 1793129874549.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3504.699999809265,
+          "epochMs": 1793129874565.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3522.0999994277954,
+          "epochMs": 1793129874582.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3538.0999994277954,
+          "epochMs": 1793129874598.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3555.3999996185303,
+          "epochMs": 1793129874615.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3571.5,
+          "epochMs": 1793129874632,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3588.800000190735,
+          "epochMs": 1793129874649.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3604.699999809265,
+          "epochMs": 1793129874665.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3622,
+          "epochMs": 1793129874682.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3638.0999994277954,
+          "epochMs": 1793129874698.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3655.300000190735,
+          "epochMs": 1793129874715.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3671.5999994277954,
+          "epochMs": 1793129874732.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3688.699999809265,
+          "epochMs": 1793129874749.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3704.699999809265,
+          "epochMs": 1793129874765.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3721.8999996185303,
+          "epochMs": 1793129874782.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3738,
+          "epochMs": 1793129874798.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3755.3999996185303,
+          "epochMs": 1793129874815.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3771.5999994277954,
+          "epochMs": 1793129874832.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3788.699999809265,
+          "epochMs": 1793129874849.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3804.699999809265,
+          "epochMs": 1793129874865.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3822,
+          "epochMs": 1793129874882.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3838,
+          "epochMs": 1793129874898.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3855.300000190735,
+          "epochMs": 1793129874915.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3871.5,
+          "epochMs": 1793129874932,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3888.5999994277954,
+          "epochMs": 1793129874949.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3904.699999809265,
+          "epochMs": 1793129874965.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3922,
+          "epochMs": 1793129874982.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3938.0999994277954,
+          "epochMs": 1793129874998.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3955.3999996185303,
+          "epochMs": 1793129875015.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3971.3999996185303,
+          "epochMs": 1793129875031.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3988.699999809265,
+          "epochMs": 1793129875049.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4004.800000190735,
+          "epochMs": 1793129875065.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4022,
+          "epochMs": 1793129875082.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4038.0999994277954,
+          "epochMs": 1793129875098.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4055.300000190735,
+          "epochMs": 1793129875115.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4071.5,
+          "epochMs": 1793129875132,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4088.699999809265,
+          "epochMs": 1793129875149.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4104.800000190735,
+          "epochMs": 1793129875165.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4122.099999427795,
+          "epochMs": 1793129875182.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4138.099999427795,
+          "epochMs": 1793129875198.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4155.39999961853,
+          "epochMs": 1793129875215.9,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4171.5,
+          "epochMs": 1793129875232,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4188.699999809265,
+          "epochMs": 1793129875249.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4204.699999809265,
+          "epochMs": 1793129875265.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4222,
+          "epochMs": 1793129875282.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4238.099999427795,
+          "epochMs": 1793129875298.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4255.39999961853,
+          "epochMs": 1793129875315.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4271.5,
+          "epochMs": 1793129875332,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4288.699999809265,
+          "epochMs": 1793129875349.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4304.800000190735,
+          "epochMs": 1793129875365.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4322.099999427795,
+          "epochMs": 1793129875382.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4338.099999427795,
+          "epochMs": 1793129875398.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4355.39999961853,
+          "epochMs": 1793129875415.9,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4371.599999427795,
+          "epochMs": 1793129875432.1,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4388.800000190735,
+          "epochMs": 1793129875449.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4404.800000190735,
+          "epochMs": 1793129875465.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4422,
+          "epochMs": 1793129875482.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4438.099999427795,
+          "epochMs": 1793129875498.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4455.39999961853,
+          "epochMs": 1793129875515.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4471.599999427795,
+          "epochMs": 1793129875532.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4488.699999809265,
+          "epochMs": 1793129875549.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4504.699999809265,
+          "epochMs": 1793129875565.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4522,
+          "epochMs": 1793129875582.5,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4538,
+          "epochMs": 1793129875598.5,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4555.300000190735,
+          "epochMs": 1793129875615.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4571.39999961853,
+          "epochMs": 1793129875631.9,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4588.599999427795,
+          "epochMs": 1793129875649.1,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4604.699999809265,
+          "epochMs": 1793129875665.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4622,
+          "epochMs": 1793129875682.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4638.099999427795,
+          "epochMs": 1793129875698.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4655.300000190735,
+          "epochMs": 1793129875715.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4671.5,
+          "epochMs": 1793129875732,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4688.599999427795,
+          "epochMs": 1793129875749.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4705.300000190735,
+          "epochMs": 1793129875765.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4722,
+          "epochMs": 1793129875782.5,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4738.599999427795,
+          "epochMs": 1793129875799.1,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4755.300000190735,
+          "epochMs": 1793129875815.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4772,
+          "epochMs": 1793129875832.5,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4788.599999427795,
+          "epochMs": 1793129875849.1,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4804.800000190735,
+          "epochMs": 1793129875865.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4822.099999427795,
+          "epochMs": 1793129875882.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4838.800000190735,
+          "epochMs": 1793129875899.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4855.39999961853,
+          "epochMs": 1793129875915.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4872.199999809265,
+          "epochMs": 1793129875932.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4888.800000190735,
+          "epochMs": 1793129875949.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4905.39999961853,
+          "epochMs": 1793129875965.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4922.099999427795,
+          "epochMs": 1793129875982.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4938.699999809265,
+          "epochMs": 1793129875999.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4955.39999961853,
+          "epochMs": 1793129876015.9,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4971.599999427795,
+          "epochMs": 1793129876032.1,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 4988.699999809265,
+          "epochMs": 1793129876049.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 5005.39999961853,
+          "epochMs": 1793129876065.9,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 5022.099999427795,
+          "epochMs": 1793129876082.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5038.800000190735,
+          "epochMs": 1793129876099.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5055.39999961853,
+          "epochMs": 1793129876115.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5072.199999809265,
+          "epochMs": 1793129876132.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5088.699999809265,
+          "epochMs": 1793129876149.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5105.5,
+          "epochMs": 1793129876166,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5122.099999427795,
+          "epochMs": 1793129876182.6,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "fixed": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 2873,
+          "timelineMs": 2870.6,
+          "epochMs": 1793129879069.1
+        },
+        "end": {
+          "documentMs": 5126.199999809265,
+          "timelineMs": 5120.4,
+          "epochMs": 1793129881322.2
+        },
+        "animations": [
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "DOCUMENT",
+            "first": {
+              "clock": {
+                "documentMs": 2873.199999809265,
+                "timelineMs": 2870.6,
+                "epochMs": 1793129879069.2
+              },
+              "currentTimeMs": 2866.5800001233815,
+              "startTimeMs": 4.019999876618385,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            },
+            "last": {
+              "clock": {
+                "documentMs": 5126.199999809265,
+                "timelineMs": 5120.4,
+                "epochMs": 1793129881322.2
+              },
+              "currentTimeMs": 5000,
+              "startTimeMs": 4.019999876618385,
+              "playbackRate": 1,
+              "playState": "finished",
+              "durationMs": 200,
+              "delayMs": 4000,
+              "iterations": 5
+            }
+          }
+        ]
+      },
+      "colors": [
+        {
+          "documentMs": 2873.5,
+          "epochMs": 1793129879069.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2887.9000005722046,
+          "epochMs": 1793129879083.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2904.5,
+          "epochMs": 1793129879100.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2921.199999809265,
+          "epochMs": 1793129879117.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2937.9000005722046,
+          "epochMs": 1793129879133.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2954.5,
+          "epochMs": 1793129879150.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2971.300000190735,
+          "epochMs": 1793129879167.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2987.800000190735,
+          "epochMs": 1793129879183.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3004.4000005722046,
+          "epochMs": 1793129879200.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3021.1000003814697,
+          "epochMs": 1793129879217.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3037.699999809265,
+          "epochMs": 1793129879233.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3054.4000005722046,
+          "epochMs": 1793129879250.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3071.1000003814697,
+          "epochMs": 1793129879267.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3087.9000005722046,
+          "epochMs": 1793129879283.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3104.5,
+          "epochMs": 1793129879300.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3121.199999809265,
+          "epochMs": 1793129879317.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3137.800000190735,
+          "epochMs": 1793129879333.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3154.5,
+          "epochMs": 1793129879350.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3171.199999809265,
+          "epochMs": 1793129879367.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3187.800000190735,
+          "epochMs": 1793129879383.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3204.5,
+          "epochMs": 1793129879400.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3221.199999809265,
+          "epochMs": 1793129879417.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3237.800000190735,
+          "epochMs": 1793129879433.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3254.5,
+          "epochMs": 1793129879450.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3271.199999809265,
+          "epochMs": 1793129879467.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3287.800000190735,
+          "epochMs": 1793129879483.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3304.5,
+          "epochMs": 1793129879500.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3321.199999809265,
+          "epochMs": 1793129879517.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3337.9000005722046,
+          "epochMs": 1793129879533.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3354.6000003814697,
+          "epochMs": 1793129879550.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3371.300000190735,
+          "epochMs": 1793129879567.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3387.9000005722046,
+          "epochMs": 1793129879583.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3404.5,
+          "epochMs": 1793129879600.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3421.1000003814697,
+          "epochMs": 1793129879617.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3437.800000190735,
+          "epochMs": 1793129879633.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3454.5,
+          "epochMs": 1793129879650.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3471.199999809265,
+          "epochMs": 1793129879667.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3487.9000005722046,
+          "epochMs": 1793129879683.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3504.5,
+          "epochMs": 1793129879700.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3521.199999809265,
+          "epochMs": 1793129879717.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3537.800000190735,
+          "epochMs": 1793129879733.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3554.5,
+          "epochMs": 1793129879750.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3571.300000190735,
+          "epochMs": 1793129879767.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3587.9000005722046,
+          "epochMs": 1793129879783.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3604.5,
+          "epochMs": 1793129879800.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3621.300000190735,
+          "epochMs": 1793129879817.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3637.9000005722046,
+          "epochMs": 1793129879833.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3654.5,
+          "epochMs": 1793129879850.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3671.300000190735,
+          "epochMs": 1793129879867.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3687.9000005722046,
+          "epochMs": 1793129879883.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3704.5,
+          "epochMs": 1793129879900.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3721.199999809265,
+          "epochMs": 1793129879917.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3738,
+          "epochMs": 1793129879934,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3754.5,
+          "epochMs": 1793129879950.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3771.300000190735,
+          "epochMs": 1793129879967.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3787.9000005722046,
+          "epochMs": 1793129879983.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3804.6000003814697,
+          "epochMs": 1793129880000.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3821.800000190735,
+          "epochMs": 1793129880017.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3838,
+          "epochMs": 1793129880034,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3854.699999809265,
+          "epochMs": 1793129880050.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3871.4000005722046,
+          "epochMs": 1793129880067.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3888,
+          "epochMs": 1793129880084,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3904.699999809265,
+          "epochMs": 1793129880100.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3921.300000190735,
+          "epochMs": 1793129880117.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3937.9000005722046,
+          "epochMs": 1793129880133.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3954.6000003814697,
+          "epochMs": 1793129880150.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3971.4000005722046,
+          "epochMs": 1793129880167.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3988,
+          "epochMs": 1793129880184,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4004.5,
+          "epochMs": 1793129880200.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4021.300000190735,
+          "epochMs": 1793129880217.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4038,
+          "epochMs": 1793129880234,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4054.6000003814697,
+          "epochMs": 1793129880250.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4071.4000005722046,
+          "epochMs": 1793129880267.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4087.9000005722046,
+          "epochMs": 1793129880283.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4104.60000038147,
+          "epochMs": 1793129880300.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4121.199999809265,
+          "epochMs": 1793129880317.2,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4138,
+          "epochMs": 1793129880334,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4154.60000038147,
+          "epochMs": 1793129880350.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4171.900000572205,
+          "epochMs": 1793129880367.9,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4188,
+          "epochMs": 1793129880384,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4204.60000038147,
+          "epochMs": 1793129880400.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4221.300000190735,
+          "epochMs": 1793129880417.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4237.900000572205,
+          "epochMs": 1793129880433.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4254.60000038147,
+          "epochMs": 1793129880450.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4271.400000572205,
+          "epochMs": 1793129880467.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4287.900000572205,
+          "epochMs": 1793129880483.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4304.60000038147,
+          "epochMs": 1793129880500.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4321.300000190735,
+          "epochMs": 1793129880517.3,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4338.60000038147,
+          "epochMs": 1793129880534.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4354.60000038147,
+          "epochMs": 1793129880550.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4371.400000572205,
+          "epochMs": 1793129880567.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4387.900000572205,
+          "epochMs": 1793129880583.9,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4404.60000038147,
+          "epochMs": 1793129880600.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4421.199999809265,
+          "epochMs": 1793129880617.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4438,
+          "epochMs": 1793129880634,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4454.60000038147,
+          "epochMs": 1793129880650.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4471.300000190735,
+          "epochMs": 1793129880667.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4487.900000572205,
+          "epochMs": 1793129880683.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4505.199999809265,
+          "epochMs": 1793129880701.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4521.199999809265,
+          "epochMs": 1793129880717.2,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4538,
+          "epochMs": 1793129880734,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4554.60000038147,
+          "epochMs": 1793129880750.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4571.400000572205,
+          "epochMs": 1793129880767.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4588.10000038147,
+          "epochMs": 1793129880784.1,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4604.60000038147,
+          "epochMs": 1793129880800.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4621.199999809265,
+          "epochMs": 1793129880817.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4637.900000572205,
+          "epochMs": 1793129880833.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4654.5,
+          "epochMs": 1793129880850.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4671.199999809265,
+          "epochMs": 1793129880867.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4687.800000190735,
+          "epochMs": 1793129880883.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4704.60000038147,
+          "epochMs": 1793129880900.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4721.300000190735,
+          "epochMs": 1793129880917.3,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4737.900000572205,
+          "epochMs": 1793129880933.9,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4754.60000038147,
+          "epochMs": 1793129880950.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4771.400000572205,
+          "epochMs": 1793129880967.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4788,
+          "epochMs": 1793129880984,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4804.60000038147,
+          "epochMs": 1793129881000.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4821.300000190735,
+          "epochMs": 1793129881017.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4838,
+          "epochMs": 1793129881034,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4854.60000038147,
+          "epochMs": 1793129881050.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4871.400000572205,
+          "epochMs": 1793129881067.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4887.900000572205,
+          "epochMs": 1793129881083.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4904.60000038147,
+          "epochMs": 1793129881100.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4921.300000190735,
+          "epochMs": 1793129881117.3,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4937.900000572205,
+          "epochMs": 1793129881133.9,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4954.60000038147,
+          "epochMs": 1793129881150.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4971.400000572205,
+          "epochMs": 1793129881167.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 4987.900000572205,
+          "epochMs": 1793129881183.9,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 5004.60000038147,
+          "epochMs": 1793129881200.6,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 5021.300000190735,
+          "epochMs": 1793129881217.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5037.900000572205,
+          "epochMs": 1793129881233.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5054.60000038147,
+          "epochMs": 1793129881250.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5071.900000572205,
+          "epochMs": 1793129881267.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5087.900000572205,
+          "epochMs": 1793129881283.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5104.60000038147,
+          "epochMs": 1793129881300.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5121.300000190735,
+          "epochMs": 1793129881317.3,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "removed": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 2874.5999994277954,
+          "timelineMs": 2870.3,
+          "epochMs": 1793129884206
+        },
+        "end": {
+          "documentMs": 5127.89999961853,
+          "timelineMs": 5120.2,
+          "epochMs": 1793129886459.2998
+        },
+        "animations": []
+      },
+      "colors": [
+        {
+          "documentMs": 2874.7999992370605,
+          "epochMs": 1793129884206.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2889.0999994277954,
+          "epochMs": 1793129884220.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2904,
+          "epochMs": 1793129884235.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2921.699999809265,
+          "epochMs": 1793129884253.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2938.7999992370605,
+          "epochMs": 1793129884270.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2955.699999809265,
+          "epochMs": 1793129884287.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2970.5,
+          "epochMs": 1793129884301.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2988.7999992370605,
+          "epochMs": 1793129884320.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3005.7999992370605,
+          "epochMs": 1793129884337.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3020.8999996185303,
+          "epochMs": 1793129884352.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3037.7999992370605,
+          "epochMs": 1793129884369.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3054.199999809265,
+          "epochMs": 1793129884385.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3070.8999996185303,
+          "epochMs": 1793129884402.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3088.7999992370605,
+          "epochMs": 1793129884420.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3105.5,
+          "epochMs": 1793129884436.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3120.3999996185303,
+          "epochMs": 1793129884451.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3137.8999996185303,
+          "epochMs": 1793129884469.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3155.699999809265,
+          "epochMs": 1793129884487.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3171.7999992370605,
+          "epochMs": 1793129884503.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3188.8999996185303,
+          "epochMs": 1793129884520.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3204.8999996185303,
+          "epochMs": 1793129884536.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3220.8999996185303,
+          "epochMs": 1793129884552.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3237.699999809265,
+          "epochMs": 1793129884569.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3255.699999809265,
+          "epochMs": 1793129884587.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3272.0999994277954,
+          "epochMs": 1793129884603.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3287.199999809265,
+          "epochMs": 1793129884618.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3305.699999809265,
+          "epochMs": 1793129884637.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3322.3999996185303,
+          "epochMs": 1793129884653.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3339.0999994277954,
+          "epochMs": 1793129884670.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3355.699999809265,
+          "epochMs": 1793129884687.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3372.3999996185303,
+          "epochMs": 1793129884703.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3389,
+          "epochMs": 1793129884720.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3404,
+          "epochMs": 1793129884735.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3421.5999994277954,
+          "epochMs": 1793129884753,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3437.5,
+          "epochMs": 1793129884768.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3455.3999996185303,
+          "epochMs": 1793129884786.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3470.7999992370605,
+          "epochMs": 1793129884802.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3487.2999992370605,
+          "epochMs": 1793129884818.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3504.5999994277954,
+          "epochMs": 1793129884836,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3522.3999996185303,
+          "epochMs": 1793129884853.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3539,
+          "epochMs": 1793129884870.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3554.8999996185303,
+          "epochMs": 1793129884886.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3571.699999809265,
+          "epochMs": 1793129884903.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3588.8999996185303,
+          "epochMs": 1793129884920.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3604.2999992370605,
+          "epochMs": 1793129884935.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3622.3999996185303,
+          "epochMs": 1793129884953.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3637.7999992370605,
+          "epochMs": 1793129884969.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3654.8999996185303,
+          "epochMs": 1793129884986.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3672,
+          "epochMs": 1793129885003.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3689,
+          "epochMs": 1793129885020.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3705.699999809265,
+          "epochMs": 1793129885037.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3721.7999992370605,
+          "epochMs": 1793129885053.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3739.0999994277954,
+          "epochMs": 1793129885070.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3754.7999992370605,
+          "epochMs": 1793129885086.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3772.3999996185303,
+          "epochMs": 1793129885103.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3789.0999994277954,
+          "epochMs": 1793129885120.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3804.699999809265,
+          "epochMs": 1793129885136.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3822.3999996185303,
+          "epochMs": 1793129885153.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3838.699999809265,
+          "epochMs": 1793129885170.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3855.0999994277954,
+          "epochMs": 1793129885186.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3871.5999994277954,
+          "epochMs": 1793129885203,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3887.8999996185303,
+          "epochMs": 1793129885219.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3905.699999809265,
+          "epochMs": 1793129885237.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3921.7999992370605,
+          "epochMs": 1793129885253.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3938.2999992370605,
+          "epochMs": 1793129885269.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3955.3999996185303,
+          "epochMs": 1793129885286.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3971.0999994277954,
+          "epochMs": 1793129885302.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3988.699999809265,
+          "epochMs": 1793129885320.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4003.7999992370605,
+          "epochMs": 1793129885335.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4020.8999996185303,
+          "epochMs": 1793129885352.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4038.5,
+          "epochMs": 1793129885369.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4055.699999809265,
+          "epochMs": 1793129885387.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4071,
+          "epochMs": 1793129885402.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4088.699999809265,
+          "epochMs": 1793129885420.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4105.5,
+          "epochMs": 1793129885436.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4120.699999809265,
+          "epochMs": 1793129885452.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4137.699999809265,
+          "epochMs": 1793129885469.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4154.89999961853,
+          "epochMs": 1793129885486.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4170.89999961853,
+          "epochMs": 1793129885502.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4189,
+          "epochMs": 1793129885520.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4205.799999237061,
+          "epochMs": 1793129885537.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4222.299999237061,
+          "epochMs": 1793129885553.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4237.699999809265,
+          "epochMs": 1793129885569.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4254.599999427795,
+          "epochMs": 1793129885586,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4270.699999809265,
+          "epochMs": 1793129885602.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4287.799999237061,
+          "epochMs": 1793129885619.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4304.699999809265,
+          "epochMs": 1793129885636.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4320.699999809265,
+          "epochMs": 1793129885652.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4337.699999809265,
+          "epochMs": 1793129885669.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4353.599999427795,
+          "epochMs": 1793129885685,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4372.199999809265,
+          "epochMs": 1793129885703.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4388.799999237061,
+          "epochMs": 1793129885720.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4404.699999809265,
+          "epochMs": 1793129885736.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4421.299999237061,
+          "epochMs": 1793129885752.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4438.799999237061,
+          "epochMs": 1793129885770.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4455.699999809265,
+          "epochMs": 1793129885787.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4472.299999237061,
+          "epochMs": 1793129885803.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4489.099999427795,
+          "epochMs": 1793129885820.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4505.799999237061,
+          "epochMs": 1793129885837.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4522.39999961853,
+          "epochMs": 1793129885853.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4537.299999237061,
+          "epochMs": 1793129885868.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4554.89999961853,
+          "epochMs": 1793129885886.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4572.39999961853,
+          "epochMs": 1793129885903.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4589.099999427795,
+          "epochMs": 1793129885920.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4604.39999961853,
+          "epochMs": 1793129885935.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4621.299999237061,
+          "epochMs": 1793129885952.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4639,
+          "epochMs": 1793129885970.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4654.799999237061,
+          "epochMs": 1793129885986.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4671.799999237061,
+          "epochMs": 1793129886003.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4687.799999237061,
+          "epochMs": 1793129886019.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4704.799999237061,
+          "epochMs": 1793129886036.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4721.799999237061,
+          "epochMs": 1793129886053.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4738.799999237061,
+          "epochMs": 1793129886070.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4754.799999237061,
+          "epochMs": 1793129886086.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4770.599999427795,
+          "epochMs": 1793129886102,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4788.89999961853,
+          "epochMs": 1793129886120.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4804.39999961853,
+          "epochMs": 1793129886135.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4821.799999237061,
+          "epochMs": 1793129886153.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4837.799999237061,
+          "epochMs": 1793129886169.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4855.699999809265,
+          "epochMs": 1793129886187.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4871.799999237061,
+          "epochMs": 1793129886203.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4888,
+          "epochMs": 1793129886219.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4903.799999237061,
+          "epochMs": 1793129886235.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4920.799999237061,
+          "epochMs": 1793129886252.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4939.099999427795,
+          "epochMs": 1793129886270.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4955.199999809265,
+          "epochMs": 1793129886286.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4972.299999237061,
+          "epochMs": 1793129886303.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 4987.799999237061,
+          "epochMs": 1793129886319.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5004.5,
+          "epochMs": 1793129886335.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5020.699999809265,
+          "epochMs": 1793129886352.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5037.39999961853,
+          "epochMs": 1793129886368.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5054.199999809265,
+          "epochMs": 1793129886385.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5072.39999961853,
+          "epochMs": 1793129886403.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5087.799999237061,
+          "epochMs": 1793129886419.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5105.099999427795,
+          "epochMs": 1793129886436.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 5120.799999237061,
+          "epochMs": 1793129886452.2,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "trigger": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 2006.5,
+          "timelineMs": 2003.7,
+          "epochMs": 1793129888473.9001
+        },
+        "end": {
+          "documentMs": 3411.8999996185303,
+          "timelineMs": 3403.7,
+          "epochMs": 1793129889879.2
+        },
+        "animations": [
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "TRIGGER",
+            "first": {
+              "clock": {
+                "documentMs": 2039,
+                "timelineMs": 2037.1,
+                "epochMs": 1793129888506.3
+              },
+              "currentTimeMs": 16.69099989384426,
+              "startTimeMs": 2020.4090001061559,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 0,
+              "iterations": 5
+            },
+            "last": {
+              "clock": {
+                "documentMs": 3411.8999996185303,
+                "timelineMs": 3403.7,
+                "epochMs": 1793129889879.2
+              },
+              "currentTimeMs": 1000,
+              "startTimeMs": 2020.4090001061559,
+              "playbackRate": 1,
+              "playState": "finished",
+              "durationMs": 200,
+              "delayMs": 0,
+              "iterations": 5
+            }
+          }
+        ],
+        "trigger": {
+          "before": {
+            "documentMs": 2006.8000001907349,
+            "timelineMs": 2003.7,
+            "epochMs": 1793129888474.1
+          },
+          "after": {
+            "documentMs": 2009.3999996185303,
+            "timelineMs": 2003.7,
+            "epochMs": 1793129888476.7
+          }
+        }
+      },
+      "colors": [
+        {
+          "documentMs": 2006.8000001907349,
+          "epochMs": 1793129888474.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2021.3000001907349,
+          "epochMs": 1793129888488.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2039.1999998092651,
+          "epochMs": 1793129888506.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2055,
+          "epochMs": 1793129888522.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2071,
+          "epochMs": 1793129888538.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2088.8999996185303,
+          "epochMs": 1793129888556.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2105.3999996185303,
+          "epochMs": 1793129888572.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2121,
+          "epochMs": 1793129888588.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2139.3999996185303,
+          "epochMs": 1793129888606.7,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2156,
+          "epochMs": 1793129888623.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2172.699999809265,
+          "epochMs": 1793129888640,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2189.3999996185303,
+          "epochMs": 1793129888656.7,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2204,
+          "epochMs": 1793129888671.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2221.5,
+          "epochMs": 1793129888688.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2237.8999996185303,
+          "epochMs": 1793129888705.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2254.1000003814697,
+          "epochMs": 1793129888721.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2270.8999996185303,
+          "epochMs": 1793129888738.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2288.199999809265,
+          "epochMs": 1793129888755.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2305.1000003814697,
+          "epochMs": 1793129888772.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2321,
+          "epochMs": 1793129888788.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2339,
+          "epochMs": 1793129888806.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2353.8999996185303,
+          "epochMs": 1793129888821.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2372.5,
+          "epochMs": 1793129888839.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2388.699999809265,
+          "epochMs": 1793129888856,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2404,
+          "epochMs": 1793129888871.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2420.8999996185303,
+          "epochMs": 1793129888888.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2438.199999809265,
+          "epochMs": 1793129888905.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2454.8999996185303,
+          "epochMs": 1793129888922.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2471,
+          "epochMs": 1793129888938.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2487.8999996185303,
+          "epochMs": 1793129888955.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2504.8999996185303,
+          "epochMs": 1793129888972.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2520.800000190735,
+          "epochMs": 1793129888988.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2537.800000190735,
+          "epochMs": 1793129889005.1,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2553.800000190735,
+          "epochMs": 1793129889021.1,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2570.8999996185303,
+          "epochMs": 1793129889038.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2588,
+          "epochMs": 1793129889055.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2605,
+          "epochMs": 1793129889072.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2622.1000003814697,
+          "epochMs": 1793129889089.4001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2639.1000003814697,
+          "epochMs": 1793129889106.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2655.3999996185303,
+          "epochMs": 1793129889122.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2672.5,
+          "epochMs": 1793129889139.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2688.8999996185303,
+          "epochMs": 1793129889156.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2706,
+          "epochMs": 1793129889173.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2721.8999996185303,
+          "epochMs": 1793129889189.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2738.8999996185303,
+          "epochMs": 1793129889206.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2753.8999996185303,
+          "epochMs": 1793129889221.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2772.5,
+          "epochMs": 1793129889239.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2787.8999996185303,
+          "epochMs": 1793129889255.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2804,
+          "epochMs": 1793129889271.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2820.8999996185303,
+          "epochMs": 1793129889288.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2838.8999996185303,
+          "epochMs": 1793129889306.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2853.8999996185303,
+          "epochMs": 1793129889321.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2870.8999996185303,
+          "epochMs": 1793129889338.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2889,
+          "epochMs": 1793129889356.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2905.199999809265,
+          "epochMs": 1793129889372.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2922.6000003814697,
+          "epochMs": 1793129889389.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 2939.1000003814697,
+          "epochMs": 1793129889406.4001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2953.8999996185303,
+          "epochMs": 1793129889421.2,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2972.300000190735,
+          "epochMs": 1793129889439.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 2987.300000190735,
+          "epochMs": 1793129889454.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 3004,
+          "epochMs": 1793129889471.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 3022,
+          "epochMs": 1793129889489.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 3037.8999996185303,
+          "epochMs": 1793129889505.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3054.8999996185303,
+          "epochMs": 1793129889522.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3071.8999996185303,
+          "epochMs": 1793129889539.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3087.8999996185303,
+          "epochMs": 1793129889555.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3106,
+          "epochMs": 1793129889573.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3122.5,
+          "epochMs": 1793129889589.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3139.199999809265,
+          "epochMs": 1793129889606.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3155.8999996185303,
+          "epochMs": 1793129889623.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3170.8999996185303,
+          "epochMs": 1793129889638.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3187.8999996185303,
+          "epochMs": 1793129889655.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3203.8999996185303,
+          "epochMs": 1793129889671.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3220.8999996185303,
+          "epochMs": 1793129889688.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3238.699999809265,
+          "epochMs": 1793129889706,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3253.8999996185303,
+          "epochMs": 1793129889721.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3271.8999996185303,
+          "epochMs": 1793129889739.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3288.300000190735,
+          "epochMs": 1793129889755.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3303.8999996185303,
+          "epochMs": 1793129889771.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3321.8999996185303,
+          "epochMs": 1793129889789.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3338.8999996185303,
+          "epochMs": 1793129889806.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3354.8999996185303,
+          "epochMs": 1793129889822.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3370.8999996185303,
+          "epochMs": 1793129889838.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3388.8999996185303,
+          "epochMs": 1793129889856.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 3404.8999996185303,
+          "epochMs": 1793129889872.2,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "triggerFixed": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 14.699999809265137,
+          "timelineMs": 4.1,
+          "epochMs": 1793129889901.7
+        },
+        "end": {
+          "documentMs": 1616.8999996185303,
+          "timelineMs": 1604,
+          "epochMs": 1793129891503.7998
+        },
+        "animations": [
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "TRIGGER",
+            "first": {
+              "clock": {
+                "documentMs": 37.69999980926514,
+                "timelineMs": 37.4,
+                "epochMs": 1793129889924.5999
+              },
+              "currentTimeMs": 16.698000223934653,
+              "startTimeMs": 20.70199977606535,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 0,
+              "iterations": 5
+            },
+            "last": {
+              "clock": {
+                "documentMs": 1616.8999996185303,
+                "timelineMs": 1604,
+                "epochMs": 1793129891503.7998
+              },
+              "currentTimeMs": 1000,
+              "startTimeMs": 20.70199977606535,
+              "playbackRate": 1,
+              "playState": "finished",
+              "durationMs": 200,
+              "delayMs": 0,
+              "iterations": 5
+            }
+          }
+        ],
+        "trigger": {
+          "before": {
+            "documentMs": 14.800000190734863,
+            "timelineMs": 4.1,
+            "epochMs": 1793129889901.7
+          },
+          "after": {
+            "documentMs": 15,
+            "timelineMs": 4.1,
+            "epochMs": 1793129889901.9
+          }
+        }
+      },
+      "colors": [
+        {
+          "documentMs": 14.800000190734863,
+          "epochMs": 1793129889901.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 21.100000381469727,
+          "epochMs": 1793129889908,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 37.80000019073486,
+          "epochMs": 1793129889924.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 54.39999961853027,
+          "epochMs": 1793129889941.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 71,
+          "epochMs": 1793129889957.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 88,
+          "epochMs": 1793129889974.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 104.60000038146973,
+          "epochMs": 1793129889991.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 121.19999980926514,
+          "epochMs": 1793129890008.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 137.89999961853027,
+          "epochMs": 1793129890024.7998,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 154.5,
+          "epochMs": 1793129890041.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 171.30000019073486,
+          "epochMs": 1793129890058.2,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 187.89999961853027,
+          "epochMs": 1793129890074.7998,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 204.5,
+          "epochMs": 1793129890091.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 221.10000038146973,
+          "epochMs": 1793129890108,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 237.80000019073486,
+          "epochMs": 1793129890124.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 254.39999961853027,
+          "epochMs": 1793129890141.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 271.1000003814697,
+          "epochMs": 1793129890158,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 287.80000019073486,
+          "epochMs": 1793129890174.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 304.6000003814697,
+          "epochMs": 1793129890191.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 321.1000003814697,
+          "epochMs": 1793129890208,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 337.8999996185303,
+          "epochMs": 1793129890224.7998,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 354.5,
+          "epochMs": 1793129890241.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 371.19999980926514,
+          "epochMs": 1793129890258.0999,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 387.80000019073486,
+          "epochMs": 1793129890274.7,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 404.6000003814697,
+          "epochMs": 1793129890291.5,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 421.19999980926514,
+          "epochMs": 1793129890308.0999,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 437.80000019073486,
+          "epochMs": 1793129890324.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 454.5,
+          "epochMs": 1793129890341.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 471.1000003814697,
+          "epochMs": 1793129890358,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 487.80000019073486,
+          "epochMs": 1793129890374.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 504.6000003814697,
+          "epochMs": 1793129890391.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 521.1999998092651,
+          "epochMs": 1793129890408.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 537.8999996185303,
+          "epochMs": 1793129890424.7998,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 554.5,
+          "epochMs": 1793129890441.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 571.1999998092651,
+          "epochMs": 1793129890458.0999,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 587.8000001907349,
+          "epochMs": 1793129890474.7,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 604.6000003814697,
+          "epochMs": 1793129890491.5,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 621.1000003814697,
+          "epochMs": 1793129890508,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 637.8999996185303,
+          "epochMs": 1793129890524.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 654.5,
+          "epochMs": 1793129890541.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 671.1999998092651,
+          "epochMs": 1793129890558.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 687.8999996185303,
+          "epochMs": 1793129890574.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 704.6000003814697,
+          "epochMs": 1793129890591.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 721.1999998092651,
+          "epochMs": 1793129890608.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 737.8000001907349,
+          "epochMs": 1793129890624.7,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 754.5,
+          "epochMs": 1793129890641.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 771.1000003814697,
+          "epochMs": 1793129890658,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 787.8000001907349,
+          "epochMs": 1793129890674.7,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 804.6999998092651,
+          "epochMs": 1793129890691.5999,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 821.1999998092651,
+          "epochMs": 1793129890708.0999,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 837.8999996185303,
+          "epochMs": 1793129890724.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 854.6999998092651,
+          "epochMs": 1793129890741.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 871.1999998092651,
+          "epochMs": 1793129890758.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 887.8999996185303,
+          "epochMs": 1793129890774.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 904.6000003814697,
+          "epochMs": 1793129890791.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 921.1999998092651,
+          "epochMs": 1793129890808.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 937.8000001907349,
+          "epochMs": 1793129890824.7,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 954.5,
+          "epochMs": 1793129890841.4,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 971.1999998092651,
+          "epochMs": 1793129890858.0999,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 987.8000001907349,
+          "epochMs": 1793129890874.7,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 1004.8000001907349,
+          "epochMs": 1793129890891.7,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 1021.1000003814697,
+          "epochMs": 1793129890908,
+          "color": "rgb(45, 45, 45)"
+        },
+        {
+          "documentMs": 1037.8999996185303,
+          "epochMs": 1793129890924.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1054.5,
+          "epochMs": 1793129890941.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1071.3999996185303,
+          "epochMs": 1793129890958.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1087.8000001907349,
+          "epochMs": 1793129890974.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1104.6000003814697,
+          "epochMs": 1793129890991.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1121.1000003814697,
+          "epochMs": 1793129891008,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1137.8000001907349,
+          "epochMs": 1793129891024.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1154.3999996185303,
+          "epochMs": 1793129891041.2998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1171.1999998092651,
+          "epochMs": 1793129891058.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1187.8999996185303,
+          "epochMs": 1793129891074.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1204.6000003814697,
+          "epochMs": 1793129891091.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1221.1999998092651,
+          "epochMs": 1793129891108.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1237.8999996185303,
+          "epochMs": 1793129891124.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1254.6000003814697,
+          "epochMs": 1793129891141.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1271.1000003814697,
+          "epochMs": 1793129891158,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1287.8000001907349,
+          "epochMs": 1793129891174.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1304.5,
+          "epochMs": 1793129891191.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1321.1000003814697,
+          "epochMs": 1793129891208,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1337.8000001907349,
+          "epochMs": 1793129891224.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1354.6000003814697,
+          "epochMs": 1793129891241.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1371.1999998092651,
+          "epochMs": 1793129891258.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1387.8999996185303,
+          "epochMs": 1793129891274.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1404.8000001907349,
+          "epochMs": 1793129891291.7,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1421.1999998092651,
+          "epochMs": 1793129891308.2,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1438,
+          "epochMs": 1793129891324.9,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1454.6000003814697,
+          "epochMs": 1793129891341.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1471.1999998092651,
+          "epochMs": 1793129891358.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1487.8999996185303,
+          "epochMs": 1793129891374.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1504.6999998092651,
+          "epochMs": 1793129891391.5999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1521.1999998092651,
+          "epochMs": 1793129891408.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1537.8999996185303,
+          "epochMs": 1793129891424.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1554.5,
+          "epochMs": 1793129891441.4,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1571.1999998092651,
+          "epochMs": 1793129891458.0999,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1587.8999996185303,
+          "epochMs": 1793129891474.7998,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1604.6999998092651,
+          "epochMs": 1793129891491.5999,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    },
+    "mixed": {
+      "evidence": {
+        "version": 1,
+        "complete": true,
+        "reasons": [],
+        "start": {
+          "documentMs": 13.5,
+          "timelineMs": 3.3,
+          "epochMs": 1793129891525.6
+        },
+        "end": {
+          "documentMs": 1417.1999998092651,
+          "timelineMs": 1403.2,
+          "epochMs": 1793129892929.3
+        },
+        "animations": [
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "DOCUMENT",
+            "first": {
+              "clock": {
+                "documentMs": 21,
+                "timelineMs": 20,
+                "epochMs": 1793129891533.1
+              },
+              "currentTimeMs": 16.65299989283085,
+              "startTimeMs": 3.3470001071691513,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 10000,
+              "delayMs": 0,
+              "iterations": null
+            },
+            "last": {
+              "clock": {
+                "documentMs": 1417.1999998092651,
+                "timelineMs": 1403.2,
+                "epochMs": 1793129892929.3
+              },
+              "currentTimeMs": 1399.852999892831,
+              "startTimeMs": 3.3470001071691513,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 10000,
+              "delayMs": 0,
+              "iterations": null
+            }
+          },
+          {
+            "selectorPath": [
+              "*:nth-child(1) > *:nth-child(2) > *:nth-child(2)"
+            ],
+            "kind": "CSS_ANIMATION",
+            "ordinal": 0,
+            "origin": "TRIGGER",
+            "first": {
+              "clock": {
+                "documentMs": 38.29999923706055,
+                "timelineMs": 36.6,
+                "epochMs": 1793129891550.4001
+              },
+              "currentTimeMs": 16.607000267505647,
+              "startTimeMs": 19.992999732494354,
+              "playbackRate": 1,
+              "playState": "running",
+              "durationMs": 200,
+              "delayMs": 0,
+              "iterations": 5
+            },
+            "last": {
+              "clock": {
+                "documentMs": 1417.1999998092651,
+                "timelineMs": 1403.2,
+                "epochMs": 1793129892929.3
+              },
+              "currentTimeMs": 1000,
+              "startTimeMs": 19.992999732494354,
+              "playbackRate": 1,
+              "playState": "finished",
+              "durationMs": 200,
+              "delayMs": 0,
+              "iterations": 5
+            }
+          }
+        ],
+        "trigger": {
+          "before": {
+            "documentMs": 13.699999809265137,
+            "timelineMs": 3.3,
+            "epochMs": 1793129891525.8
+          },
+          "after": {
+            "documentMs": 14.199999809265137,
+            "timelineMs": 3.3,
+            "epochMs": 1793129891526.3
+          }
+        }
+      },
+      "colors": [
+        {
+          "documentMs": 13.699999809265137,
+          "epochMs": 1793129891525.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 21.299999237060547,
+          "epochMs": 1793129891533.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 38.39999961853027,
+          "epochMs": 1793129891550.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 54.39999961853027,
+          "epochMs": 1793129891566.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 71.69999980926514,
+          "epochMs": 1793129891583.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 88,
+          "epochMs": 1793129891600.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 105.19999980926514,
+          "epochMs": 1793129891617.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 121.29999923706055,
+          "epochMs": 1793129891633.4001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 138.5,
+          "epochMs": 1793129891650.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 154.5999994277954,
+          "epochMs": 1793129891666.7002,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 171.79999923706055,
+          "epochMs": 1793129891683.9001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 187.89999961853027,
+          "epochMs": 1793129891700,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 205.19999980926514,
+          "epochMs": 1793129891717.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 221.0999994277954,
+          "epochMs": 1793129891733.2002,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 238.39999961853027,
+          "epochMs": 1793129891750.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 255.0999994277954,
+          "epochMs": 1793129891767.2002,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 271.69999980926514,
+          "epochMs": 1793129891783.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 288.3999996185303,
+          "epochMs": 1793129891800.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 305.19999980926514,
+          "epochMs": 1793129891817.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 321.79999923706055,
+          "epochMs": 1793129891833.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 338.5,
+          "epochMs": 1793129891850.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 355.0999994277954,
+          "epochMs": 1793129891867.2002,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 371.69999980926514,
+          "epochMs": 1793129891883.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 388.5,
+          "epochMs": 1793129891900.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 405.19999980926514,
+          "epochMs": 1793129891917.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 421.79999923706055,
+          "epochMs": 1793129891933.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 438.3999996185303,
+          "epochMs": 1793129891950.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 455,
+          "epochMs": 1793129891967.1,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 471.69999980926514,
+          "epochMs": 1793129891983.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 488.29999923706055,
+          "epochMs": 1793129892000.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 505.0999994277954,
+          "epochMs": 1793129892017.2002,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 521.0999994277954,
+          "epochMs": 1793129892033.2002,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 538.5,
+          "epochMs": 1793129892050.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 555.0999994277954,
+          "epochMs": 1793129892067.2002,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 571.7999992370605,
+          "epochMs": 1793129892083.9001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 587.8999996185303,
+          "epochMs": 1793129892100,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 605.2999992370605,
+          "epochMs": 1793129892117.4001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 621.6999998092651,
+          "epochMs": 1793129892133.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 638.5,
+          "epochMs": 1793129892150.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 655.0999994277954,
+          "epochMs": 1793129892167.2002,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 671.6999998092651,
+          "epochMs": 1793129892183.8,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 688.5,
+          "epochMs": 1793129892200.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 705.1999998092651,
+          "epochMs": 1793129892217.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 721.7999992370605,
+          "epochMs": 1793129892233.9001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 738.3999996185303,
+          "epochMs": 1793129892250.5,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 755.0999994277954,
+          "epochMs": 1793129892267.3,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 771.6999998092651,
+          "epochMs": 1793129892283.8,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 788.5,
+          "epochMs": 1793129892300.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 805.2999992370605,
+          "epochMs": 1793129892317.4001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 821.7999992370605,
+          "epochMs": 1793129892333.9001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 838.5,
+          "epochMs": 1793129892350.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 854.5999994277954,
+          "epochMs": 1793129892366.7002,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 871.7999992370605,
+          "epochMs": 1793129892383.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 888.5,
+          "epochMs": 1793129892400.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 905.2999992370605,
+          "epochMs": 1793129892417.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 921.7999992370605,
+          "epochMs": 1793129892433.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 938.5,
+          "epochMs": 1793129892450.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 955.0999994277954,
+          "epochMs": 1793129892467.2002,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 971.7999992370605,
+          "epochMs": 1793129892483.9001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 988.5,
+          "epochMs": 1793129892500.6,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 1005.2999992370605,
+          "epochMs": 1793129892517.4001,
+          "color": "rgb(125, 125, 125)"
+        },
+        {
+          "documentMs": 1021.1999998092651,
+          "epochMs": 1793129892533.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1038.5,
+          "epochMs": 1793129892550.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1055.0999994277954,
+          "epochMs": 1793129892567.2002,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1071.7999992370605,
+          "epochMs": 1793129892583.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1088.3999996185303,
+          "epochMs": 1793129892600.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1105.2999992370605,
+          "epochMs": 1793129892617.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1121.7999992370605,
+          "epochMs": 1793129892633.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1138.3999996185303,
+          "epochMs": 1793129892650.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1154.5,
+          "epochMs": 1793129892666.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1171.7999992370605,
+          "epochMs": 1793129892683.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1187.8999996185303,
+          "epochMs": 1793129892700,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1205.2999992370605,
+          "epochMs": 1793129892717.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1221.1999998092651,
+          "epochMs": 1793129892733.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1238.3999996185303,
+          "epochMs": 1793129892750.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1255.1999998092651,
+          "epochMs": 1793129892767.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1271.7999992370605,
+          "epochMs": 1793129892783.9001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1287.8999996185303,
+          "epochMs": 1793129892800,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1305.1999998092651,
+          "epochMs": 1793129892817.3,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1321.2999992370605,
+          "epochMs": 1793129892833.4001,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1338.3999996185303,
+          "epochMs": 1793129892850.5,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1354.5,
+          "epochMs": 1793129892866.6,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1371.8999996185303,
+          "epochMs": 1793129892884,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1387.8999996185303,
+          "epochMs": 1793129892900,
+          "color": "rgb(35, 35, 35)"
+        },
+        {
+          "documentMs": 1405.2999992370605,
+          "epochMs": 1793129892917.4001,
+          "color": "rgb(35, 35, 35)"
+        }
+      ]
+    }
+  }
+}

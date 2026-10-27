@@ -1,0 +1,18 @@
+{
+  "scope": "Actual browser document, animation and colour sampling; explicitly synthetic candidate/quality and source boundary clock, no tabCapture or native detector proof",
+  "supersedesScope": "The earlier retained phase-browser checkpoint omitted coincidental document-timer starts. TRIGGER now supplies additional timing evidence and never waives document coverage.",
+  "evidenceSha256": "a9e9bc26ed960bd2289a8cb39b3e4cfcb83f6f84b9b1195224a76a231531bed6",
+  "executedBundleHashes": {
+    "nodeBundleSha256": "d679543694203f976f43d3557146682e430c1a3457cdcd4032efa41353b715ce",
+    "contentBundleSha256": "282cac80d8e1d9d7090ba730e55a3d29a016a435c48fc1e35dbf7b221af950ea",
+    "fixtureScriptSha256": "23e6129ac4d1f238f44d4320680aa032ea96fa5a361cb7c6ac4e899d1cca4bea"
+  },
+  "sourceFiles": {
+    "apps/chrome-extension/src/animation-phase.ts": "4d1ae85b504b53e0fbc2ae2b05e993c21d8baadf0dcece10fb9cedd12a72f95d",
+    "apps/chrome-extension/src/animation-phase-content.ts": "093367f79d16780b39a8eeda5b66c6599120a9dce50d2175e32b47c206a76433",
+    "apps/chrome-extension/src/background.ts": "e449f37bb9cbc69865cf0b0e5e5f9ea29591449b02b1e1a7f6cd39dd5063f1fb",
+    "apps/chrome-extension/src/verification.ts": "3533d5663c064500d1f11fea90c6e0cf8017bd40d820f87ab98726b961080e9d",
+    "tests/extension/animation-phase-browser.mjs": "23e6129ac4d1f238f44d4320680aa032ea96fa5a361cb7c6ac4e899d1cca4bea",
+    "tests/extension/animation-phase-bounds-browser.mjs": "badc71c19fe13a4ff4382ab143101edc23a76d7bc60da5396dce179e3c517c4e"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "scope": "One tiny pre-encoded lossless VP9/WebM presented by an actual HTML video in desktop and compact native captures. This is not broad codec, natural-video, colour-management or hardware validation.",
+  "scannerBuildSha256": "af5d4da032b7a92cfbb090a1fe59adfc4601334d0d3547e6a5b9ff776c9637ce",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "6774849080a96d2bb507b9d394e556d03201645e5c4565eeb579323a7c497236"
+  },
+  "jobId": "b5a98ca5-8454-444f-8f5d-e7aac90d6cd1",
+  "jobState": "PARTIAL",
+  "sourceSha256": "03bf0717f3b337b11a91c92f7caa31337a38d0644b795a8ae7e3ea4e74240092",
+  "sourceManifestSha256": "c6ffd34d863227489ea8bcd3924cc5e520f9e67ca11bac05a3f9f2c076acb73c",
+  "sourceDecoderProof": "ALL_DECODED_RGBA_BYTES_AND_PTS_MATCH",
+  "measurements": [
+    {
+      "scenario": "accordion-2",
+      "achieved": true,
+      "status": "NEEDS_REVIEW",
+      "frames": 307,
+      "fps": 60.001176486924656,
+      "maximumGapMs": 18.100000381469727,
+      "interrupted": false,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "worker": {
+        "measuredFrames": 307,
+        "meanMs": 8.156026057389349,
+        "maxMs": 28.399999618530273,
+        "framesOver16_7Ms": 2,
+        "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+        "conversionMeanMs": 3.950162884466811,
+        "analysisMeanMs": 4.2003257173668676,
+        "conversionMethods": [
+          "VIDEOFRAME_COPY_RGBA"
+        ],
+        "analysisBackend": {
+          "backend": "WASM_DENSE",
+          "selectionReason": "READY",
+          "denseFrames": 0,
+          "inputCopiedBytes": 0,
+          "inputCopyMs": 0,
+          "kernelMs": 0,
+          "wasmMemoryBytes": 160759808,
+          "migratedStateBytes": 152536336,
+          "extraStateBytes": 8223472,
+          "engineStateBytes": 194358672,
+          "embeddedKernelBytes": 2239
+        },
+        "decoded": {
+          "codedWidth": 1800,
+          "codedHeight": 1126,
+          "displayWidth": 1800,
+          "displayHeight": 1126,
+          "visibleRect": {
+            "x": 0,
+            "y": 0,
+            "width": 1800,
+            "height": 1126
+          },
+          "format": "I420",
+          "primaries": "bt709",
+          "transfer": "bt709",
+          "matrix": "bt709"
+        },
+        "track": {
+          "width": 1800,
+          "height": 1126,
+          "frameRate": 60,
+          "resizeMode": "none"
+        }
+      },
+      "limitations": [
+        "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+        "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+        "Candidate start/end times are relative to the first analyzed decoded frame, not the scenario start. Leading capture delay is reported separately; source and wall-clock timestamps are not interchangeable."
+      ],
+      "tinyCandidateObserved": true,
+      "adequateCapture": true,
+      "maximumNativeGreyError": 0
+    },
+    {
+      "scenario": "compact-accordion",
+      "achieved": true,
+      "status": "NEEDS_REVIEW",
+      "frames": 306,
+      "fps": 59.99803285138192,
+      "maximumGapMs": 17.800000190734863,
+      "interrupted": false,
+      "sourceWidth": 1200,
+      "sourceHeight": 1126,
+      "worker": {
+        "measuredFrames": 306,
+        "meanMs": 6.216993481505151,
+        "maxMs": 18.800000190734863,
+        "framesOver16_7Ms": 1,
+        "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+        "conversionMeanMs": 3.315686275756437,
+        "analysisMeanMs": 2.897712439493416,
+        "conversionMethods": [
+          "VIDEOFRAME_COPY_RGBA"
+        ],
+        "analysisBackend": {
+          "backend": "WASM_DENSE",
+          "selectionReason": "READY",
+          "denseFrames": 0,
+          "inputCopiedBytes": 0,
+          "inputCopyMs": 0,
+          "kernelMs": 0,
+          "wasmMemoryBytes": 107347968,
+          "migratedStateBytes": 101866336,
+          "extraStateBytes": 5481632,
+          "engineStateBytes": 135446857,
+          "embeddedKernelBytes": 2239
+        },
+        "decoded": {
+          "codedWidth": 1200,
+          "codedHeight": 1126,
+          "displayWidth": 1200,
+          "displayHeight": 1126,
+          "visibleRect": {
+            "x": 0,
+            "y": 0,
+            "width": 1200,
+            "height": 1126
+          },
+          "format": "I420",
+          "primaries": "bt709",
+          "transfer": "bt709",
+          "matrix": "bt709"
+        },
+        "track": {
+          "width": 1200,
+          "height": 1126,
+          "frameRate": 60,
+          "resizeMode": "none"
+        }
+      },
+      "limitations": [
+        "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+        "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+        "Candidate start/end times are relative to the first analyzed decoded frame, not the scenario start. Leading capture delay is reported separately; source and wall-clock timestamps are not interchangeable."
+      ],
+      "tinyCandidateObserved": true,
+      "adequateCapture": true,
+      "maximumNativeGreyError": 0
+    }
+  ],
+  "matchingCompactPresentations": 20,
+  "alignment": "Final compact-document presentation metadata only. Source-to-DOM latency remains unknown; matching timestamps do not establish general causal attribution.",
+  "errors": []
+}

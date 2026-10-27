@@ -1,0 +1,7 @@
+{
+  "classification": "CONCURRENT_PRODUCTION_GUARD_ABORT_NOT_COMPLETED_LAYOUT_TEST",
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Collector errors invalidate this integration proof.\n+ actual - expected\n\n+ [\n+   'Error: TAB_SWITCH_PROBE_OWNERSHIP_OR_CONTEXT_CHANGED'\n+ ]\n- []\n\n    at verifyNativeContextGuard (file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:33:10)\n    at file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:516:7 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: [ 'Error: TAB_SWITCH_PROBE_OWNERSHIP_OR_CONTEXT_CHANGED' ],\n  expected: [],\n  operator: 'deepStrictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n",
+  "verifierSha256": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622"
+}

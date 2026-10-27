@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "preservedAt": "2026-10-27T18:51:06.756106+00:00",
+  "scope": "One tiny immutable encoded lossless VP9/WebM source through real HTML video, native capture, candidate/source diagnostics and export at desktop and compact geometry. One Apple M2 Max and Chrome configuration only; not arbitrary content, codec, colour, physical display or hardware validation. No raw frame, screenshot or browser profile retained.",
+  "jobId": "dce4335e-d69c-45f4-80c1-dfb06d379f71",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "engineTreeSha256": "c216fbe2c9de76354061c35ba4df09e7e0a25731e5be247f3a7092aca2ca687a",
+  "extensionArtifactSha256": "d0ac12bb19825c77f5d796bdbfa8b06eb965d539d53c4144c2fc2ff25ad8a7fc",
+  "strictPublicSchema": "PASS",
+  "verificationExitCode": 0,
+  "verificationArguments": [],
+  "mediaReplayBoundary": "Both positive observations retain MEDIA_REPLAY_NOT_REPRODUCIBLE; this does not validate a compatible negative media recheck. Source-to-DOM latency remains unknown.",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-encoded-capture.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-7c073X/dce4335e-d69c-45f4-80c1-dfb06d379f71.json",
+      "bytes": 181305,
+      "sha256": "359457b564da8dde9af53bea8d4fc227a767a633e632db2145dce33a2e6e16bd"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-encoded-local-job.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-7c073X/dce4335e-d69c-45f4-80c1-dfb06d379f71-local-job.json",
+      "bytes": 517662,
+      "sha256": "9ee9a1f39a80d50910195a85373ba8e87feff84480213c3cf04e79f28e29b598"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-encoded-environment.json",
+      "original": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-7c073X/dce4335e-d69c-45f4-80c1-dfb06d379f71-environment.json",
+      "bytes": 226979,
+      "sha256": "b9c224383155ade9b4ba5c75aef2169b11f0cb5927155aeb75da39a69934c2a2"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-current-encoded-verification.json",
+      "original": "/tmp/epiless-native-current-encoded-verification.json",
+      "bytes": 5785,
+      "sha256": "bad66b8f99aacf01f4056fd5c0f8c3c77ef027d273c89732a5f62bf8e2ebffbf"
+    }
+  ]
+}

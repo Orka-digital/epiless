@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "scope": "One genuine native encoded-video current-profile control, same-build targeted site-content fix and recurrence. No normative, broad video, hardware or causal guarantee.",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "d0ac12bb19825c77f5d796bdbfa8b06eb965d539d53c4144c2fc2ff25ad8a7fc",
+    "embeddedScannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61"
+  },
+  "anchor": {
+    "taskId": "0212337e-c0cd-41b0-8e0c-83c880712a19",
+    "observationId": "25d7f496-ea6a-4c30-a013-a784c99fe0b5",
+    "findingId": "candidate-1"
+  },
+  "comparison": {
+    "fixed": "NOT_OBSERVED",
+    "recurrence": "REOBSERVED"
+  },
+  "measurements": [
+    {
+      "jobId": "3753361c-8a26-4e87-8d1c-77a7833225e1",
+      "observationId": "25d7f496-ea6a-4c30-a013-a784c99fe0b5",
+      "fixed": false,
+      "frames": 307,
+      "fps": 59.99411822370356,
+      "maxGapMs": 17.90000057220459,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "postMeasurementRestoration": []
+    },
+    {
+      "jobId": "7811c915-1f18-4dfe-9985-2f8111e89805",
+      "observationId": "71a2f196-4b51-4ca3-aecf-c4f88dbb4595",
+      "fixed": true,
+      "frames": 306,
+      "fps": 59.990952179759496,
+      "maxGapMs": 17.800000190734863,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "postMeasurementRestoration": [
+        {
+          "atEpochMs": 1793127772508.1,
+          "afterMeasurementMs": 5.7001953125,
+          "afterObservationMs": 5.10009765625,
+          "restoredTimeMs": 0
+        }
+      ]
+    },
+    {
+      "jobId": "fd27bb38-1836-4974-abf6-ce41c5c1b63e",
+      "observationId": "223e0128-1d63-4134-b150-7ae7f85e4539",
+      "fixed": false,
+      "frames": 307,
+      "fps": 59.987061609675706,
+      "maxGapMs": 18.399999618530273,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "mediaPresentations": 53,
+      "mediaInterval": {
+        "startMs": 0,
+        "endMs": 2120,
+        "wraps": 0,
+        "presentedWraps": 0,
+        "presentations": 53,
+        "presentedEndMs": 2080
+      },
+      "postMeasurementRestoration": [
+        {
+          "atEpochMs": 1793127852513.0999,
+          "afterMeasurementMs": 9.599853515625,
+          "afterObservationMs": 9.099853515625,
+          "restoredTimeMs": 0
+        }
+      ]
+    }
+  ],
+  "independentDocuments": [
+    {
+      "documentId": "d8e21eae-db31-427d-943b-31af9d4ed64a",
+      "sourceSha256": "03bf0717f3b337b11a91c92f7caa31337a38d0644b795a8ae7e3ea4e74240092",
+      "servedHtmlSha256": "47c90981d80930dd25ac2eee729d2295e61f8a95abcfd0ae3c0ba1d61ab51edc"
+    },
+    {
+      "documentId": "9168f459-78c4-4113-9d9e-79977d31b37c",
+      "sourceSha256": "f43fcae9859f69770c5726639bb681c67d333e95a576d51d7de0443de1a8248f",
+      "servedHtmlSha256": "3df13b59ffc0cb0fd4676d7e32be23e5ce8db9c29355662fc343d8179b00cb20"
+    },
+    {
+      "documentId": "d52cf2e7-cdca-4fcf-ad9c-e579a6c724a5",
+      "sourceSha256": "03bf0717f3b337b11a91c92f7caa31337a38d0644b795a8ae7e3ea4e74240092",
+      "servedHtmlSha256": "bebcbb22ef30b391ef01a63bebd85e7965b500d7d2002c35125d5f14f35368e9"
+    }
+  ],
+  "sourceIdentity": "The same URL intentionally serves different source bytes during the fix. Independent manifest/request hashes prove this fixture change; the scanner only proves locator and observed media-interval compatibility.",
+  "sourceManifestSha256": "c6ffd34d863227489ea8bcd3924cc5e520f9e67ca11bac05a3f9f2c076acb73c"
+}

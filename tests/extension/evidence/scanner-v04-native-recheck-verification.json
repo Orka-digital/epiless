@@ -1,0 +1,15 @@
+{
+  "scope": "One actual native tiny-detail control, same-build targeted fix and recurrence; no broad device or safety claim",
+  "scannerBuildSha256": "fea8073dd5f05b2a36164962cb1428627578d324fb8cc9385c058b18bbfbc753",
+  "baselineJobId": "44c1692c-db41-4a89-9ea1-07c6302f9e31",
+  "fixedJobId": "8093001d-2260-4acb-b0b1-a0d11aea16b2",
+  "recurrenceJobId": "981c1d31-8798-446c-a1ee-948c2ba3c24a",
+  "anchor": {
+    "taskId": "ed223900-d387-4b3e-97c3-7e59e4150cf9",
+    "observationId": "199232c5-286a-4f75-925b-50e872a7d30b",
+    "findingId": "candidate-1"
+  },
+  "fixed": "NOT_OBSERVED",
+  "recurrence": "REOBSERVED",
+  "source": "Tiny animated element present in during-event samples; correlation remains distinct from proven causality"
+}

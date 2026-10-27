@@ -1,0 +1,9225 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "machine": {
+    "arch": "arm64",
+    "os": "darwin",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "recordedAt": "2026-10-27T16:09:47.829Z",
+  "emulateViewport": false,
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "initialGeometry": {
+    "innerWidth": 900,
+    "innerHeight": 563,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "devicePixelRatio": 2,
+    "screen": {
+      "width": 3360,
+      "height": 1890,
+      "availWidth": 3360,
+      "availHeight": 1755
+    },
+    "visibility": "visible"
+  },
+  "finalGeometry": {
+    "devicePixelRatio": 2,
+    "innerHeight": 563,
+    "innerWidth": 900,
+    "outerHeight": 650,
+    "outerWidth": 900,
+    "visibility": "visible"
+  },
+  "pixelProbe": null,
+  "denseProbe": {
+    "instrumentation": "Temporary copied extension samples four corner RGB values on first/every29th submitted frame, at most120 samples, adding periodic readback overhead. No images retained. Production dist unchanged; timings include fixture instrumentation.",
+    "channelMinimum": 90,
+    "channelMaximum": 113,
+    "samples": [
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117339982.4001,
+        "sourceTimestampMs": 4825296881.1,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 29,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117340460.9001,
+        "sourceTimestampMs": 4825297364.9,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 58,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117340944.3,
+        "sourceTimestampMs": 4825297847.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 87,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117341430,
+        "sourceTimestampMs": 4825298331.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 116,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117341961.9001,
+        "sourceTimestampMs": 4825298865,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 145,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117342444,
+        "sourceTimestampMs": 4825299347.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 174,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117342928.4001,
+        "sourceTimestampMs": 4825299831.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 203,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117343411.3,
+        "sourceTimestampMs": 4825300315,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 232,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117343895.8,
+        "sourceTimestampMs": 4825300798.1,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 261,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117344379,
+        "sourceTimestampMs": 4825301281.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 290,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117344863.4001,
+        "sourceTimestampMs": 4825301764.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 319,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117345345,
+        "sourceTimestampMs": 4825302248.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 348,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117345829.2002,
+        "sourceTimestampMs": 4825302731.8,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 377,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117346312.2002,
+        "sourceTimestampMs": 4825303215.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 406,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117346794.6,
+        "sourceTimestampMs": 4825303698.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 435,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117347278.8,
+        "sourceTimestampMs": 4825304182.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 464,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117347765,
+        "sourceTimestampMs": 4825304665,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 493,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117348245.7002,
+        "sourceTimestampMs": 4825305148.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 522,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117348729.1,
+        "sourceTimestampMs": 4825305632.1,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 551,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117349211.2002,
+        "sourceTimestampMs": 4825306114.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 580,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117349696,
+        "sourceTimestampMs": 4825306598.8,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 609,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117350178.5,
+        "sourceTimestampMs": 4825307081.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 638,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117350662.5,
+        "sourceTimestampMs": 4825307565.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 667,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117351146,
+        "sourceTimestampMs": 4825308049,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 696,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117351629.1,
+        "sourceTimestampMs": 4825308532.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 725,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117352112.7002,
+        "sourceTimestampMs": 4825309015.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 754,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117352595.3,
+        "sourceTimestampMs": 4825309498.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 783,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117353078.6,
+        "sourceTimestampMs": 4825309981.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 812,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117353563.1,
+        "sourceTimestampMs": 4825310465.7,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 841,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117354045.6,
+        "sourceTimestampMs": 4825310948.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 870,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117354528.6,
+        "sourceTimestampMs": 4825311431.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 899,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117355012.5,
+        "sourceTimestampMs": 4825311915.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 928,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117355496.3,
+        "sourceTimestampMs": 4825312399.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 957,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117355979.3,
+        "sourceTimestampMs": 4825312882.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 986,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117356463.1,
+        "sourceTimestampMs": 4825313365.8,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1015,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117356962.7002,
+        "sourceTimestampMs": 4825313865.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1044,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117357446.6,
+        "sourceTimestampMs": 4825314349.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1073,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117357929.6,
+        "sourceTimestampMs": 4825314832.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1102,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117358412.7002,
+        "sourceTimestampMs": 4825315315.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1131,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117358895.3,
+        "sourceTimestampMs": 4825315798.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1160,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117359379.2002,
+        "sourceTimestampMs": 4825316282.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            100,
+            105,
+            104,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1189,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117359863.3,
+        "sourceTimestampMs": 4825316766,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            102,
+            100,
+            100,
+            255
+          ],
+          [
+            110,
+            105,
+            106,
+            255
+          ],
+          [
+            102,
+            94,
+            103,
+            255
+          ],
+          [
+            101,
+            98,
+            107,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1218,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117360364.4001,
+        "sourceTimestampMs": 4825317266.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            100,
+            103,
+            255
+          ],
+          [
+            98,
+            93,
+            92,
+            255
+          ],
+          [
+            94,
+            96,
+            99,
+            255
+          ],
+          [
+            101,
+            102,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1247,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117361181,
+        "sourceTimestampMs": 4825318082.8,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            106,
+            113,
+            112,
+            255
+          ],
+          [
+            103,
+            101,
+            95,
+            255
+          ],
+          [
+            106,
+            109,
+            110,
+            255
+          ],
+          [
+            90,
+            93,
+            90,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1276,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117362098,
+        "sourceTimestampMs": 4825318999.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            99,
+            103,
+            108,
+            255
+          ],
+          [
+            108,
+            109,
+            104,
+            255
+          ],
+          [
+            99,
+            99,
+            101,
+            255
+          ],
+          [
+            105,
+            103,
+            102,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1305,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117363014.5,
+        "sourceTimestampMs": 4825319916.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            94,
+            91,
+            98,
+            255
+          ],
+          [
+            104,
+            104,
+            100,
+            255
+          ],
+          [
+            102,
+            107,
+            104,
+            255
+          ],
+          [
+            96,
+            94,
+            92,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1334,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117363885.3,
+        "sourceTimestampMs": 4825320765.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            104,
+            111,
+            113,
+            255
+          ],
+          [
+            103,
+            98,
+            97,
+            255
+          ],
+          [
+            106,
+            106,
+            106,
+            255
+          ],
+          [
+            108,
+            113,
+            108,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1363,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117364733.5,
+        "sourceTimestampMs": 4825321633.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1392,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117365731.2002,
+        "sourceTimestampMs": 4825322633.1,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1421,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117366214.6,
+        "sourceTimestampMs": 4825323116.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1450,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117366697.5,
+        "sourceTimestampMs": 4825323599.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1479,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117367181.5,
+        "sourceTimestampMs": 4825324083.1,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1508,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117367664.7002,
+        "sourceTimestampMs": 4825324566.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1537,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117368148.4001,
+        "sourceTimestampMs": 4825325049.9,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1566,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117368631.5,
+        "sourceTimestampMs": 4825325533.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1595,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117369114.8,
+        "sourceTimestampMs": 4825326016.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1624,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117369598.4001,
+        "sourceTimestampMs": 4825326499.9,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1653,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117370083.4001,
+        "sourceTimestampMs": 4825326983.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1682,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117370564.7002,
+        "sourceTimestampMs": 4825327466.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1711,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117371048.2002,
+        "sourceTimestampMs": 4825327950,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1740,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117371532,
+        "sourceTimestampMs": 4825328433.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            98,
+            98,
+            96,
+            255
+          ],
+          [
+            114,
+            109,
+            113,
+            255
+          ],
+          [
+            97,
+            92,
+            97,
+            255
+          ],
+          [
+            107,
+            99,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1769,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1787,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117372014.9001,
+        "sourceTimestampMs": 4825328916.8,
+        "timeOrigin": 1793117339783.6,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 1,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117374346.9001,
+        "sourceTimestampMs": 4825331250.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 29,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117374814.3,
+        "sourceTimestampMs": 4825331716.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 58,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117375296.7002,
+        "sourceTimestampMs": 4825332200.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 87,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117375779.2002,
+        "sourceTimestampMs": 4825332683.7,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 116,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117376264.5,
+        "sourceTimestampMs": 4825333166.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 145,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117376746.5,
+        "sourceTimestampMs": 4825333650.4,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 174,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117377231.7002,
+        "sourceTimestampMs": 4825334133.5,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 203,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117377715,
+        "sourceTimestampMs": 4825334617.2,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 232,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117378197.7002,
+        "sourceTimestampMs": 4825335100.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 261,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117378681.2002,
+        "sourceTimestampMs": 4825335583.9,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            105,
+            105,
+            105,
+            255
+          ],
+          [
+            94,
+            95,
+            92,
+            255
+          ],
+          [
+            105,
+            105,
+            103,
+            255
+          ],
+          [
+            97,
+            100,
+            95,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 290,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117379164.7002,
+        "sourceTimestampMs": 4825336067.1,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            106,
+            101,
+            106,
+            255
+          ],
+          [
+            106,
+            102,
+            100,
+            255
+          ],
+          [
+            101,
+            98,
+            99,
+            255
+          ],
+          [
+            89,
+            95,
+            98,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 319,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117379698,
+        "sourceTimestampMs": 4825336600.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            94,
+            97,
+            89,
+            255
+          ],
+          [
+            90,
+            92,
+            92,
+            255
+          ],
+          [
+            106,
+            109,
+            104,
+            255
+          ],
+          [
+            107,
+            100,
+            101,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 348,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117380299,
+        "sourceTimestampMs": 4825337200.8,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            106,
+            112,
+            97,
+            255
+          ],
+          [
+            106,
+            113,
+            112,
+            255
+          ],
+          [
+            101,
+            108,
+            102,
+            255
+          ],
+          [
+            95,
+            100,
+            99,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 377,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117380932,
+        "sourceTimestampMs": 4825337833.7,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            94,
+            100,
+            103,
+            255
+          ],
+          [
+            100,
+            100,
+            104,
+            255
+          ],
+          [
+            94,
+            96,
+            99,
+            255
+          ],
+          [
+            108,
+            110,
+            105,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 406,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117381532.3,
+        "sourceTimestampMs": 4825338434.1,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            109,
+            107,
+            107,
+            255
+          ],
+          [
+            109,
+            108,
+            97,
+            255
+          ],
+          [
+            105,
+            103,
+            102,
+            255
+          ],
+          [
+            97,
+            100,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 435,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117382115.7002,
+        "sourceTimestampMs": 4825339017.3,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            104,
+            111,
+            113,
+            255
+          ],
+          [
+            109,
+            110,
+            107,
+            255
+          ],
+          [
+            106,
+            106,
+            106,
+            255
+          ],
+          [
+            98,
+            96,
+            97,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 464,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117382682,
+        "sourceTimestampMs": 4825339583.7,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            95,
+            92,
+            99,
+            255
+          ],
+          [
+            96,
+            94,
+            96,
+            255
+          ],
+          [
+            102,
+            108,
+            100,
+            255
+          ],
+          [
+            107,
+            103,
+            102,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 493,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117383264.5,
+        "sourceTimestampMs": 4825340167.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            104,
+            100,
+            92,
+            255
+          ],
+          [
+            108,
+            99,
+            105,
+            255
+          ],
+          [
+            98,
+            96,
+            97,
+            255
+          ],
+          [
+            107,
+            112,
+            109,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 522,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117383849,
+        "sourceTimestampMs": 4825340751,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            104,
+            103,
+            96,
+            255
+          ],
+          [
+            107,
+            104,
+            107,
+            255
+          ],
+          [
+            101,
+            99,
+            97,
+            255
+          ],
+          [
+            103,
+            111,
+            102,
+            255
+          ]
+        ],
+        "frameNumberAtGeometry": 551,
+        "height": 1126,
+        "metadata": {
+          "available": true,
+          "captureTime": null,
+          "receiveTime": null
+        },
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            1113
+          ],
+          [
+            1187,
+            1113
+          ]
+        ],
+        "receiptEpochMs": 1793117384416,
+        "sourceTimestampMs": 4825341317.6,
+        "timeOrigin": 1793117339783.6,
+        "width": 1200
+      }
+    ]
+  },
+  "candidateFixture": {
+    "dense": true,
+    "denseBackground": {
+      "channelMaximum": 113,
+      "channelMinimum": 90,
+      "draws": [
+        {
+          "at": 1793117379491,
+          "height": 1126,
+          "tick": 0,
+          "width": 1200
+        },
+        {
+          "at": 1793117379507.2,
+          "height": 1126,
+          "tick": 1,
+          "width": 1200
+        },
+        {
+          "at": 1793117379523.2,
+          "height": 1126,
+          "tick": 2,
+          "width": 1200
+        },
+        {
+          "at": 1793117379540.4,
+          "height": 1126,
+          "tick": 3,
+          "width": 1200
+        },
+        {
+          "at": 1793117379556.3,
+          "height": 1126,
+          "tick": 4,
+          "width": 1200
+        },
+        {
+          "at": 1793117379573.9,
+          "height": 1126,
+          "tick": 5,
+          "width": 1200
+        },
+        {
+          "at": 1793117379590.3,
+          "height": 1126,
+          "tick": 6,
+          "width": 1200
+        },
+        {
+          "at": 1793117379607.1,
+          "height": 1126,
+          "tick": 7,
+          "width": 1200
+        },
+        {
+          "at": 1793117379623.7,
+          "height": 1126,
+          "tick": 8,
+          "width": 1200
+        },
+        {
+          "at": 1793117379640.4,
+          "height": 1126,
+          "tick": 9,
+          "width": 1200
+        },
+        {
+          "at": 1793117379656.3,
+          "height": 1126,
+          "tick": 10,
+          "width": 1200
+        },
+        {
+          "at": 1793117379673.3,
+          "height": 1126,
+          "tick": 11,
+          "width": 1200
+        },
+        {
+          "at": 1793117379690,
+          "height": 1126,
+          "tick": 12,
+          "width": 1200
+        },
+        {
+          "at": 1793117379706.4,
+          "height": 1126,
+          "tick": 13,
+          "width": 1200
+        },
+        {
+          "at": 1793117379723.2,
+          "height": 1126,
+          "tick": 14,
+          "width": 1200
+        },
+        {
+          "at": 1793117379740.5,
+          "height": 1126,
+          "tick": 15,
+          "width": 1200
+        },
+        {
+          "at": 1793117379757.1,
+          "height": 1126,
+          "tick": 16,
+          "width": 1200
+        },
+        {
+          "at": 1793117379773.3,
+          "height": 1126,
+          "tick": 17,
+          "width": 1200
+        },
+        {
+          "at": 1793117379790.3,
+          "height": 1126,
+          "tick": 18,
+          "width": 1200
+        },
+        {
+          "at": 1793117379806.5,
+          "height": 1126,
+          "tick": 19,
+          "width": 1200
+        },
+        {
+          "at": 1793117379823.6,
+          "height": 1126,
+          "tick": 20,
+          "width": 1200
+        },
+        {
+          "at": 1793117379840.5,
+          "height": 1126,
+          "tick": 21,
+          "width": 1200
+        },
+        {
+          "at": 1793117379857,
+          "height": 1126,
+          "tick": 22,
+          "width": 1200
+        },
+        {
+          "at": 1793117379873.8,
+          "height": 1126,
+          "tick": 23,
+          "width": 1200
+        },
+        {
+          "at": 1793117379890.2,
+          "height": 1126,
+          "tick": 24,
+          "width": 1200
+        },
+        {
+          "at": 1793117379907.2,
+          "height": 1126,
+          "tick": 25,
+          "width": 1200
+        },
+        {
+          "at": 1793117379923.2,
+          "height": 1126,
+          "tick": 26,
+          "width": 1200
+        },
+        {
+          "at": 1793117379940.4,
+          "height": 1126,
+          "tick": 27,
+          "width": 1200
+        },
+        {
+          "at": 1793117379957,
+          "height": 1126,
+          "tick": 28,
+          "width": 1200
+        },
+        {
+          "at": 1793117379973.8,
+          "height": 1126,
+          "tick": 29,
+          "width": 1200
+        },
+        {
+          "at": 1793117379990.4,
+          "height": 1126,
+          "tick": 30,
+          "width": 1200
+        },
+        {
+          "at": 1793117380006.1,
+          "height": 1126,
+          "tick": 31,
+          "width": 1200
+        },
+        {
+          "at": 1793117380023.9,
+          "height": 1126,
+          "tick": 32,
+          "width": 1200
+        },
+        {
+          "at": 1793117380040.3,
+          "height": 1126,
+          "tick": 33,
+          "width": 1200
+        },
+        {
+          "at": 1793117380057.1,
+          "height": 1126,
+          "tick": 34,
+          "width": 1200
+        },
+        {
+          "at": 1793117380073.7,
+          "height": 1126,
+          "tick": 35,
+          "width": 1200
+        },
+        {
+          "at": 1793117380090.3,
+          "height": 1126,
+          "tick": 36,
+          "width": 1200
+        },
+        {
+          "at": 1793117380106.2,
+          "height": 1126,
+          "tick": 37,
+          "width": 1200
+        },
+        {
+          "at": 1793117380123.2,
+          "height": 1126,
+          "tick": 38,
+          "width": 1200
+        },
+        {
+          "at": 1793117380140.4,
+          "height": 1126,
+          "tick": 39,
+          "width": 1200
+        },
+        {
+          "at": 1793117380157.1,
+          "height": 1126,
+          "tick": 40,
+          "width": 1200
+        },
+        {
+          "at": 1793117380173.6,
+          "height": 1126,
+          "tick": 41,
+          "width": 1200
+        },
+        {
+          "at": 1793117380190.4,
+          "height": 1126,
+          "tick": 42,
+          "width": 1200
+        },
+        {
+          "at": 1793117380206.3,
+          "height": 1126,
+          "tick": 43,
+          "width": 1200
+        },
+        {
+          "at": 1793117380223.9,
+          "height": 1126,
+          "tick": 44,
+          "width": 1200
+        },
+        {
+          "at": 1793117380240.4,
+          "height": 1126,
+          "tick": 45,
+          "width": 1200
+        },
+        {
+          "at": 1793117380256.2,
+          "height": 1126,
+          "tick": 46,
+          "width": 1200
+        },
+        {
+          "at": 1793117380273.4,
+          "height": 1126,
+          "tick": 47,
+          "width": 1200
+        },
+        {
+          "at": 1793117380290.3,
+          "height": 1126,
+          "tick": 48,
+          "width": 1200
+        },
+        {
+          "at": 1793117380306.3,
+          "height": 1126,
+          "tick": 49,
+          "width": 1200
+        },
+        {
+          "at": 1793117380323.2,
+          "height": 1126,
+          "tick": 50,
+          "width": 1200
+        },
+        {
+          "at": 1793117380340.3,
+          "height": 1126,
+          "tick": 51,
+          "width": 1200
+        },
+        {
+          "at": 1793117380356.2,
+          "height": 1126,
+          "tick": 52,
+          "width": 1200
+        },
+        {
+          "at": 1793117380374,
+          "height": 1126,
+          "tick": 53,
+          "width": 1200
+        },
+        {
+          "at": 1793117380390.4,
+          "height": 1126,
+          "tick": 54,
+          "width": 1200
+        },
+        {
+          "at": 1793117380407.1,
+          "height": 1126,
+          "tick": 55,
+          "width": 1200
+        },
+        {
+          "at": 1793117380423.7,
+          "height": 1126,
+          "tick": 56,
+          "width": 1200
+        },
+        {
+          "at": 1793117380440.2,
+          "height": 1126,
+          "tick": 57,
+          "width": 1200
+        },
+        {
+          "at": 1793117380457.1,
+          "height": 1126,
+          "tick": 58,
+          "width": 1200
+        },
+        {
+          "at": 1793117380473.8,
+          "height": 1126,
+          "tick": 59,
+          "width": 1200
+        },
+        {
+          "at": 1793117380490.1,
+          "height": 1126,
+          "tick": 60,
+          "width": 1200
+        },
+        {
+          "at": 1793117380506.2,
+          "height": 1126,
+          "tick": 61,
+          "width": 1200
+        },
+        {
+          "at": 1793117380523.4,
+          "height": 1126,
+          "tick": 62,
+          "width": 1200
+        },
+        {
+          "at": 1793117380540.4,
+          "height": 1126,
+          "tick": 63,
+          "width": 1200
+        },
+        {
+          "at": 1793117380556.4,
+          "height": 1126,
+          "tick": 64,
+          "width": 1200
+        },
+        {
+          "at": 1793117380573.2,
+          "height": 1126,
+          "tick": 65,
+          "width": 1200
+        },
+        {
+          "at": 1793117380590.5,
+          "height": 1126,
+          "tick": 66,
+          "width": 1200
+        },
+        {
+          "at": 1793117380606.7,
+          "height": 1126,
+          "tick": 67,
+          "width": 1200
+        },
+        {
+          "at": 1793117380623.3,
+          "height": 1126,
+          "tick": 68,
+          "width": 1200
+        },
+        {
+          "at": 1793117380640.4,
+          "height": 1126,
+          "tick": 69,
+          "width": 1200
+        },
+        {
+          "at": 1793117380657,
+          "height": 1126,
+          "tick": 70,
+          "width": 1200
+        },
+        {
+          "at": 1793117380673.8,
+          "height": 1126,
+          "tick": 71,
+          "width": 1200
+        },
+        {
+          "at": 1793117380690.2,
+          "height": 1126,
+          "tick": 72,
+          "width": 1200
+        },
+        {
+          "at": 1793117380707.1,
+          "height": 1126,
+          "tick": 73,
+          "width": 1200
+        },
+        {
+          "at": 1793117380723.6,
+          "height": 1126,
+          "tick": 74,
+          "width": 1200
+        },
+        {
+          "at": 1793117380740.3,
+          "height": 1126,
+          "tick": 75,
+          "width": 1200
+        },
+        {
+          "at": 1793117380757,
+          "height": 1126,
+          "tick": 76,
+          "width": 1200
+        },
+        {
+          "at": 1793117380773.8,
+          "height": 1126,
+          "tick": 77,
+          "width": 1200
+        },
+        {
+          "at": 1793117380790.4,
+          "height": 1126,
+          "tick": 78,
+          "width": 1200
+        },
+        {
+          "at": 1793117380806.2,
+          "height": 1126,
+          "tick": 79,
+          "width": 1200
+        },
+        {
+          "at": 1793117380823.7,
+          "height": 1126,
+          "tick": 80,
+          "width": 1200
+        },
+        {
+          "at": 1793117380840.3,
+          "height": 1126,
+          "tick": 81,
+          "width": 1200
+        },
+        {
+          "at": 1793117380857.1,
+          "height": 1126,
+          "tick": 82,
+          "width": 1200
+        },
+        {
+          "at": 1793117380873.2,
+          "height": 1126,
+          "tick": 83,
+          "width": 1200
+        },
+        {
+          "at": 1793117380890.6,
+          "height": 1126,
+          "tick": 84,
+          "width": 1200
+        },
+        {
+          "at": 1793117380906.2,
+          "height": 1126,
+          "tick": 85,
+          "width": 1200
+        },
+        {
+          "at": 1793117380923.3,
+          "height": 1126,
+          "tick": 86,
+          "width": 1200
+        },
+        {
+          "at": 1793117380940.4,
+          "height": 1126,
+          "tick": 87,
+          "width": 1200
+        },
+        {
+          "at": 1793117380956.3,
+          "height": 1126,
+          "tick": 88,
+          "width": 1200
+        },
+        {
+          "at": 1793117380973.8,
+          "height": 1126,
+          "tick": 89,
+          "width": 1200
+        },
+        {
+          "at": 1793117380990.5,
+          "height": 1126,
+          "tick": 90,
+          "width": 1200
+        },
+        {
+          "at": 1793117381006.2,
+          "height": 1126,
+          "tick": 91,
+          "width": 1200
+        },
+        {
+          "at": 1793117381023.9,
+          "height": 1126,
+          "tick": 92,
+          "width": 1200
+        },
+        {
+          "at": 1793117381040.4,
+          "height": 1126,
+          "tick": 93,
+          "width": 1200
+        },
+        {
+          "at": 1793117381057.2,
+          "height": 1126,
+          "tick": 94,
+          "width": 1200
+        },
+        {
+          "at": 1793117381073.7,
+          "height": 1126,
+          "tick": 95,
+          "width": 1200
+        },
+        {
+          "at": 1793117381090.3,
+          "height": 1126,
+          "tick": 96,
+          "width": 1200
+        },
+        {
+          "at": 1793117381106.2,
+          "height": 1126,
+          "tick": 97,
+          "width": 1200
+        },
+        {
+          "at": 1793117381123.9,
+          "height": 1126,
+          "tick": 98,
+          "width": 1200
+        },
+        {
+          "at": 1793117381140.2,
+          "height": 1126,
+          "tick": 99,
+          "width": 1200
+        },
+        {
+          "at": 1793117381156.1,
+          "height": 1126,
+          "tick": 100,
+          "width": 1200
+        },
+        {
+          "at": 1793117381173.3,
+          "height": 1126,
+          "tick": 101,
+          "width": 1200
+        },
+        {
+          "at": 1793117381190.4,
+          "height": 1126,
+          "tick": 102,
+          "width": 1200
+        },
+        {
+          "at": 1793117381206.3,
+          "height": 1126,
+          "tick": 103,
+          "width": 1200
+        },
+        {
+          "at": 1793117381223.7,
+          "height": 1126,
+          "tick": 104,
+          "width": 1200
+        },
+        {
+          "at": 1793117381240.4,
+          "height": 1126,
+          "tick": 105,
+          "width": 1200
+        },
+        {
+          "at": 1793117381257,
+          "height": 1126,
+          "tick": 106,
+          "width": 1200
+        },
+        {
+          "at": 1793117381273.7,
+          "height": 1126,
+          "tick": 107,
+          "width": 1200
+        },
+        {
+          "at": 1793117381290.2,
+          "height": 1126,
+          "tick": 108,
+          "width": 1200
+        },
+        {
+          "at": 1793117381307.2,
+          "height": 1126,
+          "tick": 109,
+          "width": 1200
+        },
+        {
+          "at": 1793117381323.7,
+          "height": 1126,
+          "tick": 110,
+          "width": 1200
+        },
+        {
+          "at": 1793117381340.5,
+          "height": 1126,
+          "tick": 111,
+          "width": 1200
+        },
+        {
+          "at": 1793117381357.1,
+          "height": 1126,
+          "tick": 112,
+          "width": 1200
+        },
+        {
+          "at": 1793117381373.8,
+          "height": 1126,
+          "tick": 113,
+          "width": 1200
+        },
+        {
+          "at": 1793117381390.4,
+          "height": 1126,
+          "tick": 114,
+          "width": 1200
+        },
+        {
+          "at": 1793117381407.2,
+          "height": 1126,
+          "tick": 115,
+          "width": 1200
+        },
+        {
+          "at": 1793117381423.2,
+          "height": 1126,
+          "tick": 116,
+          "width": 1200
+        },
+        {
+          "at": 1793117381440.5,
+          "height": 1126,
+          "tick": 117,
+          "width": 1200
+        },
+        {
+          "at": 1793117381456.3,
+          "height": 1126,
+          "tick": 118,
+          "width": 1200
+        },
+        {
+          "at": 1793117381474,
+          "height": 1126,
+          "tick": 119,
+          "width": 1200
+        },
+        {
+          "at": 1793117381490.2,
+          "height": 1126,
+          "tick": 120,
+          "width": 1200
+        },
+        {
+          "at": 1793117381507.1,
+          "height": 1126,
+          "tick": 121,
+          "width": 1200
+        },
+        {
+          "at": 1793117381523.7,
+          "height": 1126,
+          "tick": 122,
+          "width": 1200
+        },
+        {
+          "at": 1793117381540.2,
+          "height": 1126,
+          "tick": 123,
+          "width": 1200
+        },
+        {
+          "at": 1793117381556.3,
+          "height": 1126,
+          "tick": 124,
+          "width": 1200
+        },
+        {
+          "at": 1793117381573.8,
+          "height": 1126,
+          "tick": 125,
+          "width": 1200
+        },
+        {
+          "at": 1793117381590.2,
+          "height": 1126,
+          "tick": 126,
+          "width": 1200
+        },
+        {
+          "at": 1793117381607.2,
+          "height": 1126,
+          "tick": 127,
+          "width": 1200
+        },
+        {
+          "at": 1793117381623.1,
+          "height": 1126,
+          "tick": 128,
+          "width": 1200
+        },
+        {
+          "at": 1793117381639.6,
+          "height": 1126,
+          "tick": 129,
+          "width": 1200
+        },
+        {
+          "at": 1793117381657.1,
+          "height": 1126,
+          "tick": 130,
+          "width": 1200
+        },
+        {
+          "at": 1793117381673.1,
+          "height": 1126,
+          "tick": 131,
+          "width": 1200
+        },
+        {
+          "at": 1793117381690.1,
+          "height": 1126,
+          "tick": 132,
+          "width": 1200
+        },
+        {
+          "at": 1793117381707.1,
+          "height": 1126,
+          "tick": 133,
+          "width": 1200
+        },
+        {
+          "at": 1793117381723.8,
+          "height": 1126,
+          "tick": 134,
+          "width": 1200
+        },
+        {
+          "at": 1793117381740.2,
+          "height": 1126,
+          "tick": 135,
+          "width": 1200
+        },
+        {
+          "at": 1793117381757.2,
+          "height": 1126,
+          "tick": 136,
+          "width": 1200
+        },
+        {
+          "at": 1793117381773.4,
+          "height": 1126,
+          "tick": 137,
+          "width": 1200
+        },
+        {
+          "at": 1793117381790.5,
+          "height": 1126,
+          "tick": 138,
+          "width": 1200
+        },
+        {
+          "at": 1793117381807,
+          "height": 1126,
+          "tick": 139,
+          "width": 1200
+        },
+        {
+          "at": 1793117381823.8,
+          "height": 1126,
+          "tick": 140,
+          "width": 1200
+        },
+        {
+          "at": 1793117381840.2,
+          "height": 1126,
+          "tick": 141,
+          "width": 1200
+        },
+        {
+          "at": 1793117381857.2,
+          "height": 1126,
+          "tick": 142,
+          "width": 1200
+        },
+        {
+          "at": 1793117381873.7,
+          "height": 1126,
+          "tick": 143,
+          "width": 1200
+        },
+        {
+          "at": 1793117381890.4,
+          "height": 1126,
+          "tick": 144,
+          "width": 1200
+        },
+        {
+          "at": 1793117381907,
+          "height": 1126,
+          "tick": 145,
+          "width": 1200
+        },
+        {
+          "at": 1793117381923.8,
+          "height": 1126,
+          "tick": 146,
+          "width": 1200
+        },
+        {
+          "at": 1793117381940.4,
+          "height": 1126,
+          "tick": 147,
+          "width": 1200
+        },
+        {
+          "at": 1793117381956.6,
+          "height": 1126,
+          "tick": 148,
+          "width": 1200
+        },
+        {
+          "at": 1793117381973.7,
+          "height": 1126,
+          "tick": 149,
+          "width": 1200
+        },
+        {
+          "at": 1793117381990.5,
+          "height": 1126,
+          "tick": 150,
+          "width": 1200
+        },
+        {
+          "at": 1793117382007,
+          "height": 1126,
+          "tick": 151,
+          "width": 1200
+        },
+        {
+          "at": 1793117382023.3,
+          "height": 1126,
+          "tick": 152,
+          "width": 1200
+        },
+        {
+          "at": 1793117382040.4,
+          "height": 1126,
+          "tick": 153,
+          "width": 1200
+        },
+        {
+          "at": 1793117382057.1,
+          "height": 1126,
+          "tick": 154,
+          "width": 1200
+        },
+        {
+          "at": 1793117382073.7,
+          "height": 1126,
+          "tick": 155,
+          "width": 1200
+        },
+        {
+          "at": 1793117382090.3,
+          "height": 1126,
+          "tick": 156,
+          "width": 1200
+        },
+        {
+          "at": 1793117382107,
+          "height": 1126,
+          "tick": 157,
+          "width": 1200
+        },
+        {
+          "at": 1793117382124,
+          "height": 1126,
+          "tick": 158,
+          "width": 1200
+        },
+        {
+          "at": 1793117382140.1,
+          "height": 1126,
+          "tick": 159,
+          "width": 1200
+        },
+        {
+          "at": 1793117382156.2,
+          "height": 1126,
+          "tick": 160,
+          "width": 1200
+        },
+        {
+          "at": 1793117382173.3,
+          "height": 1126,
+          "tick": 161,
+          "width": 1200
+        },
+        {
+          "at": 1793117382190.4,
+          "height": 1126,
+          "tick": 162,
+          "width": 1200
+        },
+        {
+          "at": 1793117382207.2,
+          "height": 1126,
+          "tick": 163,
+          "width": 1200
+        },
+        {
+          "at": 1793117382223.8,
+          "height": 1126,
+          "tick": 164,
+          "width": 1200
+        },
+        {
+          "at": 1793117382240.5,
+          "height": 1126,
+          "tick": 165,
+          "width": 1200
+        },
+        {
+          "at": 1793117382256.2,
+          "height": 1126,
+          "tick": 166,
+          "width": 1200
+        },
+        {
+          "at": 1793117382273.3,
+          "height": 1126,
+          "tick": 167,
+          "width": 1200
+        },
+        {
+          "at": 1793117382290.5,
+          "height": 1126,
+          "tick": 168,
+          "width": 1200
+        },
+        {
+          "at": 1793117382307.2,
+          "height": 1126,
+          "tick": 169,
+          "width": 1200
+        },
+        {
+          "at": 1793117382323.8,
+          "height": 1126,
+          "tick": 170,
+          "width": 1200
+        },
+        {
+          "at": 1793117382340.4,
+          "height": 1126,
+          "tick": 171,
+          "width": 1200
+        },
+        {
+          "at": 1793117382356.2,
+          "height": 1126,
+          "tick": 172,
+          "width": 1200
+        },
+        {
+          "at": 1793117382373.1,
+          "height": 1126,
+          "tick": 173,
+          "width": 1200
+        },
+        {
+          "at": 1793117382390.7,
+          "height": 1126,
+          "tick": 174,
+          "width": 1200
+        },
+        {
+          "at": 1793117382406.2,
+          "height": 1126,
+          "tick": 175,
+          "width": 1200
+        },
+        {
+          "at": 1793117382423.2,
+          "height": 1126,
+          "tick": 176,
+          "width": 1200
+        },
+        {
+          "at": 1793117382440.3,
+          "height": 1126,
+          "tick": 177,
+          "width": 1200
+        },
+        {
+          "at": 1793117382456.3,
+          "height": 1126,
+          "tick": 178,
+          "width": 1200
+        },
+        {
+          "at": 1793117382473.4,
+          "height": 1126,
+          "tick": 179,
+          "width": 1200
+        },
+        {
+          "at": 1793117382490.2,
+          "height": 1126,
+          "tick": 180,
+          "width": 1200
+        },
+        {
+          "at": 1793117382506.4,
+          "height": 1126,
+          "tick": 181,
+          "width": 1200
+        },
+        {
+          "at": 1793117382523.1,
+          "height": 1126,
+          "tick": 182,
+          "width": 1200
+        },
+        {
+          "at": 1793117382540.3,
+          "height": 1126,
+          "tick": 183,
+          "width": 1200
+        },
+        {
+          "at": 1793117382556.2,
+          "height": 1126,
+          "tick": 184,
+          "width": 1200
+        },
+        {
+          "at": 1793117382573.3,
+          "height": 1126,
+          "tick": 185,
+          "width": 1200
+        },
+        {
+          "at": 1793117382590.4,
+          "height": 1126,
+          "tick": 186,
+          "width": 1200
+        },
+        {
+          "at": 1793117382606.4,
+          "height": 1126,
+          "tick": 187,
+          "width": 1200
+        },
+        {
+          "at": 1793117382623.2,
+          "height": 1126,
+          "tick": 188,
+          "width": 1200
+        },
+        {
+          "at": 1793117382640.4,
+          "height": 1126,
+          "tick": 189,
+          "width": 1200
+        },
+        {
+          "at": 1793117382656.2,
+          "height": 1126,
+          "tick": 190,
+          "width": 1200
+        },
+        {
+          "at": 1793117382673.3,
+          "height": 1126,
+          "tick": 191,
+          "width": 1200
+        },
+        {
+          "at": 1793117382690.6,
+          "height": 1126,
+          "tick": 192,
+          "width": 1200
+        },
+        {
+          "at": 1793117382706.3,
+          "height": 1126,
+          "tick": 193,
+          "width": 1200
+        },
+        {
+          "at": 1793117382723.9,
+          "height": 1126,
+          "tick": 194,
+          "width": 1200
+        },
+        {
+          "at": 1793117382740.6,
+          "height": 1126,
+          "tick": 195,
+          "width": 1200
+        },
+        {
+          "at": 1793117382756.2,
+          "height": 1126,
+          "tick": 196,
+          "width": 1200
+        },
+        {
+          "at": 1793117382773.9,
+          "height": 1126,
+          "tick": 197,
+          "width": 1200
+        },
+        {
+          "at": 1793117382790.1,
+          "height": 1126,
+          "tick": 198,
+          "width": 1200
+        },
+        {
+          "at": 1793117382807.2,
+          "height": 1126,
+          "tick": 199,
+          "width": 1200
+        },
+        {
+          "at": 1793117382823.8,
+          "height": 1126,
+          "tick": 200,
+          "width": 1200
+        },
+        {
+          "at": 1793117382840.3,
+          "height": 1126,
+          "tick": 201,
+          "width": 1200
+        },
+        {
+          "at": 1793117382856.2,
+          "height": 1126,
+          "tick": 202,
+          "width": 1200
+        },
+        {
+          "at": 1793117382873.9,
+          "height": 1126,
+          "tick": 203,
+          "width": 1200
+        },
+        {
+          "at": 1793117382890.5,
+          "height": 1126,
+          "tick": 204,
+          "width": 1200
+        },
+        {
+          "at": 1793117382907.3,
+          "height": 1126,
+          "tick": 205,
+          "width": 1200
+        },
+        {
+          "at": 1793117382923.9,
+          "height": 1126,
+          "tick": 206,
+          "width": 1200
+        },
+        {
+          "at": 1793117382940.6,
+          "height": 1126,
+          "tick": 207,
+          "width": 1200
+        },
+        {
+          "at": 1793117382956.2,
+          "height": 1126,
+          "tick": 208,
+          "width": 1200
+        },
+        {
+          "at": 1793117382974,
+          "height": 1126,
+          "tick": 209,
+          "width": 1200
+        },
+        {
+          "at": 1793117382990.2,
+          "height": 1126,
+          "tick": 210,
+          "width": 1200
+        },
+        {
+          "at": 1793117383007.3,
+          "height": 1126,
+          "tick": 211,
+          "width": 1200
+        },
+        {
+          "at": 1793117383023.8,
+          "height": 1126,
+          "tick": 212,
+          "width": 1200
+        },
+        {
+          "at": 1793117383040.6,
+          "height": 1126,
+          "tick": 213,
+          "width": 1200
+        },
+        {
+          "at": 1793117383057.2,
+          "height": 1126,
+          "tick": 214,
+          "width": 1200
+        },
+        {
+          "at": 1793117383074.1,
+          "height": 1126,
+          "tick": 215,
+          "width": 1200
+        },
+        {
+          "at": 1793117383090.3,
+          "height": 1126,
+          "tick": 216,
+          "width": 1200
+        },
+        {
+          "at": 1793117383106.2,
+          "height": 1126,
+          "tick": 217,
+          "width": 1200
+        },
+        {
+          "at": 1793117383123.4,
+          "height": 1126,
+          "tick": 218,
+          "width": 1200
+        },
+        {
+          "at": 1793117383140.5,
+          "height": 1126,
+          "tick": 219,
+          "width": 1200
+        },
+        {
+          "at": 1793117383157.3,
+          "height": 1126,
+          "tick": 220,
+          "width": 1200
+        },
+        {
+          "at": 1793117383173.2,
+          "height": 1126,
+          "tick": 221,
+          "width": 1200
+        },
+        {
+          "at": 1793117383190.7,
+          "height": 1126,
+          "tick": 222,
+          "width": 1200
+        },
+        {
+          "at": 1793117383206.2,
+          "height": 1126,
+          "tick": 223,
+          "width": 1200
+        },
+        {
+          "at": 1793117383223.3,
+          "height": 1126,
+          "tick": 224,
+          "width": 1200
+        },
+        {
+          "at": 1793117383240.7,
+          "height": 1126,
+          "tick": 225,
+          "width": 1200
+        },
+        {
+          "at": 1793117383257.1,
+          "height": 1126,
+          "tick": 226,
+          "width": 1200
+        },
+        {
+          "at": 1793117383273.4,
+          "height": 1126,
+          "tick": 227,
+          "width": 1200
+        },
+        {
+          "at": 1793117383290.3,
+          "height": 1126,
+          "tick": 228,
+          "width": 1200
+        },
+        {
+          "at": 1793117383307.2,
+          "height": 1126,
+          "tick": 229,
+          "width": 1200
+        },
+        {
+          "at": 1793117383324,
+          "height": 1126,
+          "tick": 230,
+          "width": 1200
+        },
+        {
+          "at": 1793117383340.5,
+          "height": 1126,
+          "tick": 231,
+          "width": 1200
+        },
+        {
+          "at": 1793117383356.2,
+          "height": 1126,
+          "tick": 232,
+          "width": 1200
+        },
+        {
+          "at": 1793117383373.3,
+          "height": 1126,
+          "tick": 233,
+          "width": 1200
+        },
+        {
+          "at": 1793117383390.4,
+          "height": 1126,
+          "tick": 234,
+          "width": 1200
+        },
+        {
+          "at": 1793117383407.3,
+          "height": 1126,
+          "tick": 235,
+          "width": 1200
+        },
+        {
+          "at": 1793117383423.9,
+          "height": 1126,
+          "tick": 236,
+          "width": 1200
+        },
+        {
+          "at": 1793117383440.8,
+          "height": 1126,
+          "tick": 237,
+          "width": 1200
+        },
+        {
+          "at": 1793117383457.2,
+          "height": 1126,
+          "tick": 238,
+          "width": 1200
+        },
+        {
+          "at": 1793117383473.9,
+          "height": 1126,
+          "tick": 239,
+          "width": 1200
+        },
+        {
+          "at": 1793117383490.5,
+          "height": 1126,
+          "tick": 240,
+          "width": 1200
+        },
+        {
+          "at": 1793117383507.3,
+          "height": 1126,
+          "tick": 241,
+          "width": 1200
+        },
+        {
+          "at": 1793117383523.3,
+          "height": 1126,
+          "tick": 242,
+          "width": 1200
+        },
+        {
+          "at": 1793117383540.3,
+          "height": 1126,
+          "tick": 243,
+          "width": 1200
+        },
+        {
+          "at": 1793117383556.3,
+          "height": 1126,
+          "tick": 244,
+          "width": 1200
+        },
+        {
+          "at": 1793117383573.4,
+          "height": 1126,
+          "tick": 245,
+          "width": 1200
+        },
+        {
+          "at": 1793117383590.6,
+          "height": 1126,
+          "tick": 246,
+          "width": 1200
+        },
+        {
+          "at": 1793117383607.3,
+          "height": 1126,
+          "tick": 247,
+          "width": 1200
+        },
+        {
+          "at": 1793117383623.9,
+          "height": 1126,
+          "tick": 248,
+          "width": 1200
+        },
+        {
+          "at": 1793117383640.1,
+          "height": 1126,
+          "tick": 249,
+          "width": 1200
+        },
+        {
+          "at": 1793117383657.3,
+          "height": 1126,
+          "tick": 250,
+          "width": 1200
+        },
+        {
+          "at": 1793117383673.8,
+          "height": 1126,
+          "tick": 251,
+          "width": 1200
+        },
+        {
+          "at": 1793117383690.4,
+          "height": 1126,
+          "tick": 252,
+          "width": 1200
+        },
+        {
+          "at": 1793117383707.2,
+          "height": 1126,
+          "tick": 253,
+          "width": 1200
+        },
+        {
+          "at": 1793117383723.4,
+          "height": 1126,
+          "tick": 254,
+          "width": 1200
+        },
+        {
+          "at": 1793117383740.5,
+          "height": 1126,
+          "tick": 255,
+          "width": 1200
+        },
+        {
+          "at": 1793117383757.3,
+          "height": 1126,
+          "tick": 256,
+          "width": 1200
+        },
+        {
+          "at": 1793117383773.9,
+          "height": 1126,
+          "tick": 257,
+          "width": 1200
+        },
+        {
+          "at": 1793117383790.3,
+          "height": 1126,
+          "tick": 258,
+          "width": 1200
+        },
+        {
+          "at": 1793117383807.3,
+          "height": 1126,
+          "tick": 259,
+          "width": 1200
+        },
+        {
+          "at": 1793117383824,
+          "height": 1126,
+          "tick": 260,
+          "width": 1200
+        },
+        {
+          "at": 1793117383840.6,
+          "height": 1126,
+          "tick": 261,
+          "width": 1200
+        },
+        {
+          "at": 1793117383857.4,
+          "height": 1126,
+          "tick": 262,
+          "width": 1200
+        },
+        {
+          "at": 1793117383873.9,
+          "height": 1126,
+          "tick": 263,
+          "width": 1200
+        },
+        {
+          "at": 1793117383890.7,
+          "height": 1126,
+          "tick": 264,
+          "width": 1200
+        },
+        {
+          "at": 1793117383907.3,
+          "height": 1126,
+          "tick": 265,
+          "width": 1200
+        },
+        {
+          "at": 1793117383923.2,
+          "height": 1126,
+          "tick": 266,
+          "width": 1200
+        },
+        {
+          "at": 1793117383940.3,
+          "height": 1126,
+          "tick": 267,
+          "width": 1200
+        },
+        {
+          "at": 1793117383957.2,
+          "height": 1126,
+          "tick": 268,
+          "width": 1200
+        },
+        {
+          "at": 1793117383974,
+          "height": 1126,
+          "tick": 269,
+          "width": 1200
+        },
+        {
+          "at": 1793117383990.6,
+          "height": 1126,
+          "tick": 270,
+          "width": 1200
+        },
+        {
+          "at": 1793117384007.4,
+          "height": 1126,
+          "tick": 271,
+          "width": 1200
+        },
+        {
+          "at": 1793117384023.2,
+          "height": 1126,
+          "tick": 272,
+          "width": 1200
+        },
+        {
+          "at": 1793117384040.6,
+          "height": 1126,
+          "tick": 273,
+          "width": 1200
+        },
+        {
+          "at": 1793117384057.2,
+          "height": 1126,
+          "tick": 274,
+          "width": 1200
+        },
+        {
+          "at": 1793117384074,
+          "height": 1126,
+          "tick": 275,
+          "width": 1200
+        },
+        {
+          "at": 1793117384090.6,
+          "height": 1126,
+          "tick": 276,
+          "width": 1200
+        },
+        {
+          "at": 1793117384107.4,
+          "height": 1126,
+          "tick": 277,
+          "width": 1200
+        },
+        {
+          "at": 1793117384123.9,
+          "height": 1126,
+          "tick": 278,
+          "width": 1200
+        },
+        {
+          "at": 1793117384140.3,
+          "height": 1126,
+          "tick": 279,
+          "width": 1200
+        },
+        {
+          "at": 1793117384157.2,
+          "height": 1126,
+          "tick": 280,
+          "width": 1200
+        },
+        {
+          "at": 1793117384174,
+          "height": 1126,
+          "tick": 281,
+          "width": 1200
+        },
+        {
+          "at": 1793117384190.2,
+          "height": 1126,
+          "tick": 282,
+          "width": 1200
+        },
+        {
+          "at": 1793117384207.3,
+          "height": 1126,
+          "tick": 283,
+          "width": 1200
+        },
+        {
+          "at": 1793117384223.9,
+          "height": 1126,
+          "tick": 284,
+          "width": 1200
+        },
+        {
+          "at": 1793117384240.8,
+          "height": 1126,
+          "tick": 285,
+          "width": 1200
+        },
+        {
+          "at": 1793117384257.3,
+          "height": 1126,
+          "tick": 286,
+          "width": 1200
+        },
+        {
+          "at": 1793117384274,
+          "height": 1126,
+          "tick": 287,
+          "width": 1200
+        },
+        {
+          "at": 1793117384290.6,
+          "height": 1126,
+          "tick": 288,
+          "width": 1200
+        },
+        {
+          "at": 1793117384307.3,
+          "height": 1126,
+          "tick": 289,
+          "width": 1200
+        },
+        {
+          "at": 1793117384323.2,
+          "height": 1126,
+          "tick": 290,
+          "width": 1200
+        },
+        {
+          "at": 1793117384340.3,
+          "height": 1126,
+          "tick": 291,
+          "width": 1200
+        },
+        {
+          "at": 1793117384357.3,
+          "height": 1126,
+          "tick": 292,
+          "width": 1200
+        },
+        {
+          "at": 1793117384374.1,
+          "height": 1126,
+          "tick": 293,
+          "width": 1200
+        },
+        {
+          "at": 1793117384390.2,
+          "height": 1126,
+          "tick": 294,
+          "width": 1200
+        },
+        {
+          "at": 1793117384407.3,
+          "height": 1126,
+          "tick": 295,
+          "width": 1200
+        },
+        {
+          "at": 1793117384423.3,
+          "height": 1126,
+          "tick": 296,
+          "width": 1200
+        },
+        {
+          "at": 1793117384440.7,
+          "height": 1126,
+          "tick": 297,
+          "width": 1200
+        },
+        {
+          "at": 1793117384457.3,
+          "height": 1126,
+          "tick": 298,
+          "width": 1200
+        },
+        {
+          "at": 1793117384474,
+          "height": 1126,
+          "tick": 299,
+          "width": 1200
+        }
+      ],
+      "durationMs": 5000,
+      "endedAt": 1793117384489.8,
+      "errors": [],
+      "initialGeometry": {
+        "height": 1126,
+        "width": 1800
+      },
+      "kind": "WEBGL2_LOW_CONTRAST_RGB",
+      "startedAt": 1793117379476.1
+    },
+    "events": [
+      {
+        "at": 1793117379476,
+        "kind": "CONTROL"
+      },
+      {
+        "at": 1793117379476.1,
+        "kind": "VIDEO_SIGNAL_START"
+      }
+    ],
+    "fixed": false,
+    "lastPresentation": {
+      "at": 1793117387773.3,
+      "callbackEpochMs": 1793117387773,
+      "expectedDisplayEpochMs": 1793117387790.3,
+      "mediaTime": 15.293189,
+      "presentationEpochMs": 1793117387760.1,
+      "presentedFrames": 918,
+      "rect": {
+        "height": 2,
+        "width": 2,
+        "x": 100,
+        "y": 240
+      },
+      "videoHeight": 2,
+      "videoWidth": 2
+    },
+    "presentations": [
+      {
+        "at": 1793117372472.2,
+        "callbackEpochMs": 1793117372472,
+        "expectedDisplayEpochMs": 1793117372467,
+        "mediaTime": 0,
+        "presentationEpochMs": 1793117372467,
+        "presentedFrames": 1,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379490.2,
+        "callbackEpochMs": 1793117379490.1,
+        "expectedDisplayEpochMs": 1793117379506.4,
+        "mediaTime": 7.009132,
+        "presentationEpochMs": 1793117379476.3,
+        "presentedFrames": 421,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379506.9,
+        "callbackEpochMs": 1793117379506.8,
+        "expectedDisplayEpochMs": 1793117379523.4,
+        "mediaTime": 7.027321,
+        "presentationEpochMs": 1793117379496.5,
+        "presentedFrames": 422,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379523.2,
+        "callbackEpochMs": 1793117379523,
+        "expectedDisplayEpochMs": 1793117379540.1,
+        "mediaTime": 7.043037,
+        "presentationEpochMs": 1793117379511.1,
+        "presentedFrames": 423,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379540.3,
+        "callbackEpochMs": 1793117379540.1,
+        "expectedDisplayEpochMs": 1793117379556.3,
+        "mediaTime": 7.059043,
+        "presentationEpochMs": 1793117379526.7,
+        "presentedFrames": 424,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379556.2,
+        "callbackEpochMs": 1793117379556,
+        "expectedDisplayEpochMs": 1793117379573.5,
+        "mediaTime": 7.076237,
+        "presentationEpochMs": 1793117379543.9,
+        "presentedFrames": 425,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379573.6,
+        "callbackEpochMs": 1793117379573.4,
+        "expectedDisplayEpochMs": 1793117379589.3,
+        "mediaTime": 7.092046,
+        "presentationEpochMs": 1793117379559.6,
+        "presentedFrames": 426,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379590.3,
+        "callbackEpochMs": 1793117379590.1,
+        "expectedDisplayEpochMs": 1793117379606.8,
+        "mediaTime": 7.109627,
+        "presentationEpochMs": 1793117379577.3,
+        "presentedFrames": 427,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379606.9,
+        "callbackEpochMs": 1793117379606.8,
+        "expectedDisplayEpochMs": 1793117379623.4,
+        "mediaTime": 7.126128,
+        "presentationEpochMs": 1793117379593.8,
+        "presentedFrames": 428,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379623.6,
+        "callbackEpochMs": 1793117379623.4,
+        "expectedDisplayEpochMs": 1793117379640.1,
+        "mediaTime": 7.142944,
+        "presentationEpochMs": 1793117379610.6,
+        "presentedFrames": 429,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379640.3,
+        "callbackEpochMs": 1793117379640.1,
+        "expectedDisplayEpochMs": 1793117379656.7,
+        "mediaTime": 7.159452,
+        "presentationEpochMs": 1793117379627.4,
+        "presentedFrames": 430,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379656.2,
+        "callbackEpochMs": 1793117379656,
+        "expectedDisplayEpochMs": 1793117379673.5,
+        "mediaTime": 7.176179,
+        "presentationEpochMs": 1793117379644.2,
+        "presentedFrames": 431,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379673.2,
+        "callbackEpochMs": 1793117379673,
+        "expectedDisplayEpochMs": 1793117379689.3,
+        "mediaTime": 7.192072,
+        "presentationEpochMs": 1793117379659.6,
+        "presentedFrames": 432,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379689.9,
+        "callbackEpochMs": 1793117379689.8,
+        "expectedDisplayEpochMs": 1793117379706.4,
+        "mediaTime": 7.209135,
+        "presentationEpochMs": 1793117379676.8,
+        "presentedFrames": 433,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379706.2,
+        "callbackEpochMs": 1793117379706,
+        "expectedDisplayEpochMs": 1793117379723.1,
+        "mediaTime": 7.225749,
+        "presentationEpochMs": 1793117379693.4,
+        "presentedFrames": 434,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379723.2,
+        "callbackEpochMs": 1793117379723.1,
+        "expectedDisplayEpochMs": 1793117379739.3,
+        "mediaTime": 7.242209,
+        "presentationEpochMs": 1793117379710,
+        "presentedFrames": 435,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379740.3,
+        "callbackEpochMs": 1793117379740.1,
+        "expectedDisplayEpochMs": 1793117379756.3,
+        "mediaTime": 7.25903,
+        "presentationEpochMs": 1793117379726.7,
+        "presentedFrames": 436,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379757,
+        "callbackEpochMs": 1793117379756.8,
+        "expectedDisplayEpochMs": 1793117379773.4,
+        "mediaTime": 7.276317,
+        "presentationEpochMs": 1793117379744.2,
+        "presentedFrames": 437,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379773.2,
+        "callbackEpochMs": 1793117379773,
+        "expectedDisplayEpochMs": 1793117379790.1,
+        "mediaTime": 7.292904,
+        "presentationEpochMs": 1793117379760.7,
+        "presentedFrames": 438,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379790.2,
+        "callbackEpochMs": 1793117379790,
+        "expectedDisplayEpochMs": 1793117379806.4,
+        "mediaTime": 7.309152,
+        "presentationEpochMs": 1793117379776.8,
+        "presentedFrames": 439,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379806.2,
+        "callbackEpochMs": 1793117379806,
+        "expectedDisplayEpochMs": 1793117379823.4,
+        "mediaTime": 7.326039,
+        "presentationEpochMs": 1793117379793.7,
+        "presentedFrames": 440,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379823.6,
+        "callbackEpochMs": 1793117379823.4,
+        "expectedDisplayEpochMs": 1793117379839.4,
+        "mediaTime": 7.342259,
+        "presentationEpochMs": 1793117379810,
+        "presentedFrames": 441,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379840.3,
+        "callbackEpochMs": 1793117379840.1,
+        "expectedDisplayEpochMs": 1793117379856.7,
+        "mediaTime": 7.35942,
+        "presentationEpochMs": 1793117379827.1,
+        "presentedFrames": 442,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379856.9,
+        "callbackEpochMs": 1793117379856.7,
+        "expectedDisplayEpochMs": 1793117379873.4,
+        "mediaTime": 7.376288,
+        "presentationEpochMs": 1793117379843.8,
+        "presentedFrames": 443,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379873.7,
+        "callbackEpochMs": 1793117379873.4,
+        "expectedDisplayEpochMs": 1793117379890.1,
+        "mediaTime": 7.392828,
+        "presentationEpochMs": 1793117379860.5,
+        "presentedFrames": 444,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379890.1,
+        "callbackEpochMs": 1793117379890,
+        "expectedDisplayEpochMs": 1793117379906.8,
+        "mediaTime": 7.409611,
+        "presentationEpochMs": 1793117379877.2,
+        "presentedFrames": 445,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379907,
+        "callbackEpochMs": 1793117379906.7,
+        "expectedDisplayEpochMs": 1793117379923.3,
+        "mediaTime": 7.426019,
+        "presentationEpochMs": 1793117379893.7,
+        "presentedFrames": 446,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379923.1,
+        "callbackEpochMs": 1793117379923,
+        "expectedDisplayEpochMs": 1793117379940.1,
+        "mediaTime": 7.443011,
+        "presentationEpochMs": 1793117379910.6,
+        "presentedFrames": 447,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379940.2,
+        "callbackEpochMs": 1793117379940,
+        "expectedDisplayEpochMs": 1793117379956.3,
+        "mediaTime": 7.459041,
+        "presentationEpochMs": 1793117379926.7,
+        "presentedFrames": 448,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379957,
+        "callbackEpochMs": 1793117379956.8,
+        "expectedDisplayEpochMs": 1793117379973.3,
+        "mediaTime": 7.476287,
+        "presentationEpochMs": 1793117379944.6,
+        "presentedFrames": 449,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379973.7,
+        "callbackEpochMs": 1793117379973.5,
+        "expectedDisplayEpochMs": 1793117379990.1,
+        "mediaTime": 7.492931,
+        "presentationEpochMs": 1793117379960.9,
+        "presentedFrames": 450,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117379990.3,
+        "callbackEpochMs": 1793117379990.1,
+        "expectedDisplayEpochMs": 1793117380006.8,
+        "mediaTime": 7.509731,
+        "presentationEpochMs": 1793117379977.6,
+        "presentedFrames": 451,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380006.1,
+        "callbackEpochMs": 1793117380006,
+        "expectedDisplayEpochMs": 1793117380023.4,
+        "mediaTime": 7.52617,
+        "presentationEpochMs": 1793117379993.9,
+        "presentedFrames": 452,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380023.6,
+        "callbackEpochMs": 1793117380023.4,
+        "expectedDisplayEpochMs": 1793117380039.3,
+        "mediaTime": 7.541993,
+        "presentationEpochMs": 1793117380009.5,
+        "presentedFrames": 453,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380040.2,
+        "callbackEpochMs": 1793117380040.1,
+        "expectedDisplayEpochMs": 1793117380056.8,
+        "mediaTime": 7.559704,
+        "presentationEpochMs": 1793117380027.8,
+        "presentedFrames": 454,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380057,
+        "callbackEpochMs": 1793117380056.8,
+        "expectedDisplayEpochMs": 1793117380073.4,
+        "mediaTime": 7.576099,
+        "presentationEpochMs": 1793117380044.2,
+        "presentedFrames": 455,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380073.6,
+        "callbackEpochMs": 1793117380073.4,
+        "expectedDisplayEpochMs": 1793117380090.1,
+        "mediaTime": 7.592922,
+        "presentationEpochMs": 1793117380060.6,
+        "presentedFrames": 456,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380090.2,
+        "callbackEpochMs": 1793117380090,
+        "expectedDisplayEpochMs": 1793117380106.7,
+        "mediaTime": 7.609524,
+        "presentationEpochMs": 1793117380077.2,
+        "presentedFrames": 457,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380106.2,
+        "callbackEpochMs": 1793117380106,
+        "expectedDisplayEpochMs": 1793117380123.3,
+        "mediaTime": 7.62606,
+        "presentationEpochMs": 1793117380094,
+        "presentedFrames": 458,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380123.2,
+        "callbackEpochMs": 1793117380123,
+        "expectedDisplayEpochMs": 1793117380139.4,
+        "mediaTime": 7.642037,
+        "presentationEpochMs": 1793117380109.6,
+        "presentedFrames": 459,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380140.2,
+        "callbackEpochMs": 1793117380140.2,
+        "expectedDisplayEpochMs": 1793117380156.4,
+        "mediaTime": 7.659031,
+        "presentationEpochMs": 1793117380127.2,
+        "presentedFrames": 460,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380157,
+        "callbackEpochMs": 1793117380156.8,
+        "expectedDisplayEpochMs": 1793117380173.4,
+        "mediaTime": 7.676141,
+        "presentationEpochMs": 1793117380144.1,
+        "presentedFrames": 461,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380173.6,
+        "callbackEpochMs": 1793117380173.4,
+        "expectedDisplayEpochMs": 1793117380190.1,
+        "mediaTime": 7.692963,
+        "presentationEpochMs": 1793117380161.1,
+        "presentedFrames": 462,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380190.3,
+        "callbackEpochMs": 1793117380190.1,
+        "expectedDisplayEpochMs": 1793117380206.8,
+        "mediaTime": 7.709407,
+        "presentationEpochMs": 1793117380177.5,
+        "presentedFrames": 463,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380206.3,
+        "callbackEpochMs": 1793117380206.1,
+        "expectedDisplayEpochMs": 1793117380223.5,
+        "mediaTime": 7.72622,
+        "presentationEpochMs": 1793117380194.3,
+        "presentedFrames": 464,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380223.6,
+        "callbackEpochMs": 1793117380223.5,
+        "expectedDisplayEpochMs": 1793117380239.4,
+        "mediaTime": 7.742143,
+        "presentationEpochMs": 1793117380209.8,
+        "presentedFrames": 465,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380240.3,
+        "callbackEpochMs": 1793117380240.1,
+        "expectedDisplayEpochMs": 1793117380256.8,
+        "mediaTime": 7.759652,
+        "presentationEpochMs": 1793117380227.8,
+        "presentedFrames": 466,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380256.2,
+        "callbackEpochMs": 1793117380255.9,
+        "expectedDisplayEpochMs": 1793117380273.5,
+        "mediaTime": 7.776157,
+        "presentationEpochMs": 1793117380244.2,
+        "presentedFrames": 467,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380273.2,
+        "callbackEpochMs": 1793117380273,
+        "expectedDisplayEpochMs": 1793117380289.4,
+        "mediaTime": 7.792026,
+        "presentationEpochMs": 1793117380260,
+        "presentedFrames": 468,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380290.3,
+        "callbackEpochMs": 1793117380290.1,
+        "expectedDisplayEpochMs": 1793117380306.3,
+        "mediaTime": 7.809209,
+        "presentationEpochMs": 1793117380277.1,
+        "presentedFrames": 469,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380306.2,
+        "callbackEpochMs": 1793117380306,
+        "expectedDisplayEpochMs": 1793117380323.5,
+        "mediaTime": 7.826185,
+        "presentationEpochMs": 1793117380294.2,
+        "presentedFrames": 470,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380323.2,
+        "callbackEpochMs": 1793117380322.9,
+        "expectedDisplayEpochMs": 1793117380339.3,
+        "mediaTime": 7.842147,
+        "presentationEpochMs": 1793117380309.9,
+        "presentedFrames": 471,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380340.2,
+        "callbackEpochMs": 1793117380340,
+        "expectedDisplayEpochMs": 1793117380356.2,
+        "mediaTime": 7.859037,
+        "presentationEpochMs": 1793117380326.2,
+        "presentedFrames": 472,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380356.2,
+        "callbackEpochMs": 1793117380356,
+        "expectedDisplayEpochMs": 1793117380373.4,
+        "mediaTime": 7.876143,
+        "presentationEpochMs": 1793117380344.2,
+        "presentedFrames": 473,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380373.7,
+        "callbackEpochMs": 1793117380373.5,
+        "expectedDisplayEpochMs": 1793117380389.4,
+        "mediaTime": 7.892009,
+        "presentationEpochMs": 1793117380360,
+        "presentedFrames": 474,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380390.3,
+        "callbackEpochMs": 1793117380390,
+        "expectedDisplayEpochMs": 1793117380406.8,
+        "mediaTime": 7.909764,
+        "presentationEpochMs": 1793117380378,
+        "presentedFrames": 475,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380407,
+        "callbackEpochMs": 1793117380406.8,
+        "expectedDisplayEpochMs": 1793117380423.4,
+        "mediaTime": 7.926197,
+        "presentationEpochMs": 1793117380394.4,
+        "presentedFrames": 476,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380423.7,
+        "callbackEpochMs": 1793117380423.5,
+        "expectedDisplayEpochMs": 1793117380440.1,
+        "mediaTime": 7.942911,
+        "presentationEpochMs": 1793117380410.9,
+        "presentedFrames": 477,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380440,
+        "callbackEpochMs": 1793117380439.9,
+        "expectedDisplayEpochMs": 1793117380456.8,
+        "mediaTime": 7.959518,
+        "presentationEpochMs": 1793117380427.5,
+        "presentedFrames": 478,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380457,
+        "callbackEpochMs": 1793117380456.8,
+        "expectedDisplayEpochMs": 1793117380473.1,
+        "mediaTime": 7.975959,
+        "presentationEpochMs": 1793117380443.4,
+        "presentedFrames": 479,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380473.7,
+        "callbackEpochMs": 1793117380473.5,
+        "expectedDisplayEpochMs": 1793117380490.2,
+        "mediaTime": 7.992889,
+        "presentationEpochMs": 1793117380460.6,
+        "presentedFrames": 480,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380490.1,
+        "callbackEpochMs": 1793117380490,
+        "expectedDisplayEpochMs": 1793117380506.8,
+        "mediaTime": 8.009595,
+        "presentationEpochMs": 1793117380477.6,
+        "presentedFrames": 481,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380506.1,
+        "callbackEpochMs": 1793117380506,
+        "expectedDisplayEpochMs": 1793117380523.3,
+        "mediaTime": 8.025966,
+        "presentationEpochMs": 1793117380493.9,
+        "presentedFrames": 482,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380523.2,
+        "callbackEpochMs": 1793117380522.9,
+        "expectedDisplayEpochMs": 1793117380539.4,
+        "mediaTime": 8.041978,
+        "presentationEpochMs": 1793117380509.6,
+        "presentedFrames": 483,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380540.3,
+        "callbackEpochMs": 1793117380540.1,
+        "expectedDisplayEpochMs": 1793117380556.3,
+        "mediaTime": 8.059192,
+        "presentationEpochMs": 1793117380527.3,
+        "presentedFrames": 484,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380556.1,
+        "callbackEpochMs": 1793117380555.9,
+        "expectedDisplayEpochMs": 1793117380573.5,
+        "mediaTime": 8.076162,
+        "presentationEpochMs": 1793117380544.3,
+        "presentedFrames": 485,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380573.1,
+        "callbackEpochMs": 1793117380572.9,
+        "expectedDisplayEpochMs": 1793117380589.3,
+        "mediaTime": 8.09216,
+        "presentationEpochMs": 1793117380560.7,
+        "presentedFrames": 486,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380590.3,
+        "callbackEpochMs": 1793117380590.1,
+        "expectedDisplayEpochMs": 1793117380606.4,
+        "mediaTime": 8.108975,
+        "presentationEpochMs": 1793117380576.6,
+        "presentedFrames": 487,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380606.7,
+        "callbackEpochMs": 1793117380606.5,
+        "expectedDisplayEpochMs": 1793117380623.5,
+        "mediaTime": 8.126221,
+        "presentationEpochMs": 1793117380594.3,
+        "presentedFrames": 488,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380623.2,
+        "callbackEpochMs": 1793117380623.1,
+        "expectedDisplayEpochMs": 1793117380639.9,
+        "mediaTime": 8.142569,
+        "presentationEpochMs": 1793117380610.8,
+        "presentedFrames": 489,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380640.1,
+        "callbackEpochMs": 1793117380640,
+        "expectedDisplayEpochMs": 1793117380656.3,
+        "mediaTime": 8.159059,
+        "presentationEpochMs": 1793117380627.1,
+        "presentedFrames": 490,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380657,
+        "callbackEpochMs": 1793117380656.8,
+        "expectedDisplayEpochMs": 1793117380673.3,
+        "mediaTime": 8.176203,
+        "presentationEpochMs": 1793117380644.2,
+        "presentedFrames": 491,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380673.6,
+        "callbackEpochMs": 1793117380673.5,
+        "expectedDisplayEpochMs": 1793117380690.2,
+        "mediaTime": 8.192785,
+        "presentationEpochMs": 1793117380660.7,
+        "presentedFrames": 492,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380690.1,
+        "callbackEpochMs": 1793117380690,
+        "expectedDisplayEpochMs": 1793117380706.8,
+        "mediaTime": 8.209583,
+        "presentationEpochMs": 1793117380677.9,
+        "presentedFrames": 493,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380707,
+        "callbackEpochMs": 1793117380706.8,
+        "expectedDisplayEpochMs": 1793117380723.3,
+        "mediaTime": 8.226,
+        "presentationEpochMs": 1793117380693.9,
+        "presentedFrames": 494,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380723.6,
+        "callbackEpochMs": 1793117380723.4,
+        "expectedDisplayEpochMs": 1793117380740.2,
+        "mediaTime": 8.242894,
+        "presentationEpochMs": 1793117380711,
+        "presentedFrames": 495,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380740.1,
+        "callbackEpochMs": 1793117380740,
+        "expectedDisplayEpochMs": 1793117380756.9,
+        "mediaTime": 8.259475,
+        "presentationEpochMs": 1793117380727.4,
+        "presentedFrames": 496,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380757,
+        "callbackEpochMs": 1793117380756.9,
+        "expectedDisplayEpochMs": 1793117380773.4,
+        "mediaTime": 8.276087,
+        "presentationEpochMs": 1793117380744.2,
+        "presentedFrames": 497,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380773.6,
+        "callbackEpochMs": 1793117380773.5,
+        "expectedDisplayEpochMs": 1793117380790.1,
+        "mediaTime": 8.292842,
+        "presentationEpochMs": 1793117380760.8,
+        "presentedFrames": 498,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380790.3,
+        "callbackEpochMs": 1793117380790.1,
+        "expectedDisplayEpochMs": 1793117380806.8,
+        "mediaTime": 8.309681,
+        "presentationEpochMs": 1793117380777.7,
+        "presentedFrames": 499,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380806.2,
+        "callbackEpochMs": 1793117380806,
+        "expectedDisplayEpochMs": 1793117380823.5,
+        "mediaTime": 8.326208,
+        "presentationEpochMs": 1793117380794.2,
+        "presentedFrames": 500,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380823.6,
+        "callbackEpochMs": 1793117380823.5,
+        "expectedDisplayEpochMs": 1793117380839.4,
+        "mediaTime": 8.34201,
+        "presentationEpochMs": 1793117380809.6,
+        "presentedFrames": 501,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380840.3,
+        "callbackEpochMs": 1793117380840.2,
+        "expectedDisplayEpochMs": 1793117380856.8,
+        "mediaTime": 8.359589,
+        "presentationEpochMs": 1793117380827.7,
+        "presentedFrames": 502,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380857,
+        "callbackEpochMs": 1793117380856.9,
+        "expectedDisplayEpochMs": 1793117380873.5,
+        "mediaTime": 8.376159,
+        "presentationEpochMs": 1793117380844.2,
+        "presentedFrames": 503,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380873.2,
+        "callbackEpochMs": 1793117380873,
+        "expectedDisplayEpochMs": 1793117380890.2,
+        "mediaTime": 8.392894,
+        "presentationEpochMs": 1793117380860.9,
+        "presentedFrames": 504,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380890.3,
+        "callbackEpochMs": 1793117380890.2,
+        "expectedDisplayEpochMs": 1793117380906.3,
+        "mediaTime": 8.408959,
+        "presentationEpochMs": 1793117380876.9,
+        "presentedFrames": 505,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380906.2,
+        "callbackEpochMs": 1793117380906,
+        "expectedDisplayEpochMs": 1793117380923.5,
+        "mediaTime": 8.426316,
+        "presentationEpochMs": 1793117380894.4,
+        "presentedFrames": 506,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380923.2,
+        "callbackEpochMs": 1793117380923,
+        "expectedDisplayEpochMs": 1793117380939.3,
+        "mediaTime": 8.442005,
+        "presentationEpochMs": 1793117380909.7,
+        "presentedFrames": 507,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380940.3,
+        "callbackEpochMs": 1793117380940.2,
+        "expectedDisplayEpochMs": 1793117380956.4,
+        "mediaTime": 8.459134,
+        "presentationEpochMs": 1793117380927.1,
+        "presentedFrames": 508,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380956.1,
+        "callbackEpochMs": 1793117380956,
+        "expectedDisplayEpochMs": 1793117380973.5,
+        "mediaTime": 8.476205,
+        "presentationEpochMs": 1793117380944.3,
+        "presentedFrames": 509,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380973.7,
+        "callbackEpochMs": 1793117380973.5,
+        "expectedDisplayEpochMs": 1793117380989.3,
+        "mediaTime": 8.49212,
+        "presentationEpochMs": 1793117380960.2,
+        "presentedFrames": 510,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117380990.3,
+        "callbackEpochMs": 1793117380990.2,
+        "expectedDisplayEpochMs": 1793117381006.8,
+        "mediaTime": 8.509547,
+        "presentationEpochMs": 1793117380977.5,
+        "presentedFrames": 511,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381006.2,
+        "callbackEpochMs": 1793117381006,
+        "expectedDisplayEpochMs": 1793117381023.5,
+        "mediaTime": 8.526229,
+        "presentationEpochMs": 1793117380994.3,
+        "presentedFrames": 512,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381023.7,
+        "callbackEpochMs": 1793117381023.5,
+        "expectedDisplayEpochMs": 1793117381039.4,
+        "mediaTime": 8.541993,
+        "presentationEpochMs": 1793117381009.6,
+        "presentedFrames": 513,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381040.3,
+        "callbackEpochMs": 1793117381040.2,
+        "expectedDisplayEpochMs": 1793117381056.8,
+        "mediaTime": 8.559685,
+        "presentationEpochMs": 1793117381027.8,
+        "presentedFrames": 514,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381057,
+        "callbackEpochMs": 1793117381056.8,
+        "expectedDisplayEpochMs": 1793117381073.5,
+        "mediaTime": 8.576208,
+        "presentationEpochMs": 1793117381043.9,
+        "presentedFrames": 515,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381073.6,
+        "callbackEpochMs": 1793117381073.5,
+        "expectedDisplayEpochMs": 1793117381090.1,
+        "mediaTime": 8.593021,
+        "presentationEpochMs": 1793117381061,
+        "presentedFrames": 516,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381090.2,
+        "callbackEpochMs": 1793117381090,
+        "expectedDisplayEpochMs": 1793117381106.9,
+        "mediaTime": 8.609493,
+        "presentationEpochMs": 1793117381077.5,
+        "presentedFrames": 517,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381106.1,
+        "callbackEpochMs": 1793117381106,
+        "expectedDisplayEpochMs": 1793117381123.3,
+        "mediaTime": 8.62609,
+        "presentationEpochMs": 1793117381094.1,
+        "presentedFrames": 518,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381123.6,
+        "callbackEpochMs": 1793117381123.5,
+        "expectedDisplayEpochMs": 1793117381139.3,
+        "mediaTime": 8.642022,
+        "presentationEpochMs": 1793117381109.7,
+        "presentedFrames": 519,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381140.2,
+        "callbackEpochMs": 1793117381140,
+        "expectedDisplayEpochMs": 1793117381156.9,
+        "mediaTime": 8.659712,
+        "presentationEpochMs": 1793117381127.8,
+        "presentedFrames": 520,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381156.1,
+        "callbackEpochMs": 1793117381156,
+        "expectedDisplayEpochMs": 1793117381173.4,
+        "mediaTime": 8.676034,
+        "presentationEpochMs": 1793117381144.1,
+        "presentedFrames": 521,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381173.2,
+        "callbackEpochMs": 1793117381172.9,
+        "expectedDisplayEpochMs": 1793117381189.3,
+        "mediaTime": 8.69195,
+        "presentationEpochMs": 1793117381159.9,
+        "presentedFrames": 522,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381190.3,
+        "callbackEpochMs": 1793117381190.2,
+        "expectedDisplayEpochMs": 1793117381206.3,
+        "mediaTime": 8.709066,
+        "presentationEpochMs": 1793117381176.9,
+        "presentedFrames": 523,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381206.1,
+        "callbackEpochMs": 1793117381206,
+        "expectedDisplayEpochMs": 1793117381223.5,
+        "mediaTime": 8.726195,
+        "presentationEpochMs": 1793117381194.2,
+        "presentedFrames": 524,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381223.7,
+        "callbackEpochMs": 1793117381223.5,
+        "expectedDisplayEpochMs": 1793117381239.3,
+        "mediaTime": 8.742093,
+        "presentationEpochMs": 1793117381209.5,
+        "presentedFrames": 525,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381240.1,
+        "callbackEpochMs": 1793117381240,
+        "expectedDisplayEpochMs": 1793117381256.9,
+        "mediaTime": 8.759505,
+        "presentationEpochMs": 1793117381227.4,
+        "presentedFrames": 526,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381257,
+        "callbackEpochMs": 1793117381256.9,
+        "expectedDisplayEpochMs": 1793117381273.3,
+        "mediaTime": 8.776138,
+        "presentationEpochMs": 1793117381244.1,
+        "presentedFrames": 527,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381273.6,
+        "callbackEpochMs": 1793117381273.6,
+        "expectedDisplayEpochMs": 1793117381290.2,
+        "mediaTime": 8.792832,
+        "presentationEpochMs": 1793117381260.9,
+        "presentedFrames": 528,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381290.2,
+        "callbackEpochMs": 1793117381289.9,
+        "expectedDisplayEpochMs": 1793117381306.8,
+        "mediaTime": 8.809558,
+        "presentationEpochMs": 1793117381277.6,
+        "presentedFrames": 529,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381307,
+        "callbackEpochMs": 1793117381306.9,
+        "expectedDisplayEpochMs": 1793117381323.3,
+        "mediaTime": 8.826011,
+        "presentationEpochMs": 1793117381294,
+        "presentedFrames": 530,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381323.6,
+        "callbackEpochMs": 1793117381323.5,
+        "expectedDisplayEpochMs": 1793117381340.2,
+        "mediaTime": 8.843026,
+        "presentationEpochMs": 1793117381311.1,
+        "presentedFrames": 531,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381340.3,
+        "callbackEpochMs": 1793117381340.2,
+        "expectedDisplayEpochMs": 1793117381356.9,
+        "mediaTime": 8.859525,
+        "presentationEpochMs": 1793117381327.6,
+        "presentedFrames": 532,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381357.1,
+        "callbackEpochMs": 1793117381356.8,
+        "expectedDisplayEpochMs": 1793117381373.6,
+        "mediaTime": 8.876311,
+        "presentationEpochMs": 1793117381344.3,
+        "presentedFrames": 533,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381373.7,
+        "callbackEpochMs": 1793117381373.6,
+        "expectedDisplayEpochMs": 1793117381390.2,
+        "mediaTime": 8.89291,
+        "presentationEpochMs": 1793117381360.9,
+        "presentedFrames": 534,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381390.3,
+        "callbackEpochMs": 1793117381390.2,
+        "expectedDisplayEpochMs": 1793117381406.9,
+        "mediaTime": 8.909566,
+        "presentationEpochMs": 1793117381377.6,
+        "presentedFrames": 535,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381407,
+        "callbackEpochMs": 1793117381406.9,
+        "expectedDisplayEpochMs": 1793117381423.5,
+        "mediaTime": 8.926249,
+        "presentationEpochMs": 1793117381394.3,
+        "presentedFrames": 536,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381423.2,
+        "callbackEpochMs": 1793117381423,
+        "expectedDisplayEpochMs": 1793117381440.2,
+        "mediaTime": 8.942943,
+        "presentationEpochMs": 1793117381410.9,
+        "presentedFrames": 537,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381440.4,
+        "callbackEpochMs": 1793117381440.2,
+        "expectedDisplayEpochMs": 1793117381456.3,
+        "mediaTime": 8.958999,
+        "presentationEpochMs": 1793117381427,
+        "presentedFrames": 538,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381456.2,
+        "callbackEpochMs": 1793117381456,
+        "expectedDisplayEpochMs": 1793117381473.6,
+        "mediaTime": 8.976298,
+        "presentationEpochMs": 1793117381444.2,
+        "presentedFrames": 539,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381473.7,
+        "callbackEpochMs": 1793117381473.5,
+        "expectedDisplayEpochMs": 1793117381489.4,
+        "mediaTime": 8.992078,
+        "presentationEpochMs": 1793117381459.6,
+        "presentedFrames": 540,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381490.1,
+        "callbackEpochMs": 1793117381490,
+        "expectedDisplayEpochMs": 1793117381506.9,
+        "mediaTime": 9.009723,
+        "presentationEpochMs": 1793117381477.8,
+        "presentedFrames": 541,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381507,
+        "callbackEpochMs": 1793117381506.9,
+        "expectedDisplayEpochMs": 1793117381523.2,
+        "mediaTime": 9.025948,
+        "presentationEpochMs": 1793117381493.8,
+        "presentedFrames": 542,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381523.6,
+        "callbackEpochMs": 1793117381523.5,
+        "expectedDisplayEpochMs": 1793117381540.2,
+        "mediaTime": 9.04293,
+        "presentationEpochMs": 1793117381510.9,
+        "presentedFrames": 543,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381540.1,
+        "callbackEpochMs": 1793117381539.8,
+        "expectedDisplayEpochMs": 1793117381556.9,
+        "mediaTime": 9.059541,
+        "presentationEpochMs": 1793117381527.5,
+        "presentedFrames": 544,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381556.2,
+        "callbackEpochMs": 1793117381556,
+        "expectedDisplayEpochMs": 1793117381573.2,
+        "mediaTime": 9.076029,
+        "presentationEpochMs": 1793117381544,
+        "presentedFrames": 545,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381573.7,
+        "callbackEpochMs": 1793117381573.5,
+        "expectedDisplayEpochMs": 1793117381589.3,
+        "mediaTime": 9.092033,
+        "presentationEpochMs": 1793117381560.2,
+        "presentedFrames": 546,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381590.2,
+        "callbackEpochMs": 1793117381590,
+        "expectedDisplayEpochMs": 1793117381606.9,
+        "mediaTime": 9.109692,
+        "presentationEpochMs": 1793117381577.7,
+        "presentedFrames": 547,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381607.1,
+        "callbackEpochMs": 1793117381606.9,
+        "expectedDisplayEpochMs": 1793117381623.4,
+        "mediaTime": 9.12605,
+        "presentationEpochMs": 1793117381594,
+        "presentedFrames": 548,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381623.1,
+        "callbackEpochMs": 1793117381623,
+        "expectedDisplayEpochMs": 1793117381640.2,
+        "mediaTime": 9.143037,
+        "presentationEpochMs": 1793117381610.9,
+        "presentedFrames": 549,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381639.5,
+        "callbackEpochMs": 1793117381639.4,
+        "expectedDisplayEpochMs": 1793117381656.3,
+        "mediaTime": 9.158988,
+        "presentationEpochMs": 1793117381626.9,
+        "presentedFrames": 550,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381657,
+        "callbackEpochMs": 1793117381656.9,
+        "expectedDisplayEpochMs": 1793117381672.8,
+        "mediaTime": 9.175371,
+        "presentationEpochMs": 1793117381643,
+        "presentedFrames": 551,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381673.1,
+        "callbackEpochMs": 1793117381673,
+        "expectedDisplayEpochMs": 1793117381690.2,
+        "mediaTime": 9.192896,
+        "presentationEpochMs": 1793117381660.9,
+        "presentedFrames": 552,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381690,
+        "callbackEpochMs": 1793117381689.9,
+        "expectedDisplayEpochMs": 1793117381706.4,
+        "mediaTime": 9.208903,
+        "presentationEpochMs": 1793117381676.8,
+        "presentedFrames": 553,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381707.1,
+        "callbackEpochMs": 1793117381706.9,
+        "expectedDisplayEpochMs": 1793117381723.2,
+        "mediaTime": 9.225932,
+        "presentationEpochMs": 1793117381694,
+        "presentedFrames": 554,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381723.7,
+        "callbackEpochMs": 1793117381723.5,
+        "expectedDisplayEpochMs": 1793117381740.2,
+        "mediaTime": 9.242821,
+        "presentationEpochMs": 1793117381710.8,
+        "presentedFrames": 555,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381740.1,
+        "callbackEpochMs": 1793117381740,
+        "expectedDisplayEpochMs": 1793117381756.9,
+        "mediaTime": 9.25962,
+        "presentationEpochMs": 1793117381727.7,
+        "presentedFrames": 556,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381757,
+        "callbackEpochMs": 1793117381756.9,
+        "expectedDisplayEpochMs": 1793117381773.3,
+        "mediaTime": 9.275925,
+        "presentationEpochMs": 1793117381743.9,
+        "presentedFrames": 557,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381773.3,
+        "callbackEpochMs": 1793117381773.3,
+        "expectedDisplayEpochMs": 1793117381790.2,
+        "mediaTime": 9.292907,
+        "presentationEpochMs": 1793117381760.9,
+        "presentedFrames": 558,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381790.4,
+        "callbackEpochMs": 1793117381790.2,
+        "expectedDisplayEpochMs": 1793117381806.6,
+        "mediaTime": 9.309171,
+        "presentationEpochMs": 1793117381777.1,
+        "presentedFrames": 559,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381807,
+        "callbackEpochMs": 1793117381806.9,
+        "expectedDisplayEpochMs": 1793117381823.5,
+        "mediaTime": 9.32627,
+        "presentationEpochMs": 1793117381794.3,
+        "presentedFrames": 560,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381823.7,
+        "callbackEpochMs": 1793117381823.6,
+        "expectedDisplayEpochMs": 1793117381840.2,
+        "mediaTime": 9.342828,
+        "presentationEpochMs": 1793117381810.8,
+        "presentedFrames": 561,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381840.2,
+        "callbackEpochMs": 1793117381840,
+        "expectedDisplayEpochMs": 1793117381856.9,
+        "mediaTime": 9.359568,
+        "presentationEpochMs": 1793117381827.5,
+        "presentedFrames": 562,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381857,
+        "callbackEpochMs": 1793117381856.9,
+        "expectedDisplayEpochMs": 1793117381873.4,
+        "mediaTime": 9.375909,
+        "presentationEpochMs": 1793117381843.9,
+        "presentedFrames": 563,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      },
+      {
+        "at": 1793117381873.7,
+        "callbackEpochMs": 1793117381873.6,
+        "expectedDisplayEpochMs": 1793117381890.2,
+        "mediaTime": 9.392916,
+        "presentationEpochMs": 1793117381860.9,
+        "presentedFrames": 564,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        },
+        "videoHeight": 2,
+        "videoWidth": 2
+      }
+    ],
+    "samples": [
+      {
+        "at": 1793117372464,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117379556.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117379640.3,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117379723.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117379806.2,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117379890.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117379957,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380040.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380123.2,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380206.3,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380290.3,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380356.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380440.1,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380523.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380606.7,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380690.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380757,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380840.3,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117380923.2,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381006.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381090.2,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381156.1,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381240.1,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381323.7,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381407.1,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381490.2,
+        "dpr": 2,
+        "grey": 125,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      },
+      {
+        "at": 1793117381556.2,
+        "dpr": 2,
+        "grey": 35,
+        "kind": "SOURCE_DRAW",
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      }
+    ],
+    "sizeCss": 2,
+    "source": "CANVAS_CAPTURE_STREAM",
+    "video": true
+  },
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "a0b52ff6ed9b31595f27c8dcb7ae03dab7534ae072adabde7953308d817e5359",
+    "fixtureOffscreenSha256": "a753afbe5d7dbab57ddd3a14988c4e0daaf574def5e80cb06a61601403a40b8c"
+  },
+  "fixture": "A real muted 2×2 CSS-pixel HTML video presents a detached canvas.captureStream source, grey35/125 for2.08s after disclosure; no encoded media file and no audio. Ground truth records source draws separately from actual requestVideoFrameCallback presentation clocks. A full-viewport WebGL2 background changes for5s after the same control, with all RGB channels bounded to90–113; draw timestamps are recorded independently of capture.",
+  "headless": false
+}

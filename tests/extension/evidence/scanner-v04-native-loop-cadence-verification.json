@@ -1,0 +1,116 @@
+{
+  "scope": "One actual toolbar-started autonomous near-end observation of an existing seekable constant VP9 loop. Page clocks and rVFC independently confirm the boundary; no flash detection, whole-site, state-of-the-art, physical safety or frame-atomic attribution claim.",
+  "status": "PASS",
+  "jobId": "ac202974-efe9-49b7-947b-16c9e945e40e",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "cadenceVariant": {
+    "moduleSha256": "f7b73201008cd0d72d486d9d4b3afe586d80da7a2e46fb6c9510dc1168cdbf2e",
+    "policy": {
+      "id": "CONSTANT_VIDEO_GENTLE_MARKER_2S",
+      "markerWidthCssPx": 4,
+      "markerHeightCssPx": 4,
+      "markerColor": "#e8e8e8",
+      "backgroundColor": "#eee",
+      "travelCssPx": 180,
+      "oneWayDurationMs": 2000,
+      "timing": "linear",
+      "direction": "alternate",
+      "boundary": "Explicit capture-cadence stimulus only; the constant encoded video is unchanged. This does not establish why the original slow-marker capture had inadequate cadence."
+    }
+  },
+  "sourceSha256": "f43fcae9859f69770c5726639bb681c67d333e95a576d51d7de0443de1a8248f",
+  "manifestSha256": "c6ffd34d863227489ea8bcd3924cc5e520f9e67ca11bac05a3f9f2c076acb73c",
+  "scenario": "media-loop-boundary-1",
+  "achieved": true,
+  "coverage": "TESTED",
+  "mediaInterval": {
+    "startMs": 1120,
+    "endMs": 6280.2,
+    "wraps": 2,
+    "presentedWraps": 2,
+    "presentations": 129,
+    "presentedEndMs": 6280
+  },
+  "localSamples": 105,
+  "independentPageEvidence": {
+    "documentId": "a38d59ac-c9af-44b6-aa4e-6e2e2fe1a9b8",
+    "currentTimeSamples": 103,
+    "presentations": 129,
+    "currentTimeWraps": 2,
+    "presentedWraps": 2,
+    "matchedPresentations": 104
+  },
+  "quality": {
+    "frameCount": 310,
+    "effectiveFps": 59.99534017219758,
+    "maxGapMs": 17.800000190734863,
+    "width": 1800,
+    "height": 1126,
+    "downsampled": false,
+    "interrupted": false,
+    "spatial": {
+      "mode": "NATIVE_PIXELS",
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "retainedResolutionRatio": 1,
+      "stateBytes": 194358672,
+      "stateBudgetBytes": 268435456,
+      "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+      "colorAssumption": "SDR_SRGB_8BIT"
+    },
+    "processing": {
+      "measuredFrames": 310,
+      "meanMs": 7.835161255251977,
+      "maxMs": 30.199999809265137,
+      "framesOver16_7Ms": 2,
+      "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+      "conversionMeanMs": 3.9719354475698165,
+      "analysisMeanMs": 3.8554838765052057,
+      "conversionMethods": [
+        "VIDEOFRAME_COPY_RGBA"
+      ],
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 0,
+        "inputCopiedBytes": 0,
+        "inputCopyMs": 0,
+        "kernelMs": 0,
+        "wasmMemoryBytes": 160759808,
+        "migratedStateBytes": 152536336,
+        "extraStateBytes": 8223472,
+        "engineStateBytes": 194358672,
+        "embeddedKernelBytes": 2239
+      },
+      "decoded": {
+        "codedWidth": 1800,
+        "codedHeight": 1126,
+        "displayWidth": 1800,
+        "displayHeight": 1126,
+        "visibleRect": {
+          "x": 0,
+          "y": 0,
+          "width": 1800,
+          "height": 1126
+        },
+        "format": "I420",
+        "primaries": "bt709",
+        "transfer": "bt709",
+        "matrix": "bt709"
+      },
+      "track": {
+        "width": 1800,
+        "height": 1126,
+        "frameRate": 60,
+        "resizeMode": "none"
+      }
+    },
+    "captureWindowMs": 5170.400000572205,
+    "leadingIdleMs": 13.600000381469727,
+    "trailingIdleMs": 6.600000381469727
+  },
+  "wholeJobState": "PARTIAL",
+  "wholeReportStatus": "INCONCLUSIVE",
+  "passed": null,
+  "errors": []
+}

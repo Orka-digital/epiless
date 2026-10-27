@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "1f292b34-391e-47c6-b6b3-59eabb90a79d",
+  "origin": "http://127.0.0.1:47819",
+  "startedAt": "2026-10-26T23:25:55.824Z",
+  "endedAt": "2026-10-26T23:26:11.091Z",
+  "engineVersion": "0.1.0-candidate",
+  "runnerVersion": "0.1.0",
+  "status": "INCONCLUSIVE",
+  "passed": null,
+  "job": {
+    "state": "PARTIAL",
+    "stopReason": "QUEUE_EXHAUSTED",
+    "maxRoutes": 1,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "discoveredRoutes": 1,
+    "visitedRoutes": 1
+  },
+  "routes": [
+    {
+      "url": "http://127.0.0.1:47819/guide",
+      "status": "PARTIAL",
+      "scenarios": [
+        {
+          "id": "db918af4-5a5a-45a5-8ceb-33b0f971bca2",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-26T23:25:56.063Z",
+          "endedAt": "2026-10-26T23:26:11.085Z",
+          "quality": {
+            "frameCount": 888,
+            "effectiveFps": 59.106538368521356,
+            "maxGapMs": 75.5,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "INITIAL_NAVIGATION_TRANSITION_UNOBSERVED",
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "NO_SITEMAP_DISCOVERY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+    "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+    "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+    "Capture was rescaled. Small flashing regions may have been lost and area is not validated.",
+    "11 source/analysis frames were skipped or unavailable.",
+    "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+    "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+  ]
+}

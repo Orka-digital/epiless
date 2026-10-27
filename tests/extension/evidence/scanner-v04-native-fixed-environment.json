@@ -1,0 +1,78 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "machine": {
+    "arch": "arm64",
+    "os": "darwin",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "recordedAt": "2026-10-27T13:59:46.026Z",
+  "emulateViewport": false,
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "initialGeometry": {
+    "innerWidth": 900,
+    "innerHeight": 563,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "devicePixelRatio": 2,
+    "screen": {
+      "width": 3360,
+      "height": 1890,
+      "availWidth": 3360,
+      "availHeight": 1755
+    },
+    "visibility": "visible"
+  },
+  "finalGeometry": {
+    "devicePixelRatio": 2,
+    "innerHeight": 563,
+    "innerWidth": 900,
+    "outerHeight": 563,
+    "outerWidth": 900,
+    "visibility": "visible"
+  },
+  "pixelProbe": null,
+  "candidateFixture": {
+    "events": [
+      {
+        "at": 1793109572490.6,
+        "kind": "CONTROL"
+      },
+      {
+        "at": 1793109572520.6,
+        "kind": "ANIMATION_START"
+      },
+      {
+        "at": 1793109574587.1,
+        "kind": "ANIMATION_END"
+      }
+    ],
+    "fixed": true,
+    "samples": [
+      {
+        "at": 1793109552185.8,
+        "colour": "rgb(35, 35, 35)",
+        "dpr": 2,
+        "rect": {
+          "height": 2,
+          "width": 2,
+          "x": 100,
+          "y": 240
+        }
+      }
+    ],
+    "sizeCss": 2
+  },
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "e4f2e29b9f35afee8198f8aaabfe1674d365660fa5749bcc1cc2f145be14a31d"
+  },
+  "fixture": "A 2×2 CSS-pixel marker alternates between grey35 and grey125 for 2.08s after a supported disclosure control; fixed mode keeps grey35. Other content static with one slow low-contrast cadence marker. No audio.",
+  "headless": false
+}

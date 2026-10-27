@@ -1,0 +1,149 @@
+{
+  "status": "PASS",
+  "recordedAt": "2026-10-27T19:08:12.807880+00:00",
+  "scope": "Three actual toolbar-authorized native captures on one Mac and the same frozen scanner build; only explicit fixture/site content changes between fresh documents.",
+  "sourceDirectory": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu",
+  "scannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61",
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "d0ac12bb19825c77f5d796bdbfa8b06eb965d539d53c4144c2fc2ff25ad8a7fc",
+    "embeddedScannerBuildSha256": "6770f52087d2cfeb0b8206677e4076056385f64d1bac660063d79f7164ce4f61"
+  },
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "tests/extension/verify-native-media-recheck.mjs",
+    "tests/extension/evidence/scanner-v04-native-media-recheck-baseline-local-job.json",
+    "tests/extension/evidence/scanner-v04-native-media-recheck-baseline-environment.json",
+    "tests/extension/evidence/scanner-v04-native-media-recheck-fixed-local-job.json",
+    "tests/extension/evidence/scanner-v04-native-media-recheck-fixed-environment.json",
+    "tests/extension/evidence/scanner-v04-native-media-recheck-recurrence-local-job.json",
+    "tests/extension/evidence/scanner-v04-native-media-recheck-recurrence-environment.json"
+  ],
+  "exitCode": 0,
+  "files": [
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/3753361c-8a26-4e87-8d1c-77a7833225e1.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-baseline-capture.json",
+      "bytes": 181082,
+      "sha256": "511384f7b2e3e4d25e79b414a47416fd0c2e48abfc7ccd4eb152265d53bb15c8"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/3753361c-8a26-4e87-8d1c-77a7833225e1-local-job.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-baseline-local-job.json",
+      "bytes": 517338,
+      "sha256": "c169118862b039198b2f584c87866329638a28de1730c9b10cf3f05064b48bf0"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/3753361c-8a26-4e87-8d1c-77a7833225e1-environment.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-baseline-environment.json",
+      "bytes": 380228,
+      "sha256": "6624000ad6a7020bb5ab4965f8c2092652563aab136b9cc1d5249f2b0f080ce9"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/7811c915-1f18-4dfe-9985-2f8111e89805.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-fixed-capture.json",
+      "bytes": 8052,
+      "sha256": "7915e0b37071005f33734f46f32202cd35246fd750fa99be2d4168b03fdcd713"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/7811c915-1f18-4dfe-9985-2f8111e89805-local-job.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-fixed-local-job.json",
+      "bytes": 73684,
+      "sha256": "91ff28bafd8ab69c3482da3b5e44a4ea377c03b4326bd2276f56f4a75c4efc09"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/7811c915-1f18-4dfe-9985-2f8111e89805-environment.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-fixed-environment.json",
+      "bytes": 468405,
+      "sha256": "24a3191c54d7efa319f2ae4187cb9daf172c45179616e6a8af269a0279f609d5"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/fd27bb38-1836-4974-abf6-ce41c5c1b63e.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-recurrence-capture.json",
+      "bytes": 74883,
+      "sha256": "5fb2185d4a1ddcfee330a5f7bdf4aa045d6974f6f76fd95a87243d57ecec0117"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/fd27bb38-1836-4974-abf6-ce41c5c1b63e-local-job.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-recurrence-local-job.json",
+      "bytes": 144146,
+      "sha256": "42d21c96d5636079a41ebc0ea18daca3623f7f3826da876fd37a5c47857084e2"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/fd27bb38-1836-4974-abf6-ce41c5c1b63e-environment.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-recurrence-environment.json",
+      "bytes": 556961,
+      "sha256": "b16db7603260f3752d6627ae103882e47a4f814c488c0c1aa233c8f88505e04a"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/requests.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-requests.json",
+      "bytes": 2364,
+      "sha256": "d80f036da49cc6d7f0716069a3d6b4f2e8e91c0f5977f0d7e6a909f785051c09"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/recheck-anchor.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-recheck-anchor.json",
+      "bytes": 164,
+      "sha256": "5a4096ab24ddee959afc780d1c1d27ba7b08b2b5d74ffd3058ea6e4d28525a06"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/command-media-fixed-prepare.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-command-media-fixed-prepare.json",
+      "bytes": 57,
+      "sha256": "f9ce92ceaa46cda1ac45f14c4dffa396bb080f7ff7a151ff28559220fd0b0089"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/command-media-recurrence-prepare.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-command-media-recurrence-prepare.json",
+      "bytes": 57,
+      "sha256": "3fa90416cee3762e27aab30c12c2d9d5dfdc51d79e1e2cb3cf364d2b87f2310f"
+    },
+    {
+      "source": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/fixed-comparison.json",
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-fixed-comparison.json",
+      "bytes": 197,
+      "sha256": "e1c1c756f5689802212f1a983a31c2685b063239bfcd02972ea42447a206c10a"
+    },
+    {
+      "retained": "tests/extension/evidence/scanner-v04-native-media-recheck-verification.json",
+      "bytes": 4049,
+      "sha256": "162afd5e2506ec064c46a67c613963076ea1215dc38adf67b04b736d5bd8ecd7"
+    }
+  ],
+  "validationSourceSha256": {
+    "tests/extension/native-fixture.mjs": "2cc4b2735966d021e778ea75c3fef262a048c6eee5c923e9829d9071706e1d00",
+    "tests/extension/native-encoded-recheck-source.mjs": "3ad082a89f3ffca0a04dd286e35df1d24fd29187cacaf7b80d6ee2a8f4e6ba47",
+    "tests/extension/native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+    "tests/extension/native-encoded-source.mjs": "cbb6068e5fd56a549beb87a38a5e6961334c5dd0ff7640be6b1d3c726dc8e1f0",
+    "tests/extension/verify-native-media-recheck.mjs": "21230274445307c2ec7f8f5d84af14734b52aa691f783000c3ee96e463743f52",
+    "tests/extension/native-encoded-recheck-source.test.ts": "cf5ca498403d057903613889ed004412d51a3109654e8d196aa16b45422bb194"
+  },
+  "originalFailure": {
+    "verification": "tests/extension/evidence/scanner-v04-native-media-recheck-verification-before-window-scope.json",
+    "verifierSource": "tests/extension/evidence/scanner-v04-native-media-recheck-verifier-before-window-scope.mjs",
+    "verifierSha256": "95acf1c60bb0df5b50401f6e0e01e81d36e9ce1ac88b3a2adee35ddcb2e97c14",
+    "cause": "Pre-correction validator incorrectly rejected the entire page lifetime. Genuine cleanup seeks occurred only after both media STOP and observation END, back to the original saved position0. No raw evidence, scanner code, fixture or capture was changed.",
+    "classification": "VERIFIER_SCOPE_ERROR_NOT_CAPTURE_FAILURE"
+  },
+  "correction": "Reject all media errors, any seek before/during either measurement boundary, all wrong restoration positions, and multiple restoration seeks. Only one later seek to the exact original position is restoration-compatible. This does not prove causality.",
+  "validation": "Six focused fixture/provenance/window/order tests pass. Full strict actual-native comparison passes NOT_OBSERVED then REOBSERVED; every originally measured rVFC PTS recurs in order.",
+  "limits": [
+    "Source locator equality is not file-content equality; fixture hashes separately prove intended signal/fixed/signal bytes at one URL.",
+    "Only the current-profile action is the recheck anchor; advanced compact cleanup remains a separate known gap.",
+    "No normative, multi-machine, broad codec or causal guarantee."
+  ],
+  "integrityValidation": {
+    "status": "PASS",
+    "retainedFilesRechecked": 15,
+    "allCopiedOriginalBytesIdentical": true,
+    "allRetainedSha256AndSizesMatch": true,
+    "allValidationSourceSha256Match": true,
+    "publicReportValidation": "validatePublicReport PASS for baseline, fixed and recurrence",
+    "testSuite": "Parent final pnpm test PASS: 423 tests / 45 files on unchanged scanner6770f520",
+    "retention": "Metadata, numeric pixel diagnostics, source hashes and actual presentation timestamps only; no raw capture frames, screenshots or video recordings copied into this evidence bundle."
+  }
+}

@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "id": "7718db4e-cb46-41e4-b283-a66d728ebd73",
+  "origin": "http://127.0.0.1:47819",
+  "startedAt": "2026-10-27T01:27:32.134Z",
+  "endedAt": "2026-10-27T01:30:03.621Z",
+  "engineVersion": "0.1.0-candidate",
+  "runnerVersion": "0.1.0",
+  "status": "INCONCLUSIVE",
+  "passed": null,
+  "job": {
+    "state": "PARTIAL",
+    "stopReason": "QUEUE_EXHAUSTED",
+    "maxRoutes": 50,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "discoveredRoutes": 5,
+    "visitedRoutes": 5
+  },
+  "routes": [
+    {
+      "url": "http://127.0.0.1:47819/",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/ to http://127.0.0.1:47819/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "e97f755d-83c0-4a8c-9e38-76605bc085ab",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:27:32.316Z",
+          "endedAt": "2026-10-27T01:27:34.164Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "441e968d-9d69-4615-8f44-35f662d56f3e",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:27:34.171Z",
+          "endedAt": "2026-10-27T01:27:49.177Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "8714ac5c-e80c-4cd7-9c2a-a818fb2a92d7",
+          "type": "consent-reject-1",
+          "startedAt": "2026-10-27T01:27:49.183Z",
+          "endedAt": "2026-10-27T01:27:54.599Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "f01ee7ea-5516-4115-be0a-504363a4c2e9",
+          "type": "scroll-1",
+          "startedAt": "2026-10-27T01:27:54.607Z",
+          "endedAt": "2026-10-27T01:27:57.614Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "e6f6f16d-49d0-43a6-bc8f-454589e56ff9",
+          "type": "scroll-2",
+          "startedAt": "2026-10-27T01:27:57.621Z",
+          "endedAt": "2026-10-27T01:28:00.629Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "38c85013-0808-4cae-a6ff-844ab2c0c5b3",
+          "type": "scroll-3",
+          "startedAt": "2026-10-27T01:28:00.637Z",
+          "endedAt": "2026-10-27T01:28:03.645Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "db1e3278-8609-4e82-af21-3cc28f81c3eb",
+          "type": "menu-5",
+          "startedAt": "2026-10-27T01:28:03.651Z",
+          "endedAt": "2026-10-27T01:28:09.060Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 9.680542092483863,
+            "maxGapMs": 103.30000019073486,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "f182666c-3297-4509-a5bf-142d848aba4c",
+          "type": "scroll-4",
+          "startedAt": "2026-10-27T01:28:09.063Z",
+          "endedAt": "2026-10-27T01:28:12.070Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "701053e9-587d-4c3a-b1da-d733d9b7d878",
+          "type": "tab-7",
+          "startedAt": "2026-10-27T01:28:12.078Z",
+          "endedAt": "2026-10-27T01:28:17.487Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 6.176652269031537,
+            "maxGapMs": 161.89999961853027,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "6758a9d8-dc35-4b6a-b5c7-0e8bf1dc335e",
+          "type": "scroll-5",
+          "startedAt": "2026-10-27T01:28:17.495Z",
+          "endedAt": "2026-10-27T01:28:20.500Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "be776745-685c-4258-899e-f139ac8cc32b",
+          "type": "media-9",
+          "startedAt": "2026-10-27T01:28:20.503Z",
+          "endedAt": "2026-10-27T01:28:35.662Z",
+          "quality": {
+            "frameCount": 302,
+            "effectiveFps": 19.925725369976472,
+            "maxGapMs": 104.89999961853027,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "ef846d56-fa0d-461c-a069-0d3a479bcda9",
+          "type": "carousel-10",
+          "startedAt": "2026-10-27T01:28:35.665Z",
+          "endedAt": "2026-10-27T01:28:41.072Z",
+          "quality": {
+            "frameCount": 109,
+            "effectiveFps": 20.188047928640962,
+            "maxGapMs": 51.89999961853027,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": true
+          },
+          "findings": []
+        },
+        {
+          "id": "7606c185-a23f-4e22-862e-4954dec2b29b",
+          "type": "carousel-11",
+          "startedAt": "2026-10-27T01:28:41.076Z",
+          "endedAt": "2026-10-27T01:28:46.493Z",
+          "quality": {
+            "frameCount": 109,
+            "effectiveFps": 19.997037475223276,
+            "maxGapMs": 52.19999980926514,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/sitemap-only",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/ to http://127.0.0.1:47819/sitemap-only; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "b0643a53-cbd0-4e8e-b148-12fdd2fbf901",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:28:47.255Z",
+          "endedAt": "2026-10-27T01:28:49.035Z",
+          "quality": {
+            "frameCount": 1,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "3cd4ade9-9ab9-4249-aecc-de67551a7943",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:28:49.044Z",
+          "endedAt": "2026-10-27T01:29:04.047Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": false
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/reached",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/sitemap-only to http://127.0.0.1:47819/redirect; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Same-origin redirect: http://127.0.0.1:47819/redirect \u2192 http://127.0.0.1:47819/reached. Subsequent viewport observations belong to the reached URL.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.; Navigation transition from http://127.0.0.1:47819/reached to http://127.0.0.1:47819/redirect-again; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Same-origin redirect: http://127.0.0.1:47819/redirect-again \u2192 http://127.0.0.1:47819/reached. Subsequent viewport observations belong to the reached URL.; A redirect alias reached this previously measured route; its transition is retained without repeating the viewport scan.",
+      "scenarios": [
+        {
+          "id": "c3f25d5e-202b-4e6e-b24c-8dfef8f0f970",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:29:04.813Z",
+          "endedAt": "2026-10-27T01:29:06.698Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 9.900990099009901,
+            "maxGapMs": 101,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "643ac001-a814-44db-8154-e04b34ddbba1",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:29:06.706Z",
+          "endedAt": "2026-10-27T01:29:21.713Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "ff1dfc2e-6578-4e37-a9da-969d3b42b452",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:29:22.482Z",
+          "endedAt": "2026-10-27T01:29:24.372Z",
+          "quality": {
+            "frameCount": 2,
+            "effectiveFps": 9.930486612652334,
+            "maxGapMs": 100.69999980926514,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/lazy-observed",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/reached to http://127.0.0.1:47819/lazy-observed; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Navigation restored discovery source http://127.0.0.1:47819/ before activating its rendered link; this transition includes intermediate source-page frames.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "8a7210ab-aca2-4040-9fc6-9e1560783b54",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:29:25.133Z",
+          "endedAt": "2026-10-27T01:29:28.581Z",
+          "quality": {
+            "frameCount": 4,
+            "effectiveFps": 1.935483870967742,
+            "maxGapMs": 870.4000005722046,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "0edae858-42ad-454d-8b67-f88087e183ec",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:29:28.588Z",
+          "endedAt": "2026-10-27T01:29:43.591Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": false
+          },
+          "findings": []
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:47819/spa/client",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/lazy-observed to http://127.0.0.1:47819/spa/client; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Navigation restored discovery source http://127.0.0.1:47819/ before activating its rendered link; this transition includes intermediate source-page frames.; Viewport at route inventory: 1150 \u00d7 850 CSS pixels; device pixel ratio 1.",
+      "scenarios": [
+        {
+          "id": "85514926-2f6c-4529-b7a7-3f43564f0cb7",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T01:29:44.353Z",
+          "endedAt": "2026-10-27T01:29:47.836Z",
+          "quality": {
+            "frameCount": 4,
+            "effectiveFps": 1.7858205849641267,
+            "maxGapMs": 856.3999996185303,
+            "width": 320,
+            "height": 180,
+            "downsampled": true,
+            "interrupted": false
+          },
+          "findings": []
+        },
+        {
+          "id": "19d98136-3093-4483-a170-f00bd26c1c09",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T01:29:47.845Z",
+          "endedAt": "2026-10-27T01:30:02.850Z",
+          "quality": {
+            "frameCount": 0,
+            "effectiveFps": 0,
+            "maxGapMs": 0,
+            "width": 0,
+            "height": 0,
+            "downsampled": false,
+            "interrupted": false
+          },
+          "findings": []
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+    "HASH_ROUTER_ROUTES_UNOBSERVED",
+    "CAROUSEL_SAMPLING_LIMIT: each supported next/previous control is sampled once; other slide states remain untested.",
+    "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+    "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+    "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+    "Capture was rescaled. Small flashing regions may have been lost and area is not validated.",
+    "Less than one second of usable capture was observed.",
+    "Effective sampling was below 50 fps; fast flashes may be missed.",
+    "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+    "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+    "Capture gaps exceeded 100 ms; transitions across gaps were discarded.",
+    "1 source/analysis frames were skipped or unavailable."
+  ]
+}

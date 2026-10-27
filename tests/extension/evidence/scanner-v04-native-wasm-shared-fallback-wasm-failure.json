@@ -1,0 +1,24 @@
+{
+  "status": "FAILED_WASM_DENSE_PATH_UNREACHED",
+  "scope": "Actual native workload retained shared representatives, so the prepared WASM dense path processed zero frames. No general WASM throughput benefit is established by this run.",
+  "requireWasmExitCode": 1,
+  "requireWasmError": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Overloaded capture cannot pass native WASM acceptance.\n\ntrue !== false\n\n    at file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-dense.mjs:91:12 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: true,\n  expected: false,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n",
+  "strictPublicSchema": "PASS",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-shared-fallback-capture.json",
+      "bytes": 208796,
+      "sha256": "2c2df9dd6ae08509bcf0d8232f18f707bbe2c8f302cc68be2c72ca5cfcf3eb7d"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-shared-fallback-local-job.json",
+      "bytes": 228447,
+      "sha256": "94ab1597d134007a7d17cfc52cb1d9a1e2041a4b278d406f948ae7056e28f22e"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-shared-fallback-environment.json",
+      "bytes": 191633,
+      "sha256": "ba6e2ed0342e857ab2d9618585e58246778592e421a3d7efd217e90cf92434b7"
+    }
+  ]
+}

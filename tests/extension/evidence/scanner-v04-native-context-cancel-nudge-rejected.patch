@@ -1,0 +1,219 @@
+--- a/apps/chrome-extension/src/viewport-workspace.ts
++++ b/apps/chrome-extension/src/viewport-workspace.ts
+@@ -245,6 +245,49 @@
+   });
+ }
+ 
++/** One bounded native resize can invalidate a renderer's stale height after
++ * debugger chrome disappears. This is only a refresh trigger: the measured
++ * pre-attach CSS viewport remains the acceptance condition. Never enlarge the
++ * covered window, change focus, or repeat this if Chromium does not reflow. */
++async function refreshDetachedWorkspaceHeight(options: {
++  workspace: ViewportWorkspace;
++  driver: WorkspaceDriver;
++  read(): Promise<PageInventory['viewport']>;
++  wait(ms: number): Promise<void>;
++}): Promise<void> {
++  const { workspace, driver } = options;
++  const guard = () => assertViewportWorkspace(workspace, driver);
++  await guard();
++  const current = await driver.window(workspace.windowId);
++  const original = workspace.originalWindow;
++  if (
++    original.height <= 1 ||
++    (['width', 'height', 'left', 'top'] as const).some(
++      (key) => current[key] !== original[key],
++    )
++  )
++    throw new Error('VIEWPORT_LAYOUT_REFRESH_BOUNDS_CHANGED');
++  try {
++    await guard();
++    await driver.resize(workspace.windowId, {
++      ...original,
++      height: original.height - 1,
++    });
++    await guard();
++    const reached = await driver.window(workspace.windowId);
++    if (reached.height !== original.height - 1)
++      throw new Error('VIEWPORT_LAYOUT_REFRESH_NOT_REACHED');
++    // Read actual CSS while smaller, without inventing a relationship between
++    // browser chrome height and document height.
++    await waitForStableViewport({ ...options, guard });
++  } finally {
++    // If the user takes over the workspace, stop touching it. Otherwise restore
++    // its exact outer bounds even when the refresh/read failed.
++    await guard();
++    await driver.resize(workspace.windowId, original);
++  }
++}
++
+ /** Restore while the tab is still active in its unfocused workspace, then move
+  * it back as an inactive tab. Never activate it in the foreground to fix layout. */
+ export async function restoreViewportWorkspace(options: {
+@@ -271,6 +314,7 @@
+   if (!foreground || foreground.id === workspace.tabId)
+     throw new Error('VIEWPORT_WORKSPACE_RETURN_TARGET_UNAVAILABLE');
+   let failure: unknown;
++  let debuggerReleased = false;
+   let expected: PageInventory['viewport'] | undefined =
+     workspace.originalViewport;
+   try {
+@@ -279,6 +323,7 @@
+     if (options.releaseDebugger) {
+       try {
+         await options.releaseDebugger();
++        debuggerReleased = true;
+         expected = workspace.detachedViewport;
+         if (!expected)
+           failure = new Error('VIEWPORT_PRE_DEBUGGER_GEOMETRY_UNAVAILABLE');
+@@ -292,12 +337,27 @@
+       await assertViewportWorkspace(workspace, driver);
+     }
+     await driver.resize(workspace.windowId, workspace.originalWindow);
+-    await waitForStableViewport({
+-      read: options.read,
+-      wait: options.wait,
+-      guard: () => assertViewportWorkspace(workspace, driver),
+-      expected,
+-    });
++    const settle = () =>
++      waitForStableViewport({
++        read: options.read,
++        wait: options.wait,
++        guard: () => assertViewportWorkspace(workspace, driver),
++        expected,
++      });
++    try {
++      await settle();
++    } catch (error) {
++      if (
++        !debuggerReleased ||
++        failure ||
++        !expected ||
++        !(error instanceof Error) ||
++        !error.message.startsWith('VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED:')
++      )
++        throw error;
++      await refreshDetachedWorkspaceHeight({ ...options, driver });
++      await settle();
++    }
+   } catch (error) {
+     failure ??= error;
+   }
+--- a/tests/extension/viewport-workspace.test.ts
++++ b/tests/extension/viewport-workspace.test.ts
+@@ -322,6 +322,106 @@
+     workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
+     await restoreViewportWorkspace({ workspace, ...f.options });
+     expect(await f.options.read()).toEqual(workspace.originalViewport);
++    expect(f.driver.resize).toHaveBeenCalledTimes(1);
++  });
++  it('refreshes a stale detached height once inside the cover and verifies the actual pre-attach CSS before return', async () => {
++    const f = fixture();
++    const workspace = await createViewportWorkspace(f.options);
++    workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
++    let detached = false;
++    let smallerRead = false;
++    const read = f.options.read;
++    f.options.read = vi.fn(async () => {
++      if (f.windows.get(2)?.height === 649) smallerRead = true;
++      return read();
++    });
++    f.driver.resize = vi.fn(async (id, bounds) => {
++      expect(detached).toBe(true);
++      expect(f.target).toMatchObject({ windowId: 2, active: true });
++      expect(f.windows.get(2)?.focused).toBe(false);
++      expect(bounds.height).toBeLessThanOrEqual(650);
++      Object.assign(f.windows.get(id)!, bounds);
++      f.setGeometry({
++        width: 900,
++        height: bounds.height === 649 ? 506 : smallerRead ? 507 : 450,
++        dpr: 2,
++      });
++    });
++    await restoreViewportWorkspace({
++      workspace,
++      ...f.options,
++      releaseDebugger: async () => {
++        detached = true;
++      },
++    });
++    expect(
++      vi.mocked(f.driver.resize).mock.calls.map(([, v]) => v.height),
++    ).toEqual([650, 649, 650]);
++    expect(smallerRead).toBe(true);
++    expect(await f.options.read()).toEqual(workspace.detachedViewport);
++    expect(f.target).toMatchObject({ windowId: 1, index: 2, active: false });
++    expect(f.original).toMatchObject({ height: 650, focused: true });
++  });
++  it('does not retry a failed one-pixel refresh or claim its successful command proves CSS restoration', async () => {
++    const f = fixture();
++    const workspace = await createViewportWorkspace(f.options);
++    workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
++    await expect(
++      restoreViewportWorkspace({
++        workspace,
++        ...f.options,
++        releaseDebugger: async () => {},
++      }),
++    ).rejects.toThrow('VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED');
++    expect(
++      vi.mocked(f.driver.resize).mock.calls.map(([, v]) => v.height),
++    ).toEqual([650, 649, 650]);
++    expect(await f.options.read()).toEqual(workspace.originalViewport);
++    expect(f.target).toMatchObject({ windowId: 1, active: false });
++  });
++  it('stops the refresh when the user focuses the workspace, retaining their window and tab', async () => {
++    const f = fixture();
++    const workspace = await createViewportWorkspace(f.options);
++    workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
++    const resize = f.driver.resize;
++    f.driver.resize = vi.fn(async (id, bounds) => {
++      await resize(id, bounds);
++      if (bounds.height === 649) f.windows.get(id)!.focused = true;
++    });
++    await expect(
++      restoreViewportWorkspace({
++        workspace,
++        ...f.options,
++        releaseDebugger: async () => {},
++      }),
++    ).rejects.toThrow('VIEWPORT_WORKSPACE_BECAME_USER_WINDOW');
++    expect(
++      vi.mocked(f.driver.resize).mock.calls.map(([, v]) => v.height),
++    ).toEqual([650, 649]);
++    expect(f.driver.move).not.toHaveBeenCalled();
++    expect(f.target).toMatchObject({ windowId: 2, active: true });
++  });
++  it('preserves a clamped native resize failure while restoring the exact outer bounds and returning the tab', async () => {
++    const f = fixture();
++    const workspace = await createViewportWorkspace(f.options);
++    workspace.detachedViewport = { width: 900, height: 507, dpr: 2 };
++    const resize = f.driver.resize;
++    f.driver.resize = vi.fn(async (id, bounds) => {
++      if (bounds.height === 649) return;
++      await resize(id, bounds);
++    });
++    await expect(
++      restoreViewportWorkspace({
++        workspace,
++        ...f.options,
++        releaseDebugger: async () => {},
++      }),
++    ).rejects.toThrow('VIEWPORT_LAYOUT_REFRESH_NOT_REACHED');
++    expect(
++      vi.mocked(f.driver.resize).mock.calls.map(([, v]) => v.height),
++    ).toEqual([650, 649, 650]);
++    expect(f.windows.get(2)?.height).toBe(650);
++    expect(f.target).toMatchObject({ windowId: 1, active: false });
+   });
+   it('does not invent a pre-attach baseline and still restores the owned outer bounds before reporting failure', async () => {
+     const f = fixture();
+@@ -350,6 +450,7 @@
+         },
+       }),
+     ).rejects.toThrow('DEBUGGER_RELEASE_UNCONFIRMED');
++    expect(f.driver.resize).toHaveBeenCalledTimes(1);
+     expect(f.target).toMatchObject({ windowId: 1, active: false });
+     const stale = fixture();
+     const other = await createViewportWorkspace(stale.options);

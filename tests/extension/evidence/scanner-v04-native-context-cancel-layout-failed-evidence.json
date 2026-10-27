@@ -1,0 +1,6978 @@
+{
+  "schemaVersion": 1,
+  "mode": "cancel",
+  "events": [
+    {
+      "at": 1793120568829,
+      "kind": "REAL_STREAM_CREATED"
+    },
+    {
+      "at": 1793120568946,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120569025,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120569472,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120569973,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120570472,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120570747,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120570747,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+      "kind": "WORKER_RESULT",
+      "frames": 106,
+      "findings": [],
+      "quality": {
+        "frameCount": 106,
+        "effectiveFps": 60.00342874773745,
+        "maxGapMs": 17.600000381469727,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 106,
+          "meanMs": 7.077358434785087,
+          "maxMs": 37.69999980926514,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.2367924384351046,
+          "analysisMeanMs": 3.838679205696538,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120570757,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120570811,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120571273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120571773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120572272,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120572773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120573273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120573773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120574273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120574773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120575273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120575773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120576273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 330
+    },
+    {
+      "at": 1793120576773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 360
+    },
+    {
+      "at": 1793120577273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 390
+    },
+    {
+      "at": 1793120577773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 420
+    },
+    {
+      "at": 1793120578273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 450
+    },
+    {
+      "at": 1793120578773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 480
+    },
+    {
+      "at": 1793120579273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 510
+    },
+    {
+      "at": 1793120579773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 540
+    },
+    {
+      "at": 1793120580273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 570
+    },
+    {
+      "at": 1793120580773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 600
+    },
+    {
+      "at": 1793120581272,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 630
+    },
+    {
+      "at": 1793120581774,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 660
+    },
+    {
+      "at": 1793120582273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 690
+    },
+    {
+      "at": 1793120582773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 720
+    },
+    {
+      "at": 1793120583273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 750
+    },
+    {
+      "at": 1793120583774,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 780
+    },
+    {
+      "at": 1793120584273,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 810
+    },
+    {
+      "at": 1793120584774,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 840
+    },
+    {
+      "at": 1793120585274,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 870
+    },
+    {
+      "at": 1793120585773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "FRAME_DONE",
+      "frames": 900
+    },
+    {
+      "at": 1793120585773,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120585774,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+      "kind": "WORKER_RESULT",
+      "frames": 900,
+      "findings": [],
+      "quality": {
+        "frameCount": 900,
+        "effectiveFps": 59.9977308993578,
+        "maxGapMs": 17.800000190734863,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 900,
+          "meanMs": 6.805111074447632,
+          "maxMs": 28.600000381469727,
+          "framesOver16_7Ms": 3,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.2214444139268665,
+          "analysisMeanMs": 3.5781111017862957,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120585783,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120585829,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120586290,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120586789,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120587290,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120587790,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120588290,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120588790,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120589291,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120589425,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120589426,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+      "kind": "WORKER_RESULT",
+      "frames": 218,
+      "findings": [],
+      "quality": {
+        "frameCount": 218,
+        "effectiveFps": 59.99612928830952,
+        "maxGapMs": 17.90000057220459,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 218,
+          "meanMs": 6.769266014799066,
+          "maxMs": 29.09999942779541,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.171100848311678,
+          "analysisMeanMs": 3.5931193106765047,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120589434,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120589480,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120589940,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120590440,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120590940,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120591440,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120591941,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120592440,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120592848,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120592848,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+      "kind": "WORKER_RESULT",
+      "frames": 204,
+      "findings": [],
+      "quality": {
+        "frameCount": 204,
+        "effectiveFps": 59.99172527589027,
+        "maxGapMs": 17.699999809265137,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 204,
+          "meanMs": 6.804411705802469,
+          "maxMs": 29.199999809265137,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.172058806699865,
+          "analysisMeanMs": 3.626470542421528,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120592858,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120592896,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120593357,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120593857,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120594357,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120594857,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120595357,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120595857,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120596358,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120596858,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120597357,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120597857,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120597973,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120597974,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "52f7cf71-eb74-4635-b151-28a803b5bced",
+      "kind": "WORKER_RESULT",
+      "frames": 307,
+      "findings": [],
+      "quality": {
+        "frameCount": 307,
+        "effectiveFps": 60.00235303120817,
+        "maxGapMs": 17.800000190734863,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 307,
+          "meanMs": 6.761889255784622,
+          "maxMs": 28,
+          "framesOver16_7Ms": 2,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.1628664557242625,
+          "analysisMeanMs": 3.592508145186334,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120597982,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120598029,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120598491,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120598991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 60
+    },
+    {
+      "at": 1793120599491,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 90
+    },
+    {
+      "at": 1793120599991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 120
+    },
+    {
+      "at": 1793120600491,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 150
+    },
+    {
+      "at": 1793120600991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 180
+    },
+    {
+      "at": 1793120601491,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 210
+    },
+    {
+      "at": 1793120601991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 240
+    },
+    {
+      "at": 1793120602491,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 270
+    },
+    {
+      "at": 1793120602991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 300
+    },
+    {
+      "at": 1793120603491,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 330
+    },
+    {
+      "at": 1793120603991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 360
+    },
+    {
+      "at": 1793120604491,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 390
+    },
+    {
+      "at": 1793120604990,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120604991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "FRAME_DONE",
+      "frames": 420
+    },
+    {
+      "at": 1793120604991,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "WORKER_RESULT",
+      "frames": 420,
+      "findings": [],
+      "quality": {
+        "frameCount": 420,
+        "effectiveFps": 60.00114560823753,
+        "maxGapMs": 17.899999618530273,
+        "width": 1800,
+        "height": 900,
+        "downsampled": false,
+        "interrupted": false,
+        "spatial": {
+          "mode": "NATIVE_PIXELS",
+          "sourceWidth": 1800,
+          "sourceHeight": 900,
+          "retainedResolutionRatio": 1,
+          "stateBytes": 152311861,
+          "stateBudgetBytes": 268435456,
+          "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+          "colorAssumption": "SDR_SRGB_8BIT"
+        },
+        "processing": {
+          "measuredFrames": 420,
+          "meanMs": 6.699761897041684,
+          "maxMs": 28.200000762939453,
+          "framesOver16_7Ms": 1,
+          "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+          "conversionMeanMs": 3.164761867977324,
+          "analysisMeanMs": 3.5297619342803954,
+          "conversionMethods": [
+            "VIDEOFRAME_COPY_RGBA"
+          ],
+          "decoded": {
+            "codedWidth": 1800,
+            "codedHeight": 900,
+            "displayWidth": 1800,
+            "displayHeight": 900,
+            "visibleRect": {
+              "x": 0,
+              "y": 0,
+              "width": 1800,
+              "height": 900
+            },
+            "format": "I420",
+            "primaries": "bt709",
+            "transfer": "bt709",
+            "matrix": "bt709"
+          }
+        }
+      },
+      "status": "NO_ISSUES_OBSERVED"
+    },
+    {
+      "at": 1793120605768,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120606844,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120606868,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "d6142de8-01be-48c1-8824-c250a079250e",
+      "kind": "REAL_STREAM_CREATED"
+    },
+    {
+      "at": 1793120606889,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "SEGMENT_BEGIN",
+      "referenceMapping": {
+        "viewport": {
+          "width": 600,
+          "height": 450,
+          "dpr": 2
+        },
+        "pageZoom": 1,
+        "visualScale": 1
+      }
+    },
+    {
+      "at": 1793120606944,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "FRAME_DONE",
+      "frames": 1
+    },
+    {
+      "at": 1793120607407,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    {
+      "at": 1793120607412,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120607722,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "SEGMENT_END"
+    },
+    {
+      "at": 1793120607728,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120608193,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "CAPTURE_STOP_REQUEST"
+    },
+    {
+      "at": 1793120608194,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "CAPTURE_STOP_REQUEST"
+    }
+  ],
+  "zoomEvents": [
+    {
+      "at": 1793120557865,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 968943156,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120557865,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 968943157,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120557865,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 968943158,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120568884,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 968943159,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120568984,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 968943158,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    },
+    {
+      "at": 1793120605010,
+      "newZoomFactor": 1,
+      "oldZoomFactor": 1,
+      "tabId": 968943158,
+      "zoomSettings": {
+        "mode": "automatic",
+        "scope": "per-origin"
+      }
+    }
+  ],
+  "errors": [],
+  "polling": {
+    "calls": 159,
+    "coalescedWakeups": 4,
+    "samples": [
+      {
+        "startedAt": 1793120548141,
+        "wakeups": [
+          "READY"
+        ],
+        "endedAt": 1793120548143
+      },
+      {
+        "startedAt": 1793120549088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120549091
+      },
+      {
+        "startedAt": 1793120550087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120550091
+      },
+      {
+        "startedAt": 1793120551088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120551089
+      },
+      {
+        "startedAt": 1793120552088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120552092
+      },
+      {
+        "startedAt": 1793120553088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120553090
+      },
+      {
+        "startedAt": 1793120554088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120554091
+      },
+      {
+        "startedAt": 1793120555088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120555090
+      },
+      {
+        "startedAt": 1793120556088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120556091
+      },
+      {
+        "startedAt": 1793120557089,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120557092
+      },
+      {
+        "startedAt": 1793120558088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120558090
+      },
+      {
+        "startedAt": 1793120559088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120559092
+      },
+      {
+        "startedAt": 1793120560088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120560091
+      },
+      {
+        "startedAt": 1793120561088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120561089
+      },
+      {
+        "startedAt": 1793120562089,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120562090
+      },
+      {
+        "startedAt": 1793120563088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120563091
+      },
+      {
+        "startedAt": 1793120564088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120564091
+      },
+      {
+        "startedAt": 1793120565088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120565091
+      },
+      {
+        "startedAt": 1793120566088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120566089
+      },
+      {
+        "startedAt": 1793120567088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "endedAt": 1793120567091
+      },
+      {
+        "startedAt": 1793120568088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "AUTHORIZING",
+        "endedAt": 1793120568091
+      },
+      {
+        "startedAt": 1793120568946,
+        "wakeups": [
+          "SEGMENT_BEGIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120568952
+      },
+      {
+        "startedAt": 1793120569025,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120569026
+      },
+      {
+        "startedAt": 1793120569087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120569088
+      },
+      {
+        "startedAt": 1793120569473,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120569474
+      },
+      {
+        "startedAt": 1793120569973,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120569974
+      },
+      {
+        "startedAt": 1793120570088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120570089
+      },
+      {
+        "startedAt": 1793120570472,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120570473
+      },
+      {
+        "startedAt": 1793120570747,
+        "wakeups": [
+          "SEGMENT_END"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "navigation-transition",
+        "endedAt": 1793120570749
+      },
+      {
+        "startedAt": 1793120570758,
+        "wakeups": [
+          "SEGMENT_BEGIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120570760
+      },
+      {
+        "startedAt": 1793120570811,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120570813
+      },
+      {
+        "startedAt": 1793120571088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120571089
+      },
+      {
+        "startedAt": 1793120571274,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120571275
+      },
+      {
+        "startedAt": 1793120571773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120571774
+      },
+      {
+        "startedAt": 1793120572088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120572089
+      },
+      {
+        "startedAt": 1793120572273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120572274
+      },
+      {
+        "startedAt": 1793120572773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120572774
+      },
+      {
+        "startedAt": 1793120573088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120573090
+      },
+      {
+        "startedAt": 1793120573273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120573274
+      },
+      {
+        "startedAt": 1793120573774,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120573775
+      },
+      {
+        "startedAt": 1793120574088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120574089
+      },
+      {
+        "startedAt": 1793120574273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120574274
+      },
+      {
+        "startedAt": 1793120574773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120574775
+      },
+      {
+        "startedAt": 1793120575088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120575090
+      },
+      {
+        "startedAt": 1793120575274,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120575275
+      },
+      {
+        "startedAt": 1793120575773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120575774
+      },
+      {
+        "startedAt": 1793120576087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120576089
+      },
+      {
+        "startedAt": 1793120576273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120576274
+      },
+      {
+        "startedAt": 1793120576773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120576774
+      },
+      {
+        "startedAt": 1793120577088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120577089
+      },
+      {
+        "startedAt": 1793120577274,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120577274
+      },
+      {
+        "startedAt": 1793120577773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120577774
+      },
+      {
+        "startedAt": 1793120578088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120578089
+      },
+      {
+        "startedAt": 1793120578273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120578274
+      },
+      {
+        "startedAt": 1793120578773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120578774
+      },
+      {
+        "startedAt": 1793120579087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120579089
+      },
+      {
+        "startedAt": 1793120579273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120579274
+      },
+      {
+        "startedAt": 1793120579773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120579774
+      },
+      {
+        "startedAt": 1793120580088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120580089
+      },
+      {
+        "startedAt": 1793120580273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120580274
+      },
+      {
+        "startedAt": 1793120580773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120580774
+      },
+      {
+        "startedAt": 1793120581088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120581089
+      },
+      {
+        "startedAt": 1793120581273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120581274
+      },
+      {
+        "startedAt": 1793120581774,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120581775
+      },
+      {
+        "startedAt": 1793120582088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120582089
+      },
+      {
+        "startedAt": 1793120582273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120582274
+      },
+      {
+        "startedAt": 1793120582773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120582774
+      },
+      {
+        "startedAt": 1793120583089,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120583090
+      },
+      {
+        "startedAt": 1793120583273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120583274
+      },
+      {
+        "startedAt": 1793120583774,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120583775
+      },
+      {
+        "startedAt": 1793120584088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120584089
+      },
+      {
+        "startedAt": 1793120584273,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120584274
+      },
+      {
+        "startedAt": 1793120584774,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120584775
+      },
+      {
+        "startedAt": 1793120585088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120585089
+      },
+      {
+        "startedAt": 1793120585274,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120585275
+      },
+      {
+        "startedAt": 1793120585773,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120585775
+      },
+      {
+        "startedAt": 1793120585775,
+        "wakeups": [
+          "SEGMENT_END",
+          "COALESCED_DRAIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "initial-viewport",
+        "endedAt": 1793120585776
+      },
+      {
+        "startedAt": 1793120585783,
+        "wakeups": [
+          "SEGMENT_BEGIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120585786
+      },
+      {
+        "startedAt": 1793120585830,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120585831
+      },
+      {
+        "startedAt": 1793120586088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120586089
+      },
+      {
+        "startedAt": 1793120586290,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120586291
+      },
+      {
+        "startedAt": 1793120586790,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120586791
+      },
+      {
+        "startedAt": 1793120587088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120587089
+      },
+      {
+        "startedAt": 1793120587290,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120587291
+      },
+      {
+        "startedAt": 1793120587791,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120587792
+      },
+      {
+        "startedAt": 1793120588088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120588089
+      },
+      {
+        "startedAt": 1793120588291,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120588292
+      },
+      {
+        "startedAt": 1793120588791,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120588792
+      },
+      {
+        "startedAt": 1793120589088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120589089
+      },
+      {
+        "startedAt": 1793120589291,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120589292
+      },
+      {
+        "startedAt": 1793120589426,
+        "wakeups": [
+          "SEGMENT_END"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "hover-1",
+        "endedAt": 1793120589427
+      },
+      {
+        "startedAt": 1793120589435,
+        "wakeups": [
+          "SEGMENT_BEGIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120589437
+      },
+      {
+        "startedAt": 1793120589480,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120589481
+      },
+      {
+        "startedAt": 1793120589940,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120589941
+      },
+      {
+        "startedAt": 1793120590088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120590089
+      },
+      {
+        "startedAt": 1793120590440,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120590441
+      },
+      {
+        "startedAt": 1793120590940,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120590941
+      },
+      {
+        "startedAt": 1793120591088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120591089
+      },
+      {
+        "startedAt": 1793120591440,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120591441
+      },
+      {
+        "startedAt": 1793120591941,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120591942
+      },
+      {
+        "startedAt": 1793120592088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120592089
+      },
+      {
+        "startedAt": 1793120592440,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120592441
+      },
+      {
+        "startedAt": 1793120592848,
+        "wakeups": [
+          "SEGMENT_END"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "focus-2",
+        "endedAt": 1793120592850
+      },
+      {
+        "startedAt": 1793120592858,
+        "wakeups": [
+          "SEGMENT_BEGIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120592860
+      },
+      {
+        "startedAt": 1793120592896,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120592897
+      },
+      {
+        "startedAt": 1793120593088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120593089
+      },
+      {
+        "startedAt": 1793120593357,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120593358
+      },
+      {
+        "startedAt": 1793120593857,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120593858
+      },
+      {
+        "startedAt": 1793120594088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120594089
+      },
+      {
+        "startedAt": 1793120594357,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120594358
+      },
+      {
+        "startedAt": 1793120594857,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120594858
+      },
+      {
+        "startedAt": 1793120595087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120595088
+      },
+      {
+        "startedAt": 1793120595357,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120595358
+      },
+      {
+        "startedAt": 1793120595857,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120595858
+      },
+      {
+        "startedAt": 1793120596088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120596089
+      },
+      {
+        "startedAt": 1793120596358,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120596359
+      },
+      {
+        "startedAt": 1793120596858,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120596859
+      },
+      {
+        "startedAt": 1793120597087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120597088
+      },
+      {
+        "startedAt": 1793120597358,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120597359
+      },
+      {
+        "startedAt": 1793120597857,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120597858
+      },
+      {
+        "startedAt": 1793120597973,
+        "wakeups": [
+          "SEGMENT_END"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "accordion-3",
+        "endedAt": 1793120597974
+      },
+      {
+        "startedAt": 1793120597983,
+        "wakeups": [
+          "SEGMENT_BEGIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120597985
+      },
+      {
+        "startedAt": 1793120598029,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120598031
+      },
+      {
+        "startedAt": 1793120598088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120598089
+      },
+      {
+        "startedAt": 1793120598491,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120598492
+      },
+      {
+        "startedAt": 1793120598991,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120598992
+      },
+      {
+        "startedAt": 1793120599088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120599089
+      },
+      {
+        "startedAt": 1793120599492,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120599493
+      },
+      {
+        "startedAt": 1793120599991,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120599993
+      },
+      {
+        "startedAt": 1793120600088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120600089
+      },
+      {
+        "startedAt": 1793120600491,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120600493
+      },
+      {
+        "startedAt": 1793120600991,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120600993
+      },
+      {
+        "startedAt": 1793120601088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120601089
+      },
+      {
+        "startedAt": 1793120601491,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120601492
+      },
+      {
+        "startedAt": 1793120601991,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120601992
+      },
+      {
+        "startedAt": 1793120602088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120602089
+      },
+      {
+        "startedAt": 1793120602491,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120602492
+      },
+      {
+        "startedAt": 1793120602992,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120602993
+      },
+      {
+        "startedAt": 1793120603088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120603089
+      },
+      {
+        "startedAt": 1793120603492,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120603493
+      },
+      {
+        "startedAt": 1793120603992,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120603993
+      },
+      {
+        "startedAt": 1793120604087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120604089
+      },
+      {
+        "startedAt": 1793120604492,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120604493
+      },
+      {
+        "startedAt": 1793120604991,
+        "wakeups": [
+          "SEGMENT_END"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120604992
+      },
+      {
+        "startedAt": 1793120604992,
+        "wakeups": [
+          "FRAME_DONE",
+          "COALESCED_DRAIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "delayed-state",
+        "endedAt": 1793120604994
+      },
+      {
+        "startedAt": 1793120605087,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "endedAt": 1793120605091
+      },
+      {
+        "startedAt": 1793120605769,
+        "wakeups": [
+          "CAPTURE_STOP_REQUEST"
+        ],
+        "state": "RUNNING",
+        "endedAt": 1793120605772
+      },
+      {
+        "startedAt": 1793120606088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "endedAt": 1793120606090
+      },
+      {
+        "startedAt": 1793120606845,
+        "wakeups": [
+          "CAPTURE_STOP_REQUEST"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "compact-viewport",
+        "endedAt": 1793120606847
+      },
+      {
+        "startedAt": 1793120606889,
+        "wakeups": [
+          "SEGMENT_BEGIN"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "compact-viewport",
+        "endedAt": 1793120606890
+      },
+      {
+        "startedAt": 1793120606945,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "compact-viewport",
+        "endedAt": 1793120606946
+      },
+      {
+        "startedAt": 1793120607088,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "compact-viewport",
+        "endedAt": 1793120607089
+      },
+      {
+        "startedAt": 1793120607407,
+        "wakeups": [
+          "FRAME_DONE"
+        ],
+        "state": "RUNNING",
+        "pendingAction": "compact-viewport",
+        "endedAt": 1793120607413
+      },
+      {
+        "startedAt": 1793120607413,
+        "wakeups": [
+          "CAPTURE_STOP_REQUEST",
+          "COALESCED_DRAIN"
+        ],
+        "state": "STOPPING",
+        "pendingAction": "compact-viewport",
+        "endedAt": 1793120607416
+      },
+      {
+        "startedAt": 1793120607723,
+        "wakeups": [
+          "SEGMENT_END"
+        ],
+        "state": "STOPPING",
+        "pendingAction": "compact-viewport",
+        "endedAt": 1793120607726
+      },
+      {
+        "startedAt": 1793120607728,
+        "wakeups": [
+          "CAPTURE_STOP_REQUEST"
+        ],
+        "state": "STOPPING",
+        "endedAt": 1793120607731
+      },
+      {
+        "startedAt": 1793120608193,
+        "wakeups": [
+          "CAPTURE_STOP_REQUEST"
+        ],
+        "state": "STOPPING",
+        "endedAt": 1793120608196
+      },
+      {
+        "startedAt": 1793120608196,
+        "wakeups": [
+          "CAPTURE_STOP_REQUEST",
+          "COALESCED_DRAIN"
+        ],
+        "state": "STOPPING",
+        "endedAt": 1793120608199
+      },
+      {
+        "startedAt": 1793120663089,
+        "wakeups": [
+          "INTERVAL"
+        ],
+        "state": "PARTIAL"
+      }
+    ]
+  },
+  "cancellation": {
+    "jobId": "bec4514c-bfa2-4a52-a045-a54a01162f6e",
+    "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+    "scenario": "compact-viewport",
+    "acceptedFrame": {
+      "at": 1793120607407,
+      "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+      "segmentId": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+      "kind": "FRAME_DONE",
+      "frames": 30
+    },
+    "before": {
+      "at": 1793120607409,
+      "jobState": "RUNNING",
+      "pendingAction": "compact-viewport",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943160,
+        "index": 0,
+        "active": true
+      },
+      "window": {
+        "id": 968943160,
+        "width": 600,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": false
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 600,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": {
+        "originalIndex": 2,
+        "originalViewport": {
+          "dpr": 2,
+          "height": 450,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0,
+          "visualScale": 1,
+          "width": 900
+        },
+        "originalWindow": {
+          "height": 650,
+          "left": 22,
+          "top": 52,
+          "width": 900
+        },
+        "originalWindowId": 968943155,
+        "tabId": 968943158,
+        "windowId": 968943160
+      },
+      "ownershipKeys": [
+        "viewport-workspace:bec4514c-bfa2-4a52-a045-a54a01162f6e"
+      ],
+      "windowIds": [
+        968943155,
+        968943160
+      ],
+      "debuggerAttached": true,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "active",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120607411,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": true,
+            "tracks": [
+              {
+                "readyState": "live",
+                "settings": {
+                  "width": 1200,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "stopRequestedAt": 1793120607411,
+    "stopReply": {},
+    "after": {
+      "at": 1793120677089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120677092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "cleanup": [
+    {
+      "at": 1793120663099,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120663101,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120664089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120664090,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120665088,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120665091,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120666089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120666092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120667088,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120667092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120668089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120668092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120669089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120669092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120670089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120670092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120671089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120671092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120672089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120672092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120673089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120673092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120674089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120674093,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120675088,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120675092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120676089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120676092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "at": 1793120677089,
+      "jobState": "PARTIAL",
+      "tab": {
+        "id": 968943158,
+        "windowId": 968943155,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 968943155,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 968943159,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:61364/",
+        "documentToken": "22e92106-6865-42a7-a685-53b40d4ab982",
+        "viewportRevision": 6,
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        968943155
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 968943158,
+          "status": "stopped",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120677092,
+        "streams": [
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          },
+          {
+            "active": false,
+            "tracks": [
+              {
+                "readyState": "ended",
+                "settings": {}
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "job": {
+    "id": "bec4514c-bfa2-4a52-a045-a54a01162f6e",
+    "engineVersion": "0.4.0-candidate",
+    "runnerVersion": "0.4.0",
+    "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+    "advancedPointer": true,
+    "tabId": 968943158,
+    "origin": "http://127.0.0.1:61364",
+    "startUrl": "http://127.0.0.1:61364/",
+    "startedAt": "2026-10-27T17:02:47.802Z",
+    "updatedAt": "2026-10-27T17:03:28.198Z",
+    "state": "PARTIAL",
+    "stopIntent": true,
+    "generation": "ed730775-525c-414f-b408-bb72b9f3b33b",
+    "elapsedMs": 38471.89999961853,
+    "tasks": [
+      {
+        "id": "ea1854fe-25d4-42fd-9619-7c0be73383ca",
+        "url": "http://127.0.0.1:61364/",
+        "depth": 0,
+        "state": "PARTIAL",
+        "observations": [
+          {
+            "id": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+            "scenario": "navigation-transition",
+            "startedAt": "2026-10-27T17:02:48.926Z",
+            "endedAt": "2026-10-27T17:02:50.748Z",
+            "achieved": true,
+            "navigation": {
+              "from": "http://127.0.0.1:61364/",
+              "to": "http://127.0.0.1:61364/"
+            },
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 106,
+                "effectiveFps": 60.00342874773745,
+                "maxGapMs": 17.600000381469727,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 106,
+                  "meanMs": 7.077358434785087,
+                  "maxMs": 37.69999980926514,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.2367924384351046,
+                  "analysisMeanMs": 3.838679205696538,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 1774,
+                "leadingIdleMs": 13.90000057220459,
+                "trailingIdleMs": 14.300000190734863
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+                "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE"
+              ]
+            },
+            "coverage": "TESTED"
+          },
+          {
+            "id": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+            "scenario": "initial-viewport",
+            "startedAt": "2026-10-27T17:02:50.754Z",
+            "endedAt": "2026-10-27T17:03:05.774Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 900,
+                "effectiveFps": 59.9977308993578,
+                "maxGapMs": 17.800000190734863,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 900,
+                  "meanMs": 6.805111074447632,
+                  "maxMs": 28.600000381469727,
+                  "framesOver16_7Ms": 3,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.2214444139268665,
+                  "analysisMeanMs": 3.5781111017862957,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 15001.800000190735,
+                "leadingIdleMs": 10.699999809265137,
+                "trailingIdleMs": 7.399999618530273
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61364/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [],
+              "durationMs": 15000,
+              "stateKey": "[1,\"http://127.0.0.1:61364/\",\"current\",900,450,2,15000,null,[]]"
+            }
+          },
+          {
+            "id": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+            "scenario": "hover-1",
+            "startedAt": "2026-10-27T17:03:05.780Z",
+            "endedAt": "2026-10-27T17:03:09.426Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 218,
+                "effectiveFps": 59.99612928830952,
+                "maxGapMs": 17.90000057220459,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 218,
+                  "meanMs": 6.769266014799066,
+                  "maxMs": 29.09999942779541,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.171100848311678,
+                  "analysisMeanMs": 3.5931193106765047,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 3635.7999992370605,
+                "leadingIdleMs": 10.699999809265137,
+                "trailingIdleMs": 8.299999237060547
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61364/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                }
+              ],
+              "durationMs": 3000,
+              "measuredStep": 1,
+              "stateKey": "[1,\"http://127.0.0.1:61364/\",\"current\",900,450,2,3000,1,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"]]]"
+            }
+          },
+          {
+            "id": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+            "scenario": "focus-2",
+            "startedAt": "2026-10-27T17:03:09.431Z",
+            "endedAt": "2026-10-27T17:03:12.849Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 204,
+                "effectiveFps": 59.99172527589027,
+                "maxGapMs": 17.699999809265137,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 204,
+                  "meanMs": 6.804411705802469,
+                  "maxMs": 29.199999809265137,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.172058806699865,
+                  "analysisMeanMs": 3.626470542421528,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 3406.9000005722046,
+                "leadingIdleMs": 9.100000381469727,
+                "trailingIdleMs": 14.100000381469727
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61364/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "focus",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "focus:accordion:false:false"
+                }
+              ],
+              "durationMs": 3000,
+              "measuredStep": 3,
+              "stateKey": "[1,\"http://127.0.0.1:61364/\",\"current\",900,450,2,3000,3,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"]]]"
+            }
+          },
+          {
+            "id": "52f7cf71-eb74-4635-b151-28a803b5bced",
+            "scenario": "accordion-3",
+            "startedAt": "2026-10-27T17:03:12.854Z",
+            "endedAt": "2026-10-27T17:03:17.974Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 307,
+                "effectiveFps": 60.00235303120817,
+                "maxGapMs": 17.800000190734863,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 307,
+                  "meanMs": 6.761889255784622,
+                  "maxMs": 28,
+                  "framesOver16_7Ms": 2,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.1628664557242625,
+                  "analysisMeanMs": 3.592508145186334,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 5110.199999809265,
+                "leadingIdleMs": 4.899999618530273,
+                "trailingIdleMs": 5.800000190734863
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61364/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "focus",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "focus:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "control",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "accordion:true:true"
+                }
+              ],
+              "durationMs": 5000,
+              "measuredStep": 5,
+              "stateKey": "[1,\"http://127.0.0.1:61364/\",\"current\",900,450,2,5000,5,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"]]]"
+            }
+          },
+          {
+            "id": "d6142de8-01be-48c1-8824-c250a079250e",
+            "scenario": "delayed-state",
+            "startedAt": "2026-10-27T17:03:17.979Z",
+            "endedAt": "2026-10-27T17:03:24.991Z",
+            "achieved": true,
+            "measurement": {
+              "status": "NO_ISSUES_OBSERVED",
+              "passed": null,
+              "quality": {
+                "frameCount": 420,
+                "effectiveFps": 60.00114560823753,
+                "maxGapMs": 17.899999618530273,
+                "width": 1800,
+                "height": 900,
+                "downsampled": false,
+                "interrupted": false,
+                "spatial": {
+                  "mode": "NATIVE_PIXELS",
+                  "sourceWidth": 1800,
+                  "sourceHeight": 900,
+                  "retainedResolutionRatio": 1,
+                  "stateBytes": 152311861,
+                  "stateBudgetBytes": 268435456,
+                  "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                  "colorAssumption": "SDR_SRGB_8BIT"
+                },
+                "processing": {
+                  "measuredFrames": 420,
+                  "meanMs": 6.699761897041684,
+                  "maxMs": 28.200000762939453,
+                  "framesOver16_7Ms": 1,
+                  "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                  "conversionMeanMs": 3.164761867977324,
+                  "analysisMeanMs": 3.5297619342803954,
+                  "conversionMethods": [
+                    "VIDEOFRAME_COPY_RGBA"
+                  ],
+                  "decoded": {
+                    "codedWidth": 1800,
+                    "codedHeight": 900,
+                    "displayWidth": 1800,
+                    "displayHeight": 900,
+                    "visibleRect": {
+                      "x": 0,
+                      "y": 0,
+                      "width": 1800,
+                      "height": 900
+                    },
+                    "format": "I420",
+                    "primaries": "bt709",
+                    "transfer": "bt709",
+                    "matrix": "bt709"
+                  },
+                  "track": {
+                    "width": 1800,
+                    "height": 900,
+                    "frameRate": 60,
+                    "resizeMode": "none"
+                  }
+                },
+                "captureWindowMs": 7003.099999427795,
+                "leadingIdleMs": 13.59999942779541,
+                "trailingIdleMs": 6.299999237060547
+              },
+              "findings": [],
+              "limitations": [
+                "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+                "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+              ]
+            },
+            "coverage": "TESTED",
+            "replay": {
+              "version": 1,
+              "route": "http://127.0.0.1:61364/",
+              "viewport": {
+                "width": 900,
+                "height": 450,
+                "dpr": 2
+              },
+              "profile": "current",
+              "viewportMethod": "PHYSICAL",
+              "steps": [
+                {
+                  "kind": "wait",
+                  "durationMs": 15000
+                },
+                {
+                  "kind": "hover",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "hover:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "focus",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "focus:accordion:false:false"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 3000
+                },
+                {
+                  "kind": "control",
+                  "target": {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                    ],
+                    "kind": "accordion"
+                  },
+                  "expectedState": "accordion:true:true"
+                },
+                {
+                  "kind": "wait",
+                  "durationMs": 5000
+                }
+              ],
+              "durationMs": 7000,
+              "stateKey": "[1,\"http://127.0.0.1:61364/\",\"current\",900,450,2,7000,null,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"],[\"wait\",5000]]]"
+            }
+          },
+          {
+            "id": "15507002-0597-43d4-bc0d-95f9709809bf",
+            "scenario": "compact-resize-transition",
+            "startedAt": "2026-10-27T17:03:25.767Z",
+            "endedAt": "2026-10-27T17:03:25.767Z",
+            "achieved": false,
+            "reason": "VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+            "coverage": "SKIPPED"
+          },
+          {
+            "id": "4bfe6921-4c8f-49d3-8c30-09c54ee224a1",
+            "scenario": "compact-viewport-capture-source-transition",
+            "startedAt": "2026-10-27T17:03:26.843Z",
+            "endedAt": "2026-10-27T17:03:26.843Z",
+            "achieved": false,
+            "reason": "NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+            "coverage": "SKIPPED"
+          },
+          {
+            "id": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+            "scenario": "compact-viewport",
+            "startedAt": "2026-10-27T17:03:26.841Z",
+            "endedAt": "2026-10-27T17:03:27.724Z",
+            "achieved": false,
+            "reason": "RUNNER_CANCELLED",
+            "coverage": "UNREACHED"
+          },
+          {
+            "id": "2a01ff0b-91ef-4425-b809-0e38c10e759c",
+            "scenario": "compact-controls",
+            "startedAt": "2026-10-27T17:03:27.728Z",
+            "endedAt": "2026-10-27T17:03:27.728Z",
+            "achieved": false,
+            "reason": "COMPACT_VIEWPORT_UNREACHED",
+            "coverage": "SKIPPED"
+          }
+        ],
+        "reasons": [
+          "Navigation transition from http://127.0.0.1:61364/ to http://127.0.0.1:61364/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.",
+          "Viewport at route inventory: 900 × 450 CSS pixels; device pixel ratio 2.",
+          "compact-resize-transition: VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+          "compact-viewport-capture-source-transition: NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+          "compact-viewport: RUNNER_CANCELLED",
+          "compact-controls: COMPACT_VIEWPORT_UNREACHED",
+          "RUNNER_CANCELLED"
+        ],
+        "viewport": {
+          "width": 900,
+          "height": 450,
+          "dpr": 2
+        }
+      }
+    ],
+    "skippedLinks": 0,
+    "limitations": [
+      "SUPPORTED_UI_PATTERNS_ONLY",
+      "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+      "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element."
+    ],
+    "mode": "AUTONOMOUS",
+    "viewportDurationMs": 15000,
+    "limits": {
+      "maxRoutes": 50,
+      "maxDepth": 4,
+      "maxDurationMs": 1200000,
+      "maxActionsPerRoute": 12
+    },
+    "sitemapChecked": true,
+    "stopReason": "USER_STOP",
+    "interruptedTaskId": "ea1854fe-25d4-42fd-9619-7c0be73383ca",
+    "endedAt": "2026-10-27T17:03:28.198Z"
+  },
+  "report": {
+    "schemaVersion": 1,
+    "id": "bec4514c-bfa2-4a52-a045-a54a01162f6e",
+    "origin": "http://127.0.0.1:61364",
+    "startedAt": "2026-10-27T17:02:47.802Z",
+    "endedAt": "2026-10-27T17:03:28.198Z",
+    "engineVersion": "0.4.0-candidate",
+    "runnerVersion": "0.4.0",
+    "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+    "status": "INCONCLUSIVE",
+    "passed": null,
+    "job": {
+      "state": "PARTIAL",
+      "stopReason": "USER_STOP",
+      "maxRoutes": 50,
+      "maxDepth": 4,
+      "maxDurationMs": 1200000,
+      "discoveredRoutes": 1,
+      "visitedRoutes": 1
+    },
+    "routes": [
+      {
+        "url": "http://127.0.0.1:61364/",
+        "status": "PARTIAL",
+        "reason": "Navigation transition from http://127.0.0.1:61364/ to http://127.0.0.1:61364/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Viewport at route inventory: 900 × 450 CSS pixels; device pixel ratio 2.; compact-resize-transition: VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT; compact-viewport-capture-source-transition: NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT; compact-viewport: RUNNER_CANCELLED; compact-controls: COMPACT_VIEWPORT_UNREACHED; RUNNER_CANCELLED",
+        "coverage": [
+          {
+            "id": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+            "scenario": "navigation-transition",
+            "outcome": "TESTED"
+          },
+          {
+            "id": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+            "scenario": "initial-viewport",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+            "scenario": "hover-1",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+            "scenario": "focus-2",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "52f7cf71-eb74-4635-b151-28a803b5bced",
+            "scenario": "accordion-3",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "d6142de8-01be-48c1-8824-c250a079250e",
+            "scenario": "delayed-state",
+            "outcome": "TESTED",
+            "viewportMethod": "PHYSICAL",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            }
+          },
+          {
+            "id": "15507002-0597-43d4-bc0d-95f9709809bf",
+            "scenario": "compact-resize-transition",
+            "outcome": "SKIPPED",
+            "reason": "VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT"
+          },
+          {
+            "id": "4bfe6921-4c8f-49d3-8c30-09c54ee224a1",
+            "scenario": "compact-viewport-capture-source-transition",
+            "outcome": "SKIPPED",
+            "reason": "NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT"
+          },
+          {
+            "id": "750a72b9-ef91-4ed9-abbc-cc94bf081939",
+            "scenario": "compact-viewport",
+            "outcome": "UNREACHED",
+            "reason": "RUNNER_CANCELLED"
+          },
+          {
+            "id": "2a01ff0b-91ef-4425-b809-0e38c10e759c",
+            "scenario": "compact-controls",
+            "outcome": "SKIPPED",
+            "reason": "COMPACT_VIEWPORT_UNREACHED"
+          }
+        ],
+        "scenarios": [
+          {
+            "id": "39f4d256-eec8-4b11-afaa-dad88163e8f3",
+            "type": "navigation-transition",
+            "startedAt": "2026-10-27T17:02:48.926Z",
+            "endedAt": "2026-10-27T17:02:50.748Z",
+            "quality": {
+              "frameCount": 106,
+              "effectiveFps": 60.00342874773745,
+              "maxGapMs": 17.600000381469727,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 1774,
+              "leadingIdleMs": 13.90000057220459,
+              "trailingIdleMs": 14.300000190734863,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 106,
+                "meanMs": 7.077358434785087,
+                "maxMs": 37.69999980926514,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.2367924384351046,
+                "analysisMeanMs": 3.838679205696538,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "9ec8a5a1-8282-40c2-89b3-e6bc304c8547",
+            "type": "initial-viewport",
+            "startedAt": "2026-10-27T17:02:50.754Z",
+            "endedAt": "2026-10-27T17:03:05.774Z",
+            "quality": {
+              "frameCount": 900,
+              "effectiveFps": 59.9977308993578,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 15001.800000190735,
+              "leadingIdleMs": 10.699999809265137,
+              "trailingIdleMs": 7.399999618530273,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 900,
+                "meanMs": 6.805111074447632,
+                "maxMs": 28.600000381469727,
+                "framesOver16_7Ms": 3,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.2214444139268665,
+                "analysisMeanMs": 3.5781111017862957,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "ae15d192-86b9-49a0-99da-da6ea57928e5",
+            "type": "hover-1",
+            "startedAt": "2026-10-27T17:03:05.780Z",
+            "endedAt": "2026-10-27T17:03:09.426Z",
+            "quality": {
+              "frameCount": 218,
+              "effectiveFps": 59.99612928830952,
+              "maxGapMs": 17.90000057220459,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 3635.7999992370605,
+              "leadingIdleMs": 10.699999809265137,
+              "trailingIdleMs": 8.299999237060547,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 218,
+                "meanMs": 6.769266014799066,
+                "maxMs": 29.09999942779541,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.171100848311678,
+                "analysisMeanMs": 3.5931193106765047,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "ed28c308-8f16-4702-8c92-30a3a8bfbcc8",
+            "type": "focus-2",
+            "startedAt": "2026-10-27T17:03:09.431Z",
+            "endedAt": "2026-10-27T17:03:12.849Z",
+            "quality": {
+              "frameCount": 204,
+              "effectiveFps": 59.99172527589027,
+              "maxGapMs": 17.699999809265137,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 3406.9000005722046,
+              "leadingIdleMs": 9.100000381469727,
+              "trailingIdleMs": 14.100000381469727,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 204,
+                "meanMs": 6.804411705802469,
+                "maxMs": 29.199999809265137,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.172058806699865,
+                "analysisMeanMs": 3.626470542421528,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "52f7cf71-eb74-4635-b151-28a803b5bced",
+            "type": "accordion-3",
+            "startedAt": "2026-10-27T17:03:12.854Z",
+            "endedAt": "2026-10-27T17:03:17.974Z",
+            "quality": {
+              "frameCount": 307,
+              "effectiveFps": 60.00235303120817,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 5110.199999809265,
+              "leadingIdleMs": 4.899999618530273,
+              "trailingIdleMs": 5.800000190734863,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 307,
+                "meanMs": 6.761889255784622,
+                "maxMs": 28,
+                "framesOver16_7Ms": 2,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1628664557242625,
+                "analysisMeanMs": 3.592508145186334,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          },
+          {
+            "id": "d6142de8-01be-48c1-8824-c250a079250e",
+            "type": "delayed-state",
+            "startedAt": "2026-10-27T17:03:17.979Z",
+            "endedAt": "2026-10-27T17:03:24.991Z",
+            "quality": {
+              "frameCount": 420,
+              "effectiveFps": 60.00114560823753,
+              "maxGapMs": 17.899999618530273,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "captureWindowMs": 7003.099999427795,
+              "leadingIdleMs": 13.59999942779541,
+              "trailingIdleMs": 6.299999237060547,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 152311861,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 420,
+                "meanMs": 6.699761897041684,
+                "maxMs": 28.200000762939453,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.164761867977324,
+                "analysisMeanMs": 3.5297619342803954,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                }
+              }
+            },
+            "findings": []
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "SUPPORTED_UI_PATTERNS_ONLY",
+      "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+      "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+      "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+      "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+      "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+      "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+      "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+      "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE"
+    ]
+  },
+  "actualPermissions": {
+    "origins": [
+      "http://127.0.0.1:61364/*"
+    ],
+    "permissions": [
+      "activeTab",
+      "debugger",
+      "devtools",
+      "storage",
+      "tabCapture",
+      "scripting",
+      "offscreen"
+    ]
+  },
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "completedAt": 1793120678099,
+  "environment": {
+    "mode": "cancel",
+    "origin": "http://127.0.0.1:61364",
+    "preparedAt": "2026-10-27T17:02:26.634Z",
+    "headless": false,
+    "playwrightAttached": false,
+    "machine": {
+      "platform": "darwin",
+      "arch": "arm64",
+      "release": "25.4.0",
+      "cpuModel": "Apple M2 Max",
+      "logicalCpus": 12
+    },
+    "requestedWindow": {
+      "width": 900,
+      "height": 650
+    },
+    "extensionBuild": {
+      "productionSha256": "cf73f5e64a74c80499467a15db38d537e7d1a715ac33406011cc0af6df82f269",
+      "instrumentedSha256": "e862c6e6293adc04c86a592f76efac2b7a0d5f060a4d8ef9cc0c7720b0797b8d",
+      "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+      "fixtureSourceSha256": {
+        "native-context-guard.mjs": "b074a6f64f3903ed0e51e3fcea0e866a20226c377a169731b409218793f558ba",
+        "native-context-controller.js": "ee108fa183504b2f2ec9011e96be97d3c3a8bbd0417b2565c6d425e6c7224ed0",
+        "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+        "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+        "verify-native-context-guard.mjs": "31fbee72f2eff22d39d002f588169eeecb9bd0237595e315745378e3cd235c79"
+      }
+    },
+    "instrumentation": "Copied-build passive Worker message/real-stream observers; no frame reads, modification or synthesis. Separate extension page queries actual state and performs the selected zoom/resize or STOP. Production manifest and permissions unchanged. Actual toolbar authorization required. Instrumented run is not a throughput benchmark.",
+    "clock": "Date.now receipt/action epochs, not exact compositor exposure time."
+  },
+  "pageGeometry": [
+    {
+      "at": 1793120548100,
+      "width": 1200,
+      "height": 1624,
+      "dpr": 2,
+      "outerWidth": 1200,
+      "outerHeight": 1711,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120548117,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120548604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120549104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120549603,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120550104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120550604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120551104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120551604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120552104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120552604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120553104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120553604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120554104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120554604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120555104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120555604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120556104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120556605,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120557104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120557604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120558104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120558604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120559104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120559604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120560104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120560604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120561104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120561603,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120562104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120562604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120563103,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120563603,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120564104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120564604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120565104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120565604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120566104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120566604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567104,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567604,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567832,
+      "width": 900,
+      "height": 500,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567848,
+      "width": 900,
+      "height": 492,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567864,
+      "width": 900,
+      "height": 485,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567886,
+      "width": 900,
+      "height": 476,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567901,
+      "width": 900,
+      "height": 468,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567916,
+      "width": 900,
+      "height": 461,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567934,
+      "width": 900,
+      "height": 453,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120567951,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120568104,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120568604,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120568983,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 0,
+      "outerHeight": 0,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120569485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120569984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120570485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120570984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120571485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120571984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120572484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120572984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120573485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120573985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120574485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120574984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120575485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120575985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120576485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120576985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120577485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120577985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120578484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120578985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120579485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120579985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120580485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120580985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120581484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120581984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120582484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120582985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120583485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120583984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120584484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120584985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120585485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120585984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120586484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120586984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120587484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120587984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120588484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120588984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120589484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120589985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120590484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120590985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120591485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120591985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120592485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120592985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120593484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120593985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120594485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120594984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120595485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120595985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120596485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120596985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120597485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120597984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120598484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120598984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120599484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120599984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120600484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120600984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120601485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120601984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120602485,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120602984,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120603484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120603985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120604484,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120604985,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120605011,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120605512,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120606034,
+      "width": 900,
+      "height": 563,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120606048,
+      "width": 900,
+      "height": 563,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120606064,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120606332,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120606512,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120607011,
+      "width": 600,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    {
+      "at": 1793120608089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120609088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120610089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120611088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120612088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120613088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120614088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120615089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120616088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120617088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120618088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120619088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120620088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120621089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120622088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120623088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120624088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120625088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120626088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120627088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120628088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120629088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120630089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120631089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120632088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120633089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120634089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120635088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120636089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120637089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120638089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120639089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120640090,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120641089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120642088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120643089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120644089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120645089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120646089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120647089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120648089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120649087,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120650089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120651089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120652089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120653089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120654089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120655088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120656089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120657089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120658088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120659089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120660089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120661089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120662089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120663089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120664089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120665088,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120666089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    },
+    {
+      "at": 1793120667089,
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "outerWidth": 600,
+      "outerHeight": 650,
+      "visibility": "hidden"
+    }
+  ],
+  "geometryBeforeStart": {
+    "at": 1793120567604,
+    "width": 900,
+    "height": 507,
+    "dpr": 2,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "visibility": "visible"
+  }
+}

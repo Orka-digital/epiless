@@ -1,0 +1,1517 @@
+{
+  "id": "b74246f9-c60b-4c75-ace0-029a9a489ad6",
+  "engineVersion": "0.4.0-candidate",
+  "runnerVersion": "0.4.0",
+  "scannerBuildSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c",
+  "advancedPointer": true,
+  "tabId": 717291044,
+  "origin": "http://127.0.0.1:55307",
+  "startUrl": "http://127.0.0.1:55307/",
+  "startedAt": "2026-10-27T20:20:16.719Z",
+  "updatedAt": "2026-10-27T20:21:04.120Z",
+  "state": "INTERRUPTED",
+  "stopIntent": true,
+  "generation": "4251514c-e224-49a3-a541-42000e63e77e",
+  "elapsedMs": 38671.10000038147,
+  "tasks": [
+    {
+      "id": "1889f318-a5e6-439b-a567-f95920e94b06",
+      "url": "http://127.0.0.1:55307/",
+      "depth": 0,
+      "state": "PARTIAL",
+      "observations": [
+        {
+          "id": "5a930f69-2bef-4fb8-aa71-6d108302a196",
+          "scenario": "navigation-transition",
+          "startedAt": "2026-10-27T20:20:18.061Z",
+          "endedAt": "2026-10-27T20:20:19.907Z",
+          "achieved": true,
+          "navigation": {
+            "from": "http://127.0.0.1:55307/",
+            "to": "http://127.0.0.1:55307/"
+          },
+          "mediaEvidence": {
+            "version": 1,
+            "complete": false,
+            "reasons": [
+              "MEDIA_OBSERVATION_UNAVAILABLE"
+            ],
+            "items": []
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 107,
+              "effectiveFps": 60.04304974674556,
+              "maxGapMs": 17.699999809265137,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 107,
+                "meanMs": 7.1934578886656,
+                "maxMs": 38.90000057220459,
+                "framesOver16_7Ms": 2,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.2289719447911343,
+                "analysisMeanMs": 3.952336391555929,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 1781.5,
+              "leadingIdleMs": 5.40000057220459,
+              "trailingIdleMs": 10.199999809265137
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+              "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE"
+            ]
+          },
+          "coverage": "TESTED"
+        },
+        {
+          "id": "75632344-1361-4525-9688-3554ff23f55f",
+          "scenario": "initial-viewport",
+          "startedAt": "2026-10-27T20:20:19.914Z",
+          "endedAt": "2026-10-27T20:20:34.974Z",
+          "achieved": true,
+          "phaseEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "start": {
+              "documentMs": 1835.8999996185303,
+              "timelineMs": 1826,
+              "epochMs": 1793132419970.0999
+            },
+            "end": {
+              "documentMs": 16838.699999809265,
+              "timelineMs": 16827.5,
+              "epochMs": 1793132434972.9
+            },
+            "animations": [
+              {
+                "selectorPath": [
+                  "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                ],
+                "kind": "CSS_ANIMATION",
+                "ordinal": 0,
+                "origin": "DOCUMENT",
+                "first": {
+                  "clock": {
+                    "documentMs": 1836,
+                    "timelineMs": 1826,
+                    "epochMs": 1793132419970.2
+                  },
+                  "currentTimeMs": 1817.0340001806617,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                },
+                "last": {
+                  "clock": {
+                    "documentMs": 16838.699999809265,
+                    "timelineMs": 16827.5,
+                    "epochMs": 1793132434972.9
+                  },
+                  "currentTimeMs": 16818.53400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                }
+              }
+            ]
+          },
+          "mediaEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "startedEpochMs": 1793132419971.0999,
+            "endedEpochMs": 1793132434974,
+            "items": []
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 900,
+              "effectiveFps": 59.99372702005925,
+              "maxGapMs": 17.90000057220459,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 900,
+                "meanMs": 6.73122218767802,
+                "maxMs": 25.5,
+                "framesOver16_7Ms": 2,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1961110750834147,
+                "analysisMeanMs": 3.5283333396911623,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 15006.099999427795,
+              "leadingIdleMs": 11.399999618530273,
+              "trailingIdleMs": 9.800000190734863
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:55307/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [],
+            "durationMs": 15000,
+            "stateKey": "[1,\"http://127.0.0.1:55307/\",\"current\",900,450,2,15000,null,[],[1,\"REPLAYABLE\",[],[],[]],[1,\"REPLAYABLE\",[],\"DOCUMENT\",1835.8999996185303,16838.699999809265,null,[[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(6)\"],\"CSS_ANIMATION\",0,\"DOCUMENT\",1817.0340001806617,16818.53400018066,8.965999819338322,1,20000,0,null]]]]",
+            "mediaPlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "items": [],
+              "coverage": []
+            },
+            "phasePlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "mode": "DOCUMENT",
+              "startDocumentMs": 1835.8999996185303,
+              "endDocumentMs": 16838.699999809265,
+              "animations": [
+                {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                  ],
+                  "kind": "CSS_ANIMATION",
+                  "ordinal": 0,
+                  "origin": "DOCUMENT",
+                  "first": {
+                    "clock": {
+                      "documentMs": 1836,
+                      "timelineMs": 1826,
+                      "epochMs": 1793132419970.2
+                    },
+                    "currentTimeMs": 1817.0340001806617,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  },
+                  "last": {
+                    "clock": {
+                      "documentMs": 16838.699999809265,
+                      "timelineMs": 16827.5,
+                      "epochMs": 1793132434972.9
+                    },
+                    "currentTimeMs": 16818.53400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "bacb2c24-a116-49e3-bb03-e356a5c8afd9",
+          "scenario": "hover-1",
+          "startedAt": "2026-10-27T20:20:34.980Z",
+          "endedAt": "2026-10-27T20:20:38.642Z",
+          "achieved": true,
+          "phaseEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "start": {
+              "documentMs": 16870.699999809265,
+              "timelineMs": 16860.8,
+              "epochMs": 1793132435004.9
+            },
+            "end": {
+              "documentMs": 20506.800000190735,
+              "timelineMs": 20494.3,
+              "epochMs": 1793132438641
+            },
+            "trigger": {
+              "before": {
+                "documentMs": 16872.89999961853,
+                "timelineMs": 16860.8,
+                "epochMs": 1793132435007.0999
+              },
+              "after": {
+                "documentMs": 17499.800000190735,
+                "timelineMs": 17493.6,
+                "epochMs": 1793132435634
+              }
+            },
+            "animations": [
+              {
+                "selectorPath": [
+                  "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                ],
+                "kind": "CSS_ANIMATION",
+                "ordinal": 0,
+                "origin": "DOCUMENT",
+                "first": {
+                  "clock": {
+                    "documentMs": 16870.800000190735,
+                    "timelineMs": 16860.8,
+                    "epochMs": 1793132435005
+                  },
+                  "currentTimeMs": 16851.834000180665,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                },
+                "last": {
+                  "clock": {
+                    "documentMs": 20506.800000190735,
+                    "timelineMs": 20494.3,
+                    "epochMs": 1793132438641
+                  },
+                  "currentTimeMs": 20485.33400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                }
+              }
+            ]
+          },
+          "mediaEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "startedEpochMs": 1793132435005.8,
+            "endedEpochMs": 1793132438642.0999,
+            "items": []
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 218,
+              "effectiveFps": 59.99612928830952,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 218,
+                "meanMs": 6.761926633502365,
+                "maxMs": 29.600000381469727,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1665137579681675,
+                "analysisMeanMs": 3.5889908589354347,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 3639.2999992370605,
+              "leadingIdleMs": 11.5,
+              "trailingIdleMs": 11
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:55307/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              }
+            ],
+            "durationMs": 3000,
+            "measuredStep": 1,
+            "stateKey": "[1,\"http://127.0.0.1:55307/\",\"current\",900,450,2,3000,1,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"]],[1,\"REPLAYABLE\",[],[],[]],[1,\"REPLAYABLE\",[],\"DOCUMENT\",16870.699999809265,20506.800000190735,null,[[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(6)\"],\"CSS_ANIMATION\",0,\"DOCUMENT\",16851.834000180665,20485.33400018066,8.965999819338322,1,20000,0,null]]]]",
+            "mediaPlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "items": [],
+              "coverage": []
+            },
+            "phasePlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "mode": "DOCUMENT",
+              "startDocumentMs": 16870.699999809265,
+              "endDocumentMs": 20506.800000190735,
+              "animations": [
+                {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                  ],
+                  "kind": "CSS_ANIMATION",
+                  "ordinal": 0,
+                  "origin": "DOCUMENT",
+                  "first": {
+                    "clock": {
+                      "documentMs": 16870.800000190735,
+                      "timelineMs": 16860.8,
+                      "epochMs": 1793132435005
+                    },
+                    "currentTimeMs": 16851.834000180665,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  },
+                  "last": {
+                    "clock": {
+                      "documentMs": 20506.800000190735,
+                      "timelineMs": 20494.3,
+                      "epochMs": 1793132438641
+                    },
+                    "currentTimeMs": 20485.33400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "182c47e9-d259-4e6b-a768-d4b4c58ddaae",
+          "scenario": "focus-2",
+          "startedAt": "2026-10-27T20:20:38.648Z",
+          "endedAt": "2026-10-27T20:20:42.088Z",
+          "achieved": true,
+          "phaseEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "start": {
+              "documentMs": 20537.800000190735,
+              "timelineMs": 20527.6,
+              "epochMs": 1793132438672
+            },
+            "end": {
+              "documentMs": 23953,
+              "timelineMs": 23943.6,
+              "epochMs": 1793132442087.2
+            },
+            "trigger": {
+              "before": {
+                "documentMs": 20540.5,
+                "timelineMs": 20527.6,
+                "epochMs": 1793132438674.7
+              },
+              "after": {
+                "documentMs": 20945.800000190735,
+                "timelineMs": 20944.4,
+                "epochMs": 1793132439080
+              }
+            },
+            "animations": [
+              {
+                "selectorPath": [
+                  "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                ],
+                "kind": "CSS_ANIMATION",
+                "ordinal": 0,
+                "origin": "DOCUMENT",
+                "first": {
+                  "clock": {
+                    "documentMs": 20537.800000190735,
+                    "timelineMs": 20527.6,
+                    "epochMs": 1793132438672
+                  },
+                  "currentTimeMs": 20518.63400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                },
+                "last": {
+                  "clock": {
+                    "documentMs": 23953,
+                    "timelineMs": 23943.6,
+                    "epochMs": 1793132442087.2
+                  },
+                  "currentTimeMs": 23934.63400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                }
+              }
+            ]
+          },
+          "mediaEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "startedEpochMs": 1793132438673.2,
+            "endedEpochMs": 1793132442088.3,
+            "items": []
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 205,
+              "effectiveFps": 60.01412097300741,
+              "maxGapMs": 17.699999809265137,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 205,
+                "meanMs": 6.767804806406905,
+                "maxMs": 26.600000381469727,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.1682926503623405,
+                "analysisMeanMs": 3.59414630982934,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 3418.199999809265,
+              "leadingIdleMs": 11.09999942779541,
+              "trailingIdleMs": 7.800000190734863
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:55307/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "focus",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "focus:accordion:false:false"
+              }
+            ],
+            "durationMs": 3000,
+            "measuredStep": 3,
+            "stateKey": "[1,\"http://127.0.0.1:55307/\",\"current\",900,450,2,3000,3,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"]],[1,\"REPLAYABLE\",[],[],[]],[1,\"REPLAYABLE\",[],\"DOCUMENT\",20537.800000190735,23953,null,[[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(6)\"],\"CSS_ANIMATION\",0,\"DOCUMENT\",20518.63400018066,23934.63400018066,8.965999819338322,1,20000,0,null]]]]",
+            "mediaPlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "items": [],
+              "coverage": []
+            },
+            "phasePlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "mode": "DOCUMENT",
+              "startDocumentMs": 20537.800000190735,
+              "endDocumentMs": 23953,
+              "animations": [
+                {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                  ],
+                  "kind": "CSS_ANIMATION",
+                  "ordinal": 0,
+                  "origin": "DOCUMENT",
+                  "first": {
+                    "clock": {
+                      "documentMs": 20537.800000190735,
+                      "timelineMs": 20527.6,
+                      "epochMs": 1793132438672
+                    },
+                    "currentTimeMs": 20518.63400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  },
+                  "last": {
+                    "clock": {
+                      "documentMs": 23953,
+                      "timelineMs": 23943.6,
+                      "epochMs": 1793132442087.2
+                    },
+                    "currentTimeMs": 23934.63400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "46b000e1-1fa7-404d-93ef-3467c8c01637",
+          "scenario": "accordion-3",
+          "startedAt": "2026-10-27T20:20:42.094Z",
+          "endedAt": "2026-10-27T20:20:47.232Z",
+          "achieved": true,
+          "phaseEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "start": {
+              "documentMs": 23983.89999961853,
+              "timelineMs": 23977.6,
+              "epochMs": 1793132442118.0999
+            },
+            "end": {
+              "documentMs": 29096,
+              "timelineMs": 29094.9,
+              "epochMs": 1793132447230.2
+            },
+            "trigger": {
+              "before": {
+                "documentMs": 23986.5,
+                "timelineMs": 23977.6,
+                "epochMs": 1793132442120.7
+              },
+              "after": {
+                "documentMs": 24091.699999809265,
+                "timelineMs": 24077.6,
+                "epochMs": 1793132442225.9
+              }
+            },
+            "animations": [
+              {
+                "selectorPath": [
+                  "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                ],
+                "kind": "CSS_ANIMATION",
+                "ordinal": 0,
+                "origin": "DOCUMENT",
+                "first": {
+                  "clock": {
+                    "documentMs": 23984,
+                    "timelineMs": 23977.6,
+                    "epochMs": 1793132442118.2
+                  },
+                  "currentTimeMs": 23968.63400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                },
+                "last": {
+                  "clock": {
+                    "documentMs": 29096,
+                    "timelineMs": 29094.9,
+                    "epochMs": 1793132447230.2
+                  },
+                  "currentTimeMs": 29085.93400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                }
+              },
+              {
+                "selectorPath": [
+                  "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                ],
+                "kind": "CSS_ANIMATION",
+                "ordinal": 0,
+                "origin": "TRIGGER",
+                "first": {
+                  "clock": {
+                    "documentMs": 24110.89999961853,
+                    "timelineMs": 24110.7,
+                    "epochMs": 1793132442245.0999
+                  },
+                  "currentTimeMs": 17.10000000000278,
+                  "startTimeMs": 24093.6,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 160,
+                  "delayMs": 0,
+                  "iterations": 13
+                },
+                "last": {
+                  "clock": {
+                    "documentMs": 29096,
+                    "timelineMs": 29094.9,
+                    "epochMs": 1793132447230.2
+                  },
+                  "currentTimeMs": 2080,
+                  "startTimeMs": 24093.6,
+                  "playbackRate": 1,
+                  "playState": "finished",
+                  "durationMs": 160,
+                  "delayMs": 0,
+                  "iterations": 13
+                }
+              }
+            ]
+          },
+          "mediaEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "startedEpochMs": 1793132442119.2,
+            "endedEpochMs": 1793132447231.5,
+            "items": []
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 306,
+              "effectiveFps": 60.00157380276645,
+              "maxGapMs": 17.90000057220459,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 306,
+                "meanMs": 6.732679722355861,
+                "maxMs": 28.5,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.152941152161243,
+                "analysisMeanMs": 3.574183018378962,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 5115.5,
+              "leadingIdleMs": 15.5,
+              "trailingIdleMs": 16.800000190734863
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:55307/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "focus",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "focus:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "control",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "accordion:true:true"
+              }
+            ],
+            "durationMs": 5000,
+            "measuredStep": 5,
+            "stateKey": "[1,\"http://127.0.0.1:55307/\",\"current\",900,450,2,5000,5,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"]],[1,\"REPLAYABLE\",[],[],[]],[1,\"REPLAYABLE\",[],\"DOCUMENT\",23983.89999961853,29096,null,[[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(6)\"],\"CSS_ANIMATION\",0,\"DOCUMENT\",23968.63400018066,29085.93400018066,8.965999819338322,1,20000,0,null],[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(5)\"],\"CSS_ANIMATION\",0,\"TRIGGER\",17.10000000000278,2080,24093.6,1,160,0,13]]]]",
+            "mediaPlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "items": [],
+              "coverage": []
+            },
+            "phasePlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "mode": "DOCUMENT",
+              "startDocumentMs": 23983.89999961853,
+              "endDocumentMs": 29096,
+              "animations": [
+                {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                  ],
+                  "kind": "CSS_ANIMATION",
+                  "ordinal": 0,
+                  "origin": "DOCUMENT",
+                  "first": {
+                    "clock": {
+                      "documentMs": 23984,
+                      "timelineMs": 23977.6,
+                      "epochMs": 1793132442118.2
+                    },
+                    "currentTimeMs": 23968.63400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  },
+                  "last": {
+                    "clock": {
+                      "documentMs": 29096,
+                      "timelineMs": 29094.9,
+                      "epochMs": 1793132447230.2
+                    },
+                    "currentTimeMs": 29085.93400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  }
+                },
+                {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                  ],
+                  "kind": "CSS_ANIMATION",
+                  "ordinal": 0,
+                  "origin": "TRIGGER",
+                  "first": {
+                    "clock": {
+                      "documentMs": 24110.89999961853,
+                      "timelineMs": 24110.7,
+                      "epochMs": 1793132442245.0999
+                    },
+                    "currentTimeMs": 17.10000000000278,
+                    "startTimeMs": 24093.6,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 160,
+                    "delayMs": 0,
+                    "iterations": 13
+                  },
+                  "last": {
+                    "clock": {
+                      "documentMs": 29096,
+                      "timelineMs": 29094.9,
+                      "epochMs": 1793132447230.2
+                    },
+                    "currentTimeMs": 2080,
+                    "startTimeMs": 24093.6,
+                    "playbackRate": 1,
+                    "playState": "finished",
+                    "durationMs": 160,
+                    "delayMs": 0,
+                    "iterations": 13
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "45704322-0763-4868-a210-019137798aa1",
+          "scenario": "delayed-state",
+          "startedAt": "2026-10-27T20:20:47.238Z",
+          "endedAt": "2026-10-27T20:20:54.271Z",
+          "achieved": true,
+          "phaseEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "start": {
+              "documentMs": 29125.60000038147,
+              "timelineMs": 29111.5,
+              "epochMs": 1793132447259.8
+            },
+            "end": {
+              "documentMs": 36130.300000190735,
+              "timelineMs": 36127.7,
+              "epochMs": 1793132454264.5
+            },
+            "animations": [
+              {
+                "selectorPath": [
+                  "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                ],
+                "kind": "CSS_ANIMATION",
+                "ordinal": 0,
+                "origin": "DOCUMENT",
+                "first": {
+                  "clock": {
+                    "documentMs": 29125.60000038147,
+                    "timelineMs": 29111.5,
+                    "epochMs": 1793132447259.8
+                  },
+                  "currentTimeMs": 29102.53400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                },
+                "last": {
+                  "clock": {
+                    "documentMs": 36130.300000190735,
+                    "timelineMs": 36127.7,
+                    "epochMs": 1793132454264.5
+                  },
+                  "currentTimeMs": 36118.73400018066,
+                  "startTimeMs": 8.965999819338322,
+                  "playbackRate": 1,
+                  "playState": "running",
+                  "durationMs": 20000,
+                  "delayMs": 0,
+                  "iterations": null
+                }
+              }
+            ]
+          },
+          "mediaEvidence": {
+            "version": 1,
+            "complete": true,
+            "reasons": [],
+            "startedEpochMs": 1793132447261.2,
+            "endedEpochMs": 1793132454266,
+            "items": []
+          },
+          "measurement": {
+            "status": "NO_ISSUES_OBSERVED",
+            "passed": null,
+            "quality": {
+              "frameCount": 421,
+              "effectiveFps": 60.00342876408802,
+              "maxGapMs": 17.800000190734863,
+              "width": 1800,
+              "height": 900,
+              "downsampled": false,
+              "interrupted": false,
+              "spatial": {
+                "mode": "NATIVE_PIXELS",
+                "sourceWidth": 1800,
+                "sourceHeight": 900,
+                "retainedResolutionRatio": 1,
+                "stateBytes": 158869396,
+                "stateBudgetBytes": 268435456,
+                "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+                "colorAssumption": "SDR_SRGB_8BIT"
+              },
+              "processing": {
+                "measuredFrames": 421,
+                "meanMs": 6.727078365316867,
+                "maxMs": 28.59999942779541,
+                "framesOver16_7Ms": 1,
+                "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+                "conversionMeanMs": 3.178859826221602,
+                "analysisMeanMs": 3.5418052401508686,
+                "conversionMethods": [
+                  "VIDEOFRAME_COPY_RGBA"
+                ],
+                "analysisBackend": {
+                  "backend": "WASM_DENSE",
+                  "selectionReason": "READY",
+                  "denseFrames": 0,
+                  "inputCopiedBytes": 0,
+                  "inputCopyMs": 0,
+                  "kernelMs": 0,
+                  "wasmMemoryBytes": 128581632,
+                  "migratedStateBytes": 122026336,
+                  "extraStateBytes": 6555296,
+                  "engineStateBytes": 158869396,
+                  "embeddedKernelBytes": 2239
+                },
+                "decoded": {
+                  "codedWidth": 1800,
+                  "codedHeight": 900,
+                  "displayWidth": 1800,
+                  "displayHeight": 900,
+                  "visibleRect": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 1800,
+                    "height": 900
+                  },
+                  "format": "I420",
+                  "primaries": "bt709",
+                  "transfer": "bt709",
+                  "matrix": "bt709"
+                },
+                "track": {
+                  "width": 1800,
+                  "height": 900,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              },
+              "captureWindowMs": 7008.5,
+              "leadingIdleMs": 7.600000381469727,
+              "trailingIdleMs": 1.3999996185302734
+            },
+            "findings": [],
+            "limitations": [
+              "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+              "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated."
+            ]
+          },
+          "coverage": "TESTED",
+          "replay": {
+            "version": 1,
+            "route": "http://127.0.0.1:55307/",
+            "viewport": {
+              "width": 900,
+              "height": 450,
+              "dpr": 2
+            },
+            "profile": "current",
+            "viewportMethod": "PHYSICAL",
+            "steps": [
+              {
+                "kind": "wait",
+                "durationMs": 15000
+              },
+              {
+                "kind": "hover",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "hover:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "focus",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "focus:accordion:false:false"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 3000
+              },
+              {
+                "kind": "control",
+                "target": {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(3)"
+                  ],
+                  "kind": "accordion"
+                },
+                "expectedState": "accordion:true:true"
+              },
+              {
+                "kind": "wait",
+                "durationMs": 5000
+              }
+            ],
+            "durationMs": 7000,
+            "stateKey": "[1,\"http://127.0.0.1:55307/\",\"current\",900,450,2,7000,null,[[\"wait\",15000],[\"hover\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"hover:accordion:false:false\"],[\"wait\",3000],[\"focus\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"focus:accordion:false:false\"],[\"wait\",3000],[\"control\",\"accordion\",[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(3)\"],\"accordion:true:true\"],[\"wait\",5000]],[1,\"REPLAYABLE\",[],[],[]],[1,\"REPLAYABLE\",[],\"DOCUMENT\",29125.60000038147,36130.300000190735,null,[[[\"*:nth-child(1) > *:nth-child(2) > *:nth-child(6)\"],\"CSS_ANIMATION\",0,\"DOCUMENT\",29102.53400018066,36118.73400018066,8.965999819338322,1,20000,0,null]]]]",
+            "mediaPlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "items": [],
+              "coverage": []
+            },
+            "phasePlan": {
+              "version": 1,
+              "status": "REPLAYABLE",
+              "reasons": [],
+              "mode": "DOCUMENT",
+              "startDocumentMs": 29125.60000038147,
+              "endDocumentMs": 36130.300000190735,
+              "animations": [
+                {
+                  "selectorPath": [
+                    "*:nth-child(1) > *:nth-child(2) > *:nth-child(6)"
+                  ],
+                  "kind": "CSS_ANIMATION",
+                  "ordinal": 0,
+                  "origin": "DOCUMENT",
+                  "first": {
+                    "clock": {
+                      "documentMs": 29125.60000038147,
+                      "timelineMs": 29111.5,
+                      "epochMs": 1793132447259.8
+                    },
+                    "currentTimeMs": 29102.53400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  },
+                  "last": {
+                    "clock": {
+                      "documentMs": 36130.300000190735,
+                      "timelineMs": 36127.7,
+                      "epochMs": 1793132454264.5
+                    },
+                    "currentTimeMs": 36118.73400018066,
+                    "startTimeMs": 8.965999819338322,
+                    "playbackRate": 1,
+                    "playState": "running",
+                    "durationMs": 20000,
+                    "delayMs": 0,
+                    "iterations": null
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "2ac83853-1fc0-4bd3-9338-9bb69a10175b",
+          "scenario": "compact-resize-transition",
+          "startedAt": "2026-10-27T20:20:55.054Z",
+          "endedAt": "2026-10-27T20:20:55.054Z",
+          "achieved": false,
+          "reason": "VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+          "coverage": "SKIPPED"
+        },
+        {
+          "id": "83158682-0325-479b-a6dd-9882903cf9a4",
+          "scenario": "compact-viewport-capture-source-transition",
+          "startedAt": "2026-10-27T20:20:56.160Z",
+          "endedAt": "2026-10-27T20:20:56.160Z",
+          "achieved": false,
+          "reason": "NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+          "coverage": "SKIPPED"
+        },
+        {
+          "id": "c333a742-04bb-43a6-8980-2dc46eca442b",
+          "scenario": "compact-viewport",
+          "startedAt": "2026-10-27T20:20:56.157Z",
+          "endedAt": "2026-10-27T20:20:57.062Z",
+          "achieved": false,
+          "reason": "RUNNER_CANCELLED",
+          "mediaEvidence": {
+            "version": 1,
+            "complete": false,
+            "reasons": [
+              "MEDIA_OBSERVATION_UNAVAILABLE"
+            ],
+            "items": []
+          },
+          "coverage": "UNREACHED"
+        },
+        {
+          "id": "995710be-6402-4201-b5ae-34e05d09b06c",
+          "scenario": "compact-controls",
+          "startedAt": "2026-10-27T20:20:57.064Z",
+          "endedAt": "2026-10-27T20:20:57.064Z",
+          "achieved": false,
+          "reason": "COMPACT_VIEWPORT_UNREACHED",
+          "coverage": "SKIPPED"
+        }
+      ],
+      "reasons": [
+        "Navigation transition from http://127.0.0.1:55307/ to http://127.0.0.1:55307/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.",
+        "Viewport at route inventory: 900 × 450 CSS pixels; device pixel ratio 2.",
+        "compact-resize-transition: VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT",
+        "compact-viewport-capture-source-transition: NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT",
+        "compact-viewport: RUNNER_CANCELLED",
+        "compact-controls: COMPACT_VIEWPORT_UNREACHED",
+        "RUNNER_CANCELLED"
+      ],
+      "viewport": {
+        "width": 900,
+        "height": 450,
+        "dpr": 2
+      }
+    }
+  ],
+  "skippedLinks": 0,
+  "limitations": [
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+    "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED: VIEWPORT_RESTORE_GEOMETRY_UNCONFIRMED: expected {\"dpr\":2,\"height\":507,\"width\":900}, reached {\"width\":900,\"height\":450,\"dpr\":2,\"scrollX\":0,\"scrollY\":0,\"visualScale\":1,\"visualOffsetLeft\":0,\"visualOffsetTop\":0}"
+  ],
+  "mode": "AUTONOMOUS",
+  "viewportDurationMs": 15000,
+  "limits": {
+    "maxRoutes": 50,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "maxActionsPerRoute": 12
+  },
+  "sitemapChecked": true,
+  "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+  "interruptedTaskId": "1889f318-a5e6-439b-a567-f95920e94b06",
+  "endedAt": "2026-10-27T20:21:04.109Z"
+}

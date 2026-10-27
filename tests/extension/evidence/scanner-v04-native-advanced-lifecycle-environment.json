@@ -1,0 +1,2839 @@
+{
+  "platform": "darwin",
+  "machine": {
+    "arch": "arm64",
+    "os": "darwin",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "fixture": "One route, static desktop/responsive controls, four corner markers and low-contrast 4px slow motion; no flashing or audio.",
+  "origin": "http://127.0.0.1:54163",
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "headless": false,
+  "playwrightAttached": false,
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted filenames, NUL, bytes, NUL",
+    "productionSha256": "79cb6993258ffe8b62ba25ca5da2c2326080bc612a9cbeb1fa264f04290045e6",
+    "instrumentedSha256": "86c9e0e94e4f3cfef3339e268f0eaf6ea9ac4fc18ee0c30af12c9fbdd997117d",
+    "instrumentation": "Fixture-only loopback host permission, startup/terminal numeric collector and copied offscreen corner probe. Detector/background/capture implementation otherwise unchanged."
+  },
+  "recordedAt": "2026-10-27T14:10:25.051Z",
+  "runtime": {
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "targetActive": true,
+    "foregroundTab": 503093716,
+    "geometry": {
+      "dpr": 2,
+      "height": 507,
+      "visibility": "visible",
+      "width": 900
+    },
+    "window": {
+      "width": 900,
+      "height": 650
+    },
+    "debuggerAttached": false
+  },
+  "initialGeometry": {
+    "at": 1793110098200,
+    "innerWidth": 1200,
+    "innerHeight": 1624,
+    "outerWidth": 1200,
+    "outerHeight": 1711,
+    "devicePixelRatio": 2,
+    "visibility": "visible",
+    "screen": {
+      "width": 3360,
+      "height": 1890
+    },
+    "compactVisible": false,
+    "compactExpanded": "false",
+    "receivedAt": "2026-10-27T14:08:18.219Z"
+  },
+  "finalGeometry": {
+    "at": 1793110224658,
+    "innerWidth": 900,
+    "innerHeight": 507,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "devicePixelRatio": 2,
+    "visibility": "visible",
+    "screen": {
+      "width": 3360,
+      "height": 1890
+    },
+    "compactVisible": false,
+    "compactExpanded": "true",
+    "receivedAt": "2026-10-27T14:10:24.659Z"
+  },
+  "geometries": [
+    {
+      "at": 1793110098200,
+      "innerWidth": 1200,
+      "innerHeight": 1624,
+      "outerWidth": 1200,
+      "outerHeight": 1711,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:18.219Z"
+    },
+    {
+      "at": 1793110098216,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 1200,
+      "outerHeight": 1711,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:18.220Z"
+    },
+    {
+      "at": 1793110099213,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:19.216Z"
+    },
+    {
+      "at": 1793110100214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:20.216Z"
+    },
+    {
+      "at": 1793110101214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:21.216Z"
+    },
+    {
+      "at": 1793110102214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:22.216Z"
+    },
+    {
+      "at": 1793110103214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:23.217Z"
+    },
+    {
+      "at": 1793110104213,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:24.215Z"
+    },
+    {
+      "at": 1793110105214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:25.215Z"
+    },
+    {
+      "at": 1793110106214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:26.216Z"
+    },
+    {
+      "at": 1793110107214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:27.216Z"
+    },
+    {
+      "at": 1793110108215,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:28.218Z"
+    },
+    {
+      "at": 1793110109215,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:29.216Z"
+    },
+    {
+      "at": 1793110110213,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:30.214Z"
+    },
+    {
+      "at": 1793110111214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:31.216Z"
+    },
+    {
+      "at": 1793110112214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:32.216Z"
+    },
+    {
+      "at": 1793110113214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:33.215Z"
+    },
+    {
+      "at": 1793110114214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:34.219Z"
+    },
+    {
+      "at": 1793110115214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:35.215Z"
+    },
+    {
+      "at": 1793110116214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:36.215Z"
+    },
+    {
+      "at": 1793110117214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:37.215Z"
+    },
+    {
+      "at": 1793110118214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:38.215Z"
+    },
+    {
+      "at": 1793110119214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:39.215Z"
+    },
+    {
+      "at": 1793110120214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:40.216Z"
+    },
+    {
+      "at": 1793110121214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:41.216Z"
+    },
+    {
+      "at": 1793110122214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:42.215Z"
+    },
+    {
+      "at": 1793110123214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:43.216Z"
+    },
+    {
+      "at": 1793110124214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:44.216Z"
+    },
+    {
+      "at": 1793110125214,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.215Z"
+    },
+    {
+      "at": 1793110125417,
+      "innerWidth": 900,
+      "innerHeight": 505,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.418Z"
+    },
+    {
+      "at": 1793110125433,
+      "innerWidth": 900,
+      "innerHeight": 497,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.434Z"
+    },
+    {
+      "at": 1793110125450,
+      "innerWidth": 900,
+      "innerHeight": 489,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.451Z"
+    },
+    {
+      "at": 1793110125466,
+      "innerWidth": 900,
+      "innerHeight": 481,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.467Z"
+    },
+    {
+      "at": 1793110125483,
+      "innerWidth": 900,
+      "innerHeight": 473,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.484Z"
+    },
+    {
+      "at": 1793110125500,
+      "innerWidth": 900,
+      "innerHeight": 465,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.501Z"
+    },
+    {
+      "at": 1793110125517,
+      "innerWidth": 900,
+      "innerHeight": 457,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.518Z"
+    },
+    {
+      "at": 1793110125533,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:45.534Z"
+    },
+    {
+      "at": 1793110126214,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:46.215Z"
+    },
+    {
+      "at": 1793110126630,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "hidden",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:46.631Z"
+    },
+    {
+      "at": 1793110126633,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 0,
+      "outerHeight": 0,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:46.635Z"
+    },
+    {
+      "at": 1793110127635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:47.636Z"
+    },
+    {
+      "at": 1793110128635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:48.636Z"
+    },
+    {
+      "at": 1793110129635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:49.636Z"
+    },
+    {
+      "at": 1793110130634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:50.635Z"
+    },
+    {
+      "at": 1793110131635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:51.636Z"
+    },
+    {
+      "at": 1793110132635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:52.636Z"
+    },
+    {
+      "at": 1793110133634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:53.635Z"
+    },
+    {
+      "at": 1793110134634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:54.635Z"
+    },
+    {
+      "at": 1793110135634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:55.635Z"
+    },
+    {
+      "at": 1793110136634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:56.635Z"
+    },
+    {
+      "at": 1793110137634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:57.635Z"
+    },
+    {
+      "at": 1793110138634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:58.635Z"
+    },
+    {
+      "at": 1793110139635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:08:59.636Z"
+    },
+    {
+      "at": 1793110140634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:00.635Z"
+    },
+    {
+      "at": 1793110141634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:01.635Z"
+    },
+    {
+      "at": 1793110142634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:02.635Z"
+    },
+    {
+      "at": 1793110143635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:03.636Z"
+    },
+    {
+      "at": 1793110144634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:04.635Z"
+    },
+    {
+      "at": 1793110145635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:05.636Z"
+    },
+    {
+      "at": 1793110146635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:06.636Z"
+    },
+    {
+      "at": 1793110147635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:07.635Z"
+    },
+    {
+      "at": 1793110148635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:08.635Z"
+    },
+    {
+      "at": 1793110149635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:09.636Z"
+    },
+    {
+      "at": 1793110150635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:10.635Z"
+    },
+    {
+      "at": 1793110151634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:11.635Z"
+    },
+    {
+      "at": 1793110152635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:12.636Z"
+    },
+    {
+      "at": 1793110153635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:13.636Z"
+    },
+    {
+      "at": 1793110154635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:14.635Z"
+    },
+    {
+      "at": 1793110155635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:15.635Z"
+    },
+    {
+      "at": 1793110156634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:16.635Z"
+    },
+    {
+      "at": 1793110157635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:17.635Z"
+    },
+    {
+      "at": 1793110158634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:18.635Z"
+    },
+    {
+      "at": 1793110159635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:19.635Z"
+    },
+    {
+      "at": 1793110160634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:20.635Z"
+    },
+    {
+      "at": 1793110161635,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:21.636Z"
+    },
+    {
+      "at": 1793110162634,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:22.635Z"
+    },
+    {
+      "at": 1793110162655,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "hidden",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:22.656Z"
+    },
+    {
+      "at": 1793110162658,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 0,
+      "outerHeight": 0,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:22.659Z"
+    },
+    {
+      "at": 1793110163425,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "hidden",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:23.426Z"
+    },
+    {
+      "at": 1793110164039,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "hidden",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:24.041Z"
+    },
+    {
+      "at": 1793110164170,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:24.172Z"
+    },
+    {
+      "at": 1793110164171,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 450,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:24.173Z"
+    },
+    {
+      "at": 1793110164658,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:24.659Z"
+    },
+    {
+      "at": 1793110165660,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:25.661Z"
+    },
+    {
+      "at": 1793110166659,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:26.660Z"
+    },
+    {
+      "at": 1793110167660,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:27.661Z"
+    },
+    {
+      "at": 1793110168659,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "false",
+      "receivedAt": "2026-10-27T14:09:28.660Z"
+    },
+    {
+      "at": 1793110169659,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:29.660Z"
+    },
+    {
+      "at": 1793110170659,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:30.660Z"
+    },
+    {
+      "at": 1793110171659,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:31.660Z"
+    },
+    {
+      "at": 1793110172659,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:32.660Z"
+    },
+    {
+      "at": 1793110173659,
+      "innerWidth": 600,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": true,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:33.660Z"
+    },
+    {
+      "at": 1793110174386,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:34.387Z"
+    },
+    {
+      "at": 1793110174659,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:34.661Z"
+    },
+    {
+      "at": 1793110175659,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:35.660Z"
+    },
+    {
+      "at": 1793110176660,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:36.661Z"
+    },
+    {
+      "at": 1793110177659,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:37.661Z"
+    },
+    {
+      "at": 1793110178659,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:38.661Z"
+    },
+    {
+      "at": 1793110179659,
+      "innerWidth": 900,
+      "innerHeight": 450,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:39.661Z"
+    },
+    {
+      "at": 1793110180385,
+      "innerWidth": 900,
+      "innerHeight": 456,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.386Z"
+    },
+    {
+      "at": 1793110180403,
+      "innerWidth": 900,
+      "innerHeight": 464,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.404Z"
+    },
+    {
+      "at": 1793110180419,
+      "innerWidth": 900,
+      "innerHeight": 472,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.421Z"
+    },
+    {
+      "at": 1793110180435,
+      "innerWidth": 900,
+      "innerHeight": 480,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.436Z"
+    },
+    {
+      "at": 1793110180452,
+      "innerWidth": 900,
+      "innerHeight": 487,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.453Z"
+    },
+    {
+      "at": 1793110180469,
+      "innerWidth": 900,
+      "innerHeight": 495,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.470Z"
+    },
+    {
+      "at": 1793110180486,
+      "innerWidth": 900,
+      "innerHeight": 504,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.488Z"
+    },
+    {
+      "at": 1793110180503,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.504Z"
+    },
+    {
+      "at": 1793110180659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:40.661Z"
+    },
+    {
+      "at": 1793110181659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:41.660Z"
+    },
+    {
+      "at": 1793110182659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:42.660Z"
+    },
+    {
+      "at": 1793110183659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:43.661Z"
+    },
+    {
+      "at": 1793110184660,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:44.661Z"
+    },
+    {
+      "at": 1793110185659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:45.660Z"
+    },
+    {
+      "at": 1793110186660,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:46.661Z"
+    },
+    {
+      "at": 1793110187659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:47.660Z"
+    },
+    {
+      "at": 1793110188659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:48.660Z"
+    },
+    {
+      "at": 1793110189659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:49.660Z"
+    },
+    {
+      "at": 1793110190659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:50.660Z"
+    },
+    {
+      "at": 1793110191660,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:51.661Z"
+    },
+    {
+      "at": 1793110192659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:52.661Z"
+    },
+    {
+      "at": 1793110193659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:53.660Z"
+    },
+    {
+      "at": 1793110194659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:54.660Z"
+    },
+    {
+      "at": 1793110195660,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:55.661Z"
+    },
+    {
+      "at": 1793110196659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:56.660Z"
+    },
+    {
+      "at": 1793110197659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:57.660Z"
+    },
+    {
+      "at": 1793110198659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:58.660Z"
+    },
+    {
+      "at": 1793110199659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:09:59.661Z"
+    },
+    {
+      "at": 1793110200660,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:00.660Z"
+    },
+    {
+      "at": 1793110201659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:01.661Z"
+    },
+    {
+      "at": 1793110202659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:02.661Z"
+    },
+    {
+      "at": 1793110203659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:03.660Z"
+    },
+    {
+      "at": 1793110204659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:04.660Z"
+    },
+    {
+      "at": 1793110205659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:05.660Z"
+    },
+    {
+      "at": 1793110206659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:06.660Z"
+    },
+    {
+      "at": 1793110207659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:07.660Z"
+    },
+    {
+      "at": 1793110208659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:08.667Z"
+    },
+    {
+      "at": 1793110209658,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:09.660Z"
+    },
+    {
+      "at": 1793110210659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:10.660Z"
+    },
+    {
+      "at": 1793110211659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:11.660Z"
+    },
+    {
+      "at": 1793110212659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:12.660Z"
+    },
+    {
+      "at": 1793110213659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:13.660Z"
+    },
+    {
+      "at": 1793110214659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:14.661Z"
+    },
+    {
+      "at": 1793110215658,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:15.659Z"
+    },
+    {
+      "at": 1793110216658,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:16.660Z"
+    },
+    {
+      "at": 1793110217659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:17.661Z"
+    },
+    {
+      "at": 1793110218658,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:18.659Z"
+    },
+    {
+      "at": 1793110219659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:19.660Z"
+    },
+    {
+      "at": 1793110220658,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:20.660Z"
+    },
+    {
+      "at": 1793110221659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:21.660Z"
+    },
+    {
+      "at": 1793110222659,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:22.660Z"
+    },
+    {
+      "at": 1793110223658,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:23.660Z"
+    },
+    {
+      "at": 1793110224658,
+      "innerWidth": 900,
+      "innerHeight": 507,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "devicePixelRatio": 2,
+      "visibility": "visible",
+      "screen": {
+        "width": 3360,
+        "height": 1890
+      },
+      "compactVisible": false,
+      "compactExpanded": "true",
+      "receivedAt": "2026-10-27T14:10:24.659Z"
+    }
+  ],
+  "pixelProbe": {
+    "expectedColors": [
+      [
+        40,
+        80,
+        120,
+        255
+      ],
+      [
+        140,
+        180,
+        220,
+        255
+      ],
+      [
+        80,
+        120,
+        160,
+        255
+      ],
+      [
+        180,
+        140,
+        100,
+        255
+      ]
+    ],
+    "samples": [
+      {
+        "colors": [
+          [
+            40,
+            80,
+            118,
+            255
+          ],
+          [
+            140,
+            180,
+            219,
+            255
+          ],
+          [
+            80,
+            120,
+            156,
+            255
+          ],
+          [
+            180,
+            140,
+            102,
+            255
+          ]
+        ],
+        "frameNumber": 1,
+        "height": 900,
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            887
+          ],
+          [
+            1787,
+            887
+          ]
+        ],
+        "sourceTimestampMs": 4818083579,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            40,
+            80,
+            118,
+            255
+          ],
+          [
+            140,
+            180,
+            219,
+            255
+          ],
+          [
+            80,
+            120,
+            156,
+            255
+          ],
+          [
+            180,
+            140,
+            102,
+            255
+          ]
+        ],
+        "frameNumber": 30,
+        "height": 900,
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            887
+          ],
+          [
+            1787,
+            887
+          ]
+        ],
+        "sourceTimestampMs": 4818084062.4,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            40,
+            80,
+            118,
+            255
+          ],
+          [
+            140,
+            180,
+            219,
+            255
+          ],
+          [
+            80,
+            120,
+            156,
+            255
+          ],
+          [
+            180,
+            140,
+            102,
+            255
+          ]
+        ],
+        "frameNumber": 120,
+        "height": 900,
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1787,
+            12
+          ],
+          [
+            12,
+            887
+          ],
+          [
+            1787,
+            887
+          ]
+        ],
+        "sourceTimestampMs": 4818085595.4,
+        "width": 1800
+      },
+      {
+        "colors": [
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ]
+        ],
+        "frameNumber": 1,
+        "height": 900,
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            887
+          ],
+          [
+            1187,
+            887
+          ]
+        ],
+        "sourceTimestampMs": 4818121215.1,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ]
+        ],
+        "frameNumber": 30,
+        "height": 900,
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            887
+          ],
+          [
+            1187,
+            887
+          ]
+        ],
+        "sourceTimestampMs": 4818121697.5,
+        "width": 1200
+      },
+      {
+        "colors": [
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            0,
+            0,
+            255
+          ]
+        ],
+        "frameNumber": 120,
+        "height": 900,
+        "points": [
+          [
+            12,
+            12
+          ],
+          [
+            1187,
+            12
+          ],
+          [
+            12,
+            887
+          ],
+          [
+            1187,
+            887
+          ]
+        ],
+        "sourceTimestampMs": 4818123198.5,
+        "width": 1200
+      }
+    ],
+    "instrumentation": "Copied offscreen bundle samples four numeric static corners on frames 1, 30 and 120 per source geometry before forwarding the original VideoFrame. Sampled-frame overhead; no stored screenshot or video."
+  }
+}

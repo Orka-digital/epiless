@@ -1,0 +1,16 @@
+{"evidenceDirectory":"/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9JUNiv","origin":"http://127.0.0.1:55883","mode":"cancel","tabSwitchProbe":false,"productionSha256":"f8e5a62d7e6bae99faa1a19946744fd28d33156148082543981dd7e1ba5bc1f8","prepareOnly":false}
+{"pid":71884,"next":"Use the real toolbar: autonomous mode; enable genuine hover for cancel. Do not interact with the browser during observation. Ctrl+C closes only this isolated browser."}
+{"collectorReady":true,"mode":"cancel","authority":"Actual toolbar start required"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"AUTHORIZING"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING","pendingAction":"navigation-transition"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING","pendingAction":"initial-viewport"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING","pendingAction":"hover-1"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING","pendingAction":"focus-2"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING","pendingAction":"accordion-3"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING","pendingAction":"delayed-state"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"RUNNING","pendingAction":"compact-viewport"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"STOPPING","pendingAction":"compact-viewport"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"STOPPING"}
+{"id":"3d06c6bc-2872-43f4-b66a-4afa7adc5a95","state":"INTERRUPTED"}
+{"terminal":"INTERRUPTED","mode":"cancel","evidenceDirectory":"/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9JUNiv","errors":[],"actionPerformed":true}

@@ -1,0 +1,18 @@
+{
+  "classification": "COMPLETED_SEQUENTIAL_REBIND_GEOMETRY_RESTORATION_FAILED",
+  "status": "FAIL",
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'INTERRUPTED'\n- 'PARTIAL'\n\n    at verifyCancellation (file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:437:10)\n    at verifyNativeContextGuard (file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:174:20)\n    at file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-context-guard.mjs:516:7 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: 'INTERRUPTED',\n  expected: 'PARTIAL',\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n",
+  "verifierSha256": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622",
+  "publicReportSchema": {
+    "exitCode": 0,
+    "stdout": "{\"status\":\"PASS\",\"id\":\"3d06c6bc-2872-43f4-b66a-4afa7adc5a95\",\"scannerBuildSha256\":\"fdcb09c52fe896c193d9c7b8ab7c68c0debaf688706a93969b01d2151e7896ca\"}\n",
+    "stderr": "",
+    "result": {
+      "status": "PASS",
+      "id": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+      "scannerBuildSha256": "fdcb09c52fe896c193d9c7b8ab7c68c0debaf688706a93969b01d2151e7896ca"
+    }
+  }
+}

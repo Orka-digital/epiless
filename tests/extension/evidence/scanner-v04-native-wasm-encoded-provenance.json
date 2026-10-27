@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "Byte-exact real-toolbar capture on one physical Mac. Lossless VP9 2x2 encoded fixture, two capture geometries; sparse sharing legitimately uses no dense WASM calls. Not general codec, colour or hardware validation.",
+  "scannerBuildSha256": "af5d4da032b7a92cfbb090a1fe59adfc4601334d0d3547e6a5b9ff776c9637ce",
+  "strictPublicSchema": "PASS",
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-encoded-capture.json",
+      "bytes": 181646,
+      "sha256": "8b80967a164f7d94d631df91a8be32a67c2091356167976845188a09ac6c7a37"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-encoded-local-job.json",
+      "bytes": 199800,
+      "sha256": "dede0e49e9cc7a734d01d5a8e12a32ba2ca2cfe23fe39b3671fde978eef096b1"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-encoded-environment.json",
+      "bytes": 227307,
+      "sha256": "e384d63fba429ce1d82a669399521859dd3abdfcc8ce55edfa18102046cdbce8"
+    }
+  ]
+}

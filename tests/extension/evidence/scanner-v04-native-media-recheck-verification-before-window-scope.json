@@ -1,0 +1,24 @@
+{
+  "status": "FAIL",
+  "scope": "Exact pre-correction verifier rejected post-observation restoration seek; original evidence and source retained before any change.",
+  "recordedAt": "2026-10-27T19:06:04.822630+00:00",
+  "verifierSha256": "95acf1c60bb0df5b50401f6e0e01e81d36e9ce1ac88b3a2adee35ddcb2e97c14",
+  "archivedVerifier": "tests/extension/evidence/scanner-v04-native-media-recheck-verifier-before-window-scope.mjs",
+  "command": [
+    "node",
+    "--import",
+    "tsx",
+    "tests/extension/verify-native-media-recheck.mjs",
+    "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/3753361c-8a26-4e87-8d1c-77a7833225e1-local-job.json",
+    "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/3753361c-8a26-4e87-8d1c-77a7833225e1-environment.json",
+    "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/7811c915-1f18-4dfe-9985-2f8111e89805-local-job.json",
+    "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/7811c915-1f18-4dfe-9985-2f8111e89805-environment.json",
+    "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/fd27bb38-1836-4974-abf6-ce41c5c1b63e-local-job.json",
+    "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-capture-validation-ggYFTu/fd27bb38-1836-4974-abf6-ce41c5c1b63e-environment.json"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "node:internal/modules/run_main:107\n    triggerUncaughtException(\n    ^\n\nAssertionError [ERR_ASSERTION]: false == true\n    at verifyNativeMediaRecheck (file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-media-recheck.mjs:227:12)\n    at file:///Users/aaronromboutskatznelson/Code/EPILESS/tests/extension/verify-native-media-recheck.mjs:421:7 {\n  generatedMessage: true,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.19.0\n",
+  "classification": "VERIFIER_SCOPE_ERROR_NOT_CAPTURE_FAILURE",
+  "captureStatus": "All three actual captures later pass the corrected strict interval-scoped verifier without changing their evidence or scanner."
+}

@@ -1,0 +1,195 @@
+{
+  "status": "UNREACHED",
+  "scope": "Actual toolbar attempt; outer window resize did not produce a confirmed CSS viewport change in the inactive desktop tab. No resize guard pass claimed.",
+  "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+  "productionBundleSha256": "cf73f5e64a74c80499467a15db38d537e7d1a715ac33406011cc0af6df82f269",
+  "jobId": "015358d3-9bd9-4982-8056-4bf7fca75bfb",
+  "fixtureErrors": [
+    "Error: Actual browser state did not reach requested condition"
+  ],
+  "verificationError": "AssertionError [ERR_ASSERTION]: Collector errors invalidate this integration proof.\n+ actual - expected\n\n+ [\n+   'Error: Actual browser state did not reach requested condition'\n+ ]\n- []\n",
+  "strictPublicSchema": "PASS",
+  "roundTrip": {
+    "jobId": "015358d3-9bd9-4982-8056-4bf7fca75bfb",
+    "segmentId": "ffc60e0c-9837-48f6-acb9-58f53be919ea",
+    "candidateId": "candidate-1",
+    "startedAt": 1793120035086,
+    "before": {
+      "at": 1793120035086,
+      "jobState": "RUNNING",
+      "pendingAction": "accordion-2",
+      "tab": {
+        "id": 1516775839,
+        "windowId": 1516775836,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1516775836,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1516775836,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1516775840,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:60900/",
+        "documentToken": "7b778ca8-b292-4187-a78a-0bdee201fa80",
+        "viewportRevision": 0,
+        "viewport": {
+          "width": 900,
+          "height": 507,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1516775836
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1516775839,
+          "status": "active",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120035090,
+        "streams": [
+          {
+            "active": true,
+            "tracks": [
+              {
+                "readyState": "live",
+                "settings": {
+                  "width": 1800,
+                  "height": 1014,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "after": {
+      "at": 1793120037098,
+      "jobState": "RUNNING",
+      "pendingAction": "accordion-2",
+      "tab": {
+        "id": 1516775839,
+        "windowId": 1516775836,
+        "index": 2,
+        "active": false
+      },
+      "window": {
+        "id": 1516775836,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "originalWindow": {
+        "id": 1516775836,
+        "width": 900,
+        "height": 650,
+        "left": 22,
+        "top": 52,
+        "focused": true
+      },
+      "foregroundTabId": 1516775840,
+      "zoom": 1,
+      "context": {
+        "url": "http://127.0.0.1:60900/",
+        "documentToken": "7b778ca8-b292-4187-a78a-0bdee201fa80",
+        "viewportRevision": 0,
+        "viewport": {
+          "width": 900,
+          "height": 507,
+          "dpr": 2,
+          "scrollX": 0,
+          "scrollY": 0,
+          "visualScale": 1,
+          "visualOffsetLeft": 0,
+          "visualOffsetTop": 0
+        }
+      },
+      "workspace": null,
+      "ownershipKeys": [],
+      "windowIds": [
+        1516775836
+      ],
+      "debuggerAttached": false,
+      "capturedTabs": [
+        {
+          "tabId": 1516775839,
+          "status": "active",
+          "fullscreen": false
+        }
+      ],
+      "tracks": {
+        "context": "OPEN",
+        "at": 1793120037105,
+        "streams": [
+          {
+            "active": true,
+            "tracks": [
+              {
+                "readyState": "live",
+                "settings": {
+                  "width": 1800,
+                  "height": 1014,
+                  "frameRate": 60,
+                  "resizeMode": "none"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "restoredAt": 1793120037105
+  },
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-unreached-evidence.json",
+      "bytes": 451422,
+      "sha256": "74b775a676b7dca98e5fa9ea9467146755695d9fd6ef02c396e5630b09f6c9b5"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-unreached-local-job.json",
+      "bytes": 187225,
+      "sha256": "ca530d31b4d486b76e6605bdcbd2398e407c7c5c54d9d68ee7f13aac013335ab"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-unreached-capture.json",
+      "bytes": 169520,
+      "sha256": "4f76538c71ba3f5b2ecdca8d2745c8486f913638a2316b1acb74597d0d84cd9f"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-resize-unreached-environment.json",
+      "bytes": 1637,
+      "sha256": "64a8900121febe46f0ad085c4fd9a8e781465be4131b72d38682227aef087ff8"
+    }
+  ]
+}

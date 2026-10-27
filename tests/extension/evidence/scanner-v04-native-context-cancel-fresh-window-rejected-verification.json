@@ -1,0 +1,36 @@
+{
+  "status": "FAILED",
+  "scope": "Rejected one-shot fresh post-detach workspace experiment. Real capture/debugger/ownership release completed, but actual CSS remained 900x460 instead of measured pre-attach 900x507. Strict verifier and production expectation unchanged; only experimental workspace code reverted, preserving concurrent coverage/media work.",
+  "scannerBuildSha256": "548d819c3f6459ed3fd61fd9b6ad6e5ff6a0c71763e93ca72fd62e8514dc297f",
+  "jobId": "e69cfe6b-3d73-4b03-b4f4-ac48d8a4492a",
+  "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+  "strictPublicSchema": "PASS",
+  "verificationError": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'INTERRUPTED'\n- 'PARTIAL'\n",
+  "restoredProductionSha256": "329679c64385e7651968963e50a0718dae5b24f2ebb52870c64950fc3bb4594d",
+  "experiment": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-cancel-fresh-window-rejected.patch",
+    "sha256": "2403834e879cda4b503bab52c8822a061cbe75931faf019a25e2e4a90194bc33"
+  },
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-fresh-window-rejected-evidence.json",
+      "bytes": 195315,
+      "sha256": "6b9d2d3ff4838ed2e09d8931bc645f588b4fba31fa92f59c5de1579fcb4f6ddb"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-fresh-window-rejected-local-job.json",
+      "bytes": 31884,
+      "sha256": "21be2e20a2d47cd3b499ced8f470faf672331a5012fffd386d58a5ee9a2522f9"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-fresh-window-rejected-capture.json",
+      "bytes": 21251,
+      "sha256": "f46c0397813075c321ce4915614c075e29af46ba59de5c9a01b43133720076e6"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-fresh-window-rejected-environment.json",
+      "bytes": 1637,
+      "sha256": "c099fa09cf078d778d9525a343edf46d791183e5c8c2f74c29e1e82711af84fc"
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "scope": "Headless extension API identity check only; no scanner, capture, native layout or focus-restoration claim.",
+  "headless": true,
+  "playwrightAttached": false,
+  "productionSha256": "16edc8a030f75b85c428e20b40a80174a77793b6a7e0f6dedbebccb00be218f3",
+  "manifestSha256": "d0f86c785a4a11f4f21b86bdc90100cf2de22c4afcf7804e76b96c29ba6dcdf9",
+  "fixtureScriptSha256": "80b4cbc7c3c2be0504bc90446a98f6359ed9efe41b0f2810cddabf1cbc1feba3",
+  "placeholderSha256": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c",
+  "generatedBackgroundSha256": "3fb2bab615d41e0dcaf140f2d2f838e23626a76e31b178b9b590474db6275126",
+  "manifestUnchanged": true,
+  "result": {
+    "at": 1793130155725,
+    "permissions": {
+      "origins": [],
+      "permissions": [
+        "activeTab",
+        "debugger",
+        "devtools",
+        "storage",
+        "tabCapture",
+        "scripting",
+        "offscreen"
+      ]
+    },
+    "steps": [
+      {
+        "stage": "before-activate",
+        "at": 1793130155800,
+        "tabs": [
+          {
+            "active": false,
+            "audible": false,
+            "autoDiscardable": true,
+            "discarded": false,
+            "frozen": false,
+            "groupId": -1,
+            "height": 413,
+            "highlighted": false,
+            "id": 45569640,
+            "incognito": false,
+            "index": 0,
+            "lastAccessed": 1793130155284.083,
+            "mutedInfo": {
+              "muted": false
+            },
+            "pinned": false,
+            "selected": false,
+            "splitViewId": -1,
+            "status": "complete",
+            "width": 756,
+            "windowId": 45569639
+          },
+          {
+            "active": true,
+            "audible": false,
+            "autoDiscardable": true,
+            "discarded": false,
+            "frozen": false,
+            "groupId": -1,
+            "height": 413,
+            "highlighted": true,
+            "id": 45569641,
+            "incognito": false,
+            "index": 1,
+            "lastAccessed": 1793130155755.074,
+            "mutedInfo": {
+              "muted": false
+            },
+            "pendingUrl": "chrome-extension://blehihfelieccjgigjpfhagacpgngnke/fixture-placeholder.html#source-506bb092-d52e-4361-96a6-76bac01eb7d0",
+            "pinned": false,
+            "selected": true,
+            "splitViewId": -1,
+            "status": "loading",
+            "width": 756,
+            "windowId": 45569639
+          },
+          {
+            "active": false,
+            "audible": false,
+            "autoDiscardable": true,
+            "discarded": false,
+            "frozen": false,
+            "groupId": -1,
+            "height": 413,
+            "highlighted": false,
+            "id": 45569642,
+            "incognito": false,
+            "index": 2,
+            "lastAccessed": 1793130155778.003,
+            "mutedInfo": {
+              "muted": false
+            },
+            "openerTabId": 45569641,
+            "pendingUrl": "chrome-extension://blehihfelieccjgigjpfhagacpgngnke/fixture-placeholder.html#probe-506bb092-d52e-4361-96a6-76bac01eb7d0",
+            "pinned": false,
+            "selected": false,
+            "splitViewId": -1,
+            "status": "loading",
+            "width": 756,
+            "windowId": 45569639
+          }
+        ]
+      }
+    ],
+    "expected": {
+      "targetUrl": "chrome-extension://blehihfelieccjgigjpfhagacpgngnke/fixture-placeholder.html#source-506bb092-d52e-4361-96a6-76bac01eb7d0",
+      "placeholderUrl": "chrome-extension://blehihfelieccjgigjpfhagacpgngnke/fixture-placeholder.html#probe-506bb092-d52e-4361-96a6-76bac01eb7d0"
+    },
+    "created": {
+      "target": {
+        "active": true,
+        "audible": false,
+        "autoDiscardable": true,
+        "discarded": false,
+        "frozen": false,
+        "groupId": -1,
+        "height": 413,
+        "highlighted": true,
+        "id": 45569641,
+        "incognito": false,
+        "index": 1,
+        "lastAccessed": 1793130155755.074,
+        "mutedInfo": {
+          "muted": false
+        },
+        "pendingUrl": "chrome-extension://blehihfelieccjgigjpfhagacpgngnke/fixture-placeholder.html#source-506bb092-d52e-4361-96a6-76bac01eb7d0",
+        "pinned": false,
+        "selected": true,
+        "splitViewId": -1,
+        "status": "loading",
+        "width": 756,
+        "windowId": 45569639
+      },
+      "placeholder": {
+        "active": false,
+        "audible": false,
+        "autoDiscardable": true,
+        "discarded": false,
+        "frozen": false,
+        "groupId": -1,
+        "height": 413,
+        "highlighted": false,
+        "id": 45569642,
+        "incognito": false,
+        "index": 2,
+        "lastAccessed": 1793130155778.003,
+        "mutedInfo": {
+          "muted": false
+        },
+        "openerTabId": 45569641,
+        "pendingUrl": "chrome-extension://blehihfelieccjgigjpfhagacpgngnke/fixture-placeholder.html#probe-506bb092-d52e-4361-96a6-76bac01eb7d0",
+        "pinned": false,
+        "selected": false,
+        "splitViewId": -1,
+        "status": "loading",
+        "width": 756,
+        "windowId": 45569639
+      }
+    },
+    "status": "FAIL",
+    "error": "Error: EXACT_EXTENSION_URL_IDENTITY_NOT_READABLE",
+    "endedAt": 1793130155801
+  }
+}

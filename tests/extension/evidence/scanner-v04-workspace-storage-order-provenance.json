@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "status": "REPRODUCED_AND_CORRECTION_VERIFIED",
+  "scope": "Isolated headless Chrome storage.session API only. No tab mutation, capture, debugger or native geometry claim. Comparator runs against actual returned objects from preserved source, not the copied production background.",
+  "command": "node tests/extension/workspace-storage-native.mjs",
+  "sourceDirectory": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/epiless-workspace-storage-9cyIUy",
+  "scannerSourceSha256": "7fc0a67cee272b48a711698f9c4343a9c3d4fdcb1191214f1ed3fa52f859465c",
+  "rawEvidence": {
+    "path": "scanner-v04-workspace-storage-order-roundtrip.json",
+    "sha256": "4b697c47865225b1888e1eeda5bc56e1d8207049fd8d3562d00ebf90713e5d38",
+    "byteExact": true
+  },
+  "sourceArchive": {
+    "path": "scanner-v04-workspace-storage-order-sources.json.gz",
+    "sha256": "d21490a314f1e8e93c5997b5dcb29e648410a6cb1660c501ba76ed732c41ae5e"
+  },
+  "observed": {
+    "allFieldsExactlyEqual": true,
+    "oldStringGuard": false,
+    "correctedFieldGuard": true,
+    "manifestUnchanged": true,
+    "storageCleared": true
+  },
+  "nativeFailureReference": "scanner-v04-native-context-rebind-owner-unreached-provenance.json",
+  "files": [
+    {
+      "path": "fixture.mjs",
+      "sha256": "9819127fe2dace327395459c8e6d5e76407789477a2d7ee66aeb790b365c159b"
+    },
+    {
+      "path": "extension/background.js",
+      "sha256": "7eb51ccab76d9bab9d264bf0a5d701614aecbf8c6b50ef462d25101e4e950daf"
+    },
+    {
+      "path": "extension/manifest.json",
+      "sha256": "d0f86c785a4a11f4f21b86bdc90100cf2de22c4afcf7804e76b96c29ba6dcdf9"
+    },
+    {
+      "path": "extension/fixture-placeholder.html",
+      "sha256": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c"
+    },
+    {
+      "path": "viewport-workspace.ts",
+      "sha256": "f7ddb1738a0d293ac3094858b6b6f1e1f0a2caddc8fafdf066f43102c0a7c82a"
+    }
+  ]
+}

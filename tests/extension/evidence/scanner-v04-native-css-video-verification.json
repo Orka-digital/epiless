@@ -1,0 +1,37 @@
+{
+  "scope": "One real native 2x2 CSS-pixel HTML video from a detached canvas stream, at desktop and compact geometry; not encoded-file playback or broad video validation.",
+  "scannerBuildSha256": "3460e19c85f5b1c56eaf97d2201f91ba2da5c6f4fc6e6502188c62c7002c5121",
+  "jobId": "e55b675b-74cb-433f-a275-dd53a4643a03",
+  "jobState": "PARTIAL",
+  "measurements": [
+    {
+      "scenario": "accordion-2",
+      "frames": 306,
+      "fps": 59.98859233101078,
+      "maximumGapMs": 17.800000190734863,
+      "sourceWidth": 1800,
+      "sourceHeight": 1126,
+      "workerMeanMs": 8.148366055457421,
+      "workerMaxMs": 31.800000190734863,
+      "referenceBasis": "W3C_CSS_REFERENCE",
+      "referenceWidthPx": 682,
+      "referenceHeightPx": 512
+    },
+    {
+      "scenario": "compact-accordion",
+      "frames": 306,
+      "fps": 60.00629575151121,
+      "maximumGapMs": 17.90000057220459,
+      "sourceWidth": 1200,
+      "sourceHeight": 1126,
+      "workerMeanMs": 6.121568723441729,
+      "workerMaxMs": 20.09999942779541,
+      "referenceBasis": "W3C_CSS_REFERENCE",
+      "referenceWidthPx": 682,
+      "referenceHeightPx": 512
+    }
+  ],
+  "matchingCompactPresentations": 21,
+  "referenceArea": "Candidate retained below the fixed reference threshold; actual physical viewing geometry remains unknown.",
+  "alignment": "Per-video presentation records agree exactly. Source-frame-to-DOM latency remains unknown; correlation is not a general causal attribution guarantee."
+}

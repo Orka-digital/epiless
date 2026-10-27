@@ -1,0 +1,4410 @@
+{
+  "schemaVersion": 1,
+  "id": "b709ecd2-b165-49b3-a221-f999d8a49c8e",
+  "origin": "http://127.0.0.1:47819",
+  "startedAt": "2026-10-27T16:29:05.426Z",
+  "endedAt": "2026-10-27T16:29:51.305Z",
+  "engineVersion": "0.4.0-candidate",
+  "runnerVersion": "0.4.0",
+  "scannerBuildSha256": "e4f04fb5da420a5232e8b250b0dbd19e7fb1d3fd1bf3034666d4e86bfef332f0",
+  "status": "INCONCLUSIVE",
+  "passed": null,
+  "job": {
+    "state": "PARTIAL",
+    "stopReason": "QUEUE_EXHAUSTED",
+    "maxRoutes": 50,
+    "maxDepth": 4,
+    "maxDurationMs": 1200000,
+    "discoveredRoutes": 1,
+    "visitedRoutes": 1
+  },
+  "routes": [
+    {
+      "url": "http://127.0.0.1:47819/",
+      "status": "PARTIAL",
+      "reason": "Navigation transition from http://127.0.0.1:47819/ to http://127.0.0.1:47819/; includes prior-page frames. Findings in navigation-transition cannot be attributed solely to the destination.; Viewport at route inventory: 900 × 563 CSS pixels; device pixel ratio 2.; hover-states: TRUSTED_POINTER_DRIVER_NOT_ENABLED; compact-resize-transition: VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT; compact-viewport-capture-source-transition: NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT; compact-additional-states: COMPACT_SINGLE_INTERACTION_SAMPLE_LIMIT",
+      "coverage": [
+        {
+          "id": "e42a6601-8f0b-4d92-b115-a7406a49aa4b",
+          "scenario": "navigation-transition",
+          "outcome": "TESTED"
+        },
+        {
+          "id": "491ef0e4-8743-4b01-8226-87076fc80301",
+          "scenario": "initial-viewport",
+          "outcome": "TESTED",
+          "viewportMethod": "PHYSICAL",
+          "viewport": {
+            "width": 900,
+            "height": 563,
+            "dpr": 2
+          }
+        },
+        {
+          "id": "d7c1cd3f-8266-4665-88a0-45c6707ef65a",
+          "scenario": "focus-1",
+          "outcome": "TESTED",
+          "viewportMethod": "PHYSICAL",
+          "viewport": {
+            "width": 900,
+            "height": 563,
+            "dpr": 2
+          }
+        },
+        {
+          "id": "c20c9c35-087a-4c53-b709-b1c9c52dcf1d",
+          "scenario": "accordion-2",
+          "outcome": "TESTED",
+          "viewportMethod": "PHYSICAL",
+          "viewport": {
+            "width": 900,
+            "height": 563,
+            "dpr": 2
+          }
+        },
+        {
+          "id": "7a5e023b-01c5-4e0b-a3c8-2f3bb9c90767",
+          "scenario": "hover-states",
+          "outcome": "SKIPPED",
+          "reason": "TRUSTED_POINTER_DRIVER_NOT_ENABLED"
+        },
+        {
+          "id": "60254799-ae9b-4e4e-aa70-ef4a9b7b1ff8",
+          "scenario": "delayed-state",
+          "outcome": "TESTED",
+          "viewportMethod": "PHYSICAL",
+          "viewport": {
+            "width": 900,
+            "height": 563,
+            "dpr": 2
+          }
+        },
+        {
+          "id": "cd6affd5-2095-4adb-ac1d-0b818c8db9fd",
+          "scenario": "compact-resize-transition",
+          "outcome": "SKIPPED",
+          "reason": "VIEWPORT_NEGOTIATION_PRECEDES_MEASUREMENT"
+        },
+        {
+          "id": "67e1aec3-018f-40a8-90db-f58bfafb362e",
+          "scenario": "compact-viewport-capture-source-transition",
+          "outcome": "SKIPPED",
+          "reason": "NATIVE_CAPTURE_SOURCE_REOPENED_OUTSIDE_MEASUREMENT"
+        },
+        {
+          "id": "266c8328-708e-42d1-a33e-e3f4e339d27f",
+          "scenario": "compact-viewport",
+          "outcome": "TESTED",
+          "viewportMethod": "PHYSICAL",
+          "viewport": {
+            "width": 600,
+            "height": 563,
+            "dpr": 2
+          }
+        },
+        {
+          "id": "2d5ea59e-37cb-44db-bff6-c62196b614a0",
+          "scenario": "compact-accordion",
+          "outcome": "TESTED",
+          "viewportMethod": "PHYSICAL",
+          "viewport": {
+            "width": 600,
+            "height": 563,
+            "dpr": 2
+          }
+        },
+        {
+          "id": "dc8e37e4-21c7-4bc2-b773-e902a5268d3b",
+          "scenario": "compact-additional-states",
+          "outcome": "SKIPPED",
+          "reason": "COMPACT_SINGLE_INTERACTION_SAMPLE_LIMIT"
+        }
+      ],
+      "scenarios": [
+        {
+          "id": "e42a6601-8f0b-4d92-b115-a7406a49aa4b",
+          "type": "navigation-transition",
+          "startedAt": "2026-10-27T16:29:05.572Z",
+          "endedAt": "2026-10-27T16:29:07.404Z",
+          "quality": {
+            "frameCount": 106,
+            "effectiveFps": 59.43956977073309,
+            "maxGapMs": 32.80000019073486,
+            "width": 1800,
+            "height": 1126,
+            "downsampled": false,
+            "interrupted": false,
+            "captureWindowMs": 1782.5999994277954,
+            "leadingIdleMs": 7.899999618530273,
+            "trailingIdleMs": 9.199999809265137,
+            "spatial": {
+              "mode": "NATIVE_PIXELS",
+              "sourceWidth": 1800,
+              "sourceHeight": 1126,
+              "retainedResolutionRatio": 1,
+              "stateBytes": 186132961,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 106,
+              "meanMs": 8.306603809572616,
+              "maxMs": 51.80000019073486,
+              "framesOver16_7Ms": 1,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 4.025471759292315,
+              "analysisMeanMs": 4.277358459976484,
+              "conversionMethods": [
+                "VIDEOFRAME_COPY_RGBA"
+              ],
+              "track": {
+                "width": 1800,
+                "height": 1126,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 1800,
+                "codedHeight": 1126,
+                "displayWidth": 1800,
+                "displayHeight": 1126,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1800,
+                  "height": 1126
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": []
+        },
+        {
+          "id": "491ef0e4-8743-4b01-8226-87076fc80301",
+          "type": "initial-viewport",
+          "startedAt": "2026-10-27T16:29:07.411Z",
+          "endedAt": "2026-10-27T16:29:22.428Z",
+          "quality": {
+            "frameCount": 900,
+            "effectiveFps": 60.00013348117944,
+            "maxGapMs": 17.800000190734863,
+            "width": 1800,
+            "height": 1126,
+            "downsampled": false,
+            "interrupted": false,
+            "captureWindowMs": 15001.199999809265,
+            "leadingIdleMs": 1.3999996185302734,
+            "trailingIdleMs": 16.5,
+            "spatial": {
+              "mode": "NATIVE_PIXELS",
+              "sourceWidth": 1800,
+              "sourceHeight": 1126,
+              "retainedResolutionRatio": 1,
+              "stateBytes": 186132961,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 900,
+              "meanMs": 7.64244441986084,
+              "maxMs": 26.90000057220459,
+              "framesOver16_7Ms": 1,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 3.9285555352105033,
+              "analysisMeanMs": 3.707888879776001,
+              "conversionMethods": [
+                "VIDEOFRAME_COPY_RGBA"
+              ],
+              "track": {
+                "width": 1800,
+                "height": 1126,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 1800,
+                "codedHeight": 1126,
+                "displayWidth": 1800,
+                "displayHeight": 1126,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1800,
+                  "height": 1126
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": []
+        },
+        {
+          "id": "d7c1cd3f-8266-4665-88a0-45c6707ef65a",
+          "type": "focus-1",
+          "startedAt": "2026-10-27T16:29:22.434Z",
+          "endedAt": "2026-10-27T16:29:25.854Z",
+          "quality": {
+            "frameCount": 205,
+            "effectiveFps": 60.00176476451921,
+            "maxGapMs": 17.800000190734863,
+            "width": 1800,
+            "height": 1126,
+            "downsampled": false,
+            "interrupted": false,
+            "captureWindowMs": 3405.699999809265,
+            "leadingIdleMs": 0.6999998092651367,
+            "trailingIdleMs": 5.09999942779541,
+            "spatial": {
+              "mode": "NATIVE_PIXELS",
+              "sourceWidth": 1800,
+              "sourceHeight": 1126,
+              "retainedResolutionRatio": 1,
+              "stateBytes": 186132961,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 205,
+              "meanMs": 7.79121944148366,
+              "maxMs": 28.90000057220459,
+              "framesOver16_7Ms": 1,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 3.9687804757094964,
+              "analysisMeanMs": 3.815121897255502,
+              "conversionMethods": [
+                "VIDEOFRAME_COPY_RGBA"
+              ],
+              "track": {
+                "width": 1800,
+                "height": 1126,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 1800,
+                "codedHeight": 1126,
+                "displayWidth": 1800,
+                "displayHeight": 1126,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1800,
+                  "height": 1126
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": []
+        },
+        {
+          "id": "c20c9c35-087a-4c53-b709-b1c9c52dcf1d",
+          "type": "accordion-2",
+          "startedAt": "2026-10-27T16:29:25.859Z",
+          "endedAt": "2026-10-27T16:29:30.978Z",
+          "quality": {
+            "frameCount": 306,
+            "effectiveFps": 59.99213217938631,
+            "maxGapMs": 18,
+            "width": 1800,
+            "height": 1126,
+            "downsampled": false,
+            "interrupted": false,
+            "captureWindowMs": 5108.89999961853,
+            "leadingIdleMs": 10.09999942779541,
+            "trailingIdleMs": 14.899999618530273,
+            "spatial": {
+              "mode": "NATIVE_PIXELS",
+              "sourceWidth": 1800,
+              "sourceHeight": 1126,
+              "retainedResolutionRatio": 1,
+              "stateBytes": 186132961,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 306,
+              "meanMs": 8.189215719310287,
+              "maxMs": 31.40000057220459,
+              "framesOver16_7Ms": 3,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 3.934967358907064,
+              "analysisMeanMs": 4.249346393385744,
+              "conversionMethods": [
+                "VIDEOFRAME_COPY_RGBA"
+              ],
+              "track": {
+                "width": 1800,
+                "height": 1126,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 1800,
+                "codedHeight": 1126,
+                "displayWidth": 1800,
+                "displayHeight": 1126,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1800,
+                  "height": 1126
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": [
+            {
+              "id": "candidate-1",
+              "type": "GENERAL_FLASH",
+              "severity": "warning",
+              "reviewStatus": "NEEDS_REVIEW",
+              "startMs": 167.10000038146973,
+              "endMs": 2167,
+              "flashesInWindow": 3.5,
+              "qualifyingTransitions": 7,
+              "affectedRatio": 0.00000789421748569173,
+              "region": {
+                "x": 200,
+                "y": 480,
+                "width": 4,
+                "height": 4
+              },
+              "message": "At least seven qualifying luminance transitions (three opposing pairs and a continuation) within a rolling second in this region. Candidate only; area and normative conditions require review.",
+              "diagnostic": {
+                "version": 1,
+                "coordinateSpace": "ANALYSIS_PIXELS",
+                "point": {
+                  "x": 200,
+                  "y": 480
+                },
+                "analysisWidth": 1800,
+                "analysisHeight": 1126,
+                "sourceWidth": 1800,
+                "sourceHeight": 1126,
+                "windowStartMs": 167.10000038146973,
+                "windowEndMs": 650.2000007629395,
+                "complete": true,
+                "samples": [
+                  {
+                    "timestampMs": 0,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 17.40000057220459,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 33.20000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 50.80000019073486,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 67.40000057220459,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 84,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 102,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 117.5,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 134.30000019073486,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 150.70000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 167.10000038146973,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 184,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 200.70000076293945,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 217.4000005722046,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 234.20000076293945,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 250.60000038146973,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 267.5,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 284,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 300.80000019073486,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 317.4000005722046,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 334.1000003814697,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 350.1000003814697,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 367.1000003814697,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 384.20000076293945,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 400,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 417,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 434.30000019073486,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 450.70000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 467.20000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 484,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 500.80000019073486,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 517,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 534,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 550,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 567.5,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 584,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 600,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 617.1000003814697,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 634.1000003814697,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 650.2000007629395,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  }
+                ]
+              },
+              "source": {
+                "status": "MAPPED",
+                "coordinateSpace": "CSS_VIEWPORT",
+                "sampledAt": "2026-10-27T16:29:30.984Z",
+                "delayMs": 6,
+                "viewport": {
+                  "width": 900,
+                  "height": 563,
+                  "dpr": 2,
+                  "scrollX": 0,
+                  "scrollY": 0
+                },
+                "sampledPoints": 9,
+                "region": {
+                  "x": 100,
+                  "y": 240,
+                  "width": 2,
+                  "height": 2
+                },
+                "candidates": [
+                  {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                    ],
+                    "tag": "video",
+                    "rect": {
+                      "x": 100,
+                      "y": 240,
+                      "width": 2,
+                      "height": 2
+                    },
+                    "hitCount": 9,
+                    "media": "VIDEO",
+                    "animation": {
+                      "running": 0,
+                      "paused": 0,
+                      "finished": 0
+                    }
+                  }
+                ],
+                "limitations": [
+                  "POST_OBSERVATION_SPATIAL_HINT_NOT_VERIFIED_CAUSE",
+                  "DOM_MAY_HAVE_CHANGED_SINCE_OBSERVED_FRAMES",
+                  "HIT_TEST_OMITS_POINTER_EVENTS_NONE_AND_PSEUDO_ELEMENTS",
+                  "CLOSED_SHADOW_ROOTS_AND_IFRAME_CONTENTS_NOT_INSPECTED",
+                  "SPARSE_POINT_SAMPLING_MAY_MISS_SOURCES"
+                ]
+              },
+              "sourceTimeline": {
+                "version": 1,
+                "status": "CORRELATED",
+                "clockBasis": "FRAME_RECEIPT_ESTIMATE",
+                "windowStartEpochMs": 1793118566046,
+                "windowEndEpochMs": 1793118566529,
+                "alignmentUncertaintyMs": null,
+                "frameClock": {
+                  "method": "PER_FRAME_RECEIPT",
+                  "matchedFrames": 30,
+                  "receiptOffsetSpreadMs": 0.2001953125,
+                  "startBoundaryErrorMs": 0,
+                  "endBoundaryErrorMs": 0
+                },
+                "sampledAt": "2026-10-27T16:29:30.979Z",
+                "sampleIntervalMs": 33.333333333333336,
+                "maxSampleGapMs": 49.60009765625,
+                "sampleCount": 23,
+                "firstSampleEpochMs": 1793118565909.3,
+                "lastSampleEpochMs": 1793118566660.3,
+                "complete": true,
+                "candidates": [
+                  {
+                    "id": "c6f0d4c2-3353-4ca9-9b68-905c63ffdb63",
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                    ],
+                    "tag": "video",
+                    "media": "VIDEO",
+                    "observations": [
+                      {
+                        "atEpochMs": 1793118565909.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118565909.2,
+                          "endEpochMs": 1793118565909.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118565909.1
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 0,
+                        "mediaPaused": true
+                      },
+                      {
+                        "atEpochMs": 1793118565943.6,
+                        "readWindow": {
+                          "startEpochMs": 1793118565943.5,
+                          "endEpochMs": 1793118565943.6,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118565943.4
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 0,
+                        "mediaPaused": true
+                      },
+                      {
+                        "atEpochMs": 1793118565977.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118565977.1,
+                          "endEpochMs": 1793118565977.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118565976.7
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 4.6,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118565976.7,
+                          "presentationEpochMs": 1793118565972.3,
+                          "expectedDisplayEpochMs": 1793118565972.3,
+                          "mediaTimeMs": 0,
+                          "presentedFrames": 2
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566010.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566010.2,
+                          "endEpochMs": 1793118566010.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566009.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 37.699999999999996,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566009.9,
+                          "presentationEpochMs": 1793118565993.4,
+                          "expectedDisplayEpochMs": 1793118566010,
+                          "mediaTimeMs": 40,
+                          "presentedFrames": 3
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566043.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566043.2,
+                          "endEpochMs": 1793118566043.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566043
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 70.7,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566009.9,
+                          "presentationEpochMs": 1793118565993.4,
+                          "expectedDisplayEpochMs": 1793118566010,
+                          "mediaTimeMs": 40,
+                          "presentedFrames": 3
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566076.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566076.9,
+                          "endEpochMs": 1793118566076.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566076.7
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 104.4,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566060,
+                          "presentationEpochMs": 1793118566043,
+                          "expectedDisplayEpochMs": 1793118566059.7,
+                          "mediaTimeMs": 80,
+                          "presentedFrames": 4
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566110.4,
+                        "readWindow": {
+                          "startEpochMs": 1793118566110.4,
+                          "endEpochMs": 1793118566110.4,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566110
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 137.9,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566110,
+                          "presentationEpochMs": 1793118566093.4,
+                          "expectedDisplayEpochMs": 1793118566110.1,
+                          "mediaTimeMs": 120,
+                          "presentedFrames": 5
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566143.6,
+                        "readWindow": {
+                          "startEpochMs": 1793118566143.6,
+                          "endEpochMs": 1793118566143.6,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566143.4
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 171.1,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566143.4,
+                          "presentationEpochMs": 1793118566126.8,
+                          "expectedDisplayEpochMs": 1793118566143.3,
+                          "mediaTimeMs": 160,
+                          "presentedFrames": 6
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566176.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566176.9,
+                          "endEpochMs": 1793118566176.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566176.7
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 204.4,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566143.4,
+                          "presentationEpochMs": 1793118566126.8,
+                          "expectedDisplayEpochMs": 1793118566143.3,
+                          "mediaTimeMs": 160,
+                          "presentedFrames": 6
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566210.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566210.1,
+                          "endEpochMs": 1793118566210.1,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566210
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 237.7,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566193.4,
+                          "presentationEpochMs": 1793118566176.8,
+                          "expectedDisplayEpochMs": 1793118566193.4,
+                          "mediaTimeMs": 200,
+                          "presentedFrames": 7
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566243.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566243.2,
+                          "endEpochMs": 1793118566243.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566243
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 270.8,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566226,
+                          "presentationEpochMs": 1793118566210.1,
+                          "expectedDisplayEpochMs": 1793118566226.7,
+                          "mediaTimeMs": 240,
+                          "presentedFrames": 8
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566276.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566276.1,
+                          "endEpochMs": 1793118566276.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566276
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 303.59999999999997,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566260.1,
+                          "presentationEpochMs": 1793118566243,
+                          "expectedDisplayEpochMs": 1793118566259.7,
+                          "mediaTimeMs": 280,
+                          "presentedFrames": 9
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566310.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566310.3,
+                          "endEpochMs": 1793118566310.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566310
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 337.8,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566310,
+                          "presentationEpochMs": 1793118566293.1,
+                          "expectedDisplayEpochMs": 1793118566309.7,
+                          "mediaTimeMs": 320,
+                          "presentedFrames": 10
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566343.4,
+                        "readWindow": {
+                          "startEpochMs": 1793118566343.4,
+                          "endEpochMs": 1793118566343.4,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566343
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 370.8,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566343,
+                          "presentationEpochMs": 1793118566326.8,
+                          "expectedDisplayEpochMs": 1793118566343.4,
+                          "mediaTimeMs": 360,
+                          "presentedFrames": 11
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566376.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566376.9,
+                          "endEpochMs": 1793118566376.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566376.7
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 404.4,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566343,
+                          "presentationEpochMs": 1793118566326.8,
+                          "expectedDisplayEpochMs": 1793118566343.4,
+                          "mediaTimeMs": 360,
+                          "presentedFrames": 11
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566410.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566410.1,
+                          "endEpochMs": 1793118566410.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566410
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 437.7,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566393,
+                          "presentationEpochMs": 1793118566376.8,
+                          "expectedDisplayEpochMs": 1793118566393.4,
+                          "mediaTimeMs": 400,
+                          "presentedFrames": 12
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566443.7,
+                        "readWindow": {
+                          "startEpochMs": 1793118566443.7,
+                          "endEpochMs": 1793118566443.7,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566443.4
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 471.2,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566426,
+                          "presentationEpochMs": 1793118566410.1,
+                          "expectedDisplayEpochMs": 1793118566426.7,
+                          "mediaTimeMs": 440,
+                          "presentedFrames": 13
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566493.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566493.2,
+                          "endEpochMs": 1793118566493.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566493
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 520.7,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566460,
+                          "presentationEpochMs": 1793118566443.5,
+                          "expectedDisplayEpochMs": 1793118566460.1,
+                          "mediaTimeMs": 480,
+                          "presentedFrames": 14
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566526.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566526.2,
+                          "endEpochMs": 1793118566526.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566526
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 553.6999999999999,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566510.1,
+                          "presentationEpochMs": 1793118566493,
+                          "expectedDisplayEpochMs": 1793118566509.7,
+                          "mediaTimeMs": 520,
+                          "presentedFrames": 15
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566549.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566549.8,
+                          "endEpochMs": 1793118566549.9,
+                          "trigger": "EVENT"
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 577.3000000000001,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566543.5,
+                          "presentationEpochMs": 1793118566526,
+                          "expectedDisplayEpochMs": 1793118566542.7,
+                          "mediaTimeMs": 560,
+                          "presentedFrames": 16
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566593.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566593.2,
+                          "endEpochMs": 1793118566593.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566593
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 620.7,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566593,
+                          "presentationEpochMs": 1793118566576.8,
+                          "expectedDisplayEpochMs": 1793118566593.4,
+                          "mediaTimeMs": 600,
+                          "presentedFrames": 17
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566626.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566626.1,
+                          "endEpochMs": 1793118566626.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566626
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 653.6999999999999,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566626,
+                          "presentationEpochMs": 1793118566610.1,
+                          "expectedDisplayEpochMs": 1793118566626.8,
+                          "mediaTimeMs": 640,
+                          "presentedFrames": 18
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118566660.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566660.3,
+                          "endEpochMs": 1793118566660.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566660
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 687.8,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118566660,
+                          "presentationEpochMs": 1793118566643.5,
+                          "expectedDisplayEpochMs": 1793118566660.1,
+                          "mediaTimeMs": 680,
+                          "presentedFrames": 19
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "73dec462-7034-4bf9-9cf5-7b1210225fb2",
+                    "selectorPath": [
+                      "*:nth-child(1)"
+                    ],
+                    "tag": "html",
+                    "observations": [
+                      {
+                        "atEpochMs": 1793118565909.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118565909.3,
+                          "endEpochMs": 1793118565909.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118565909.1
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 255.1171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118565943.6,
+                        "readWindow": {
+                          "startEpochMs": 1793118565943.6,
+                          "endEpochMs": 1793118565943.6,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118565943.4
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 255.1171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118565977.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118565977.1,
+                          "endEpochMs": 1793118565977.1,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118565976.7
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 1,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566010.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566010.3,
+                          "endEpochMs": 1793118566010.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566009.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566043.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566043.3,
+                          "endEpochMs": 1793118566043.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566043
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566076.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566076.9,
+                          "endEpochMs": 1793118566076.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566076.7
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566110.4,
+                        "readWindow": {
+                          "startEpochMs": 1793118566110.4,
+                          "endEpochMs": 1793118566110.4,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566110
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566143.6,
+                        "readWindow": {
+                          "startEpochMs": 1793118566143.6,
+                          "endEpochMs": 1793118566143.6,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566143.4
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566176.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566176.9,
+                          "endEpochMs": 1793118566176.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566176.7
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566210.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566210.3,
+                          "endEpochMs": 1793118566210.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566210
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566243.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566243.3,
+                          "endEpochMs": 1793118566243.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566243
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566276.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566276.2,
+                          "endEpochMs": 1793118566276.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566276
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566310.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566310.3,
+                          "endEpochMs": 1793118566310.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566310
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566343.4,
+                        "readWindow": {
+                          "startEpochMs": 1793118566343.4,
+                          "endEpochMs": 1793118566343.4,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566343
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566376.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566376.9,
+                          "endEpochMs": 1793118566376.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566376.7
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566410.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566410.2,
+                          "endEpochMs": 1793118566410.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566410
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566443.7,
+                        "readWindow": {
+                          "startEpochMs": 1793118566443.7,
+                          "endEpochMs": 1793118566443.7,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566443.4
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566493.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566493.3,
+                          "endEpochMs": 1793118566493.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566493
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566526.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566526.2,
+                          "endEpochMs": 1793118566526.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566526
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566549.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118566549.9,
+                          "endEpochMs": 1793118566549.9,
+                          "trigger": "EVENT"
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566593.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566593.2,
+                          "endEpochMs": 1793118566593.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566593
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566626.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118566626.2,
+                          "endEpochMs": 1793118566626.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566626
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118566660.3,
+                        "readWindow": {
+                          "startEpochMs": 1793118566660.3,
+                          "endEpochMs": 1793118566660.3,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118566660
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 900,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 900,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      }
+                    ]
+                  }
+                ],
+                "limitations": [
+                  "TEMPORAL_SPATIAL_CORRELATION_NOT_VERIFIED_CAUSE",
+                  "FRAME_EPOCH_ESTIMATED_FROM_RECEIPT_CAPTURE_LATENCY_UNKNOWN",
+                  "DOM_SAMPLED_SEPARATELY_FROM_CAPTURE_NOT_FRAME_ATOMIC",
+                  "SPARSE_TARGET_SAMPLING_MAY_MISS_SOURCES",
+                  "TARGET_INVENTORY_100_MS_KEYFRAME_PROPERTY_INVENTORY_500_MS",
+                  "CLOSED_SHADOW_ROOTS_IFRAME_CONTENTS_AND_PSEUDO_ELEMENTS_NOT_INSPECTED"
+                ]
+              },
+              "spatial": {
+                "version": 1,
+                "coordinateSpace": "ANALYSIS_PIXELS",
+                "analysisWidth": 1800,
+                "analysisHeight": 1126,
+                "sampledAtMs": 650.2000007629395,
+                "componentPixels": 16,
+                "simultaneousPixels": 16,
+                "simultaneousRatio": 0.00000789421748569173,
+                "maskBasis": "QUALIFYING_TRANSITIONS_SAME_FRAME",
+                "visualField": {
+                  "basis": "W3C_CSS_REFERENCE",
+                  "reference": "W3C Understanding SC 2.3.1 reference: 341x256 CSS pixels at standard browser zoom (1) and visual viewport scale (1), mapped with observed DPR 2 to 682x512 source pixels. Verified source 1800x1126 for CSS viewport 900x563; field extents rounded to nearest source pixel. Actual display geometry/viewing distance and outside-capture areas remain unknown. Reference comparison, not physical calibration or a WCAG verdict. https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+                  "widthPx": 682,
+                  "heightPx": 512,
+                  "maximumPixels": 16,
+                  "maximumRatio": 0.000045821114369501466,
+                  "thresholdRatio": 0.25,
+                  "exceedsThreshold": false,
+                  "window": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 682,
+                    "height": 512
+                  }
+                },
+                "pattern": {
+                  "kind": "NONE_DEMONSTRATED",
+                  "automaticallyExcluded": false
+                },
+                "motion": {
+                  "kind": "NONE_DEMONSTRATED",
+                  "automaticallyExcluded": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "60254799-ae9b-4e4e-aa70-ef4a9b7b1ff8",
+          "type": "delayed-state",
+          "startedAt": "2026-10-27T16:29:30.991Z",
+          "endedAt": "2026-10-27T16:29:38.005Z",
+          "quality": {
+            "frameCount": 420,
+            "effectiveFps": 59.997708922952484,
+            "maxGapMs": 17.800000190734863,
+            "width": 1800,
+            "height": 1126,
+            "downsampled": false,
+            "interrupted": false,
+            "captureWindowMs": 7000.89999961853,
+            "leadingIdleMs": 10,
+            "trailingIdleMs": 7.300000190734863,
+            "spatial": {
+              "mode": "NATIVE_PIXELS",
+              "sourceWidth": 1800,
+              "sourceHeight": 1126,
+              "retainedResolutionRatio": 1,
+              "stateBytes": 186132961,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 420,
+              "meanMs": 7.756666664850144,
+              "maxMs": 28.399999618530273,
+              "framesOver16_7Ms": 3,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 3.9804761773064024,
+              "analysisMeanMs": 3.77261905670166,
+              "conversionMethods": [
+                "VIDEOFRAME_COPY_RGBA"
+              ],
+              "track": {
+                "width": 1800,
+                "height": 1126,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 1800,
+                "codedHeight": 1126,
+                "displayWidth": 1800,
+                "displayHeight": 1126,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1800,
+                  "height": 1126
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": []
+        },
+        {
+          "id": "266c8328-708e-42d1-a33e-e3f4e339d27f",
+          "type": "compact-viewport",
+          "startedAt": "2026-10-27T16:29:39.873Z",
+          "endedAt": "2026-10-27T16:29:44.938Z",
+          "quality": {
+            "frameCount": 300,
+            "effectiveFps": 60.007626389597114,
+            "maxGapMs": 17.800000190734863,
+            "width": 1200,
+            "height": 1126,
+            "downsampled": false,
+            "interrupted": false,
+            "captureWindowMs": 5002.799999237061,
+            "leadingIdleMs": 10.199999809265137,
+            "trailingIdleMs": 8.399999618530273,
+            "spatial": {
+              "mode": "NATIVE_PIXELS",
+              "sourceWidth": 1200,
+              "sourceHeight": 1126,
+              "retainedResolutionRatio": 1,
+              "stateBytes": 129962986,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 300,
+              "meanMs": 5.937666680018107,
+              "maxMs": 32.60000038146973,
+              "framesOver16_7Ms": 1,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 3.3186666520436603,
+              "analysisMeanMs": 2.615000019073486,
+              "conversionMethods": [
+                "VIDEOFRAME_COPY_RGBA"
+              ],
+              "track": {
+                "width": 1200,
+                "height": 1126,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 1200,
+                "codedHeight": 1126,
+                "displayWidth": 1200,
+                "displayHeight": 1126,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1200,
+                  "height": 1126
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": []
+        },
+        {
+          "id": "2d5ea59e-37cb-44db-bff6-c62196b614a0",
+          "type": "compact-accordion",
+          "startedAt": "2026-10-27T16:29:44.949Z",
+          "endedAt": "2026-10-27T16:29:50.074Z",
+          "quality": {
+            "frameCount": 306,
+            "effectiveFps": 59.993312214180364,
+            "maxGapMs": 18,
+            "width": 1200,
+            "height": 1126,
+            "downsampled": false,
+            "interrupted": false,
+            "captureWindowMs": 5109.199999809265,
+            "leadingIdleMs": 14.800000190734863,
+            "trailingIdleMs": 10.399999618530273,
+            "spatial": {
+              "mode": "NATIVE_PIXELS",
+              "sourceWidth": 1200,
+              "sourceHeight": 1126,
+              "retainedResolutionRatio": 1,
+              "stateBytes": 129962986,
+              "stateBudgetBytes": 268435456,
+              "tileSharing": "LOSSLESS_IDENTICAL_HISTORY",
+              "colorAssumption": "SDR_SRGB_8BIT"
+            },
+            "processing": {
+              "measuredFrames": 306,
+              "meanMs": 6.675163387473113,
+              "maxMs": 22,
+              "framesOver16_7Ms": 1,
+              "scope": "WORKER_CONVERSION_AND_ANALYSIS",
+              "conversionMeanMs": 3.3209149790745154,
+              "analysisMeanMs": 3.3513072269414765,
+              "conversionMethods": [
+                "VIDEOFRAME_COPY_RGBA"
+              ],
+              "track": {
+                "width": 1200,
+                "height": 1126,
+                "frameRate": 60,
+                "resizeMode": "none"
+              },
+              "decoded": {
+                "codedWidth": 1200,
+                "codedHeight": 1126,
+                "displayWidth": 1200,
+                "displayHeight": 1126,
+                "visibleRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 1200,
+                  "height": 1126
+                },
+                "format": "I420",
+                "primaries": "bt709",
+                "transfer": "bt709",
+                "matrix": "bt709"
+              }
+            }
+          },
+          "findings": [
+            {
+              "id": "candidate-1",
+              "type": "GENERAL_FLASH",
+              "severity": "warning",
+              "reviewStatus": "NEEDS_REVIEW",
+              "startMs": 150,
+              "endMs": 2150.9000005722046,
+              "flashesInWindow": 3.5,
+              "qualifyingTransitions": 7,
+              "affectedRatio": 0.000011841326228537596,
+              "region": {
+                "x": 200,
+                "y": 480,
+                "width": 4,
+                "height": 4
+              },
+              "message": "At least seven qualifying luminance transitions (three opposing pairs and a continuation) within a rolling second in this region. Candidate only; area and normative conditions require review.",
+              "diagnostic": {
+                "version": 1,
+                "coordinateSpace": "ANALYSIS_PIXELS",
+                "point": {
+                  "x": 200,
+                  "y": 480
+                },
+                "analysisWidth": 1200,
+                "analysisHeight": 1126,
+                "sourceWidth": 1200,
+                "sourceHeight": 1126,
+                "windowStartMs": 150,
+                "windowEndMs": 634.2000007629395,
+                "complete": true,
+                "samples": [
+                  {
+                    "timestampMs": 0,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 17.100000381469727,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 34.20000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 50.10000038146973,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 67,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 84.10000038146973,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 101.30000019073486,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 117.30000019073486,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 134,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 150,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 166.9000005722046,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 184.20000076293945,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 200.80000019073486,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 217.60000038146973,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 234.20000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 250,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 267.1000003814697,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 284,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 300,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 317.5,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 334.20000076293945,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 349.9000005722046,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 367.6000003814697,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 384.20000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 400,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 417.80000019073486,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 434.20000076293945,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 450.9000005722046,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 467.5,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 484.30000019073486,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 499.9000005722046,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 517,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 534.3000001907349,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  },
+                  {
+                    "timestampMs": 550.9000005722046,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 566.9000005722046,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 584,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 599.9000005722046,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 617.7000007629395,
+                    "red": 35,
+                    "green": 35,
+                    "blue": 35
+                  },
+                  {
+                    "timestampMs": 634.2000007629395,
+                    "red": 125,
+                    "green": 125,
+                    "blue": 125
+                  }
+                ]
+              },
+              "source": {
+                "status": "MAPPED",
+                "coordinateSpace": "CSS_VIEWPORT",
+                "sampledAt": "2026-10-27T16:29:50.082Z",
+                "delayMs": 8,
+                "viewport": {
+                  "width": 600,
+                  "height": 563,
+                  "dpr": 2,
+                  "scrollX": 0,
+                  "scrollY": 0
+                },
+                "sampledPoints": 9,
+                "region": {
+                  "x": 100,
+                  "y": 240,
+                  "width": 2,
+                  "height": 2
+                },
+                "candidates": [
+                  {
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                    ],
+                    "tag": "video",
+                    "rect": {
+                      "x": 100,
+                      "y": 240,
+                      "width": 2,
+                      "height": 2
+                    },
+                    "hitCount": 9,
+                    "media": "VIDEO",
+                    "animation": {
+                      "running": 0,
+                      "paused": 0,
+                      "finished": 0
+                    }
+                  }
+                ],
+                "limitations": [
+                  "POST_OBSERVATION_SPATIAL_HINT_NOT_VERIFIED_CAUSE",
+                  "DOM_MAY_HAVE_CHANGED_SINCE_OBSERVED_FRAMES",
+                  "HIT_TEST_OMITS_POINTER_EVENTS_NONE_AND_PSEUDO_ELEMENTS",
+                  "CLOSED_SHADOW_ROOTS_AND_IFRAME_CONTENTS_NOT_INSPECTED",
+                  "SPARSE_POINT_SAMPLING_MAY_MISS_SOURCES"
+                ]
+              },
+              "sourceTimeline": {
+                "version": 1,
+                "status": "CORRELATED",
+                "clockBasis": "FRAME_RECEIPT_ESTIMATE",
+                "windowStartEpochMs": 1793118585129.9,
+                "windowEndEpochMs": 1793118585614.0999,
+                "alignmentUncertaintyMs": null,
+                "frameClock": {
+                  "method": "PER_FRAME_RECEIPT",
+                  "matchedFrames": 30,
+                  "receiptOffsetSpreadMs": 0.199951171875,
+                  "startBoundaryErrorMs": 0,
+                  "endBoundaryErrorMs": 0
+                },
+                "sampledAt": "2026-10-27T16:29:50.076Z",
+                "sampleIntervalMs": 33.333333333333336,
+                "maxSampleGapMs": 50.10009765625,
+                "sampleCount": 22,
+                "firstSampleEpochMs": 1793118584994.0999,
+                "lastSampleEpochMs": 1793118585744,
+                "complete": true,
+                "candidates": [
+                  {
+                    "id": "363df73b-2a34-455d-8833-a502a8872942",
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(5)"
+                    ],
+                    "tag": "video",
+                    "media": "VIDEO",
+                    "observations": [
+                      {
+                        "atEpochMs": 1793118584994.0999,
+                        "readWindow": {
+                          "startEpochMs": 1793118584994,
+                          "endEpochMs": 1793118584994,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118584993.7998
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 0,
+                        "mediaPaused": true
+                      },
+                      {
+                        "atEpochMs": 1793118585027,
+                        "readWindow": {
+                          "startEpochMs": 1793118585027,
+                          "endEpochMs": 1793118585027,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585026.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 0,
+                        "mediaPaused": true
+                      },
+                      {
+                        "atEpochMs": 1793118585061,
+                        "readWindow": {
+                          "startEpochMs": 1793118585061,
+                          "endEpochMs": 1793118585061,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585060.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 0,
+                        "mediaPaused": true
+                      },
+                      {
+                        "atEpochMs": 1793118585094.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118585094,
+                          "endEpochMs": 1793118585094.0999,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585093.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 24.7,
+                        "mediaPaused": false
+                      },
+                      {
+                        "atEpochMs": 1793118585127,
+                        "readWindow": {
+                          "startEpochMs": 1793118585127,
+                          "endEpochMs": 1793118585127,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585126.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 57.6,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585110.9,
+                          "presentationEpochMs": 1793118585094,
+                          "expectedDisplayEpochMs": 1793118585110.5,
+                          "mediaTimeMs": 40,
+                          "presentedFrames": 2
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585161.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585161.2998,
+                          "endEpochMs": 1793118585161.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585161.0999
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 91.89999999999999,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585143.9,
+                          "presentationEpochMs": 1793118585127,
+                          "expectedDisplayEpochMs": 1793118585143.5,
+                          "mediaTimeMs": 80,
+                          "presentedFrames": 3
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585194.5,
+                        "readWindow": {
+                          "startEpochMs": 1793118585194.5,
+                          "endEpochMs": 1793118585194.5,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585194.4
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 125.2,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585177.7998,
+                          "presentationEpochMs": 1793118585161.0999,
+                          "expectedDisplayEpochMs": 1793118585177.7998,
+                          "mediaTimeMs": 120,
+                          "presentedFrames": 4
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585244,
+                        "readWindow": {
+                          "startEpochMs": 1793118585243.9,
+                          "endEpochMs": 1793118585243.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585243.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 174.6,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585226.9,
+                          "presentationEpochMs": 1793118585211.2,
+                          "expectedDisplayEpochMs": 1793118585227.7998,
+                          "mediaTimeMs": 160,
+                          "presentedFrames": 5
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585277,
+                        "readWindow": {
+                          "startEpochMs": 1793118585277,
+                          "endEpochMs": 1793118585277,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585276.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 207.7,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585260.9,
+                          "presentationEpochMs": 1793118585243.9,
+                          "expectedDisplayEpochMs": 1793118585260.5999,
+                          "mediaTimeMs": 200,
+                          "presentedFrames": 6
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585311.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585311.2,
+                          "endEpochMs": 1793118585311.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585311.0999
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 241.9,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585311.0999,
+                          "presentationEpochMs": 1793118585294.5,
+                          "expectedDisplayEpochMs": 1793118585311.0999,
+                          "mediaTimeMs": 240,
+                          "presentedFrames": 7
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585344.5999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585344.5999,
+                          "endEpochMs": 1793118585344.5999,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585344.4
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 275.2,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585344.4,
+                          "presentationEpochMs": 1793118585327,
+                          "expectedDisplayEpochMs": 1793118585343.5999,
+                          "mediaTimeMs": 280,
+                          "presentedFrames": 8
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585394.7,
+                        "readWindow": {
+                          "startEpochMs": 1793118585394.5999,
+                          "endEpochMs": 1793118585394.7,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585394.5
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 325.29999999999995,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585377,
+                          "presentationEpochMs": 1793118585361.2,
+                          "expectedDisplayEpochMs": 1793118585377.7,
+                          "mediaTimeMs": 320,
+                          "presentedFrames": 9
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585427.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118585427.7998,
+                          "endEpochMs": 1793118585427.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585427.7998
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 358.5,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585427.7998,
+                          "presentationEpochMs": 1793118585411.2,
+                          "expectedDisplayEpochMs": 1793118585427.7,
+                          "mediaTimeMs": 360,
+                          "presentedFrames": 10
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585461.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585461.2,
+                          "endEpochMs": 1793118585461.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585461.0999
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 391.90000000000003,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585461.0999,
+                          "presentationEpochMs": 1793118585444.5,
+                          "expectedDisplayEpochMs": 1793118585461.2,
+                          "mediaTimeMs": 400,
+                          "presentedFrames": 11
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585511.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585511.2998,
+                          "endEpochMs": 1793118585511.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585511.0999
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 442,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585511.0999,
+                          "presentationEpochMs": 1793118585494,
+                          "expectedDisplayEpochMs": 1793118585510.5999,
+                          "mediaTimeMs": 440,
+                          "presentedFrames": 12
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585561.0999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585560.9,
+                          "endEpochMs": 1793118585560.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585560.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 491.59999999999997,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585543.9,
+                          "presentationEpochMs": 1793118585527.7998,
+                          "expectedDisplayEpochMs": 1793118585544.4,
+                          "mediaTimeMs": 480,
+                          "presentedFrames": 13
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585594.5,
+                        "readWindow": {
+                          "startEpochMs": 1793118585594.5,
+                          "endEpochMs": 1793118585594.5,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585594.4
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 525.2,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585576.9,
+                          "presentationEpochMs": 1793118585561,
+                          "expectedDisplayEpochMs": 1793118585577.5999,
+                          "mediaTimeMs": 520,
+                          "presentedFrames": 14
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585628,
+                        "readWindow": {
+                          "startEpochMs": 1793118585628,
+                          "endEpochMs": 1793118585628,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585627.7998
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 558.6999999999999,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585627.7998,
+                          "presentationEpochMs": 1793118585611.2,
+                          "expectedDisplayEpochMs": 1793118585627.7998,
+                          "mediaTimeMs": 560,
+                          "presentedFrames": 15
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585629.5999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585629.5999,
+                          "endEpochMs": 1793118585629.5999,
+                          "trigger": "EVENT"
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 560.2,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585627.7998,
+                          "presentationEpochMs": 1793118585611.2,
+                          "expectedDisplayEpochMs": 1793118585627.7998,
+                          "mediaTimeMs": 560,
+                          "presentedFrames": 15
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585677,
+                        "readWindow": {
+                          "startEpochMs": 1793118585677,
+                          "endEpochMs": 1793118585677,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585676.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 607.6,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585660.9,
+                          "presentationEpochMs": 1793118585644.5,
+                          "expectedDisplayEpochMs": 1793118585661.0999,
+                          "mediaTimeMs": 600,
+                          "presentedFrames": 16
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585711,
+                        "readWindow": {
+                          "startEpochMs": 1793118585711,
+                          "endEpochMs": 1793118585711,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585710.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 641.5999999999999,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585710.9,
+                          "presentationEpochMs": 1793118585694.5,
+                          "expectedDisplayEpochMs": 1793118585711.2,
+                          "mediaTimeMs": 640,
+                          "presentedFrames": 17
+                        }
+                      },
+                      {
+                        "atEpochMs": 1793118585744,
+                        "readWindow": {
+                          "startEpochMs": 1793118585744,
+                          "endEpochMs": 1793118585744,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585743.9
+                        },
+                        "rect": {
+                          "x": 100,
+                          "y": 240,
+                          "width": 2,
+                          "height": 2
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": [],
+                        "mediaTimeMs": 674.6999999999999,
+                        "mediaPaused": false,
+                        "videoPresentation": {
+                          "callbackEpochMs": 1793118585743.9,
+                          "presentationEpochMs": 1793118585727.7998,
+                          "expectedDisplayEpochMs": 1793118585744.5,
+                          "mediaTimeMs": 680,
+                          "presentedFrames": 18
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "e4298521-4285-4202-b62e-ea4d33fd1e5c",
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2) > *:nth-child(4)"
+                    ],
+                    "tag": "div",
+                    "observations": [
+                      {
+                        "atEpochMs": 1793118585094.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118585094,
+                          "endEpochMs": 1793118585094,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585093.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 236.6171875,
+                          "width": 520,
+                          "height": 21.5
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 1,
+                        "animations": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "95bd8968-b492-4a53-894c-19567aca50c7",
+                    "selectorPath": [
+                      "*:nth-child(1) > *:nth-child(2)"
+                    ],
+                    "tag": "body",
+                    "observations": [
+                      {
+                        "atEpochMs": 1793118585094.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118585094,
+                          "endEpochMs": 1793118585094,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585093.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 1,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585127,
+                        "readWindow": {
+                          "startEpochMs": 1793118585127,
+                          "endEpochMs": 1793118585127,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585126.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585161.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585161.2998,
+                          "endEpochMs": 1793118585161.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585161.0999
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585194.5,
+                        "readWindow": {
+                          "startEpochMs": 1793118585194.5,
+                          "endEpochMs": 1793118585194.5,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585194.4
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585244,
+                        "readWindow": {
+                          "startEpochMs": 1793118585244,
+                          "endEpochMs": 1793118585244,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585243.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585277,
+                        "readWindow": {
+                          "startEpochMs": 1793118585277,
+                          "endEpochMs": 1793118585277,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585276.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585311.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585311.2,
+                          "endEpochMs": 1793118585311.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585311.0999
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585344.5999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585344.5999,
+                          "endEpochMs": 1793118585344.5999,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585344.4
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585394.7,
+                        "readWindow": {
+                          "startEpochMs": 1793118585394.7,
+                          "endEpochMs": 1793118585394.7,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585394.5
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585427.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118585427.9,
+                          "endEpochMs": 1793118585427.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585427.7998
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585461.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585461.2998,
+                          "endEpochMs": 1793118585461.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585461.0999
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585511.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585511.2998,
+                          "endEpochMs": 1793118585511.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585511.0999
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585561.0999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585561,
+                          "endEpochMs": 1793118585561.0999,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585560.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585594.5,
+                        "readWindow": {
+                          "startEpochMs": 1793118585594.5,
+                          "endEpochMs": 1793118585594.5,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585594.4
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585628,
+                        "readWindow": {
+                          "startEpochMs": 1793118585628,
+                          "endEpochMs": 1793118585628,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585627.7998
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585629.5999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585629.5999,
+                          "endEpochMs": 1793118585629.5999,
+                          "trigger": "EVENT"
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585677,
+                        "readWindow": {
+                          "startEpochMs": 1793118585677,
+                          "endEpochMs": 1793118585677,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585676.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585711,
+                        "readWindow": {
+                          "startEpochMs": 1793118585711,
+                          "endEpochMs": 1793118585711,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585710.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585744,
+                        "readWindow": {
+                          "startEpochMs": 1793118585744,
+                          "endEpochMs": 1793118585744,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585743.9
+                        },
+                        "rect": {
+                          "x": 40,
+                          "y": 40,
+                          "width": 520,
+                          "height": 218.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "1c98e4a0-c6eb-46e2-8a57-0d29133d1903",
+                    "selectorPath": [
+                      "*:nth-child(1)"
+                    ],
+                    "tag": "html",
+                    "observations": [
+                      {
+                        "atEpochMs": 1793118584994.0999,
+                        "readWindow": {
+                          "startEpochMs": 1793118584994.0999,
+                          "endEpochMs": 1793118584994.0999,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118584993.7998
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585027,
+                        "readWindow": {
+                          "startEpochMs": 1793118585027,
+                          "endEpochMs": 1793118585027,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585026.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585061,
+                        "readWindow": {
+                          "startEpochMs": 1793118585061,
+                          "endEpochMs": 1793118585061,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585060.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 276.6171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585094.2,
+                        "readWindow": {
+                          "startEpochMs": 1793118585094,
+                          "endEpochMs": 1793118585094,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585093.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 1,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585127,
+                        "readWindow": {
+                          "startEpochMs": 1793118585127,
+                          "endEpochMs": 1793118585127,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585126.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585161.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585161.2998,
+                          "endEpochMs": 1793118585161.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585161.0999
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585194.5,
+                        "readWindow": {
+                          "startEpochMs": 1793118585194.5,
+                          "endEpochMs": 1793118585194.5,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585194.4
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585244,
+                        "readWindow": {
+                          "startEpochMs": 1793118585244,
+                          "endEpochMs": 1793118585244,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585243.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585277,
+                        "readWindow": {
+                          "startEpochMs": 1793118585277,
+                          "endEpochMs": 1793118585277,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585276.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585311.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585311.2,
+                          "endEpochMs": 1793118585311.2,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585311.0999
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585344.5999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585344.5999,
+                          "endEpochMs": 1793118585344.5999,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585344.4
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585394.7,
+                        "readWindow": {
+                          "startEpochMs": 1793118585394.7,
+                          "endEpochMs": 1793118585394.7,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585394.5
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585427.9,
+                        "readWindow": {
+                          "startEpochMs": 1793118585427.9,
+                          "endEpochMs": 1793118585427.9,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585427.7998
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585461.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585461.2998,
+                          "endEpochMs": 1793118585461.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585461.0999
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585511.2998,
+                        "readWindow": {
+                          "startEpochMs": 1793118585511.2998,
+                          "endEpochMs": 1793118585511.2998,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585511.0999
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585561.0999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585561,
+                          "endEpochMs": 1793118585561,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585560.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585594.5,
+                        "readWindow": {
+                          "startEpochMs": 1793118585594.5,
+                          "endEpochMs": 1793118585594.5,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585594.4
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585628,
+                        "readWindow": {
+                          "startEpochMs": 1793118585628,
+                          "endEpochMs": 1793118585628,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585627.7998
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585629.5999,
+                        "readWindow": {
+                          "startEpochMs": 1793118585629.5999,
+                          "endEpochMs": 1793118585629.5999,
+                          "trigger": "EVENT"
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585677,
+                        "readWindow": {
+                          "startEpochMs": 1793118585677,
+                          "endEpochMs": 1793118585677,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585676.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585711,
+                        "readWindow": {
+                          "startEpochMs": 1793118585711,
+                          "endEpochMs": 1793118585711,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585710.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      },
+                      {
+                        "atEpochMs": 1793118585744,
+                        "readWindow": {
+                          "startEpochMs": 1793118585744,
+                          "endEpochMs": 1793118585744,
+                          "trigger": "ANIMATION_FRAME",
+                          "renderEpochMs": 1793118585743.9
+                        },
+                        "rect": {
+                          "x": 0,
+                          "y": 0,
+                          "width": 600,
+                          "height": 298.1171875
+                        },
+                        "viewport": {
+                          "width": 600,
+                          "height": 563,
+                          "dpr": 2,
+                          "scrollX": 0,
+                          "scrollY": 0
+                        },
+                        "mutationsSincePrevious": 0,
+                        "animations": []
+                      }
+                    ]
+                  }
+                ],
+                "limitations": [
+                  "TEMPORAL_SPATIAL_CORRELATION_NOT_VERIFIED_CAUSE",
+                  "FRAME_EPOCH_ESTIMATED_FROM_RECEIPT_CAPTURE_LATENCY_UNKNOWN",
+                  "DOM_SAMPLED_SEPARATELY_FROM_CAPTURE_NOT_FRAME_ATOMIC",
+                  "SPARSE_TARGET_SAMPLING_MAY_MISS_SOURCES",
+                  "TARGET_INVENTORY_100_MS_KEYFRAME_PROPERTY_INVENTORY_500_MS",
+                  "CLOSED_SHADOW_ROOTS_IFRAME_CONTENTS_AND_PSEUDO_ELEMENTS_NOT_INSPECTED"
+                ]
+              },
+              "spatial": {
+                "version": 1,
+                "coordinateSpace": "ANALYSIS_PIXELS",
+                "analysisWidth": 1200,
+                "analysisHeight": 1126,
+                "sampledAtMs": 634.2000007629395,
+                "componentPixels": 16,
+                "simultaneousPixels": 16,
+                "simultaneousRatio": 0.000011841326228537596,
+                "maskBasis": "QUALIFYING_TRANSITIONS_SAME_FRAME",
+                "visualField": {
+                  "basis": "W3C_CSS_REFERENCE",
+                  "reference": "W3C Understanding SC 2.3.1 reference: 341x256 CSS pixels at standard browser zoom (1) and visual viewport scale (1), mapped with observed DPR 2 to 682x512 source pixels. Verified source 1200x1126 for CSS viewport 600x563; field extents rounded to nearest source pixel. Actual display geometry/viewing distance and outside-capture areas remain unknown. Reference comparison, not physical calibration or a WCAG verdict. https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+                  "widthPx": 682,
+                  "heightPx": 512,
+                  "maximumPixels": 16,
+                  "maximumRatio": 0.000045821114369501466,
+                  "thresholdRatio": 0.25,
+                  "exceedsThreshold": false,
+                  "window": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 682,
+                    "height": 512
+                  }
+                },
+                "pattern": {
+                  "kind": "NONE_DEMONSTRATED",
+                  "automaticallyExcluded": false
+                },
+                "motion": {
+                  "kind": "NONE_DEMONSTRATED",
+                  "automaticallyExcluded": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "SUPPORTED_UI_PATTERNS_ONLY",
+    "BACKGROUND_CAPTURE_REQUIRES_VALIDATION",
+    "NAVIGATION_TRANSITIONS_INCLUDE_SOURCE_AND_DESTINATION: capture spans navigation; candidates during transitions do not identify a source element.",
+    "Experimental heuristic observation; normative WCAG conformance has not been validated. No safety or site-wide pass is issued.",
+    "Only discovered same-origin routes and supported visible states are observed. Unknown routes, cross-origin frames, unsupported controls and account-dependent content may remain untested.",
+    "Capture sampling, background rendering, colour management and downsampling can limit temporal or spatial detection.",
+    "Unvalidated candidate engine: no WCAG PASS or NON_CONFORMANT verdict. SDR sRGB is assumed; HDR and colour-management accuracy are not validated.",
+    "Reported area is a measured pixel ratio, not the WCAG visual-field threshold. Fine patterns, DOM attribution and red black-point chromaticity are not validated.",
+    "CSS_REFERENCE_CONTEXT_CHANGED_OR_UNAVAILABLE",
+    "Candidate start/end times are relative to the first analyzed decoded frame, not the scenario start. Leading capture delay is reported separately; source and wall-clock timestamps are not interchangeable."
+  ]
+}

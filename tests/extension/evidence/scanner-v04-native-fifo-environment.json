@@ -1,0 +1,57 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "machine": {
+    "arch": "arm64",
+    "os": "darwin",
+    "release": "25.4.0",
+    "cpuModel": "Apple M2 Max",
+    "logicalCpus": 12
+  },
+  "recordedAt": "2026-10-27T13:11:00.876Z",
+  "emulateViewport": false,
+  "requestedWindow": {
+    "width": 900,
+    "height": 650
+  },
+  "initialGeometry": {
+    "innerWidth": 900,
+    "innerHeight": 563,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "devicePixelRatio": 2,
+    "screen": {
+      "width": 3360,
+      "height": 1890,
+      "availWidth": 3360,
+      "availHeight": 1860
+    },
+    "visibility": "visible"
+  },
+  "finalGeometry": {
+    "innerWidth": 900,
+    "innerHeight": 563,
+    "outerWidth": 900,
+    "outerHeight": 650,
+    "devicePixelRatio": 2,
+    "screen": {
+      "width": 3360,
+      "height": 1890,
+      "availWidth": 3360,
+      "availHeight": 1860
+    },
+    "visibility": "visible"
+  },
+  "pixelProbe": null,
+  "extensionBuild": {
+    "algorithm": "sha256",
+    "input": "sorted dist filenames, NUL, bytes, NUL",
+    "digest": "d4b3280d3af44bb4612493520fadba4ba33e3a8a183bfc8d0d83766c14f28e00"
+  },
+  "fixture": "static content plus low-contrast 4px marker moving slowly without flashes",
+  "headless": false,
+  "executionNotes": [
+    "A separate short native viewport restoration fixture ran during approximately the final four seconds. This is a local observed run, not an isolated hardware benchmark.",
+    "No capture instrumentation or synthetic source frames were injected in this run; the toolbar authorized actual tabCapture."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "browser": "156.0.8078.4",
+  "platform": "darwin",
+  "fixture": "static content plus low-contrast 4px marker moving slowly without flashes",
+  "headless": false,
+  "buildSha256": "c0ed803a053ea4d764ad8a8691e7c968b73551d9730f39afe244197d0d929504",
+  "requestPaths": [
+    "/",
+    "/about",
+    "/favicon.ico",
+    "/guide",
+    "/robots.txt",
+    "/sitemap-only",
+    "/sitemap.xml"
+  ],
+  "sourceBoundary": "Core capture and viewport metadata current at capture time; subsequent encoded-robots policy and selected-history UI fixes separately regression-tested."
+}

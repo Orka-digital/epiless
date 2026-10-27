@@ -1,0 +1,217 @@
+{
+  "classification": "COMPLETED_SEQUENTIAL_REBIND_GEOMETRY_RESTORATION_FAILED",
+  "recordedAt": "2026-10-27T20:37:52.382636+00:00",
+  "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+  "scannerBuildSha256": "fdcb09c52fe896c193d9c7b8ab7c68c0debaf688706a93969b01d2151e7896ca",
+  "extensionBuild": {
+    "productionSha256": "f8e5a62d7e6bae99faa1a19946744fd28d33156148082543981dd7e1ba5bc1f8",
+    "instrumentedSha256": "099481c88d5bd449471fc690c6654c261f0a09b2b4d83171034b715701d3d88f",
+    "algorithm": "sha256 over sorted filename, NUL, bytes, NUL",
+    "fixtureSourceSha256": {
+      "native-context-guard.mjs": "b4b7c4ff6a656ae9f9e3745b2f0f5f82997e49770fe76e3b60fc883ad7314a7d",
+      "native-context-controller.js": "e5aee12578d92827ec23919160423b5c3783d2b7c0e52d2755331ae8ebd8bea6",
+      "native-context-background.js": "edf2a72d9e4bacf63763d9508e7b0fa2f4d2db37c4c639eed3db48de79fbc602",
+      "native-context-tab-switch.mjs": "8bfe8bd5d64af7beafb52f52c03fc4cf83109098b69e66772bc448386a53abde",
+      "native-context-placeholder.html": "bba1a3d5911b74e3720c9a9b403d17259183198b7134f7ee8f3ae3ab335ac65c",
+      "native-context-offscreen.js": "30393ce2c438aa4dc126140a1a8dbf23eb8947fa3bfde96fb9b16c4fb9504edd",
+      "native-candidate-page.mjs": "d9edf276ac40f936c9e97f46e3fac1e3acc1e53932aec270fc04a96312d07bd6",
+      "verify-native-context-guard.mjs": "1c08dccceaaf6441b3c277bbfa72081a2f8c2498b0abd3fdaf8948821f9e1622"
+    }
+  },
+  "files": [
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9JUNiv/evidence.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-completed-failed-evidence.json",
+      "bytes": 239026,
+      "sha256": "e5810b6dac49e0a8a468b2c984692d09fdf9a97c5be081084c1ed8b5057be6e0"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9JUNiv/report.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-completed-failed-capture.json",
+      "bytes": 21241,
+      "sha256": "3f5abbba31a925928d4d51f582cf5e21ce623abfc3f16107d3c2780b49378422"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9JUNiv/local-job.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-completed-failed-local-job.json",
+      "bytes": 57380,
+      "sha256": "bd61fb7f329071a8f574194e59e1fa02dfbb35ead131a7c3015f73b995338a82"
+    },
+    {
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9JUNiv/environment-start.json",
+      "file": "tests/extension/evidence/scanner-v04-native-context-rebind-completed-failed-environment.json",
+      "bytes": 2041,
+      "sha256": "2c517fb21b60cdaf908a2d96cf30ef91abb87dc15f2758b8331a6a702d635929"
+    }
+  ],
+  "verification": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-rebind-completed-failed-verification.json",
+    "sha256": "04279286ba048bce8b2abc3239fd64275c576d5d657b3bfa08aed8b830e28bf3"
+  },
+  "fixtureSources": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-rebind-completed-failed-fixture-sources.json.gz",
+    "sha256": "9b73c041df612d5f26b3e2c6df614596be55d039eca0ccdd2ce2f006d37d70d0",
+    "fileCount": 8,
+    "reconstruction": "gzip-decompress JSON; exact UTF-8 text entries, byte lengths and SHA256 match all eight environment fixture-source identities."
+  },
+  "scannerSources": {
+    "file": "tests/extension/evidence/scanner-v04-fdcb09c5-source.json.gz",
+    "sha256": "77e935455d4e9e0e4046315ede44e54a5862deb4f7decbf59898d7832b66026c",
+    "fileCount": 69,
+    "recomputedScannerBuildSha256": "fdcb09c52fe896c193d9c7b8ab7c68c0debaf688706a93969b01d2151e7896ca"
+  },
+  "launchLog": {
+    "originalFile": "/tmp/epiless-native-rebind-admission.log",
+    "file": "tests/extension/evidence/scanner-v04-native-context-rebind-completed-failed-launch.log",
+    "sha256": "301a6dd9b1a09555c1354102b37e3a433ddc7f11ef925c76e0d09509f5a3ad57",
+    "bytes": 1792
+  },
+  "observed": {
+    "jobState": "INTERRUPTED",
+    "stopReason": "VIEWPORT_WORKSPACE_RESTORE_UNCONFIRMED",
+    "rebindPhases": [
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283628,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "phase": "CREATE_INTENT"
+      },
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283641,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "placeholderTabId": 1472631487,
+        "phase": "CREATED"
+      },
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283661,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "placeholderTabId": 1472631487,
+        "phase": "ACTIVATING_PLACEHOLDER"
+      },
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283706,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "placeholderTabId": 1472631487,
+        "phase": "PLACEHOLDER_ACTIVE"
+      },
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283708,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "placeholderTabId": 1472631487,
+        "phase": "ACTIVATING_SOURCE"
+      },
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283731,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "placeholderTabId": 1472631487,
+        "phase": "SOURCE_ACTIVE"
+      },
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283732,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "placeholderTabId": 1472631487,
+        "phase": "REMOVING_PLACEHOLDER"
+      },
+      {
+        "kind": "VIEWPORT_REBIND_PERSISTED_PHASE",
+        "at": 1793133283738,
+        "jobId": "3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+        "generation": "7c63e4c3-4a17-46ad-9139-89d33d287f6c",
+        "tabId": 1472631484,
+        "placeholderTabId": 1472631487,
+        "phase": "REMOVED"
+      }
+    ],
+    "persistedPhaseSpanMs": 110,
+    "layoutRebindExecuted": true,
+    "geometryRestored": false,
+    "beforeViewport": {
+      "at": 1793133235956,
+      "width": 900,
+      "height": 507,
+      "dpr": 2,
+      "outerWidth": 900,
+      "outerHeight": 650,
+      "visibility": "visible"
+    },
+    "afterViewport": {
+      "width": 900,
+      "height": 450,
+      "dpr": 2,
+      "scrollX": 0,
+      "scrollY": 0,
+      "visualScale": 1,
+      "visualOffsetLeft": 0,
+      "visualOffsetTop": 0
+    },
+    "afterTab": {
+      "id": 1472631484,
+      "windowId": 1472631481,
+      "index": 2,
+      "active": false
+    },
+    "originalWindowId": 1472631481,
+    "sameForegroundTabId": true,
+    "originalWindowFocusedBeforeStop": true,
+    "originalWindowFocusedAtLateCollection": false,
+    "workspaceStillOpen": false,
+    "retainedOwnershipKeys": [
+      "viewport-rebind:3d06c6bc-2872-43f4-b66a-4afa7adc5a95",
+      "viewport-workspace:3d06c6bc-2872-43f4-b66a-4afa7adc5a95"
+    ],
+    "debuggerDetached": true,
+    "capturedTabs": [
+      {
+        "tabId": 1472631484,
+        "status": "stopped",
+        "fullscreen": false
+      }
+    ],
+    "tracks": {
+      "context": "OPEN",
+      "at": 1793133337018,
+      "streams": [
+        {
+          "active": false,
+          "tracks": [
+            {
+              "readyState": "ended",
+              "settings": {}
+            }
+          ]
+        },
+        {
+          "active": false,
+          "tracks": [
+            {
+              "readyState": "ended",
+              "settings": {}
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interpretation": "All eight persisted rebind phases ran in order, from CREATE_INTENT through REMOVED, over110ms. This is a completed sequential placeholder/source tab rebind, unlike the two prior unreached attempts. The subsequent strict actual-layout gate still failed: CSS900x450 versus pre-capture900x507. The source returned inactive to its original window/index2, the temporary window closed, all observed tracks ended and debugger detached. Rebind/workspace receipts remain because the full restoration transaction was not accepted. The original foreground tab ID is unchanged, but original-window focused is false at late collection; its cause is not established and full focus preservation is not claimed. The job is INTERRUPTED and strict cancellation remains FAIL; public report schema passes.",
+  "retention": "Byte-exact raw metadata and numeric diagnostics plus launch log; no screenshots/raw frames/browser profile archived. All earlier evidence remains unchanged."
+}

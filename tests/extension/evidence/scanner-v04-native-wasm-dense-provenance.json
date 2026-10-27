@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "scope": "Byte-exact original real-toolbar native capture, verified with --require-wasm. One instrumented low-contrast RGB workload and tiny video candidate on one physical machine, at two captured geometries; not general content, codec, colour or hardware validation.",
+  "scannerBuildSha256": "af5d4da032b7a92cfbb090a1fe59adfc4601334d0d3547e6a5b9ff776c9637ce",
+  "strictPublicSchema": "PASS",
+  "verificationExitCode": 0,
+  "verificationArguments": [
+    "--require-wasm"
+  ],
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-dense-capture.json",
+      "bytes": 214107,
+      "sha256": "f1f03360d30bf6473207b257e84747083de37e660ffc94aaec1a32408960748e"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-dense-local-job.json",
+      "bytes": 234042,
+      "sha256": "6f9090a47e3333eb6e0aaf94bdb2a6f0bed0516c833e3d4f58eea07b56d6d0de"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-wasm-dense-environment.json",
+      "bytes": 195382,
+      "sha256": "26686e07b282d5ab00a7a9aa9b0c6f761ed1367daa6b83be72ed3a1e9f664089"
+    }
+  ]
+}

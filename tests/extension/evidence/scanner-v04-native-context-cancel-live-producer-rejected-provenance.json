@@ -1,0 +1,90 @@
+{
+  "status": "FAILED_EXPERIMENT_REVERTED",
+  "scannerBuildSha256": "5ecdc445abed75a44a5ae3f56b7d36a231f0aa8516e1b3127e3e6e1afe188c3b",
+  "productionBundleSha256": "2872652bbfd3f5f3fd77a3b9b13add381e94311a7edb872159e204ecb19f8fd1",
+  "instrumentedBundleSha256": "7fc088ddd34fd91698dbb1d7883e5ee35d6cda1e405ad53130fea70c545abece",
+  "patchReconstruction": "PASS: git apply reconstructed all nine scoped candidate source/test files byte-for-byte before reversion. Baseline background preserves concurrent media/loop work; no whole-file background reset.",
+  "checkpoint": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/epiless-rejected-live-producer-ytv_2438",
+  "experiment": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected.patch",
+    "sha256": "7f2c4e3af48cdc0bb8fb2a6421b78e40088a10c8b2883663f35b3df7f4dd7d40",
+    "reconstruction": "git apply to the scoped pre-HOLD baseline reconstructed all nine candidate files byte-for-byte"
+  },
+  "candidateFiles": [
+    {
+      "file": "apps/chrome-extension/src/background.ts",
+      "beforeSha256": "f2651f364fa7b2f212fc06f670bbc578ae019477430e0161698ef5beaa5ac6f8",
+      "candidateSha256": "77fb5b7f90508a3f40dafd0cf88edb3286a25a355741d8f5700258a841bca746"
+    },
+    {
+      "file": "apps/chrome-extension/src/offscreen.ts",
+      "beforeSha256": "d9836ac9569caf185198169240cb91ea0bd5a79124d2cae400f1fe74ffbcdf43",
+      "candidateSha256": "b928c28f599820b8f1df58a5b5d7f2267cac58cfbfeae8226df9cb42f4d9e6d4"
+    },
+    {
+      "file": "apps/chrome-extension/src/capture-stop.ts",
+      "beforeSha256": "76ac640ef7dd79f72698e0060a17f6048a079735cb247cdb1d982871c8505f15",
+      "candidateSha256": "355b595f4df2bf34b008f6fdf21da2229eadc77e9d9f42a01db143c4e4c678fb"
+    },
+    {
+      "file": "apps/chrome-extension/src/viewport-workspace.ts",
+      "beforeSha256": "27cb111326e2a97b76c904174e30cb69d93cf7c420a7859eef3bb0fa2f1f17c5",
+      "candidateSha256": "27c4a04907d36e8a48797efd01e718fb1d7cf47ff74cc951b69b41a2298b9853"
+    },
+    {
+      "file": "apps/chrome-extension/src/capture-cleanup.ts",
+      "beforeSha256": null,
+      "candidateSha256": "27d1b60c95fafaf90333ac8a444f2018938a05f2fe75a6e6cb72bbde15594744"
+    },
+    {
+      "file": "tests/extension/capture-quality.test.ts",
+      "beforeSha256": "ce14802b9261c63b0cb85a40a38e5b8a657de912633415ebd06bba20e217891d",
+      "candidateSha256": "88b01a7f645457964cdf8f1f386d98e5cb1ad411b89415b4d4bc606bb00ba261"
+    },
+    {
+      "file": "tests/extension/capture-stop.test.ts",
+      "beforeSha256": "2be2840eaa469c88cbb3d54a35b9df16ff928ce3b190714e046656a2baa7ae2a",
+      "candidateSha256": "5f17b6853be1e36a6b7689121a4154b901748ecad310defa28b4f061324684e3"
+    },
+    {
+      "file": "tests/extension/capture-cleanup.test.ts",
+      "beforeSha256": null,
+      "candidateSha256": "10c64ec2c8c737698c7005e9706cd180b19850951aefe0d0a9461dd51b2bbba9"
+    },
+    {
+      "file": "tests/extension/viewport-workspace.test.ts",
+      "beforeSha256": "cadeb81d09426eef5f1764da1bc603d98dde5e2afec2f88a6029de1adee36f0c",
+      "candidateSha256": "050e4a66bd540af0f09c97db9861db009fd28858975430c0f2e71ad2a1a9b746"
+    }
+  ],
+  "files": [
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-evidence.json",
+      "bytes": 195678,
+      "sha256": "606f4acc1a41c03d2d65ace7fff96291caf6af075422941227b0db1b6934add0",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/evidence.json"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-capture.json",
+      "bytes": 24285,
+      "sha256": "f0c0bd2a4e09f1b225d828ed1b8672da0baa7710b34ace8c58823591783b4004",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/report.json"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-local-job.json",
+      "bytes": 38152,
+      "sha256": "9fa8e4af37f80828df34a4499989a431e3478569d8a111fe1e722237c81ed0fd",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/local-job.json"
+    },
+    {
+      "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-environment.json",
+      "bytes": 1637,
+      "sha256": "4eca3a830bf6715128a58e156c606b85aed432009bae0b61b420bfb1108f31b3",
+      "originalFile": "/var/folders/35/p_jsz4w175zg0z20r5hcxp2m0000gn/T/flashguard-native-context-cancel-9knLbL/environment-start.json"
+    }
+  ],
+  "verification": {
+    "file": "tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected-verification.json",
+    "sha256": "6029552cf91a402d056131ac76243489829990d3eed9a153b20d77dcea901a7a"
+  }
+}
