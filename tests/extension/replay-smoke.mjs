@@ -457,7 +457,14 @@ try {
     JSON.stringify(mediaActual.mediaEvidence.reasons),
   );
   assert.equal(mediaActual.replay.stateKey, mediaObservation.replay.stateKey);
-  assert.deepEqual(mediaComparisonReasons(mediaObservation, mediaActual), []);
+  assert.deepEqual(
+    mediaComparisonReasons(mediaObservation, mediaActual),
+    [],
+    JSON.stringify({
+      baseline: mediaObservation.mediaEvidence,
+      repeated: mediaActual.mediaEvidence,
+    }),
+  );
   assert.ok(
     measuredMediaInterval(mediaActual.mediaEvidence.items[0]).presentations >
       20,
