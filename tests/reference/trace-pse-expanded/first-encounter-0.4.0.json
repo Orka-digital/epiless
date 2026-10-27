@@ -1,0 +1,5193 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "0.4.0-candidate",
+  "engineSourceSha256": "850001e78baf74e6dd797a4d16df55c6487d8d44d76ea07f5df5dca0ede59286",
+  "reference": {
+    "repository": "https://github.com/traceRERC/pse-test-media",
+    "commit": "ef78542aad496827f25064f57aaf13d6a741ba75",
+    "license": "BSD-3-Clause",
+    "manifestSha256": "6308be198bfef5ff53b3b3f136e0d0f5db892656aa5ab07fd8089c72bb94b4cb",
+    "filesVerified": 403
+  },
+  "scope": "NUMERIC_TEMPORAL_INTENSITY_PROJECTION",
+  "verdict": "MISMATCHES",
+  "conformanceEstablished": false,
+  "methodology": "Verbatim external sRGBA samples at upstream 30 fps, projected onto one pixel. Compare only the named luminance or red candidate channel with the upstream filename label. No synthesized padding or rendered media.",
+  "unsupported": [
+    "Spatial masks, combined concurrent area and WCAG 10-degree visual-field thresholds",
+    "Fine patterns and motion compensation",
+    "Browser capture, downsampling, frame loss and display conditions",
+    "HDR, wide gamut and colour-management accuracy",
+    "Clinical safety, real-world accuracy and overall WCAG conformance"
+  ],
+  "overall": {
+    "cases": 398,
+    "truePositive": 129,
+    "falseNegative": 0,
+    "falsePositive": 18,
+    "trueNegative": 251,
+    "sensitivityOnSelectedCases": 1,
+    "precisionOnSelectedCases": 0.8775510204081632,
+    "specificityOnSelectedCases": 0.9330855018587361,
+    "mismatches": 18
+  },
+  "sourceCases": 400,
+  "unscored": [
+    {
+      "id": "lum_flash_patterns/rel_lum/ff004_srgba.csv",
+      "expectedCandidate": true,
+      "reason": "Error: Invalid reference frame 31"
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff005_srgba.csv",
+      "expectedCandidate": true,
+      "reason": "Error: Invalid reference frame 31"
+    }
+  ],
+  "byType": {
+    "GENERAL_FLASH": {
+      "cases": 210,
+      "truePositive": 82,
+      "falseNegative": 0,
+      "falsePositive": 16,
+      "trueNegative": 112,
+      "sensitivityOnSelectedCases": 1,
+      "precisionOnSelectedCases": 0.8367346938775511,
+      "specificityOnSelectedCases": 0.875,
+      "mismatches": 16
+    },
+    "RED_FLASH": {
+      "cases": 188,
+      "truePositive": 47,
+      "falseNegative": 0,
+      "falsePositive": 2,
+      "trueNegative": 139,
+      "sensitivityOnSelectedCases": 1,
+      "precisionOnSelectedCases": 0.9591836734693877,
+      "specificityOnSelectedCases": 0.9858156028368794,
+      "mismatches": 2
+    }
+  },
+  "cases": [
+    {
+      "id": "lum_flash_patterns/rel_lum/c002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 266.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 266.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 266.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 266.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 266.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 266.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 266.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff021_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff031_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/ff039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c002_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c003_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c004_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c005_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c006_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c007_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c008_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c009_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c012_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c013_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c014_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c015_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c016_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c017_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c018_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c019_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c021_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c022_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c022_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c023_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c023_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c024_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c024_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c025_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c025_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c026_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c027_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c028_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c029_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d002_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d003_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d004_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d005_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d006_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d007_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d008_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d009_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d012_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d013_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d014_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d015_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d016_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d017_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d018_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d019_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d021_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d022_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d022_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d023_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d023_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d024_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d024_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d025_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d025_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d026_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d027_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d028_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d029_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f002_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f003_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f004_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f005_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f006_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f007_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f008_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f009_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f012_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f013_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f014_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f015_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f016_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f017_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f018_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f019_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f021_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f022_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f022_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f023_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f023_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f024_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f024_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f025_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f025_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f026_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f027_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f028_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f029_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s002_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s003_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s004_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s005_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s006_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s007_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s008_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s009_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s012_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s013_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s014_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s015_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s016_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s017_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s018_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s019_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s021_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s022_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s022_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s023_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s023_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s024_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s024_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s025_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s025_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s026_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s027_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s028_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s029_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr002_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr003_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr004_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr005_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr011_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr012_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr013_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr014_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr015_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "candidates": [],
+      "otherCandidateTypes": []
+    }
+  ],
+  "firstEncounter": {
+    "at": "2026-10-27T12:27:41.515Z",
+    "engineSourceTreeSha256": "a99755e64323d535da59aafca1a46c42db6e1f3a20340b2669fc5b921b1ce488",
+    "selection": "All 400 previously unused temporal CSV patterns; selected and pinned before execution.",
+    "scope": "Independent authored numeric cases, not native browsercapture or external certification.",
+    "sourceValidation": "Zero- or one-based contiguous source frame indices accepted; malformed original sources remain unscored without repairs."
+  }
+}

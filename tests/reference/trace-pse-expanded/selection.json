@@ -1,0 +1,3231 @@
+{
+  "schemaVersion": 1,
+  "upstreamRepository": "https://github.com/traceRERC/pse-test-media",
+  "upstreamCommit": "ef78542aad496827f25064f57aaf13d6a741ba75",
+  "license": "BSD-3-Clause",
+  "selection": "All 400 temporal CSV cases outside the original 42-case development set, selected by path before the first expanded evaluation. After first encounter these are regression data, not a reusable held-out performance estimate.",
+  "expectedLabels": "Upstream filename prefixes: f/fr = temporal/intensity threshold exceeded; c/cr,l/lr,y,s/sr,d/dr = below at least one of those thresholds. No upstream combined spatial video verdict is used.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "gitBlobSha1": "bc7ba4089dab486720c006101bace1ef09d338f6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/LICENSE",
+      "kind": "provenance",
+      "sha256": "14fe5e2fc911993320085dac391e9ff96dc8eb8bb8d59e7f4131fcf2b1f7efe7"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/README.md",
+      "gitBlobSha1": "55f22ed5cb2e95580fd063d9866e267f0e6347c6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/README.md",
+      "kind": "provenance",
+      "sha256": "ac8e74e7d5aebe7114f3a4ee45853fd7385971d2efa2fa7afb417dabd3ee5312"
+    },
+    {
+      "path": "red_flash_patterns/30fps/README.md",
+      "gitBlobSha1": "47b438c2ae6450d09102157e5ba9981375d811d6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/README.md",
+      "kind": "provenance",
+      "sha256": "75ea8cee6029bc8d53b7a9fadcb891c5fe2c97dfdd470825cfdfacbbb46dc7ff"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c002_srgba.csv",
+      "gitBlobSha1": "f438df878d04d3c34760864f45ac910547b702e0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c003_srgba.csv",
+      "gitBlobSha1": "78e55774269e76cb5b1bb7ed344b4979eda1f2c1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c004_srgba.csv",
+      "gitBlobSha1": "e10f5fe396bca2ca8c76240f8bc8c9d989fd2e16",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c005_srgba.csv",
+      "gitBlobSha1": "91729ea3f4cf7057c54c15e3ad007fdfba7f19f2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c006_srgba.csv",
+      "gitBlobSha1": "483ae2f5d493cbb7ea35b020136b14dcbbdc59ed",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c007_srgba.csv",
+      "gitBlobSha1": "5345cff074dbaee9e0cbf9d7a46d57db2cb4b284",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c008_srgba.csv",
+      "gitBlobSha1": "2da1e6614e3f21284a4f911a34d5e9a49b332013",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c009_srgba.csv",
+      "gitBlobSha1": "faa79da9b65c36e4f3fd7ea9e25bf487fdae83e8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c012_srgba.csv",
+      "gitBlobSha1": "757dedb944c13c2e18d126136f2b87a8f2ab4020",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c013_srgba.csv",
+      "gitBlobSha1": "55ed3f08f1acded438a9635574f5ca27e04095e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c014_srgba.csv",
+      "gitBlobSha1": "fdf6c144c262fa31e72e2dfe08d8201729f5cb30",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c015_srgba.csv",
+      "gitBlobSha1": "520ce3b62fe3ebca9fee2c2d6974cfa89183720f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c016_srgba.csv",
+      "gitBlobSha1": "c856e5ee1e80180810799dc32d3bac382760ec19",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c017_srgba.csv",
+      "gitBlobSha1": "a94e99f3186b98c1043c38e2dc0a4d826078cc41",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c018_srgba.csv",
+      "gitBlobSha1": "85d8bab4ef46463d3dcb146066624ff68e21ca9c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c019_srgba.csv",
+      "gitBlobSha1": "9ad37b3b0b5b89cd3443ca069921d0b90214d4f1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c022_srgba.csv",
+      "gitBlobSha1": "139c44bdae2ed06b9ca3560a19cbc4dad99096f4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c023_srgba.csv",
+      "gitBlobSha1": "03dd53366bcffae7cb17a1a7e081989d6e09f5f6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c024_srgba.csv",
+      "gitBlobSha1": "271e7105f77cd5195b3d62a0af7b3ea061254c9d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c025_srgba.csv",
+      "gitBlobSha1": "18a17cf11abe8a8bafcdd8397a2abc312f2d9928",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c026_srgba.csv",
+      "gitBlobSha1": "d69ae70038b86838b7b8e16060a488d818b8d5d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c027_srgba.csv",
+      "gitBlobSha1": "a52648fa83f8030c19f917f9b5fab641c2772d6a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c028_srgba.csv",
+      "gitBlobSha1": "f651cd7b696514ebcf45a8102953b58fcf7f8b5c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c029_srgba.csv",
+      "gitBlobSha1": "1bf24fd5865d1ea50d76174d067c281e979d1815",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c032_srgba.csv",
+      "gitBlobSha1": "68709fe31d537b99b2392c3bd1ea63cf3cfb8a2d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c033_srgba.csv",
+      "gitBlobSha1": "18dfb4d67ef74d84e7da8cacec8d86dfef86f8d0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c034_srgba.csv",
+      "gitBlobSha1": "7769cc306603e0f4b9de8d9f988a607f2bce4801",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c035_srgba.csv",
+      "gitBlobSha1": "fece5e7f88758f132834adcef253aea20dbf91fe",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c036_srgba.csv",
+      "gitBlobSha1": "aa18cc1022eef9cfbbe32dbe74e8c0d45b9f6a5b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c037_srgba.csv",
+      "gitBlobSha1": "0ccdd7a01f1fafc4442783806f0cf5e385820f4d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c038_srgba.csv",
+      "gitBlobSha1": "e88985975fbe47494f31f81cc8e96082649701b0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c039_srgba.csv",
+      "gitBlobSha1": "b3a728a5cd82072ffefc49acc94a872819f9cbd7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr002_srgba.csv",
+      "gitBlobSha1": "04a95d775c21b52e1ec0ab7e8461b11f1bd3e715",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr003_srgba.csv",
+      "gitBlobSha1": "942a2b93efe1145d82513e3e0e894655df366f8d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr004_srgba.csv",
+      "gitBlobSha1": "5a139941a9e1603a1d525bbea0638611081e1711",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr005_srgba.csv",
+      "gitBlobSha1": "a445024a3a8c2155b841b5cda730a4509f7079a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr006_srgba.csv",
+      "gitBlobSha1": "44546ba78536c61e81306c9ad528d40036665aea",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr007_srgba.csv",
+      "gitBlobSha1": "2285f435aba876cd6d1710fc343ff90eb2706038",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr008_srgba.csv",
+      "gitBlobSha1": "1e18155f69673024b53f492e7030b7595a3db2a2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr009_srgba.csv",
+      "gitBlobSha1": "332ce80a3b90ea53639ea8bea63c856758ed239e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr012_srgba.csv",
+      "gitBlobSha1": "f1ab3ee368aa41e7d825f3cb9b53deb2a51a2e90",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr013_srgba.csv",
+      "gitBlobSha1": "f2f4e3c506939f7a5831306bf83b7050a4d14880",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr014_srgba.csv",
+      "gitBlobSha1": "fc32a70d77d1a6bdd5d47cf668fa4eff962baf10",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr015_srgba.csv",
+      "gitBlobSha1": "49fed985bff59780b7ece91d4cee74902251dc67",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr016_srgba.csv",
+      "gitBlobSha1": "f78a02c092d41758dec42a84f7d8099708af98b5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr017_srgba.csv",
+      "gitBlobSha1": "4d85cc155328bf40c2efe7202edc9d905caf85af",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr018_srgba.csv",
+      "gitBlobSha1": "1bfae819337e1c26e662160713433e2fe45ab5be",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr019_srgba.csv",
+      "gitBlobSha1": "14dcf647caef54e91476d54fe9174b0d7b7b7f31",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f002_srgba.csv",
+      "gitBlobSha1": "9765ce522cf4ce5171a5258101e385f12827556c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f003_srgba.csv",
+      "gitBlobSha1": "17049d90c2a279258043576f7036a40254aaba90",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f004_srgba.csv",
+      "gitBlobSha1": "92b1906bd2059d81476178fefb0ef4a1189febbb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f005_srgba.csv",
+      "gitBlobSha1": "2182aec50ec64faeba233340c5467808a89710b1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f006_srgba.csv",
+      "gitBlobSha1": "e286bba08edbeb15bc02bc0994f0b58602f13f9f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f007_srgba.csv",
+      "gitBlobSha1": "f38bf2deffd2bf9dd8696b49f68d087455774867",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f008_srgba.csv",
+      "gitBlobSha1": "8c7602a4fad37e1fcdb18707044e275a71628a3e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f009_srgba.csv",
+      "gitBlobSha1": "39a11ed0e5188d95ada700880f739187043708fc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f012_srgba.csv",
+      "gitBlobSha1": "a1d04ef2743e2c5bb27607963da976892db73dc3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f013_srgba.csv",
+      "gitBlobSha1": "f664974305892f43a6ff786fb872bc90ce697375",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f014_srgba.csv",
+      "gitBlobSha1": "6f097821db76c4a6d20c57494bd871bd41eed752",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f015_srgba.csv",
+      "gitBlobSha1": "32dbd207938ebabee5cc403448f6c881c3ddbeb5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f016_srgba.csv",
+      "gitBlobSha1": "2df54bd8886f8497d56d2f244887f004262c8a14",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f017_srgba.csv",
+      "gitBlobSha1": "cdfa3a05d5ae1e065f7cbbb78b80ee926c9d80d4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f018_srgba.csv",
+      "gitBlobSha1": "7f5a9eeee6b6f510bbd7ba2ac890054c2ae1478d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f019_srgba.csv",
+      "gitBlobSha1": "ef0caf7ee99bd3319ffe9289f4aefb66e9fa9c1d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f022_srgba.csv",
+      "gitBlobSha1": "6f2ee4a4cdb1b45aed0b1fcd9b6ec3cd9424105c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f023_srgba.csv",
+      "gitBlobSha1": "369a04618e04ff5ff1a91134b1bb4c82822339d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f024_srgba.csv",
+      "gitBlobSha1": "fd9d54edd58c58000e2168a66bd9fc7a4ddc42a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f025_srgba.csv",
+      "gitBlobSha1": "fddb99e78dccc52618786f717c3f1cda874842f2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f026_srgba.csv",
+      "gitBlobSha1": "774c81502cb9561213dec9f8557312abc533516d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f027_srgba.csv",
+      "gitBlobSha1": "8dcafeb21b5792442a88e459eaaa62df52d01842",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f028_srgba.csv",
+      "gitBlobSha1": "d4cc7d129d9ec8e695c85fdc289e26d8f850b5a7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f029_srgba.csv",
+      "gitBlobSha1": "2e55ccd286eccc798aaad65f073cf7456738092d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f032_srgba.csv",
+      "gitBlobSha1": "08fdba61986481c9fa43cf6fb6823b96ec7ff240",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f033_srgba.csv",
+      "gitBlobSha1": "c3444b34e84d475af97f33de48c3b1c07fecda02",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f034_srgba.csv",
+      "gitBlobSha1": "0a453817780e82e43b1a6cd971b2373d057046a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f035_srgba.csv",
+      "gitBlobSha1": "bedf549d0a4652fa1f5705ca1b3505c7d4f90e1d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f036_srgba.csv",
+      "gitBlobSha1": "e18751942ec6f0d57bcfd53dc71569c18be37180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f037_srgba.csv",
+      "gitBlobSha1": "8291853e0cdd8fb7fe96d72eeebc8ba47725653a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f038_srgba.csv",
+      "gitBlobSha1": "803b192ca03b3ea0fc857eeacbb9c9dae1c6b3ac",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f039_srgba.csv",
+      "gitBlobSha1": "25a9addd65cc1246081b0ca526e6bc8e1ac92edc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff001_srgba.csv",
+      "gitBlobSha1": "6ef9c899b19b0888823c771dca4a70b2e414ab20",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff002_srgba.csv",
+      "gitBlobSha1": "4edca63e8bed65c7386413058320a49f65bf7854",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff003_srgba.csv",
+      "gitBlobSha1": "d7f83f2446dfc681f32ff9b5720690c1678966e2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff004_srgba.csv",
+      "gitBlobSha1": "fd206f45a678a3089ae7ead6ddc0bb63e17142c6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff005_srgba.csv",
+      "gitBlobSha1": "46e02895039d4412ff06d64a0beb5afcb547f83c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff006_srgba.csv",
+      "gitBlobSha1": "83cdf3ebd90d16ef715e7f9dfc7f27549788610d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff007_srgba.csv",
+      "gitBlobSha1": "166145088fc6d4be3a2c4d3f40b59034df38425e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff008_srgba.csv",
+      "gitBlobSha1": "14ac27cca03b5fff553a5056e07b8de65100b170",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff009_srgba.csv",
+      "gitBlobSha1": "ae1fa78549067794075ae60eacaf429a28a9dcb7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff011_srgba.csv",
+      "gitBlobSha1": "4179e149baf2c3890ad382bf896f54369a67dd6c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff012_srgba.csv",
+      "gitBlobSha1": "b3d81c4851121d846976ddf06d91f0428b16cd74",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff013_srgba.csv",
+      "gitBlobSha1": "1a7d599f7ca0cc0a72e9d0b3fbf551b23a834192",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff014_srgba.csv",
+      "gitBlobSha1": "00ebcfc2e4377085854a7f2aa48d4f1489f6a796",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff015_srgba.csv",
+      "gitBlobSha1": "0f059442ceef549eaecfd164e578cf88bfaa72b2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff016_srgba.csv",
+      "gitBlobSha1": "dc918497cc1ab633d74abb141693b1edf4722152",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff017_srgba.csv",
+      "gitBlobSha1": "b7ec5c2393338cc476fc57a4db012d0db193123f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff018_srgba.csv",
+      "gitBlobSha1": "4c4dd858693d9278b98dfabd09472f80a4987315",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff019_srgba.csv",
+      "gitBlobSha1": "4d91cd79194a707a9123f8b112ce350ae1100c9e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff021_srgba.csv",
+      "gitBlobSha1": "ad86f7e34daecc814b794cc8ce791af0319a5380",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff021_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff022_srgba.csv",
+      "gitBlobSha1": "4fd8f44cf2c0012750d2816ded5ad3de5d92a8bb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff023_srgba.csv",
+      "gitBlobSha1": "6be54241f611e8480cd7e4f9fc1e6180bc858058",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff024_srgba.csv",
+      "gitBlobSha1": "a8d0bb53b3e2c7caf2964f30dd1b54fdc462cc74",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff025_srgba.csv",
+      "gitBlobSha1": "9c69e24bda4ae197a2930e919006c4f659723070",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff026_srgba.csv",
+      "gitBlobSha1": "aa2102cbbc38b70d526e232e749348646b63057a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff027_srgba.csv",
+      "gitBlobSha1": "d814cdbc9da376b5a65796fd7585d16e9d03a566",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff028_srgba.csv",
+      "gitBlobSha1": "4e35ac8ab1de686c171071a3aa04309d42db2128",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff029_srgba.csv",
+      "gitBlobSha1": "496a033ddd3115c5b7b7d6a6179a8f55b398ca71",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff031_srgba.csv",
+      "gitBlobSha1": "f051a22bf906ce256c873765aca1b5e0173b3627",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff031_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff032_srgba.csv",
+      "gitBlobSha1": "138c26f73e9802d865670c453b8e3914f98f4dd1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff033_srgba.csv",
+      "gitBlobSha1": "5b1714d119f8cd28c31be34cdcef2a45696c5b9e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff034_srgba.csv",
+      "gitBlobSha1": "33e86f0f71df477c39a4bd04c2e8bd3a1c92ffcb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff035_srgba.csv",
+      "gitBlobSha1": "4ed8d00b1099950ea1a21e55982dfda89431b14f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff036_srgba.csv",
+      "gitBlobSha1": "0a9d573470b21ef6d976630f449471a481b9cb08",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff037_srgba.csv",
+      "gitBlobSha1": "66e1d544ede2a1402118e58649087991c1b237fa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff038_srgba.csv",
+      "gitBlobSha1": "abe05c6f8849e0826593b64dc647d8b76977ed34",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff039_srgba.csv",
+      "gitBlobSha1": "9ef8ff702087d92f402b937d2436e9143caf0c7b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr002_srgba.csv",
+      "gitBlobSha1": "83dd8ea173e7e18d9e9daa10d8dc9c2b6c7cbc74",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr003_srgba.csv",
+      "gitBlobSha1": "7d8f16675f6166d603a7418504a1df5f779d6370",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr004_srgba.csv",
+      "gitBlobSha1": "ac09df5b660cf120673dd9b79bbccd89f7313937",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr005_srgba.csv",
+      "gitBlobSha1": "0bfd92305b55a7ce0ea551b8ebc6d652e609d3a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr006_srgba.csv",
+      "gitBlobSha1": "17100b4e79e3f48955557ab7e41cbfc6301b8dde",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr007_srgba.csv",
+      "gitBlobSha1": "c8b4b30e99738008c544b501f6992c06512f16c1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr008_srgba.csv",
+      "gitBlobSha1": "3a7504747cce52304f8b42f1e9fdbd9e50718706",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr009_srgba.csv",
+      "gitBlobSha1": "1462ea683582ae94cb172694221cec5a3f89442b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr012_srgba.csv",
+      "gitBlobSha1": "ecec6134f1e6355c56b5fb7e7f9997baddd6d3be",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr013_srgba.csv",
+      "gitBlobSha1": "2a34a5e495f38ba36b7bdc7cd6025f563878f955",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr014_srgba.csv",
+      "gitBlobSha1": "d60a7320121102376372ee6a1c77c1600ec5e56a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr015_srgba.csv",
+      "gitBlobSha1": "6c6e2167611380f8a4f5340d6f8872fdd1eca7ec",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr016_srgba.csv",
+      "gitBlobSha1": "32632e0e2618e9172649056fe232aa24fdf57527",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr017_srgba.csv",
+      "gitBlobSha1": "c8dda14d66b25b735db4d94cb5eb339aaa86f0a4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr018_srgba.csv",
+      "gitBlobSha1": "f820b25d6d66bbe198220147f8da49a6e11f122e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr019_srgba.csv",
+      "gitBlobSha1": "964d391d19da972eb078852a1dff1db3fb07cfa0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l002_srgba.csv",
+      "gitBlobSha1": "bdf257d4d51b9326db1b4fbf9e55ed9f3d6c2d81",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l003_srgba.csv",
+      "gitBlobSha1": "0565802745cb58cbf0d7390aea40f6f21e946a99",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l004_srgba.csv",
+      "gitBlobSha1": "dd61be1e242b16dd0c9cb75e1136030232016a56",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l005_srgba.csv",
+      "gitBlobSha1": "f61a6a1833e84e40ca554610136382cb2c369faf",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l006_srgba.csv",
+      "gitBlobSha1": "d9f3bb57a4ef315555ccfdae4c6764a2d99944a7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l007_srgba.csv",
+      "gitBlobSha1": "3fff965d9ae0086a6177c58ba63126244a7527a4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l008_srgba.csv",
+      "gitBlobSha1": "80834d4fb05691747f704b99350faa094378e5b5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l009_srgba.csv",
+      "gitBlobSha1": "4dd28c3328356fcadd9a8962db0da484076c581f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l012_srgba.csv",
+      "gitBlobSha1": "5e329a39f96e9ad62aae9fe0043922b374c39d42",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l013_srgba.csv",
+      "gitBlobSha1": "703dc31e3453169d63bb8ca74252e644c73dead0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l014_srgba.csv",
+      "gitBlobSha1": "78752d2eae132575e7b425086b977f2ad6cc4d09",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l015_srgba.csv",
+      "gitBlobSha1": "652ffb29852277da040e7cbdc2475d6529485841",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l016_srgba.csv",
+      "gitBlobSha1": "62a4e1e207e0f49384ca78e37c7b74d6a5196b8b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l017_srgba.csv",
+      "gitBlobSha1": "ec4ced6b8a4eaa738d0acb3d319df367ee2072b0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l018_srgba.csv",
+      "gitBlobSha1": "5f7af1dc643442933a840f9402df52af31270926",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l019_srgba.csv",
+      "gitBlobSha1": "086c30de6e54fde39aad0ceb856be1f973514f72",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l022_srgba.csv",
+      "gitBlobSha1": "a63c2359b8563d466847c4295ef04d56730d5463",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l023_srgba.csv",
+      "gitBlobSha1": "58c10345feb1891977303904e8a51b378c18e2e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l024_srgba.csv",
+      "gitBlobSha1": "ff6b69e1be52ada294686b491e8a79c6bb9fa09d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l025_srgba.csv",
+      "gitBlobSha1": "91e7ae17dee44213ec066f1f577bebd392447f06",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l026_srgba.csv",
+      "gitBlobSha1": "46bcacf6a4f9db35596a5b4bba4f8961e10632d1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l027_srgba.csv",
+      "gitBlobSha1": "6dcf9399c21da604739d3d48ccfe5a0be5cd4863",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l028_srgba.csv",
+      "gitBlobSha1": "0a9c57d4f979e472c613cd6f3ed4970bce66d350",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l029_srgba.csv",
+      "gitBlobSha1": "527d0c336c3c5d76099d53c2ea31aa232ac40bf9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l032_srgba.csv",
+      "gitBlobSha1": "8916897a91c0f753261a06c34fc02fe4b4dd4f42",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l033_srgba.csv",
+      "gitBlobSha1": "968ed2ea140d77bc4396c383f728f19301a1c6fa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l034_srgba.csv",
+      "gitBlobSha1": "d96b3f045fc36998d316514d1164d1e89d23a974",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l035_srgba.csv",
+      "gitBlobSha1": "703e86971693caa7f15f56a1ade4a7b4d8ab809a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l036_srgba.csv",
+      "gitBlobSha1": "fc3c4ccf017778e83c81a54fb43b78ba327ae115",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l037_srgba.csv",
+      "gitBlobSha1": "4326322499e5062c0658cbdd8024ace6bb8cd442",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l038_srgba.csv",
+      "gitBlobSha1": "b9ff3c69c0bcf7cb5f4bdb2ae97ac442c216c841",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l039_srgba.csv",
+      "gitBlobSha1": "609f6b6c6446bebf6f7651b2f0c48e58f27e066f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr002_srgba.csv",
+      "gitBlobSha1": "5c52e783e3f04f2d2fb6b1661d58d533fd8fa7eb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr003_srgba.csv",
+      "gitBlobSha1": "4e24d5ec00937003e739279baf93f76f2ced2dd6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr004_srgba.csv",
+      "gitBlobSha1": "2fb4f162bd43a32ecd9f8910c5fc96e14bea07eb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr005_srgba.csv",
+      "gitBlobSha1": "9913ab0885da3abe94bee31b593835cb0d3acb36",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr006_srgba.csv",
+      "gitBlobSha1": "6a2c9df36ca02a41058478523392b7ce223bafaa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr007_srgba.csv",
+      "gitBlobSha1": "134fad745c4fbad6d1195d7d0003e5bb724f7685",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr008_srgba.csv",
+      "gitBlobSha1": "93d8bfb6c14fe4e25262ffe7e8b9db44112b29a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr009_srgba.csv",
+      "gitBlobSha1": "8733c5d27ec265eb03b0fc038c15097afd1d6808",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr012_srgba.csv",
+      "gitBlobSha1": "80defcb9efa90bce2c3543bc203c1bd76795fc13",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr013_srgba.csv",
+      "gitBlobSha1": "cb33ff66122d2306eab55ca53a3951cde42d3d22",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr014_srgba.csv",
+      "gitBlobSha1": "7f45255c8ad33a351e415f928345f4f112e129e7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr015_srgba.csv",
+      "gitBlobSha1": "478ceaea0d05387fed96199e1a7ae70c6654d444",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr016_srgba.csv",
+      "gitBlobSha1": "9a5d338b59650c19f8bcb31595f5ffd2ad7a6d0a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr017_srgba.csv",
+      "gitBlobSha1": "dd0b4a98aba6430af9804a277eb4aae6c7ba089d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr018_srgba.csv",
+      "gitBlobSha1": "69eadb1da520d180327c682d676a59f6bdda15d3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr019_srgba.csv",
+      "gitBlobSha1": "c8cb45efd4230105a5120203851bd5b64dd05bef",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y002_srgba.csv",
+      "gitBlobSha1": "e55c0c39b92602873188e609a123db0a28f14124",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y003_srgba.csv",
+      "gitBlobSha1": "8b2e1132d51555ddf9e4b3bdef5236eb9b940f04",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y004_srgba.csv",
+      "gitBlobSha1": "2accdebc6e7d245bda725e3afc56937b080663df",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y005_srgba.csv",
+      "gitBlobSha1": "36b64a84972f55471d9abfd5d31a5d002d3cae85",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y006_srgba.csv",
+      "gitBlobSha1": "0d29951890ad42ec8282928dd064eaf034923de8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y007_srgba.csv",
+      "gitBlobSha1": "67de3351aa1411b04ddab28dbaa0dfedf77e16ae",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y008_srgba.csv",
+      "gitBlobSha1": "4be5a3ab19f6fd2d8ffdd9bda564b3860b8e82a3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y009_srgba.csv",
+      "gitBlobSha1": "493cdf0afe7c28d1955a52ca42c7b324e24a9d70",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y012_srgba.csv",
+      "gitBlobSha1": "0810e558fbffa145912f8043a2b09972f1fefab1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y013_srgba.csv",
+      "gitBlobSha1": "cfc8ee67b82527b73f2d385c9aab10c99bb22fc4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y014_srgba.csv",
+      "gitBlobSha1": "32003e0d1b1c6ceb6869f67ac4f4fecb40e020d6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y015_srgba.csv",
+      "gitBlobSha1": "58be7d04a1bf8116c9e85c8b6efa56479344ac96",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y016_srgba.csv",
+      "gitBlobSha1": "bae93d5837134da608f151f42474df0fe6a9d93a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y017_srgba.csv",
+      "gitBlobSha1": "d3e4e2d242185f9eca3842e1105b9f9a17441fb7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y018_srgba.csv",
+      "gitBlobSha1": "0a9c29bbf9bdfbca7af2cd1b2118717ca5db227e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y019_srgba.csv",
+      "gitBlobSha1": "1252f71371a5b5d9e96612051d517fd481f71873",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y022_srgba.csv",
+      "gitBlobSha1": "5b57812162560e8d5e325adbc1e339d34fe9dcb8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y023_srgba.csv",
+      "gitBlobSha1": "a123c8c67a12765496c036187ff0e5a54055e657",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y024_srgba.csv",
+      "gitBlobSha1": "ee47defbcea78e7b13336c66aa7b35d3b6a94175",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y025_srgba.csv",
+      "gitBlobSha1": "956526fb679c0adc38008079c433fa7ee1955da9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y026_srgba.csv",
+      "gitBlobSha1": "dc5bd60d00a95fc0abd9b346866943de94ffdc9c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y027_srgba.csv",
+      "gitBlobSha1": "daf059085a4dd0ba78e528119e6f5f2891bd4884",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y028_srgba.csv",
+      "gitBlobSha1": "20c733b8353b8a99dc32eb5d00aeea20b639547e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y029_srgba.csv",
+      "gitBlobSha1": "388b599f7f96446e17bc2d36919d52f41d777e49",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y032_srgba.csv",
+      "gitBlobSha1": "6aa1c4c6ab824e220a45c91650f37daedd8f4712",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y033_srgba.csv",
+      "gitBlobSha1": "ccf4d392d0fe7bff475ab88830e199f911c3eb02",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y034_srgba.csv",
+      "gitBlobSha1": "b649faaf3b050612c82c58b81c5a8b4c814d8338",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y035_srgba.csv",
+      "gitBlobSha1": "39cb8abac883eb684be8aeb1d02abd3f55162fc5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y036_srgba.csv",
+      "gitBlobSha1": "9e201d46a24e333d60c3b39e980c1e5bb33a9180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y037_srgba.csv",
+      "gitBlobSha1": "7ae7bcc8eb4f946af029eb269cfa3f4e094f2814",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y038_srgba.csv",
+      "gitBlobSha1": "f03a0c823f64121f3c72acbf98644bd4839ce0b3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y039_srgba.csv",
+      "gitBlobSha1": "0398da87d0ee98e69666daf3ae312211a3496cc4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c002_multi.csv",
+      "gitBlobSha1": "11d26ff88fe9f21942af7cd24ae9b12b28d918f8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c002_simple.csv",
+      "gitBlobSha1": "f416cffd59a14247cc3841c331571e9c006fd05b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c003_multi.csv",
+      "gitBlobSha1": "3099da13d0710d39d5d675a177c3069d988f3351",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c003_simple.csv",
+      "gitBlobSha1": "8e36aa5485dd09c553bd164e568ba53f7566663a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c004_multi.csv",
+      "gitBlobSha1": "489b6d94265a9dbc587c8f5e8fc55117c85c4d89",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c004_simple.csv",
+      "gitBlobSha1": "845fc80bf8da7c07e9e71aa128e40850e2b10fd2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c005_multi.csv",
+      "gitBlobSha1": "2f8ca6085ab3e3778846d6fdc9e8271f7ece20b6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c005_simple.csv",
+      "gitBlobSha1": "c71ff9b7a3b620e14d464302f8d61896b864dcd0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c006_simple.csv",
+      "gitBlobSha1": "20509e8ca2f3966b78c9c76ed3ba55e0bb5ff319",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c007_simple.csv",
+      "gitBlobSha1": "5bce7b84e229bf01f40e88d1f6244cbef8823216",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c008_simple.csv",
+      "gitBlobSha1": "8d6babe93a7cf4532154d563cfa2157ec549d7e7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c009_simple.csv",
+      "gitBlobSha1": "a2f9ea056d572e8c28d11368137f4ede010c1904",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c011_multi.csv",
+      "gitBlobSha1": "1d6d798aa8487256f8ebdd2385b17b2f6e0e2b22",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c012_multi.csv",
+      "gitBlobSha1": "2b2830e5cf2ebef8d2cf152c4edfb12e7b2cb3b3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c012_simple.csv",
+      "gitBlobSha1": "74470bfe66774766703169304d8f27382c73bf0c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c013_multi.csv",
+      "gitBlobSha1": "6b750d8c479c2f8098907deb829cb3fdead01418",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c013_simple.csv",
+      "gitBlobSha1": "a2acfbcb8408122ff345f81621ec99dfb6b0102c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c014_multi.csv",
+      "gitBlobSha1": "efcd064046543f06912c169e639c56ffa544e8b8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c014_simple.csv",
+      "gitBlobSha1": "85082cd64cb1eaa5f4cef3ae6463fdec7e30c101",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c015_multi.csv",
+      "gitBlobSha1": "b94179916d031e3c10ae80c1206b2eeec750ce85",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c015_simple.csv",
+      "gitBlobSha1": "8caa185e74007a463f485a40d3cfc14179571fc7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c016_simple.csv",
+      "gitBlobSha1": "c2351f5a61d316cddd0ae4dfba46afadfa187849",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c017_simple.csv",
+      "gitBlobSha1": "4a3db11584fec4b169940521e4cb609307f1f6e2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c018_simple.csv",
+      "gitBlobSha1": "1a67fc5f75d0b4315ce1d9c3ff884e248980119c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c019_simple.csv",
+      "gitBlobSha1": "5117e085e0c92df992a9f3f7526d42733b15f749",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c021_multi.csv",
+      "gitBlobSha1": "a3d161a6229e875c623070581e025e39fd10b508",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c022_multi.csv",
+      "gitBlobSha1": "ea8cfd1d9784da1ee572f254067ebb99728cbd42",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c022_simple.csv",
+      "gitBlobSha1": "4ba577b4f6742c6f46587f48b093380e84ff4a97",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c023_multi.csv",
+      "gitBlobSha1": "123d386713c7b5b805220fdc764df16e95377ffb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c023_simple.csv",
+      "gitBlobSha1": "66c7730966f36e77cd994c2f0ef82b2b3f0ef8f7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c024_multi.csv",
+      "gitBlobSha1": "5e487c584c5f660d26ddb08b2e25a35ac6b600a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c024_simple.csv",
+      "gitBlobSha1": "6d5710f0487faf801dbeeaac6ccb1f56e4950b40",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c025_multi.csv",
+      "gitBlobSha1": "3cd8e043173fe26296a76813ce9f0b78b50ea071",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c025_simple.csv",
+      "gitBlobSha1": "1d90da984a1a159d7cd0b1de0dd2634ef8be0f83",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c026_simple.csv",
+      "gitBlobSha1": "b1ff1024da071aad7e5f566e12d73410ae0e2adc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c027_simple.csv",
+      "gitBlobSha1": "e693466f6f212bca4b6a3c009258caf33171c8a3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c028_simple.csv",
+      "gitBlobSha1": "7cb8056fe1244b35f475382fbc334e763084c455",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/c029_simple.csv",
+      "gitBlobSha1": "455d9647e04973aa5adc229222b5bef65b3e93cc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr002_multi.csv",
+      "gitBlobSha1": "a125b227a71d48dafc33c46b3f44187d64cc6336",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr003_multi.csv",
+      "gitBlobSha1": "71c4eaefb35a40ca1d516855e1444fe6adf6ead9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr004_multi.csv",
+      "gitBlobSha1": "bda5178f8607b3db3acc6a2ec7829c51e21f960e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr005_multi.csv",
+      "gitBlobSha1": "7714cfb676d71e7d18f06bfdda9f4df0b8cb1114",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr011_multi.csv",
+      "gitBlobSha1": "a23c574f42dcb3e949f3383f2d6521882134c180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr012_multi.csv",
+      "gitBlobSha1": "e3fb586c7db5af8c9b0c7209b59d54838c07daf1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr013_multi.csv",
+      "gitBlobSha1": "a6e4b6684c6f7284a1ee636b857df6c39d2435f9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr014_multi.csv",
+      "gitBlobSha1": "77066a8a454aaa30a413d494fcd6b4102b16baf5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr015_multi.csv",
+      "gitBlobSha1": "3a2f33d209255b9930c983b1ef4a898db51bf0ca",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d002_multi.csv",
+      "gitBlobSha1": "5a469e1efff9414edc0916984a3bb49ea8345f5c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d002_simple.csv",
+      "gitBlobSha1": "068c58a8fd5ce9c4dc8d6faffcd5f9b0060ae752",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d003_multi.csv",
+      "gitBlobSha1": "7ed01a3d3c8c90b6551085782ba68efbba052316",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d003_simple.csv",
+      "gitBlobSha1": "ea442d72d1e29ae301f8854c808bf136be6fccfd",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d004_multi.csv",
+      "gitBlobSha1": "c8cc02c177dfd306ebc94044c6e8a26eef994447",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d004_simple.csv",
+      "gitBlobSha1": "d0ea40b07b62c1a31c82c94affe999e01242e290",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d005_multi.csv",
+      "gitBlobSha1": "594ff8c970dc470ee7ba4dbb9df33d40e826bb64",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d005_simple.csv",
+      "gitBlobSha1": "b24f0db86cfb295f99d4a8a0600ee94471464886",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d006_simple.csv",
+      "gitBlobSha1": "0594491698fa7641c983359616bceceedcf8c039",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d007_simple.csv",
+      "gitBlobSha1": "1d679c1c6dac3977b287d3d220ba59a13c8684cf",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d008_simple.csv",
+      "gitBlobSha1": "8722b45aecfca3aef9029e7b5f0873fcdf040206",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d009_simple.csv",
+      "gitBlobSha1": "2d6e4c0cadd0410c1cb1eb195e2cdff75f92c0aa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d011_multi.csv",
+      "gitBlobSha1": "385555afd45d867a8e683d20798a30523655a6bb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d012_multi.csv",
+      "gitBlobSha1": "b179707e9a241045332a4c48e939b2e6d6c65f02",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d012_simple.csv",
+      "gitBlobSha1": "4d5bb57145610c804f8ed3d810d0a50ee4f85c80",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d013_multi.csv",
+      "gitBlobSha1": "dffecb1939dc09c02b55cbed03b273c6c93c759f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d013_simple.csv",
+      "gitBlobSha1": "bb227e730d776b1fabab4a4fc92934c9802e41a3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d014_multi.csv",
+      "gitBlobSha1": "876e720b04bcbb608e2eed857f4b92a6ac4be59d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d014_simple.csv",
+      "gitBlobSha1": "044ea1b0752cea5c6882624165f613d1603d523f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d015_multi.csv",
+      "gitBlobSha1": "6cf0fbc26c9b7cdba1b88f77a0abee966ab685e5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d015_simple.csv",
+      "gitBlobSha1": "58b7bd85c752a20344aa34dd7d84108a1f4d4b5d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d016_simple.csv",
+      "gitBlobSha1": "f6ecf1d82ad17efacd3235889c5a04495ed197a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d017_simple.csv",
+      "gitBlobSha1": "67cf12914722975998fedcdb3023462112e850e4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d018_simple.csv",
+      "gitBlobSha1": "95786fdf3a82a25a193bb39944ef5296f3825642",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d019_simple.csv",
+      "gitBlobSha1": "3b0f6d7a575f281ee0dc0b78a25ffaf2583a98a2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d021_multi.csv",
+      "gitBlobSha1": "c14b680ce058c0950a74f55cea4fb53a9f2b648b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d022_multi.csv",
+      "gitBlobSha1": "d0ba0f265c45ce96b57b48820dd1db1285728422",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d022_simple.csv",
+      "gitBlobSha1": "67423e1cb9c294b4e17a023a8524ec270fe95894",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d023_multi.csv",
+      "gitBlobSha1": "12e769cf408a5f9d845089fc351c560277724746",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d023_simple.csv",
+      "gitBlobSha1": "04632e72642eaf4c909e65cac4d97494e7d8418d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d024_multi.csv",
+      "gitBlobSha1": "55a1e040d77c7accc6f83138281919bc62b4d287",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d024_simple.csv",
+      "gitBlobSha1": "fc4783441218010c50ec1d2a7066ed2ed590208c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d025_multi.csv",
+      "gitBlobSha1": "962624ca07c6d0fe19e97fd36410aecf1d0ab31f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d025_simple.csv",
+      "gitBlobSha1": "3f9c55fe7545ada31f9e62af416a1ddff3e75e56",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d026_simple.csv",
+      "gitBlobSha1": "0e9535ff659d0303c6daccf13b8b55d34b55bcb8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d027_simple.csv",
+      "gitBlobSha1": "7db0f094e7f25ca0b1833bab798b94831eb830af",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d028_simple.csv",
+      "gitBlobSha1": "32bede25f0435277e0f0ef8b15d5565052d4b211",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/d029_simple.csv",
+      "gitBlobSha1": "ed8c7d589e71863e365e8827965fb2767d1d40e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr002_multi.csv",
+      "gitBlobSha1": "da404c5aab49bfe8b8208543d67f8da7240eb673",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr003_multi.csv",
+      "gitBlobSha1": "3b6527d1ab5db2550a06ec92bc018eb59fcade64",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr004_multi.csv",
+      "gitBlobSha1": "256bbd871d6dd9ea2b421f2fb60f81d0bebd6b18",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr005_multi.csv",
+      "gitBlobSha1": "5d408204f6093b0bf242530a8d941d9e5daa7c6d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr011_multi.csv",
+      "gitBlobSha1": "e7ed7de0db44a93f33a95d457afe72ea4fc48c29",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr012_multi.csv",
+      "gitBlobSha1": "a19285f667f0fd7ba85034a62d3d15c53de4ad4a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr013_multi.csv",
+      "gitBlobSha1": "3b3fd5a39f67a465f46ca5edfea55138b0c9080b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr014_multi.csv",
+      "gitBlobSha1": "8b454d810db0b1ac17073dbd394cac6c61c17e69",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr015_multi.csv",
+      "gitBlobSha1": "458ca58838c5bdaa58ddb7704e37f0b59c412986",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/f002_multi.csv",
+      "gitBlobSha1": "270aee8fd8b77697246ba9a427bcfdf24ef1e073",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f002_simple.csv",
+      "gitBlobSha1": "e6266f394a856c5451bc2a9e6fdfd96543986180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f003_multi.csv",
+      "gitBlobSha1": "cb61a383ce7e44769ee2e10d7142958938377dd7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f003_simple.csv",
+      "gitBlobSha1": "31148d67d40ade4eca9c0b9f36917f1b0a541950",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f004_multi.csv",
+      "gitBlobSha1": "c2db54f596d71cf8f7836c5001ec6f9b23d8b470",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f004_simple.csv",
+      "gitBlobSha1": "94f97d0c53c5420be893be8364b2ed7d4b90b55c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f005_multi.csv",
+      "gitBlobSha1": "1b3acf48d3808e32ace2c4669a9a15b37ae4c7ec",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f005_simple.csv",
+      "gitBlobSha1": "d6feae14e66c71d5555547376f5c2faf802341f7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f006_simple.csv",
+      "gitBlobSha1": "5f0c2ebd4f8cd92240bcab7baff98f191dfea308",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f007_simple.csv",
+      "gitBlobSha1": "a2e098a1589e6a972316815fc9e851ba3b50b47b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f008_simple.csv",
+      "gitBlobSha1": "7beb5eac20cd7df09a967d85ec9f9b62943c3cbd",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f009_simple.csv",
+      "gitBlobSha1": "13a75e8eb2e94ba63e24d203a33a9a57f87c3eab",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f011_multi.csv",
+      "gitBlobSha1": "b011154dfdcf8f7bd7c7f2d87122098872da22d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f012_multi.csv",
+      "gitBlobSha1": "32605baa05596696b49787d23ae5104a907aff2f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f012_simple.csv",
+      "gitBlobSha1": "7b527194aabb0d92c5fc079a173ab4e294cec38c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f013_multi.csv",
+      "gitBlobSha1": "25078abfb97fc6b264b7dfb434babce62aa84245",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f013_simple.csv",
+      "gitBlobSha1": "6d412660236b4c80c4912d6e67afe1202cc2d2d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f014_multi.csv",
+      "gitBlobSha1": "beedfa582953b844b67ac86069e70341c9025f95",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f014_simple.csv",
+      "gitBlobSha1": "eda4e54b4da945bce5bf8b887dc3b4d3a00d6748",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f015_multi.csv",
+      "gitBlobSha1": "bd5ff55b2d4829350bdb28bcfeaa8572531941a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f015_simple.csv",
+      "gitBlobSha1": "a48c2b9d7e032f3edf0e3a184b5a0e8f368974f5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f016_simple.csv",
+      "gitBlobSha1": "e47b1b53189e1ff6f948a4acd0c43cf52a1ca602",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f017_simple.csv",
+      "gitBlobSha1": "614fe6f6ba6e52600d4168e88565e1b12dc74a7e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f018_simple.csv",
+      "gitBlobSha1": "d8892ee9d50f8f8d6f43c25fbca721ac66fb0821",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f019_simple.csv",
+      "gitBlobSha1": "db54371dcdeec69a7af211d366a1a79a8dd3b4d5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f021_multi.csv",
+      "gitBlobSha1": "0834574266c8519e711fb101aeacaa807f54b77e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f022_multi.csv",
+      "gitBlobSha1": "80e00d42987489371981eefe3b3bac9e389ec5b8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f022_simple.csv",
+      "gitBlobSha1": "982d5bce06d5ad8d612192cd737d5192ba17dbc4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f023_multi.csv",
+      "gitBlobSha1": "ac600e891181517fc9b0e92930f55b237d570187",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f023_simple.csv",
+      "gitBlobSha1": "9aee81156fbac6fa134d9d17066cc8d5531d73a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f024_multi.csv",
+      "gitBlobSha1": "c2327170af44e7de9205516302201c7273e602f3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f024_simple.csv",
+      "gitBlobSha1": "1d2dc6909e3d95b7bbc9c242f9750bc37adfa06f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f025_multi.csv",
+      "gitBlobSha1": "5879973415ea0b533f9194c8629c8e762f5b92a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f025_simple.csv",
+      "gitBlobSha1": "d08a82fa64bdc526ab06b6baef007e05c0a333aa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f026_simple.csv",
+      "gitBlobSha1": "abc507b347ba315f2ae66bf37647c0674232572f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f027_simple.csv",
+      "gitBlobSha1": "b1dd81342ef341c66f52db5f06be16bcd93c987a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f028_simple.csv",
+      "gitBlobSha1": "0c0a65d60f1cefe6c74b6d5c60a86be23f561b87",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/f029_simple.csv",
+      "gitBlobSha1": "44c2af82964c8d05a717d4721094ab55ce98b253",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr002_multi.csv",
+      "gitBlobSha1": "845333f81791f9a8d0b98bd61e4ed56fa81682b1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr003_multi.csv",
+      "gitBlobSha1": "4e7cb7ae578655dab57c4b43fd69fc8430196161",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr004_multi.csv",
+      "gitBlobSha1": "dcd70a91e343d9a742ad1a29bd3cecf7c0d3bccf",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr005_multi.csv",
+      "gitBlobSha1": "2e2f5dd76ad5b08fff460894452f819bb4f0aeee",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr011_multi.csv",
+      "gitBlobSha1": "f367e58717c086aa217a90b55af91535edb1605a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr012_multi.csv",
+      "gitBlobSha1": "5753188e7c26bd545de2a99e7adfc492f864d02e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr013_multi.csv",
+      "gitBlobSha1": "eee1bf0917c90d3115b5adb082e85f5d85b2aa6c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr014_multi.csv",
+      "gitBlobSha1": "e59c8c9c4f70b276d6a2281741a697c909f45ef8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr015_multi.csv",
+      "gitBlobSha1": "ef54edeb5ff11a142dd6262f7c80ea928aa26202",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true
+    },
+    {
+      "path": "red_flash_patterns/30fps/s002_multi.csv",
+      "gitBlobSha1": "fc499176c3f7ba40aa698f9c566fe26e7bae7be4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s002_simple.csv",
+      "gitBlobSha1": "4516af9a58dbba806617559c72179b39c4d53b8c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s003_multi.csv",
+      "gitBlobSha1": "a20cd3c8f2995feeb057895d9890ffc1286fd6db",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s003_simple.csv",
+      "gitBlobSha1": "d7433a6f20efa14f13cb4d794556f2860c9e8b21",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s004_multi.csv",
+      "gitBlobSha1": "f5e67f0804ffa579b2fb777e63c321626ff0cabc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s004_simple.csv",
+      "gitBlobSha1": "90e08fa71bf1a73e2d0ccbbd159f5018fe7d0796",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s005_multi.csv",
+      "gitBlobSha1": "eed2e912d4acfb30d88d64e54a5909d13aab6242",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s005_simple.csv",
+      "gitBlobSha1": "f190fc6f12653346127805f1eebdbafc39bea618",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s006_simple.csv",
+      "gitBlobSha1": "0b45de46e120d446fa5d06911822e51bb8849182",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s007_simple.csv",
+      "gitBlobSha1": "cc391fe7e4aa9e8b81ea871c62863d7579dea45c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s008_simple.csv",
+      "gitBlobSha1": "d3afd89310de2dc984d7fabee1476930ab68dab0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s009_simple.csv",
+      "gitBlobSha1": "b15f98b7e6af1377493154500926f29ebcde778d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s011_multi.csv",
+      "gitBlobSha1": "93711e70bbda28b1dc072c1dba7101cd4403cf2c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s012_multi.csv",
+      "gitBlobSha1": "4e7fbbdff44e48eb2d1aa98bf72cd26f5420ad2c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s012_simple.csv",
+      "gitBlobSha1": "10927dd71996d9238cc4e5922a54f86b0bf8c8a5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s013_multi.csv",
+      "gitBlobSha1": "3df74e7b02d41e68fff33023f9ae79b840b7907a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s013_simple.csv",
+      "gitBlobSha1": "c17b2437b410bbad7c724c32c47cdb12e228cdc8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s014_multi.csv",
+      "gitBlobSha1": "70262012ed7162d0378853b569cd2722de8c340c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s014_simple.csv",
+      "gitBlobSha1": "0faaa0cd7130122d8bebb611f820411e674803d0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s015_multi.csv",
+      "gitBlobSha1": "d812e9c32ae79efb7a7146cfcc99c58f6ad75499",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s015_simple.csv",
+      "gitBlobSha1": "c77cbcbc222f083ec58d06b3f04c2b6fdf6d6a1d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s016_simple.csv",
+      "gitBlobSha1": "40e889d5ee02cb8bf83a677441415b5766396cd4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s017_simple.csv",
+      "gitBlobSha1": "5797230829d8cb828292e9a0e969cdee2791f84a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s018_simple.csv",
+      "gitBlobSha1": "e3742fbc2d7ad7d07b13f6cefea32b18744faa9b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s019_simple.csv",
+      "gitBlobSha1": "8f88dfa05258ab79f1328c692c5c567a8c60a906",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s021_multi.csv",
+      "gitBlobSha1": "47559badb47e37cde1e131d65db70b03ac227044",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s022_multi.csv",
+      "gitBlobSha1": "bdfef13dcfbbac3bccd6e4e986455390e22c8d57",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s022_simple.csv",
+      "gitBlobSha1": "eeefee708a124ca19b7d8a874e0c29508469c535",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s023_multi.csv",
+      "gitBlobSha1": "46f62b0a7ceb20b1932f83e3652f46fda69e495b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s023_simple.csv",
+      "gitBlobSha1": "3f0d4cc29a0ab6b907b5b5918d18be9824d28fdc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s024_multi.csv",
+      "gitBlobSha1": "dffb69083897d2da68aff1247c6e3ad4ddb2277e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s024_simple.csv",
+      "gitBlobSha1": "e6a236b8055be7eb1447a263817591e0b2982710",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s025_multi.csv",
+      "gitBlobSha1": "c0478e3e99c13f5919216e1a63b26a9e86cd26a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s025_simple.csv",
+      "gitBlobSha1": "adb83da5f5ba733656ca82c7fdd8b6d8717b191e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s026_simple.csv",
+      "gitBlobSha1": "afe1a261c719da70a89f4a1830611351f3a7ac70",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s027_simple.csv",
+      "gitBlobSha1": "e2ad65156e9aa8f7405595f2fbaf145238ef34a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s028_simple.csv",
+      "gitBlobSha1": "11bd5cdd4d0330df3f3c8889127d6d4e8e202c45",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/s029_simple.csv",
+      "gitBlobSha1": "61688fb5a28d94590935bde5995a565be58cbccc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr002_multi.csv",
+      "gitBlobSha1": "868fae2fe36cb9762540441bb2c0d6020ba11471",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr003_multi.csv",
+      "gitBlobSha1": "44f65d64f8ace828e1d52544540e7c2c5ac8b65f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr004_multi.csv",
+      "gitBlobSha1": "13b54a8eade38692dfe48fe35403de3b2dcb1292",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr005_multi.csv",
+      "gitBlobSha1": "0cea890e2d8576f41948b786c919e6aab1430931",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr011_multi.csv",
+      "gitBlobSha1": "eb1a8fc8fc961010b418feba0924e10e36b1b323",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr012_multi.csv",
+      "gitBlobSha1": "5699e2c53e0e2ed28ab0b9060a0658d21d96f197",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr013_multi.csv",
+      "gitBlobSha1": "085db622ea7a475502c8222710ee312499fb75f2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr014_multi.csv",
+      "gitBlobSha1": "ab5739ff9138823819b9bc44d475b1cb6ef26867",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr015_multi.csv",
+      "gitBlobSha1": "0f1ad60adc756eeb3e87760bec457ac8abdc81e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false
+    }
+  ]
+}

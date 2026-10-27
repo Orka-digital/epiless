@@ -1,0 +1,3631 @@
+{
+  "schemaVersion": 1,
+  "upstreamRepository": "https://github.com/traceRERC/pse-test-media",
+  "upstreamCommit": "ef78542aad496827f25064f57aaf13d6a741ba75",
+  "license": "BSD-3-Clause",
+  "selection": "All 400 temporal CSV cases outside the original 42-case development set, selected by path before the first expanded evaluation. After first encounter these are regression data, not a reusable held-out performance estimate.",
+  "expectedLabels": "Upstream filename prefixes: f/fr = temporal/intensity threshold exceeded; c/cr,l/lr,y,s/sr,d/dr = below at least one of those thresholds. No upstream combined spatial video verdict is used.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "gitBlobSha1": "bc7ba4089dab486720c006101bace1ef09d338f6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/LICENSE",
+      "kind": "provenance",
+      "sha256": "14fe5e2fc911993320085dac391e9ff96dc8eb8bb8d59e7f4131fcf2b1f7efe7"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/README.md",
+      "gitBlobSha1": "55f22ed5cb2e95580fd063d9866e267f0e6347c6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/README.md",
+      "kind": "provenance",
+      "sha256": "ac8e74e7d5aebe7114f3a4ee45853fd7385971d2efa2fa7afb417dabd3ee5312"
+    },
+    {
+      "path": "red_flash_patterns/30fps/README.md",
+      "gitBlobSha1": "47b438c2ae6450d09102157e5ba9981375d811d6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/README.md",
+      "kind": "provenance",
+      "sha256": "75ea8cee6029bc8d53b7a9fadcb891c5fe2c97dfdd470825cfdfacbbb46dc7ff"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c002_srgba.csv",
+      "gitBlobSha1": "f438df878d04d3c34760864f45ac910547b702e0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a7b42c8ea0f7edeca2fbf099a08daf2f423788a9d0caecd816cef236517f0d82"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c003_srgba.csv",
+      "gitBlobSha1": "78e55774269e76cb5b1bb7ed344b4979eda1f2c1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7ff6793b4421e3317399b09d0bb7b007e7dd61e4128251ca75f8c3168f4f1b8a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c004_srgba.csv",
+      "gitBlobSha1": "e10f5fe396bca2ca8c76240f8bc8c9d989fd2e16",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "906cedbac641b5077043352d34d45d54051f87d2727f6bc9c396aebd4199e827"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c005_srgba.csv",
+      "gitBlobSha1": "91729ea3f4cf7057c54c15e3ad007fdfba7f19f2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "608240f5f2381878f73c92a02487198f4ef69a688d9b04af7a9025a4e9fda008"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c006_srgba.csv",
+      "gitBlobSha1": "483ae2f5d493cbb7ea35b020136b14dcbbdc59ed",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7ef8e6c8a947e58c748a79cc479e132a991ed137070bea02d20efaf21b251d22"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c007_srgba.csv",
+      "gitBlobSha1": "5345cff074dbaee9e0cbf9d7a46d57db2cb4b284",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7adfa700a8f28aaf373b08a43d745c423e8c2fdbffd4ea1671f71d7270a25e7a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c008_srgba.csv",
+      "gitBlobSha1": "2da1e6614e3f21284a4f911a34d5e9a49b332013",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2101269243bb5d7cdfeafe4e82f583de5d82ea9092b53e5cbc89fb5041753465"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c009_srgba.csv",
+      "gitBlobSha1": "faa79da9b65c36e4f3fd7ea9e25bf487fdae83e8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d88dce532a0e2a7b07e25c43cf2efb501708d096bd676a13ced47a7a7faa6583"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c012_srgba.csv",
+      "gitBlobSha1": "757dedb944c13c2e18d126136f2b87a8f2ab4020",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a5309ed173762fe406de492db00add98d3532e0d8f859ec3880624bf3f1272ba"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c013_srgba.csv",
+      "gitBlobSha1": "55ed3f08f1acded438a9635574f5ca27e04095e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7d4ee0eede085fd143490c6890c5aea81326cd8b29a5108eb3d67d67773e9735"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c014_srgba.csv",
+      "gitBlobSha1": "fdf6c144c262fa31e72e2dfe08d8201729f5cb30",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a1099ee108db68cc0879621a312f96a007c3791e960bde4fa325f92b85dc403a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c015_srgba.csv",
+      "gitBlobSha1": "520ce3b62fe3ebca9fee2c2d6974cfa89183720f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2ea1e351a4b5ca1f51ecf6b888983008a8ab748eb239f3e521e8671cce4a4c78"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c016_srgba.csv",
+      "gitBlobSha1": "c856e5ee1e80180810799dc32d3bac382760ec19",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "3f6c21030ae0f021b3cac1828fe7be64902b21e115c8252380cb93426b983f2e"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c017_srgba.csv",
+      "gitBlobSha1": "a94e99f3186b98c1043c38e2dc0a4d826078cc41",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e1539e915574cdbdbbb4e93b1f1e028c2c6405ae5b9558ab7275e91a0bccd72f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c018_srgba.csv",
+      "gitBlobSha1": "85d8bab4ef46463d3dcb146066624ff68e21ca9c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ddddfaa3515f352ca1ffc705909956b109fc3520c8d31032330bd3901148efa7"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c019_srgba.csv",
+      "gitBlobSha1": "9ad37b3b0b5b89cd3443ca069921d0b90214d4f1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1fd156ebd9f20f6c3978630c42c49850893acbd6bb47682172eb3dde444fe37b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c022_srgba.csv",
+      "gitBlobSha1": "139c44bdae2ed06b9ca3560a19cbc4dad99096f4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "43b7bb399d2eba842d80e0cd9e35f0cf1a1034940261079a3c32c76ee5782f9f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c023_srgba.csv",
+      "gitBlobSha1": "03dd53366bcffae7cb17a1a7e081989d6e09f5f6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "31a8a7b1a2d6f0648878f6005f45a2724065bf315ad7e52351a2164224579786"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c024_srgba.csv",
+      "gitBlobSha1": "271e7105f77cd5195b3d62a0af7b3ea061254c9d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "51651beb267325a033ac345b80aa082b97da73751891409307fb3d53d03812f1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c025_srgba.csv",
+      "gitBlobSha1": "18a17cf11abe8a8bafcdd8397a2abc312f2d9928",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "80cd3ab2c5c50207252cef35fb7a1997c1148f98dfc226d9c4e9579e0335df2a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c026_srgba.csv",
+      "gitBlobSha1": "d69ae70038b86838b7b8e16060a488d818b8d5d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e9861c02a0d25d421c356f3a44737daa300cf635ee1a61f85acedddbcc1881ce"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c027_srgba.csv",
+      "gitBlobSha1": "a52648fa83f8030c19f917f9b5fab641c2772d6a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "298c93f55e609a20ef43085df22b8b80355f528595ebf58a7d3b029a27ed6463"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c028_srgba.csv",
+      "gitBlobSha1": "f651cd7b696514ebcf45a8102953b58fcf7f8b5c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "571501c407de8e5440400a9d1da9735c74255fd9a998d3ad60852a99565c7b10"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c029_srgba.csv",
+      "gitBlobSha1": "1bf24fd5865d1ea50d76174d067c281e979d1815",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "693e235f2fede63e89ddbe1ac6df82bad90c61d507c616d846d9e6d74981d051"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c032_srgba.csv",
+      "gitBlobSha1": "68709fe31d537b99b2392c3bd1ea63cf3cfb8a2d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "efd8007edf2a461e3a56ea6b96f7c37253b59d175ff7ece21a36517177867876"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c033_srgba.csv",
+      "gitBlobSha1": "18dfb4d67ef74d84e7da8cacec8d86dfef86f8d0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1c376e727779cde192bf2896e6c2734f207065332f8cefc89d0a94ce8ecf1f96"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c034_srgba.csv",
+      "gitBlobSha1": "7769cc306603e0f4b9de8d9f988a607f2bce4801",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ce9e52c146c958e85dec6697df586e8a98e99bbef304b99689aa76626516cb4c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c035_srgba.csv",
+      "gitBlobSha1": "fece5e7f88758f132834adcef253aea20dbf91fe",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a466b6bd1512c3f5de911314b2aeff86d4b41e59d3e38d873d80906f771f00a9"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c036_srgba.csv",
+      "gitBlobSha1": "aa18cc1022eef9cfbbe32dbe74e8c0d45b9f6a5b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "105ef8618805fc7bd7bbb0d701f071055bfac20e1915b8780728ca1b8ae918aa"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c037_srgba.csv",
+      "gitBlobSha1": "0ccdd7a01f1fafc4442783806f0cf5e385820f4d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "be22ca35e0d59494d26e3a2ee17360d5624677dc2b91a4e90f9dc20db0246f94"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c038_srgba.csv",
+      "gitBlobSha1": "e88985975fbe47494f31f81cc8e96082649701b0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "0b3b3acae0ffa2f636a15692717438b535a81b12bfe714d8e8eaf649686ade86"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c039_srgba.csv",
+      "gitBlobSha1": "b3a728a5cd82072ffefc49acc94a872819f9cbd7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "cb1b22092d5e243b491949485514e4925efcc59c7ff0fb2204210df5ccc42169"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr002_srgba.csv",
+      "gitBlobSha1": "04a95d775c21b52e1ec0ab7e8461b11f1bd3e715",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "33dfcc00171be646df3f43427838dd2c646239ec41b9a8d657dc61a935cc7197"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr003_srgba.csv",
+      "gitBlobSha1": "942a2b93efe1145d82513e3e0e894655df366f8d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6c41d4f10eb95bed4a8f16d983eef733b8d59e505520881b9b097e2ee85fbda0"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr004_srgba.csv",
+      "gitBlobSha1": "5a139941a9e1603a1d525bbea0638611081e1711",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1fc21a45e613cc0268abb12905ab516209eca93911c5c5e82244cb082ffbae7e"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr005_srgba.csv",
+      "gitBlobSha1": "a445024a3a8c2155b841b5cda730a4509f7079a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "96dc64c544c10142abc65c6e2bfcbc5925863305fd977cd86b334ea0763948aa"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr006_srgba.csv",
+      "gitBlobSha1": "44546ba78536c61e81306c9ad528d40036665aea",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "450e896ac1842172ae4a49b806e59a5738e69be134f7b820fc138b834be93835"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr007_srgba.csv",
+      "gitBlobSha1": "2285f435aba876cd6d1710fc343ff90eb2706038",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "78eb9a0e88152c263cc0f56e4b68887dcb5015c9e1a749b2b4f4abd2c2e738e5"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr008_srgba.csv",
+      "gitBlobSha1": "1e18155f69673024b53f492e7030b7595a3db2a2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "70859ff56d3063747a455eae1836014ebca45735133c30fb82189ed6cf9dbc2e"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr009_srgba.csv",
+      "gitBlobSha1": "332ce80a3b90ea53639ea8bea63c856758ed239e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5f387c176d3bf81b9c161d3500ba11afd8537ad92f2049e2b59dfc7e059eef3f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr012_srgba.csv",
+      "gitBlobSha1": "f1ab3ee368aa41e7d825f3cb9b53deb2a51a2e90",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e47f51246f8dfc45c5fef9924edc6e92dcc8bba68f174f62bf03f4058771692b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr013_srgba.csv",
+      "gitBlobSha1": "f2f4e3c506939f7a5831306bf83b7050a4d14880",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "aa8314f5526891d0572f526b5c7bab5bf565f2f290decc54ee6b2cf707e3db2c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr014_srgba.csv",
+      "gitBlobSha1": "fc32a70d77d1a6bdd5d47cf668fa4eff962baf10",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f0b633ec0db50dd4fce3f957bab54c3688947edeb385c35e1661f1a6a635c64f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr015_srgba.csv",
+      "gitBlobSha1": "49fed985bff59780b7ece91d4cee74902251dc67",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5482c3b396b0cc6fec2f214f2bd486740a9775292d999995125f7cfb1b912fcc"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr016_srgba.csv",
+      "gitBlobSha1": "f78a02c092d41758dec42a84f7d8099708af98b5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "9f6e9a9cc5de1e3dfe73760229b30456a50a51d0b24766c34fcabde4847c1a5c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr017_srgba.csv",
+      "gitBlobSha1": "4d85cc155328bf40c2efe7202edc9d905caf85af",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "472be770eb0068e932d2041d2ec36e3ce92d8b47a9ae627d79bc68762b959ffc"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr018_srgba.csv",
+      "gitBlobSha1": "1bfae819337e1c26e662160713433e2fe45ab5be",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6ad68c766ee82f1a9239778ecc62eb56eec3c65c41d0d8e5164e1c04af3df872"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/cr019_srgba.csv",
+      "gitBlobSha1": "14dcf647caef54e91476d54fe9174b0d7b7b7f31",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/cr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "66cd9c7588e01f782c0ccf4a6410576780b38cf4495e84e10a157ac39af89140"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f002_srgba.csv",
+      "gitBlobSha1": "9765ce522cf4ce5171a5258101e385f12827556c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "cba85c80a493ecfe186f7cb1dedd7fa0c2a8bd48aa0d43c1345f39f3aca28f8c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f003_srgba.csv",
+      "gitBlobSha1": "17049d90c2a279258043576f7036a40254aaba90",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "bbeffb82a5f938c12ec0082fa5b39ba4797ccf9121426cc11175d07591c5db22"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f004_srgba.csv",
+      "gitBlobSha1": "92b1906bd2059d81476178fefb0ef4a1189febbb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "1e687e11ae3d4579ed3c3db93064ac0b00d969ac91abf0db267845a03486765d"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f005_srgba.csv",
+      "gitBlobSha1": "2182aec50ec64faeba233340c5467808a89710b1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "40f30b9b28a4aeefa1d3f7e070cc8cf7dbf6c89f7adb923316a504c6a4fd429c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f006_srgba.csv",
+      "gitBlobSha1": "e286bba08edbeb15bc02bc0994f0b58602f13f9f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "09e3201b7d4c5da3e55399e61da2d97a563801872b4b677d055c577f865114e2"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f007_srgba.csv",
+      "gitBlobSha1": "f38bf2deffd2bf9dd8696b49f68d087455774867",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "cc5c2816135a0e0db4c6d2c1d33d9b5bee9aec7536900ed174a61f523d6a1b0f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f008_srgba.csv",
+      "gitBlobSha1": "8c7602a4fad37e1fcdb18707044e275a71628a3e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "e6eac24f8e83ca436c43e45e41c41394d5fa5c363971acb44b600476e9ee60e1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f009_srgba.csv",
+      "gitBlobSha1": "39a11ed0e5188d95ada700880f739187043708fc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "4560495ff334bda1ad5f0f7b1d3b19f58ca04a59bb094d851abc5a374de67852"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f012_srgba.csv",
+      "gitBlobSha1": "a1d04ef2743e2c5bb27607963da976892db73dc3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "58efd7398ef790e466c4c28979f9245f40fef89f4533dae49f20c31366c93f49"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f013_srgba.csv",
+      "gitBlobSha1": "f664974305892f43a6ff786fb872bc90ce697375",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "d9928300042d07d0273ef5878daf595030ae48f961cebea9ae77aeb1cc4a20e3"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f014_srgba.csv",
+      "gitBlobSha1": "6f097821db76c4a6d20c57494bd871bd41eed752",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "8b12ba60b39d9135c03dbc12ac2d1b9076c7c365986b01aa7d526070e12040e3"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f015_srgba.csv",
+      "gitBlobSha1": "32dbd207938ebabee5cc403448f6c881c3ddbeb5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "7ac9447ce917a348c339e871a5844e20769c01b6401fe700fb6ef0756ab43b79"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f016_srgba.csv",
+      "gitBlobSha1": "2df54bd8886f8497d56d2f244887f004262c8a14",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "4a56c962f625d50d0841b1ff8ace06818c5b14b5f63de4b1a4ff2969c1943fb8"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f017_srgba.csv",
+      "gitBlobSha1": "cdfa3a05d5ae1e065f7cbbb78b80ee926c9d80d4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "903d3ae594e60c894759602ebb723e61feaca2f4275c5d7e9dcb8c3ce69cd879"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f018_srgba.csv",
+      "gitBlobSha1": "7f5a9eeee6b6f510bbd7ba2ac890054c2ae1478d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "2b3a42fce112d133da3662bfc423317375e90067f2e8ac617b4dbb8b93eb83af"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f019_srgba.csv",
+      "gitBlobSha1": "ef0caf7ee99bd3319ffe9289f4aefb66e9fa9c1d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "9818d273dc434f39356b491743c33ea49cf9950fa8e4c08f2b6a71fd40ef02e0"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f022_srgba.csv",
+      "gitBlobSha1": "6f2ee4a4cdb1b45aed0b1fcd9b6ec3cd9424105c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "2ff52b9c9557a1aeb370f18cebf0c3f979d22d1e98072d199f796d9364568b91"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f023_srgba.csv",
+      "gitBlobSha1": "369a04618e04ff5ff1a91134b1bb4c82822339d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "34f8f6716c20f06eed33259a8c611e5623b08b6557f6d8cc28b4658f32e745f9"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f024_srgba.csv",
+      "gitBlobSha1": "fd9d54edd58c58000e2168a66bd9fc7a4ddc42a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "d223ca0df37ba747d25f6798334b85dfaa87d4b3aec857212a37cd673e881c3b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f025_srgba.csv",
+      "gitBlobSha1": "fddb99e78dccc52618786f717c3f1cda874842f2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "bc3ea2e42282dd6e09c6ba5765fbeb8733b4cd1dd360358c53815e5d87bd7d92"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f026_srgba.csv",
+      "gitBlobSha1": "774c81502cb9561213dec9f8557312abc533516d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "b9fbb8ac358b8c408acb76a6b809cf32d65d78bbfa4d385c0cae7f4e5b51b930"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f027_srgba.csv",
+      "gitBlobSha1": "8dcafeb21b5792442a88e459eaaa62df52d01842",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "bf53b572133255483847205bf8fbb1941e99084268ff05840a330a68be2fff2b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f028_srgba.csv",
+      "gitBlobSha1": "d4cc7d129d9ec8e695c85fdc289e26d8f850b5a7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "51306c18c8abe11ac000522d666f96802834cab9cee558ff5cc48bed0d8c361a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f029_srgba.csv",
+      "gitBlobSha1": "2e55ccd286eccc798aaad65f073cf7456738092d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "7d67625d0fcd00ce5e608fddfaee2ac9acefe58b712e0846c94225ab56b1aa09"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f032_srgba.csv",
+      "gitBlobSha1": "08fdba61986481c9fa43cf6fb6823b96ec7ff240",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "58244989bc44dad8aa83c907bd0d5f57d9ebdc11263870e1cabb6596338b01d2"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f033_srgba.csv",
+      "gitBlobSha1": "c3444b34e84d475af97f33de48c3b1c07fecda02",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "0f2b01eadefbcf3690fdd423ad35e1d6ae12238571ed73fc527fc058f7d63748"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f034_srgba.csv",
+      "gitBlobSha1": "0a453817780e82e43b1a6cd971b2373d057046a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "94167edf9b1b9a45c8f6a7fc16686566b41bc6c8f95de68a5025e8c0c3f59ade"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f035_srgba.csv",
+      "gitBlobSha1": "bedf549d0a4652fa1f5705ca1b3505c7d4f90e1d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "38ca3c036beb49b9e111fbd9df12776a70beb933cfa2215f6334e739abe39fc1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f036_srgba.csv",
+      "gitBlobSha1": "e18751942ec6f0d57bcfd53dc71569c18be37180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "d35d873bfbb36d68fccaacb9db182f4d1c62467ae9ce6bfd960de1f62cd85e59"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f037_srgba.csv",
+      "gitBlobSha1": "8291853e0cdd8fb7fe96d72eeebc8ba47725653a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "e17ba5879bbbd9d71fd6cee086efa1beacf76cd1f5f352c5bad6a1fd54a4e529"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f038_srgba.csv",
+      "gitBlobSha1": "803b192ca03b3ea0fc857eeacbb9c9dae1c6b3ac",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "950da56adf6992f0e4fe3e3ed9cb1b4b8ea66e0d8bd683e20d7751a285c11197"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f039_srgba.csv",
+      "gitBlobSha1": "25a9addd65cc1246081b0ca526e6bc8e1ac92edc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "8c3e63a7c21f6524f8bec22d3e168132316c3ce0247d6641d41156114ccc99b0"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff001_srgba.csv",
+      "gitBlobSha1": "6ef9c899b19b0888823c771dca4a70b2e414ab20",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "464d898d28cd4190b6da6be4d25aee90cbd0d87c82cf9410621eedd3b3bbce66"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff002_srgba.csv",
+      "gitBlobSha1": "4edca63e8bed65c7386413058320a49f65bf7854",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "43525639235491c49ddbf05463ee4fbe823b4b583f6e9ab80a38576170e1b2d2"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff003_srgba.csv",
+      "gitBlobSha1": "d7f83f2446dfc681f32ff9b5720690c1678966e2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "5805f3d1afa0344cdfbbf9aacd50653fadade3f7996a953713a82f6ebfdbdfd3"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff004_srgba.csv",
+      "gitBlobSha1": "fd206f45a678a3089ae7ead6ddc0bb63e17142c6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "8479410b1645dc06746a4914464e8be49ad948b9df382e23032beb1083302781"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff005_srgba.csv",
+      "gitBlobSha1": "46e02895039d4412ff06d64a0beb5afcb547f83c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "77e4c63ff0eee6d3290255108e66cd97dd8e96c3396a753c908a1a0c44015132"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff006_srgba.csv",
+      "gitBlobSha1": "83cdf3ebd90d16ef715e7f9dfc7f27549788610d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "31ae06db145d9d6d08426624a706eb2213c33eed55d35490c40b88853bbf1add"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff007_srgba.csv",
+      "gitBlobSha1": "166145088fc6d4be3a2c4d3f40b59034df38425e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "c50d8a9c429b92c938676beb03c3c5545196f2822aee8d8bdaacf39b3fc11839"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff008_srgba.csv",
+      "gitBlobSha1": "14ac27cca03b5fff553a5056e07b8de65100b170",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "066d12b6f7f66564ced9dd3300b637496976b9c91e3f5ae150d371deba8c41db"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff009_srgba.csv",
+      "gitBlobSha1": "ae1fa78549067794075ae60eacaf429a28a9dcb7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "b8f38623b6fc7e2de9da8fb1a1485da9926814510abc5c841cddb860629c0754"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff011_srgba.csv",
+      "gitBlobSha1": "4179e149baf2c3890ad382bf896f54369a67dd6c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "ca4a71b972ce486d6730fcb772aeeff49bac012e691affa4058bce471606444d"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff012_srgba.csv",
+      "gitBlobSha1": "b3d81c4851121d846976ddf06d91f0428b16cd74",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "2e9bccb5a4679f290ba5393c8f2df27668356eabc58ff7e219fb1ef7d8c51482"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff013_srgba.csv",
+      "gitBlobSha1": "1a7d599f7ca0cc0a72e9d0b3fbf551b23a834192",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "e4b03b6d4d53478d52bc9bf8dc7944cda7a6cab88d85450fdc681aa5b144343a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff014_srgba.csv",
+      "gitBlobSha1": "00ebcfc2e4377085854a7f2aa48d4f1489f6a796",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "fa405a8a2438c9fad590a2872130e674b3dbcc42f32271ebc1388bac1331bce4"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff015_srgba.csv",
+      "gitBlobSha1": "0f059442ceef549eaecfd164e578cf88bfaa72b2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "a77a6a62e62c56394556c6002f3340e3c0935f2ee5700194112b98fed6905441"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff016_srgba.csv",
+      "gitBlobSha1": "dc918497cc1ab633d74abb141693b1edf4722152",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "3261aaa4bcc6b2ccca0c6266e27e879606768ff37d41389ea0d350806509e5fe"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff017_srgba.csv",
+      "gitBlobSha1": "b7ec5c2393338cc476fc57a4db012d0db193123f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "9ce2f125ad7d1ea1ca35b64a1faa851daff5f0141dc878d48ccc8c4b75a177fe"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff018_srgba.csv",
+      "gitBlobSha1": "4c4dd858693d9278b98dfabd09472f80a4987315",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "4f8bc28a2f50c803e5859c2b5e0bc5bccc25cd6d25834606becce367e1ae9732"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff019_srgba.csv",
+      "gitBlobSha1": "4d91cd79194a707a9123f8b112ce350ae1100c9e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "7c933520ec9d5e18ab10af3bcb2bb52f0aeab5440a686cd3ff35e472f21cd0ff"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff021_srgba.csv",
+      "gitBlobSha1": "ad86f7e34daecc814b794cc8ce791af0319a5380",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff021_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "f8d01829b79524adc20a9dfb91eff58404c56dc3f496179df6579d6f1c4e42b7"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff022_srgba.csv",
+      "gitBlobSha1": "4fd8f44cf2c0012750d2816ded5ad3de5d92a8bb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "85dca4d2b652208c34b7eb07f5a1f975c32d0b919f92bc6b154f1c7b84e2eb40"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff023_srgba.csv",
+      "gitBlobSha1": "6be54241f611e8480cd7e4f9fc1e6180bc858058",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "f2e38220859db51b544e9d4b1ee28d0432746de9a3c3f03bd501b979b402f32a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff024_srgba.csv",
+      "gitBlobSha1": "a8d0bb53b3e2c7caf2964f30dd1b54fdc462cc74",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "223c04b591664614e18df4ab13bed2d21166b3a5d3a639fb19999a6f26f72be5"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff025_srgba.csv",
+      "gitBlobSha1": "9c69e24bda4ae197a2930e919006c4f659723070",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "8a15317735d4f27331919f1644d30ac3be4a0a4843ab91b3e7c8d03c9685e534"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff026_srgba.csv",
+      "gitBlobSha1": "aa2102cbbc38b70d526e232e749348646b63057a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "e87c0803add61f16910a2fa763664d3396056f9647f4041dbd6ffc48497fd9dc"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff027_srgba.csv",
+      "gitBlobSha1": "d814cdbc9da376b5a65796fd7585d16e9d03a566",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "f6ff2814b8b4249c2b9e5a34e0ba7bb771d0a4585deece6df749210411270b27"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff028_srgba.csv",
+      "gitBlobSha1": "4e35ac8ab1de686c171071a3aa04309d42db2128",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "cf9a567893b07c432a9ac3b7618ed7f6f43923cefd8aa5466d16f66c438d895a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff029_srgba.csv",
+      "gitBlobSha1": "496a033ddd3115c5b7b7d6a6179a8f55b398ca71",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "288c0b3ee7083493c99c326889dc8c0f121a3aa8db003af1e2f5246551d7febf"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff031_srgba.csv",
+      "gitBlobSha1": "f051a22bf906ce256c873765aca1b5e0173b3627",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff031_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "fc762401f50bc3f23035433a9cfa64ad9bcb59622de5f829498002452ebbb347"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff032_srgba.csv",
+      "gitBlobSha1": "138c26f73e9802d865670c453b8e3914f98f4dd1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "5acc43a11b8241d9c2fda0f91bc730dbbd4357fde7decd99477fe5ef718b18ff"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff033_srgba.csv",
+      "gitBlobSha1": "5b1714d119f8cd28c31be34cdcef2a45696c5b9e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "bc995794f7fb028fabf2c14285b2b9b17847812dc49ddc9e622bcd6687889b41"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff034_srgba.csv",
+      "gitBlobSha1": "33e86f0f71df477c39a4bd04c2e8bd3a1c92ffcb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "92d3e8b41b68532b5e2a6edc1bca0398323e665bcdfd79118e139b7377221747"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff035_srgba.csv",
+      "gitBlobSha1": "4ed8d00b1099950ea1a21e55982dfda89431b14f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "c72a15be80db911884b95d731c975266899989855169d5466d0434568078238b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff036_srgba.csv",
+      "gitBlobSha1": "0a9d573470b21ef6d976630f449471a481b9cb08",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "744b2baa985a2bcff65ff25022f183cdb894cdb6ec786e547b9097d57f8c31e2"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff037_srgba.csv",
+      "gitBlobSha1": "66e1d544ede2a1402118e58649087991c1b237fa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "074dabc2c51ba1c178ce8b011bbcf7303daa6cd983b85eb68982ef73b2790da8"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff038_srgba.csv",
+      "gitBlobSha1": "abe05c6f8849e0826593b64dc647d8b76977ed34",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "ecd754884f3718a51aa77d233f3f9819edccb00a52073c65943d1237112dcdaf"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/ff039_srgba.csv",
+      "gitBlobSha1": "9ef8ff702087d92f402b937d2436e9143caf0c7b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/ff039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "de35bb554da100047bfe8ad4d68b085517e57cc637c4b4dac0acf2b7d1dcd583"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr002_srgba.csv",
+      "gitBlobSha1": "83dd8ea173e7e18d9e9daa10d8dc9c2b6c7cbc74",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "9def58527846ea7201b2d53fe236c5c2eed8400fbcbfe43dc1c088b999127735"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr003_srgba.csv",
+      "gitBlobSha1": "7d8f16675f6166d603a7418504a1df5f779d6370",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "0ef239fbe459d19adab6be91bd66ff9c807052034c27d02d3e0e22f793d746e6"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr004_srgba.csv",
+      "gitBlobSha1": "ac09df5b660cf120673dd9b79bbccd89f7313937",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "7a04465e629de5a22fbf4b97b600938d12d72a7101f414d2fc60d158867830e0"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr005_srgba.csv",
+      "gitBlobSha1": "0bfd92305b55a7ce0ea551b8ebc6d652e609d3a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "3cd360cc9100eb43c3dfeaeab1458a056cbe4c5d7845a8ec4bc69455c0bb6390"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr006_srgba.csv",
+      "gitBlobSha1": "17100b4e79e3f48955557ab7e41cbfc6301b8dde",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "46ad655502969fb4b527d8ffadc8162b7c4200b7e33ffd46108a32afeed500ac"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr007_srgba.csv",
+      "gitBlobSha1": "c8b4b30e99738008c544b501f6992c06512f16c1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "1cb96bd791e9ff4fcc65a893ba74d56283db4b4bc8760d27eeedc9ef5c751201"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr008_srgba.csv",
+      "gitBlobSha1": "3a7504747cce52304f8b42f1e9fdbd9e50718706",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "2eb5261f3618f6adcf606989058168736d1f15413e77977825299b9efc68d743"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr009_srgba.csv",
+      "gitBlobSha1": "1462ea683582ae94cb172694221cec5a3f89442b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "f4a8c961114cd96bf7102fce684cc517c4a3cdd52a2a41e8d1d9ad7a6868299f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr012_srgba.csv",
+      "gitBlobSha1": "ecec6134f1e6355c56b5fb7e7f9997baddd6d3be",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "10cdec19c383b30f0bddd31ffb7a74ef91c71259424dc1733697a1f4637a9db3"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr013_srgba.csv",
+      "gitBlobSha1": "2a34a5e495f38ba36b7bdc7cd6025f563878f955",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "97024691c5678b16e0014dc83dffbb2e1dc410f6b455d9b0eef186079ccd1f2a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr014_srgba.csv",
+      "gitBlobSha1": "d60a7320121102376372ee6a1c77c1600ec5e56a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "9fc9efa107288bb0e7e735cbb812a4afc80e3c4fef9394e00b595480c68e1575"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr015_srgba.csv",
+      "gitBlobSha1": "6c6e2167611380f8a4f5340d6f8872fdd1eca7ec",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "ee89579e874cbb5f794687aec6c7ab7947ea6b4d08e0a0484679c53803be0aad"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr016_srgba.csv",
+      "gitBlobSha1": "32632e0e2618e9172649056fe232aa24fdf57527",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "c596451eeb350990eafc11bdd6ba80789c44b1c4dc8dc3a59e1ef4d5091875e1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr017_srgba.csv",
+      "gitBlobSha1": "c8dda14d66b25b735db4d94cb5eb339aaa86f0a4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "5989144bf7c95d3fbd7e216c0627e43b9c21130568abf366841156dc6e2795aa"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr018_srgba.csv",
+      "gitBlobSha1": "f820b25d6d66bbe198220147f8da49a6e11f122e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "c0f9ca376d3a91a9d468fa302d0b3ef18c8e07910224dcf2f047065c05aa5c53"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/fr019_srgba.csv",
+      "gitBlobSha1": "964d391d19da972eb078852a1dff1db3fb07cfa0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/fr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "54c977eca95abc657fd3a70bfb0af7af237134445e650b2930628248e3f75300"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l002_srgba.csv",
+      "gitBlobSha1": "bdf257d4d51b9326db1b4fbf9e55ed9f3d6c2d81",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "07cb940370b9db65f7913863984e1b7901c7525ecac425f3c29a33ad14c656fe"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l003_srgba.csv",
+      "gitBlobSha1": "0565802745cb58cbf0d7390aea40f6f21e946a99",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a459d544f857f93b88b32171178a9dee1f0784f08f225c8b1c2174c357b96aa1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l004_srgba.csv",
+      "gitBlobSha1": "dd61be1e242b16dd0c9cb75e1136030232016a56",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "aef7d1d469dc052c9b366245e112452aae40bfd081c0231520ee7692f6e79f3b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l005_srgba.csv",
+      "gitBlobSha1": "f61a6a1833e84e40ca554610136382cb2c369faf",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d281a1aad33efba141eb7e561822fc80dd611dda912f89a8d95ac6bf99234180"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l006_srgba.csv",
+      "gitBlobSha1": "d9f3bb57a4ef315555ccfdae4c6764a2d99944a7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d605c24be09fca6884b19690b59caf9a9192df990cf5a1e4c954bae03428f074"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l007_srgba.csv",
+      "gitBlobSha1": "3fff965d9ae0086a6177c58ba63126244a7527a4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5425ffed665a8a04f0caa7a44fdc60eda87566b53e0fa46ae704356066b49c1f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l008_srgba.csv",
+      "gitBlobSha1": "80834d4fb05691747f704b99350faa094378e5b5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "344f3522b355a019a4b7cbb90502480201a3b31d4c7c921a0c971b23063a6940"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l009_srgba.csv",
+      "gitBlobSha1": "4dd28c3328356fcadd9a8962db0da484076c581f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "208142a1f26404b8b30c656fccf3d8e4703e43598adf5619f189fa336e98809f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l012_srgba.csv",
+      "gitBlobSha1": "5e329a39f96e9ad62aae9fe0043922b374c39d42",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8872a983c4c786f38cf07077f700727e4380f1f490fb33cf2dc35e43deed7975"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l013_srgba.csv",
+      "gitBlobSha1": "703dc31e3453169d63bb8ca74252e644c73dead0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d4704c0cdf2ea7e7267e38cb92c3b61e23c7905b4f4bbf4aef8fa4a3c7662e18"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l014_srgba.csv",
+      "gitBlobSha1": "78752d2eae132575e7b425086b977f2ad6cc4d09",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e24f47cb764497d28644fcf2a5764ed6a64bb17c0bc0e412eb2ebe8fdcc650a3"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l015_srgba.csv",
+      "gitBlobSha1": "652ffb29852277da040e7cbdc2475d6529485841",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "abf8d766720ab5ccbcc35fc7536ffc198bd240c24604cc4d448651ad425e4314"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l016_srgba.csv",
+      "gitBlobSha1": "62a4e1e207e0f49384ca78e37c7b74d6a5196b8b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a8e1033accbb4d978fbbbf7a7d589ca9a153482d024a2cefca9a3b1bc772207a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l017_srgba.csv",
+      "gitBlobSha1": "ec4ced6b8a4eaa738d0acb3d319df367ee2072b0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "26e066bd74e112f4850464a4d90fe49224b1a6169be8d8d9e2521d18c9141fbe"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l018_srgba.csv",
+      "gitBlobSha1": "5f7af1dc643442933a840f9402df52af31270926",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a5136a3cbcede12b39824969379ce1b78f9f822be36b9d9959701da747a6553a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l019_srgba.csv",
+      "gitBlobSha1": "086c30de6e54fde39aad0ceb856be1f973514f72",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "17309fce6de636c3365e85b443ff715c19f5466eea9859748790e7fff099d5b1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l022_srgba.csv",
+      "gitBlobSha1": "a63c2359b8563d466847c4295ef04d56730d5463",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a5272b4205bb5a587108d0de76097231e88d791a8e009306eed3eda7a0a6afe3"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l023_srgba.csv",
+      "gitBlobSha1": "58c10345feb1891977303904e8a51b378c18e2e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "447ba3caee887e96fcec823a4142e936145a9b2a4656eff757ecc9ea289215f3"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l024_srgba.csv",
+      "gitBlobSha1": "ff6b69e1be52ada294686b491e8a79c6bb9fa09d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8072c0985100765f062c58aee4ee8e4fba18b1b0a57a82920a00b5441478b80a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l025_srgba.csv",
+      "gitBlobSha1": "91e7ae17dee44213ec066f1f577bebd392447f06",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2e198d5896b67a8dce286f5033d8b35a51909563a02218e13ff0345309251dd7"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l026_srgba.csv",
+      "gitBlobSha1": "46bcacf6a4f9db35596a5b4bba4f8961e10632d1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8abac48be91751b5ef049b37ec220491305aa7be5858850fbcc41c107cb53488"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l027_srgba.csv",
+      "gitBlobSha1": "6dcf9399c21da604739d3d48ccfe5a0be5cd4863",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "609957a306975f74a778aa7f347ad02a175ad75c2f69a846a673b319011ec3a4"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l028_srgba.csv",
+      "gitBlobSha1": "0a9c57d4f979e472c613cd6f3ed4970bce66d350",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1e699ce881d91394c4a1641d96bb2983b880de550893b4cf209ffd364d546cff"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l029_srgba.csv",
+      "gitBlobSha1": "527d0c336c3c5d76099d53c2ea31aa232ac40bf9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "4f7fdaf27ba97646fe6184fdaf446310a1cbea903b70fd1545303735068a4967"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l032_srgba.csv",
+      "gitBlobSha1": "8916897a91c0f753261a06c34fc02fe4b4dd4f42",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5fd5024ebe92161c11c0feb93035fd2da47f459dc37efb4fafa766fafb04c806"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l033_srgba.csv",
+      "gitBlobSha1": "968ed2ea140d77bc4396c383f728f19301a1c6fa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "3b255b26fb8772d23a69644b62e97643a5bdcf967316552a274092ce3c73f9ee"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l034_srgba.csv",
+      "gitBlobSha1": "d96b3f045fc36998d316514d1164d1e89d23a974",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "bfdad2d83173fce0d510784c66d58773c9b3962ff22958b315716fc626005031"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l035_srgba.csv",
+      "gitBlobSha1": "703e86971693caa7f15f56a1ade4a7b4d8ab809a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "4e8d290da33086813ab0a3bed08e35b5ab23f7dd3d54c73892f8c1c1dcec9445"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l036_srgba.csv",
+      "gitBlobSha1": "fc3c4ccf017778e83c81a54fb43b78ba327ae115",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1d8ebcd90d9e64077a8b78a0df03d87d8f85496ae185b8fe0ce5947abfb8039a"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l037_srgba.csv",
+      "gitBlobSha1": "4326322499e5062c0658cbdd8024ace6bb8cd442",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "fbd81414f38a8b2f404fba5a2b03b0b533a848d7484a410f4bb2523f7bed0c19"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l038_srgba.csv",
+      "gitBlobSha1": "b9ff3c69c0bcf7cb5f4bdb2ae97ac442c216c841",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "87aad2771f60d10b35372706aace81475309978c40c665197da39766298c0906"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/l039_srgba.csv",
+      "gitBlobSha1": "609f6b6c6446bebf6f7651b2f0c48e58f27e066f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "183b2ec9f03982ab9bab2214020eb28048e47219d71e99ac8015d9a5d6043d58"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr002_srgba.csv",
+      "gitBlobSha1": "5c52e783e3f04f2d2fb6b1661d58d533fd8fa7eb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "81bf0ac635909a12583447e6bf59338ae39d79ab5a4a5f0cfa4b2f6b24443535"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr003_srgba.csv",
+      "gitBlobSha1": "4e24d5ec00937003e739279baf93f76f2ced2dd6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2949c5505ec0fb658780dac8d8f8d0892438364a8284300ccc0ac7b8696beafa"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr004_srgba.csv",
+      "gitBlobSha1": "2fb4f162bd43a32ecd9f8910c5fc96e14bea07eb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5e673b05e3552c81d18576855f8e7b6d75770061bacfdfa3c9c6c1cbfe829261"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr005_srgba.csv",
+      "gitBlobSha1": "9913ab0885da3abe94bee31b593835cb0d3acb36",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "21b92cc1e2f80b901b60226307a36a5f16dfa4535ad69eebce635b26a1fd9971"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr006_srgba.csv",
+      "gitBlobSha1": "6a2c9df36ca02a41058478523392b7ce223bafaa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2d96ed15af101de427867d6024f02cb7753cbf271704a96f52722e1933682629"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr007_srgba.csv",
+      "gitBlobSha1": "134fad745c4fbad6d1195d7d0003e5bb724f7685",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "242c643db7ca7d1205dc2b42c1ec73dd0d0f159229215bd5a5d477114daea8e1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr008_srgba.csv",
+      "gitBlobSha1": "93d8bfb6c14fe4e25262ffe7e8b9db44112b29a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "92d0172397d913b2694eb1e575d9602fcdf282f67b44dcc1ab4b8815ddb214cd"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr009_srgba.csv",
+      "gitBlobSha1": "8733c5d27ec265eb03b0fc038c15097afd1d6808",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8d70f8a1f571432de38048231b8db86def3b68f15045673dbdec5ec7aea0d133"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr012_srgba.csv",
+      "gitBlobSha1": "80defcb9efa90bce2c3543bc203c1bd76795fc13",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8219bc3c626981bb9d6c6c56fa94bb6ac2878b5a7fe1422c0f9d74559707a796"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr013_srgba.csv",
+      "gitBlobSha1": "cb33ff66122d2306eab55ca53a3951cde42d3d22",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "835f1c431360fbb460655b793fdde7aae01172db139cf37225d97c38a33f662b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr014_srgba.csv",
+      "gitBlobSha1": "7f45255c8ad33a351e415f928345f4f112e129e7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "526fda15081a90fa87f182b919cbb8d03b92b04b3d3ff5d1bc5a3abc668a7128"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr015_srgba.csv",
+      "gitBlobSha1": "478ceaea0d05387fed96199e1a7ae70c6654d444",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1508407303c137ffe90cb2c2f83401cddc80110b72d805b613d256761d3e847c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr016_srgba.csv",
+      "gitBlobSha1": "9a5d338b59650c19f8bcb31595f5ffd2ad7a6d0a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "05697b7eeb891444c047b55babb212a9930e9e982b90e889d37a2c379068fa1c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr017_srgba.csv",
+      "gitBlobSha1": "dd0b4a98aba6430af9804a277eb4aae6c7ba089d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e3fdb2906158f046c0eea7ac6210d641a5222d952d8bd269b4472a7329a33218"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr018_srgba.csv",
+      "gitBlobSha1": "69eadb1da520d180327c682d676a59f6bdda15d3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5d5d383fde79d5a74dc33ba1c0427a603b21b53ece506e25f6479718ead78271"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/lr019_srgba.csv",
+      "gitBlobSha1": "c8cb45efd4230105a5120203851bd5b64dd05bef",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/lr019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e3faf31e0e28096c9eaa35c213ab9cdbcea40842efe8707438302b671c2ed09c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y002_srgba.csv",
+      "gitBlobSha1": "e55c0c39b92602873188e609a123db0a28f14124",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y002_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f3a8ad202c156a5fe9cab3aeb6fa6dc83a2c20b6cc33fc0b1b7cd0056aceba0f"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y003_srgba.csv",
+      "gitBlobSha1": "8b2e1132d51555ddf9e4b3bdef5236eb9b940f04",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y003_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ffc10607af1c549b3347f115f4dc9e7d465b4c22f67619b6e5637f41766ff501"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y004_srgba.csv",
+      "gitBlobSha1": "2accdebc6e7d245bda725e3afc56937b080663df",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y004_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "124f061cb84df454d492147e207a253d933c3bdd8054811c3617db5f50e59a2d"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y005_srgba.csv",
+      "gitBlobSha1": "36b64a84972f55471d9abfd5d31a5d002d3cae85",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y005_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1e1bb6b10faea2fc31ae279ecda779b8a467bcf3e0105a0eb7c1438dc2e30ec6"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y006_srgba.csv",
+      "gitBlobSha1": "0d29951890ad42ec8282928dd064eaf034923de8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y006_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "796c9424ae297c845d576863e4632ee9e8f47c54f42ade071f5ff12d11065591"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y007_srgba.csv",
+      "gitBlobSha1": "67de3351aa1411b04ddab28dbaa0dfedf77e16ae",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y007_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "748ed5e9fabd941ba282cd7acf4a45e2f5ad93e6b3586238435e92f8d708890c"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y008_srgba.csv",
+      "gitBlobSha1": "4be5a3ab19f6fd2d8ffdd9bda564b3860b8e82a3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y008_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "96314c8f65bd86ec144799794d67a1b026ba73f88283b0e04986ccbbbcd67af5"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y009_srgba.csv",
+      "gitBlobSha1": "493cdf0afe7c28d1955a52ca42c7b324e24a9d70",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y009_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "faa440a8aa77eca19a51c6001b08021496611e96f0b649967799ff4ea3d33908"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y012_srgba.csv",
+      "gitBlobSha1": "0810e558fbffa145912f8043a2b09972f1fefab1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y012_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "619441bddb2c39e02466e207d99a869cdcf43aed4437eacdcc80853621fe21b7"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y013_srgba.csv",
+      "gitBlobSha1": "cfc8ee67b82527b73f2d385c9aab10c99bb22fc4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y013_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "85e654375607b41a7a18392f38f8d98d8e22c9aacc5e73f7d9a056bac4800382"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y014_srgba.csv",
+      "gitBlobSha1": "32003e0d1b1c6ceb6869f67ac4f4fecb40e020d6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y014_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "716631aa7f1e5a2b88577001dc5a164ec1d55b34908bb8c4ae9e9a28294a2120"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y015_srgba.csv",
+      "gitBlobSha1": "58be7d04a1bf8116c9e85c8b6efa56479344ac96",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y015_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "fe1e502396ff01d22be8bc11705ec35c51c99692c5e027940b14008044a172f1"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y016_srgba.csv",
+      "gitBlobSha1": "bae93d5837134da608f151f42474df0fe6a9d93a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y016_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "861dacd4bada31c75dd1e3cc9261a6b4aa8b9d36229ba6abb6073528dca22124"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y017_srgba.csv",
+      "gitBlobSha1": "d3e4e2d242185f9eca3842e1105b9f9a17441fb7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y017_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "da3d6363918676da09e2304a6594e158d038ed162ba17269e0cacd6398fa4d82"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y018_srgba.csv",
+      "gitBlobSha1": "0a9c29bbf9bdfbca7af2cd1b2118717ca5db227e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y018_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "942f6e4429c2540b07b8fa4643436bfb0b928bc065f73451fdad03ac59f741fe"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y019_srgba.csv",
+      "gitBlobSha1": "1252f71371a5b5d9e96612051d517fd481f71873",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y019_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "cf85f9017a74352ecd588c58caae2eb591152ffcc61913c9f1f6714c14932bc6"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y022_srgba.csv",
+      "gitBlobSha1": "5b57812162560e8d5e325adbc1e339d34fe9dcb8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y022_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2eea4d0c8f02b094f4d218ff46018e944f8d8c3488827116fbb798afc94fce10"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y023_srgba.csv",
+      "gitBlobSha1": "a123c8c67a12765496c036187ff0e5a54055e657",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y023_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "149ce7cb3df1352b5fafffb6411478e8184130fff931fb90b035a424783b0cdb"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y024_srgba.csv",
+      "gitBlobSha1": "ee47defbcea78e7b13336c66aa7b35d3b6a94175",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y024_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6615cfb5783a05f9b309c8244dbf3c2fad75789725b4564bfe0a49db106927c4"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y025_srgba.csv",
+      "gitBlobSha1": "956526fb679c0adc38008079c433fa7ee1955da9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y025_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "b2a472cbb16abc4f237d11de3811993e2f0ab942d6c55fbf954dbe07bf956386"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y026_srgba.csv",
+      "gitBlobSha1": "dc5bd60d00a95fc0abd9b346866943de94ffdc9c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y026_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1c556165566a09417c7bc4407a90b9f4c91fc11bd8c712a681305063be6ba575"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y027_srgba.csv",
+      "gitBlobSha1": "daf059085a4dd0ba78e528119e6f5f2891bd4884",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y027_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6399989a033a106b765020f0df77669e137ece3f0b22acd8d418660bdf7b2584"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y028_srgba.csv",
+      "gitBlobSha1": "20c733b8353b8a99dc32eb5d00aeea20b639547e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y028_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a41c98555a4c8159bb998d4c4ca68a86243f556e6be02df7183a0683f7d63f97"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y029_srgba.csv",
+      "gitBlobSha1": "388b599f7f96446e17bc2d36919d52f41d777e49",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y029_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "591d1e6f3d647be3609961302d535314d526a50439ada4b4b25e435599e62fa7"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y032_srgba.csv",
+      "gitBlobSha1": "6aa1c4c6ab824e220a45c91650f37daedd8f4712",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y032_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "337d7b286f64909f5e6ea38d02d6a55bd753325e453de8a83eb4aa5e83551acf"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y033_srgba.csv",
+      "gitBlobSha1": "ccf4d392d0fe7bff475ab88830e199f911c3eb02",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y033_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8e91c86ad2240658a670163095c9f7fe7556791e3331ef8736befd20181af590"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y034_srgba.csv",
+      "gitBlobSha1": "b649faaf3b050612c82c58b81c5a8b4c814d8338",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y034_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "17cb575166d97171c35fbdcaf2afff14dd94d2396943136398368e7bdfd9b339"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y035_srgba.csv",
+      "gitBlobSha1": "39cb8abac883eb684be8aeb1d02abd3f55162fc5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y035_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "41ea08a57720ba5db22c43e24d80063c4c8045d7e9809caadcd13ec565b0a60b"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y036_srgba.csv",
+      "gitBlobSha1": "9e201d46a24e333d60c3b39e980c1e5bb33a9180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y036_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f5d32f0a0b5ee17dcc9450712d504d55a5056e605a65a1705a7c7022b820eeab"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y037_srgba.csv",
+      "gitBlobSha1": "7ae7bcc8eb4f946af029eb269cfa3f4e094f2814",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y037_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "80211df0b3579321dec3af5a7230911c044cd13437bf9001fd222daf7d83aa23"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y038_srgba.csv",
+      "gitBlobSha1": "f03a0c823f64121f3c72acbf98644bd4839ce0b3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y038_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a9110ac1f830dc8a24fe848e6ebbf9469edd3583bdc7670242def45a19949ee6"
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/y039_srgba.csv",
+      "gitBlobSha1": "0398da87d0ee98e69666daf3ae312211a3496cc4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y039_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "465ae43c070b0fc2c5e26cf7db96cb6aaa519ae85e3fbefc01df9f027bc8fa52"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c002_multi.csv",
+      "gitBlobSha1": "11d26ff88fe9f21942af7cd24ae9b12b28d918f8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "bd83c93d396c749cd5070dbc53aa5e44f3fa4c87ccf552a580d2e4e5a2d719c4"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c002_simple.csv",
+      "gitBlobSha1": "f416cffd59a14247cc3841c331571e9c006fd05b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a534108cffe26cb30ea39e61c542f490872aadacaa42f03df8522095688ae3cb"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c003_multi.csv",
+      "gitBlobSha1": "3099da13d0710d39d5d675a177c3069d988f3351",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "38964cb17286375efcc3d852817a0308f9bc16775c7e18832d37f5b2b3034dfb"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c003_simple.csv",
+      "gitBlobSha1": "8e36aa5485dd09c553bd164e568ba53f7566663a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "4db2e4b2ab0df53b7a389676e94670fb88e9a03ef027fcb19f5aa0a2dac931e8"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c004_multi.csv",
+      "gitBlobSha1": "489b6d94265a9dbc587c8f5e8fc55117c85c4d89",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8b8553867524a18544422e43ca0e190c683037e5938f23207ffb721e95a4165d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c004_simple.csv",
+      "gitBlobSha1": "845fc80bf8da7c07e9e71aa128e40850e2b10fd2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "67517eaf409886d103cb7d86ef04e8b37b05ecdb929d28a2af83f774476ab377"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c005_multi.csv",
+      "gitBlobSha1": "2f8ca6085ab3e3778846d6fdc9e8271f7ece20b6",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "04eedb4a7455dbd38a9413df1d67e84ffab1bac412d8bd28cad476f67616c3c0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c005_simple.csv",
+      "gitBlobSha1": "c71ff9b7a3b620e14d464302f8d61896b864dcd0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "b0f429738911f29755365c01f3a152875411e1a529f84b08cd9bf0c2421bf5c9"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c006_simple.csv",
+      "gitBlobSha1": "20509e8ca2f3966b78c9c76ed3ba55e0bb5ff319",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "72ae0050525b6fdc60a1fc09f313b8ee8cc6b8f314334ea8516826b94a222997"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c007_simple.csv",
+      "gitBlobSha1": "5bce7b84e229bf01f40e88d1f6244cbef8823216",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "63c253ff91d5832b6c6751b96a90d21a1debf133504d7d21fd81f8d36861366b"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c008_simple.csv",
+      "gitBlobSha1": "8d6babe93a7cf4532154d563cfa2157ec549d7e7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6bab46593ccd1ccaa4645e61ee0b1e297cc271af25129712fae5ad0f70163e19"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c009_simple.csv",
+      "gitBlobSha1": "a2f9ea056d572e8c28d11368137f4ede010c1904",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "c1270ec7c0d1b1079b9f1f0fc1a20f84a4f514b2e10874e5f55767d4d69b7f32"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c011_multi.csv",
+      "gitBlobSha1": "1d6d798aa8487256f8ebdd2385b17b2f6e0e2b22",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "fe6e4a0598771d414902c333fd929b435788451a55de34ee15ef5ff2b6cb3d2c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c012_multi.csv",
+      "gitBlobSha1": "2b2830e5cf2ebef8d2cf152c4edfb12e7b2cb3b3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "c9be6521bb24531a24cc465b42f43929e91cff4c3af3bf45045a48787abbbf60"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c012_simple.csv",
+      "gitBlobSha1": "74470bfe66774766703169304d8f27382c73bf0c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6d2bad9b50ee290c3daa35d7c7fddddb965072bcf1458ce44e450d965eb0ce8a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c013_multi.csv",
+      "gitBlobSha1": "6b750d8c479c2f8098907deb829cb3fdead01418",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "75f545137a2b3c5b707942b4894e7548d446f9db320f11a8c163767da048b348"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c013_simple.csv",
+      "gitBlobSha1": "a2acfbcb8408122ff345f81621ec99dfb6b0102c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7255f363999932e26c6a7b6013e0eba5c106d7fe169f24e8fbea7407f4210660"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c014_multi.csv",
+      "gitBlobSha1": "efcd064046543f06912c169e639c56ffa544e8b8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "792a10ebc91963c325a2d20b89ffa9a5ec33861d4795463e75edb80fae53ba9a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c014_simple.csv",
+      "gitBlobSha1": "85082cd64cb1eaa5f4cef3ae6463fdec7e30c101",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "9e83725c41e007520af828716f8a87ca3671329d161fdf673868e18df30a58a2"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c015_multi.csv",
+      "gitBlobSha1": "b94179916d031e3c10ae80c1206b2eeec750ce85",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f75a373e0eaf781a3a0759de969b2f5298c55c05fa5b4b175244bba1fb461bde"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c015_simple.csv",
+      "gitBlobSha1": "8caa185e74007a463f485a40d3cfc14179571fc7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d8332cf8da0c94105501d0de9ab93841f30cd1edc7b235a97dd2aefdfcaf2b9a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c016_simple.csv",
+      "gitBlobSha1": "c2351f5a61d316cddd0ae4dfba46afadfa187849",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ec1a4c0d89dd5de3e9b1ae2bff6c2392a82718a01e9a5fc70e3a90bd6c996427"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c017_simple.csv",
+      "gitBlobSha1": "4a3db11584fec4b169940521e4cb609307f1f6e2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ee05df13d253eb8be506901318a95f63e11af5ae5bab727bd12b33ee4a4c8d7c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c018_simple.csv",
+      "gitBlobSha1": "1a67fc5f75d0b4315ce1d9c3ff884e248980119c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a800c26fd8f2b91ace3525b88bd333054785fcc2e8ba607ac6e55056d84e6ed0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c019_simple.csv",
+      "gitBlobSha1": "5117e085e0c92df992a9f3f7526d42733b15f749",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "99756e823892f62c421bdc171eccae8e6c8bf0a4a572404ef8d3aa30a8cd8cd9"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c021_multi.csv",
+      "gitBlobSha1": "a3d161a6229e875c623070581e025e39fd10b508",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "bab45d8d0204e5c76507dee2c41c8e6b3ecd8352bd4e2d675b3a4665a5806f63"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c022_multi.csv",
+      "gitBlobSha1": "ea8cfd1d9784da1ee572f254067ebb99728cbd42",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "20df18ee8022ca89ea16f36039baed80fa25532d069ee968624ccd41227fcbb3"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c022_simple.csv",
+      "gitBlobSha1": "4ba577b4f6742c6f46587f48b093380e84ff4a97",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "3ba56186d34dbcf30d500c3e78d58fd310725a531814d7d2a47abe06ef2126a5"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c023_multi.csv",
+      "gitBlobSha1": "123d386713c7b5b805220fdc764df16e95377ffb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "020d7ee30d5d897bd30055f23eb6c1088b12a0bd72ce80befbdac275f55b1a50"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c023_simple.csv",
+      "gitBlobSha1": "66c7730966f36e77cd994c2f0ef82b2b3f0ef8f7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6321263d4f85e09bb4a200d6be0fb3f820fe317535bd673ea56b03143c09a736"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c024_multi.csv",
+      "gitBlobSha1": "5e487c584c5f660d26ddb08b2e25a35ac6b600a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7d888b5302196b40da4b7ef427db1200f51ce539c0f86051ac7458a00acd7d4b"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c024_simple.csv",
+      "gitBlobSha1": "6d5710f0487faf801dbeeaac6ccb1f56e4950b40",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "0d8abfb6d7c39790e8198714c990bc93bebca5b1ed976e70a34e907252b6f7eb"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c025_multi.csv",
+      "gitBlobSha1": "3cd8e043173fe26296a76813ce9f0b78b50ea071",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6202c46d3448869db96a5681f3f9eb896066635835d914db4447afde923e91b3"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c025_simple.csv",
+      "gitBlobSha1": "1d90da984a1a159d7cd0b1de0dd2634ef8be0f83",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7708c798ac82e476da58c100779db16db26c9e96d151a72be81bd55b0f830d73"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c026_simple.csv",
+      "gitBlobSha1": "b1ff1024da071aad7e5f566e12d73410ae0e2adc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "c36d2b445dc45ba5e6753f00aea58da59c63cf9ed056f2350333e3587437e142"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c027_simple.csv",
+      "gitBlobSha1": "e693466f6f212bca4b6a3c009258caf33171c8a3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "249310f3b992d12f9f7e391fac3a529dd70386cbee64b48de7e412a183848b01"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c028_simple.csv",
+      "gitBlobSha1": "7cb8056fe1244b35f475382fbc334e763084c455",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "bae44ba0d24edbb81fc2520bd05a72b08901d31daf69bba223ba9f1ca56852ca"
+    },
+    {
+      "path": "red_flash_patterns/30fps/c029_simple.csv",
+      "gitBlobSha1": "455d9647e04973aa5adc229222b5bef65b3e93cc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/c029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2bb31d892ab20dbef5ca8801ac5e32be5931df4e73d65f0fad4b3802463987cb"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr002_multi.csv",
+      "gitBlobSha1": "a125b227a71d48dafc33c46b3f44187d64cc6336",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6e964721206ca118bdd666cc6f9bbb38e3a4852f35702829fb405eefa2bc22b0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr003_multi.csv",
+      "gitBlobSha1": "71c4eaefb35a40ca1d516855e1444fe6adf6ead9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5ca4801f9763fe5f132396299f4ee5e1172f6c55f743df27d138f56310e15370"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr004_multi.csv",
+      "gitBlobSha1": "bda5178f8607b3db3acc6a2ec7829c51e21f960e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e5174553772c34e0c0a92c33670d2ee6f412cf0489abb68a126531f14eaa6dbf"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr005_multi.csv",
+      "gitBlobSha1": "7714cfb676d71e7d18f06bfdda9f4df0b8cb1114",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "65417f70e09c7cb8ede102832beb159636dede4c2a0b6d8f69b111820ca1e3a0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr011_multi.csv",
+      "gitBlobSha1": "a23c574f42dcb3e949f3383f2d6521882134c180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a1fee77fe42a8e047b65a90aa118e015dd23473354ef92d39c8d4f2c19566309"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr012_multi.csv",
+      "gitBlobSha1": "e3fb586c7db5af8c9b0c7209b59d54838c07daf1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a3e55cd927ab2c7e1c28f2ed9ab6c0edd06cc5be9b6aa4a68a44cfdd682e01df"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr013_multi.csv",
+      "gitBlobSha1": "a6e4b6684c6f7284a1ee636b857df6c39d2435f9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6325a4ff50f3679399ab558eedcff6daba250054a195d00167b6c29e255e54bd"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr014_multi.csv",
+      "gitBlobSha1": "77066a8a454aaa30a413d494fcd6b4102b16baf5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e877ec9476a4bf782a4a0c57333ff224875622a78fb3b6ac7b5c528534a77c4c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/cr015_multi.csv",
+      "gitBlobSha1": "3a2f33d209255b9930c983b1ef4a898db51bf0ca",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/cr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ad11b8bd9dc637f17ceaffd88dffd23b26f98a3e72bd94637f647978b957cca2"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d002_multi.csv",
+      "gitBlobSha1": "5a469e1efff9414edc0916984a3bb49ea8345f5c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f939e20f3287642c9d1561ac9ec882551260f628c78678b90254f93edb40f489"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d002_simple.csv",
+      "gitBlobSha1": "068c58a8fd5ce9c4dc8d6faffcd5f9b0060ae752",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d229e953a616012892dc790108eb573404a512a93b0847cbced32ec5def71217"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d003_multi.csv",
+      "gitBlobSha1": "7ed01a3d3c8c90b6551085782ba68efbba052316",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "c70cbaadbe68bc6fdc541c3557214d7ae7000d3f02011eb6825a0895b547fd7f"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d003_simple.csv",
+      "gitBlobSha1": "ea442d72d1e29ae301f8854c808bf136be6fccfd",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "64a067553dae21d38ee1fb38f3c5181504df835b3b35ce935ce8de7f0f958f90"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d004_multi.csv",
+      "gitBlobSha1": "c8cc02c177dfd306ebc94044c6e8a26eef994447",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7365cc99a8b2f02638e47b0076cdc9bced10890f20f15eb0ee436215183a17d6"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d004_simple.csv",
+      "gitBlobSha1": "d0ea40b07b62c1a31c82c94affe999e01242e290",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "eaba721188771c827a27f66268b5f2ada749fc1d3cc94a93a62550e7d2b35bc6"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d005_multi.csv",
+      "gitBlobSha1": "594ff8c970dc470ee7ba4dbb9df33d40e826bb64",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8ea06ded4f05f2d7a328709ffb0fab053697b81aa91d12f09c48877bd8ed46fe"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d005_simple.csv",
+      "gitBlobSha1": "b24f0db86cfb295f99d4a8a0600ee94471464886",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "41ef9e8a215a8657cc10f9419fee4fdcac86fc23e4a3474e9906ce0f5ce38aa1"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d006_simple.csv",
+      "gitBlobSha1": "0594491698fa7641c983359616bceceedcf8c039",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "23476c4e5df615a599b4b618cafd693d70d965ab8e964ed8aa0d3b4ebf7281ae"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d007_simple.csv",
+      "gitBlobSha1": "1d679c1c6dac3977b287d3d220ba59a13c8684cf",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1a2aa8316f2321ef5c8677fcd1bf27d58c35f0b523e40bdf68ff52565c95c8e0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d008_simple.csv",
+      "gitBlobSha1": "8722b45aecfca3aef9029e7b5f0873fcdf040206",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a48e579678227cc6a124cd052f1cacae8a5db31a0a583ca945c6f3d588dafd67"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d009_simple.csv",
+      "gitBlobSha1": "2d6e4c0cadd0410c1cb1eb195e2cdff75f92c0aa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "194f441f3b611e559ac61449b991de328754a4a73e7fba2301d797b9e0c3fe15"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d011_multi.csv",
+      "gitBlobSha1": "385555afd45d867a8e683d20798a30523655a6bb",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "9cbbc95fe7d5f21a07a19d32d52443000688ffcb3e72e23554a32aa44af8a845"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d012_multi.csv",
+      "gitBlobSha1": "b179707e9a241045332a4c48e939b2e6d6c65f02",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7c09e11aae13ac82488d668321eb46e0a8ef385f1cc53062992abe38d63434ab"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d012_simple.csv",
+      "gitBlobSha1": "4d5bb57145610c804f8ed3d810d0a50ee4f85c80",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "423f3416836766f55116f8a87d348f7e33693e8ccf2c0c968a8e54fbe53a0201"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d013_multi.csv",
+      "gitBlobSha1": "dffecb1939dc09c02b55cbed03b273c6c93c759f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "9aa5456865001c3df9305e5f56ff11ebc9468a732352acadc03093b1ec13395c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d013_simple.csv",
+      "gitBlobSha1": "bb227e730d776b1fabab4a4fc92934c9802e41a3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "22b32d83274f65d0290ebfd94232074cd601285f2ff9ca14ac95120b31705e99"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d014_multi.csv",
+      "gitBlobSha1": "876e720b04bcbb608e2eed857f4b92a6ac4be59d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "345530370dd2c5e5554c931ce5beb405bbb739d0be10a52e259d9a3c8f969c03"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d014_simple.csv",
+      "gitBlobSha1": "044ea1b0752cea5c6882624165f613d1603d523f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "1a1e9e495f908c18fa33918e76bb3824c29e577f9e975add62bec3c7e8d1606d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d015_multi.csv",
+      "gitBlobSha1": "6cf0fbc26c9b7cdba1b88f77a0abee966ab685e5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "3643b6ed5796f8a837937858dc6dadb25490c2de34224d24ec7c22d06ad7b331"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d015_simple.csv",
+      "gitBlobSha1": "58b7bd85c752a20344aa34dd7d84108a1f4d4b5d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6c6a3d7bd965d1a4e7f323a3ac8eef44181f97da50f07e6b4c32d0fdd2a5a1b6"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d016_simple.csv",
+      "gitBlobSha1": "f6ecf1d82ad17efacd3235889c5a04495ed197a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "86ff51dd3c43d3668b4dcba5e6d693aee46fa2d13b3d68f9f543df9eda7d319d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d017_simple.csv",
+      "gitBlobSha1": "67cf12914722975998fedcdb3023462112e850e4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "66d6fcf82458753507c271513e0dd7feacd0a741d6601daee9c667dae0c56e5e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d018_simple.csv",
+      "gitBlobSha1": "95786fdf3a82a25a193bb39944ef5296f3825642",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "48ba170e07eca2cb6eca7dd7aba86d7fabdc18d94ba45e3bf3a1784a7f206455"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d019_simple.csv",
+      "gitBlobSha1": "3b0f6d7a575f281ee0dc0b78a25ffaf2583a98a2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "0fb30d7d9ebb1bb92e644c4ed6d3842eec9d69ed726492c8d26b35647c87bdc5"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d021_multi.csv",
+      "gitBlobSha1": "c14b680ce058c0950a74f55cea4fb53a9f2b648b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "b8b4242e5e6815f5a08ea20cc97da6173e01041302cef85442b87083ca642744"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d022_multi.csv",
+      "gitBlobSha1": "d0ba0f265c45ce96b57b48820dd1db1285728422",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "16456da1580ebe374f7aa0e09daf81d7caf90c6c2571b9307938fbc158cb506f"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d022_simple.csv",
+      "gitBlobSha1": "67423e1cb9c294b4e17a023a8524ec270fe95894",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "3253d7c9769e87198f4bdfe310c2a674d45e0810aca7f4a630cdd8e8cf946f71"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d023_multi.csv",
+      "gitBlobSha1": "12e769cf408a5f9d845089fc351c560277724746",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "570e1cfabb414acc34ced2ab31966193097786eb1476bebaf71d51ccbfc1a239"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d023_simple.csv",
+      "gitBlobSha1": "04632e72642eaf4c909e65cac4d97494e7d8418d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "c6b534d441419d1dd5a2f078e0f7ad58488e4f942f334c6fb653dd0817a3f148"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d024_multi.csv",
+      "gitBlobSha1": "55a1e040d77c7accc6f83138281919bc62b4d287",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "00736cd26b0218762079d5443bfa16e88eb8eded96fd84c5a96a3e4989bfb22a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d024_simple.csv",
+      "gitBlobSha1": "fc4783441218010c50ec1d2a7066ed2ed590208c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d5ed8734d56b05c6ec58da1ba5fda5a2ceacf9ebbf354cbc0901746d5d2a7d99"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d025_multi.csv",
+      "gitBlobSha1": "962624ca07c6d0fe19e97fd36410aecf1d0ab31f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "56d80b9b8d9e1ec7a0b67b8113e0826487f61a27ae4ff030f5bb91483b28938b"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d025_simple.csv",
+      "gitBlobSha1": "3f9c55fe7545ada31f9e62af416a1ddff3e75e56",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "6bc65aaac8a10a36cfcb5b125df07455c69daca6cf59dbe5f5240c5874e9fb3f"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d026_simple.csv",
+      "gitBlobSha1": "0e9535ff659d0303c6daccf13b8b55d34b55bcb8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8521900cb33168438e411b6695d43cc4729400386b0cc05ec8515eebdc894d03"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d027_simple.csv",
+      "gitBlobSha1": "7db0f094e7f25ca0b1833bab798b94831eb830af",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ce77227881ec0e517e396a36c7f5b49ff3c054d340890a9d9404126721fc39fc"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d028_simple.csv",
+      "gitBlobSha1": "32bede25f0435277e0f0ef8b15d5565052d4b211",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "46d1a90232e6deb1a42260a0931d528de2d6c8976f67eee6269a2ffa4e3dd8b2"
+    },
+    {
+      "path": "red_flash_patterns/30fps/d029_simple.csv",
+      "gitBlobSha1": "ed8c7d589e71863e365e8827965fb2767d1d40e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/d029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "b69599df9af01aededfd4c2847b27b6fa371ea3ce1f47ada3ef6d84298f97c4a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr002_multi.csv",
+      "gitBlobSha1": "da404c5aab49bfe8b8208543d67f8da7240eb673",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "44bae114969938ffe840a03e50de8c907d63b0f54c61e3fb9ded86f6074940e6"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr003_multi.csv",
+      "gitBlobSha1": "3b6527d1ab5db2550a06ec92bc018eb59fcade64",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "13bcc6f73a64aae4521600284916cdb2dda212023fd1891c5e74271d21581627"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr004_multi.csv",
+      "gitBlobSha1": "256bbd871d6dd9ea2b421f2fb60f81d0bebd6b18",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d72a4e7f19dc99fc5ee45a5683ee9767cdb2bce58e650c570eddf66e3e880896"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr005_multi.csv",
+      "gitBlobSha1": "5d408204f6093b0bf242530a8d941d9e5daa7c6d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "64ae9371bed88b80d912a786b53a546592f50a025498bd940132d83cb3bef64c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr011_multi.csv",
+      "gitBlobSha1": "e7ed7de0db44a93f33a95d457afe72ea4fc48c29",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "942fdf7364806f7c301f3b6ce22d719419eee45cd68efdc8849c309ecf35b4a3"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr012_multi.csv",
+      "gitBlobSha1": "a19285f667f0fd7ba85034a62d3d15c53de4ad4a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f824bbcc81c5a356487779558611639e7a9bc19cdf560eaf52595244d3676061"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr013_multi.csv",
+      "gitBlobSha1": "3b3fd5a39f67a465f46ca5edfea55138b0c9080b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a601ad6ae93265f7969c3d70a4da4e67ae6fbd427c9c430678d784432635526e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr014_multi.csv",
+      "gitBlobSha1": "8b454d810db0b1ac17073dbd394cac6c61c17e69",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "b2900b6942dc64fe8313fe57a320a16c3a6abe83ad9576c6f95bf175367599ca"
+    },
+    {
+      "path": "red_flash_patterns/30fps/dr015_multi.csv",
+      "gitBlobSha1": "458ca58838c5bdaa58ddb7704e37f0b59c412986",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5b3f573edc5882b512f8743d4e7f6735bbcc0a6d80315113344a1fa1eb98e9a9"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f002_multi.csv",
+      "gitBlobSha1": "270aee8fd8b77697246ba9a427bcfdf24ef1e073",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "7c617ca79df053bd0ed68ec55c8f41e1c661cfed5f509f8e1309ae135ed2807e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f002_simple.csv",
+      "gitBlobSha1": "e6266f394a856c5451bc2a9e6fdfd96543986180",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "06ec065312c40111269df036af471938c0868859485827dd92244ec9dc28b97c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f003_multi.csv",
+      "gitBlobSha1": "cb61a383ce7e44769ee2e10d7142958938377dd7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "df16761a1c3a1f7e65dff72db0c3bd3b1a1a9ae1fa5584972959fb74552923fe"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f003_simple.csv",
+      "gitBlobSha1": "31148d67d40ade4eca9c0b9f36917f1b0a541950",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "24ee112f5a0e8685036c51f6c09ac10bc29d7cdc3d24a505b598b7afe9e95869"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f004_multi.csv",
+      "gitBlobSha1": "c2db54f596d71cf8f7836c5001ec6f9b23d8b470",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "a3affe5eb71406a8bf993db2facd2ae3edcc1e2a9124a5bd31d624a4fe975d82"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f004_simple.csv",
+      "gitBlobSha1": "94f97d0c53c5420be893be8364b2ed7d4b90b55c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "a0f2005085939802aa7babad410e22cee13a84cdf42c23ad55afb795e475ad93"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f005_multi.csv",
+      "gitBlobSha1": "1b3acf48d3808e32ace2c4669a9a15b37ae4c7ec",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "a6f0a10a7a4c30fb51f5ea800772afa01315147e982e9c43af1b529cd670f2f8"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f005_simple.csv",
+      "gitBlobSha1": "d6feae14e66c71d5555547376f5c2faf802341f7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "926286f0ef171bf5fc3bb234c5e007a6af5bc4e84b99d3beea24fd84cfeca409"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f006_simple.csv",
+      "gitBlobSha1": "5f0c2ebd4f8cd92240bcab7baff98f191dfea308",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "c340d943cfe510f176fce4c63fc9046cbe91bca1c788ce6dfe6e64da1a6aec7c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f007_simple.csv",
+      "gitBlobSha1": "a2e098a1589e6a972316815fc9e851ba3b50b47b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "8886283852b6867a31671af0906d558e12bc4eba34d64731f766e079b76f4f6d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f008_simple.csv",
+      "gitBlobSha1": "7beb5eac20cd7df09a967d85ec9f9b62943c3cbd",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "3beeb0c0a426877c6ed55e99ab86e2f6540f63fa9402f35b1e8102781979d43d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f009_simple.csv",
+      "gitBlobSha1": "13a75e8eb2e94ba63e24d203a33a9a57f87c3eab",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "92bdfb51566ef60347cd164c6923401f78a122f368a3dea1b61aa9eec5fa6d93"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f011_multi.csv",
+      "gitBlobSha1": "b011154dfdcf8f7bd7c7f2d87122098872da22d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "6067e2e002989fe6d9c60d673a4b8b3037940967dcb5d0f156646c6503652773"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f012_multi.csv",
+      "gitBlobSha1": "32605baa05596696b49787d23ae5104a907aff2f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "155575d9fbfa7ccba89c23382da89f8e493880127cb7bb21cbfcf5c1d1648b47"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f012_simple.csv",
+      "gitBlobSha1": "7b527194aabb0d92c5fc079a173ab4e294cec38c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "9e9a9545143f6ad63f22ea17df65ae93aff1553d8f5dea71e89fa376a7bb7c8a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f013_multi.csv",
+      "gitBlobSha1": "25078abfb97fc6b264b7dfb434babce62aa84245",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "de7f002c96d3fe9185fdf3d461589363e96ea8f0a6e73d99aee44d656cddfa41"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f013_simple.csv",
+      "gitBlobSha1": "6d412660236b4c80c4912d6e67afe1202cc2d2d7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "ecfae3e0d6d44cd5da94a10b0e238a75d6a65a3978c6b7c11d65a53ccf5c7094"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f014_multi.csv",
+      "gitBlobSha1": "beedfa582953b844b67ac86069e70341c9025f95",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "ab829d93183fefaacbebcfc6611ae584fe179abe6dd6234fdc0adfddeb5979c8"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f014_simple.csv",
+      "gitBlobSha1": "eda4e54b4da945bce5bf8b887dc3b4d3a00d6748",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "cc98144ea456b37734db130841590fdcba6a5f31a3d9b1181c3db795533ea647"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f015_multi.csv",
+      "gitBlobSha1": "bd5ff55b2d4829350bdb28bcfeaa8572531941a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "6f94b0b7188764755209ce1893958ac98f9d86d1173bdaf3a923d02f66eb7b9d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f015_simple.csv",
+      "gitBlobSha1": "a48c2b9d7e032f3edf0e3a184b5a0e8f368974f5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "a3714169d93561effbd4c7d8b92c50a4ccdeeb8751b58a60a2790d812f2dc8a5"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f016_simple.csv",
+      "gitBlobSha1": "e47b1b53189e1ff6f948a4acd0c43cf52a1ca602",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "cbda2865bbdebc5d103c5e95e8a0e6c101bc849814392ca991534667764393f1"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f017_simple.csv",
+      "gitBlobSha1": "614fe6f6ba6e52600d4168e88565e1b12dc74a7e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "745d0c5c40254571dae1de9c046a8bef483a3f896487ce76374655086ba1fc8a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f018_simple.csv",
+      "gitBlobSha1": "d8892ee9d50f8f8d6f43c25fbca721ac66fb0821",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "16be7604ef1008e2aa3b595d74930b31614cf1e7b16da9ee88b4f46ebc5aae96"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f019_simple.csv",
+      "gitBlobSha1": "db54371dcdeec69a7af211d366a1a79a8dd3b4d5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "dec5f011d2009b9d20654e968632b44e2c2dd723f846efb85430735f08c00441"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f021_multi.csv",
+      "gitBlobSha1": "0834574266c8519e711fb101aeacaa807f54b77e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "291757d06b0640e744b4336d5b61dd764cee4ada77a740d88de2605992af4ad6"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f022_multi.csv",
+      "gitBlobSha1": "80e00d42987489371981eefe3b3bac9e389ec5b8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "51de2cc4af49ec38534fa30f363c92b1126199118bc44793c202a5b5b07343bb"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f022_simple.csv",
+      "gitBlobSha1": "982d5bce06d5ad8d612192cd737d5192ba17dbc4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "e3b9982a4b3061a5c6e8a24c6390284ef618d46dead1ed616e14256e6ca8ba18"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f023_multi.csv",
+      "gitBlobSha1": "ac600e891181517fc9b0e92930f55b237d570187",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "16ad3bda2a7b4f08c635e45720b67cf1cecdc646adc21aef1436105fd07a879a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f023_simple.csv",
+      "gitBlobSha1": "9aee81156fbac6fa134d9d17066cc8d5531d73a0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "331bccc5f49163bb4a0b6a6a9f2213629b8625d6577ff936e1b787167a2df311"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f024_multi.csv",
+      "gitBlobSha1": "c2327170af44e7de9205516302201c7273e602f3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "a732c0bac0766c730c4afa53d9fed6a946fd8838f96df9710aecc120bdf9e5a9"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f024_simple.csv",
+      "gitBlobSha1": "1d2dc6909e3d95b7bbc9c242f9750bc37adfa06f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "3ea9729c30006131ba2af1b04b602ccc9f51fd5916ead798cb7467dfc7a06fa2"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f025_multi.csv",
+      "gitBlobSha1": "5879973415ea0b533f9194c8629c8e762f5b92a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "807c32be7be1963de6cd03e102d11dccb8c03853d38fec3df72d0e42d48bf91d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f025_simple.csv",
+      "gitBlobSha1": "d08a82fa64bdc526ab06b6baef007e05c0a333aa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "eda12664e09ce7eb0fec9b68d6f544d46dcba3a0b156786cd2d3f6f2879ab691"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f026_simple.csv",
+      "gitBlobSha1": "abc507b347ba315f2ae66bf37647c0674232572f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "60a8bcab3a321ed322de855bee40e43576b983efd30387b6d03f403d202c286e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f027_simple.csv",
+      "gitBlobSha1": "b1dd81342ef341c66f52db5f06be16bcd93c987a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "08aa32f708a713da5222d75f334cc8a6a3a8d8c410387a2dd7f079b31778e9f4"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f028_simple.csv",
+      "gitBlobSha1": "0c0a65d60f1cefe6c74b6d5c60a86be23f561b87",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "f1db70b2cd53b89115b2036b633733cd3459b290d3764920dda2e18d155cc294"
+    },
+    {
+      "path": "red_flash_patterns/30fps/f029_simple.csv",
+      "gitBlobSha1": "44c2af82964c8d05a717d4721094ab55ce98b253",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/f029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "aae945c75cf3395ebc98b6d149639c89e3139af0435575faa74748f9c3e30b51"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr002_multi.csv",
+      "gitBlobSha1": "845333f81791f9a8d0b98bd61e4ed56fa81682b1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "a5fc4dfcc1f6ea7b733fd97451257cdcbc2fd1cb178db8f25ac040c8d3815db2"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr003_multi.csv",
+      "gitBlobSha1": "4e7cb7ae578655dab57c4b43fd69fc8430196161",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "e0dbf79903ea983aa1c7c10ea280535cde9a70a40efb4e0a0ea1ce02149e548a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr004_multi.csv",
+      "gitBlobSha1": "dcd70a91e343d9a742ad1a29bd3cecf7c0d3bccf",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "bc0006deeed6ac3bbc9d012390b7fb7d6bdaa84dfbe47e7efbbf559627a3938c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr005_multi.csv",
+      "gitBlobSha1": "2e2f5dd76ad5b08fff460894452f819bb4f0aeee",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "6202a8c4393a144b77646ecd8982791386a739ded2ccce0f069525e54c729b60"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr011_multi.csv",
+      "gitBlobSha1": "f367e58717c086aa217a90b55af91535edb1605a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "50dde17a145d47245759898fe421d9990bd84faa0ab8344184ce2f2507ce3f9a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr012_multi.csv",
+      "gitBlobSha1": "5753188e7c26bd545de2a99e7adfc492f864d02e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "65125c64a3e3dbc3ee46336edc306ce8dbc77bee665603afa090ad1b79c56e8e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr013_multi.csv",
+      "gitBlobSha1": "eee1bf0917c90d3115b5adb082e85f5d85b2aa6c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "4d080ac08a9ea313e43a055dc7e55d62f189de064250c46d13d5bb5d645f3261"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr014_multi.csv",
+      "gitBlobSha1": "e59c8c9c4f70b276d6a2281741a697c909f45ef8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "70c53567d9ae5262c73662e62af0fa3f5f14576a8c1a5e17ed2a6f6b774bc4c0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/fr015_multi.csv",
+      "gitBlobSha1": "ef54edeb5ff11a142dd6262f7c80ea928aa26202",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/fr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": true,
+      "sha256": "93bb9d7d7638a93b30b851b9fa34c9ab09b8c9801367b3c62fefec509479f450"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s002_multi.csv",
+      "gitBlobSha1": "fc499176c3f7ba40aa698f9c566fe26e7bae7be4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "0793d9f618df7f46cac9d9832106a87f7124cffea0c9138db89cba4049bf971a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s002_simple.csv",
+      "gitBlobSha1": "4516af9a58dbba806617559c72179b39c4d53b8c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s002_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ac42ca2f2ff4a40a105e10d52041b252f4117fc7573bad16df5d9084f9729e63"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s003_multi.csv",
+      "gitBlobSha1": "a20cd3c8f2995feeb057895d9890ffc1286fd6db",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f04bc52fb81b7aba1201c5e63065985e5def94f5ed66653985ceac0c426449d9"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s003_simple.csv",
+      "gitBlobSha1": "d7433a6f20efa14f13cb4d794556f2860c9e8b21",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s003_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "21594248b58070613c47c1db64ce73cbe11f5328a14be8d8f35f5fe2665f3ebf"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s004_multi.csv",
+      "gitBlobSha1": "f5e67f0804ffa579b2fb777e63c321626ff0cabc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e74ac1af3196cc1efa52e82e91f5118448f7c48c010d8fe87d6e13c2f8fde0f4"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s004_simple.csv",
+      "gitBlobSha1": "90e08fa71bf1a73e2d0ccbbd159f5018fe7d0796",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s004_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "4d4349f2ccfe3d613cc9862051cbd6eb8188eac413e929553c9af4f5d2d1791a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s005_multi.csv",
+      "gitBlobSha1": "eed2e912d4acfb30d88d64e54a5909d13aab6242",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "b85f2e8444f77d7f92f198326e983765a55b05c1956af2d1f5a5a07a80c61343"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s005_simple.csv",
+      "gitBlobSha1": "f190fc6f12653346127805f1eebdbafc39bea618",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s005_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "c8f3711b40278ad6369a282ba6accf815903d4329d8ca2706dc48aacb0ae828c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s006_simple.csv",
+      "gitBlobSha1": "0b45de46e120d446fa5d06911822e51bb8849182",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s006_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "46691d808ac982cf49dcbf6b02b9efd43ac495694afd3a9ebe5408da48df47de"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s007_simple.csv",
+      "gitBlobSha1": "cc391fe7e4aa9e8b81ea871c62863d7579dea45c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s007_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "a1ce34dacd33bb1ee45bcfcab9f22675719f2f113d2f21745937fe194971aba2"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s008_simple.csv",
+      "gitBlobSha1": "d3afd89310de2dc984d7fabee1476930ab68dab0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s008_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "0931a1825dceecfb2ae08113f66afb91cb5233e67c8a194b60be60efad2ed45d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s009_simple.csv",
+      "gitBlobSha1": "b15f98b7e6af1377493154500926f29ebcde778d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s009_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f7560472e342a110d58d47d17eba3312122759633c4855a353562d4400a3ee25"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s011_multi.csv",
+      "gitBlobSha1": "93711e70bbda28b1dc072c1dba7101cd4403cf2c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7d8c8e74e6f76d9f8e788c652653b3f8ce8b64f5435c67e302cab3e8c2779a9d"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s012_multi.csv",
+      "gitBlobSha1": "4e7fbbdff44e48eb2d1aa98bf72cd26f5420ad2c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "74d4a4f30faf359a2d48775ef95a8850893de40cc872644a43978de7cb5ad19b"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s012_simple.csv",
+      "gitBlobSha1": "10927dd71996d9238cc4e5922a54f86b0bf8c8a5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s012_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7e4642c8d9fe502825e28a4f73bb69a137bd3f99be0a664de36b0a09b4614463"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s013_multi.csv",
+      "gitBlobSha1": "3df74e7b02d41e68fff33023f9ae79b840b7907a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "cd7713182fe4bf54a3459f7a2fc17c7235d71e8a61c1d62348e642660f4d3f87"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s013_simple.csv",
+      "gitBlobSha1": "c17b2437b410bbad7c724c32c47cdb12e228cdc8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s013_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "aeb5976cc560504a7f01238690b57aefd25f6eea201f42a302e7438311e61a9a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s014_multi.csv",
+      "gitBlobSha1": "70262012ed7162d0378853b569cd2722de8c340c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7021bde7cd5bf722569bd8a2ac7158206f818d54627f8173b0734790eefd328c"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s014_simple.csv",
+      "gitBlobSha1": "0faaa0cd7130122d8bebb611f820411e674803d0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s014_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "7327d5c2f1731f83ee1613520ce4bd31f121920f312b937a329c9318f769f068"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s015_multi.csv",
+      "gitBlobSha1": "d812e9c32ae79efb7a7146cfcc99c58f6ad75499",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "dfd16936cfc529b06d2188ca5d81d845f764bbe12efe8b0f52e065a77d4d0a42"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s015_simple.csv",
+      "gitBlobSha1": "c77cbcbc222f083ec58d06b3f04c2b6fdf6d6a1d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s015_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "38c8ba2e2b3d58f45db1c1a2c7266137b6c66054682f73c52fc923ece72679f0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s016_simple.csv",
+      "gitBlobSha1": "40e889d5ee02cb8bf83a677441415b5766396cd4",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s016_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "951dc2ed284f9563e59128bfb32b32bd019914b37b439c3e3d2acdf8e18c240e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s017_simple.csv",
+      "gitBlobSha1": "5797230829d8cb828292e9a0e969cdee2791f84a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s017_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "9e625c62df2c6532053404f0a020b6f15686ccb4931d62566fe2e5ce12a271e7"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s018_simple.csv",
+      "gitBlobSha1": "e3742fbc2d7ad7d07b13f6cefea32b18744faa9b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s018_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "8af4ccf827ebdeeed1f9477df0faa9bf9f5f70d50eef4a21d420147f7d393963"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s019_simple.csv",
+      "gitBlobSha1": "8f88dfa05258ab79f1328c692c5c567a8c60a906",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s019_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "21716c1498eb2ce94e8dc4c6bf658756364c2b9f2493acf761e2cdfebed5dadf"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s021_multi.csv",
+      "gitBlobSha1": "47559badb47e37cde1e131d65db70b03ac227044",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s021_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "0e15fe89c2a407c7e8f69a136ecc14c911fb3a94b703c39672932659dc4dcd38"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s022_multi.csv",
+      "gitBlobSha1": "bdfef13dcfbbac3bccd6e4e986455390e22c8d57",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s022_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5e8f1a91b5eda8a2f034c4181729aa8c301deb03cd569abbc17b351a81da971a"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s022_simple.csv",
+      "gitBlobSha1": "eeefee708a124ca19b7d8a874e0c29508469c535",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s022_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "e96dda02ff8236b9f1007d29d40d325e6f141b247df839d75979cd8545b32ded"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s023_multi.csv",
+      "gitBlobSha1": "46f62b0a7ceb20b1932f83e3652f46fda69e495b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s023_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "de18a3a10b13bfc3959513f089e616171839b08945ee075a7ef2ec262eb3ba16"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s023_simple.csv",
+      "gitBlobSha1": "3f0d4cc29a0ab6b907b5b5918d18be9824d28fdc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s023_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "4cf52f9a66d2cc16d73ab2def7895dd0532db2a70397b024306bf43598adbf19"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s024_multi.csv",
+      "gitBlobSha1": "dffb69083897d2da68aff1247c6e3ad4ddb2277e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s024_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d7b9c6b8479bffe7fc5dfa811e8956b5fc1d1b0de1aa43a98f3065ca0ed0927e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s024_simple.csv",
+      "gitBlobSha1": "e6a236b8055be7eb1447a263817591e0b2982710",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s024_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "9b76e6e1594b009c995e26f1801f9ab5493a8015ffe2ddd7b5223d6383d50a9f"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s025_multi.csv",
+      "gitBlobSha1": "c0478e3e99c13f5919216e1a63b26a9e86cd26a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s025_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "41fbffd2518a00b9d393cae2233a9c61b3c55751266fa38cba2df63bffa3e528"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s025_simple.csv",
+      "gitBlobSha1": "adb83da5f5ba733656ca82c7fdd8b6d8717b191e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s025_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "ba45a984d0fb0d53c09733356f5bd417a2eb24c22d56940211fcc792f9be5b6e"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s026_simple.csv",
+      "gitBlobSha1": "afe1a261c719da70a89f4a1830611351f3a7ac70",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s026_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "86c70dcc1d18748bd364295d730a92732fd874d6c7dd066a3aeeac862f84ce24"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s027_simple.csv",
+      "gitBlobSha1": "e2ad65156e9aa8f7405595f2fbaf145238ef34a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s027_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "b5a3d3229f9875aeef4008dfbce423e4b9a95b2fbe6c23b97f110f1835d49ee6"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s028_simple.csv",
+      "gitBlobSha1": "11bd5cdd4d0330df3f3c8889127d6d4e8e202c45",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s028_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "73152e529be257dfab8cbc4ed47e6fbe0c17f788aeb1d6f09f3f201e861daf51"
+    },
+    {
+      "path": "red_flash_patterns/30fps/s029_simple.csv",
+      "gitBlobSha1": "61688fb5a28d94590935bde5995a565be58cbccc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s029_simple.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "54acbaa6c9cd62db1407adb5275128594a3a36641952c3379ed0a4d1902eeb03"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr002_multi.csv",
+      "gitBlobSha1": "868fae2fe36cb9762540441bb2c0d6020ba11471",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr002_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "cf252a8c187d6e79641445874e166536ed694ebc8e5d94c8aa463c9fee03c5fc"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr003_multi.csv",
+      "gitBlobSha1": "44f65d64f8ace828e1d52544540e7c2c5ac8b65f",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr003_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "798dddc9f1e3154152c30c38524251073d59b5deee60e92184ee7ad18fb61aa0"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr004_multi.csv",
+      "gitBlobSha1": "13b54a8eade38692dfe48fe35403de3b2dcb1292",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr004_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "3b0a5061034a52cc9e44eee7b7c31ba6df5b84caa1f42b8267d141cc8c5d9911"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr005_multi.csv",
+      "gitBlobSha1": "0cea890e2d8576f41948b786c919e6aab1430931",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr005_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "d6fb43ea0f807e98e4b63e46bea1d0ecdbef026950516716376b4046af214f9f"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr011_multi.csv",
+      "gitBlobSha1": "eb1a8fc8fc961010b418feba0924e10e36b1b323",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr011_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "cd3b3a9731ca57284d24b584e94eca4eaf87c92b85c8e3412181b40bcb901565"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr012_multi.csv",
+      "gitBlobSha1": "5699e2c53e0e2ed28ab0b9060a0658d21d96f197",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr012_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "f801937b7f8be9b77c68b13f3577bd4e4c087223a7ffbfa27b65f4ff25a19d2f"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr013_multi.csv",
+      "gitBlobSha1": "085db622ea7a475502c8222710ee312499fb75f2",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr013_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "43e812f4dd7bf28ff16300f7eb30bec5032f19f97d77c272edf03d2b96bb7b35"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr014_multi.csv",
+      "gitBlobSha1": "ab5739ff9138823819b9bc44d475b1cb6ef26867",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr014_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "2b47c05efba324884eb2f0f09dd26b575af6eb415207f8e59363f6242d9a7899"
+    },
+    {
+      "path": "red_flash_patterns/30fps/sr015_multi.csv",
+      "gitBlobSha1": "0f1ad60adc756eeb3e87760bec457ac8abdc81e9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/sr015_multi.csv",
+      "kind": "RED_FLASH",
+      "framesPerSecond": 30,
+      "expectedCandidate": false,
+      "sha256": "5b5234e4798cdb5cf4479c11c7a51020d0b488e98a2d8f29cd19199aadd15fa0"
+    }
+  ]
+}
