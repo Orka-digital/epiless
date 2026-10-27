@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "source": {
+    "path": "src/wasm/dense.c",
+    "sha256": "51a2dc545eb4072e8daa946cfad91889938b0d458181cd7c5ceb4805ba86776f"
+  },
+  "generated": {
+    "path": "src/dense-kernel.generated.ts",
+    "sha256": "8488e0b77321797265e4169ba03ad1b598dcd222fe9c059cefae2ed258887157",
+    "bytes": 2239
+  },
+  "toolchain": {
+    "version": "23.1.4",
+    "compiler": "clang",
+    "linker": "wasm-ld",
+    "release": "https://github.com/llvm/llvm-project/releases/tag/llvmorg-23.1.4"
+  },
+  "compilerArguments": [
+    "--target=wasm32-unknown-unknown",
+    "-O3",
+    "-fno-fast-math",
+    "-ffp-contract=off",
+    "-fno-builtin",
+    "-nostdlib",
+    "-fuse-ld={linker}",
+    "-Wl,--no-entry,--import-memory,--export=process_dense,--export=__heap_base,--stack-first,-z,stack-size=65536,--initial-memory=131072,--max-memory=268435456,--strip-all",
+    "{source}",
+    "-o",
+    "{output}"
+  ],
+  "validationBoundary": "Ordinary builds check source/byte hashes, flags, imports, exports and ABI without a compiler. They do not prove source-to-binary compilation. Run verify:kernel:rebuild with exact clang and wasm-ld 23.1.4 to compile into a temporary directory and compare every byte. No compiler is downloaded by these scripts; compiler reproducibility is not yet enforced in hosted CI.",
+  "abi": {
+    "version": 2,
+    "stateBytes": 100,
+    "pointers": 25
+  }
+}
