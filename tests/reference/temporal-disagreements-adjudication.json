@@ -1,0 +1,1717 @@
+{
+  "schemaVersion": 1,
+  "scope": "NUMERIC_DISAGREEMENT_ADJUDICATION",
+  "conformanceEstablished": false,
+  "engineExecuted": false,
+  "source": {
+    "repository": "https://github.com/traceRERC/pse-test-media",
+    "commit": "ef78542aad496827f25064f57aaf13d6a741ba75",
+    "corpora": [
+      {
+        "corpus": "trace-pse",
+        "manifestSha256": "eeb79bb17ea290080903f393a13a477a47bdc05028da81c21d3badde617a2840"
+      },
+      {
+        "corpus": "trace-pse-expanded",
+        "manifestSha256": "6308be198bfef5ff53b3b3f136e0d0f5db892656aa5ab07fd8089c72bb94b4cb"
+      }
+    ]
+  },
+  "counts": {
+    "originalContextCases": 2,
+    "expandedDisagreements": 18,
+    "staircaseCasesAcrossBoth": 18,
+    "redCases": 2
+  },
+  "method": [
+    "Recompute linear sRGB, relative luminance and CIE 1976 u-prime/v-prime from unchanged opaque source CSVs at 30 fps.",
+    "General: compare adjacent steps with adjacent extrema after equal samples and monotone internal steps are removed; retain a one-second witness with an actually held initial source state.",
+    "Red: show immediate comparisons and an explicitly non-independent reconstruction of retained-anchor excursions. Dot products show opposition; the standards do not specify this vector implementation.",
+    "Seven-edge witnesses describe numeric threshold evidence; they do not score area, physical display, biological risk or normative conformity.",
+    "This does not execute the engine, revise upstream labels, alter historical scores, or constitute independent expert certification."
+  ],
+  "cases": [
+    {
+      "corpus": "trace-pse",
+      "id": "lum_flash_patterns/rel_lum/l031_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l031_srgba.csv",
+      "csvSha256": "42f6592ee9139571e0f4a2bbcf966d3e3931f7f69bfe6ee376b2f1f89eeb8c56",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "changePoints": [
+          {
+            "frame": 1,
+            "timeMs": 0,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 2,
+            "timeMs": 33.333333333333336,
+            "rgb": [108, 108, 108],
+            "luminance": 0.14995978981060856
+          },
+          {
+            "frame": 3,
+            "timeMs": 66.66666666666667,
+            "rgb": [136, 136, 136],
+            "luminance": 0.24620132670783546
+          },
+          {
+            "frame": 4,
+            "timeMs": 100,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 12,
+            "timeMs": 366.6666666666667,
+            "rgb": [136, 136, 136],
+            "luminance": 0.24620132670783546
+          },
+          {
+            "frame": 13,
+            "timeMs": 400,
+            "rgb": [108, 108, 108],
+            "luminance": 0.14995978981060856
+          },
+          {
+            "frame": 14,
+            "timeMs": 433.3333333333333,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 22,
+            "timeMs": 700,
+            "rgb": [108, 108, 108],
+            "luminance": 0.14995978981060856
+          },
+          {
+            "frame": 23,
+            "timeMs": 733.3333333333334,
+            "rgb": [136, 136, 136],
+            "luminance": 0.24620132670783546
+          },
+          {
+            "frame": 24,
+            "timeMs": 766.6666666666666,
+            "rgb": [108, 108, 108],
+            "luminance": 0.14995978981060856
+          },
+          {
+            "frame": 25,
+            "timeMs": 800,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 31,
+            "timeMs": 1000,
+            "rgb": [108, 108, 108],
+            "luminance": 0.14995978981060856
+          },
+          {
+            "frame": 32,
+            "timeMs": 1033.3333333333333,
+            "rgb": [136, 136, 136],
+            "luminance": 0.24620132670783546
+          },
+          {
+            "frame": 33,
+            "timeMs": 1066.6666666666667,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          }
+        ],
+        "adjacentStepEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "delta": 0.09869033143656533,
+            "darker": 0.05126945837404324,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "delta": 0.09624153689722689,
+            "darker": 0.14995978981060856,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "endMs": 100,
+            "delta": -0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "delta": 0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "delta": -0.09624153689722689,
+            "darker": 0.14995978981060856,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "endMs": 433.3333333333333,
+            "delta": -0.09869033143656533,
+            "darker": 0.05126945837404324,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 22,
+            "endMs": 700,
+            "delta": 0.09869033143656533,
+            "darker": 0.05126945837404324,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "delta": 0.09624153689722689,
+            "darker": 0.14995978981060856,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 24,
+            "endMs": 766.6666666666666,
+            "delta": -0.09624153689722689,
+            "darker": 0.14995978981060856,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 24,
+            "toFrame": 25,
+            "endMs": 800,
+            "delta": -0.09869033143656533,
+            "darker": 0.05126945837404324,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 25,
+            "toFrame": 31,
+            "endMs": 1000,
+            "delta": 0.09869033143656533,
+            "darker": 0.05126945837404324,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 31,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "delta": 0.09624153689722689,
+            "darker": 0.14995978981060856,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 32,
+            "toFrame": 33,
+            "endMs": 1066.6666666666667,
+            "delta": -0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          }
+        ],
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "extremumEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "delta": 0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "endMs": 100,
+            "delta": -0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "delta": 0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 14,
+            "endMs": 433.3333333333333,
+            "delta": -0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "delta": 0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 25,
+            "endMs": 800,
+            "delta": -0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 25,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "delta": 0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 32,
+            "toFrame": 33,
+            "endMs": 1066.6666666666667,
+            "delta": -0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          }
+        ],
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitions": [
+            {
+              "fromFrame": 3,
+              "toFrame": 4,
+              "endMs": 100,
+              "delta": -0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 4,
+              "toFrame": 12,
+              "endMs": 366.6666666666667,
+              "delta": 0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 12,
+              "toFrame": 14,
+              "endMs": 433.3333333333333,
+              "delta": -0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 14,
+              "toFrame": 23,
+              "endMs": 733.3333333333334,
+              "delta": 0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 23,
+              "toFrame": 25,
+              "endMs": 800,
+              "delta": -0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 25,
+              "toFrame": 32,
+              "endMs": 1033.3333333333333,
+              "delta": 0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 32,
+              "toFrame": 33,
+              "endMs": 1066.6666666666667,
+              "delta": -0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse",
+      "id": "lum_flash_patterns/rel_lum/y031_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y031_srgba.csv",
+      "csvSha256": "7386c9b9b870bc6a59a25c57395618d39475ef1607d3728bb0e7c57a9cff952c",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "changePoints": [
+          {
+            "frame": 1,
+            "timeMs": 0,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 2,
+            "timeMs": 33.333333333333336,
+            "rgb": [109, 109, 109],
+            "luminance": 0.15292615199615017
+          },
+          {
+            "frame": 3,
+            "timeMs": 66.66666666666667,
+            "rgb": [139, 139, 139],
+            "luminance": 0.2581828529215958
+          },
+          {
+            "frame": 4,
+            "timeMs": 100,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 12,
+            "timeMs": 366.6666666666667,
+            "rgb": [136, 136, 136],
+            "luminance": 0.24620132670783546
+          },
+          {
+            "frame": 13,
+            "timeMs": 400,
+            "rgb": [108, 108, 108],
+            "luminance": 0.14995978981060856
+          },
+          {
+            "frame": 14,
+            "timeMs": 433.3333333333333,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 22,
+            "timeMs": 700,
+            "rgb": [109, 109, 109],
+            "luminance": 0.15292615199615017
+          },
+          {
+            "frame": 23,
+            "timeMs": 733.3333333333334,
+            "rgb": [139, 139, 139],
+            "luminance": 0.2581828529215958
+          },
+          {
+            "frame": 24,
+            "timeMs": 766.6666666666666,
+            "rgb": [109, 109, 109],
+            "luminance": 0.15292615199615017
+          },
+          {
+            "frame": 25,
+            "timeMs": 800,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          },
+          {
+            "frame": 31,
+            "timeMs": 1000,
+            "rgb": [109, 109, 109],
+            "luminance": 0.15292615199615017
+          },
+          {
+            "frame": 32,
+            "timeMs": 1033.3333333333333,
+            "rgb": [139, 139, 139],
+            "luminance": 0.2581828529215958
+          },
+          {
+            "frame": 33,
+            "timeMs": 1066.6666666666667,
+            "rgb": [64, 64, 64],
+            "luminance": 0.05126945837404324
+          }
+        ],
+        "adjacentStepEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "delta": 0.10165669362210694,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "delta": 0.10525670092544565,
+            "darker": 0.15292615199615017,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "endMs": 100,
+            "delta": -0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "delta": 0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "delta": -0.09624153689722689,
+            "darker": 0.14995978981060856,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 14,
+            "endMs": 433.3333333333333,
+            "delta": -0.09869033143656533,
+            "darker": 0.05126945837404324,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 22,
+            "endMs": 700,
+            "delta": 0.10165669362210694,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "delta": 0.10525670092544565,
+            "darker": 0.15292615199615017,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 24,
+            "endMs": 766.6666666666666,
+            "delta": -0.10525670092544565,
+            "darker": 0.15292615199615017,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 24,
+            "toFrame": 25,
+            "endMs": 800,
+            "delta": -0.10165669362210694,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 25,
+            "toFrame": 31,
+            "endMs": 1000,
+            "delta": 0.10165669362210694,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 31,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "delta": 0.10525670092544565,
+            "darker": 0.15292615199615017,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 32,
+            "toFrame": 33,
+            "endMs": 1066.6666666666667,
+            "delta": -0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          }
+        ],
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "extremumEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "delta": 0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 4,
+            "endMs": 100,
+            "delta": -0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 4,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "delta": 0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 14,
+            "endMs": 433.3333333333333,
+            "delta": -0.19493186833379222,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 14,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "delta": 0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 25,
+            "endMs": 800,
+            "delta": -0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 25,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "delta": 0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 32,
+            "toFrame": 33,
+            "endMs": 1066.6666666666667,
+            "delta": -0.2069133945475526,
+            "darker": 0.05126945837404324,
+            "qualifies": true
+          }
+        ],
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitions": [
+            {
+              "fromFrame": 3,
+              "toFrame": 4,
+              "endMs": 100,
+              "delta": -0.2069133945475526,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 4,
+              "toFrame": 12,
+              "endMs": 366.6666666666667,
+              "delta": 0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 12,
+              "toFrame": 14,
+              "endMs": 433.3333333333333,
+              "delta": -0.19493186833379222,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 14,
+              "toFrame": 23,
+              "endMs": 733.3333333333334,
+              "delta": 0.2069133945475526,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 23,
+              "toFrame": 25,
+              "endMs": 800,
+              "delta": -0.2069133945475526,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 25,
+              "toFrame": 32,
+              "endMs": 1033.3333333333333,
+              "delta": 0.2069133945475526,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            },
+            {
+              "fromFrame": 32,
+              "toFrame": 33,
+              "endMs": 1066.6666666666667,
+              "delta": -0.2069133945475526,
+              "darker": 0.05126945837404324,
+              "qualifies": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l032_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l032_srgba.csv",
+      "csvSha256": "5fd5024ebe92161c11c0feb93035fd2da47f459dc37efb4fafa766fafb04c806",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19195463509805236,
+        "maximumDarkerLuminance": 0.14995978981060856,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l033_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l033_srgba.csv",
+      "csvSha256": "3b255b26fb8772d23a69644b62e97643a5bdcf967316552a274092ce3c73f9ee",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19345584713308328,
+        "maximumDarkerLuminance": 0.24620132670783546,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l034_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l034_srgba.csv",
+      "csvSha256": "bfdad2d83173fce0d510784c66d58773c9b3962ff22958b315716fc626005031",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19756506410344626,
+        "maximumDarkerLuminance": 0.3419144249086609,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l035_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l035_srgba.csv",
+      "csvSha256": "4e8d290da33086813ab0a3bed08e35b5ab23f7dd3d54c73892f8c1c1dcec9445",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.1979397001531139,
+        "maximumDarkerLuminance": 0.43965717384091874,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l036_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l036_srgba.csv",
+      "csvSha256": "1d8ebcd90d9e64077a8b78a0df03d87d8f85496ae185b8fe0ce5947abfb8039a",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19098125107824648,
+        "maximumDarkerLuminance": 0.5394794890121072,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l037_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l037_srgba.csv",
+      "csvSha256": "fbd81414f38a8b2f404fba5a2b03b0b533a848d7484a410f4bb2523f7bed0c19",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.1851888804022508,
+        "maximumDarkerLuminance": 0.6375968739940326,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l038_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l038_srgba.csv",
+      "csvSha256": "87aad2771f60d10b35372706aace81475309978c40c665197da39766298c0906",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19112111618694094,
+        "maximumDarkerLuminance": 0.7304607400903537,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/l039_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/l039_srgba.csv",
+      "csvSha256": "183b2ec9f03982ab9bab2214020eb28048e47219d71e99ac8015d9a5d6043d58",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19199935909942079,
+        "maximumDarkerLuminance": 0.799102738014409,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y032_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y032_srgba.csv",
+      "csvSha256": "337d7b286f64909f5e6ea38d02d6a55bd753325e453de8a83eb4aa5e83551acf",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19195463509805236,
+        "maximumDarkerLuminance": 0.14995978981060856,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y033_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y033_srgba.csv",
+      "csvSha256": "8e91c86ad2240658a670163095c9f7fe7556791e3331ef8736befd20181af590",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19345584713308328,
+        "maximumDarkerLuminance": 0.24620132670783546,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y034_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y034_srgba.csv",
+      "csvSha256": "17cb575166d97171c35fbdcaf2afff14dd94d2396943136398368e7bdfd9b339",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19756506410344626,
+        "maximumDarkerLuminance": 0.3419144249086609,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y035_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y035_srgba.csv",
+      "csvSha256": "41ea08a57720ba5db22c43e24d80063c4c8045d7e9809caadcd13ec565b0a60b",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.1979397001531139,
+        "maximumDarkerLuminance": 0.43965717384091874,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y036_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y036_srgba.csv",
+      "csvSha256": "f5d32f0a0b5ee17dcc9450712d504d55a5056e605a65a1705a7c7022b820eeab",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19098125107824648,
+        "maximumDarkerLuminance": 0.5394794890121072,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y037_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y037_srgba.csv",
+      "csvSha256": "80211df0b3579321dec3af5a7230911c044cd13437bf9001fd222daf7d83aa23",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.1851888804022508,
+        "maximumDarkerLuminance": 0.6375968739940326,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y038_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y038_srgba.csv",
+      "csvSha256": "a9110ac1f830dc8a24fe848e6ebbf9469edd3583bdc7670242def45a19949ee6",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19112111618694094,
+        "maximumDarkerLuminance": 0.7304607400903537,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "lum_flash_patterns/rel_lum/y039_srgba.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/y039_srgba.csv",
+      "csvSha256": "465ae43c070b0fc2c5e26cf7db96cb6aaa519ae85e3fbefc01df9f027bc8fa52",
+      "upstreamExpectedCandidate": false,
+      "classification": "STAIRCASE_STEP_VS_EXTREMUM_DISAGREEMENT",
+      "trace": {
+        "extremaFrames": [1, 3, 4, 12, 14, 23, 25, 32, 33],
+        "qualifyingExtremumEdges": 8,
+        "minimumExtremumDelta": 0.19199935909942079,
+        "maximumDarkerLuminance": 0.799102738014409,
+        "witnessWindow": {
+          "startMs": 90,
+          "endMs": 1090,
+          "initialHeldSourceFrame": 3,
+          "initialHeldSourceFrameTimestampMs": 66.66666666666667,
+          "qualifyingAlternatingTransitionFrames": [4, 12, 14, 23, 25, 32, 33],
+          "transitionEndTimesMs": [
+            100, 366.6666666666667, 433.3333333333333, 733.3333333333334, 800,
+            1033.3333333333333, 1066.6666666666667
+          ]
+        }
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "red_flash_patterns/30fps/dr011_multi.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/dr011_multi.csv",
+      "csvSha256": "942fdf7364806f7c301f3b6ce22d719419eee45cd68efdc8849c309ecf35b4a3",
+      "upstreamExpectedCandidate": false,
+      "classification": "SEVEN_TRANSITIONS_WITH_WEAK_EIGHTH_RETURN",
+      "trace": {
+        "changePoints": [
+          {
+            "frame": 1,
+            "timeMs": 0,
+            "rgb": [9, 63, 63],
+            "redFraction": 0.026743807330012734,
+            "uv": [0.14232667046472655, 0.45636032825061756]
+          },
+          {
+            "frame": 2,
+            "timeMs": 33.333333333333336,
+            "rgb": [101, 34, 34],
+            "redFraction": 0.8026721054455948,
+            "uv": [0.3435215451655397, 0.49976458966270676]
+          },
+          {
+            "frame": 3,
+            "timeMs": 66.66666666666667,
+            "rgb": [92, 13, 123],
+            "redFraction": 0.3462218340003512,
+            "uv": [0.2596717308610484, 0.2869184571488941]
+          },
+          {
+            "frame": 12,
+            "timeMs": 366.6666666666667,
+            "rgb": [115, 3, 57],
+            "redFraction": 0.803880573795777,
+            "uv": [0.3890314577879878, 0.44720412664962966]
+          },
+          {
+            "frame": 13,
+            "timeMs": 400,
+            "rgb": [56, 50, 96],
+            "redFraction": 0.20989129564867567,
+            "uv": [0.19707376585854053, 0.3602319661664539]
+          },
+          {
+            "frame": 22,
+            "timeMs": 700,
+            "rgb": [109, 22, 48],
+            "redFraction": 0.8027359136709561,
+            "uv": [0.368742336941526, 0.4701903767318955]
+          },
+          {
+            "frame": 23,
+            "timeMs": 733.3333333333334,
+            "rgb": [56, 50, 96],
+            "redFraction": 0.20989129564867567,
+            "uv": [0.19707376585854053, 0.3602319661664539]
+          },
+          {
+            "frame": 31,
+            "timeMs": 1000,
+            "rgb": [109, 22, 48],
+            "redFraction": 0.8027359136709561,
+            "uv": [0.368742336941526, 0.4701903767318955]
+          },
+          {
+            "frame": 32,
+            "timeMs": 1033.3333333333333,
+            "rgb": [40, 58, 58],
+            "redFraction": 0.2004784880581237,
+            "uv": [0.17130909502154137, 0.4626127774429283]
+          }
+        ],
+        "adjacentEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "vector": [0.20119487470081313, 0.043404261412089196],
+            "distance": 0.20582348630466074,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "vector": [-0.08384981430449129, -0.21284613251381268],
+            "distance": 0.22876684087731156,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "vector": [0.12935972692693942, 0.16028566950073558],
+            "distance": 0.20597435470929717,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "vector": [-0.19195769192944728, -0.08697216048317574],
+            "distance": 0.21074133953733867,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 22,
+            "endMs": 700,
+            "vector": [0.1716685710829855, 0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "vector": [-0.1716685710829855, -0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 31,
+            "endMs": 1000,
+            "vector": [0.1716685710829855, 0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 31,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "vector": [-0.19743324191998465, -0.0075775992889672295],
+            "distance": 0.19757860467676994,
+            "saturatedEndpoint": true,
+            "qualifies": false
+          }
+        ],
+        "adjacentQualifiedEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "vector": [0.20119487470081313, 0.043404261412089196],
+            "distance": 0.20582348630466074,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": null
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "vector": [-0.08384981430449129, -0.21284613251381268],
+            "distance": 0.22876684087731156,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.026108582058860276
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "vector": [0.12935972692693942, 0.16028566950073558],
+            "distance": 0.20597435470929717,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04496297393192232
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "vector": [-0.19195769192944728, -0.08697216048317574],
+            "distance": 0.21074133953733867,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.03877198558049011
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 22,
+            "endMs": 700,
+            "vector": [0.1716685710829855, 0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.042516423212088664
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "vector": [-0.1716685710829855, -0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.041560950351752265
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 31,
+            "endMs": 1000,
+            "vector": [0.1716685710829855, 0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.041560950351752265
+          }
+        ],
+        "adjacentSevenOpposingEdgeFrames": [2, 3, 12, 13, 22, 23, 31],
+        "retainedAnchorEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "vector": [0.20119487470081313, 0.043404261412089196],
+            "distance": 0.20582348630466074,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": null
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "vector": [-0.08384981430449129, -0.21284613251381268],
+            "distance": 0.22876684087731156,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.026108582058860276
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "vector": [0.12935972692693942, 0.16028566950073558],
+            "distance": 0.20597435470929717,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04496297393192232
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "vector": [-0.19195769192944728, -0.08697216048317574],
+            "distance": 0.21074133953733867,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.03877198558049011
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 22,
+            "endMs": 700,
+            "vector": [0.1716685710829855, 0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.042516423212088664
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "vector": [-0.1716685710829855, -0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.041560950351752265
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 31,
+            "endMs": 1000,
+            "vector": [0.1716685710829855, 0.10995841056544159],
+            "distance": 0.20386502974211212,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.041560950351752265
+          }
+        ],
+        "retainedAnchorSevenOpposingEdgeFrames": [2, 3, 12, 13, 22, 23, 31]
+      }
+    },
+    {
+      "corpus": "trace-pse-expanded",
+      "id": "red_flash_patterns/30fps/s014_multi.csv",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/red_flash_patterns/30fps/s014_multi.csv",
+      "csvSha256": "7021bde7cd5bf722569bd8a2ac7158206f818d54627f8173b0734790eefd328c",
+      "upstreamExpectedCandidate": false,
+      "classification": "SATURATION_AFTER_MONOTONE_PLATEAU_AMBIGUITY",
+      "trace": {
+        "changePoints": [
+          {
+            "frame": 1,
+            "timeMs": 0,
+            "rgb": [196, 74, 74],
+            "redFraction": 0.801215163644528,
+            "uv": [0.3428747963298581, 0.49962506495774783]
+          },
+          {
+            "frame": 2,
+            "timeMs": 33.333333333333336,
+            "rgb": [29, 127, 127],
+            "redFraction": 0.028131756223990695,
+            "uv": [0.14253676385908148, 0.4564056522113949]
+          },
+          {
+            "frame": 3,
+            "timeMs": 66.66666666666667,
+            "rgb": [195, 74, 74],
+            "redFraction": 0.7993845154626421,
+            "uv": [0.34206460798167226, 0.4994502810478198]
+          },
+          {
+            "frame": 10,
+            "timeMs": 300,
+            "rgb": [196, 74, 74],
+            "redFraction": 0.801215163644528,
+            "uv": [0.3428747963298581, 0.49962506495774783]
+          },
+          {
+            "frame": 12,
+            "timeMs": 366.6666666666667,
+            "rgb": [29, 127, 127],
+            "redFraction": 0.028131756223990695,
+            "uv": [0.14253676385908148, 0.4564056522113949]
+          },
+          {
+            "frame": 13,
+            "timeMs": 400,
+            "rgb": [210, 52, 99],
+            "redFraction": 0.8019993209057069,
+            "uv": [0.36824067575636477, 0.4702784339925885]
+          },
+          {
+            "frame": 22,
+            "timeMs": 700,
+            "rgb": [113, 104, 188],
+            "redFraction": 0.2047642627733548,
+            "uv": [0.19575569619562766, 0.3602565775188888]
+          },
+          {
+            "frame": 23,
+            "timeMs": 733.3333333333334,
+            "rgb": [222, 11, 116],
+            "redFraction": 0.8040695442115814,
+            "uv": [0.3894191286642764, 0.44688819979261724]
+          },
+          {
+            "frame": 31,
+            "timeMs": 1000,
+            "rgb": [180, 35, 236],
+            "redFraction": 0.34786963912767693,
+            "uv": [0.26015907078747286, 0.2872950872409475]
+          },
+          {
+            "frame": 32,
+            "timeMs": 1033.3333333333333,
+            "rgb": [210, 52, 99],
+            "redFraction": 0.8019993209057069,
+            "uv": [0.36824067575636477, 0.4702784339925885]
+          }
+        ],
+        "adjacentEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "vector": [-0.20033803247077664, -0.043219412746352937],
+            "distance": 0.2049469318931161,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 3,
+            "endMs": 66.66666666666667,
+            "vector": [0.19952784412259078, 0.0430446288364249],
+            "distance": 0.20411810466461439,
+            "saturatedEndpoint": false,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 3,
+            "toFrame": 10,
+            "endMs": 300,
+            "vector": [0.0008101883481858585, 0.0001747839099280335],
+            "distance": 0.0008288272285017312,
+            "saturatedEndpoint": true,
+            "qualifies": false
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "vector": [-0.20033803247077664, -0.043219412746352937],
+            "distance": 0.2049469318931161,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "vector": [0.22570391189728328, 0.01387278178119361],
+            "distance": 0.2261298518994899,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 22,
+            "endMs": 700,
+            "vector": [-0.1724849795607371, -0.11002185647369972],
+            "distance": 0.20458708922116098,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "vector": [0.19366343246864876, 0.08663162227372845],
+            "distance": 0.2121569302505031,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 31,
+            "endMs": 1000,
+            "vector": [-0.12926005787680356, -0.15959311255166975],
+            "distance": 0.2053731339202977,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          },
+          {
+            "fromFrame": 31,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "vector": [0.10808160496889191, 0.18298334675164102],
+            "distance": 0.21251950150770374,
+            "saturatedEndpoint": true,
+            "qualifies": true
+          }
+        ],
+        "adjacentQualifiedEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "vector": [-0.20033803247077664, -0.043219412746352937],
+            "distance": 0.2049469318931161,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": null
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "vector": [-0.20033803247077664, -0.043219412746352937],
+            "distance": 0.2049469318931161,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": 0.04200324489240157
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "vector": [0.22570391189728328, 0.01387278178119361],
+            "distance": 0.2261298518994899,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04581665111220074
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 22,
+            "endMs": 700,
+            "vector": [-0.1724849795607371, -0.11002185647369972],
+            "distance": 0.20458708922116098,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04045684383640275
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "vector": [0.19366343246864876, 0.08663162227372845],
+            "distance": 0.2121569302505031,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04293540510290099
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 31,
+            "endMs": 1000,
+            "vector": [-0.12926005787680356, -0.15959311255166975],
+            "distance": 0.2053731339202977,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.038858756733582855
+          },
+          {
+            "fromFrame": 31,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "vector": [0.10808160496889191, 0.18298334675164102],
+            "distance": 0.21251950150770374,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04317351636691265
+          }
+        ],
+        "adjacentSevenOpposingEdgeFrames": null,
+        "retainedAnchorEdges": [
+          {
+            "fromFrame": 1,
+            "toFrame": 2,
+            "endMs": 33.333333333333336,
+            "vector": [-0.20033803247077664, -0.043219412746352937],
+            "distance": 0.2049469318931161,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": null
+          },
+          {
+            "fromFrame": 2,
+            "toFrame": 10,
+            "endMs": 300,
+            "vector": [0.20033803247077664, 0.043219412746352937],
+            "distance": 0.2049469318931161,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04200324489240157
+          },
+          {
+            "fromFrame": 10,
+            "toFrame": 12,
+            "endMs": 366.6666666666667,
+            "vector": [-0.20033803247077664, -0.043219412746352937],
+            "distance": 0.2049469318931161,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04200324489240157
+          },
+          {
+            "fromFrame": 12,
+            "toFrame": 13,
+            "endMs": 400,
+            "vector": [0.22570391189728328, 0.01387278178119361],
+            "distance": 0.2261298518994899,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04581665111220074
+          },
+          {
+            "fromFrame": 13,
+            "toFrame": 22,
+            "endMs": 700,
+            "vector": [-0.1724849795607371, -0.11002185647369972],
+            "distance": 0.20458708922116098,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04045684383640275
+          },
+          {
+            "fromFrame": 22,
+            "toFrame": 23,
+            "endMs": 733.3333333333334,
+            "vector": [0.19366343246864876, 0.08663162227372845],
+            "distance": 0.2121569302505031,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04293540510290099
+          },
+          {
+            "fromFrame": 23,
+            "toFrame": 31,
+            "endMs": 1000,
+            "vector": [-0.12926005787680356, -0.15959311255166975],
+            "distance": 0.2053731339202977,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.038858756733582855
+          },
+          {
+            "fromFrame": 31,
+            "toFrame": 32,
+            "endMs": 1033.3333333333333,
+            "vector": [0.10808160496889191, 0.18298334675164102],
+            "distance": 0.21251950150770374,
+            "saturatedEndpoint": true,
+            "qualifies": true,
+            "dotWithPreviousQualifiedVector": -0.04317351636691265
+          }
+        ],
+        "retainedAnchorSevenOpposingEdgeFrames": [2, 10, 12, 13, 22, 23, 31]
+      }
+    }
+  ]
+}
