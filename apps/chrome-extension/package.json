@@ -1,0 +1,27 @@
+{
+  "name": "@epi-less/chrome-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:advanced": "node build.mjs --advanced",
+    "typecheck": "tsc --noEmit",
+    "dev": "node build.mjs --watch",
+    "test:browser": "node ../../tests/extension/browser-smoke.mjs && node ../../tests/extension/content-policy.mjs && node ../../tests/extension/trusted-pointer-native.mjs && node ../../tests/extension/viewport-workspace-native.mjs && node ../../tests/extension/inspect-source-native.mjs && node --import tsx ../../tests/extension/replay-smoke.mjs && node ../../tests/extension/worker-capture.mjs && node ../../tests/extension/replay-evidence-ui.mjs && node ../../tests/extension/animation-phase-browser.mjs && node ../../tests/extension/workspace-ui.mjs"
+  },
+  "dependencies": {
+    "@epi-less/analysis-engine": "workspace:*",
+    "@epi-less/core": "workspace:*",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.3.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "esbuild": "0.28.2",
+    "typescript": "6.0.3"
+  }
+}

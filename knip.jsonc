@@ -1,0 +1,56 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema.json",
+  // Frozen evidence and external reference corpora are not executable project sources.
+  "ignore": ["tests/extension/evidence/**"],
+  "workspaces": {
+    ".": {
+      "entry": [
+        "scripts/adjudicate-combo-red.mjs",
+        "scripts/adjudicate-temporal.mjs",
+        "scripts/validate-combo-heldout.mjs",
+        "tests/reference/*.test.mjs",
+        "tests/extension/animation-phase-repro.mjs",
+        "tests/extension/native-advanced-fixture.mjs",
+        "tests/extension/native-context-guard.mjs",
+        "tests/extension/native-context-tab-identity.mjs",
+        "tests/extension/native-fixture.mjs",
+        "tests/extension/prepare-native-encoded.mjs",
+        "tests/extension/verify-native-*.mjs",
+        "tests/extension/workspace-storage-native.mjs",
+        // Browser fixture scripts are copied into an isolated test extension.
+        "tests/extension/native-context-background.js",
+        "tests/extension/native-context-offscreen.js",
+      ],
+      "project": [
+        "scripts/**/*.{ts,mjs}",
+        "tests/**/*.{ts,mjs,js}",
+        ".github/scripts/*.mjs",
+      ],
+      // ffmpeg is a system prerequisite; setup invokes Wrangler from apps/web.
+      "ignoreBinaries": ["ffmpeg", "wrangler"],
+      // Renamed at fixture assembly time by native-context-guard.mjs.
+      "ignoreUnresolved": ["./fixture-tab-switch.mjs"],
+    },
+    "apps/chrome-extension": {
+      // Explicit esbuild entrypoints, including scripts referenced by generated HTML.
+      "entry": [
+        "src/{background,content,offscreen,analysis-worker,devtools,ui}.{ts,tsx}",
+      ],
+      "project": ["src/**/*.{ts,tsx}", "*.mjs"],
+    },
+    "apps/web": {
+      "project": ["src/**/*.{ts,tsx,astro}", "*.{ts,mjs}"],
+      // cloudflare:workers is a runtime-provided module, not an npm dependency.
+      "ignoreDependencies": ["cloudflare"],
+    },
+    "packages/analysis-engine": {
+      "entry": ["bench/*.mjs", "scripts/*.mjs"],
+      "project": [
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "bench/*.{mjs,ts}",
+        "scripts/*.mjs",
+      ],
+    },
+  },
+}

@@ -1,0 +1,49 @@
+{
+  "name": "epiless",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.13.1",
+  "engines": {
+    "node": ">=24.19.0 <25"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:extension": "pnpm --filter @epi-less/chrome-extension dev",
+    "setup:local": "node scripts/setup-local.mjs",
+    "check": "pnpm typecheck && pnpm format:check && node scripts/check-docs.mjs && pnpm check:unused",
+    "typecheck": "pnpm -r --if-present typecheck && pnpm typecheck:scripts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:integration": "vitest run tests/backend",
+    "test:review-ui": "node tests/extension/review-ui.mjs",
+    "test:e2e": "playwright test",
+    "test:web-quality": "node scripts/check-budgets.mjs && playwright test tests/web",
+    "build": "pnpm -r --if-present build",
+    "verify:quickstart": "pnpm setup:local && pnpm check && pnpm test && pnpm build",
+    "feed:build": "pnpm --filter @epi-less/rule-feed build:feed",
+    "backup:local": "node scripts/backup-local.mjs",
+    "backup:prepare-restore": "node scripts/prepare-restore.mjs",
+    "ops:budget": "node scripts/check-usage.mjs",
+    "benchmark:index": "node --import tsx scripts/benchmark-index.mjs",
+    "validate:detection": "node --import tsx scripts/validate-detection.mjs",
+    "validate:expanded": "node --import tsx scripts/validate-expanded.mjs",
+    "feed:preview": "node scripts/serve-feed.mjs",
+    "validate:spatial-media": "node --import tsx scripts/validate-spatial-media.mjs",
+    "check:unused": "knip",
+    "typecheck:scripts": "tsc -p tsconfig.scripts.json"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
+    "esbuild": "0.28.2",
+    "knip": "6.43.0",
+    "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.2",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "vitest": "5.0.5"
+  }
+}

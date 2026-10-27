@@ -1,0 +1,32 @@
+{
+  "name": "@epi-less/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "typecheck": "astro check",
+    "db:migrate:local": "wrangler d1 migrations apply flashguard --local"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "14.4.2",
+    "@astrojs/react": "7.1.1",
+    "@better-auth/drizzle-adapter": "1.7.12",
+    "@epi-less/core": "workspace:*",
+    "astro": "7.4.2",
+    "better-auth": "1.7.12",
+    "drizzle-orm": "0.45.4",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.12",
+    "@cloudflare/workers-types": "5.20261024.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "6.0.3",
+    "wrangler": "4.152.0"
+  }
+}

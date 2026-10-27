@@ -1,0 +1,17 @@
+{
+  "name": "@epi-less/analysis-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "scripts": {
+    "verify:kernel": "node scripts/verify-wasm.mjs",
+    "verify:kernel:rebuild": "node scripts/verify-wasm.mjs --rebuild",
+    "benchmark": "node --expose-gc bench/throughput.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "reference": "node bench/reference.mjs"
+  },
+  "dependencies": {
+    "@epi-less/core": "workspace:*"
+  }
+}

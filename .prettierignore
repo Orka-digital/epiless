@@ -1,0 +1,54 @@
+pnpm-lock.yaml
+node_modules
+dist
+dist-advanced
+.astro
+.wrangler
+artifacts
+test-results
+playwright-report
+epi-less-audit.md
+
+.output
+.playwright-mcp
+tests/reference/trace-pse/upstream/
+tests/reference/trace-pse-expanded/upstream/
+tests/reference/trace-spatial/upstream/
+tests/reference/trace-combo-heldout/upstream/
+tests/reference/trace-alternating-heldout/upstream/
+tests/reference/**/manifest.json
+tests/reference/**/selection.json
+tests/reference/**/first-encounter*.json
+tests/reference/trace-combo-heldout/001fl-red-adjudication.json
+# Preserve original native-capture exports and environment records.
+tests/extension/evidence/*.json
+# Preserve the original numeric experiments and source reconstruction patch.
+packages/analysis-engine/validation/dense-color-0.4.0-experiments.json
+packages/analysis-engine/validation/dense-color-0.4.0-baseline-to-candidate.patch
+packages/analysis-engine/validation/dense-color-0.4.0-production-proof.json
+packages/analysis-engine/validation/dense-loop-0.4.0-rejected.json
+packages/analysis-engine/validation/raw-reuse-0.4.0-rejected.json
+packages/analysis-engine/validation/wasm-dense-0.4.0-prototype.json
+packages/analysis-engine/validation/wasm-dense-0.4.0-production-proof.json
+packages/analysis-engine/validation/wasm-mixed-0.4.0-production-proof.json
+packages/analysis-engine/validation/wasm-mixed-0.4.0-final-proof.json
+packages/analysis-engine/validation/wasm-spatial-witness-0.4.0-production-proof.json
+packages/analysis-engine/validation/detection-spatial-merge-0.4.0.json
+packages/analysis-engine/validation/expanded-spatial-merge-0.4.0.json
+packages/analysis-engine/validation/spatial-media-spatial-merge-0.4.0.json
+# Encoded-media manifest is bound by native evidence and its SHA-256.
+tests/extension/fixtures/native-encoded/manifest.json
+# Preserve the rejected native layout-refresh experiment exactly.
+tests/extension/evidence/scanner-v04-native-context-cancel-nudge-rejected.patch
+tests/extension/evidence/scanner-v04-native-context-cancel-fresh-window-rejected.patch
+tests/extension/evidence/scanner-v04-native-context-cancel-live-producer-rejected.patch
+
+# Preserve the original native media-recheck verifier that rejected cleanup seeks.
+tests/extension/evidence/scanner-v04-native-media-recheck-verifier-before-window-scope.mjs
+
+# Preserve the inverse-phase numeric gates and lossless-media results byte-exact.
+packages/analysis-engine/validation/detection-inverse-phase-0.4.0.json
+packages/analysis-engine/validation/expanded-inverse-phase-0.4.0.json
+packages/analysis-engine/validation/spatial-media-inverse-phase-0.4.0.json
+packages/analysis-engine/validation/wasm-inverse-phase-0.4.0-production-proof.json
+packages/analysis-engine/validation/alternating-inverse-phase-0.4.0.json
