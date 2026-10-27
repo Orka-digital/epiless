@@ -1,0 +1,3427 @@
+{
+  "scope": "Node numeric-buffer-only prototype comparison, not browser capture. All 36 measured pushFrame runs include RGBA input copying, JS sharing/clustering/diagnostics and exact C Float64 dense processing. Production zero-extra-copy conversion requires separate browser evidence.",
+  "manifest": {
+    "baselineEngineSourceTreeSha256": "342483aad05cca930f02fc4503a11f92a7cf10bb501037c29ba9eb04bee02604",
+    "prototypeEngineSourceTreeSha256": "9b8b0d34059d0f3a404dac62833e5cf2f53c98b5efc91e7c07b9ff7193072b57",
+    "kernelSourceSha256": "b7b6d669e128f430d1d97fc4c41711f455dc98c3d606065f093fd1affabbca4c",
+    "kernelWasmSha256": "0bb729745f78c73694885d98c89940db3212c6b90f48d1175a38ce06486b4949",
+    "kernelBytes": 2210,
+    "clang": "Homebrew clang23.1.4",
+    "linker": "Homebrew LLD23.1.4",
+    "command": "/opt/homebrew/opt/llvm/bin/clang --target=wasm32-unknown-unknown -O3 -fno-fast-math -ffp-contract=off -fno-builtin -nostdlib -fuse-ld=/opt/homebrew/opt/lld/bin/wasm-ld -Wl,--no-entry,--import-memory,--export=process_dense,--export=__heap_base,--stack-first,-z,stack-size=65536,--initial-memory=131072,--max-memory=268435456,--strip-all kernel/dense.c -o kernel/dense.wasm"
+  },
+  "doubleCompileByteIdentical": true,
+  "baselineProductionUnchanged": true,
+  "perFrameStateProof": {
+    "file": "wasm-proof.json",
+    "cases": 126,
+    "checks": 20178,
+    "findings": 1554,
+    "liveEvents": 1554,
+    "wasmFrames": 8593,
+    "adjustment": "Only explicitly calculated extra allocation in quality.spatial.stateBytes; finiteFloat64/NaNsemanticstate and callbacks match after every push/reset."
+  },
+  "memory1080": {
+    "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+    "migratedStateBytes": 147751936,
+    "memoryBytes": 156172288,
+    "extraAllocatedBytes": 8420352,
+    "inputBytes": 8294400,
+    "linearTableBytes": 2048,
+    "constantsBytes": 24,
+    "pointerAndResultBytes": 108,
+    "linkerStackAndStaticBytes": 65536,
+    "alignmentBytes": 0,
+    "pageRoundingBytes": 58236,
+    "pages": 2383
+  },
+  "stateBytesBaseline": 190023436,
+  "stateBytesPrototype": 198443788,
+  "extraStateBytes": 8420352,
+  "timings": {
+    "low-contrast-rgb": {
+      "baseline": {
+        "meanTrialsMs": [
+          18.68758722666666,
+          18.940937240000014,
+          19.00089277333332
+        ],
+        "medianMeanMs": 18.940937240000014,
+        "p95TrialsMs": [
+          21.306291999999985,
+          22.03020800000013,
+          21.214666999999963
+        ],
+        "worstMaxMs": 31.65783300000021,
+        "framesOver16_7Ms": [
+          75,
+          75,
+          75
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          8.296916999999993,
+          6.327459000000005,
+          5.997332999999998
+        ],
+        "prepareTrialsMs": [
+          11.963332999999999,
+          6.866415999999994,
+          9.282542
+        ],
+        "stateBytes": 190023436
+      },
+      "prototype": {
+        "meanTrialsMs": [
+          10.249763893333308,
+          10.366056693333327,
+          10.29421497333334
+        ],
+        "medianMeanMs": 10.29421497333334,
+        "p95TrialsMs": [
+          11.614916999999878,
+          11.586374999999862,
+          11.41354100000001
+        ],
+        "worstMaxMs": 14.108124999999973,
+        "framesOver16_7Ms": [
+          0,
+          0,
+          0
+        ],
+        "medianInputCopyMs": 0.20511228000001058,
+        "medianKernelMs": 9.361241653333337,
+        "measuredWasmCalls": [
+          75,
+          75,
+          75
+        ],
+        "importTrialsMs": [
+          8.902875000000002,
+          7.937667000000005,
+          7.432541999999998
+        ],
+        "prepareTrialsMs": [
+          15.901292000000005,
+          17.495542,
+          17.33445799999999
+        ],
+        "stateBytes": 198443788
+      }
+    },
+    "entropy": {
+      "baseline": {
+        "meanTrialsMs": [
+          41.591894386666624,
+          42.344896093333375,
+          43.24649889333334
+        ],
+        "medianMeanMs": 42.344896093333375,
+        "p95TrialsMs": [
+          45.20195799999988,
+          48.52649999999994,
+          54.010916999999836
+        ],
+        "worstMaxMs": 73.22479199999998,
+        "framesOver16_7Ms": [
+          75,
+          75,
+          75
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          6.206541999999999,
+          7.016041999999999,
+          6.2287919999999986
+        ],
+        "prepareTrialsMs": [
+          6.799582999999998,
+          7.910833999999994,
+          7.530958000000005
+        ],
+        "stateBytes": 190023436
+      },
+      "prototype": {
+        "meanTrialsMs": [
+          31.14269224000002,
+          31.755245053333315,
+          32.072646733333315
+        ],
+        "medianMeanMs": 31.755245053333315,
+        "p95TrialsMs": [
+          33.67387499999995,
+          36.40745900000002,
+          35.374917000000096
+        ],
+        "worstMaxMs": 67.0708340000001,
+        "framesOver16_7Ms": [
+          75,
+          75,
+          75
+        ],
+        "medianInputCopyMs": 0.19319502666667782,
+        "medianKernelMs": 30.867268320000004,
+        "measuredWasmCalls": [
+          75,
+          75,
+          75
+        ],
+        "importTrialsMs": [
+          7.439625000000007,
+          6.785874999999997,
+          7.565417000000004
+        ],
+        "prepareTrialsMs": [
+          18.370083,
+          16.576082999999997,
+          16.553042000000005
+        ],
+        "stateBytes": 198443788
+      }
+    },
+    "translation": {
+      "baseline": {
+        "meanTrialsMs": [
+          23.385388853333325,
+          23.763624493333353,
+          23.773648360000035
+        ],
+        "medianMeanMs": 23.763624493333353,
+        "p95TrialsMs": [
+          26.71491700000024,
+          27.56537500000013,
+          29.379207999999835
+        ],
+        "worstMaxMs": 53.211959000000206,
+        "framesOver16_7Ms": [
+          75,
+          75,
+          75
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          6.192707999999996,
+          6.2989999999999995,
+          5.874625000000002
+        ],
+        "prepareTrialsMs": [
+          9.237583,
+          7.415916000000003,
+          7.252333999999998
+        ],
+        "stateBytes": 190023436
+      },
+      "prototype": {
+        "meanTrialsMs": [
+          13.887885560000004,
+          13.943664426666686,
+          14.268104933333325
+        ],
+        "medianMeanMs": 13.943664426666686,
+        "p95TrialsMs": [
+          18.126416999999947,
+          17.925874999999905,
+          16.62391600000001
+        ],
+        "worstMaxMs": 46.21720800000003,
+        "framesOver16_7Ms": [
+          7,
+          4,
+          3
+        ],
+        "medianInputCopyMs": 0.2062654533333398,
+        "medianKernelMs": 12.998060040000006,
+        "measuredWasmCalls": [
+          75,
+          75,
+          75
+        ],
+        "importTrialsMs": [
+          8.471333000000001,
+          8.009374999999999,
+          6.455375000000004
+        ],
+        "prepareTrialsMs": [
+          19.161458000000003,
+          18.780875,
+          17.428832999999997
+        ],
+        "stateBytes": 198443788
+      }
+    },
+    "gradient": {
+      "baseline": {
+        "meanTrialsMs": [
+          10.537232759999991,
+          10.029550013333306,
+          10.715735026666664
+        ],
+        "medianMeanMs": 10.537232759999991,
+        "p95TrialsMs": [
+          14.087207999999919,
+          12.962499999999636,
+          14.780875000000037
+        ],
+        "worstMaxMs": 19.532500000000027,
+        "framesOver16_7Ms": [
+          0,
+          0,
+          2
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          5.725083999999995,
+          7.1440840000000065,
+          7.288624999999996
+        ],
+        "prepareTrialsMs": [
+          7.468208000000004,
+          8.073457999999995,
+          7.652666000000011
+        ],
+        "stateBytes": 190023436
+      },
+      "prototype": {
+        "meanTrialsMs": [
+          11.264032800000003,
+          10.248069959999999,
+          10.253881093333321
+        ],
+        "medianMeanMs": 10.253881093333321,
+        "p95TrialsMs": [
+          16.255208999999923,
+          13.557584000000134,
+          14.771332999999913
+        ],
+        "worstMaxMs": 29.24283400000013,
+        "framesOver16_7Ms": [
+          3,
+          0,
+          0
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          8.250791999999997,
+          6.5020000000000024,
+          7.493832999999995
+        ],
+        "prepareTrialsMs": [
+          18.338583000000007,
+          17.219833,
+          17.090207999999997
+        ],
+        "stateBytes": 198443788
+      }
+    },
+    "pulse": {
+      "baseline": {
+        "meanTrialsMs": [
+          9.26132725333336,
+          8.549628746666677,
+          8.400841239999997
+        ],
+        "medianMeanMs": 8.549628746666677,
+        "p95TrialsMs": [
+          20.65991699999995,
+          17.53125,
+          17.739540999999917
+        ],
+        "worstMaxMs": 30.013915999999995,
+        "framesOver16_7Ms": [
+          10,
+          10,
+          10
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          6.659957999999996,
+          7.745375000000003,
+          6.6229999999999976
+        ],
+        "prepareTrialsMs": [
+          8.171833,
+          10.383916000000006,
+          7.553708000000007
+        ],
+        "stateBytes": 190023436
+      },
+      "prototype": {
+        "meanTrialsMs": [
+          9.17983170666666,
+          7.051196066666665,
+          8.371354986666653
+        ],
+        "medianMeanMs": 8.371354986666653,
+        "p95TrialsMs": [
+          20.433874999999944,
+          18.574084000000084,
+          18.973208
+        ],
+        "worstMaxMs": 26.296832999999992,
+        "framesOver16_7Ms": [
+          10,
+          8,
+          10
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          8.428083,
+          7.369917000000001,
+          8.153749999999995
+        ],
+        "prepareTrialsMs": [
+          20.895832999999996,
+          17.93591599999999,
+          25.70137499999999
+        ],
+        "stateBytes": 198443788
+      }
+    },
+    "sparse": {
+      "baseline": {
+        "meanTrialsMs": [
+          6.09645502666666,
+          6.02236837333334,
+          6.483210533333337
+        ],
+        "medianMeanMs": 6.09645502666666,
+        "p95TrialsMs": [
+          14.428709000000026,
+          14.599874999999884,
+          15.681916999999885
+        ],
+        "worstMaxMs": 29.090958999999884,
+        "framesOver16_7Ms": [
+          1,
+          1,
+          2
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          7.660958999999998,
+          6.922874999999998,
+          10.515874999999994
+        ],
+        "prepareTrialsMs": [
+          8.509374999999999,
+          7.952374999999996,
+          9.013958000000002
+        ],
+        "stateBytes": 190023436
+      },
+      "prototype": {
+        "meanTrialsMs": [
+          6.057369493333344,
+          6.000953919999999,
+          5.887584453333323
+        ],
+        "medianMeanMs": 6.000953919999999,
+        "p95TrialsMs": [
+          14.595874999999978,
+          14.822583000000122,
+          14.530292000000145
+        ],
+        "worstMaxMs": 26.85575000000017,
+        "framesOver16_7Ms": [
+          1,
+          1,
+          1
+        ],
+        "medianInputCopyMs": 0,
+        "medianKernelMs": 0,
+        "measuredWasmCalls": [
+          0,
+          0,
+          0
+        ],
+        "importTrialsMs": [
+          8.673957999999999,
+          6.863458999999999,
+          8.050249999999998
+        ],
+        "prepareTrialsMs": [
+          17.611624999999997,
+          17.187959000000006,
+          18.645166999999994
+        ],
+        "stateBytes": 198443788
+      }
+    }
+  },
+  "prototypeBoundaries": [
+    "Node-only top-level file read/synchronous module loading; no browser loader or initial capability fallback implemented.",
+    "External RGBA is copied into WASM input and that cost is included; direct native VideoFrame.copyTo into this view remains unproven.",
+    "Memory grows only before views exist; same-size resets preserve input/timestamp backing. Runtime buffer identity guard and exact fixed maximum remain production hardening work.",
+    "Geometry replacement copies the512KiB timestamp array once to preserve otherwise unused baseline epoch tails; no per-frame temporal state copy.",
+    "Allocation figures describe engine state, not process/GPU/code memory or transient GC peaks.",
+    "A trap interrupts/resets and throws; it never retries a partially consumed frame through JS."
+  ],
+  "reconstruction": {
+    "file": "wasm-dense-0.4.0-prototype-reconstruction.json.gz",
+    "sha256": "c4c4df10ea54f6f685a1a5ce09135bf2f6ace95591613402235cecf773e0c9ab",
+    "originalPrototypeProof": {
+      "scope": "Per-push complete temporal arrays including full frameTimes, state metadata, partial findings/diagnostics and callbacks; exact original Float64 finite values and semantic NaN equality. Complete finish reports differ only by explicitly accounted WASM memory allocation. Exact complete finish() and live callback differential; both byte array types, unaligned fallback, alpha and black resets, aliases that fork/reconverge, source geometry changes, timestamp gaps and explicit interruption. Numeric buffers only, never rendered.",
+      "cases": 126,
+      "findings": 1554,
+      "liveEvents": 1554,
+      "packedFrames": 8593,
+      "sourceHashes": {
+        "baseline": "342483aad05cca930f02fc4503a11f92a7cf10bb501037c29ba9eb04bee02604",
+        "packed": "9b8b0d34059d0f3a404dac62833e5cf2f53c98b5efc91e7c07b9ff7193072b57"
+      },
+      "completeResultsIdentical": false,
+      "completeResultsMatchExceptExplicitMemoryBudget": true,
+      "perFrameStateChecks": 20178,
+      "liveEventsIdentical": true,
+      "records": [
+        {
+          "key": "1x1/uniform/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "73d21a33ddc011749a2006b114e9bd7d49545024987b441c8f4c0cb34768d5df",
+          "eventsSha256": "af8f0670a07b76a7945e1c8c79ec55df049b47c1672e7e979fcc34d0e5f3d330"
+        },
+        {
+          "key": "1x1/uniform/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/uniform/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "73d21a33ddc011749a2006b114e9bd7d49545024987b441c8f4c0cb34768d5df",
+          "eventsSha256": "af8f0670a07b76a7945e1c8c79ec55df049b47c1672e7e979fcc34d0e5f3d330"
+        },
+        {
+          "key": "1x1/uniform/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/uniform/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "73d21a33ddc011749a2006b114e9bd7d49545024987b441c8f4c0cb34768d5df",
+          "eventsSha256": "af8f0670a07b76a7945e1c8c79ec55df049b47c1672e7e979fcc34d0e5f3d330"
+        },
+        {
+          "key": "1x1/uniform/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/red/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "4b9c7b5112c959f3dac90779aa937afdc278390c576cc708e15051ff94236fcc",
+          "eventsSha256": "04d65c8d006498e63b53948551dcdf92bf21c011cd7a33e34853130144056142"
+        },
+        {
+          "key": "1x1/red/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "fa18477a99a8eae1cef23298208ef6bf02a4386c919d2860469eefcea51ff3e0",
+          "eventsSha256": "d8447f496214ab9b59a107d152393a41c8e8daeb058d2a5060df3edc7421ee05"
+        },
+        {
+          "key": "1x1/red/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "4b9c7b5112c959f3dac90779aa937afdc278390c576cc708e15051ff94236fcc",
+          "eventsSha256": "04d65c8d006498e63b53948551dcdf92bf21c011cd7a33e34853130144056142"
+        },
+        {
+          "key": "1x1/red/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "fa18477a99a8eae1cef23298208ef6bf02a4386c919d2860469eefcea51ff3e0",
+          "eventsSha256": "d8447f496214ab9b59a107d152393a41c8e8daeb058d2a5060df3edc7421ee05"
+        },
+        {
+          "key": "1x1/red/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "4b9c7b5112c959f3dac90779aa937afdc278390c576cc708e15051ff94236fcc",
+          "eventsSha256": "04d65c8d006498e63b53948551dcdf92bf21c011cd7a33e34853130144056142"
+        },
+        {
+          "key": "1x1/red/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 106,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "fa18477a99a8eae1cef23298208ef6bf02a4386c919d2860469eefcea51ff3e0",
+          "eventsSha256": "d8447f496214ab9b59a107d152393a41c8e8daeb058d2a5060df3edc7421ee05"
+        },
+        {
+          "key": "1x1/dense/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "ab60d9895d55a3f5e815f74b2e77b211f234f40718e968f988d27ba1d1ffe1a9",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/dense/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/dense/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "ab60d9895d55a3f5e815f74b2e77b211f234f40718e968f988d27ba1d1ffe1a9",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/dense/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/dense/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "ab60d9895d55a3f5e815f74b2e77b211f234f40718e968f988d27ba1d1ffe1a9",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/dense/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/dense-red/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "43cbcf32d57b36740f36475d8a7378b3f6a465c62e9ab2e74220dc1e5214bc30",
+          "eventsSha256": "e87933c6b8eb923703e6cd7a2db128d2798764e0865079b6d29869752bd32252"
+        },
+        {
+          "key": "1x1/dense-red/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "fa18477a99a8eae1cef23298208ef6bf02a4386c919d2860469eefcea51ff3e0",
+          "eventsSha256": "d8447f496214ab9b59a107d152393a41c8e8daeb058d2a5060df3edc7421ee05"
+        },
+        {
+          "key": "1x1/dense-red/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "43cbcf32d57b36740f36475d8a7378b3f6a465c62e9ab2e74220dc1e5214bc30",
+          "eventsSha256": "e87933c6b8eb923703e6cd7a2db128d2798764e0865079b6d29869752bd32252"
+        },
+        {
+          "key": "1x1/dense-red/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "fa18477a99a8eae1cef23298208ef6bf02a4386c919d2860469eefcea51ff3e0",
+          "eventsSha256": "d8447f496214ab9b59a107d152393a41c8e8daeb058d2a5060df3edc7421ee05"
+        },
+        {
+          "key": "1x1/dense-red/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "43cbcf32d57b36740f36475d8a7378b3f6a465c62e9ab2e74220dc1e5214bc30",
+          "eventsSha256": "e87933c6b8eb923703e6cd7a2db128d2798764e0865079b6d29869752bd32252"
+        },
+        {
+          "key": "1x1/dense-red/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 106,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "fa18477a99a8eae1cef23298208ef6bf02a4386c919d2860469eefcea51ff3e0",
+          "eventsSha256": "d8447f496214ab9b59a107d152393a41c8e8daeb058d2a5060df3edc7421ee05"
+        },
+        {
+          "key": "1x1/alias-fork/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "62948ee4040d3139153cda27f666d81584cfd9f47b0b161df0fefb90bb37f212",
+          "eventsSha256": "5ddbad686328e0dd9de449401656738d29fdb8b7211a41a12ab92e484d294d3d"
+        },
+        {
+          "key": "1x1/alias-fork/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/alias-fork/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "62948ee4040d3139153cda27f666d81584cfd9f47b0b161df0fefb90bb37f212",
+          "eventsSha256": "5ddbad686328e0dd9de449401656738d29fdb8b7211a41a12ab92e484d294d3d"
+        },
+        {
+          "key": "1x1/alias-fork/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/alias-fork/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "62948ee4040d3139153cda27f666d81584cfd9f47b0b161df0fefb90bb37f212",
+          "eventsSha256": "5ddbad686328e0dd9de449401656738d29fdb8b7211a41a12ab92e484d294d3d"
+        },
+        {
+          "key": "1x1/alias-fork/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "9aa1f3d353e89d3e46fe073469b871eecb82057318ed12489f00dae5d1ae3167",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/alpha-black/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "f508a9ae6bd1f321c6a4fab67d4d3593bf0a56fb4699fb6100d136981ee64bcd",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/alpha-black/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "ca5da195e5b597c02c4f963c8eb03a14ca4b730c00941e12039c29686c528f24",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/alpha-black/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "f508a9ae6bd1f321c6a4fab67d4d3593bf0a56fb4699fb6100d136981ee64bcd",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/alpha-black/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "ca5da195e5b597c02c4f963c8eb03a14ca4b730c00941e12039c29686c528f24",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/alpha-black/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "f508a9ae6bd1f321c6a4fab67d4d3593bf0a56fb4699fb6100d136981ee64bcd",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/alpha-black/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526407,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128953,
+            "inputBytes": 4,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 61212,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128953,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "ca5da195e5b597c02c4f963c8eb03a14ca4b730c00941e12039c29686c528f24",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/source-gap/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526478,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128882,
+            "inputBytes": 8,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 6,
+            "pageRoundingBytes": 61152,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128882,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d446974a70ed2d1fc3db87f65ba8f0dd119070f66678e28fb5d6ca198100f3f4",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/source-gap/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526478,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128882,
+            "inputBytes": 8,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 6,
+            "pageRoundingBytes": 61152,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128882,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "e0c538fda162efb3c0c31b156f65ae3950b99213fe47c3d2c27e21d738c40cb1",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/source-gap/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526478,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128882,
+            "inputBytes": 8,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 6,
+            "pageRoundingBytes": 61152,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128882,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d446974a70ed2d1fc3db87f65ba8f0dd119070f66678e28fb5d6ca198100f3f4",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/source-gap/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526478,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128882,
+            "inputBytes": 8,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 6,
+            "pageRoundingBytes": 61152,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128882,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "e0c538fda162efb3c0c31b156f65ae3950b99213fe47c3d2c27e21d738c40cb1",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "1x1/source-gap/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526478,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128882,
+            "inputBytes": 8,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 6,
+            "pageRoundingBytes": 61152,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128882,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d446974a70ed2d1fc3db87f65ba8f0dd119070f66678e28fb5d6ca198100f3f4",
+          "eventsSha256": "51141a3c6a24ca134b0507b5d02a3d8b874c01e82a40b70bfd034afb9971bbc8"
+        },
+        {
+          "key": "1x1/source-gap/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 526478,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 128882,
+            "inputBytes": 8,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 6,
+            "pageRoundingBytes": 61152,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 128882,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "e0c538fda162efb3c0c31b156f65ae3950b99213fe47c3d2c27e21d738c40cb1",
+          "eventsSha256": "81258aff020e6b16b3e63d965dbf33cb36b13e54d79fd6f9452a0e52eb4cc0fb"
+        },
+        {
+          "key": "19x17/uniform/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "6699c3763ac928280bbdd00025200214cb21cd9620433fc674bd3ce4bb70b466",
+          "eventsSha256": "859b215f8a78bbfe18e49bb7a46ac3d47a5b477ba65a97ea9f2baacf3e7e4276"
+        },
+        {
+          "key": "19x17/uniform/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/uniform/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "6699c3763ac928280bbdd00025200214cb21cd9620433fc674bd3ce4bb70b466",
+          "eventsSha256": "859b215f8a78bbfe18e49bb7a46ac3d47a5b477ba65a97ea9f2baacf3e7e4276"
+        },
+        {
+          "key": "19x17/uniform/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/uniform/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "6699c3763ac928280bbdd00025200214cb21cd9620433fc674bd3ce4bb70b466",
+          "eventsSha256": "859b215f8a78bbfe18e49bb7a46ac3d47a5b477ba65a97ea9f2baacf3e7e4276"
+        },
+        {
+          "key": "19x17/uniform/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/red/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "16d6ba4c63b6cad64c5685ac42d314cac38db8f4f0db9f943324b82a0b492f48",
+          "eventsSha256": "099ff1ce7155c229c3fec714492a7fbf810fba77adcf3fb0a0563f605ae43540"
+        },
+        {
+          "key": "19x17/red/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "54c0e1fcac7e84453cad84c76a23268e1cf594c7630907bed755327c7cd02645",
+          "eventsSha256": "b4abf10f6b421f752cd9292ede93865d265970a037ddf3c500b36789b2a4e618"
+        },
+        {
+          "key": "19x17/red/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "16d6ba4c63b6cad64c5685ac42d314cac38db8f4f0db9f943324b82a0b492f48",
+          "eventsSha256": "099ff1ce7155c229c3fec714492a7fbf810fba77adcf3fb0a0563f605ae43540"
+        },
+        {
+          "key": "19x17/red/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "54c0e1fcac7e84453cad84c76a23268e1cf594c7630907bed755327c7cd02645",
+          "eventsSha256": "b4abf10f6b421f752cd9292ede93865d265970a037ddf3c500b36789b2a4e618"
+        },
+        {
+          "key": "19x17/red/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "16d6ba4c63b6cad64c5685ac42d314cac38db8f4f0db9f943324b82a0b492f48",
+          "eventsSha256": "099ff1ce7155c229c3fec714492a7fbf810fba77adcf3fb0a0563f605ae43540"
+        },
+        {
+          "key": "19x17/red/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "54c0e1fcac7e84453cad84c76a23268e1cf594c7630907bed755327c7cd02645",
+          "eventsSha256": "b4abf10f6b421f752cd9292ede93865d265970a037ddf3c500b36789b2a4e618"
+        },
+        {
+          "key": "19x17/dense/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "b3c94b89945c602c22e13105a35cda5d173472a42037498540466eb12dba6e2b",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/dense/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/dense/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "b3c94b89945c602c22e13105a35cda5d173472a42037498540466eb12dba6e2b",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/dense/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/dense/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "b3c94b89945c602c22e13105a35cda5d173472a42037498540466eb12dba6e2b",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/dense/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/dense-red/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "16a2c4c5c6242b727ca43464b1ae497c1dcaec7395f41c11a01292ca3df571c4",
+          "eventsSha256": "a8f92f87a861f9cb04136d480f42f845aa133672bbaa80cdcf30e1f8ec587f70"
+        },
+        {
+          "key": "19x17/dense-red/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 160,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "6ea842d91c62d3ca6d11a4da74d357967a811ce81ec20b79fc50a4943e4bd567",
+          "eventsSha256": "bfc3d13a0b752137c490890ae059e2ca192d5f2f82015db7893cab6099cdaf6c"
+        },
+        {
+          "key": "19x17/dense-red/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "16a2c4c5c6242b727ca43464b1ae497c1dcaec7395f41c11a01292ca3df571c4",
+          "eventsSha256": "a8f92f87a861f9cb04136d480f42f845aa133672bbaa80cdcf30e1f8ec587f70"
+        },
+        {
+          "key": "19x17/dense-red/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 160,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "6ea842d91c62d3ca6d11a4da74d357967a811ce81ec20b79fc50a4943e4bd567",
+          "eventsSha256": "bfc3d13a0b752137c490890ae059e2ca192d5f2f82015db7893cab6099cdaf6c"
+        },
+        {
+          "key": "19x17/dense-red/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "16a2c4c5c6242b727ca43464b1ae497c1dcaec7395f41c11a01292ca3df571c4",
+          "eventsSha256": "a8f92f87a861f9cb04136d480f42f845aa133672bbaa80cdcf30e1f8ec587f70"
+        },
+        {
+          "key": "19x17/dense-red/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 106,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "6ea842d91c62d3ca6d11a4da74d357967a811ce81ec20b79fc50a4943e4bd567",
+          "eventsSha256": "bfc3d13a0b752137c490890ae059e2ca192d5f2f82015db7893cab6099cdaf6c"
+        },
+        {
+          "key": "19x17/alias-fork/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 13,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "deade9f2e8a37b456d5a44e2e1b74897e84fa2ce70b2d931505422567e051167",
+          "eventsSha256": "e1f96bef24ecacc6d4e401b572ea1ac4f2e336a91d4845ad936987c20ac0f424"
+        },
+        {
+          "key": "19x17/alias-fork/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 125,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/alias-fork/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 13,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "deade9f2e8a37b456d5a44e2e1b74897e84fa2ce70b2d931505422567e051167",
+          "eventsSha256": "e1f96bef24ecacc6d4e401b572ea1ac4f2e336a91d4845ad936987c20ac0f424"
+        },
+        {
+          "key": "19x17/alias-fork/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 125,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/alias-fork/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 17,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "deade9f2e8a37b456d5a44e2e1b74897e84fa2ce70b2d931505422567e051167",
+          "eventsSha256": "e1f96bef24ecacc6d4e401b572ea1ac4f2e336a91d4845ad936987c20ac0f424"
+        },
+        {
+          "key": "19x17/alias-fork/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 83,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "d9c57b13f279af8c03d95b161dc418609a4ed542866be5b195d2ee9f0aafcf32",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/alpha-black/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "89443062ddf60ae25e11381a81c332de241073c6587a3e534f5e931aae45de2c",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/alpha-black/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "bb35514264a93bc8e55707f462dbe726915f44d641b2c1bac0713f3a5ccf4a64",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/alpha-black/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "89443062ddf60ae25e11381a81c332de241073c6587a3e534f5e931aae45de2c",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/alpha-black/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "bb35514264a93bc8e55707f462dbe726915f44d641b2c1bac0713f3a5ccf4a64",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/alpha-black/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 32,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "89443062ddf60ae25e11381a81c332de241073c6587a3e534f5e931aae45de2c",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/alpha-black/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 549269,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 106091,
+            "inputBytes": 1292,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 11,
+            "pageRoundingBytes": 37072,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 106091,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "bb35514264a93bc8e55707f462dbe726915f44d641b2c1bac0713f3a5ccf4a64",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/source-gap/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 550476,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 104884,
+            "inputBytes": 1360,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 4,
+            "pageRoundingBytes": 35804,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 104884,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "6507bf65f23825eb40b5755fa4ef2a0ff3639cef765e82e93f258cd4bba74fde",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/source-gap/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 550476,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 104884,
+            "inputBytes": 1360,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 4,
+            "pageRoundingBytes": 35804,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 104884,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "2585982923c99aecbd5f69c60732ae0efe551f2b39b598b357bd2837099cad31",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/source-gap/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 550476,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 104884,
+            "inputBytes": 1360,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 4,
+            "pageRoundingBytes": 35804,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 104884,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "6507bf65f23825eb40b5755fa4ef2a0ff3639cef765e82e93f258cd4bba74fde",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/source-gap/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 550476,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 104884,
+            "inputBytes": 1360,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 4,
+            "pageRoundingBytes": 35804,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 104884,
+          "packedFrames": 160,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "2585982923c99aecbd5f69c60732ae0efe551f2b39b598b357bd2837099cad31",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "19x17/source-gap/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 550476,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 104884,
+            "inputBytes": 1360,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 4,
+            "pageRoundingBytes": 35804,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 104884,
+          "packedFrames": 33,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "6507bf65f23825eb40b5755fa4ef2a0ff3639cef765e82e93f258cd4bba74fde",
+          "eventsSha256": "53ecf60be896adffe37376c1ba7b8c6f8526cc670c8d53fa58874e136db0ec4a"
+        },
+        {
+          "key": "19x17/source-gap/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 550476,
+            "memoryBytes": 655360,
+            "extraAllocatedBytes": 104884,
+            "inputBytes": 1360,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 4,
+            "pageRoundingBytes": 35804,
+            "pages": 10
+          },
+          "expectedBudgetIncrease": 104884,
+          "packedFrames": 106,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "2585982923c99aecbd5f69c60732ae0efe551f2b39b598b357bd2837099cad31",
+          "eventsSha256": "d93b6845b7dec46f0f016d58be6f81b3af9dd67141886357da5ab6b464eb93cb"
+        },
+        {
+          "key": "64x49/uniform/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "cc0da0cfef4e4f77bf045a033b8ca11f6772d7273e07cd044e7ca613133c2be3",
+          "eventsSha256": "4fc699017b19a66ce71775d48cc1a428b23c59addf536a2287c5c555b396f0a6"
+        },
+        {
+          "key": "64x49/uniform/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "c507e4604a0cc6b144e7b9f07b530b68eee82a47740fd1454cc4e59bf2560dd5",
+          "eventsSha256": "b75e7d18d28f0f9730364563a4a6b328f73f1dcbe29dfb78506fbb92f0716132"
+        },
+        {
+          "key": "64x49/uniform/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "cc0da0cfef4e4f77bf045a033b8ca11f6772d7273e07cd044e7ca613133c2be3",
+          "eventsSha256": "4fc699017b19a66ce71775d48cc1a428b23c59addf536a2287c5c555b396f0a6"
+        },
+        {
+          "key": "64x49/uniform/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "c507e4604a0cc6b144e7b9f07b530b68eee82a47740fd1454cc4e59bf2560dd5",
+          "eventsSha256": "b75e7d18d28f0f9730364563a4a6b328f73f1dcbe29dfb78506fbb92f0716132"
+        },
+        {
+          "key": "64x49/uniform/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "cc0da0cfef4e4f77bf045a033b8ca11f6772d7273e07cd044e7ca613133c2be3",
+          "eventsSha256": "4fc699017b19a66ce71775d48cc1a428b23c59addf536a2287c5c555b396f0a6"
+        },
+        {
+          "key": "64x49/uniform/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 1,
+          "liveEvents": 1,
+          "resultSha256": "c507e4604a0cc6b144e7b9f07b530b68eee82a47740fd1454cc4e59bf2560dd5",
+          "eventsSha256": "b75e7d18d28f0f9730364563a4a6b328f73f1dcbe29dfb78506fbb92f0716132"
+        },
+        {
+          "key": "64x49/red/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "9ce45dd604296bbb3d60e49099316e671f0df664679aacab42dad062dbd10dcb",
+          "eventsSha256": "b7fb40abc01aeb941249efaa946899aae080cfb89909f8723b24b47e0ef66c51"
+        },
+        {
+          "key": "64x49/red/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "2f4e750e2286a644c8a6f8c422c17fd7d050cf4626466bd5e561e764fd7d7c50",
+          "eventsSha256": "e897f69b0e64af98dc784fdacfb018222091ed62347f18f159e76a691c0a3582"
+        },
+        {
+          "key": "64x49/red/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "9ce45dd604296bbb3d60e49099316e671f0df664679aacab42dad062dbd10dcb",
+          "eventsSha256": "b7fb40abc01aeb941249efaa946899aae080cfb89909f8723b24b47e0ef66c51"
+        },
+        {
+          "key": "64x49/red/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "2f4e750e2286a644c8a6f8c422c17fd7d050cf4626466bd5e561e764fd7d7c50",
+          "eventsSha256": "e897f69b0e64af98dc784fdacfb018222091ed62347f18f159e76a691c0a3582"
+        },
+        {
+          "key": "64x49/red/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "9ce45dd604296bbb3d60e49099316e671f0df664679aacab42dad062dbd10dcb",
+          "eventsSha256": "b7fb40abc01aeb941249efaa946899aae080cfb89909f8723b24b47e0ef66c51"
+        },
+        {
+          "key": "64x49/red/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 0,
+          "findings": 2,
+          "liveEvents": 2,
+          "resultSha256": "2f4e750e2286a644c8a6f8c422c17fd7d050cf4626466bd5e561e764fd7d7c50",
+          "eventsSha256": "e897f69b0e64af98dc784fdacfb018222091ed62347f18f159e76a691c0a3582"
+        },
+        {
+          "key": "64x49/dense/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "78992f4fe46e3d7748a5db611c319cb7a95e25354b791436881ecf0f5a9d933c",
+          "eventsSha256": "f0419d6f4c6790094018f261cafc19716a65a7979bfd426e20e9eb5076fa4b93"
+        },
+        {
+          "key": "64x49/dense/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 160,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "9b752260d93abc6f2e8cfc0b4afd348021480d0f88e5bcb41374cbb1bf561b2a",
+          "eventsSha256": "231d22933a001340bec5661889d4c254b93be892204c7e836fb6a6c187b3dacf"
+        },
+        {
+          "key": "64x49/dense/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "78992f4fe46e3d7748a5db611c319cb7a95e25354b791436881ecf0f5a9d933c",
+          "eventsSha256": "f0419d6f4c6790094018f261cafc19716a65a7979bfd426e20e9eb5076fa4b93"
+        },
+        {
+          "key": "64x49/dense/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 160,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "9b752260d93abc6f2e8cfc0b4afd348021480d0f88e5bcb41374cbb1bf561b2a",
+          "eventsSha256": "231d22933a001340bec5661889d4c254b93be892204c7e836fb6a6c187b3dacf"
+        },
+        {
+          "key": "64x49/dense/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "78992f4fe46e3d7748a5db611c319cb7a95e25354b791436881ecf0f5a9d933c",
+          "eventsSha256": "f0419d6f4c6790094018f261cafc19716a65a7979bfd426e20e9eb5076fa4b93"
+        },
+        {
+          "key": "64x49/dense/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 106,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "9b752260d93abc6f2e8cfc0b4afd348021480d0f88e5bcb41374cbb1bf561b2a",
+          "eventsSha256": "231d22933a001340bec5661889d4c254b93be892204c7e836fb6a6c187b3dacf"
+        },
+        {
+          "key": "64x49/dense-red/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "e470d28e9a0aadaf8660192ae95413700a2e1b5b5acd909ca5ae0fbb4ee942ff",
+          "eventsSha256": "8c2b34c40b517c86b2025b85dc2a3f360a004ab83adaa0f16c94d86afbebfc46"
+        },
+        {
+          "key": "64x49/dense-red/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 160,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "6e5679705eaf8245f11ae5c35c3591f25affe85037029d030cb54677f567b8be",
+          "eventsSha256": "078552a9baf7e6866a2e576caf91cb7f0ab724004b8b4c14cbe9f5eaab021d95"
+        },
+        {
+          "key": "64x49/dense-red/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "e470d28e9a0aadaf8660192ae95413700a2e1b5b5acd909ca5ae0fbb4ee942ff",
+          "eventsSha256": "8c2b34c40b517c86b2025b85dc2a3f360a004ab83adaa0f16c94d86afbebfc46"
+        },
+        {
+          "key": "64x49/dense-red/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 160,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "6e5679705eaf8245f11ae5c35c3591f25affe85037029d030cb54677f567b8be",
+          "eventsSha256": "078552a9baf7e6866a2e576caf91cb7f0ab724004b8b4c14cbe9f5eaab021d95"
+        },
+        {
+          "key": "64x49/dense-red/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "e470d28e9a0aadaf8660192ae95413700a2e1b5b5acd909ca5ae0fbb4ee942ff",
+          "eventsSha256": "8c2b34c40b517c86b2025b85dc2a3f360a004ab83adaa0f16c94d86afbebfc46"
+        },
+        {
+          "key": "64x49/dense-red/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 106,
+          "findings": 100,
+          "liveEvents": 100,
+          "resultSha256": "6e5679705eaf8245f11ae5c35c3591f25affe85037029d030cb54677f567b8be",
+          "eventsSha256": "078552a9baf7e6866a2e576caf91cb7f0ab724004b8b4c14cbe9f5eaab021d95"
+        },
+        {
+          "key": "64x49/alias-fork/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 13,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "3393eba73b81d579fc2a1513eea804f28dd289bb57bf9385b0a1590c076c9840",
+          "eventsSha256": "6d8f41e8448de8e9720ed9cbdf6ed8b8ca6dfc8296c8c45c26d9728a5c43fc64"
+        },
+        {
+          "key": "64x49/alias-fork/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 125,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "e9d5857714aa77ba5a955492d19505cdc00e379e9f90ff5814486a70858562df",
+          "eventsSha256": "816db5b542a001f92bc1c237d42d96fdd42c10a6f37d635894e1482a5f8293d3"
+        },
+        {
+          "key": "64x49/alias-fork/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 13,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "3393eba73b81d579fc2a1513eea804f28dd289bb57bf9385b0a1590c076c9840",
+          "eventsSha256": "6d8f41e8448de8e9720ed9cbdf6ed8b8ca6dfc8296c8c45c26d9728a5c43fc64"
+        },
+        {
+          "key": "64x49/alias-fork/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 125,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "e9d5857714aa77ba5a955492d19505cdc00e379e9f90ff5814486a70858562df",
+          "eventsSha256": "816db5b542a001f92bc1c237d42d96fdd42c10a6f37d635894e1482a5f8293d3"
+        },
+        {
+          "key": "64x49/alias-fork/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 17,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "3393eba73b81d579fc2a1513eea804f28dd289bb57bf9385b0a1590c076c9840",
+          "eventsSha256": "6d8f41e8448de8e9720ed9cbdf6ed8b8ca6dfc8296c8c45c26d9728a5c43fc64"
+        },
+        {
+          "key": "64x49/alias-fork/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 83,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "e9d5857714aa77ba5a955492d19505cdc00e379e9f90ff5814486a70858562df",
+          "eventsSha256": "816db5b542a001f92bc1c237d42d96fdd42c10a6f37d635894e1482a5f8293d3"
+        },
+        {
+          "key": "64x49/alpha-black/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 25,
+          "liveEvents": 25,
+          "resultSha256": "7c8bbd0d2ef57f4d36cc9f9e5bebc77db6ffe13b04db4e20a959e324c1c87b44",
+          "eventsSha256": "c18b4e91530a27a6364f102070b96a69109bb5558ac0b7febedcb120f29ecab3"
+        },
+        {
+          "key": "64x49/alpha-black/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 160,
+          "findings": 25,
+          "liveEvents": 25,
+          "resultSha256": "4c40162c1eeb89c75b7fafb9de7c79119e9dbbb1898e21c69d6914141343cd0c",
+          "eventsSha256": "518b2ec42da4980bb962b02206b2ab9a3b8232a589182fecd6c00bc4e4dee479"
+        },
+        {
+          "key": "64x49/alpha-black/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 25,
+          "liveEvents": 25,
+          "resultSha256": "7c8bbd0d2ef57f4d36cc9f9e5bebc77db6ffe13b04db4e20a959e324c1c87b44",
+          "eventsSha256": "c18b4e91530a27a6364f102070b96a69109bb5558ac0b7febedcb120f29ecab3"
+        },
+        {
+          "key": "64x49/alpha-black/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 160,
+          "findings": 25,
+          "liveEvents": 25,
+          "resultSha256": "4c40162c1eeb89c75b7fafb9de7c79119e9dbbb1898e21c69d6914141343cd0c",
+          "eventsSha256": "518b2ec42da4980bb962b02206b2ab9a3b8232a589182fecd6c00bc4e4dee479"
+        },
+        {
+          "key": "64x49/alpha-black/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 32,
+          "findings": 25,
+          "liveEvents": 25,
+          "resultSha256": "7c8bbd0d2ef57f4d36cc9f9e5bebc77db6ffe13b04db4e20a959e324c1c87b44",
+          "eventsSha256": "c18b4e91530a27a6364f102070b96a69109bb5558ac0b7febedcb120f29ecab3"
+        },
+        {
+          "key": "64x49/alpha-black/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 748992,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 102976,
+            "inputBytes": 12544,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 0,
+            "pageRoundingBytes": 22716,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 102976,
+          "packedFrames": 106,
+          "findings": 25,
+          "liveEvents": 25,
+          "resultSha256": "4c40162c1eeb89c75b7fafb9de7c79119e9dbbb1898e21c69d6914141343cd0c",
+          "eventsSha256": "518b2ec42da4980bb962b02206b2ab9a3b8232a589182fecd6c00bc4e4dee479"
+        },
+        {
+          "key": "64x49/source-gap/uint8-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 752471,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 99497,
+            "inputBytes": 12740,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 19020,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 99497,
+          "packedFrames": 33,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "8e50056e726033cf4f97e7e8643666743cac873387a970801205799cf7bdec10",
+          "eventsSha256": "f0419d6f4c6790094018f261cafc19716a65a7979bfd426e20e9eb5076fa4b93"
+        },
+        {
+          "key": "64x49/source-gap/uint8-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 752471,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 99497,
+            "inputBytes": 12740,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 19020,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 99497,
+          "packedFrames": 160,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "1b0942d9040c8d205a656154c4b82f0339e135ebb622e3c4650e69bc33374b79",
+          "eventsSha256": "231d22933a001340bec5661889d4c254b93be892204c7e836fb6a6c187b3dacf"
+        },
+        {
+          "key": "64x49/source-gap/clamped-aligned/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 752471,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 99497,
+            "inputBytes": 12740,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 19020,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 99497,
+          "packedFrames": 33,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "8e50056e726033cf4f97e7e8643666743cac873387a970801205799cf7bdec10",
+          "eventsSha256": "f0419d6f4c6790094018f261cafc19716a65a7979bfd426e20e9eb5076fa4b93"
+        },
+        {
+          "key": "64x49/source-gap/clamped-aligned/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 752471,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 99497,
+            "inputBytes": 12740,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 19020,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 99497,
+          "packedFrames": 160,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "1b0942d9040c8d205a656154c4b82f0339e135ebb622e3c4650e69bc33374b79",
+          "eventsSha256": "231d22933a001340bec5661889d4c254b93be892204c7e836fb6a6c187b3dacf"
+        },
+        {
+          "key": "64x49/source-gap/mixed-alignment/true",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 752471,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 99497,
+            "inputBytes": 12740,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 19020,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 99497,
+          "packedFrames": 33,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "8e50056e726033cf4f97e7e8643666743cac873387a970801205799cf7bdec10",
+          "eventsSha256": "f0419d6f4c6790094018f261cafc19716a65a7979bfd426e20e9eb5076fa4b93"
+        },
+        {
+          "key": "64x49/source-gap/mixed-alignment/false",
+          "memory": {
+            "scope": "Temporal state moved into fixed WASM pages; no per-frame state copy. JS clustering, sharing, diagnostics and cache remain outside.",
+            "migratedStateBytes": 752471,
+            "memoryBytes": 851968,
+            "extraAllocatedBytes": 99497,
+            "inputBytes": 12740,
+            "linearTableBytes": 2048,
+            "constantsBytes": 24,
+            "pointerAndResultBytes": 108,
+            "linkerStackAndStaticBytes": 65536,
+            "alignmentBytes": 21,
+            "pageRoundingBytes": 19020,
+            "pages": 13
+          },
+          "expectedBudgetIncrease": 99497,
+          "packedFrames": 106,
+          "findings": 5,
+          "liveEvents": 5,
+          "resultSha256": "1b0942d9040c8d205a656154c4b82f0339e135ebb622e3c4650e69bc33374b79",
+          "eventsSha256": "231d22933a001340bec5661889d4c254b93be892204c7e836fb6a6c187b3dacf"
+        }
+      ]
+    }
+  },
+  "productionAccountingNote": "The prototype budget excludes the later production embedded-module Uint8Array (2210 bytes); production adds those bytes to both JS and WASM. Runtime compiled code and GPU/process allocations are not measured by logical engine-state accounting."
+}

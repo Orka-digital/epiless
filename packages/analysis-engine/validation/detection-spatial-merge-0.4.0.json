@@ -1,0 +1,862 @@
+{
+  "schemaVersion": 1,
+  "kernel": {
+    "check": "SOURCE_BINARY_COHERENCE_AND_ABI",
+    "sourceSha256": "51a2dc545eb4072e8daa946cfad91889938b0d458181cd7c5ceb4805ba86776f",
+    "binarySha256": "8488e0b77321797265e4169ba03ad1b598dcd222fe9c059cefae2ed258887157",
+    "bytes": 2239,
+    "abiVersion": 2,
+    "stateSize": 100,
+    "compilerRebuilt": false,
+    "manifestSha256": "45849c3cb25318f90a65afd4c0a7a2500e69733c296c53e11ce2f27c6d5c3036",
+    "verifierSha256": "93e8ef59e28056884cd62109e4b4ef2989f0ca39c8efb96674d8e8eba63a791d"
+  },
+  "engineVersion": "0.4.0-candidate",
+  "engineSourceSha256": "ab19f9deaebc289d7fccabdaa0d7805ccf0b7adf76ec916ad02162223286edb4",
+  "reference": {
+    "repository": "https://github.com/traceRERC/pse-test-media",
+    "commit": "ef78542aad496827f25064f57aaf13d6a741ba75",
+    "license": "BSD-3-Clause",
+    "manifestSha256": "eeb79bb17ea290080903f393a13a477a47bdc05028da81c21d3badde617a2840",
+    "filesVerified": 45
+  },
+  "scope": "NUMERIC_TEMPORAL_INTENSITY_PROJECTION",
+  "verdict": "MISMATCHES",
+  "conformanceEstablished": false,
+  "methodology": "Verbatim external sRGBA samples at upstream 30 fps, projected onto one pixel. Compare only the named luminance or red candidate channel with the upstream filename label. No synthesized padding or rendered media.",
+  "unsupported": [
+    "Spatial masks, combined concurrent area and WCAG 10-degree visual-field thresholds",
+    "Fine patterns and motion compensation",
+    "Browser capture, downsampling, frame loss and display conditions",
+    "HDR, wide gamut and colour-management accuracy",
+    "Clinical safety, real-world accuracy and overall WCAG conformance"
+  ],
+  "overall": {
+    "cases": 42,
+    "truePositive": 11,
+    "falseNegative": 0,
+    "falsePositive": 2,
+    "trueNegative": 29,
+    "sensitivityOnSelectedCases": 1,
+    "precisionOnSelectedCases": 0.8461538461538461,
+    "specificityOnSelectedCases": 0.9354838709677419,
+    "mismatches": 2
+  },
+  "byType": {
+    "GENERAL_FLASH": {
+      "cases": 22,
+      "truePositive": 6,
+      "falseNegative": 0,
+      "falsePositive": 2,
+      "trueNegative": 14,
+      "sensitivityOnSelectedCases": 1,
+      "precisionOnSelectedCases": 0.75,
+      "specificityOnSelectedCases": 0.875,
+      "mismatches": 2
+    },
+    "RED_FLASH": {
+      "cases": 20,
+      "truePositive": 5,
+      "falseNegative": 0,
+      "falsePositive": 0,
+      "trueNegative": 15,
+      "sensitivityOnSelectedCases": 1,
+      "precisionOnSelectedCases": 1,
+      "specificityOnSelectedCases": 1,
+      "mismatches": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "lum_flash_patterns/rel_lum/f001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 7,
+        "inputCopiedBytes": 28
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f021_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c021_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l021_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y021_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/f031_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 14,
+        "inputCopiedBytes": 56
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/c031_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 14,
+        "inputCopiedBytes": 56
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/l031_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 14,
+        "inputCopiedBytes": 56
+      },
+      "candidates": [
+        {
+          "startMs": 66.66666666666667,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/y031_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": true,
+      "agreement": false,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 14,
+        "inputCopiedBytes": 56
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1066.6666666666667
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 7,
+        "inputCopiedBytes": 28
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr001_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/fr011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/cr011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "lum_flash_patterns/rel_lum/lr011_srgba.csv",
+      "kind": "GENERAL_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f001_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c001_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 7,
+        "inputCopiedBytes": 28
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s001_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d001_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f011_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1033.3333333333333
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c011_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s011_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d011_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 9,
+        "inputCopiedBytes": 36
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f021_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 1000
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c021_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s021_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d021_simple.csv",
+      "kind": "RED_FLASH",
+      "frames": 34,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/f001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/c001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 7,
+        "inputCopiedBytes": 28
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/s001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/d001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/fr001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": true,
+      "observedCandidate": true,
+      "agreement": true,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [
+        {
+          "startMs": 33.333333333333336,
+          "endMs": 233.33333333333334
+        }
+      ],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/cr001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 7,
+        "inputCopiedBytes": 28
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/sr001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    },
+    {
+      "id": "red_flash_patterns/30fps/dr001_multi.csv",
+      "kind": "RED_FLASH",
+      "frames": 32,
+      "expectedCandidate": false,
+      "observedCandidate": false,
+      "agreement": true,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 8,
+        "inputCopiedBytes": 32
+      },
+      "candidates": [],
+      "otherCandidateTypes": []
+    }
+  ],
+  "baselineComparison": {
+    "status": "NO_NEW_MISMATCHES",
+    "baselineEngineVersion": "0.3.0-candidate",
+    "baselineEngineSourceSha256": "2fa2a3d869d688adfd01a254df2ac8e7ae7124368dce2633c4895e4953e0c7a8",
+    "referenceManifestSha256": "eeb79bb17ea290080903f393a13a477a47bdc05028da81c21d3badde617a2840",
+    "knownMismatches": [
+      "lum_flash_patterns/rel_lum/l031_srgba.csv",
+      "lum_flash_patterns/rel_lum/y031_srgba.csv"
+    ],
+    "improvements": [],
+    "newMismatches": []
+  }
+}

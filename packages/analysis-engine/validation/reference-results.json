@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "engineVersion": "0.3.0-candidate",
+  "corpus": "numeric-step-reference-v1",
+  "seed": "0x5eed2301",
+  "scope": "One opaque analysis pixel, SDR sRGB step sequences. Independent batch arithmetic and exhaustive pairing oracle; internal regression agreement only, not external validation, screen-area assessment or WCAG conformance.",
+  "source": "https://www.w3.org/TR/WCAG22/#dfn-general-flash-and-red-flash-thresholds",
+  "cases": 1630,
+  "matchedCases": 1630,
+  "general": {
+    "truePositive": 1160,
+    "trueNegative": 470,
+    "falsePositive": 0,
+    "falseNegative": 0
+  },
+  "red": {
+    "truePositive": 349,
+    "trueNegative": 1281,
+    "falsePositive": 0,
+    "falseNegative": 0
+  },
+  "boundaries": {
+    "luminanceDelta": {
+      "below": 0.09989872824711389,
+      "above": 0.10224173308810132,
+      "threshold": 0.1
+    },
+    "darkerState": {
+      "below": 0.799102738014409,
+      "above": 0.8069522576692515,
+      "threshold": 0.8
+    },
+    "redSaturation": [
+      {
+        "rgb": [255, 136, 0],
+        "saturated": true
+      },
+      {
+        "rgb": [255, 137, 0],
+        "saturated": false
+      }
+    ]
+  },
+  "families": [
+    {
+      "family": "frequency-phase-threshold",
+      "cases": 288,
+      "matchedCases": 288
+    },
+    {
+      "family": "window-boundary",
+      "cases": 12,
+      "matchedCases": 12
+    },
+    {
+      "family": "luminance-boundary-sweep",
+      "cases": 512,
+      "matchedCases": 512
+    },
+    {
+      "family": "red-boundary-sweep",
+      "cases": 512,
+      "matchedCases": 512
+    },
+    {
+      "family": "seeded-step-sequences",
+      "cases": 300,
+      "matchedCases": 300
+    },
+    {
+      "family": "red-pairing",
+      "cases": 1,
+      "matchedCases": 1
+    },
+    {
+      "family": "discontinuity",
+      "cases": 5,
+      "matchedCases": 5
+    }
+  ],
+  "mismatches": [],
+  "engineSourceSha256": "2fa2a3d869d688adfd01a254df2ac8e7ae7124368dce2633c4895e4953e0c7a8"
+}

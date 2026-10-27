@@ -1,0 +1,177 @@
+--- baseline/src/index.ts
++++ combined/src/index.ts
+@@ -17,6 +17,8 @@
+ export const ENGINE_VERSION = '0.4.0-candidate';
+ // Sub-microsecond floating error must not count both endpoints of a 1 s window.
+ const WITHIN_ROLLING_SECOND_MS = 1000 - 1e-6;
++const LITTLE_ENDIAN_PACKED_RGBA =
++  new Uint8Array(new Uint32Array([0x11223344]).buffer)[0] === 0x44;
+ export interface CapturedFrame {
+   rgba: Uint8Array | Uint8ClampedArray;
+   width: number;
+@@ -706,50 +708,69 @@
+     this.general.activeSeedCount = this.red.activeSeedCount = 0;
+     const changedRuns = this.diagnosticHistory?.changedRuns;
+     this.prepareTiles(rgba, changedRuns);
+-    let run = 0;
+-    for (let pixel = changedRuns?.[0] ?? 0; pixel < width * height; pixel++) {
+-      if (changedRuns) {
+-        while (run < changedRuns.length && pixel >= changedRuns[run + 1]) {
+-          run += 3;
+-          pixel = changedRuns[run] ?? width * height;
+-        }
+-        if (pixel >= width * height) break;
+-      }
+-      if (this.representatives[pixel] !== pixel) continue;
+-      const offset = pixel * 4;
+-      if (rgba[offset + 3] !== 255) {
+-        this.invalid = true;
+-        this.notes.add(
+-          'Non-opaque capture pixels are unsupported; the composited background is unknown.',
++    if (
++      changedRuns === undefined &&
++      this.representativeCount === width * height &&
++      LITTLE_ENDIAN_PACKED_RGBA &&
++      rgba.byteOffset % 4 === 0
++    ) {
++      this.processDensePacked(
++        new Uint32Array(rgba.buffer, rgba.byteOffset, rgba.byteLength / 4),
++      );
++    } else {
++      let run = 0;
++      for (let pixel = changedRuns?.[0] ?? 0; pixel < width * height; pixel++) {
++        if (changedRuns) {
++          while (run < changedRuns.length && pixel >= changedRuns[run + 1]) {
++            run += 3;
++            pixel = changedRuns[run] ?? width * height;
++          }
++          if (pixel >= width * height) break;
++        }
++        if (this.representatives[pixel] !== pixel) continue;
++        const offset = pixel * 4;
++        if (rgba[offset + 3] !== 255) {
++          this.invalid = true;
++          this.notes.add(
++            'Non-opaque capture pixels are unsupported; the composited background is unknown.',
++          );
++          this.luminance[pixel] = NaN;
++          this.redAnchor[pixel] = 0xffffffff;
++          this.direction[pixel] = 0;
++          this.redPending[pixel] = 0;
++          this.previousRgb[pixel] = 0xffffffff;
++          this.general.count[pixel] = 0;
++          this.red.reset(pixel);
++          continue;
++        }
++        const rgb =
++          rgba[offset] | (rgba[offset + 1] << 8) | (rgba[offset + 2] << 16);
++        // Identical opaque pixels cannot introduce a transition. Temporal histories
++        // retain real timestamps; their window is checked on the next complete pair.
++        if (this.previousRgb[pixel] === rgb) continue;
++        this.previousRgb[pixel] = rgb;
++        const r = linear[rgb & 255],
++          g = linear[(rgb >>> 8) & 255],
++          b = linear[(rgb >>> 16) & 255];
++        this.generalTransition(
++          pixel,
++          0.2126 * r + 0.7152 * g + 0.0722 * b,
++          this.frameIndex,
+         );
+-        this.luminance[pixel] = NaN;
+-        this.redAnchor[pixel] = 0xffffffff;
+-        this.direction[pixel] = 0;
+-        this.redPending[pixel] = 0;
+-        this.previousRgb[pixel] = 0xffffffff;
+-        this.general.count[pixel] = 0;
+-        this.red.reset(pixel);
+-        continue;
+-      }
+-      const rgb =
+-        rgba[offset] | (rgba[offset + 1] << 8) | (rgba[offset + 2] << 16);
+-      // Identical opaque pixels cannot introduce a transition. Temporal histories
+-      // retain real timestamps; their window is checked on the next complete pair.
+-      if (this.previousRgb[pixel] === rgb) continue;
+-      this.previousRgb[pixel] = rgb;
+-      const color = this.colors.slot(rgb);
+-      this.generalTransition(
+-        pixel,
+-        this.colors.luminance[color],
+-        this.frameIndex,
+-      );
+-      // Black has no defined chromaticity. The general detector still observes its luminance.
+-      if (rgb === 0) {
+-        this.redAnchor[pixel] = 0xffffffff;
+-        this.redPending[pixel] = 0;
+-        this.red.reset(pixel);
+-      } else {
+-        this.redTransition(pixel, rgb, color, this.frameIndex);
++        if (rgb === 0) {
++          this.redAnchor[pixel] = 0xffffffff;
++          this.redPending[pixel] = 0;
++          this.red.reset(pixel);
++        } else {
++          const saturated = r / (r + g + b) >= 0.8;
++          if (this.redAnchor[pixel] === 0xffffffff) {
++            this.redAnchor[pixel] = rgb;
++            this.saturated[pixel] = saturated ? 1 : 0;
++          } else if (saturated || this.saturated[pixel]) {
++            const color = this.colors.slot(rgb);
++            this.redTransition(pixel, rgb, color, this.frameIndex);
++          }
++        }
+       }
+     }
+     this.expandActiveTiles(this.general);
+@@ -768,6 +789,52 @@
+       );
+     } else this.previousFrame = undefined;
+     this.currentRgba = undefined;
++  }
++
++  /** Exact dense native route; geometry, diagnostics and frame clocks stay in pushFrame. */
++  private processDensePacked(words: Uint32Array): void {
++    for (let pixel = 0; pixel < words.length; pixel++) {
++      const word = words[pixel];
++      if ((word >>> 24) !== 255) {
++        this.invalid = true;
++        this.notes.add(
++          'Non-opaque capture pixels are unsupported; the composited background is unknown.',
++        );
++        this.luminance[pixel] = NaN;
++        this.redAnchor[pixel] = 0xffffffff;
++        this.direction[pixel] = 0;
++        this.redPending[pixel] = 0;
++        this.previousRgb[pixel] = 0xffffffff;
++        this.general.count[pixel] = 0;
++        this.red.reset(pixel);
++        continue;
++      }
++      const rgb = word & 0xffffff;
++      if (this.previousRgb[pixel] === rgb) continue;
++      this.previousRgb[pixel] = rgb;
++      const r = linear[rgb & 255],
++        g = linear[(rgb >>> 8) & 255],
++        b = linear[(rgb >>> 16) & 255];
++      this.generalTransition(
++        pixel,
++        0.2126 * r + 0.7152 * g + 0.0722 * b,
++        this.frameIndex,
++      );
++      if (rgb === 0) {
++        this.redAnchor[pixel] = 0xffffffff;
++        this.redPending[pixel] = 0;
++        this.red.reset(pixel);
++      } else {
++        const saturated = r / (r + g + b) >= 0.8;
++        if (this.redAnchor[pixel] === 0xffffffff) {
++          this.redAnchor[pixel] = rgb;
++          this.saturated[pixel] = saturated ? 1 : 0;
++        } else if (saturated || this.saturated[pixel]) {
++          const color = this.colors.slot(rgb);
++          this.redTransition(pixel, rgb, color, this.frameIndex);
++        }
++      }
++    }
+   }
+ 
+   private generalTransition(

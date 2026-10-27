@@ -1,0 +1,1039 @@
+{
+  "engineVersion": "0.4.0-candidate",
+  "recordedAt": "2026-10-27T13:50:04.288Z",
+  "engineSourceTreeSha256": "4622f09db88c88c40d0ebaf451523aef6c2c060183f19acebf2c961bed46cfeb",
+  "benchmarkSourceSha256": "71b26fee6b90ecc1312b1d7115fe8118dcdbb390a12df69018f16ce5b2290e8e",
+  "additionalWorkloads": "high-entropy-drift uses seeded nonrepeating RGB values with gradual channel drift; translated-multiscale-texture uses procedural smooth spatial structure plus fine grain translated one exact pixel per frame. These are synthetic numeric workloads, not natural-video validation.",
+  "node": "v24.19.0",
+  "platform": "darwin/arm64",
+  "osRelease": "25.4.0",
+  "cpu": "Apple M2 Max",
+  "logicalCpus": 12,
+  "physicalMemoryBytes": 34359738368,
+  "gcAvailable": true,
+  "trials": 3,
+  "framesPerTrial": 90,
+  "warmupFrames": 10,
+  "scope": "pushFrame CPU time only, with diagnostics enabled; no capture, canvas, IPC, browser FPS, conformance or safety claim",
+  "results": [
+    {
+      "width": 320,
+      "height": 180,
+      "fixture": "unchanged-rich",
+      "medianMeanFrameMs": 0.1792979374999998,
+      "trials": [
+        {
+          "preparationMs": 0.9713330000000013,
+          "meanMs": 0.1530869124999997,
+          "p95Ms": 0.2626249999999999,
+          "maxMs": 0.37829200000000185,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6095700,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.9780000000000086,
+          "meanMs": 0.1792979374999998,
+          "p95Ms": 0.20400000000000773,
+          "maxMs": 0.28016599999997993,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6095700,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.8330410000000086,
+          "meanMs": 0.18437709999999896,
+          "p95Ms": 0.22658300000000509,
+          "maxMs": 0.27316599999997493,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6095700,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 180,
+      "fixture": "single-pixel-pulse",
+      "medianMeanFrameMs": 0.13258433750000478,
+      "trials": [
+        {
+          "preparationMs": 0.808415999999994,
+          "meanMs": 0.12938484999999567,
+          "p95Ms": 0.3423750000000041,
+          "maxMs": 0.5297499999999786,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 2526340,
+          "boundedStateBytes": 22412116,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 1.00162499999999,
+          "meanMs": 0.13515003749999935,
+          "p95Ms": 0.3041669999999499,
+          "maxMs": 0.4705839999999739,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6104900,
+          "boundedStateBytes": 22412116,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 0.9912080000000287,
+          "meanMs": 0.13258433750000478,
+          "p95Ms": 0.32191599999998743,
+          "maxMs": 0.9950840000000198,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6104900,
+          "boundedStateBytes": 22412116,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 180,
+      "fixture": "full-frame-pulses",
+      "medianMeanFrameMs": 0.26512284999999736,
+      "trials": [
+        {
+          "preparationMs": 1.1299579999999878,
+          "meanMs": 0.36576663749999766,
+          "p95Ms": 1.3966250000000286,
+          "maxMs": 5.695499999999981,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6099380,
+          "boundedStateBytes": 22412116,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 1.11179199999998,
+          "meanMs": 0.26512284999999736,
+          "p95Ms": 1.0705419999999322,
+          "maxMs": 4.238749999999982,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6101220,
+          "boundedStateBytes": 22412116,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 0.8165420000000267,
+          "meanMs": 0.2320834000000019,
+          "p95Ms": 0.9582910000000311,
+          "maxMs": 3.486499999999978,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 6101220,
+          "boundedStateBytes": 22412116,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 180,
+      "fixture": "changing-gradient",
+      "medianMeanFrameMs": 0.3502209250000007,
+      "trials": [
+        {
+          "preparationMs": 0.7655419999999822,
+          "meanMs": 0.46493437500000423,
+          "p95Ms": 0.9847919999999704,
+          "maxMs": 3.487959000000046,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 26601300,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.7842500000000427,
+          "meanMs": 0.34895768749999834,
+          "p95Ms": 0.39108299999998053,
+          "maxMs": 0.7174160000000711,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 4608000,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.7756669999999986,
+          "meanMs": 0.3502209250000007,
+          "p95Ms": 0.42837499999996,
+          "maxMs": 0.5108339999999316,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 26601300,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 180,
+      "fixture": "high-entropy-drift",
+      "medianMeanFrameMs": 1.6214182499999992,
+      "trials": [
+        {
+          "preparationMs": 0.7768750000000182,
+          "meanMs": 1.5937073125000012,
+          "p95Ms": 1.783333999999968,
+          "maxMs": 1.9457909999999856,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 26601300,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.8269579999999905,
+          "meanMs": 1.6214182499999992,
+          "p95Ms": 2.2607499999999163,
+          "maxMs": 2.51299999999992,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 24519420,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.9470409999998992,
+          "meanMs": 1.6286358374999934,
+          "p95Ms": 1.7576249999999618,
+          "maxMs": 4.576917000000094,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 26601300,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "height": 180,
+      "fixture": "translated-multiscale-texture",
+      "medianMeanFrameMs": 0.8947187624999913,
+      "trials": [
+        {
+          "preparationMs": 1.0105409999998756,
+          "meanMs": 0.8966791125000129,
+          "p95Ms": 1.021541999999954,
+          "maxMs": 1.9900420000001304,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 26831700,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.7233750000000327,
+          "meanMs": 0.8947187624999913,
+          "p95Ms": 1.1770839999999225,
+          "maxMs": 1.5161659999998847,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 3686400,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 0.8407079999999496,
+          "meanMs": 0.8903437250000025,
+          "p95Ms": 1.1004579999998896,
+          "maxMs": 1.4165000000000418,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 9216000,
+          "boundedStateBytes": 22412116,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "fixture": "unchanged-rich",
+      "medianMeanFrameMs": 0.471803087499984,
+      "trials": [
+        {
+          "preparationMs": 3.3142499999999018,
+          "meanMs": 0.3902531000000039,
+          "p95Ms": 0.42604099999994105,
+          "maxMs": 0.7712079999998878,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 21844620,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 3.908333000000084,
+          "meanMs": 0.471803087499984,
+          "p95Ms": 0.5603750000000218,
+          "maxMs": 0.7386670000000777,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 524288,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 3.7122919999997066,
+          "meanMs": 0.47710252499999795,
+          "p95Ms": 0.5676250000001346,
+          "maxMs": 0.6499170000001868,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 21844620,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "fixture": "single-pixel-pulse",
+      "medianMeanFrameMs": 0.4421645875000024,
+      "trials": [
+        {
+          "preparationMs": 3.291874999999891,
+          "meanMs": 0.4421645875000024,
+          "p95Ms": 0.6195419999999103,
+          "maxMs": 1.364875000000211,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 20962620,
+          "boundedStateBytes": 36778636,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 3.0673329999999623,
+          "meanMs": 0.4461332749999826,
+          "p95Ms": 0.5444999999999709,
+          "maxMs": 1.4796670000000631,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 16282620,
+          "boundedStateBytes": 36778636,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 3.5177089999997406,
+          "meanMs": 0.412961399999989,
+          "p95Ms": 0.450666000000183,
+          "maxMs": 1.0933329999998023,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 18125820,
+          "boundedStateBytes": 36778636,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "fixture": "full-frame-pulses",
+      "medianMeanFrameMs": 0.7800432999999941,
+      "trials": [
+        {
+          "preparationMs": 3.204917000000023,
+          "meanMs": 0.8477463750000368,
+          "p95Ms": 3.637040999999954,
+          "maxMs": 6.060292000000118,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 21866220,
+          "boundedStateBytes": 36778636,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 3.0246659999997974,
+          "meanMs": 0.7604734499999722,
+          "p95Ms": 2.7192909999998847,
+          "maxMs": 5.932500000000346,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 4545596,
+          "boundedStateBytes": 36778636,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 2.9909170000000813,
+          "meanMs": 0.7800432999999941,
+          "p95Ms": 2.920708000000104,
+          "maxMs": 6.390084000000115,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 21866220,
+          "boundedStateBytes": 36778636,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "fixture": "changing-gradient",
+      "medianMeanFrameMs": 1.1340901375000159,
+      "trials": [
+        {
+          "preparationMs": 1.6540829999999005,
+          "meanMs": 1.2652046000000154,
+          "p95Ms": 1.8581659999999829,
+          "maxMs": 4.054665999999997,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 90964620,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 3.1341660000002776,
+          "meanMs": 1.1340901375000159,
+          "p95Ms": 1.3584999999998217,
+          "maxMs": 2.196374999999989,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 3686400,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 1.5687079999997877,
+          "meanMs": 1.1070801125000116,
+          "p95Ms": 1.2706249999996544,
+          "maxMs": 1.6948750000001382,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 72532620,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "fixture": "high-entropy-drift",
+      "medianMeanFrameMs": 6.269684362499959,
+      "trials": [
+        {
+          "preparationMs": 2.9610419999999067,
+          "meanMs": 6.178419212500012,
+          "p95Ms": 6.637791000000107,
+          "maxMs": 10.19275000000016,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 10137600,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 1.2294999999994616,
+          "meanMs": 6.498222887500015,
+          "p95Ms": 7.3567910000001575,
+          "maxMs": 9.503707999999278,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 91886220,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 3.752582999999504,
+          "meanMs": 6.269684362499959,
+          "p95Ms": 6.732708000000457,
+          "maxMs": 10.929791999999907,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 56371196,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "fixture": "translated-multiscale-texture",
+      "medianMeanFrameMs": 3.281965574999947,
+      "trials": [
+        {
+          "preparationMs": 1.189582999999402,
+          "meanMs": 3.281965574999947,
+          "p95Ms": 3.5921250000001237,
+          "maxMs": 7.8107499999996435,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 23961600,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 3.233624999999847,
+          "meanMs": 3.269049487500047,
+          "p95Ms": 3.5659579999992275,
+          "maxMs": 8.488333000000239,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 74375820,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 1.3207500000007713,
+          "meanMs": 3.3942198000000303,
+          "p95Ms": 4.155083999999988,
+          "maxMs": 7.473291999999674,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 74375820,
+          "boundedStateBytes": 36778636,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fixture": "unchanged-rich",
+      "medianMeanFrameMs": 1.8810968375000017,
+      "trials": [
+        {
+          "preparationMs": 14.112375000000611,
+          "meanMs": 1.8810968375000017,
+          "p95Ms": 1.9824170000001686,
+          "maxMs": 4.036874999999782,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 43642800,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 8.55895800000053,
+          "meanMs": 1.7884239500000034,
+          "p95Ms": 1.833582999999635,
+          "maxMs": 2.004750000000058,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 84841020,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 21.74775000000045,
+          "meanMs": 2.0214051874999086,
+          "p95Ms": 2.5756249999994907,
+          "maxMs": 3.3302500000008877,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 57600,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fixture": "single-pixel-pulse",
+      "medianMeanFrameMs": 1.9028208375000304,
+      "trials": [
+        {
+          "preparationMs": 15.346333999999842,
+          "meanMs": 1.967978624999978,
+          "p95Ms": 2.6436659999999392,
+          "maxMs": 4.678250000000844,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 73868220,
+          "boundedStateBytes": 94245436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 9.52141599999959,
+          "meanMs": 1.9028208375000304,
+          "p95Ms": 2.285416000000623,
+          "maxMs": 2.5779590000001917,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 11918272,
+          "boundedStateBytes": 94245436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 12.107374999999593,
+          "meanMs": 1.888458362499864,
+          "p95Ms": 2.1985420000000886,
+          "maxMs": 2.919167000000016,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 84999420,
+          "boundedStateBytes": 94245436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fixture": "full-frame-pulses",
+      "medianMeanFrameMs": 3.3423156000001426,
+      "trials": [
+        {
+          "preparationMs": 9.115207999999257,
+          "meanMs": 3.2227146250001626,
+          "p95Ms": 15.025084000000788,
+          "maxMs": 20.513833000000886,
+          "framesOver16_7Ms": 2,
+          "peakArrayBufferDeltaBytes": 84927420,
+          "boundedStateBytes": 94245436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 13.620249999999942,
+          "meanMs": 3.4110781625000755,
+          "p95Ms": 15.680709000000206,
+          "maxMs": 20.107708000001367,
+          "framesOver16_7Ms": 2,
+          "peakArrayBufferDeltaBytes": 84927420,
+          "boundedStateBytes": 94245436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 8.628249999999753,
+          "meanMs": 3.3423156000001426,
+          "p95Ms": 15.587541999999303,
+          "maxMs": 21.9809580000001,
+          "framesOver16_7Ms": 3,
+          "peakArrayBufferDeltaBytes": 84927420,
+          "boundedStateBytes": 94245436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fixture": "changing-gradient",
+      "medianMeanFrameMs": 4.200444812499927,
+      "trials": [
+        {
+          "preparationMs": 11.786375000001499,
+          "meanMs": 4.485659824999902,
+          "p95Ms": 5.691749999999956,
+          "maxMs": 8.080291000000216,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 81100800,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 10.177583000000595,
+          "meanMs": 4.200444812499927,
+          "p95Ms": 4.705916999999317,
+          "maxMs": 5.546084000001429,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 165941820,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 12.859833000000435,
+          "meanMs": 4.083764062499836,
+          "p95Ms": 4.5636670000003505,
+          "maxMs": 4.941125000001193,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 165941820,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fixture": "high-entropy-drift",
+      "medianMeanFrameMs": 26.927642762500046,
+      "trials": [
+        {
+          "preparationMs": 8.812583000000814,
+          "meanMs": 27.02609422499993,
+          "p95Ms": 37.43145899999945,
+          "maxMs": 54.369667000002664,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 165941820,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 12.867333000001963,
+          "meanMs": 26.365716100000235,
+          "p95Ms": 32.11854200000016,
+          "maxMs": 36.27970800000185,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 158569020,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 8.107209000001603,
+          "meanMs": 26.927642762500046,
+          "p95Ms": 32.522000000000844,
+          "maxMs": 34.98675000000003,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 165941820,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "fixture": "translated-multiscale-texture",
+      "medianMeanFrameMs": 12.630968200000279,
+      "trials": [
+        {
+          "preparationMs": 12.118999999998778,
+          "meanMs": 12.954704212499928,
+          "p95Ms": 16.333709000002273,
+          "maxMs": 18.68633300000147,
+          "framesOver16_7Ms": 3,
+          "peakArrayBufferDeltaBytes": 89051136,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 8.381416999996873,
+          "meanMs": 12.630968200000279,
+          "p95Ms": 15.094750000000204,
+          "maxMs": 17.615207999999257,
+          "framesOver16_7Ms": 3,
+          "peakArrayBufferDeltaBytes": 169628220,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 12.112417000000278,
+          "meanMs": 12.527763012499872,
+          "p95Ms": 14.576916999998502,
+          "maxMs": 18.393874999997934,
+          "framesOver16_7Ms": 3,
+          "peakArrayBufferDeltaBytes": 169628220,
+          "boundedStateBytes": 94245436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "fixture": "unchanged-rich",
+      "medianMeanFrameMs": 4.213256724999928,
+      "trials": [
+        {
+          "preparationMs": 11.61579200000051,
+          "meanMs": 4.213256724999928,
+          "p95Ms": 5.117082999997365,
+          "maxMs": 5.671458000000712,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 189835020,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 12.934540999998717,
+          "meanMs": 4.205696337499921,
+          "p95Ms": 4.730542000001151,
+          "maxMs": 6.410875000001397,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 92054288,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 8.721832999999606,
+          "meanMs": 4.298122962500065,
+          "p95Ms": 4.879458000003069,
+          "maxMs": 13.029999999998836,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 2073600,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "fixture": "single-pixel-pulse",
+      "medianMeanFrameMs": 4.267450462500165,
+      "trials": [
+        {
+          "preparationMs": 7.177583000000595,
+          "meanMs": 4.2892359125002715,
+          "p95Ms": 5.37133299999914,
+          "maxMs": 6.919958000002225,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 4471200,
+          "boundedStateBytes": 190023436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 7.390125000001717,
+          "meanMs": 4.267450462500165,
+          "p95Ms": 5.17108300000109,
+          "maxMs": 5.496125000005122,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 0,
+          "boundedStateBytes": 190023436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 6.991374999997788,
+          "meanMs": 4.127766637500099,
+          "p95Ms": 4.633665999994264,
+          "maxMs": 5.204875000003085,
+          "framesOver16_7Ms": 0,
+          "peakArrayBufferDeltaBytes": 26342572,
+          "boundedStateBytes": 190023436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "fixture": "full-frame-pulses",
+      "medianMeanFrameMs": 7.5880614374996185,
+      "trials": [
+        {
+          "preparationMs": 6.436583000002429,
+          "meanMs": 7.9470827624999405,
+          "p95Ms": 36.82862500000192,
+          "maxMs": 45.137125000001106,
+          "framesOver16_7Ms": 10,
+          "peakArrayBufferDeltaBytes": 8132400,
+          "boundedStateBytes": 190023436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 56.19933299999684,
+          "meanMs": 7.5880614374996185,
+          "p95Ms": 37.667584000002535,
+          "maxMs": 43.13775000000169,
+          "framesOver16_7Ms": 10,
+          "peakArrayBufferDeltaBytes": 189997020,
+          "boundedStateBytes": 190023436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        },
+        {
+          "preparationMs": 10.082416999997804,
+          "meanMs": 7.442871849999574,
+          "p95Ms": 38.392541000001074,
+          "maxMs": 44.99333299999853,
+          "framesOver16_7Ms": 10,
+          "peakArrayBufferDeltaBytes": 92536796,
+          "boundedStateBytes": 190023436,
+          "candidates": 1,
+          "completeDiagnosticCandidates": 1
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "fixture": "changing-gradient",
+      "medianMeanFrameMs": 12.647413600000164,
+      "trials": [
+        {
+          "preparationMs": 7.479458000001614,
+          "meanMs": 12.647413600000164,
+          "p95Ms": 16.048291999999492,
+          "maxMs": 29.68291699999827,
+          "framesOver16_7Ms": 3,
+          "peakArrayBufferDeltaBytes": 91368000,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 9.77900000000227,
+          "meanMs": 13.051249437500065,
+          "p95Ms": 16.883665999994264,
+          "maxMs": 20.975375000001804,
+          "framesOver16_7Ms": 6,
+          "peakArrayBufferDeltaBytes": 272779020,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 8.267665999999736,
+          "meanMs": 12.527021874999992,
+          "p95Ms": 15.03654199999437,
+          "maxMs": 19.021334000004572,
+          "framesOver16_7Ms": 3,
+          "peakArrayBufferDeltaBytes": 16588800,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "fixture": "high-entropy-drift",
+      "medianMeanFrameMs": 59.948883912499966,
+      "trials": [
+        {
+          "preparationMs": 9.41083300000173,
+          "meanMs": 63.394105737500105,
+          "p95Ms": 84.63212500000373,
+          "maxMs": 98.14129099999991,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 272779020,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 6.750041999999667,
+          "meanMs": 58.934097325000224,
+          "p95Ms": 65.31487499999639,
+          "maxMs": 102.97254200000316,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 49766400,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 6.662708999996539,
+          "meanMs": 59.948883912499966,
+          "p95Ms": 70.8247080000001,
+          "maxMs": 81.51941699999588,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 256190220,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "fixture": "translated-multiscale-texture",
+      "medianMeanFrameMs": 29.058055100000548,
+      "trials": [
+        {
+          "preparationMs": 5.860000000000582,
+          "meanMs": 29.058055100000548,
+          "p95Ms": 35.72475000000122,
+          "maxMs": 43.427166999987094,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 264484620,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 10.531916000007186,
+          "meanMs": 29.535516162499516,
+          "p95Ms": 36.31554199999664,
+          "maxMs": 41.13179200000013,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 74649600,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        },
+        {
+          "preparationMs": 8.65724999998929,
+          "meanMs": 28.720013562499663,
+          "p95Ms": 32.96549999999115,
+          "maxMs": 36.90662499998871,
+          "framesOver16_7Ms": 80,
+          "peakArrayBufferDeltaBytes": 127335420,
+          "boundedStateBytes": 190023436,
+          "candidates": 0,
+          "completeDiagnosticCandidates": 0
+        }
+      ]
+    }
+  ],
+  "spatialMaskResults": [
+    {
+      "fixture": "disjoint-islands",
+      "width": 1920,
+      "height": 1080,
+      "fieldWidth": 341,
+      "fieldHeight": 256,
+      "samples": 30,
+      "meanMs": 10.920869299997381,
+      "p95Ms": 13.974291000005906,
+      "maximumPixels": 4096
+    },
+    {
+      "fixture": "dense-irregular",
+      "width": 1920,
+      "height": 1080,
+      "fieldWidth": 341,
+      "fieldHeight": 256,
+      "samples": 30,
+      "meanMs": 10.690400133333362,
+      "p95Ms": 13,
+      "maximumPixels": 37440
+    },
+    {
+      "fixture": "full-frame",
+      "width": 1920,
+      "height": 1080,
+      "fieldWidth": 341,
+      "fieldHeight": 256,
+      "samples": 30,
+      "meanMs": 10.510505600001489,
+      "p95Ms": 11.308665999997174,
+      "maximumPixels": 87296
+    }
+  ]
+}

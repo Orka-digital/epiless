@@ -1,0 +1,138 @@
+{
+  "recordedAt": "2026-10-27T15:20:47.887Z",
+  "engineVersion": "0.4.0-candidate",
+  "engineSourceTreeSha256": "4a757855651fa50523b782f82dc9e273fb1b68e398e4d0354ceed758d6c0b7cb",
+  "benchmarkSourceSha256": "711babe25f540ab670459685db376cb4621e7915964ba9698ba21b5ecde9b390",
+  "node": "v24.19.0",
+  "platform": "darwin/arm64",
+  "osRelease": "25.4.0",
+  "cpu": "Apple M2 Max",
+  "width": 1920,
+  "height": 1080,
+  "frames": 90,
+  "warmup": 10,
+  "visualField": {
+    "widthPx": 682,
+    "heightPx": 512,
+    "basis": "W3C_CSS_REFERENCE",
+    "reference": "Synthetic benchmark assumption: fixed 341x256 CSS-pixel reference at DPR 2 and standard page zoom, mapped to 682x512 source pixels. No browser or physical display measurement."
+  },
+  "scope": "Numeric pushFrame CPU only with diagnostics and an explicit reference field; excludes fixture generation, capture, color conversion, IPC and rendering. Full masks only, not complex-workload throughput or a 60fps guarantee.",
+  "results": [
+    {
+      "fixture": "full-frame-luminance",
+      "trials": [
+        {
+          "meanMs": 7.533702012499992,
+          "p95Ms": 16.222875000000045,
+          "maxMs": 19.543957999999975,
+          "framesOver16_7Ms": 3,
+          "boundedStateBytes": 190023436,
+          "resultSha256": "4b6bf42687e9c73403b63bf3b606e5176bd1dded331021140555222fadb48a42",
+          "findings": [
+            {
+              "type": "GENERAL_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            }
+          ]
+        },
+        {
+          "meanMs": 5.822780274999997,
+          "p95Ms": 15.622417000000041,
+          "maxMs": 23.74754199999984,
+          "framesOver16_7Ms": 4,
+          "boundedStateBytes": 190023436,
+          "resultSha256": "4b6bf42687e9c73403b63bf3b606e5176bd1dded331021140555222fadb48a42",
+          "findings": [
+            {
+              "type": "GENERAL_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            }
+          ]
+        },
+        {
+          "meanMs": 5.600233274999999,
+          "p95Ms": 15.72375000000011,
+          "maxMs": 19.111917000000176,
+          "framesOver16_7Ms": 1,
+          "boundedStateBytes": 190023436,
+          "resultSha256": "4b6bf42687e9c73403b63bf3b606e5176bd1dded331021140555222fadb48a42",
+          "findings": [
+            {
+              "type": "GENERAL_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": "full-frame-red-and-luminance",
+      "trials": [
+        {
+          "meanMs": 5.582591625000049,
+          "p95Ms": 15.994000000000597,
+          "maxMs": 19.464249999999993,
+          "framesOver16_7Ms": 1,
+          "boundedStateBytes": 190023436,
+          "resultSha256": "e447343c1ec49dbf0e580de196c89ef5eda4334be021aa05e31da90b8dc64b17",
+          "findings": [
+            {
+              "type": "GENERAL_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            },
+            {
+              "type": "RED_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            }
+          ]
+        },
+        {
+          "meanMs": 5.548720787500008,
+          "p95Ms": 15.574292000000241,
+          "maxMs": 19.370832999999948,
+          "framesOver16_7Ms": 1,
+          "boundedStateBytes": 190023436,
+          "resultSha256": "e447343c1ec49dbf0e580de196c89ef5eda4334be021aa05e31da90b8dc64b17",
+          "findings": [
+            {
+              "type": "GENERAL_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            },
+            {
+              "type": "RED_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            }
+          ]
+        },
+        {
+          "meanMs": 5.490153650000025,
+          "p95Ms": 15.328749999999673,
+          "maxMs": 19.114290999999866,
+          "framesOver16_7Ms": 1,
+          "boundedStateBytes": 190023436,
+          "resultSha256": "e447343c1ec49dbf0e580de196c89ef5eda4334be021aa05e31da90b8dc64b17",
+          "findings": [
+            {
+              "type": "GENERAL_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            },
+            {
+              "type": "RED_FLASH",
+              "maximumPixels": 349184,
+              "diagnosticComplete": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
