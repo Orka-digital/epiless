@@ -1,0 +1,7 @@
+{
+    "codec": "FFV1",
+    "video_extension": "avi",
+    "padding": 10,
+
+    "comment1": "FFV1 is lossless but does not work for legacy PEAT"
+}

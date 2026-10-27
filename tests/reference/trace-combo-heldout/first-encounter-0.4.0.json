@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "evaluatedAt": "2026-10-27T18:27:15.949Z",
+  "scope": "FIRST_ENCOUNTER_COMBINED_TEMPORAL_INTENSITY_CHANNELS",
+  "selectionFrozenAt": "2026-10-27T18:24:28.314972+00:00",
+  "engineVersion": "0.4.0-candidate",
+  "engineTreeSha256": "c216fbe2c9de76354061c35ba4df09e7e0a25731e5be247f3a7092aca2ca687a",
+  "kernel": {
+    "check": "SOURCE_BINARY_COHERENCE_AND_ABI",
+    "sourceSha256": "51a2dc545eb4072e8daa946cfad91889938b0d458181cd7c5ceb4805ba86776f",
+    "binarySha256": "8488e0b77321797265e4169ba03ad1b598dcd222fe9c059cefae2ed258887157",
+    "bytes": 2239,
+    "abiVersion": 2,
+    "stateSize": 100,
+    "compilerRebuilt": false,
+    "manifestSha256": "45849c3cb25318f90a65afd4c0a7a2500e69733c296c53e11ce2f27c6d5c3036",
+    "verifierSha256": "93e8ef59e28056884cd62109e4b4ef2989f0ca39c8efb96674d8e8eba63a791d"
+  },
+  "harnessSha256": "99a4f22f9cb28285ff3f45d5fe785b695c7fb8a60f74ac117575237adb0c85f5",
+  "reference": {
+    "repository": "https://github.com/traceRERC/pse-test-media",
+    "commit": "ef78542aad496827f25064f57aaf13d6a741ba75",
+    "manifestSha256": "abaca272c1b8b0f0d58867bc14c077f7665d21cc67f72da82514370dee39cc36",
+    "filesVerified": 10
+  },
+  "independentInputs": 8,
+  "scoredInputs": 8,
+  "channelChecks": 16,
+  "inputsWithAnyMismatch": 1,
+  "channelSummary": {
+    "cases": 16,
+    "truePositive": 8,
+    "falseNegative": 0,
+    "falsePositive": 1,
+    "trueNegative": 7,
+    "sensitivityOnSelectedCases": 1,
+    "precisionOnSelectedCases": 0.8888888888888888,
+    "specificityOnSelectedCases": 0.875,
+    "mismatches": 1
+  },
+  "byType": {
+    "GENERAL_FLASH": {
+      "cases": 8,
+      "truePositive": 4,
+      "falseNegative": 0,
+      "falsePositive": 0,
+      "trueNegative": 4,
+      "sensitivityOnSelectedCases": 1,
+      "precisionOnSelectedCases": 1,
+      "specificityOnSelectedCases": 1,
+      "mismatches": 0
+    },
+    "RED_FLASH": {
+      "cases": 8,
+      "truePositive": 4,
+      "falseNegative": 0,
+      "falsePositive": 1,
+      "trueNegative": 3,
+      "sensitivityOnSelectedCases": 1,
+      "precisionOnSelectedCases": 0.8,
+      "specificityOnSelectedCases": 0.75,
+      "mismatches": 1
+    }
+  },
+  "verdict": "MISMATCHES",
+  "conformanceEstablished": false,
+  "passed": null,
+  "methodology": "Eight previously unselected upstream inputs, pinned before evaluation, each projected verbatim onto one pixel at 30 fps. Two channel checks per input are correlated, not sixteen independent inputs. Upstream fb/fl/fr/p suffixes supply the external general/red oracle. No engine changes, padding, rendered media or outcome-based exclusions. After first encounter this set is regression data.",
+  "unsupported": [
+    "Combined visual-field area and physical display calibration",
+    "Capture, decoding, motion and fine-pattern exceptions",
+    "Real-world sensitivity, WCAG conformance, clinical safety and state-of-the-art claims"
+  ],
+  "cases": [
+    {
+      "id": "combo_flash_patterns/30fps/001fb.csv",
+      "sourceSha256": "fb48bff8b2442798d44f4438f0b1b1282cd12383e414966e8fe57058b409eda1",
+      "frames": 34,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 24,
+        "inputCopiedBytes": 96
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 200,
+              "endMs": 1033.3333333333333
+            }
+          ]
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 33.333333333333336,
+              "endMs": 1033.3333333333333
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combo_flash_patterns/30fps/001fl.csv",
+      "sourceSha256": "6d44cd2909679d107292e5eebad6971dc89e9fa6be448238731bfbfcdcf3a5f1",
+      "frames": 34,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 27,
+        "inputCopiedBytes": 108
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 33.333333333333336,
+              "endMs": 1033.3333333333333
+            }
+          ]
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": true,
+          "agreement": false,
+          "candidates": [
+            {
+              "startMs": 200,
+              "endMs": 900
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combo_flash_patterns/30fps/001fr.csv",
+      "sourceSha256": "8a8e7f254805bd0e78ae48997274197bc3268f7c7be1b7abb5758860fe42f590",
+      "frames": 34,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 24,
+        "inputCopiedBytes": 96
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": false,
+          "agreement": true,
+          "candidates": []
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 33.333333333333336,
+              "endMs": 1100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combo_flash_patterns/30fps/001p.csv",
+      "sourceSha256": "0e3afb220c6cb3a1e0612ef266dbb74e226bb83c72e47c71ab101aa108859ea2",
+      "frames": 34,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 23,
+        "inputCopiedBytes": 92
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": false,
+          "agreement": true,
+          "candidates": []
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": false,
+          "agreement": true,
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "id": "combo_flash_patterns/30fps/002fb.csv",
+      "sourceSha256": "17e9005e23045e21954c118a7559fe6e4bd91eb34dfe65e83c2e6863723b666e",
+      "frames": 34,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 26,
+        "inputCopiedBytes": 104
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 33.333333333333336,
+              "endMs": 1033.3333333333333
+            }
+          ]
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 33.333333333333336,
+              "endMs": 1033.3333333333333
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combo_flash_patterns/30fps/002fl.csv",
+      "sourceSha256": "720e54a1e12e5bf7faae33fe530cdce0b497bd0ddccd0b6285c7ef24b567fd9b",
+      "frames": 34,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 25,
+        "inputCopiedBytes": 100
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 33.333333333333336,
+              "endMs": 1033.3333333333333
+            }
+          ]
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": false,
+          "agreement": true,
+          "candidates": []
+        }
+      ]
+    },
+    {
+      "id": "combo_flash_patterns/30fps/002fr.csv",
+      "sourceSha256": "732091383033da4708528b9a26ac86c2ab3dec7ba304b35f9db398414357256e",
+      "frames": 34,
+      "engineStatus": "NEEDS_REVIEW",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 26,
+        "inputCopiedBytes": 104
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": false,
+          "agreement": true,
+          "candidates": []
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": true,
+          "observedCandidate": true,
+          "agreement": true,
+          "candidates": [
+            {
+              "startMs": 33.333333333333336,
+              "endMs": 1033.3333333333333
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "combo_flash_patterns/30fps/002p.csv",
+      "sourceSha256": "fdc24fec0842a14cabd404f4a85417b633f4afc9d0f21ee13730288c7eb471b1",
+      "frames": 34,
+      "engineStatus": "NO_ISSUES_OBSERVED",
+      "analysisBackend": {
+        "backend": "WASM_DENSE",
+        "selectionReason": "READY",
+        "denseFrames": 27,
+        "inputCopiedBytes": 108
+      },
+      "channels": [
+        {
+          "kind": "GENERAL_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": false,
+          "agreement": true,
+          "candidates": []
+        },
+        {
+          "kind": "RED_FLASH",
+          "expectedCandidate": false,
+          "observedCandidate": false,
+          "agreement": true,
+          "candidates": []
+        }
+      ]
+    }
+  ],
+  "unscored": []
+}

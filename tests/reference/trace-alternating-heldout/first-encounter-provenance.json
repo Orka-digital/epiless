@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "firstEncounterSha256": "d7e80663cd062b14edb1ec5d72de9f0e249f9ab904979e9715ffc976250e9b74",
+  "manifestSha256": "435e47961469043376dde6e90c52e726604a66366087a6537f351cdf64740092",
+  "engineTreeSha256": "c216fbe2c9de76354061c35ba4df09e7e0a25731e5be247f3a7092aca2ca687a",
+  "frozenSourceArchive": {
+    "file": "frozen-engine-c216.tar.gz",
+    "sha256": "cc8ca26e1fc7d34442893cda0147c8379cdd8df3b90cbd07d412c6a27b108cd2",
+    "scope": "Original top-level engine TypeScript, dense C kernel, kernel manifest and verifier as used by the first encounter; reproducible gzip/tar metadata."
+  },
+  "harnessFiles": [
+    {
+      "path": "validate-alternating-heldout.mjs",
+      "sha256": "661cafeaaebd30c7137af2075aed7b42c329a23cbe1fab7541ab08ce74731000"
+    },
+    {
+      "path": "validate-spatial-media.mjs",
+      "sha256": "aec801f166ad2820b28cf4af523878104a5d5eaeb5ae915249b8a29136e7447b"
+    },
+    {
+      "path": "validate-detection.mjs",
+      "sha256": "4cb99884a137057ec787957ea04c891c054773e97b9c125024fc1d929fe7a093"
+    },
+    {
+      "path": "validate-expanded.mjs",
+      "sha256": "277cc0f32e22ab2fa7cae23b21d05eb4ba7d346a78ab91de2a2358d1f813d235"
+    },
+    {
+      "path": "detection-kernel.mjs",
+      "sha256": "3216218f60f6da5b92346dead203ecc81ffcd7a79b78cc02d73767f4c35c2d11"
+    }
+  ],
+  "result": "4 TP, 0 FN, 0 FP, 12 TN against both original label sources; 544 exact decoded frames. Known temporal dependencies are not described as unseen."
+}

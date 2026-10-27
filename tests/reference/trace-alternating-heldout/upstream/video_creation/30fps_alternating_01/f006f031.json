@@ -1,0 +1,93 @@
+{
+    "framerate": 30,
+    "colormodel": "sRGBA",
+    "bgcolor": "(110,110,110,255)",
+    "pattern": [
+        {
+            "spatial": "../../area_patterns/25pct_screen/f006_fhd.png",
+            "temporal_color": "../../lum_flash_patterns/rel_lum/f031_srgba.csv"
+        }
+    ],
+    "expected_result": {
+        "trace24": "fail",
+        "wcag2_2": "fail",
+        "ofcom2017": "fail",
+        "itu_r1702_4": "fail",
+        "iso": "fail"
+    },
+    "version": "1.0.0",
+    "events": {
+        "y1": {
+            "type": "luminance",
+            "firstFrame": 30,
+            "lastFrame": 30
+        },
+        "y2": {
+            "type": "luminance",
+            "firstFrame": 32,
+            "lastFrame": 32
+        }
+    },
+    "failure_details": {
+        "trace24": {
+            "luminance": {
+                "present": true,
+                "event_ids": [
+                    "y1",
+                    "y2"
+                ]
+            },
+            "red": {
+                "present": false
+            }
+        },
+        "wcag2_2": {
+            "luminance": {
+                "present": true,
+                "event_ids": [
+                    "y1",
+                    "y2"
+                ]
+            },
+            "red": {
+                "present": false
+            }
+        },
+        "ofcom2017": {
+            "luminance": {
+                "present": true,
+                "event_ids": [
+                    "y1",
+                    "y2"
+                ]
+            },
+            "red": {
+                "present": false
+            }
+        },
+        "itu_r1702_4": {
+            "luminance": {
+                "present": true,
+                "event_ids": [
+                    "y1",
+                    "y2"
+                ]
+            },
+            "red": {
+                "present": false
+            }
+        },
+        "iso": {
+            "luminance": {
+                "present": true,
+                "event_ids": [
+                    "y1",
+                    "y2"
+                ]
+            },
+            "red": {
+                "present": false
+            }
+        }
+    }
+}

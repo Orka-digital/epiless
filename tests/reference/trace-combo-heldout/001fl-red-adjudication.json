@@ -1,0 +1,1569 @@
+{
+  "schemaVersion": 1,
+  "sourceSha256": "6d44cd2909679d107292e5eebad6971dc89e9fa6be448238731bfbfcdcf3a5f1",
+  "firstEncounterSha256": "fe0da3e745899360b42bb1c7165ff6b15fdcf51f33988e3f85b63227f262ebe6",
+  "worksheetSha256": "974ef98d83f4711cfce5b5567028add8e731a82f022745470d10195f189448d7",
+  "primaryFormula": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+  "upstreamLabel": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/combo_flash_patterns/30fps/README.md",
+  "method": "Independent direct arithmetic from original RGB and 30 fps PTS. Saturated red requires linear R/(R+G+B)>=0.8; CIE1976 distance must exceed0.2. Adjacent changes and descriptive scalar extrema are reported separately. Explicit nonadjacent endpoint pairs explain the existing scanner policy; no engine imports, detector loop or normative pass/fail oracle is copied.",
+  "status": "UNRESOLVED_TRANSITION_ENDPOINT_INTERPRETATION",
+  "originalExpectation": {
+    "GENERAL_FLASH": true,
+    "RED_FLASH": false
+  },
+  "recordedRedCandidate": {
+    "startMs": 200,
+    "endMs": 900
+  },
+  "conclusion": "Immediate changed-frame comparisons yield six qualifying red edges. Retaining earlier saturated-red endpoints yields eight alternating qualifying vectors over700ms, including18→22 and22→25 where immediate21→22 and22→23 remain below0.2. This explains the extra candidate without a rounding-boundary discrepancy. W3C describes transitions between peaks and valleys, so adjacent-frame counting is not itself a normative oracle; its text does not prescribe this vector-anchor policy either. Keep the upstream negative label and the observed extra alert. Independent endpoint/duration adjudication remains open; no engine or label adjustment is established.",
+  "frames": [
+    {
+      "frame": 1,
+      "ptsMs": 0,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 2,
+      "ptsMs": 33.333333333333336,
+      "rgba": [
+        129,
+        107,
+        193,
+        255
+      ],
+      "linearRgb": [
+        0.2195261997292692,
+        0.14702726649759498,
+        0.5332764040105052
+      ],
+      "saturation": 0.24396411698509138,
+      "uPrime": 0.20457312421532572,
+      "vPrime": 0.36602035532398114,
+      "redSignal": 0
+    },
+    {
+      "frame": 3,
+      "ptsMs": 66.66666666666667,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 4,
+      "ptsMs": 100,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 5,
+      "ptsMs": 133.33333333333334,
+      "rgba": [
+        158,
+        5,
+        81,
+        255
+      ],
+      "linearRgb": [
+        0.3419144249086609,
+        0.0015176349177441874,
+        0.0822827071298148
+      ],
+      "saturation": 0.8031537814703597,
+      "uPrime": 0.3892187511443627,
+      "vPrime": 0.446453321706898,
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 6,
+      "ptsMs": 166.66666666666666,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 7,
+      "ptsMs": 200,
+      "rgba": [
+        113,
+        104,
+        188,
+        255
+      ],
+      "linearRgb": [
+        0.1651321945016676,
+        0.13843161503245183,
+        0.5028864580325687
+      ],
+      "saturation": 0.2047642627733548,
+      "uPrime": 0.19575569619562766,
+      "vPrime": 0.3602565775188888,
+      "redSignal": 0
+    },
+    {
+      "frame": 8,
+      "ptsMs": 233.33333333333334,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 9,
+      "ptsMs": 266.6666666666667,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 10,
+      "ptsMs": 300,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 11,
+      "ptsMs": 333.3333333333333,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 12,
+      "ptsMs": 366.6666666666667,
+      "rgba": [
+        129,
+        107,
+        193,
+        255
+      ],
+      "linearRgb": [
+        0.2195261997292692,
+        0.14702726649759498,
+        0.5332764040105052
+      ],
+      "saturation": 0.24396411698509138,
+      "uPrime": 0.20457312421532572,
+      "vPrime": 0.36602035532398114,
+      "redSignal": 0
+    },
+    {
+      "frame": 13,
+      "ptsMs": 400,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 14,
+      "ptsMs": 433.3333333333333,
+      "rgba": [
+        158,
+        5,
+        81,
+        255
+      ],
+      "linearRgb": [
+        0.3419144249086609,
+        0.0015176349177441874,
+        0.0822827071298148
+      ],
+      "saturation": 0.8031537814703597,
+      "uPrime": 0.3892187511443627,
+      "vPrime": 0.446453321706898,
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 15,
+      "ptsMs": 466.6666666666667,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 16,
+      "ptsMs": 500,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 17,
+      "ptsMs": 533.3333333333334,
+      "rgba": [
+        113,
+        104,
+        188,
+        255
+      ],
+      "linearRgb": [
+        0.1651321945016676,
+        0.13843161503245183,
+        0.5028864580325687
+      ],
+      "saturation": 0.2047642627733548,
+      "uPrime": 0.19575569619562766,
+      "vPrime": 0.3602565775188888,
+      "redSignal": 0
+    },
+    {
+      "frame": 18,
+      "ptsMs": 566.6666666666666,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 19,
+      "ptsMs": 600,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 20,
+      "ptsMs": 633.3333333333334,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 21,
+      "ptsMs": 666.6666666666666,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 22,
+      "ptsMs": 700,
+      "rgba": [
+        60,
+        132,
+        132,
+        255
+      ],
+      "linearRgb": [
+        0.04518620438567554,
+        0.23074004852434915,
+        0.23074004852434915
+      ],
+      "saturation": 0.0891833624177358,
+      "uPrime": 0.15209873139288807,
+      "vPrime": 0.45846847880709435,
+      "redSignal": 0
+    },
+    {
+      "frame": 23,
+      "ptsMs": 733.3333333333334,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 24,
+      "ptsMs": 766.6666666666666,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 25,
+      "ptsMs": 800,
+      "rgba": [
+        158,
+        5,
+        81,
+        255
+      ],
+      "linearRgb": [
+        0.3419144249086609,
+        0.0015176349177441874,
+        0.0822827071298148
+      ],
+      "saturation": 0.8031537814703597,
+      "uPrime": 0.3892187511443627,
+      "vPrime": 0.446453321706898,
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 26,
+      "ptsMs": 833.3333333333334,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 27,
+      "ptsMs": 866.6666666666666,
+      "rgba": [
+        113,
+        104,
+        188,
+        255
+      ],
+      "linearRgb": [
+        0.1651321945016676,
+        0.13843161503245183,
+        0.5028864580325687
+      ],
+      "saturation": 0.2047642627733548,
+      "uPrime": 0.19575569619562766,
+      "vPrime": 0.3602565775188888,
+      "redSignal": 0
+    },
+    {
+      "frame": 28,
+      "ptsMs": 900,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 29,
+      "ptsMs": 933.3333333333334,
+      "rgba": [
+        158,
+        5,
+        81,
+        255
+      ],
+      "linearRgb": [
+        0.3419144249086609,
+        0.0015176349177441874,
+        0.0822827071298148
+      ],
+      "saturation": 0.8031537814703597,
+      "uPrime": 0.3892187511443627,
+      "vPrime": 0.446453321706898,
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 30,
+      "ptsMs": 966.6666666666666,
+      "rgba": [
+        149,
+        34,
+        68,
+        255
+      ],
+      "linearRgb": [
+        0.3005437944157765,
+        0.01599629336550963,
+        0.05780543019106723
+      ],
+      "saturation": 0.8028513231403847,
+      "uPrime": 0.3684710646665914,
+      "vPrime": 0.4705873994783599,
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 31,
+      "ptsMs": 1000,
+      "rgba": [
+        129,
+        107,
+        193,
+        255
+      ],
+      "linearRgb": [
+        0.2195261997292692,
+        0.14702726649759498,
+        0.5332764040105052
+      ],
+      "saturation": 0.24396411698509138,
+      "uPrime": 0.20457312421532572,
+      "vPrime": 0.36602035532398114,
+      "redSignal": 0
+    },
+    {
+      "frame": 32,
+      "ptsMs": 1033.3333333333333,
+      "rgba": [
+        139,
+        50,
+        50,
+        255
+      ],
+      "linearRgb": [
+        0.2581828529215958,
+        0.03189603307301153,
+        0.03189603307301153
+      ],
+      "saturation": 0.8018725609722852,
+      "uPrime": 0.3431664059566633,
+      "vPrime": 0.4996879746143232,
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 33,
+      "ptsMs": 1066.6666666666667,
+      "rgba": [
+        158,
+        5,
+        81,
+        255
+      ],
+      "linearRgb": [
+        0.3419144249086609,
+        0.0015176349177441874,
+        0.0822827071298148
+      ],
+      "saturation": 0.8031537814703597,
+      "uPrime": 0.3892187511443627,
+      "vPrime": 0.446453321706898,
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 34,
+      "ptsMs": 1100,
+      "rgba": [
+        158,
+        5,
+        81,
+        255
+      ],
+      "linearRgb": [
+        0.3419144249086609,
+        0.0015176349177441874,
+        0.0822827071298148
+      ],
+      "saturation": 0.8031537814703597,
+      "uPrime": 0.3892187511443627,
+      "vPrime": 0.446453321706898,
+      "redSignal": 0.25811408286110193
+    }
+  ],
+  "adjacentChanges": [
+    {
+      "fromFrame": 1,
+      "toFrame": 2,
+      "fromPtsMs": 0,
+      "toPtsMs": 33.333333333333336,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        129,
+        107,
+        193
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.19441399539989512,
+      "du": -0.16389794045126568,
+      "dv": -0.10456704415437879,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 2,
+      "toFrame": 3,
+      "fromPtsMs": 33.333333333333336,
+      "toPtsMs": 66.66666666666667,
+      "fromRgb": [
+        129,
+        107,
+        193
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.19441399539989512,
+      "du": 0.16389794045126568,
+      "dv": 0.10456704415437879,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 3,
+      "toFrame": 4,
+      "fromPtsMs": 66.66666666666667,
+      "toPtsMs": 100,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.03856383312988716,
+      "du": -0.025304658709928096,
+      "dv": 0.029100575135963258,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 4,
+      "toFrame": 5,
+      "fromPtsMs": 100,
+      "toPtsMs": 133.33333333333334,
+      "fromRgb": [
+        139,
+        50,
+        50
+      ],
+      "toRgb": [
+        158,
+        5,
+        81
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.07038996212146341,
+      "du": 0.046052345187699406,
+      "dv": -0.053234652907425184,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 5,
+      "toFrame": 6,
+      "fromPtsMs": 133.33333333333334,
+      "toPtsMs": 166.66666666666666,
+      "fromRgb": [
+        158,
+        5,
+        81
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.03182640733822885,
+      "du": -0.02074768647777131,
+      "dv": 0.024134077771461926,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 6,
+      "toFrame": 7,
+      "fromPtsMs": 166.66666666666666,
+      "toPtsMs": 200,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        113,
+        104,
+        188
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": -0.17271536847096375,
+      "dv": -0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 7,
+      "toFrame": 8,
+      "fromPtsMs": 200,
+      "toPtsMs": 233.33333333333334,
+      "fromRgb": [
+        113,
+        104,
+        188
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": 0.17271536847096375,
+      "dv": 0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 8,
+      "toFrame": 9,
+      "fromPtsMs": 233.33333333333334,
+      "toPtsMs": 266.6666666666667,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.03856383312988716,
+      "du": -0.025304658709928096,
+      "dv": 0.029100575135963258,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 11,
+      "toFrame": 12,
+      "fromPtsMs": 333.3333333333333,
+      "toPtsMs": 366.6666666666667,
+      "fromRgb": [
+        139,
+        50,
+        50
+      ],
+      "toRgb": [
+        129,
+        107,
+        193
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.19254903321123584,
+      "du": -0.1385932817413376,
+      "dv": -0.13366761929034204,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 12,
+      "toFrame": 13,
+      "fromPtsMs": 366.6666666666667,
+      "toPtsMs": 400,
+      "fromRgb": [
+        129,
+        107,
+        193
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.19441399539989512,
+      "du": 0.16389794045126568,
+      "dv": 0.10456704415437879,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 13,
+      "toFrame": 14,
+      "fromPtsMs": 400,
+      "toPtsMs": 433.3333333333333,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        158,
+        5,
+        81
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.03182640733822885,
+      "du": 0.02074768647777131,
+      "dv": -0.024134077771461926,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 14,
+      "toFrame": 15,
+      "fromPtsMs": 433.3333333333333,
+      "toPtsMs": 466.6666666666667,
+      "fromRgb": [
+        158,
+        5,
+        81
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.03182640733822885,
+      "du": -0.02074768647777131,
+      "dv": 0.024134077771461926,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 16,
+      "toFrame": 17,
+      "fromPtsMs": 500,
+      "toPtsMs": 533.3333333333334,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        113,
+        104,
+        188
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": -0.17271536847096375,
+      "dv": -0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 17,
+      "toFrame": 18,
+      "fromPtsMs": 533.3333333333334,
+      "toPtsMs": 566.6666666666666,
+      "fromRgb": [
+        113,
+        104,
+        188
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": 0.17271536847096375,
+      "dv": 0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 19,
+      "toFrame": 20,
+      "fromPtsMs": 600,
+      "toPtsMs": 633.3333333333334,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.03856383312988716,
+      "du": -0.025304658709928096,
+      "dv": 0.029100575135963258,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 21,
+      "toFrame": 22,
+      "fromPtsMs": 666.6666666666666,
+      "toPtsMs": 700,
+      "fromRgb": [
+        139,
+        50,
+        50
+      ],
+      "toRgb": [
+        60,
+        132,
+        132
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.1954633037114918,
+      "du": -0.19106767456377524,
+      "dv": -0.041219495807228834,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 22,
+      "toFrame": 23,
+      "fromPtsMs": 700,
+      "toPtsMs": 733.3333333333334,
+      "fromRgb": [
+        60,
+        132,
+        132
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.1954633037114918,
+      "du": 0.19106767456377524,
+      "dv": 0.041219495807228834,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 24,
+      "toFrame": 25,
+      "fromPtsMs": 766.6666666666666,
+      "toPtsMs": 800,
+      "fromRgb": [
+        139,
+        50,
+        50
+      ],
+      "toRgb": [
+        158,
+        5,
+        81
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.07038996212146341,
+      "du": 0.046052345187699406,
+      "dv": -0.053234652907425184,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 25,
+      "toFrame": 26,
+      "fromPtsMs": 800,
+      "toPtsMs": 833.3333333333334,
+      "fromRgb": [
+        158,
+        5,
+        81
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.07038996212146341,
+      "du": -0.046052345187699406,
+      "dv": 0.053234652907425184,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 26,
+      "toFrame": 27,
+      "fromPtsMs": 833.3333333333334,
+      "toPtsMs": 866.6666666666666,
+      "fromRgb": [
+        139,
+        50,
+        50
+      ],
+      "toRgb": [
+        113,
+        104,
+        188
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20290646083414152,
+      "du": -0.14741070976103565,
+      "dv": -0.1394313970954344,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 27,
+      "toFrame": 28,
+      "fromPtsMs": 866.6666666666666,
+      "toPtsMs": 900,
+      "fromRgb": [
+        113,
+        104,
+        188
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20290646083414152,
+      "du": 0.14741070976103565,
+      "dv": 0.1394313970954344,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 28,
+      "toFrame": 29,
+      "fromPtsMs": 900,
+      "toPtsMs": 933.3333333333334,
+      "fromRgb": [
+        139,
+        50,
+        50
+      ],
+      "toRgb": [
+        158,
+        5,
+        81
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.07038996212146341,
+      "du": 0.046052345187699406,
+      "dv": -0.053234652907425184,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 29,
+      "toFrame": 30,
+      "fromPtsMs": 933.3333333333334,
+      "toPtsMs": 966.6666666666666,
+      "fromRgb": [
+        158,
+        5,
+        81
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.03182640733822885,
+      "du": -0.02074768647777131,
+      "dv": 0.024134077771461926,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 30,
+      "toFrame": 31,
+      "fromPtsMs": 966.6666666666666,
+      "toPtsMs": 1000,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        129,
+        107,
+        193
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.19441399539989512,
+      "du": -0.16389794045126568,
+      "dv": -0.10456704415437879,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 31,
+      "toFrame": 32,
+      "fromPtsMs": 1000,
+      "toPtsMs": 1033.3333333333333,
+      "fromRgb": [
+        129,
+        107,
+        193
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.19254903321123584,
+      "du": 0.1385932817413376,
+      "dv": 0.13366761929034204,
+      "clearsStatedColorThreshold": false
+    },
+    {
+      "fromFrame": 32,
+      "toFrame": 33,
+      "fromPtsMs": 1033.3333333333333,
+      "toPtsMs": 1066.6666666666667,
+      "fromRgb": [
+        139,
+        50,
+        50
+      ],
+      "toRgb": [
+        158,
+        5,
+        81
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.07038996212146341,
+      "du": 0.046052345187699406,
+      "dv": -0.053234652907425184,
+      "clearsStatedColorThreshold": false
+    }
+  ],
+  "qualifyingAdjacentTransitions": 6,
+  "redSignalTurningPoints": [
+    {
+      "frame": 1,
+      "ptsMs": 0,
+      "rgb": [
+        149,
+        34,
+        68
+      ],
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 2,
+      "ptsMs": 33.333333333333336,
+      "rgb": [
+        129,
+        107,
+        193
+      ],
+      "redSignal": 0
+    },
+    {
+      "frame": 3,
+      "ptsMs": 66.66666666666667,
+      "rgb": [
+        149,
+        34,
+        68
+      ],
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 4,
+      "ptsMs": 100,
+      "rgb": [
+        139,
+        50,
+        50
+      ],
+      "redSignal": 0.19439078677557275
+    },
+    {
+      "frame": 5,
+      "ptsMs": 133.33333333333334,
+      "rgb": [
+        158,
+        5,
+        81
+      ],
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 7,
+      "ptsMs": 200,
+      "rgb": [
+        113,
+        104,
+        188
+      ],
+      "redSignal": 0
+    },
+    {
+      "frame": 8,
+      "ptsMs": 233.33333333333334,
+      "rgb": [
+        149,
+        34,
+        68
+      ],
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 12,
+      "ptsMs": 366.6666666666667,
+      "rgb": [
+        129,
+        107,
+        193
+      ],
+      "redSignal": 0
+    },
+    {
+      "frame": 14,
+      "ptsMs": 433.3333333333333,
+      "rgb": [
+        158,
+        5,
+        81
+      ],
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 17,
+      "ptsMs": 533.3333333333334,
+      "rgb": [
+        113,
+        104,
+        188
+      ],
+      "redSignal": 0
+    },
+    {
+      "frame": 19,
+      "ptsMs": 600,
+      "rgb": [
+        149,
+        34,
+        68
+      ],
+      "redSignal": 0.22674207085919965
+    },
+    {
+      "frame": 22,
+      "ptsMs": 700,
+      "rgb": [
+        60,
+        132,
+        132
+      ],
+      "redSignal": 0
+    },
+    {
+      "frame": 25,
+      "ptsMs": 800,
+      "rgb": [
+        158,
+        5,
+        81
+      ],
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 27,
+      "ptsMs": 866.6666666666666,
+      "rgb": [
+        113,
+        104,
+        188
+      ],
+      "redSignal": 0
+    },
+    {
+      "frame": 29,
+      "ptsMs": 933.3333333333334,
+      "rgb": [
+        158,
+        5,
+        81
+      ],
+      "redSignal": 0.25811408286110193
+    },
+    {
+      "frame": 31,
+      "ptsMs": 1000,
+      "rgb": [
+        129,
+        107,
+        193
+      ],
+      "redSignal": 0
+    },
+    {
+      "frame": 34,
+      "ptsMs": 1100,
+      "rgb": [
+        158,
+        5,
+        81
+      ],
+      "redSignal": 0.25811408286110193
+    }
+  ],
+  "explanatoryPairs": [
+    {
+      "fromFrame": 1,
+      "toFrame": 7,
+      "fromPtsMs": 0,
+      "toPtsMs": 200,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        113,
+        104,
+        188
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": -0.17271536847096375,
+      "dv": -0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 7,
+      "toFrame": 8,
+      "fromPtsMs": 200,
+      "toPtsMs": 233.33333333333334,
+      "fromRgb": [
+        113,
+        104,
+        188
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": 0.17271536847096375,
+      "dv": 0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 8,
+      "toFrame": 17,
+      "fromPtsMs": 233.33333333333334,
+      "toPtsMs": 533.3333333333334,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        113,
+        104,
+        188
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": -0.17271536847096375,
+      "dv": -0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 17,
+      "toFrame": 18,
+      "fromPtsMs": 533.3333333333334,
+      "toPtsMs": 566.6666666666666,
+      "fromRgb": [
+        113,
+        104,
+        188
+      ],
+      "toRgb": [
+        149,
+        34,
+        68
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20494752689484522,
+      "du": 0.17271536847096375,
+      "dv": 0.11033082195947114,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 18,
+      "toFrame": 22,
+      "fromPtsMs": 566.6666666666666,
+      "toPtsMs": 700,
+      "fromRgb": [
+        149,
+        34,
+        68
+      ],
+      "toRgb": [
+        60,
+        132,
+        132
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.21671145526838903,
+      "du": -0.21637233327370334,
+      "dv": -0.012118920671265576,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 22,
+      "toFrame": 25,
+      "fromPtsMs": 700,
+      "toPtsMs": 800,
+      "fromRgb": [
+        60,
+        132,
+        132
+      ],
+      "toRgb": [
+        158,
+        5,
+        81
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.23742423584605285,
+      "du": 0.23712001975147465,
+      "dv": -0.01201515710019635,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 25,
+      "toFrame": 27,
+      "fromPtsMs": 800,
+      "toPtsMs": 866.6666666666666,
+      "fromRgb": [
+        158,
+        5,
+        81
+      ],
+      "toRgb": [
+        113,
+        104,
+        188
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.21179667688306722,
+      "du": -0.19346305494873506,
+      "dv": -0.08619674418800921,
+      "clearsStatedColorThreshold": true
+    },
+    {
+      "fromFrame": 27,
+      "toFrame": 28,
+      "fromPtsMs": 866.6666666666666,
+      "toPtsMs": 900,
+      "fromRgb": [
+        113,
+        104,
+        188
+      ],
+      "toRgb": [
+        139,
+        50,
+        50
+      ],
+      "saturationInvolved": true,
+      "chromaticityDistance": 0.20290646083414152,
+      "du": 0.14741070976103565,
+      "dv": 0.1394313970954344,
+      "clearsStatedColorThreshold": true
+    }
+  ],
+  "oppositionDots": [
+    -0.0420034887803133,
+    -0.0420034887803133,
+    -0.0420034887803133,
+    -0.0387079177472122,
+    -0.051160601203783115,
+    -0.04483829598768032,
+    -0.04053705870974317
+  ],
+  "conformanceEstablished": false,
+  "passed": null
+}

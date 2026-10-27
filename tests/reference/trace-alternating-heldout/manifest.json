@@ -1,0 +1,1007 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/traceRERC/pse-test-media",
+  "commit": "ef78542aad496827f25064f57aaf13d6a741ba75",
+  "frozenBeforeScoringAt": "2026-10-27T19:19:15.169437+00:00",
+  "selection": "All 16 original JSON configurations in video_creation/30fps_alternating_01, complete spatial/temporal dependency closure, upstream JSON and CSV expectations, event annotations, source contract and license. No outcome-based exclusions.",
+  "frozenEngineTreeSha256": "c216fbe2c9de76354061c35ba4df09e7e0a25731e5be247f3a7092aca2ca687a",
+  "engineHashMethod": "sorted top-level src/*.ts filenames immediately followed by original bytes, no separators",
+  "scope": "Previously unused full-frame spatial/temporal compositions; temporal sources may be shared with previously evaluated corpora. Not 16 novel independent temporal oracles or normative conformance.",
+  "priorManifests": [
+    {
+      "path": "tests/reference/trace-pse/manifest.json",
+      "sha256": "eeb79bb17ea290080903f393a13a477a47bdc05028da81c21d3badde617a2840"
+    },
+    {
+      "path": "tests/reference/trace-pse-expanded/manifest.json",
+      "sha256": "6308be198bfef5ff53b3b3f136e0d0f5db892656aa5ab07fd8089c72bb94b4cb"
+    },
+    {
+      "path": "tests/reference/trace-spatial/manifest.json",
+      "sha256": "5c070d9928261fc2f1c21be95609e7a7d51eda43552d38891523f578d015dab7"
+    },
+    {
+      "path": "tests/reference/trace-combo-heldout/manifest.json",
+      "sha256": "abaca272c1b8b0f0d58867bc14c077f7665d21cc67f72da82514370dee39cc36"
+    }
+  ],
+  "counts": {
+    "configurations": 16,
+    "spatialSources": 8,
+    "temporalSources": 12,
+    "files": 46,
+    "csvExpectedPositives": 4,
+    "csvExpectedNegatives": 12,
+    "spatialSourcesWithPreviousBytes": 0,
+    "temporalSourcesWithPreviousBytes": 12
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1497,
+      "gitBlobSha1": "bc7ba4089dab486720c006101bace1ef09d338f6",
+      "sha256": "14fe5e2fc911993320085dac391e9ff96dc8eb8bb8d59e7f4131fcf2b1f7efe7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/LICENSE",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse/manifest.json",
+          "path": "LICENSE",
+          "match": "SAME_PATH_AND_BYTES"
+        },
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "LICENSE",
+          "match": "SAME_PATH_AND_BYTES"
+        },
+        {
+          "manifest": "tests/reference/trace-spatial/manifest.json",
+          "path": "LICENSE",
+          "match": "SAME_PATH_AND_BYTES"
+        },
+        {
+          "manifest": "tests/reference/trace-combo-heldout/manifest.json",
+          "path": "LICENSE",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "README.md",
+      "bytes": 10732,
+      "gitBlobSha1": "f6a0c1c3469a7ab076507b976bfce71b85bd7528",
+      "sha256": "a5ba846a18905f34b11c21af81e35d2d4d1c07698c10101ee4d8189350422110",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/README.md",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f001_fhd.png",
+      "bytes": 10845,
+      "gitBlobSha1": "25bb48c63fbbdc62267ed2f21efc4ebb6c362497",
+      "sha256": "00ee9c7313e9ead39d160a3138947772ac9950bc137e0111de5edd70cec55101",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f001_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f002_fhd.png",
+      "bytes": 10728,
+      "gitBlobSha1": "33bf1ee4ee475905e93fb0a5cf0abc8662e9f170",
+      "sha256": "5fadbf6caa1c8d53a5b591775265b0a7f517adcfae5116cbe63d669e0df48b8d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f002_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f003_fhd.png",
+      "bytes": 10646,
+      "gitBlobSha1": "5dca64d1d190d5955204a2e05d4a6afdb4f01679",
+      "sha256": "618b76a8b6b09799d64d9bc294ea680c1250fd5ee6e6da0d6eca7be934de8afc",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f003_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f004_fhd.png",
+      "bytes": 11388,
+      "gitBlobSha1": "80869f6b2c81d2c5f162afdf628087a5ac3c78ac",
+      "sha256": "27b8f216f598332268672b699858fb359599e36e0441b8aa9fa3a7361caa729b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f004_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f005_fhd.png",
+      "bytes": 10737,
+      "gitBlobSha1": "61e9e7882d9117145602850c1a891588e9fe155a",
+      "sha256": "eaba10a9bdf77cbdc8698378f86bdac71991f0645f4cdf334cf87a8ddda6c756",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f005_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f006_fhd.png",
+      "bytes": 10746,
+      "gitBlobSha1": "9d1cf7355bbaa888ee214843c74ae2276a288ee5",
+      "sha256": "4d373abe2e56ee0234f99ac223063e0b64b86b81bbda0f91f8c7e8921d523518",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f006_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f007_fhd.png",
+      "bytes": 10794,
+      "gitBlobSha1": "e57ef30202deed48ba317e1926ba27452058637d",
+      "sha256": "b7e24cf96776eb9625b6c0986633a5c2211afe503bbc3af032317ec21346b809",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f007_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/25pct_screen/f008_fhd.png",
+      "bytes": 10899,
+      "gitBlobSha1": "c752c665aac007e2bf6c5dfbe21805978d728712",
+      "sha256": "3d23a36ad121deb733ea488575e31c79ad76c1ea3fb22fe6f152916da8efa0c3",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/25pct_screen/f008_fhd.png",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "area_patterns/README.md",
+      "bytes": 1008,
+      "gitBlobSha1": "4df0598f9fdd2ac1264f5f7f7443b5944df9fc9e",
+      "sha256": "8c439244d1785afbd373b38572a510ebe34e61c53ad100a3db178d8f21646c36",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/area_patterns/README.md",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "generate_frames.py",
+      "bytes": 4169,
+      "gitBlobSha1": "9f53304b9776e32727681b9f775ad77742c98f91",
+      "sha256": "ef022f67a4a58ef25c039e086c3a035636941f8b4a080eb81be8803ae6b0207c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/generate_frames.py",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-spatial/manifest.json",
+          "path": "generate_frames.py",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "generate_video.py",
+      "bytes": 3323,
+      "gitBlobSha1": "17e19658d1a6ffc31ec74353b0cc374597d0ec28",
+      "sha256": "ac396c6abd56ccd24be5fd4fc2c89fb63089a6c1cc5b4598ca3a8c6eba2e53f7",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/generate_video.py",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/README.md",
+      "bytes": 3968,
+      "gitBlobSha1": "55f22ed5cb2e95580fd063d9866e267f0e6347c6",
+      "sha256": "ac8e74e7d5aebe7114f3a4ee45853fd7385971d2efa2fa7afb417dabd3ee5312",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/README.md",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/README.md",
+          "match": "SAME_PATH_AND_BYTES"
+        },
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/README.md",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c031_srgba.csv",
+      "bytes": 576,
+      "gitBlobSha1": "9177d974c1aa6df6e3184775c21cba00c2a68f01",
+      "sha256": "218a41f597d8eb103592716f3fe097a887038928b267a6d89cd6865335bc914a",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c031_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c031_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c032_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "68709fe31d537b99b2392c3bd1ea63cf3cfb8a2d",
+      "sha256": "efd8007edf2a461e3a56ea6b96f7c37253b59d175ff7ece21a36517177867876",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c032_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c032_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c033_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "18dfb4d67ef74d84e7da8cacec8d86dfef86f8d0",
+      "sha256": "1c376e727779cde192bf2896e6c2734f207065332f8cefc89d0a94ce8ecf1f96",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c033_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c033_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c034_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "7769cc306603e0f4b9de8d9f988a607f2bce4801",
+      "sha256": "ce9e52c146c958e85dec6697df586e8a98e99bbef304b99689aa76626516cb4c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c034_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c034_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c035_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "fece5e7f88758f132834adcef253aea20dbf91fe",
+      "sha256": "a466b6bd1512c3f5de911314b2aeff86d4b41e59d3e38d873d80906f771f00a9",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c035_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c035_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c036_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "aa18cc1022eef9cfbbe32dbe74e8c0d45b9f6a5b",
+      "sha256": "105ef8618805fc7bd7bbb0d701f071055bfac20e1915b8780728ca1b8ae918aa",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c036_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c036_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c037_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "0ccdd7a01f1fafc4442783806f0cf5e385820f4d",
+      "sha256": "be22ca35e0d59494d26e3a2ee17360d5624677dc2b91a4e90f9dc20db0246f94",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c037_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c037_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/c038_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "e88985975fbe47494f31f81cc8e96082649701b0",
+      "sha256": "0b3b3acae0ffa2f636a15692717438b535a81b12bfe714d8e8eaf649686ade86",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/c038_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/c038_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f031_srgba.csv",
+      "bytes": 576,
+      "gitBlobSha1": "c2bca4ee4707990eb2711532c908505a7240be71",
+      "sha256": "827894efc4b84461b8240caaa8d0673c8b24ebb9070d09a6cecaf476c9e12092",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f031_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/f031_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f033_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "c3444b34e84d475af97f33de48c3b1c07fecda02",
+      "sha256": "0f2b01eadefbcf3690fdd423ad35e1d6ae12238571ed73fc527fc058f7d63748",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f033_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/f033_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f034_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "0a453817780e82e43b1a6cd971b2373d057046a1",
+      "sha256": "94167edf9b1b9a45c8f6a7fc16686566b41bc6c8f95de68a5025e8c0c3f59ade",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f034_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/f034_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "lum_flash_patterns/rel_lum/f037_srgba.csv",
+      "bytes": 651,
+      "gitBlobSha1": "8291853e0cdd8fb7fe96d72eeebc8ba47725653a",
+      "sha256": "e17ba5879bbbd9d71fd6cee086efa1beacf76cd1f5f352c5bad6a1fd54a4e529",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/lum_flash_patterns/rel_lum/f037_srgba.csv",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-pse-expanded/manifest.json",
+          "path": "lum_flash_patterns/rel_lum/f037_srgba.csv",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "video_config.json",
+      "bytes": 144,
+      "gitBlobSha1": "4756047512b377954e1ba0f4360b21133d0552de",
+      "sha256": "bdfbf1b92dc155ba54ceacd7ba240f879bac0c1db1577a37361d31452c2dbd44",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_config.json",
+      "overlapWithPriorCorpora": [
+        {
+          "manifest": "tests/reference/trace-spatial/manifest.json",
+          "path": "video_config.json",
+          "match": "SAME_PATH_AND_BYTES"
+        }
+      ]
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/30fps_alternating_01.csv",
+      "bytes": 344,
+      "gitBlobSha1": "d5e3fff92694d7ca5732f9fe50667b9d55134f65",
+      "sha256": "8bc3bb471075b14682cc2a40961281f918fa2f98d0cbe648083099f0e5713e32",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/30fps_alternating_01.csv",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/README.md",
+      "bytes": 648,
+      "gitBlobSha1": "dae217442043155fde88830edbee96d535897455",
+      "sha256": "1c327ff0500558ddd21f7873e8df5a1281c5b9636770ea1686f04a0de4914423",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/README.md",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f001c037.json",
+      "bytes": 475,
+      "gitBlobSha1": "9e3bec4664ccc1cadfccf55f43acf4cbfc651e54",
+      "sha256": "d633922898f52a440db8d92dc4b78eb3008c982d150448c64100f53b49088422",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f001c037.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f001f037.json",
+      "bytes": 2140,
+      "gitBlobSha1": "66a4c621d02281c819f5ffd8bcf556851ab876c8",
+      "sha256": "ed03ebc38796d7adaa38e1a1e46d632b9860521a5edd8d178ea28f1346c9da6c",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f001f037.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f002c033.json",
+      "bytes": 476,
+      "gitBlobSha1": "aef896485c02fd2bc487f569091c6ee936065611",
+      "sha256": "fc5bd87ce0a91473b811284cd283ead881dd5ae89fb53d55d194aa8d765df798",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f002c033.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f002c037.json",
+      "bytes": 476,
+      "gitBlobSha1": "ffb10ca0a87d8a398c565fc631ff7f99645eb7f4",
+      "sha256": "18b6301fbca334a1beeb6605ab1d2d19c285b7b24cf18de75ff64b16897fa94d",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f002c037.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f003c038.json",
+      "bytes": 476,
+      "gitBlobSha1": "67f18a2ffbfbb331e451178ace7f9baabbf5acd0",
+      "sha256": "7148cda506c3e7d3b48fef435c570729259650fae41dcd4b68568d80a4eb6fd0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f003c038.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f003f033.json",
+      "bytes": 2140,
+      "gitBlobSha1": "fab9e11604d0fd2d983e60c0ea7bd77f918c6fa6",
+      "sha256": "f1e599336c7821f232fc4d40e64df58c5e2309020a171d758c9e5add42ece1d8",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f003f033.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f004c032.json",
+      "bytes": 476,
+      "gitBlobSha1": "ce80bc684327753dbfaeaefbba62768cf9082399",
+      "sha256": "4cc785835ba29c50238e0232a6a5a4e6683b41acec994c6b965609b8cdf3c47b",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f004c032.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f004c034.json",
+      "bytes": 476,
+      "gitBlobSha1": "ef4389ae178307cb161b8a47d4b749d795fe12e2",
+      "sha256": "b65ceb3960617fb6cb640a112912219652df0bc544f44c11e1cd878867576e1e",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f004c034.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f005c031.json",
+      "bytes": 476,
+      "gitBlobSha1": "d6fe5c872b993e0eb25adc1beb1dd79b77640dcf",
+      "sha256": "0930624c653f49b038ed366b5f850c90c42b13e45a505549010a290a091cfaf0",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f005c031.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f005f034.json",
+      "bytes": 2140,
+      "gitBlobSha1": "022a95e6b90a6dcf307b70f7e34f3335e70c3c04",
+      "sha256": "1594cbae15dae4bc882d2bfaa4c9885e45e0c2fc19e7f1e096827323fe34dc34",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f005f034.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f006c035.json",
+      "bytes": 476,
+      "gitBlobSha1": "38b4abb75d8e29ab9de5d2197207857881a00c50",
+      "sha256": "4b2bc50bb83f8d0980d60912fbe42a34203ea77e6d9dd394310632966f6af9ac",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f006c035.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f006f031.json",
+      "bytes": 2140,
+      "gitBlobSha1": "d6529e39b0e22209dc0ce75102a382022381c484",
+      "sha256": "12f9bcc397f3eb64f8471758d6708e028352050c850f5e320de67b90fb407b55",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f006f031.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f007c032.json",
+      "bytes": 476,
+      "gitBlobSha1": "85985281d997cc5e77ec00969478c5b0c9cb6999",
+      "sha256": "275867633312da0d3801b5aa5266090bab7839dac06e717a129f5b7f16eeedb5",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f007c032.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f007c038.json",
+      "bytes": 476,
+      "gitBlobSha1": "46da87f830cab65c7129ed3a74f29dbf2f2b883f",
+      "sha256": "4bd9fd1dbc7b6b9f024ac5d55aceb73e9cf06891451c792e05cc4f720628f2a1",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f007c038.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f008c035.json",
+      "bytes": 476,
+      "gitBlobSha1": "68f1b8fffbfa87418b10b24bdba66020bf851f46",
+      "sha256": "8326e0ec9fb627c1ed0aff99d60c84029dab84e52308e7bca0055aec3bf27a30",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f008c035.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f008c036.json",
+      "bytes": 476,
+      "gitBlobSha1": "83c3f6df2ebeece1ed2c53a0e4560b9c50d3c42c",
+      "sha256": "58e5d613f0d92fda930d2577834caa6c6fde2f690096003d8a9bb8bf54c275da",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/30fps_alternating_01/f008c036.json",
+      "overlapWithPriorCorpora": []
+    },
+    {
+      "path": "video_creation/README.md",
+      "bytes": 4459,
+      "gitBlobSha1": "cb6d2ea76959bb88b20b095e45eba417c497f21c",
+      "sha256": "1ac34df5d4efedfce6358b437dad8610471e8888e0c49866f6bb5d9956905e70",
+      "sourceUrl": "https://github.com/traceRERC/pse-test-media/blob/ef78542aad496827f25064f57aaf13d6a741ba75/video_creation/README.md",
+      "overlapWithPriorCorpora": []
+    }
+  ],
+  "videos": [
+    {
+      "path": "video_creation/30fps_alternating_01/f001c037.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f001_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c037_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f001f037.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f001_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/f037_srgba.csv"
+      },
+      "expectedWcagClassic": "fail",
+      "upstreamCsvPass": "FALSE",
+      "upstreamCsvDimension": "FAIL",
+      "eventAnnotations": {
+        "y1": {
+          "type": "luminance",
+          "firstFrame": 30,
+          "lastFrame": 30
+        },
+        "y2": {
+          "type": "luminance",
+          "firstFrame": 32,
+          "lastFrame": 32
+        }
+      },
+      "failureDetails": {
+        "trace24": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "wcag2_2": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "ofcom2017": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "itu_r1702_4": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "iso": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        }
+      }
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f002c033.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f002_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c033_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f002c037.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f002_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c037_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f003c038.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f003_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c038_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f003f033.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f003_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/f033_srgba.csv"
+      },
+      "expectedWcagClassic": "fail",
+      "upstreamCsvPass": "FALSE",
+      "upstreamCsvDimension": "FAIL",
+      "eventAnnotations": {
+        "y1": {
+          "type": "luminance",
+          "firstFrame": 30,
+          "lastFrame": 30
+        },
+        "y2": {
+          "type": "luminance",
+          "firstFrame": 32,
+          "lastFrame": 32
+        }
+      },
+      "failureDetails": {
+        "trace24": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "wcag2_2": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "ofcom2017": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "itu_r1702_4": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "iso": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        }
+      }
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f004c032.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f004_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c032_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f004c034.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f004_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c034_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f005c031.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f005_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c031_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f005f034.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f005_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/f034_srgba.csv"
+      },
+      "expectedWcagClassic": "fail",
+      "upstreamCsvPass": "FALSE",
+      "upstreamCsvDimension": "FAIL",
+      "eventAnnotations": {
+        "y1": {
+          "type": "luminance",
+          "firstFrame": 30,
+          "lastFrame": 30
+        },
+        "y2": {
+          "type": "luminance",
+          "firstFrame": 32,
+          "lastFrame": 32
+        }
+      },
+      "failureDetails": {
+        "trace24": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "wcag2_2": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "ofcom2017": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "itu_r1702_4": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "iso": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        }
+      }
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f006c035.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f006_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c035_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f006f031.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f006_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/f031_srgba.csv"
+      },
+      "expectedWcagClassic": "fail",
+      "upstreamCsvPass": "FALSE",
+      "upstreamCsvDimension": "FAIL",
+      "eventAnnotations": {
+        "y1": {
+          "type": "luminance",
+          "firstFrame": 30,
+          "lastFrame": 30
+        },
+        "y2": {
+          "type": "luminance",
+          "firstFrame": 32,
+          "lastFrame": 32
+        }
+      },
+      "failureDetails": {
+        "trace24": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "wcag2_2": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "ofcom2017": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "itu_r1702_4": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        },
+        "iso": {
+          "luminance": {
+            "present": true,
+            "event_ids": [
+              "y1",
+              "y2"
+            ]
+          },
+          "red": {
+            "present": false
+          }
+        }
+      }
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f007c032.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f007_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c032_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f007c038.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f007_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c038_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f008c035.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f008_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c035_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    },
+    {
+      "path": "video_creation/30fps_alternating_01/f008c036.json",
+      "dependencies": {
+        "spatial": "area_patterns/25pct_screen/f008_fhd.png",
+        "temporal_color": "lum_flash_patterns/rel_lum/c036_srgba.csv"
+      },
+      "expectedWcagClassic": "pass",
+      "upstreamCsvPass": "TRUE",
+      "upstreamCsvDimension": "count",
+      "eventAnnotations": null,
+      "failureDetails": null
+    }
+  ],
+  "eventAnnotationPolicy": "Original metadata retained verbatim, not a scored temporal oracle unless its frame-index convention and semantics are independently established."
+}
