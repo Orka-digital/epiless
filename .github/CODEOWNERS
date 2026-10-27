@@ -1,0 +1,7 @@
+# Initial owner verified in the Orka-digital organization.
+# Repository rules must separately require code-owner review.
+* @aaronrk1997
+/.github/ @aaronrk1997
+/packages/rule-feed/ @aaronrk1997
+/packages/analysis-engine/ @aaronrk1997
+/apps/web/src/server/ @aaronrk1997

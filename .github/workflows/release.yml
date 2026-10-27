@@ -1,0 +1,47 @@
+name: Release extension
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+concurrency:
+  group: extension-release
+  cancel-in-progress: false
+jobs:
+  validation:
+    uses: ./.github/workflows/ci.yml
+  security:
+    uses: ./.github/workflows/security.yml
+  release:
+    needs: [validation, security]
+    environment: extension-release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Verify tag and reviewed main history
+        run: |
+          git merge-base --is-ancestor "$GITHUB_SHA" origin/main
+          node .github/scripts/check-release.mjs
+      - uses: ./.github/actions/setup
+      - name: Build for the configured production service
+        env:
+          EPI_LESS_WEB_URL: ${{ vars.PUBLIC_APP_ORIGIN }}
+        run: |
+          node --input-type=module -e 'const url = new URL(process.env.EPI_LESS_WEB_URL); if (url.protocol !== "https:" || ["localhost", "127.0.0.1"].includes(url.hostname)) throw new Error("A production HTTPS origin is required");'
+          pnpm --filter @epi-less/chrome-extension build
+          node .github/scripts/check-release.mjs --built
+      - name: Package and hash
+        run: |
+          mkdir -p artifacts
+          (cd apps/chrome-extension/dist && zip -qr ../../../artifacts/epi-less-extension.zip .)
+          (cd artifacts && sha256sum epi-less-extension.zip > SHA256SUMS)
+      - name: Create reviewable draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" artifacts/epi-less-extension.zip artifacts/SHA256SUMS --draft --generate-notes --verify-tag

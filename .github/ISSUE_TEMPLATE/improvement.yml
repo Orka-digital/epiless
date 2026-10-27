@@ -1,0 +1,14 @@
+name: Improvement
+description: Propose a clear improvement to epi-less.
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior and trade-offs
+      description: Include privacy, accessibility or cost implications where relevant.

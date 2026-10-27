@@ -1,0 +1,43 @@
+name: Publish public rule feed
+on:
+  workflow_dispatch:
+    inputs:
+      expected_sequence:
+        description: Exact sequence currently published in R2. The next release uses this plus one.
+        required: true
+        type: string
+      generated_at:
+        description: Optional ISO timestamp; reuse the logged timestamp when retrying a partial release.
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: public-rule-feed-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    environment: feed-production
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Require protected main branch
+        run: test "$GITHUB_REF" = refs/heads/main
+      - uses: ./.github/actions/setup
+      - run: pnpm exec vitest run packages/core packages/rule-feed
+      - name: Verify prior release, sign, upload immutable files and atomically advance latest
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          FEED_BUCKET: ${{ vars.FEED_BUCKET }}
+          FEED_CDN_ORIGIN: ${{ vars.FEED_CDN_ORIGIN }}
+          FEED_SIGNING_KEY_ID: ${{ vars.FEED_SIGNING_KEY_ID }}
+          FEED_TRUSTED_KEYS: ${{ vars.FEED_TRUSTED_KEYS }}
+          FEED_SIGNING_PRIVATE_KEY: ${{ secrets.FEED_SIGNING_PRIVATE_KEY }}
+          EXPECTED_SEQUENCE: ${{ inputs.expected_sequence }}
+          GENERATED_AT: ${{ inputs.generated_at }}
+        run: node --import tsx .github/scripts/publish-feed.mjs

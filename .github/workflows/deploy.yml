@@ -1,0 +1,65 @@
+name: Deploy hosted index
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Protected Cloudflare environment
+        type: choice
+        options: [staging, production]
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: cloudflare-${{ inputs.environment }}
+  cancel-in-progress: false
+jobs:
+  validation:
+    uses: ./.github/workflows/ci.yml
+  security:
+    uses: ./.github/workflows/security.yml
+  deploy:
+    needs: [validation, security]
+    environment: ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PUBLIC_APP_ORIGIN: ${{ vars.PUBLIC_APP_ORIGIN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      D1_DATABASE_ID: ${{ vars.D1_DATABASE_ID }}
+      WORKER_NAME: ${{ vars.WORKER_NAME }}
+      TURNSTILE_SITE_KEY: ${{ vars.TURNSTILE_SITE_KEY }}
+      TURNSTILE_HOSTNAMES: ${{ vars.TURNSTILE_HOSTNAMES }}
+      MAIL_FROM: ${{ vars.MAIL_FROM }}
+      MODERATOR_USER_IDS: ${{ vars.MODERATOR_USER_IDS }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Require reviewed main branch
+        run: test "$GITHUB_REF" = refs/heads/main
+      - uses: ./.github/actions/setup
+      - run: node .github/scripts/configure-cloudflare.mjs
+      - run: pnpm --filter @epi-less/web build
+      - name: Validate secrets before changing remote state
+        env:
+          BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+          SHARE_TOKEN_SECRET: ${{ secrets.SHARE_TOKEN_SECRET }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: node .github/scripts/apply-cloudflare-secrets.mjs --validate-only
+      - name: Migrate and deploy the provisioned service
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          pnpm --filter @epi-less/web exec wrangler d1 migrations apply DB --remote
+          pnpm --filter @epi-less/web exec wrangler deploy
+      - name: Apply protected runtime secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          BETTER_AUTH_SECRET: ${{ secrets.BETTER_AUTH_SECRET }}
+          SHARE_TOKEN_SECRET: ${{ secrets.SHARE_TOKEN_SECRET }}
+          TURNSTILE_SECRET_KEY: ${{ secrets.TURNSTILE_SECRET_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+        run: node .github/scripts/apply-cloudflare-secrets.mjs
+      - run: node .github/scripts/verify-deployment.mjs

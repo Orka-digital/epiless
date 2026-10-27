@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducible problem using synthetic or redacted data.
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach private captures, credentials or browsing history. Report vulnerabilities through the private route in SECURITY.md.
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include browser/OS, extension version or commit, and safe synthetic steps.
+    validations:
+      required: true
+  - type: textarea
+    id: quality
+    attributes:
+      label: Relevant capture quality or limitations
+      description: Copy non-sensitive status details; no raw capture is needed.
