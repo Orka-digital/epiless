@@ -1,0 +1,190 @@
+---
+import Shell from '../layouts/Shell.astro';
+---
+
+<Shell title="Handleiding" active="docs">
+  <header class="wrap page-head">
+    <p class="eyebrow">Documentatie</p>
+    <h1>Handleiding</h1>
+    <p>Een website scannen, resultaten lezen en een rapport online bewaren.</p>
+  </header>
+  <div class="wrap page-content guide-layout">
+    <nav aria-label="Op deze pagina" class="guide-nav">
+      <span>Op deze pagina</span>
+      <a href="#installeren">1. Installeren</a>
+      <a href="#starten">2. Scan starten</a>
+      <a href="#verkennen">3. Automatische verkenning</a>
+      <a href="#resultaat">4. Resultaten lezen</a>
+      <a href="#delen">5. Rapport delen</a>
+      <a href="#ontwikkelaars">Voor ontwikkelaars</a>
+    </nav>
+    <article class="prose guide-content">
+      <section id="installeren">
+        <h2>1. Installeer de ontwikkelversie</h2>
+        <p>
+          Volg de <a href="/download">installatiestappen voor Chrome</a>. Er is
+          nog geen Chrome Web Store-release. De broncode en builds zijn bedoeld
+          voor ontwikkeling en gecontroleerde evaluatie.
+        </p>
+      </section>
+      <section id="starten">
+        <h2>2. Start een scan</h2>
+        <p>
+          Open de website in Chrome. Open epi-less via de browserwerkbalk en
+          kies <strong>Scan deze website</strong>. Geef toegang tot de huidige
+          website.
+        </p>
+        <p>
+          De scanner gebruikt de geselecteerde tab en navigeert binnen die
+          website. Bewaar eventueel onafgemaakt werk voordat je begint. De
+          voortgang blijft beschikbaar nadat je de popup sluit. Je kunt pauzeren
+          of stoppen; DevTools openen is niet nodig. Voor één viewport kun je
+          een snelle meting van 15 seconden of een uitgebreide meting kiezen.
+          Die laatste start op 30 seconden en is instelbaar tussen 15 en 120
+          seconden.
+        </p>
+      </section>
+      <section id="verkennen">
+        <h2>3. Automatische verkenning</h2>
+        <p>
+          De scan blijft op dezelfde origin, met maximaal 50 routes, vier
+          linkniveaus en twintig minuten. Ondersteunde scroll-, accordion-, tab-
+          en mediascenario’s worden begrensd uitgevoerd. Forms, betalingen,
+          verwijderen en accountwijzigingen vallen buiten de actiepolicy.
+        </p>
+        <p>
+          Onbereikbare routes, onduidelijke bediening en ontoereikende
+          capturekwaliteit worden als beperking opgenomen. Een ontdekte route is
+          niet noodzakelijk gemeten.
+        </p>
+      </section>
+      <section id="resultaat">
+        <h2>4. Resultaten lezen</h2>
+        <dl class="result-definitions">
+          <div>
+            <dt>Beoordeling nodig</dt>
+            <dd>Er zijn indicatieve kandidaten gevonden.</dd>
+          </div>
+          <div>
+            <dt>Onbeslisbaar</dt>
+            <dd>De metingen of dekking zijn onvoldoende voor een conclusie.</dd>
+          </div>
+          <div>
+            <dt>Geen problemen waargenomen</dt>
+            <dd>
+              Binnen de geobserveerde scope werden geen kandidaten gevonden; dit
+              is geen veiligheidsclaim.
+            </dd>
+          </div>
+        </dl>
+        <p class="notice">
+          De huidige engine is nog niet onafhankelijk normatief gevalideerd.
+          Exports geven daarom altijd <code>passed: null</code>.
+        </p>
+        <p>
+          Exporteer een audit als JSON of als zelfstandig HTML-rapport. Vanuit
+          de lokale geschiedenis kun je ook alle audits van één site of de
+          volledige geschiedenis als JSON bewaren. De HTML-export bevat geen
+          afspelende media en kan vanuit de browser worden afgedrukt.
+        </p>
+      </section>
+      <section id="delen">
+        <h2>5. Een rapport online bewaren</h2>
+        <p>
+          Een rapport blijft eerst lokaal. Bij online delen controleer je de
+          geselecteerde inhoud en kies je privé, via een link of openbaar.
+          Online bewaren vereist een account en een antispamcontrole.
+        </p>
+        <p>
+          Intrekken blokkeert nieuwe toegang via de beheerde dienst. Al gemaakte
+          kopieën kun je niet terughalen. Lees meer over{' '}
+          <a href="/privacy">privacy en gegevens</a>.
+        </p>
+      </section>
+      <section id="ontwikkelaars">
+        <h2>Voor ontwikkelaars</h2>
+        <p>
+          Het DevTools-paneel gebruikt dezelfde scans en rapporten. Numerieke
+          tests, broncode, de productspecificatie en lokale quickstart staan in{' '}
+          <a href="https://github.com/Orka-digital/epiless">de repository</a>.
+          De P2-blocker wordt apart ontwikkeld; de scanner blokkeert nu geen
+          flitsende content.
+        </p>
+      </section>
+    </article>
+  </div>
+</Shell>
+<style>
+  .guide-layout {
+    display: grid;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+  .guide-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    position: sticky;
+    top: 24px;
+  }
+  .guide-nav > span {
+    font-size: 12px;
+    font-weight: 750;
+    margin-bottom: 10px;
+    color: var(--muted);
+  }
+  .guide-nav a {
+    padding: 7px 0;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  .guide-nav a:hover {
+    text-decoration: underline;
+  }
+  .guide-content {
+    max-width: 780px;
+  }
+  .guide-content section {
+    padding: 0 0 28px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 24px;
+  }
+  .guide-content section:last-child {
+    border: 0;
+    margin-bottom: 0;
+  }
+  .guide-content h2 {
+    margin-top: 0;
+    font-size: 19px;
+  }
+  .result-definitions {
+    margin: 20px 0;
+  }
+  .result-definitions div {
+    padding: 12px 0;
+    border-top: 1px solid var(--line);
+  }
+  .result-definitions dt {
+    font-size: 13px;
+    font-weight: 750;
+  }
+  .result-definitions dd {
+    margin: 4px 0 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  @media (max-width: 760px) {
+    .guide-layout {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .guide-nav {
+      position: static;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+    }
+  }
+</style>

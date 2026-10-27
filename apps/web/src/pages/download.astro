@@ -1,0 +1,110 @@
+---
+import Shell from '../layouts/Shell.astro';
+---
+
+<Shell title="Extensie installeren">
+  <header class="wrap page-head">
+    <p class="eyebrow">Installatie</p>
+    <h1>Chrome-extensie installeren</h1>
+    <p>
+      Lokale installatie van de ontwikkelversie. Er is nog geen Chrome Web
+      Store-release.
+    </p>
+  </header>
+  <div class="wrap page-content install-content">
+    <div class="install-requirements">
+      <strong>Benodigd</strong>
+      <span>Chrome</span>
+      <span>Node 24.19</span>
+      <span>pnpm volgens de README</span>
+      <a href="https://github.com/Orka-digital/epiless">Repository ↗</a>
+    </div>
+    <section class="prose">
+      <h2>Extensie bouwen en laden</h2>
+      <ol class="install-steps">
+        <li>
+          <strong>Haal de broncode op.</strong> Download of clone{' '}
+          <a href="https://github.com/Orka-digital/epiless">
+            epi-less op GitHub
+          </a>{' '}
+          en installeer de benodigdheden volgens de README.
+        </li>
+        <li>
+          <strong>Bouw vanuit de projectmap.</strong>
+          <pre><code>pnpm install --frozen-lockfile
+pnpm build</code></pre>
+        </li>
+        <li>
+          <strong>
+            Open <code>chrome://extensions</code>
+          </strong>{' '}
+          en schakel de ontwikkelaarsmodus in.
+        </li>
+        <li>
+          <strong>Kies Uitgepakte extensie laden.</strong> Selecteer{' '}
+          <code>apps/chrome-extension/dist</code>.
+        </li>
+        <li>
+          <strong>Pin epi-less aan de werkbalk.</strong> Open de website die je
+          wilt onderzoeken en volg de <a href="/docs">scaninstructies</a>.
+        </li>
+      </ol>
+      <p class="notice">
+        De huidige versie is een onderzoeks- en ontwikkeltool. De metingen zijn
+        indicatief; epi-less biedt nog geen blocker en is geen garantie tegen
+        flitsende content.
+      </p>
+    </section>
+    <section class="prose local-index">
+      <h2>Lokale index starten</h2>
+      <pre><code>pnpm setup:local
+pnpm dev</code></pre>
+      <p>
+        De lokale index draait standaard op <code>http://localhost:4321</code>.
+        Aanmelden, rapporten publiceren en intrekken kunnen lokaal worden getest
+        met de expliciete ontwikkelconfiguratie.
+      </p>
+    </section>
+  </div>
+</Shell>
+<style>
+  .install-content > * {
+    max-width: 980px;
+  }
+  .install-requirements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    padding: 16px 20px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 12px;
+    margin-bottom: 28px;
+  }
+  .install-requirements a {
+    margin-left: auto;
+  }
+  .install-content h2 {
+    font-size: 19px;
+    margin-top: 0;
+  }
+  .install-steps {
+    padding-left: 22px;
+  }
+  .install-steps li {
+    padding-left: 8px;
+    margin-bottom: 18px;
+  }
+  .install-steps pre,
+  .local-index pre {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-size: 12px;
+  }
+  .local-index {
+    padding-top: 28px;
+    margin-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+</style>

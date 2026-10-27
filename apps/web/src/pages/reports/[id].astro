@@ -1,0 +1,187 @@
+---
+export const prerender = false;
+import Shell from '../../layouts/Shell.astro';
+import ReportView from '../../components/ReportView.astro';
+import { getRuntime, getSession, getPublication } from '../../server';
+import { timestampLabel } from '../../lib/social-metadata';
+import {
+  paginateReport,
+  type ReportPagination,
+} from '../../lib/report-pagination';
+const token = Astro.url.searchParams.get('token') || undefined;
+let publication: Awaited<ReturnType<typeof getPublication>> = null;
+let unavailable = false;
+try {
+  const env = getRuntime(Astro);
+  const session = await getSession(Astro.request, env);
+  publication = await getPublication(env, {
+    id: Astro.params.id!,
+    token,
+    userId: session?.user.id,
+  });
+} catch {
+  unavailable = true;
+}
+if (!publication?.report) Astro.response.status = unavailable ? 503 : 404;
+const exportPath = `/api/publications/${Astro.params.id}/export${token ? `?token=${encodeURIComponent(token)}` : ''}`;
+const publiclyListed =
+  publication?.publiclyListed === true && Boolean(publication.report);
+let pagination: ReportPagination | undefined;
+let paginationError = '';
+if (publication?.report) {
+  try {
+    pagination = paginateReport(publication.report, {
+      page: Astro.url.searchParams.get('page'),
+      notes: Astro.url.searchParams.get('notes'),
+    });
+  } catch {
+    paginationError =
+      'Deze detailpagina bestaat niet. Open het rapport vanaf de eerste pagina.';
+    Astro.response.status = 400;
+  }
+}
+const pageHref = (page: number, notes: number) => {
+  const params = new URLSearchParams();
+  if (token) params.set('token', token);
+  if (page > 1) params.set('page', String(page));
+  if (notes > 1) params.set('notes', String(notes));
+  const query = params.toString();
+  return `/reports/${Astro.params.id}${query ? `?${query}` : ''}`;
+};
+---
+
+<Shell
+  title={
+    publiclyListed && publication
+      ? `Audit ${new URL(publication.origin).host}`
+      : 'Auditrapport'
+  }
+  noindex={!publiclyListed || Boolean(paginationError)}
+  description="Een epi-less-auditrapport met de gemeten scope, bevindingen en beperkingen."
+>
+  <div class="wrap page-content">
+    {paginationError ? (
+      <div class="page-head">
+        <h1>Rapportpagina niet beschikbaar</h1>
+        <p>{paginationError}</p>
+        <a class="button" href={pageHref(1, 1)}>
+          Eerste rapportpagina
+        </a>
+      </div>
+    ) : publication?.report && pagination ? (
+      <>
+        <ReportView
+          report={publication.report}
+          pagination={pagination}
+          pageHref={pageHref}
+        />
+        <section
+          class="publication-provenance"
+          aria-label="Herkomst van het rapport"
+        >
+          <h2>Herkomst</h2>
+          <dl class="publication-meta">
+            <div>
+              <dt>Aangeleverd door</dt>
+              <dd>{publication.authorName}</dd>
+            </div>
+            <div>
+              <dt>Meetmoment (aangeleverd)</dt>
+              <dd>
+                <time datetime={publication.report.startedAt}>
+                  {timestampLabel(publication.report.startedAt)}
+                </time>
+              </dd>
+            </div>
+            <div>
+              <dt>Online bewaard (server)</dt>
+              <dd>
+                <time datetime={publication.publishedAt}>
+                  {timestampLabel(publication.publishedAt)}
+                </time>
+              </dd>
+            </div>
+          </dl>
+          <p class="fine">
+            Aangeleverd door een gebruiker. epi-less legt het uploadmoment vast;
+            de metingen zijn niet onafhankelijk geverifieerd. Een publicatie
+            bevestigt geen eigenaarschap van de onderzochte website.
+          </p>
+        </section>
+        {(pagination.pageCount > 1 || pagination.notePageCount > 1) && (
+          <p class="fine">
+            Beide downloads bevatten alle routes, scenario’s, bevindingen en
+            beperkingen, ongeacht de geopende detailpagina.
+          </p>
+        )}
+        <div class="actions">
+          <a class="button outline" href={exportPath}>
+            Download rapport als JSON <span aria-hidden="true">↓</span>
+          </a>
+          <a
+            class="button outline"
+            href={`${exportPath}${token ? '&' : '?'}format=html`}
+          >
+            Download rapport als HTML <span aria-hidden="true">↓</span>
+          </a>
+          <a
+            href={`/report-abuse?id=${publication.id}${publication.visibility === 'UNLISTED' && token ? `&token=${encodeURIComponent(token)}` : ''}`}
+          >
+            Een probleem met dit rapport melden
+          </a>
+        </div>
+      </>
+    ) : (
+      <div class="page-head">
+        <p class="eyebrow">
+          {unavailable
+            ? 'Tijdelijk niet beschikbaar'
+            : 'Rapport niet beschikbaar'}
+        </p>
+        <h1 class="display">Rapport niet beschikbaar</h1>
+        <p>
+          {unavailable
+            ? 'Het rapport kon nu niet worden geladen. Probeer later opnieuw.'
+            : 'Deze link is niet geldig, ingetrokken of vereist een aangemeld account.'}
+        </p>
+        <div class="actions">
+          <a class="button" href="/account">
+            Naar mijn account <span aria-hidden="true">→</span>
+          </a>
+          <a class="button outline" href="/sites">
+            De openbare index
+          </a>
+        </div>
+      </div>
+    )}
+  </div>
+</Shell>
+
+<style>
+  .publication-provenance {
+    border-top: 1px solid var(--line);
+    margin-block: 24px;
+    padding-top: 20px;
+  }
+  .publication-provenance h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .publication-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+  }
+  .publication-meta > div {
+    min-width: 0;
+  }
+  .publication-meta dt {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .publication-meta dd {
+    margin: 4px 0 0;
+  }
+</style>

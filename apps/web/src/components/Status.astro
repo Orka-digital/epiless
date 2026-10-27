@@ -1,0 +1,17 @@
+---
+import { statusLabel } from '../lib/display';
+const { value } = Astro.props as { value: string };
+---
+
+<span
+  class:list={[
+    'badge',
+    {
+      warning: value === 'NEEDS_REVIEW',
+      observed: value === 'NO_ISSUES_OBSERVED',
+      muted: value === 'INCONCLUSIVE',
+    },
+  ]}
+>
+  {statusLabel(value)}
+</span>

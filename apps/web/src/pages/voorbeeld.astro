@@ -1,0 +1,17 @@
+---
+import Shell from '../layouts/Shell.astro';
+import ReportView from '../components/ReportView.astro';
+import { exampleReport } from '../lib/example-report';
+---
+
+<Shell title="Een voorbeeldrapport" noindex>
+  <div class="wrap page-content">
+    <ReportView report={exampleReport} example />
+    <div class="actions">
+      <a class="button" href="/download">
+        Installatie-instructies <span aria-hidden="true">↗</span>
+      </a>
+      <a href="/sites">Bekijk de echte index</a>
+    </div>
+  </div>
+</Shell>

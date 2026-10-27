@@ -1,0 +1,26 @@
+---
+import Shell from '../layouts/Shell.astro';
+---
+
+<Shell title="Pagina niet gevonden" noindex>
+  <header class="wrap page-head">
+    <p class="eyebrow">Fout 404</p>
+    <h1>Pagina niet gevonden</h1>
+    <p>Deze pagina bestaat niet of is niet meer beschikbaar.</p>
+  </header>
+  <div class="wrap page-content">
+    <div class="actions missing-actions">
+      <a class="button" href="/sites">
+        Open de index <span aria-hidden="true">→</span>
+      </a>
+      <a class="button outline" href="/">
+        Naar het overzicht
+      </a>
+    </div>
+  </div>
+</Shell>
+<style>
+  .missing-actions {
+    margin-top: 0;
+  }
+</style>

@@ -1,0 +1,196 @@
+---
+export const prerender = false;
+import Shell from '../../layouts/Shell.astro';
+import AuthForm from '../../components/AuthForm';
+import AccountActions from '../../components/AccountActions';
+import AccountData from '../../components/AccountData';
+import Status from '../../components/Status.astro';
+import {
+  getRuntime,
+  getSession,
+  listOwnReportPage,
+  HttpError,
+  isModerator,
+} from '../../server';
+import { dateLabel, hostLabel, statusLabel } from '../../lib/display';
+let session: Awaited<ReturnType<typeof getSession>> = null;
+let reports: Awaited<ReturnType<typeof listOwnReportPage>>['items'] = [];
+let nextCursor: string | null = null;
+const cursor = Astro.url.searchParams.get('cursor') || undefined;
+let unavailable = false;
+let moderator = false;
+try {
+  const env = getRuntime(Astro);
+  session = await getSession(Astro.request, env);
+  if (session) {
+    const page = await listOwnReportPage(env, session.user.id, cursor);
+    reports = page.items;
+    nextCursor = page.nextCursor;
+    moderator = isModerator(env, session.user.id);
+  }
+} catch (error) {
+  unavailable = true;
+  Astro.response.status = error instanceof HttpError ? error.status : 503;
+}
+const returnTo = Astro.url.searchParams.get('returnTo') || '/account';
+---
+
+<Shell title="Mijn rapporten" noindex active="account">
+  <header class="wrap page-head account-heading">
+    <p class="eyebrow">Online bewaren en beheren</p>
+    <h1>{session ? 'Mijn rapporten' : 'Aanmelden'}</h1>
+    <p>
+      {session
+        ? `Aangemeld als ${session.user.name}. Beheer hier je gedeelde en privé bewaarde rapporten.`
+        : 'Meld je aan om online rapporten te bewaren en te beheren. Lokaal scannen kan zonder account.'}
+    </p>
+  </header>
+  <div class="wrap page-content">
+    {unavailable ? (
+      <div class="notice error">
+        Accountbeheer is tijdelijk niet beschikbaar. Controleer de lokale setup
+        of probeer later opnieuw.
+      </div>
+    ) : session ? (
+      <>
+        <div class="actions account-toolbar">
+          <a class="button" href="/publish">
+            Rapport online bewaren <span aria-hidden="true">↗</span>
+          </a>
+          <button type="button" class="button outline" id="sign-out">
+            Uitloggen
+          </button>
+          {moderator && <a href="/account/moderation">Meldingen beoordelen</a>}
+          <span id="sign-out-error" role="status"></span>
+        </div>
+        {reports.length === 0 ? (
+          <div class="empty">
+            <h2>Nog geen online rapporten.</h2>
+            <p>
+              Je lokale scans staan in de extensie. Open daar de online preview
+              of kies hier een JSON-export.
+            </p>
+          </div>
+        ) : (
+          <div class="report-list">
+            {reports.map((p) => (
+              <article class="report-card">
+                <div>
+                  <h2>
+                    {p.hasReport ? (
+                      <a href={p.shareUrl || `/reports/${p.id}`}>
+                        {hostLabel(p.origin)}
+                      </a>
+                    ) : (
+                      'Verwijderd rapport'
+                    )}
+                  </h2>
+                  <p class="fine">
+                    {p.hasReport
+                      ? `${statusLabel(p.visibility)} · ${statusLabel(p.state)}`
+                      : 'Online-inhoud verwijderd'}{' '}
+                    · {dateLabel(p.publishedAt)}
+                  </p>
+                  {p.hasReport && <Status value={p.status} />}
+                  {p.publicAccessNeedsConfirmation && p.state === 'ACTIVE' && (
+                    <p class="notice">
+                      Dit oudere rapport is nog niet openbaar toegankelijk.
+                      Bevestig de openbare toegang opnieuw na controle van de
+                      website-origin, of kies privé/via een link.
+                    </p>
+                  )}
+                </div>
+                {p.hasReport && (
+                  <AccountActions
+                    id={p.id}
+                    revision={p.revision}
+                    active={p.state === 'ACTIVE'}
+                    shareUrl={p.shareUrl}
+                    visibility={p.visibility}
+                    publicAccessNeedsConfirmation={
+                      p.publicAccessNeedsConfirmation
+                    }
+                    client:load
+                  />
+                )}
+              </article>
+            ))}
+          </div>
+        )}
+        {(nextCursor || cursor) && (
+          <nav class="actions" aria-label="Rapportpagina's">
+            {cursor && (
+              <a class="button outline small" href="/account">
+                Nieuwste rapporten
+              </a>
+            )}
+            {nextCursor && (
+              <a
+                class="button outline small"
+                href={`/account?${new URLSearchParams({ cursor: nextCursor })}`}
+              >
+                Oudere rapporten
+              </a>
+            )}
+          </nav>
+        )}
+        <AccountData accountId={session.user.id} client:load />
+      </>
+    ) : (
+      <div class="account-entry">
+        <div class="account-form">
+          {Astro.url.searchParams.get('deleted') === '1' && (
+            <p class="notice" role="status">
+              Je account en online rapporten zijn verwijderd.
+            </p>
+          )}
+          {Astro.url.searchParams.get('deleted') === '1' &&
+            Astro.url.searchParams.get('localCleanup') === 'failed' && (
+              <p class="notice error">
+                De online gegevens zijn verwijderd, maar de lokale
+                uploadwachtrij kon niet worden gewist. Wis de websitegegevens in
+                je browser om achtergebleven uploads op dit apparaat te
+                verwijderen.
+              </p>
+            )}
+          <noscript>
+            <p class="notice">
+              Schakel JavaScript in om veilig aan te melden of een account te
+              maken. De openbare index en rapporten kun je zonder JavaScript
+              lezen.
+            </p>
+          </noscript>
+          <AuthForm returnTo={returnTo} client:load />
+        </div>
+      </div>
+    )}
+  </div>
+</Shell>
+<script>
+  import { api } from '../../lib/client-api';
+  document.querySelector('#sign-out')?.addEventListener('click', async () => {
+    try {
+      await api('/api/auth/sign-out', {});
+      location.assign('/account');
+    } catch (e) {
+      document.querySelector('#sign-out-error')!.textContent = (
+        e as Error
+      ).message;
+    }
+  });
+</script>
+
+<style>
+  .account-entry {
+    max-width: 600px;
+  }
+  .account-form {
+    min-width: 0;
+  }
+  .account-toolbar {
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--line);
+  }
+</style>

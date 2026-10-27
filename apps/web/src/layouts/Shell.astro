@@ -1,0 +1,144 @@
+---
+import '../styles/site.css';
+import Mark from '../components/Mark.astro';
+import Icon from '../components/Icon.astro';
+import { env as workerEnv } from 'cloudflare:workers';
+import { socialImageUrl } from '../lib/social-metadata';
+interface Props {
+  title: string;
+  description?: string;
+  noindex?: boolean;
+  active?: string;
+}
+const {
+  title,
+  description = 'Scan websites op flitsende content. Zoek, bewaar en deel epi-less-rapporten.',
+  noindex = false,
+  active = '',
+} = Astro.props;
+const socialImage = socialImageUrl(
+  Astro.site?.origin,
+  (workerEnv as unknown as { PUBLIC_APP_ORIGIN?: string }).PUBLIC_APP_ORIGIN,
+);
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const selected = (href: string) =>
+  href === '/'
+    ? path === '/'
+    : href === '/account'
+      ? active === 'account' || path.startsWith('/account')
+      : href === '/sites'
+        ? active === 'index' || path.startsWith('/sites')
+        : path === href;
+const primary = [
+  { href: '/', label: 'Werkruimte', icon: 'scan' },
+  { href: '/sites', label: 'Openbare index', icon: 'globe' },
+  { href: '/account', label: 'Mijn rapporten', icon: 'file' },
+  { href: '/publish', label: 'Rapport importeren', icon: 'upload' },
+] as const;
+const help = [
+  { href: '/docs', label: 'Handleiding', icon: 'book' },
+  { href: '/download', label: 'Extensie installeren', icon: 'code' },
+] as const;
+---
+
+<!doctype html>
+<html lang="nl-BE">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#171c26" />
+    <meta name="referrer" content="no-referrer" />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+    <meta property="og:title" content={`${title} · epi-less`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="epi-less" />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="epi-less — website-audits, meetgegevens, scope en bevindingen."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={socialImage} />
+    <meta
+      name="twitter:image:alt"
+      content="epi-less — website-audits, meetgegevens, scope en bevindingen."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} · epi-less</title>
+  </head>
+  <body>
+    <a class="skip" href="#inhoud">
+      Ga naar inhoud
+    </a>
+    <div class="app-shell">
+      <aside class="app-sidebar" aria-label="Werkruimtenavigatie">
+        <a class="brand" href="/" aria-label="epi-less startpagina">
+          <Mark />
+          <span>epi-less</span>
+          <span class="brand-edition">WEB</span>
+        </a>
+        <nav class="app-nav" aria-label="Hoofdnavigatie">
+          <div class="nav-section">
+            <span class="nav-label">Werkruimte</span>
+            {primary.map((item) => (
+              <a
+                href={item.href}
+                aria-current={selected(item.href) ? 'page' : undefined}
+              >
+                <Icon name={item.icon} />
+                <span>{item.label}</span>
+              </a>
+            ))}
+          </div>
+          <div class="nav-section">
+            <span class="nav-label">Ondersteuning</span>
+            {help.map((item) => (
+              <a
+                href={item.href}
+                aria-current={selected(item.href) ? 'page' : undefined}
+              >
+                <Icon name={item.icon} />
+                <span>{item.label}</span>
+              </a>
+            ))}
+          </div>
+        </nav>
+        <div class="sidebar-footer">
+          <span class="sidebar-status">
+            <Icon name="lock" /> Privé totdat je deelt
+          </span>
+          <p>epi-less · ontwikkelversie</p>
+          <a href="https://github.com/Orka-digital/epiless">
+            Project op GitHub ↗
+          </a>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="workspace-bar">
+          <span>
+            epi-less <span aria-hidden="true">/</span> {title}
+          </span>
+          <span class="development-label">Ontwikkelversie</span>
+        </header>
+        <main id="inhoud">
+          <slot />
+        </main>
+        <footer class="workspace-footer wrap">
+          <span>
+            <a href="/over">Over het communityproject</a>
+          </span>
+          <nav aria-label="Projectinformatie">
+            <a href="/over">Over</a>
+            <a href="/privacy">Privacy</a>
+            <a href="https://github.com/Orka-digital/epiless">GitHub ↗</a>
+          </nav>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

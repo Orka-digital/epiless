@@ -1,0 +1,293 @@
+---
+export const prerender = false;
+import Shell from '../../layouts/Shell.astro';
+import Status from '../../components/Status.astro';
+import { getRuntime, getSiteSummary, HttpError } from '../../server';
+import { dateLabel } from '../../lib/display';
+const origin = Astro.url.searchParams.get('origin') || '';
+const cursor = Astro.url.searchParams.get('cursor') || undefined;
+let summary: Awaited<ReturnType<typeof getSiteSummary>> | null = null;
+let reports: Awaited<ReturnType<typeof getSiteSummary>>['reports'] = [];
+let error = '';
+try {
+  summary = await getSiteSummary(getRuntime(Astro), origin, cursor);
+  reports = summary.reports;
+} catch (e) {
+  error =
+    e instanceof HttpError
+      ? e.message
+      : 'De rapporten konden niet worden geladen. Probeer het later opnieuw.';
+  Astro.response.status = e instanceof HttpError ? e.status : 503;
+}
+const host = reports.length ? new URL(reports[0].origin).host : 'Website';
+---
+
+<Shell title={`${host} — rapporten`} active="index">
+  <div class="wrap page-head site-heading">
+    <a class="index-back" href="/sites">
+      <span aria-hidden="true">←</span> Openbare index
+    </a>
+    <h1>{host}</h1>
+    <p>Openbaar gedeelde rapporten voor deze website.</p>
+  </div>
+  <div class="wrap page-content site-workspace">
+    {error ? (
+      <p class="notice error">{error}</p>
+    ) : reports.length ? (
+      <section aria-label="Gedeelde rapporten van deze website">
+        {summary?.totals && summary.latest && (
+          <div class="site-summary">
+            <h2>Openbare meetgeschiedenis</h2>
+            <dl class="site-stats">
+              <div>
+                <dt>Rapporten</dt>
+                <dd>{summary.totals.reports}</dd>
+              </div>
+              <div>
+                <dt>Eerste meting</dt>
+                <dd>
+                  {dateLabel(
+                    new Date(summary.totals.first_audit!).toISOString(),
+                  )}
+                </dd>
+              </div>
+              <div>
+                <dt>Laatste meting</dt>
+                <dd>
+                  {dateLabel(
+                    new Date(summary.totals.last_audit!).toISOString(),
+                  )}
+                </dd>
+              </div>
+              <div>
+                <dt>Rapporten met kandidaten</dt>
+                <dd>{summary.totals.reports_with_candidates || 0}</dd>
+              </div>
+            </dl>
+            <p>
+              <strong>Scope van de recentste meting:</strong>{' '}
+              {summary.latest.measuredRoutes} van{' '}
+              {summary.latest.discoveredRoutes} ontdekte routes gemeten ·{' '}
+              {summary.latest.scenarioCount} scenario's ·{' '}
+              {summary.latest.candidateCount} kandidaten.
+            </p>
+            <p class="fine">
+              Stopreden: {summary.latest.stopReason} · engine{' '}
+              {summary.latest.engineVersion}. De routeverzameling is geen
+              volledige site-inventaris. Verschillende bijdragers en scopes
+              blijven afzonderlijk; een nieuwe meting lost eerdere kandidaten
+              niet automatisch op.
+            </p>
+            <Status value={summary.latest.status} />
+          </div>
+        )}
+
+        <div class="history-heading">
+          <h2>Rapporten</h2>
+          <span>{reports.length} op deze pagina</span>
+        </div>
+        <div
+          class="table-wrap"
+          tabindex="0"
+          role="region"
+          aria-label="Rapportgeschiedenis"
+        >
+          <table>
+            <thead>
+              <tr>
+                <th>Audit / publicatie</th>
+                <th>Gedeeld door</th>
+                <th>Meetuitkomst</th>
+                <th>Gemeten scope</th>
+                <th>Rapport</th>
+              </tr>
+            </thead>
+            <tbody>
+              {reports.map((report) => (
+                <tr>
+                  <td>
+                    {dateLabel(report.auditedAt)}
+                    <br />
+                    <span class="fine">
+                      Gedeeld {dateLabel(report.publishedAt)}
+                    </span>
+                  </td>
+                  <td>{report.authorName}</td>
+                  <td>
+                    <Status value={report.status} />
+                  </td>
+                  <td>
+                    {report.measuredRoutes} / {report.discoveredRoutes} routes
+                    <br />
+                    <span class="fine">
+                      {report.scenarioCount} scenario’s ·{' '}
+                      {report.candidateCount} kandidaten
+                    </span>
+                  </td>
+                  <td>
+                    <a href={`/reports/${report.id}`}>
+                      Open rapport{' '}
+                      <span class="sr-only">
+                        van {dateLabel(report.publishedAt)}
+                      </span>
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {(summary?.nextCursor || cursor) && (
+          <nav class="actions" aria-label="Rapportpagina's">
+            {cursor && (
+              <a
+                class="button outline small"
+                href={`/sites/site?${new URLSearchParams({ origin })}`}
+              >
+                Nieuwste rapporten
+              </a>
+            )}
+            {summary?.nextCursor && (
+              <a
+                class="button outline small"
+                href={`/sites/site?${new URLSearchParams({ origin, cursor: summary.nextCursor })}`}
+              >
+                Oudere rapporten
+              </a>
+            )}
+          </nav>
+        )}
+      </section>
+    ) : (
+      <div class="site-empty">
+        <h2>Nog geen openbare rapporten.</h2>
+        <p>Voor deze website zijn er momenteel geen openbare rapporten.</p>
+      </div>
+    )}
+    <p class="history-note">
+      Bekijk de meetdatum, routes en beperkingen in elk rapport. De
+      meetuitkomsten worden niet samengevoegd tot een veiligheidsscore.
+    </p>
+  </div>
+</Shell>
+
+<style>
+  .site-summary {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .site-summary h2 {
+    font-size: 16px;
+  }
+  .site-summary p {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  .site-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .site-stats dt {
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .site-stats dd {
+    margin: 4px 0 0;
+    font-size: 14px;
+    font-weight: 650;
+  }
+  @media (max-width: 700px) {
+    .site-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .site-heading {
+    padding-bottom: 22px;
+  }
+  .index-back {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 18px;
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--muted);
+  }
+  .index-back:hover {
+    color: var(--ink);
+    text-decoration: underline;
+  }
+  .site-heading h1 {
+    font: 700 clamp(26px, 3vw, 32px)/1.2 var(--body);
+    overflow-wrap: anywhere;
+  }
+  .site-heading p {
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  .site-workspace {
+    padding-top: 0;
+  }
+  .history-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-bottom: 12px;
+  }
+  .history-heading h2 {
+    font: 650 16px/1.4 var(--body);
+  }
+  .history-heading > span {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  table {
+    min-width: 650px;
+    font-size: 12px;
+  }
+  th,
+  td {
+    padding: 13px 16px;
+  }
+  td {
+    vertical-align: middle;
+  }
+  td > a {
+    display: inline-flex;
+    gap: 8px;
+    white-space: nowrap;
+  }
+  .history-note {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 18px;
+    max-width: 100ch;
+  }
+  .site-empty {
+    padding: 28px 22px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+  }
+  .site-empty h2 {
+    font: 650 16px/1.4 var(--body);
+  }
+  .site-empty p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+</style>

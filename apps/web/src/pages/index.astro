@@ -1,0 +1,272 @@
+---
+import Shell from '../layouts/Shell.astro';
+import Icon from '../components/Icon.astro';
+import '../styles/home.css';
+---
+
+<Shell title="Werkruimte">
+  <div class="wrap page-head workbench-heading">
+    <div>
+      <p class="eyebrow">WEBSITE-ONDERZOEK</p>
+      <h1>Werkruimte</h1>
+      <p>Start een scan of werk verder met een rapport.</p>
+    </div>
+    <a class="button outline" href="/publish">
+      <Icon name="upload" /> Rapport importeren
+    </a>
+  </div>
+  <div class="wrap page-content workbench">
+    <section class="scan-launcher" aria-labelledby="scan-title">
+      <div class="section-bar">
+        <div>
+          <Icon name="scan" />
+          <h2 id="scan-title">Nieuwe scan</h2>
+        </div>
+        <span class="subtle-tag">Via de Chrome-extensie</span>
+      </div>
+      <div class="launcher-body">
+        <form id="launch-scan" class="launch-form" action="/download">
+          <label for="scan-url">Welke website wil je onderzoeken?</label>
+          <div class="url-control">
+            <Icon name="globe" />
+            <input
+              id="scan-url"
+              type="text"
+              inputmode="url"
+              autocomplete="url"
+              placeholder="https://voorbeeld.be"
+              required
+              aria-describedby="scan-help"
+            />
+            <button class="button" type="submit">
+              Website openen <Icon name="external" />
+            </button>
+          </div>
+          <p id="scan-help">
+            Open de site en start epi-less via de browserwerkbalk. Daarna
+            onderzoekt de extensie de website automatisch.
+          </p>
+        </form>
+        <div id="launch-feedback" class="launch-feedback" role="status" hidden>
+          <Icon name="scan" />
+          <div>
+            <strong>Start de scan in de geopende tab.</strong>
+            <p>
+              Klik op epi-less naast de adresbalk en kies{' '}
+              <b>Scan deze website</b>. Je volgt de voortgang in de lokale
+              werkruimte.
+            </p>
+          </div>
+        </div>
+        <noscript>
+          <p class="fine">
+            Open de te onderzoeken website zelf en start epi-less via de
+            browserwerkbalk. De knop hierboven opent de installatiehandleiding.
+          </p>
+        </noscript>
+        <ol class="scan-flow" aria-label="Scanworkflow">
+          <li>
+            <span>01</span>
+            <div>
+              <strong>Website openen</strong>
+              <small>Kies de pagina waar je start</small>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <strong>Starten via epi-less</strong>
+              <small>Geef toegang in de browser</small>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <strong>Resultaten onderzoeken</strong>
+              <small>Bekijk bevindingen en dekking</small>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="launcher-footer">
+        <span>
+          <Icon name="lock" /> Scans blijven op je apparaat tot je zelf deelt.
+        </span>
+        <a href="/download">
+          Extensie installeren <Icon name="arrow" />
+        </a>
+      </div>
+    </section>
+    <div class="workbench-lower">
+      <section class="recent-reports" aria-labelledby="recent-title">
+        <div class="section-bar">
+          <div>
+            <Icon name="file" />
+            <h2 id="recent-title">Openbare rapporten</h2>
+          </div>
+          <a href="/sites">
+            Open index <Icon name="arrow" />
+          </a>
+        </div>
+        <form action="/sites" method="get" role="search" class="report-search">
+          <Icon name="search" />
+          <input
+            aria-label="Zoek een domein in de openbare index"
+            type="search"
+            name="q"
+            placeholder="Zoek op domeinnaam…"
+            maxlength="100"
+          />
+          <button type="submit">Zoeken</button>
+        </form>
+        <div id="recent-report-content">
+          <div id="recent-table" class="recent-table" hidden>
+            <div class="recent-columns">
+              <span>WEBSITE</span>
+              <span>MEETUITKOMST</span>
+              <span>AUDITDATUM</span>
+            </div>
+            <div id="recent-rows"></div>
+          </div>
+          <div id="recent-empty" class="reports-empty">
+            <span class="empty-file">
+              <Icon name="file" />
+            </span>
+            <h3>Zoek in de openbare index</h3>
+            <p>
+              Vind gedeelde meetresultaten op domeinnaam.
+              <br />
+              Je eigen scans vind je eerst in de extensie.
+            </p>
+            <a href="/voorbeeld">
+              Bekijk een voorbeeldrapport <Icon name="arrow" />
+            </a>
+          </div>
+        </div>
+        <div class="panel-footnote">
+          Alleen openbaar gedeelde rapporten.{' '}
+          <a href="/account">Mijn online rapporten →</a>
+        </div>
+      </section>
+      <aside class="workflow-guide" aria-label="Verder werken">
+        <p class="guide-label">VERDER WERKEN</p>
+        <a class="workflow-link" href="/publish">
+          <span class="action-icon">
+            <Icon name="upload" />
+          </span>
+          <div>
+            <strong>Een scan delen</strong>
+            <p>Importeer een rapport en kies wie het mag zien.</p>
+          </div>
+          <Icon name="arrow" />
+        </a>
+        <a class="workflow-link" href="/account">
+          <span class="action-icon">
+            <Icon name="file" />
+          </span>
+          <div>
+            <strong>Mijn rapporten</strong>
+            <p>Beheer je online rapporten en gedeelde links.</p>
+          </div>
+          <Icon name="arrow" />
+        </a>
+        <a class="workflow-link" href="/docs">
+          <span class="action-icon">
+            <Icon name="book" />
+          </span>
+          <div>
+            <strong>Metingen begrijpen</strong>
+            <p>Lees wat de scanner meet en hoe je een fix controleert.</p>
+          </div>
+          <Icon name="arrow" />
+        </a>
+        <div class="tool-boundary">
+          <Icon name="info" />
+          <p>
+            <strong>Bevindingen vragen beoordeling.</strong> Een scan beschrijft
+            de onderzochte beelden en toestanden. Het is geen
+            veiligheidskeurmerk.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Shell>
+<script>
+  import { dateLabel, hostLabel, statusLabel } from '../lib/display';
+  // The shell remains static and usable without JavaScript or an available API.
+  const loadRecentReports = async () => {
+    const empty = document.querySelector<HTMLElement>('#recent-empty')!;
+    try {
+      const response = await fetch('/api/index', { credentials: 'omit' });
+      if (!response.ok) throw new Error('index unavailable');
+      const data = (await response.json()) as {
+        items: {
+          id: string;
+          origin: string;
+          status: string;
+          auditedAt: string;
+        }[];
+      };
+      if (!data.items.length) {
+        empty.querySelector('h3')!.textContent = 'Nog geen openbare rapporten';
+        empty.querySelector('p')!.textContent =
+          'Gedeelde scans verschijnen hier. Je eigen scans vind je eerst in de extensie.';
+        return;
+      }
+      const rows = document.querySelector('#recent-rows')!;
+      const fragment = document.createDocumentFragment();
+      for (const report of data.items.slice(0, 5)) {
+        const row = document.createElement('a');
+        row.className = 'recent-report-row';
+        row.href = `/reports/${encodeURIComponent(report.id)}`;
+        const host = document.createElement('strong');
+        host.textContent = hostLabel(report.origin);
+        const status = document.createElement('span');
+        status.className = `badge ${report.status === 'NEEDS_REVIEW' ? 'warning' : report.status === 'INCONCLUSIVE' ? 'muted' : ''}`;
+        status.textContent = statusLabel(report.status);
+        const date = document.createElement('time');
+        date.textContent = dateLabel(report.auditedAt);
+        date.dateTime = report.auditedAt;
+        row.appendChild(host);
+        row.appendChild(status);
+        row.appendChild(date);
+        fragment.append(row);
+      }
+      rows.replaceChildren(fragment);
+      empty.hidden = true;
+      document.querySelector<HTMLElement>('#recent-table')!.hidden = false;
+    } catch {
+      empty.querySelector('h3')!.textContent =
+        'De index is even niet beschikbaar.';
+      empty.querySelector('p')!.textContent =
+        'Je lokale scans blijven beschikbaar in de extensie. Open de index om opnieuw te proberen.';
+    }
+  };
+  void loadRecentReports();
+
+  const form = document.querySelector<HTMLFormElement>('#launch-scan');
+  const input = document.querySelector<HTMLInputElement>('#scan-url');
+  input?.addEventListener('input', () => input.setCustomValidity(''));
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!input) return;
+    try {
+      const value = input.value.trim();
+      const url = new URL(value.includes('://') ? value : `https://${value}`);
+      if (
+        !['http:', 'https:'].includes(url.protocol) ||
+        url.username ||
+        url.password
+      )
+        throw new Error('invalid');
+      window.open(url.href, '_blank', 'noopener,noreferrer');
+      document.querySelector<HTMLElement>('#launch-feedback')!.hidden = false;
+    } catch {
+      input.setCustomValidity(
+        'Vul een geldige website in, bijvoorbeeld https://voorbeeld.be.',
+      );
+      input.reportValidity();
+    }
+  });
+</script>

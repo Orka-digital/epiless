@@ -1,0 +1,216 @@
+---
+export const prerender = false;
+import Shell from '../../layouts/Shell.astro';
+import ReportView from '../../components/ReportView.astro';
+import ModerationActions from '../../components/ModerationActions';
+import {
+  getRuntime,
+  getSession,
+  isModerator,
+  listModerationQueue,
+  getModerationPublication,
+  HttpError,
+} from '../../server';
+import { dateLabel, hostLabel, statusLabel } from '../../lib/display';
+import {
+  paginateReport,
+  type ReportPagination,
+} from '../../lib/report-pagination';
+let allowed = false;
+let signedIn = false;
+let unavailable = false;
+let items: Awaited<ReturnType<typeof listModerationQueue>> = [];
+let publication: Awaited<ReturnType<typeof getModerationPublication>> = null;
+const selectedId = Astro.url.searchParams.get('id');
+try {
+  const env = getRuntime(Astro);
+  const session = await getSession(Astro.request, env);
+  signedIn = Boolean(session);
+  allowed = Boolean(session && isModerator(env, session.user.id));
+  if (allowed && session) {
+    items = await listModerationQueue(env, session.user.id);
+    if (selectedId)
+      publication = await getModerationPublication(
+        env,
+        session.user.id,
+        selectedId,
+      );
+    if (selectedId && !publication) Astro.response.status = 404;
+  } else Astro.response.status = signedIn ? 403 : 401;
+} catch (error) {
+  unavailable = true;
+  Astro.response.status = error instanceof HttpError ? error.status : 503;
+}
+const reasons: Record<string, string> = {
+  privacy: 'Privacy',
+  misleading: 'Misleidende inhoud',
+  spam: 'Spam',
+  other: 'Ander probleem',
+};
+let pagination: ReportPagination | undefined;
+let paginationError = false;
+if (publication?.report) {
+  try {
+    pagination = paginateReport(publication.report, {
+      page: Astro.url.searchParams.get('page'),
+      notes: Astro.url.searchParams.get('notes'),
+    });
+  } catch {
+    paginationError = true;
+    Astro.response.status = 400;
+  }
+}
+const pageHref = (page: number, notes: number) => {
+  const params = new URLSearchParams({ id: selectedId! });
+  if (page > 1) params.set('page', String(page));
+  if (notes > 1) params.set('notes', String(notes));
+  return `/account/moderation?${params.toString()}`;
+};
+---
+
+<Shell title="Meldingen beoordelen" noindex active="account">
+  <header class="wrap page-head moderation-heading">
+    <p class="eyebrow">Communitybeheer</p>
+    <h1>Meldingen beoordelen</h1>
+    <p>
+      Beoordeel de inhoud en leg een gemotiveerde beslissing vast. Een melding
+      is geen bewijs van een onjuiste meting.
+    </p>
+  </header>
+  <div class="wrap page-content">
+    {allowed && !unavailable && (
+      <div class="moderation-context">
+        <span>Communitybeheer</span>
+        <span>
+          {selectedId
+            ? 'Rapport beoordelen'
+            : `${items.length}${items.length === 100 ? '+' : ''} open meldingen`}
+        </span>
+      </div>
+    )}
+    {unavailable ? (
+      <p class="notice error" role="alert">
+        Moderatie is tijdelijk niet beschikbaar. Probeer later opnieuw.
+      </p>
+    ) : !allowed ? (
+      <div class="notice">
+        <p>
+          {signedIn
+            ? 'Dit account heeft geen toegang tot moderatie.'
+            : 'Meld je aan met een beheerdersaccount om meldingen te beoordelen.'}
+        </p>
+        <a href="/account?returnTo=%2Faccount%2Fmoderation">
+          Naar mijn account
+        </a>
+      </div>
+    ) : selectedId && !publication ? (
+      <p class="notice">
+        Dit rapport bestaat niet meer.{' '}
+        <a href="/account/moderation">Terug naar overzicht</a>
+      </p>
+    ) : publication ? (
+      <>
+        <p class="fine">
+          {statusLabel(publication.visibility)} ·{' '}
+          {statusLabel(publication.state)} · Revisie {publication.revision}
+        </p>
+        {items
+          .filter((item) => item.publicationId === publication.id)
+          .map((item) => (
+            <article class="report-card">
+              <div>
+                <h2>{reasons[item.category] || 'Melding'}</h2>
+                <p>{item.description}</p>
+                <p class="fine">
+                  {dateLabel(new Date(item.createdAt).toISOString())}
+                </p>
+              </div>
+            </article>
+          ))}
+        {paginationError ? (
+          <p class="notice">
+            Deze detailpagina bestaat niet.{' '}
+            <a href={pageHref(1, 1)}>Eerste rapportpagina</a>
+          </p>
+        ) : publication.report && pagination ? (
+          <ReportView
+            report={publication.report}
+            pagination={pagination}
+            pageHref={pageHref}
+          />
+        ) : (
+          <p class="notice">De rapportinhoud is door de eigenaar verwijderd.</p>
+        )}
+        <ModerationActions
+          id={publication.id}
+          revision={publication.revision}
+          active={publication.state === 'ACTIVE'}
+          client:load
+        />
+      </>
+    ) : (
+      <>
+        <div class="actions">
+          <a class="button outline" href="/account">
+            Mijn rapporten
+          </a>
+        </div>
+        {items.length === 0 ? (
+          <div class="empty">
+            <h2>Geen open meldingen.</h2>
+            <p>Nieuwe meldingen verschijnen hier na verzending.</p>
+          </div>
+        ) : (
+          <div class="report-list">
+            {items.map((item) => (
+              <article class="report-card">
+                <div>
+                  <h2>{hostLabel(item.origin)}</h2>
+                  <p>
+                    {reasons[item.category] || 'Melding'} · {item.description}
+                  </p>
+                  <p class="fine">
+                    {dateLabel(new Date(item.createdAt).toISOString())} ·{' '}
+                    {statusLabel(item.visibility)}
+                  </p>
+                </div>
+                <div class="actions">
+                  <a
+                    class="button outline small"
+                    href={`/account/moderation?id=${encodeURIComponent(item.publicationId)}`}
+                  >
+                    Beoordeel rapport
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        )}
+        {items.length === 100 && (
+          <p class="notice">
+            Dit overzicht toont de oudste 100 open meldingen. Na afhandeling
+            verschijnen de volgende.
+          </p>
+        )}
+      </>
+    )}
+  </div>
+</Shell>
+
+<style>
+  .moderation-context {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 18px 0;
+    margin-bottom: 32px;
+    border-block: 1px solid var(--line);
+  }
+  .moderation-context span:last-child {
+    font-weight: 750;
+    color: #183e35;
+  }
+</style>

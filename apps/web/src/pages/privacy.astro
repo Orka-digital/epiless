@@ -1,0 +1,156 @@
+---
+import Shell from '../layouts/Shell.astro';
+---
+
+<Shell title="Privacy en gegevens">
+  <header class="wrap page-head">
+    <p class="eyebrow">Gegevensbeheer</p>
+    <h1>Privacy en gegevens</h1>
+    <p>
+      Welke gegevens epi-less verwerkt en wat er gebeurt wanneer je een rapport
+      deelt.
+    </p>
+  </header>
+  <div class="wrap page-content">
+    <article class="prose privacy-content">
+      <section>
+        <h2>Lokale verwerking</h2>
+        <p>
+          epi-less verwerkt videoframes in je browser. De ontwikkelversie
+          bewaart geen ruwe video, audio of screenshots. Lokale rapporten
+          bevatten meetgegevens, bezochte routes, scenario’s en beperkingen. Je
+          kunt één site of alle lokale geschiedenis exporteren en wissen. De
+          bewaartermijn voor meetdetails is instelbaar; compacte geschiedenis
+          blijft bewaard totdat je die verwijdert.
+        </p>
+      </section>
+      <section>
+        <h2>Online bewaren</h2>
+        <p>
+          Pas na jouw controle verstuur je een rapportsnapshot. Je kiest voor
+          elke publicatie wie het rapport kan bekijken. Je kunt routes weglaten,
+          paden vervangen en vrije tekst uit de gedeelde kopie verwijderen.
+          Goedgekeurde uploads worden in deze browser bij jouw account bewaard,
+          zodat je na een onderbreking kunt hervatten. Uitloggen pauzeert die
+          opdrachten. Afgeronde of geannuleerde opdrachten kun je lokaal wissen.
+        </p>
+        <dl class="visibility-options">
+          <div>
+            <dt>Privé</dt>
+            <dd>Alleen toegankelijk voor je account.</dd>
+          </div>
+          <div>
+            <dt>Via een link</dt>
+            <dd>Toegankelijk voor iedereen die die link bezit.</dd>
+          </div>
+          <div>
+            <dt>Openbaar</dt>
+            <dd>Het rapport verschijnt in de index.</dd>
+          </div>
+        </dl>
+        <p>
+          De openbare index weigert localhost, privé- en gereserveerde
+          IP-adressen en herkenbare interne namen zoals .local en .internal.
+          Zulke rapporten kun je wel privé bewaren of via een link delen. Een
+          gewone domeinnaam kan ook naar een interne omgeving verwijzen; de
+          dienst onderzoekt geen DNS-records of website-inhoud om dat vast te
+          stellen. Controleer daarom zelf of je deze site en gegevens openbaar
+          mag delen.
+        </p>
+        <p>
+          Een ouder openbaar rapport kan na een beveiligingsupgrade opnieuw
+          bevestiging vereisen. Tot je die geeft via Mijn rapporten, blijft de
+          inhoud alleen voor jou toegankelijk.
+        </p>
+        <p>
+          Een publicatie bevat de aangeleverde meetdatum, technische versies en
+          je openbare accountnaam. Een gebruikersrapport is geen onafhankelijke
+          verificatie.
+        </p>
+      </section>
+      <section>
+        <h2>Accounts en misbruikbescherming</h2>
+        <p>
+          De dienst gebruikt sessiecookies voor accounttoegang. Cloudflare
+          Turnstile beschermt betrokken formulieren tegen geautomatiseerd
+          misbruik. Tijdens deze controle verwerkt Cloudflare technische
+          browsergegevens. Er worden geen rapportinhoud, gescande URL’s of
+          e-mailadressen in widgetmetadata meegestuurd.
+        </p>
+        <p>
+          Er staan geen marketingtrackers op deze site. Technische
+          requestlimieten helpen spam en overbelasting beperken.
+        </p>
+      </section>
+      <section>
+        <h2>Intrekken en verwijderen</h2>
+        <p>
+          Beheer online publicaties via <a href="/account">Mijn rapporten</a>.
+          Intrekken verhindert nieuwe toegang via de dienst. Lokale audits
+          verwijderen en online publicaties verwijderen zijn aparte handelingen.
+          Reeds gedownloade of doorgestuurde kopieën kunnen buiten onze controle
+          blijven bestaan. Je kunt je accountgegevens exporteren of je account
+          verwijderen met bevestiging van je wachtwoord. De oorspronkelijke
+          audits in de extensie beheer je afzonderlijk.
+        </p>
+      </section>
+      <section class="notice">
+        <h2>Ontwikkelstatus</h2>
+        <p>
+          Deze lokale ontwikkelversie is nog geen officiële gehoste dienst. Vóór
+          publieke ingebruikname worden het verantwoordelijke contactpunt,
+          concrete bewaartermijnen, mailleverancier en het
+          backup-/verwijderbeleid gepubliceerd.
+        </p>
+      </section>
+    </article>
+  </div>
+</Shell>
+<style>
+  .privacy-content {
+    max-width: 840px;
+  }
+  .privacy-content section {
+    margin-bottom: 28px;
+  }
+  .privacy-content section > h2 {
+    margin-top: 0;
+    font-size: 19px;
+  }
+  .visibility-options {
+    margin: 20px 0;
+    padding: 4px 18px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .visibility-options div {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 20px;
+    padding: 12px 0;
+    font-size: 13px;
+  }
+  .visibility-options div + div {
+    border-top: 1px solid var(--line);
+  }
+  .visibility-options dt {
+    font-weight: 750;
+  }
+  .visibility-options dd {
+    margin: 0;
+    color: var(--muted);
+  }
+  .privacy-content .notice h2 {
+    font-size: 15px;
+  }
+  .privacy-content .notice p {
+    font-size: 12px;
+  }
+  @media (max-width: 420px) {
+    .visibility-options div {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+</style>

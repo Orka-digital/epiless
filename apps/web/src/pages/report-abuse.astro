@@ -1,0 +1,53 @@
+---
+export const prerender = false;
+import Shell from '../layouts/Shell.astro';
+import AbuseForm from '../components/AbuseForm';
+import { getRuntime, getSession } from '../server';
+let signedIn = false;
+try {
+  signedIn = Boolean(await getSession(Astro.request, getRuntime(Astro)));
+} catch {
+  Astro.response.status = 503;
+}
+const id = Astro.url.searchParams.get('id') || '';
+const token = Astro.url.searchParams.get('token') || undefined;
+const returnTo = `/report-abuse?id=${encodeURIComponent(id)}${token ? `&token=${encodeURIComponent(token)}` : ''}`;
+---
+
+<Shell title="Een probleem melden" noindex>
+  <header class="wrap page-head">
+    <p class="eyebrow">Rapport melden</p>
+    <h1>Een probleem melden</h1>
+    <p>
+      Een melding verandert een meetresultaat niet automatisch. Beheer
+      beoordeelt de inhoud afzonderlijk.
+    </p>
+  </header>
+  <div class="wrap page-content abuse-layout">
+    <div>
+      {signedIn ? (
+        <AbuseForm id={id} accessToken={token} client:load />
+      ) : (
+        <p class="notice">
+          Meld je aan om een rapport te melden.{' '}
+          <a href={`/account?returnTo=${encodeURIComponent(returnTo)}`}>
+            Naar aanmelden
+          </a>
+        </p>
+      )}
+    </div>
+    <p class="fine abuse-help">
+      Meld privacygevoelige gegevens, misleidende inhoud of spam. Beschrijf het
+      probleem concreet en deel geen wachtwoorden, sessiegegevens of flitsende
+      opnames.
+    </p>
+  </div>
+</Shell>
+<style>
+  .abuse-layout > * {
+    max-width: 760px;
+  }
+  .abuse-help {
+    margin-top: 20px;
+  }
+</style>

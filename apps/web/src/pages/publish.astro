@@ -1,0 +1,84 @@
+---
+export const prerender = false;
+import Shell from '../layouts/Shell.astro';
+import PublishForm from '../components/PublishForm';
+import { getRuntime, getSession } from '../server';
+let session: Awaited<ReturnType<typeof getSession>> = null;
+let unavailable = false;
+try {
+  session = await getSession(Astro.request, getRuntime(Astro));
+} catch {
+  unavailable = true;
+  Astro.response.status = 503;
+}
+---
+
+<Shell title="Een rapport delen" noindex>
+  <header class="wrap page-head">
+    <p class="eyebrow">Een rapport online bewaren</p>
+    <h1>Rapport online bewaren</h1>
+    <p>
+      Controleer de inhoud, kies je zichtbaarheid en bewaar één vaste versie. Er
+      is nog niets gepubliceerd.
+    </p>
+  </header>
+  <div class="wrap page-content publish-layout">
+    <ol class="publication-steps" aria-label="Publicatiestappen">
+      <li>Rapport kiezen</li>
+      <li>Inhoud en zichtbaarheid controleren</li>
+      <li>Publicatie bevestigen</li>
+    </ol>
+    <div class="publish-form">
+      {unavailable ? (
+        <p class="notice error">
+          Publiceren is tijdelijk niet beschikbaar. Je lokale rapport blijft
+          behouden.
+        </p>
+      ) : (
+        <PublishForm
+          signedIn={Boolean(session)}
+          accountId={session?.user.id || ''}
+          name={session?.user.name || ''}
+          client:load
+        />
+      )}
+      <noscript>
+        <p class="notice">
+          Voor de gegevenspreview en antispamcontrole is JavaScript nodig. Je
+          lokale scan blijft beschikbaar.
+        </p>
+      </noscript>
+    </div>
+    <p class="fine publish-note">
+      Je lokale rapport blijft behouden. Je kunt een online publicatie later
+      intrekken; al gemaakte kopieën kun je niet terughalen.{' '}
+      <a href="/privacy">Privacy en gegevens</a>
+    </p>
+  </div>
+</Shell>
+<style>
+  .publish-layout > * {
+    max-width: 1000px;
+  }
+  .publish-form {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .publication-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    padding: 14px 20px;
+    margin: 0 0 24px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    list-style-position: inside;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .publish-note {
+    margin-top: 20px;
+    max-width: 80ch;
+  }
+</style>

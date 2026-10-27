@@ -1,0 +1,82 @@
+---
+export const prerender = false;
+import Shell from '../../layouts/Shell.astro';
+---
+
+<Shell title="Wachtwoord herstellen" noindex>
+  <header class="wrap page-head">
+    <p class="eyebrow">Account herstellen</p>
+    <h1>Wachtwoord herstellen</h1>
+    <p>Stel een nieuw wachtwoord in met minstens 12 tekens.</p>
+  </header>
+  <div class="wrap page-content reset-layout">
+    <div>
+      <noscript>
+        <p class="notice">
+          Schakel JavaScript in om je wachtwoord veilig te herstellen.
+        </p>
+      </noscript>
+      <form id="reset-form" class="form-panel" method="post">
+        <fieldset class="form-fields" disabled>
+          <legend class="sr-only">Nieuw wachtwoord instellen</legend>
+          <label class="field">
+            Nieuw wachtwoord
+            <input
+              type="password"
+              name="password"
+              minlength="12"
+              maxlength="128"
+              autocomplete="new-password"
+              required
+            />
+          </label>
+          <button class="button" type="submit">
+            Wachtwoord bewaren
+          </button>
+        </fieldset>
+        <p id="result" role="status" class="fine"></p>
+      </form>
+    </div>
+    <p class="fine reset-help">
+      Werkt je herstellink niet meer?{' '}
+      <a href="/account">Vraag een nieuwe link aan via aanmelden.</a>
+    </p>
+  </div>
+</Shell>
+<script>
+  import { api } from '../../lib/client-api';
+  const token = new URLSearchParams(location.search).get('token');
+  history.replaceState(null, '', location.pathname);
+  const form = document.querySelector<HTMLFormElement>('#reset-form')!;
+  form.querySelector('fieldset')!.disabled = false;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const result = document.querySelector('#result')!;
+    const button = form.querySelector('button')!;
+    button.disabled = true;
+    try {
+      if (!token)
+        throw new Error(
+          'Deze herstellink is niet geldig. Vraag een nieuwe link aan.',
+        );
+      await api('/api/auth/reset-password', {
+        token,
+        newPassword: new FormData(form).get('password'),
+      });
+      result.textContent = 'Wachtwoord aangepast. Je kunt nu aanmelden.';
+      location.assign('/account');
+    } catch (e) {
+      result.textContent = (e as Error).message;
+      button.disabled = false;
+    }
+  });
+</script>
+
+<style>
+  .reset-layout > * {
+    max-width: 640px;
+  }
+  .reset-help {
+    margin-top: 20px;
+  }
+</style>

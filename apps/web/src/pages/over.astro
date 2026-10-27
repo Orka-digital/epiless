@@ -1,0 +1,122 @@
+---
+import Shell from '../layouts/Shell.astro';
+---
+
+<Shell title="Over het project">
+  <header class="wrap page-head">
+    <p class="eyebrow">Projectinformatie</p>
+    <h1>Over epi-less</h1>
+    <p>
+      Open-sourceonderzoek naar flitsende content, voor websitebezoekers en
+      ontwikkelaars.
+    </p>
+  </header>
+  <div class="wrap page-content project-content">
+    <dl class="project-details">
+      <div>
+        <dt>Repository</dt>
+        <dd>
+          <a href="https://github.com/Orka-digital/epiless">
+            epi-less op GitHub ↗
+          </a>
+        </dd>
+      </div>
+      <div>
+        <dt>Licentie</dt>
+        <dd>MIT</dd>
+      </div>
+      <div>
+        <dt>Status</dt>
+        <dd>Eerste ontwikkelversie · nog geen Chrome Web Store-release</dd>
+      </div>
+    </dl>
+    <article class="prose">
+      <section>
+        <h2>Huidige mogelijkheden</h2>
+        <p>
+          De broncode bevat een lokale scanner, een rapportworkflow en de basis
+          voor een online index. De capturekwaliteit en normatieve beoordeling
+          vragen verdere validatie vóór brede uitrol. De officiële online index
+          is nog niet beschikbaar.
+        </p>
+      </section>
+      <section>
+        <h2>Techniek</h2>
+        <p>
+          De website gebruikt Astro en gerichte React-componenten. Scans blijven
+          lokaal. Compacte rapporten worden in D1 bewaard; de toekomstige
+          regelindex wordt los daarvan via CDN verspreid.
+        </p>
+        <p>
+          De toekomstige blocker zal bekende regels lokaal kunnen blijven
+          gebruiken bij serveruitval. Deze blocker is nog niet beschikbaar.
+        </p>
+      </section>
+      <section>
+        <h2>Bijdragen</h2>
+        <p>
+          Verbeteringen aan de detector, browserondersteuning, toegankelijkheid
+          en documentatie zijn welkom. Begin bij de{' '}
+          <a href="https://github.com/Orka-digital/epiless#readme">README</a>,{' '}
+          <a href="https://github.com/Orka-digital/epiless/blob/main/CONTRIBUTING.md">
+            CONTRIBUTING
+          </a>{' '}
+          en de productspecificatie in de repository.
+        </p>
+        <p>
+          Gebruik synthetische fixtures en reproduceerbare stappen. Deel geen
+          echte sessiegegevens of flitsende opnames in openbare issues.
+        </p>
+      </section>
+    </article>
+    <p class="project-credit">
+      Credits: <a href="https://orkadigital.be">Orka Digital</a> · Thibaux
+      Mampaey.
+    </p>
+  </div>
+</Shell>
+<style>
+  .project-credit {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .project-content > * {
+    max-width: 980px;
+  }
+  .project-details {
+    margin: 0 0 32px;
+    padding: 4px 20px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: white;
+  }
+  .project-details div {
+    display: grid;
+    grid-template-columns: 130px minmax(0, 1fr);
+    gap: 20px;
+    padding: 12px 0;
+    font-size: 13px;
+  }
+  .project-details div + div {
+    border-top: 1px solid var(--line);
+  }
+  .project-details dt {
+    color: var(--muted);
+  }
+  .project-details dd {
+    margin: 0;
+  }
+  .project-content section {
+    margin-bottom: 28px;
+  }
+  .project-content h2 {
+    font-size: 19px;
+    margin-top: 0;
+  }
+  @media (max-width: 480px) {
+    .project-details div {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+</style>
