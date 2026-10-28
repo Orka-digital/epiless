@@ -1,12 +1,11 @@
 import js from '@eslint/js';
-import { defineConfig, globalIgnores } from 'eslint/config';
 import prettier from 'eslint-config-prettier/flat';
 import astro from 'eslint-plugin-astro';
 import jsdoc from 'eslint-plugin-jsdoc';
 import hooks from 'eslint-plugin-react-hooks';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-import legacyFileLimits from './.eslint-file-limits.json' with { type: 'json' };
 
 export default defineConfig([
   // Frozen evidence and generated output must never be rewritten by lint:fix.
@@ -110,17 +109,25 @@ export default defineConfig([
     },
   },
   {
-    files: ['tests/**/*.test.ts', 'packages/*/test/**/*.test.ts'],
+    files: [
+      'tests/**/*.test.ts',
+      'packages/*/test/**/*.test.ts',
+      'tests/**/*.fixture.ts',
+      'packages/*/test/**/*.fixture.ts',
+    ],
     // Boundary tests deliberately build malformed messages and partial browser mocks.
     // Production sources retain the ban on explicit any.
     rules: { '@typescript-eslint/no-explicit-any': 'off' },
   },
   {
-    files: ['tests/extension/animation-phase*-browser.mjs'],
+    files: [
+      'tests/extension/animation-phase*-browser.mjs',
+      'tests/extension/animation-phase-observer.mjs',
+    ],
     languageOptions: { globals: { phase: 'readonly', stopPhase: 'readonly' } },
   },
   {
-    files: ['tests/extension/browser-smoke.mjs'],
+    files: ['tests/extension/browser-storage-migration.mjs'],
     languageOptions: {
       globals: {
         FlashGuardStorage: 'readonly',
@@ -158,14 +165,6 @@ export default defineConfig([
       ],
     },
   },
-  // Exact legacy ceilings prevent growth; new files must meet the 250-line limit.
-  // Lower/remove these entries when splitting a module, never raise them to pass CI.
-  ...Object.entries(legacyFileLimits).map(([file, max]) => ({
-    files: [file],
-    rules: {
-      'max-lines': ['error', { max, skipBlankLines: true, skipComments: true }],
-    },
-  })),
   // Formatting has one owner: Prettier. Keep this configuration last.
   prettier,
 ]);

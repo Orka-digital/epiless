@@ -77,7 +77,7 @@ Do not widen the public API to expose implementation helpers. Preserve Float64 t
 
 `pnpm check` runs strict typechecks, unused-local/parameter checks, switch fallthrough checks, semantic linting, formatting, documentation contracts and `pnpm check:unused` (Knip). CI's existing required `checks` job runs the same command. `tsconfig.scripts.json` adds `checkJs` to root tooling, CI scripts, package scripts/benchmarks and the extension build. It uses `strict` and `noImplicitAny`: helper inputs have JSDoc contracts and shared fixture/I/O types in `scripts/helper-types.ts`. Differential harnesses use `bench/probe-types.ts` for their explicit structural view of frozen/current engine internals. Missing corpus bytes, labels and benchmark results fail explicitly. JSON and dynamically loaded modules retain runtime validation; static types do not validate external data. Frozen evidence and copied browser fixtures are outside this helper configuration.
 
-`eslint.config.mjs` applies recommended JavaScript, TypeScript, Astro and React Hooks checks plus JSDoc tag validation. Production TypeScript uses project-service type information for promise and assertion checks. ESLint rejects warnings, unused suppression comments and files above 250 code lines. `.eslint-file-limits.json` records exact ceilings for existing oversized files and must shrink as they are split; test mocks have an explicit `any` exception. Prettier owns formatting and its compatibility config is applied last. The contribution guide documents the commands and exclusions.
+`eslint.config.mjs` applies recommended JavaScript, TypeScript, Astro and React Hooks checks plus JSDoc tag validation. Production TypeScript uses project-service type information for promise and assertion checks. ESLint rejects warnings, unused suppression comments and files above 250 code lines. There are no file-size or production-function baselines. Test mocks have an explicit `any` exception. Prettier owns formatting and its compatibility config is applied last. The contribution guide documents the commands and exclusions.
 
 Knip checks unused files, exports, types and dependencies, plus undeclared imports. `knip.jsonc` lists nonstandard Chrome entrypoints and manually invoked validation tools. Runtime modules, system binaries and generated fixture imports have narrow, documented exceptions. Public package exports remain public API; a library export is not dead simply because the current app does not call it. Frozen evidence and external corpora are outside executable-source discovery. Do not add all source files as entrypoints or blanket-ignore new findings to make a check pass.
 
@@ -90,3 +90,16 @@ See [validation map](VALIDATION.md) for which checks prove which claims.
 Backend publication suites are grouped by access, quotas, idempotency, moderation, account management, origin policy and pagination. `tests/backend/publication-fixture.ts` owns synthetic setup and the normal approval/publication flow. Tests use actual migrations and SQLite transactions.
 
 The three-engine differential harness retains exact temporal-state, callback, memory and spatial-witness assertions. `bench/state-comparison.mjs` owns state comparisons; `bench/quality-probe.mjs` reads relocated quality counters without changing their values or relaxing assertions. Frozen reference sources remain unchanged.
+
+## Remaining-debt refactor map
+
+The extension entrypoints now delegate to modules with explicit owners:
+
+- `offscreen-state.ts` owns the current capture revision and pending worker requests; `offscreen-source.ts`, `offscreen-frames.ts`, `offscreen-geometry.ts` and `offscreen-segment.ts` handle source lifetime, frame transport, geometry and segment boundaries.
+- `content-session.ts` owns document-local cancellation and restoration receipts. `content-dispatch.ts` routes validated extension commands to navigation, scrolling, control, playback and restoration modules.
+- `advanced-ownership.ts`, `advanced-preparation.ts`, `advanced-cleanup.ts` and `advanced-finalization.ts` separate advanced scan setup from guarded release. Capture, navigation, exploration and scheduler helpers retain their generation and ownership checks.
+- Timeline discovery, sampling, inspection and finding joins live in separate `timeline-*` modules. Media presentation observations and replay validation remain separate from UI rendering.
+
+Web API handlers in `server/api-*.ts` remain behind the router's canonical path, origin and rate controls. `intent-validation.ts` owns report and retry-contract checks. `ScanLauncher.astro`, `IndexSearch.astro` and `SiteSummary.astro` own their markup and scoped styles.
+
+Unit suites have short behavior names and shared `.fixture.ts` setup; their assertions remain in the behavior suites. Browser and native-evidence helpers separate setup, actions and proof assertions. Validation helpers retain frozen inputs and hash the extracted executable helpers in new proof metadata.

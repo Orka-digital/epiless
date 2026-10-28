@@ -6,8 +6,8 @@ import ts from 'typescript';
 import { relative } from 'node:path';
 
 /** @typedef {{file:string,rule:string,signature:string,value:number,label:string}} Finding */
-/** Find the enclosing function/class, so moving it cannot hide existing complexity debt.
- * The signature excludes formatting; any substantive change must satisfy the default limit.
+/** Identify the enclosing function/class in diagnostics independently of formatting.
+ * Signatures distinguish findings; every finding fails the gate without baseline allowances.
  * @param {string} file
  * @param {string} source
  * @param {number} line
