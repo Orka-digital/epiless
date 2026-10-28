@@ -1,385 +1,45 @@
 ---
-import { renderCoverage, type AuditReport } from '@epi-less/core';
-import {
-  captureWindowSummary,
-  captureDetailSummary,
-} from '@epi-less/core/quality';
-import {
-  renderFindingDiagnostics,
-  transitionSummary,
-} from '@epi-less/core/diagnostics';
-import Status from './Status.astro';
-import { dateLabel, hostLabel, statusLabel } from '../lib/display';
+import type { AuditReport } from '@epi-less/core';
 import {
   paginateReport,
   type ReportPagination,
 } from '../lib/report-pagination';
+import ReportHeader from './report/ReportHeader.astro';
+import ReportRoutes from './report/ReportRoutes.astro';
+import ReportLimitations from './report/ReportLimitations.astro';
+import ReportSidebar from './report/ReportSidebar.astro';
+/** Compose static report sections; pagination and evidence remain server-rendered. */
+interface Props {
+  report: AuditReport;
+  example?: boolean;
+  pagination?: ReportPagination;
+  pageHref?: (page: number, notes: number) => string;
+}
 const {
   report,
   example = false,
   pagination = paginateReport(report),
   pageHref,
-} = Astro.props as {
-  report: AuditReport;
-  example?: boolean;
-  pagination?: ReportPagination;
-  pageHref?: (page: number, notes: number) => string;
-};
+} = Astro.props;
 ---
 
 <article class="audit-sheet">
-  <header class="audit-heading">
-    <div class="audit-heading-top">
-      <p class="eyebrow">{example ? 'Voorbeeldrapport' : 'Website-audit'}</p>
-      <span class="audit-source">
-        {example ? 'Synthetische data' : 'Aangeleverd door een gebruiker'}
-      </span>
-    </div>
-    <h1 class="report-domain">{hostLabel(report.origin)}</h1>
-    <div class="audit-heading-bottom">
-      <p class="audit-date">Gemeten op {dateLabel(report.startedAt)}</p>
-      <Status value={report.status} />
-    </div>
-  </header>
-  <dl class="stats audit-stats">
-    <div>
-      <dt>Routes bezocht</dt>
-      <dd>{report.job.visitedRoutes}</dd>
-    </div>
-    <div>
-      <dt>Routes ontdekt</dt>
-      <dd>{report.job.discoveredRoutes}</dd>
-    </div>
-    <div>
-      <dt>Scenario’s</dt>
-      <dd>{pagination.scenarioCount}</dd>
-    </div>
-    <div>
-      <dt>Kandidaten</dt>
-      <dd>{pagination.findingCount}</dd>
-    </div>
-  </dl>
-  <div class="audit-context">
-    <p>
-      <strong>Meetbeperking.</strong> Dit rapport beschrijft alleen wat de scan
-      heeft waargenomen. De detector is nog niet normatief gevalideerd. Dit
-      resultaat is geen veiligheidskeurmerk en geen bevestigde WCAG-beoordeling.
-    </p>
-  </div>
+  <ReportHeader report={report} pagination={pagination} example={example} />
   <div class="audit-layout">
     <div class="audit-main">
-      <section class="report-section audit-section" id="onderzocht">
-        <div class="section-title">
-          <div>
-            <h2>Onderzochte routes</h2>
-            <p>
-              Open een route voor de scenario’s, meetkwaliteit en bevindingen.
-            </p>
-          </div>
-        </div>
-        {pagination.pageCount > 1 && pageHref && (
-          <div class="detail-paging">
-            <p>
-              Detailpagina {pagination.page} van {pagination.pageCount} ·{' '}
-              {pagination.visibleFindings} van {pagination.findingCount}{' '}
-              kandidaten op deze pagina. Grote scenario’s zijn verdeeld over
-              meerdere pagina’s. De tellingen bovenaan beschrijven het volledige
-              rapport.
-            </p>
-            <nav class="actions" aria-label="Detailpagina’s">
-              {pagination.page > 1 && (
-                <a
-                  class="button outline small"
-                  href={`${pageHref(pagination.page - 1, pagination.notes)}#onderzocht`}
-                >
-                  Vorige details
-                </a>
-              )}
-              {pagination.page < pagination.pageCount && (
-                <a
-                  class="button outline small"
-                  href={`${pageHref(pagination.page + 1, pagination.notes)}#onderzocht`}
-                >
-                  Volgende details
-                </a>
-              )}
-            </nav>
-          </div>
-        )}
-        <div class="audit-routes">
-          {pagination.routes.map((route) => (
-            <details class="route-item">
-              <summary>
-                <span class="route-title">{new URL(route.url).pathname}</span>
-                <Status value={route.status} />
-              </summary>
-              <div class="route-detail">
-                {route.reason && <p class="notice">{route.reason}</p>}
-                <div set:html={renderCoverage(route.coverage)} />
-                {pagination.pageCount > 1 && (
-                  <p class="fine">
-                    Route {route.routeIndex + 1} van {report.routes.length} ·{' '}
-                    {route.totalScenarios} scenario’s in het volledige rapport.
-                  </p>
-                )}
-                {route.scenarios.length === 0 && (
-                  <p>Geen bruikbaar meetscenario geregistreerd.</p>
-                )}
-                {route.scenarios.map((s) => (
-                  <section class="scenario" data-scenario-id={s.id}>
-                    <h3>{s.type}</h3>
-                    {pagination.pageCount > 1 && (
-                      <p class="fine">
-                        Scenario {s.scenarioIndex + 1} van{' '}
-                        {route.totalScenarios}
-                        {s.totalFindings > 0
-                          ? ` · bevindingen ${s.firstFinding + 1}–${s.firstFinding + s.findings.length} van ${s.totalFindings}`
-                          : ' · geen kandidaten'}
-                        .
-                      </p>
-                    )}
-                    <p class="fine scenario-quality">
-                      {s.quality.frameCount} frames ·{' '}
-                      {s.quality.effectiveFps.toFixed(1)} fps gemeten · grootste
-                      tijdgat {Math.round(s.quality.maxGapMs)} ms ·{' '}
-                      {s.quality.width} × {s.quality.height} px
-                      {s.quality.downsampled ? ' · verkleinde analyse' : ''}
-                      {s.quality.interrupted ? ' · onderbroken' : ''}
-                    </p>
-                    {s.quality.captureWindowMs !== undefined && (
-                      <p class="fine">{captureWindowSummary(s.quality)}</p>
-                    )}
-                    {captureDetailSummary(s.quality) && (
-                      <p class="fine">{captureDetailSummary(s.quality)}</p>
-                    )}
-                    {s.findings.length > 0 ? (
-                      <ul class="finding-list">
-                        {s.findings.map((f) => (
-                          <li data-finding-id={f.id}>
-                            <strong>
-                              {f.type === 'RED_FLASH'
-                                ? 'Rode flitskandidaat'
-                                : 'Flitskandidaat'}
-                            </strong>
-                            <p>{f.message}</p>
-                            <span class="fine">
-                              {(f.startMs / 1000).toFixed(2)}–
-                              {(f.endMs / 1000).toFixed(2)} s vanaf het eerste
-                              geanalyseerde frame · {transitionSummary(f)} ·
-                              beoordeling nodig
-                            </span>
-                            <details class="finding-measurement">
-                              <summary>Gebied en analysecoördinaten</summary>
-                              <dl>
-                                <div>
-                                  <dt>Gemeten aandeel</dt>
-                                  <dd>
-                                    {new Intl.NumberFormat('nl-BE', {
-                                      style: 'percent',
-                                      maximumFractionDigits: 2,
-                                    }).format(f.affectedRatio)}{' '}
-                                    van het geanalyseerde frame
-                                  </dd>
-                                </div>
-                                {f.region ? (
-                                  <div>
-                                    <dt>Regio in analysepixels</dt>
-                                    <dd>
-                                      x={f.region.x}, y={f.region.y}, breedte=
-                                      {f.region.width}, hoogte={f.region.height}
-                                    </dd>
-                                  </div>
-                                ) : (
-                                  <div>
-                                    <dt>Regio</dt>
-                                    <dd>Geen regio opgeslagen.</dd>
-                                  </div>
-                                )}
-                                <div>
-                                  <dt>Analyseframe</dt>
-                                  <dd>
-                                    {s.quality.width} × {s.quality.height} px
-                                    {s.quality.downsampled
-                                      ? ' · verkleind voor analyse'
-                                      : ''}
-                                  </dd>
-                                </div>
-                              </dl>
-                              <p>
-                                Deze waarden horen bij het analyseframe, niet
-                                bij CSS-pixels of een normatief gezichtsveld.{' '}
-                                {s.quality.downsampled
-                                  ? 'Door de verkleining kunnen kleine of korte veranderingen verloren gaan. '
-                                  : ''}
-                                Dit is geen gevalideerde
-                                WCAG-oppervlaktebeoordeling.
-                              </p>
-                            </details>
-                            <div set:html={renderFindingDiagnostics(f)} />
-                          </li>
-                        ))}
-                      </ul>
-                    ) : (
-                      <p>
-                        Geen kandidaten geregistreerd in dit scenario. Raadpleeg
-                        de meetkwaliteit en beperkingen.
-                      </p>
-                    )}
-                  </section>
-                ))}
-              </div>
-            </details>
-          ))}
-        </div>
-      </section>
-      <section class="report-section audit-section" id="beperkingen">
-        <div class="section-title">
-          <h2>Beperkingen</h2>
-        </div>
-        {pagination.notePageCount > 1 && pageHref && (
-          <div class="detail-paging">
-            <p>
-              Beperkingen {pagination.firstLimitation + 1}–
-              {pagination.firstLimitation + pagination.limitations.length} van{' '}
-              {pagination.limitationCount}. De overige beperkingen staan op de
-              volgende en vorige pagina’s.
-            </p>
-            <nav class="actions" aria-label="Pagina’s met beperkingen">
-              {pagination.notes > 1 && (
-                <a
-                  class="button outline small"
-                  href={`${pageHref(pagination.page, pagination.notes - 1)}#beperkingen`}
-                >
-                  Vorige beperkingen
-                </a>
-              )}
-              {pagination.notes < pagination.notePageCount && (
-                <a
-                  class="button outline small"
-                  href={`${pageHref(pagination.page, pagination.notes + 1)}#beperkingen`}
-                >
-                  Volgende beperkingen
-                </a>
-              )}
-            </nav>
-          </div>
-        )}
-        <ul class="limitation-list">
-          {pagination.limitations.map((text) => (
-            <li>{text}</li>
-          ))}
-        </ul>
-        <p class="fine">
-          Een voltooid scanplan betekent niet dat alle mogelijke content of
-          interacties op de website zijn onderzocht.
-        </p>
-      </section>
+      <ReportRoutes
+        pagination={pagination}
+        routeCount={report.routes.length}
+        pageHref={pageHref}
+      />
+      <ReportLimitations pagination={pagination} pageHref={pageHref} />
     </div>
-    <aside class="audit-sidebar" aria-label="Context van het rapport">
-      <div class="audit-note">
-        <h2 class="sidebar-label">Scanplan</h2>
-        <dl class="scan-settings">
-          <div>
-            <dt>Status</dt>
-            <dd>{statusLabel(report.job.state)}</dd>
-          </div>
-          <div>
-            <dt>Max. routes</dt>
-            <dd>{report.job.maxRoutes}</dd>
-          </div>
-          <div>
-            <dt>Max. diepte</dt>
-            <dd>{report.job.maxDepth}</dd>
-          </div>
-          <div>
-            <dt>Tijdbudget</dt>
-            <dd>{Math.round(report.job.maxDurationMs / 60000)} min.</dd>
-          </div>
-          <div>
-            <dt>Engine</dt>
-            <dd>{report.engineVersion}</dd>
-          </div>
-        </dl>
-        <div class="stop-reason">
-          <span class="sidebar-label">Stopreden</span>
-          <code>{report.job.stopReason}</code>
-        </div>
-      </div>
-      <div class="reading-note">
-        <h2 class="sidebar-label">Beoordeling</h2>
-        <p>
-          Een kandidaat vraagt om verdere beoordeling. Ook als er geen
-          kandidaten zijn, blijven de meetkwaliteit en beperkingen van belang.
-        </p>
-        <a href="/docs">
-          Over de meetmethode <span aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </aside>
+    <ReportSidebar report={report} />
   </div>
 </article>
-
 <style>
   .audit-sheet {
     margin-block: 24px;
-  }
-  .audit-heading {
-    padding-bottom: 18px;
-  }
-  .audit-heading-top,
-  .audit-heading-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-  .audit-heading .eyebrow {
-    font-size: 11px;
-  }
-  .audit-source {
-    color: var(--muted);
-    font-size: 11px;
-  }
-  .report-domain {
-    font: 700 clamp(26px, 3vw, 34px)/1.2 var(--body);
-    letter-spacing: -0.035em;
-    overflow-wrap: anywhere;
-    margin: 12px 0;
-  }
-  .audit-date {
-    font-size: 12px;
-    color: var(--muted);
-  }
-  .audit-stats {
-    margin: 0;
-    padding: 0;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: var(--surface);
-  }
-  .audit-stats > div {
-    padding: 14px 18px;
-  }
-  .audit-stats dt {
-    font: 500 11px/1.5 var(--body);
-    text-transform: none;
-    letter-spacing: 0;
-  }
-  .audit-stats dd {
-    font: 650 26px/1.2 var(--body);
-    margin-top: 6px;
-  }
-  .audit-context {
-    margin-top: 16px;
-    padding: 12px 16px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: var(--surface);
-  }
-  .audit-context p {
-    font-size: 12px;
-    line-height: 1.7;
   }
   .audit-layout {
     display: grid;
@@ -391,225 +51,44 @@ const {
   .audit-main {
     min-width: 0;
   }
-  .audit-section {
+  .audit-sheet :global(.audit-section) {
     margin: 0;
     padding-top: 0;
     border-top: 0;
   }
-  .audit-section + .audit-section {
+  .audit-sheet :global(.audit-section + .audit-section) {
     margin-top: 24px;
     padding-top: 20px;
     border-top: 1px solid var(--line);
   }
-  .section-title {
+  .audit-sheet :global(.section-title) {
     margin-bottom: 14px;
   }
-  .section-title h2 {
+  .audit-sheet :global(.section-title h2) {
     font: 650 16px/1.4 var(--body);
     letter-spacing: -0.02em;
   }
-  .section-title p {
+  .audit-sheet :global(.section-title p) {
     margin-top: 6px;
     color: var(--muted);
     font-size: 12px;
   }
-  .audit-routes {
-    border: 1px solid var(--line);
-    background: var(--surface);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .audit-routes .route-item {
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    margin: 0;
-  }
-  .audit-routes .route-item + .route-item {
-    border-top: 1px solid var(--line);
-  }
-  .audit-routes summary {
-    padding: 13px 16px;
-  }
-  .audit-routes summary:focus-visible {
-    outline-offset: -4px;
-  }
-  .audit-routes summary::after {
-    content: '+';
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--muted);
-    margin-left: 2px;
-  }
-  .audit-routes summary :global(.badge) {
-    margin-left: auto;
-  }
-  .audit-routes details[open] > summary::after {
-    content: '−';
-  }
-  .route-title {
-    font-size: 13px;
-  }
-  .route-detail {
-    padding: 0 16px 16px;
-  }
-  .scenario {
-    padding: 16px 0;
-    border-top: 1px solid var(--line);
-  }
-  .scenario:last-child {
-    padding-bottom: 0;
-  }
-  .scenario h3 {
-    font-size: 13px;
-    margin: 0;
-  }
-  .scenario-quality {
-    margin: 8px 0 12px;
-  }
-  .scenario > p:not(.fine) {
-    font-size: 13px;
-  }
-  .finding-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .finding-list li {
-    padding: 12px 14px;
-    border-left: 3px solid #b78d35;
-    background: #faf6ea;
-    font-size: 13px;
-  }
-  .finding-list li + li {
-    margin-top: 10px;
-  }
-  .finding-list p {
-    margin-block: 6px;
-  }
-  .finding-measurement {
-    margin-top: 12px;
-  }
-  .finding-measurement summary {
-    padding: 4px 0;
-    font-size: 12px;
-    text-decoration: underline;
-  }
-  .finding-measurement dl {
-    margin-block: 10px;
-    font-size: 12px;
-  }
-  .finding-measurement dl > div {
-    margin-top: 8px;
-  }
-  .finding-measurement dt {
-    font-weight: 650;
-  }
-  .finding-measurement dd {
-    margin: 2px 0 0;
-    overflow-wrap: anywhere;
-  }
-  .finding-measurement p {
-    font-size: 12px;
-  }
-  .detail-paging {
+  .audit-sheet :global(.detail-paging) {
     margin-block: 12px 16px;
     font-size: 12px;
   }
-  .detail-paging .actions {
+  .audit-sheet :global(.detail-paging .actions) {
     margin-top: 10px;
-  }
-  .finding-list .fine {
-    display: block;
-    margin-top: 8px;
-  }
-  .limitation-list {
-    padding-left: 18px;
-    font-size: 13px;
-  }
-  .limitation-list li {
-    padding-left: 3px;
-    margin-bottom: 8px;
-  }
-  .audit-note {
-    padding: 18px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: var(--surface);
-  }
-  .sidebar-label {
-    font: 650 13px/1.4 var(--body);
-    letter-spacing: 0;
-    text-transform: none;
-  }
-  .scan-settings {
-    margin: 14px 0;
-    font-size: 12px;
-  }
-  .scan-settings > div {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    margin-block: 10px;
-  }
-  .scan-settings dt {
-    color: var(--muted);
-  }
-  .scan-settings dd {
-    margin: 0;
-    text-align: right;
-    overflow-wrap: anywhere;
-  }
-  .stop-reason {
-    padding-top: 14px;
-    border-top: 1px solid var(--line);
-  }
-  .stop-reason code {
-    display: block;
-    font-size: 11px;
-    margin-top: 6px;
-  }
-  .reading-note {
-    padding: 18px 2px;
-  }
-  .reading-note > p {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.7;
-    margin-top: 8px;
-  }
-  .reading-note a {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 12px;
   }
   @media (max-width: 1000px) {
     .audit-layout {
       grid-template-columns: minmax(0, 1fr);
       gap: 22px;
     }
-    .audit-sidebar {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
   }
   @media (max-width: 600px) {
     .audit-sheet {
       margin-top: 18px;
-    }
-    .audit-stats > div {
-      padding: 12px 16px;
-    }
-    .audit-sidebar {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 0;
-    }
-    .audit-routes summary {
-      padding: 12px;
-    }
-    .route-detail {
-      padding-inline: 12px;
     }
   }
 </style>

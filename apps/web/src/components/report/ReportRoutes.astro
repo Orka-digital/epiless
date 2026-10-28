@@ -1,0 +1,135 @@
+---
+import { renderCoverage } from '@epi-less/core';
+import type { ReportPagination } from '../../lib/report-pagination';
+import Status from '../Status.astro';
+import ReportScenario from './ReportScenario.astro';
+/** Render only the selected detail page while keeping whole-report counts explicit. */
+interface Props {
+  pagination: ReportPagination;
+  routeCount: number;
+  pageHref?: (page: number, notes: number) => string;
+}
+const { pagination, routeCount, pageHref } = Astro.props;
+---
+
+<section class="report-section audit-section" id="onderzocht">
+  <div class="section-title">
+    <div>
+      <h2>Onderzochte routes</h2>
+      <p>Open een route voor de scenario’s, meetkwaliteit en bevindingen.</p>
+    </div>
+  </div>
+  {pagination.pageCount > 1 && pageHref && (
+    <div class="detail-paging">
+      <p>
+        Detailpagina {pagination.page} van {pagination.pageCount} ·{' '}
+        {pagination.visibleFindings} van {pagination.findingCount} kandidaten op
+        deze pagina. Grote scenario’s zijn verdeeld over meerdere pagina’s. De
+        tellingen bovenaan beschrijven het volledige rapport.
+      </p>
+      <nav class="actions" aria-label="Detailpagina’s">
+        {pagination.page > 1 && (
+          <a
+            class="button outline small"
+            href={`${pageHref(pagination.page - 1, pagination.notes)}#onderzocht`}
+          >
+            Vorige details
+          </a>
+        )}
+        {pagination.page < pagination.pageCount && (
+          <a
+            class="button outline small"
+            href={`${pageHref(pagination.page + 1, pagination.notes)}#onderzocht`}
+          >
+            Volgende details
+          </a>
+        )}
+      </nav>
+    </div>
+  )}
+  <div class="audit-routes">
+    {pagination.routes.map((route) => (
+      <details class="route-item">
+        <summary>
+          <span class="route-title">{new URL(route.url).pathname}</span>
+          <Status value={route.status} />
+        </summary>
+        <div class="route-detail">
+          {route.reason && <p class="notice">{route.reason}</p>}
+          <div set:html={renderCoverage(route.coverage)} />
+          {pagination.pageCount > 1 && (
+            <p class="fine">
+              Route {route.routeIndex + 1} van {routeCount} ·{' '}
+              {route.totalScenarios} scenario’s in het volledige rapport.
+            </p>
+          )}
+          {route.scenarios.length === 0 && (
+            <p>Geen bruikbaar meetscenario geregistreerd.</p>
+          )}
+          {route.scenarios.map((scenario) => (
+            <ReportScenario
+              scenario={scenario}
+              totalScenarios={route.totalScenarios}
+              paginated={pagination.pageCount > 1}
+            />
+          ))}
+        </div>
+      </details>
+    ))}
+  </div>
+</section>
+
+<style>
+  .audit-routes {
+    border: 1px solid var(--line);
+    background: var(--surface);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .audit-routes .route-item {
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+  .audit-routes .route-item + .route-item {
+    border-top: 1px solid var(--line);
+  }
+  .audit-routes :global(:where(.route-item, .finding-measurement) > summary) {
+    padding: 13px 16px;
+  }
+  .audit-routes
+    :global(:where(.route-item, .finding-measurement) > summary:focus-visible) {
+    outline-offset: -4px;
+  }
+  .audit-routes
+    :global(:where(.route-item, .finding-measurement) > summary)::after {
+    content: '+';
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 2px;
+  }
+  .audit-routes
+    :global(:where(.route-item, .finding-measurement) > summary .badge) {
+    margin-left: auto;
+  }
+  .audit-routes
+    :global(:where(.route-item, .finding-measurement)[open] > summary)::after {
+    content: '−';
+  }
+  .route-title {
+    font-size: 13px;
+  }
+  .route-detail {
+    padding: 0 16px 16px;
+  }
+  @media (max-width: 600px) {
+    .audit-routes :global(:is(.route-item, .finding-measurement) > summary) {
+      padding: 12px;
+    }
+    .route-detail {
+      padding-inline: 12px;
+    }
+  }
+</style>

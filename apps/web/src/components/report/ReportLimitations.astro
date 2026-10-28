@@ -1,0 +1,63 @@
+---
+import type { ReportPagination } from '../../lib/report-pagination';
+/** Keep every retained limitation reachable through its independent pagination. */
+interface Props {
+  pagination: ReportPagination;
+  pageHref?: (page: number, notes: number) => string;
+}
+const { pagination, pageHref } = Astro.props;
+---
+
+<section class="report-section audit-section" id="beperkingen">
+  <div class="section-title">
+    <h2>Beperkingen</h2>
+  </div>
+  {pagination.notePageCount > 1 && pageHref && (
+    <div class="detail-paging">
+      <p>
+        Beperkingen {pagination.firstLimitation + 1}–
+        {pagination.firstLimitation + pagination.limitations.length} van{' '}
+        {pagination.limitationCount}. De overige beperkingen staan op de
+        volgende en vorige pagina’s.
+      </p>
+      <nav class="actions" aria-label="Pagina’s met beperkingen">
+        {pagination.notes > 1 && (
+          <a
+            class="button outline small"
+            href={`${pageHref(pagination.page, pagination.notes - 1)}#beperkingen`}
+          >
+            Vorige beperkingen
+          </a>
+        )}
+        {pagination.notes < pagination.notePageCount && (
+          <a
+            class="button outline small"
+            href={`${pageHref(pagination.page, pagination.notes + 1)}#beperkingen`}
+          >
+            Volgende beperkingen
+          </a>
+        )}
+      </nav>
+    </div>
+  )}
+  <ul class="limitation-list">
+    {pagination.limitations.map((text) => (
+      <li>{text}</li>
+    ))}
+  </ul>
+  <p class="fine">
+    Een voltooid scanplan betekent niet dat alle mogelijke content of
+    interacties op de website zijn onderzocht.
+  </p>
+</section>
+
+<style>
+  .limitation-list {
+    padding-left: 18px;
+    font-size: 13px;
+  }
+  .limitation-list li {
+    padding-left: 3px;
+    margin-bottom: 8px;
+  }
+</style>
