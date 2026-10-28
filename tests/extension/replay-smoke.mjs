@@ -134,14 +134,12 @@ try {
             limitations: ['EXPLICIT_FAKE_CAPTURE_CONTROL_FLOW_FIXTURE'],
             quality: {
               frameCount: 2,
-              durationMs: 1000,
               effectiveFps: 1,
               maxGapMs: 1000,
               width: 1,
               height: 1,
               downsampled: true,
               interrupted: false,
-              droppedFrames: 0,
               captureWindowMs: epochNow() - record.begunAt,
               leadingIdleMs: 0,
               trailingIdleMs: 0,
@@ -229,7 +227,6 @@ try {
                 limitations: ['FAKE_BASELINE'],
                 quality: {
                   frameCount: 2,
-                  durationMs: 1000,
                   effectiveFps: 1,
                   maxGapMs: 1000,
                   width: 1,

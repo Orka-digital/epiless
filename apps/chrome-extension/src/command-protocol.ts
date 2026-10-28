@@ -134,6 +134,7 @@ export type CommandResult<K extends CommandType> = K extends 'GET_STATE'
               ? { saved: true }
               : Record<string, never>;
 
+/** Validate untrusted extension messages and bounded candidate geometry before dispatch. */
 export function parseBackgroundCommand(input: unknown): BackgroundCommand {
   const result = backgroundCommandSchema.safeParse(input);
   if (!result.success)

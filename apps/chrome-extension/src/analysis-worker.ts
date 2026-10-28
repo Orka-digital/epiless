@@ -2,7 +2,7 @@ import { FrameAnalyzer } from '@epi-less/analysis-engine';
 import { captureDimensions, NATIVE_PIXEL_BUDGET } from './capture-quality';
 import { FrameConverter } from './frame-conversion';
 import { warmAnalysisRuntime } from './analysis-warmup';
-import type { ProcessingQuality } from '../../../packages/core/src/spatial';
+import type { ProcessingQuality } from '@epi-less/core';
 import { cssReferenceField } from './reference-field';
 
 let analyzer: FrameAnalyzer | undefined;
