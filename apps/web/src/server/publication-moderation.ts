@@ -1,11 +1,14 @@
+import {
+  findAbuseReport,
+  insertAbuseReport,
+  openModerationQueue,
+} from './db/moderation-reads';
+import { storedPublication } from './db/publication-reads';
+import { dismissReports, hidePublication } from './db/moderation-writes';
 import { type AuditReport } from '@epi-less/core';
 import { summarize } from './publication-presentation';
 import { getPublication } from './publication-queries';
-import {
-  type ModerationItem,
-  type PublicationDetail,
-  type PublicationRow,
-} from './publication-types';
+import { type PublicationDetail } from './publication-types';
 import { verifyChallenge } from './security';
 import { HttpError, type RuntimeEnv } from './types';
 
@@ -46,11 +49,7 @@ export async function reportAbuse(
       'INVALID_ABUSE_REPORT',
       'Kies een reden en beschrijf die in 10 tot 2000 tekens.',
     );
-  const existing = await env.DB.prepare(
-    'SELECT id FROM abuse_reports WHERE publication_id=? AND reporter_id=?',
-  )
-    .bind(id, ownerId)
-    .first();
+  const existing = await findAbuseReport(env, id, ownerId);
   if (existing) return { accepted: true };
   await verifyChallenge(env, request, {
     action: 'abuse',
@@ -58,18 +57,14 @@ export async function reportAbuse(
     challengeId: input.challengeId,
     token: input.challengeToken,
   });
-  await env.DB.prepare(
-    'INSERT INTO abuse_reports(id,publication_id,reporter_id,category,description,created_at) VALUES(?,?,?,?,?,?) ON CONFLICT(publication_id,reporter_id) DO NOTHING',
-  )
-    .bind(
-      crypto.randomUUID(),
-      id,
-      ownerId,
-      input.category,
-      input.description.trim(),
-      Date.now(),
-    )
-    .run();
+  await insertAbuseReport(env, {
+    id: crypto.randomUUID(),
+    publication_id: id,
+    reporter_id: ownerId,
+    category: String(input.category),
+    description: input.description.trim(),
+    created_at: Date.now(),
+  });
   return { accepted: true };
 }
 
@@ -102,23 +97,14 @@ export async function moderatePublication(
       'Een actuele revisie en duidelijke reden zijn verplicht.',
     );
   if (input.action === 'dismiss') {
-    const eventId = crypto.randomUUID();
-    const results = await env.DB.batch([
-      env.DB.prepare(
-        "INSERT INTO moderation_events(id,publication_id,moderator_id,action,reason,created_at) SELECT ?,id,?,'dismiss',?,? FROM publications WHERE id=? AND revision=?",
-      ).bind(
-        eventId,
-        moderatorId,
-        input.reason.trim(),
-        Date.now(),
-        id,
-        input.revision,
-      ),
-      env.DB.prepare(
-        "UPDATE abuse_reports SET state='REVIEWED' WHERE publication_id=? AND EXISTS(SELECT 1 FROM moderation_events WHERE id=?)",
-      ).bind(id, eventId),
-    ]);
-    if (!results[0]?.meta.changes)
+    const changes = await dismissReports(
+      env,
+      moderatorId,
+      id,
+      input.revision as number,
+      input.reason.trim(),
+    );
+    if (!changes)
       throw new HttpError(
         409,
         'REVISION_CONFLICT',
@@ -126,28 +112,14 @@ export async function moderatePublication(
       );
     return { dismissed: true };
   }
-  const results = await env.DB.batch([
-    env.DB.prepare(
-      "UPDATE publications SET state='HIDDEN_BY_MODERATION',moderation_reason=?,revision=revision+1 WHERE id=? AND revision=? AND state='ACTIVE'",
-    ).bind(input.reason.trim(), id, input.revision),
-    env.DB.prepare(
-      "INSERT INTO erasure_log(id,entity_type,entity_id,action,revision,created_at) SELECT ?,'publication',id,'revoke',revision,? FROM publications WHERE id=? AND revision=? AND state='HIDDEN_BY_MODERATION' AND changes()=1",
-    ).bind(crypto.randomUUID(), Date.now(), id, (input.revision as number) + 1),
-    env.DB.prepare(
-      "INSERT INTO moderation_events(id,publication_id,moderator_id,action,reason,created_at) SELECT ?,id,?,'hide',?,? FROM publications WHERE id=? AND state='HIDDEN_BY_MODERATION' AND revision=? AND changes()=1",
-    ).bind(
-      crypto.randomUUID(),
-      moderatorId,
-      input.reason.trim(),
-      Date.now(),
-      id,
-      (input.revision as number) + 1,
-    ),
-    env.DB.prepare(
-      "UPDATE abuse_reports SET state='REVIEWED' WHERE publication_id=? AND EXISTS(SELECT 1 FROM publications WHERE id=? AND state='HIDDEN_BY_MODERATION')",
-    ).bind(id, id),
-  ]);
-  if (!results[0]?.meta.changes)
+  const changes = await hidePublication(
+    env,
+    moderatorId,
+    id,
+    input.revision as number,
+    input.reason.trim(),
+  );
+  if (!changes)
     throw new HttpError(
       409,
       'REVISION_CONFLICT',
@@ -184,12 +156,7 @@ export function isModerator(env: RuntimeEnv, userId: string): boolean {
  */
 export async function listModerationQueue(env: RuntimeEnv, userId: string) {
   assertModerator(env, userId);
-  const rows = await env.DB.prepare(
-    `SELECT a.id,a.publication_id AS publicationId,a.category,a.description,a.created_at AS createdAt,
-    p.origin,p.visibility,p.state,p.revision FROM abuse_reports a JOIN publications p ON p.id=a.publication_id
-    WHERE a.state='OPEN' ORDER BY a.created_at ASC LIMIT 100`,
-  ).all<ModerationItem>();
-  return rows.results;
+  return openModerationQueue(env);
 }
 
 /**
@@ -206,9 +173,7 @@ export async function getModerationPublication(
 ): Promise<PublicationDetail | null> {
   assertModerator(env, userId);
   if (!/^[a-f0-9-]{36}$/iu.test(id)) return null;
-  const row = await env.DB.prepare('SELECT * FROM publications WHERE id=?')
-    .bind(id)
-    .first<PublicationRow>();
+  const row = await storedPublication(env, id);
   if (!row) return null;
   return {
     ...summarize(row),

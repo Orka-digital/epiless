@@ -1,4 +1,9 @@
 import {
+  pruneChallenges,
+  insertChallenge,
+  consumeChallenge,
+} from './db/challenges';
+import {
   HttpError,
   isLocalFixture,
   assertConfigured,
@@ -150,17 +155,6 @@ export async function rateLimit(
     );
 }
 
-export interface ChallengeRow {
-  id: string;
-  action: string;
-  cdata: string;
-  owner_id: string | null;
-  intent_id: string | null;
-  expires_at: number;
-  verify_key: string;
-  used: number;
-}
-
 export async function createChallenge(
   env: RuntimeEnv,
   request: Request,
@@ -171,23 +165,17 @@ export async function createChallenge(
   const now = Date.now();
   const id = crypto.randomUUID();
   const cdata = crypto.randomUUID().replaceAll('-', '');
-  await env.DB.prepare('DELETE FROM challenges WHERE expires_at < ?')
-    .bind(now - 60_000)
-    .run();
-  await env.DB.prepare(
-    'INSERT INTO challenges(id,action,owner_id,intent_id,cdata,created_at,expires_at,verify_key) VALUES(?,?,?,?,?,?,?,?)',
-  )
-    .bind(
-      id,
-      action,
-      ownerId || null,
-      intentId || null,
-      cdata,
-      now,
-      now + 5 * 60_000,
-      crypto.randomUUID(),
-    )
-    .run();
+  await pruneChallenges(env, now - 60_000);
+  await insertChallenge(env, {
+    id,
+    action,
+    owner_id: ownerId || null,
+    intent_id: intentId || null,
+    cdata,
+    created_at: now,
+    expires_at: now + 5 * 60_000,
+    verify_key: crypto.randomUUID(),
+  });
   return {
     id,
     action,
@@ -221,17 +209,13 @@ export async function verifyChallenge(
       'CHALLENGE_REQUIRED',
       'Voltooi de verificatie opnieuw.',
     );
-  const row = await env.DB.prepare(
-    'UPDATE challenges SET used=1 WHERE id=? AND used=0 AND expires_at>=? AND action=? AND owner_id IS ? AND intent_id IS ? RETURNING *',
-  )
-    .bind(
-      args.challengeId,
-      Date.now(),
-      args.action,
-      args.ownerId || null,
-      args.intentId || null,
-    )
-    .first<ChallengeRow>();
+  const row = await consumeChallenge(
+    env,
+    args.challengeId,
+    args.action,
+    args.ownerId,
+    args.intentId,
+  );
   if (!row)
     throw new HttpError(
       403,

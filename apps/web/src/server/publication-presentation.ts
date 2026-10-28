@@ -1,3 +1,4 @@
+import type { PublicationMetadata } from './db/publication-reads';
 import { type AuditReport } from '@epi-less/core';
 import {
   type PublicationDetail,
@@ -24,7 +25,7 @@ export function parseVisibility(value: unknown): Visibility {
 /**
  * Project stored metadata into the transport shape without exposing the report body.
  */
-export function summarize(row: PublicationRow): PublicationSummary {
+export function summarize(row: PublicationMetadata): PublicationSummary {
   return {
     id: row.id,
     origin: row.origin,

@@ -8,7 +8,15 @@ import { assertPublicOrigin } from './public-origin';
 import { assertUploadsAvailable } from './publication-mutations';
 import { parseVisibility } from './publication-presentation';
 import { getPublication } from './publication-queries';
-import { type IntentRow } from './publication-types';
+import { databaseErrorIncludes } from './db/client';
+import {
+  findIntent,
+  expireIntents,
+  insertIntent,
+  renewIntent,
+  grantIntent,
+  cancelStoredIntent,
+} from './db/intents';
 import { createChallenge, MAX_BODY, verifyChallenge } from './security';
 import { HttpError, type RuntimeEnv } from './types';
 
@@ -67,16 +75,10 @@ export async function createIntent(
       'Het rapport veranderde na de preview. Controleer het opnieuw.',
     );
   const now = Date.now();
-  await env.DB.prepare(
-    "UPDATE publication_intents SET state='EXPIRED',report_json=NULL WHERE owner_id=? AND expires_at<? AND state IN ('PENDING','VERIFIED')",
-  )
-    .bind(ownerId, now)
-    .run();
-  const existing = await env.DB.prepare(
-    'SELECT * FROM publication_intents WHERE owner_id=? AND idempotency_key=?',
-  )
-    .bind(ownerId, input.idempotencyKey)
-    .first<IntentRow>();
+  await expireIntents(env, ownerId, now);
+  const existing = await findIntent(env, ownerId, {
+    idempotencyKey: input.idempotencyKey,
+  });
   if (existing) {
     if (existing.content_hash !== hash || existing.visibility !== visibility)
       throw new HttpError(
@@ -104,13 +106,15 @@ export async function createIntent(
     if (existing.expires_at < now || existing.state === 'EXPIRED') {
       let renewed: D1Result;
       try {
-        renewed = await env.DB.prepare(
-          "UPDATE publication_intents SET state='PENDING',report_json=?,expires_at=?,verified_until=NULL WHERE id=? AND owner_id=? AND canceled_at IS NULL AND state!='CONSUMED' AND NOT EXISTS(SELECT 1 FROM publications WHERE id=?)",
-        )
-          .bind(json, now + 10 * 60_000, existing.id, ownerId, existing.id)
-          .run();
+        renewed = await renewIntent(
+          env,
+          ownerId,
+          existing.id,
+          json,
+          now + 10 * 60_000,
+        );
       } catch (error) {
-        if (String(error).includes('PENDING_QUOTA'))
+        if (databaseErrorIncludes(error, 'PENDING_QUOTA'))
           throw new HttpError(
             429,
             'PENDING_QUOTA',
@@ -145,37 +149,31 @@ export async function createIntent(
   assertUploadsAvailable(env);
   const id = crypto.randomUUID();
   try {
-    await env.DB.prepare(
-      'INSERT INTO publication_intents(id,owner_id,idempotency_key,content_hash,visibility,report_json,size_bytes,origin,status,route_count,created_at,expires_at) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)',
-    )
-      .bind(
-        id,
-        ownerId,
-        input.idempotencyKey,
-        hash,
-        visibility,
-        json,
-        size,
-        report.origin,
-        report.status,
-        report.routes.length,
-        now,
-        now + 10 * 60_000,
-      )
-      .run();
+    await insertIntent(env, {
+      id,
+      owner_id: ownerId,
+      idempotency_key: input.idempotencyKey,
+      content_hash: hash,
+      visibility,
+      report_json: json,
+      size_bytes: size,
+      origin: report.origin,
+      status: report.status,
+      route_count: report.routes.length,
+      created_at: now,
+      expires_at: now + 10 * 60_000,
+    });
   } catch (error) {
     if (
-      String(error).includes('PENDING_QUOTA') ||
-      String(error).includes('UNIQUE')
+      databaseErrorIncludes(error, 'PENDING_QUOTA') ||
+      databaseErrorIncludes(error, 'UNIQUE')
     ) {
-      const wonRace = await env.DB.prepare(
-        'SELECT id FROM publication_intents WHERE owner_id=? AND idempotency_key=?',
-      )
-        .bind(ownerId, input.idempotencyKey)
-        .first();
+      const wonRace = await findIntent(env, ownerId, {
+        idempotencyKey: input.idempotencyKey,
+      });
       if (wonRace) return createIntent(env, request, ownerId, input);
     }
-    if (String(error).includes('PENDING_QUOTA'))
+    if (databaseErrorIncludes(error, 'PENDING_QUOTA'))
       throw new HttpError(
         429,
         'PENDING_QUOTA',
@@ -208,11 +206,7 @@ export async function verifyIntent(
   id: string,
   input: Record<string, unknown>,
 ) {
-  const intent = await env.DB.prepare(
-    'SELECT * FROM publication_intents WHERE id=? AND owner_id=?',
-  )
-    .bind(id, ownerId)
-    .first<IntentRow>();
+  const intent = await findIntent(env, ownerId, { id });
   if (!intent) throw new HttpError(404, 'NOT_FOUND', 'Opdracht niet gevonden.');
   if (intent.canceled_at !== null)
     throw new HttpError(
@@ -236,16 +230,13 @@ export async function verifyIntent(
     ownerId,
     intentId: id,
   });
-  const result = await env.DB.prepare(
-    "UPDATE publication_intents SET state='VERIFIED',verified_until=? WHERE id=? AND owner_id=? AND state='PENDING' AND canceled_at IS NULL AND expires_at>=?",
-  )
-    .bind(
-      Math.min(intent.expires_at, Date.now() + 10 * 60_000),
-      id,
-      ownerId,
-      Date.now(),
-    )
-    .run();
+  const result = await grantIntent(
+    env,
+    ownerId,
+    id,
+    Math.min(intent.expires_at, Date.now() + 10 * 60_000),
+    Date.now(),
+  );
   if (!result.meta.changes)
     throw new HttpError(
       409,
@@ -262,11 +253,7 @@ export async function cancelIntent(
   id: string,
   input: Record<string, unknown>,
 ) {
-  const intent = await env.DB.prepare(
-    'SELECT * FROM publication_intents WHERE id=? AND owner_id=?',
-  )
-    .bind(id, ownerId)
-    .first<IntentRow>();
+  const intent = await findIntent(env, ownerId, { id });
   if (!intent) throw new HttpError(404, 'NOT_FOUND', 'Opdracht niet gevonden.');
   if (input.contentHash !== intent.content_hash)
     throw new HttpError(
@@ -274,16 +261,8 @@ export async function cancelIntent(
       'SNAPSHOT_CHANGED',
       'Deze annulering hoort bij een andere snapshot.',
     );
-  await env.DB.prepare(
-    "UPDATE publication_intents SET state='EXPIRED',report_json=NULL,origin='https://deleted.invalid',status='ERROR',route_count=0,canceled_at=?,verified_until=NULL WHERE id=? AND owner_id=? AND state!='CONSUMED' AND canceled_at IS NULL",
-  )
-    .bind(Date.now(), id, ownerId)
-    .run();
-  const current = await env.DB.prepare(
-    'SELECT state,canceled_at FROM publication_intents WHERE id=? AND owner_id=?',
-  )
-    .bind(id, ownerId)
-    .first<IntentRow>();
+  await cancelStoredIntent(env, ownerId, id, Date.now());
+  const current = await findIntent(env, ownerId, { id });
   if (current?.state === 'CONSUMED')
     return {
       state: 'CONSUMED',
