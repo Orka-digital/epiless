@@ -109,13 +109,7 @@ export interface InspectionAction {
  * @returns An allow/deny decision with its reason; never activates the control.
  */
 export function evaluateAction(action: InspectionAction): PolicyDecision {
-  if (
-    action.download ||
-    action.inForm ||
-    ['submit', 'reset', 'image'].includes(action.type?.toLowerCase() ?? '') ||
-    hasTransactionMarker(`${action.text ?? ''} ${action.ariaControls ?? ''}`) ||
-    /\b(post|upload)\b/i.test(action.text ?? '')
-  ) {
+  if (potentialTransaction(action)) {
     return { allowed: false, reason: 'POTENTIAL_TRANSACTION' };
   }
   if (action.kind === 'link')
@@ -133,14 +127,7 @@ export function evaluateAction(action: InspectionAction): PolicyDecision {
   }
   if (action.kind === 'tab' && action.role === 'tab' && action.ariaControls)
     return { allowed: true, reason: 'SUPPORTED_TAB' };
-  if (
-    action.kind === 'carousel' &&
-    action.role === 'button' &&
-    action.ariaControls &&
-    /^(next|previous|volgende|vorige)( slide| dia)?$/i.test(
-      action.text?.trim() ?? '',
-    )
-  ) {
+  if (supportedCarousel(action)) {
     return { allowed: true, reason: 'SUPPORTED_CAROUSEL' };
   }
   // Only callers which have identified a supported consent component may use this kind.
@@ -154,4 +141,25 @@ export function evaluateAction(action: InspectionAction): PolicyDecision {
     return { allowed: true, reason: 'SUPPORTED_CONSENT_REJECTION' };
   }
   return { allowed: false, reason: 'UNSUPPORTED_CONTROL' };
+}
+
+function supportedCarousel(action: InspectionAction) {
+  return (
+    action.kind === 'carousel' &&
+    action.role === 'button' &&
+    action.ariaControls &&
+    /^(next|previous|volgende|vorige)( slide| dia)?$/i.test(
+      action.text?.trim() ?? '',
+    )
+  );
+}
+
+function potentialTransaction(action: InspectionAction) {
+  return (
+    action.download ||
+    action.inForm ||
+    ['submit', 'reset', 'image'].includes(action.type?.toLowerCase() ?? '') ||
+    hasTransactionMarker(`${action.text ?? ''} ${action.ariaControls ?? ''}`) ||
+    /\b(post|upload)\b/i.test(action.text ?? '')
+  );
 }
