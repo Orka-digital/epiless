@@ -250,5 +250,12 @@ try {
   }
   server.closeAllConnections();
   await new Promise((resolve) => server.close(resolve));
-  await rm(directory, { recursive: true, force: true });
+  // Chromium child processes can finish profile writes after the parent exits.
+  // Retry transient cleanup errors, but still fail if the directory remains.
+  await rm(directory, {
+    recursive: true,
+    force: true,
+    maxRetries: 5,
+    retryDelay: 200,
+  });
 }
