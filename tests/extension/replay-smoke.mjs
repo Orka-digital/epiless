@@ -284,17 +284,6 @@ try {
         chrome.windows.get((await chrome.tabs.get(tabId)).windowId),
       pending.tabId,
     );
-    if (new URL(job.startUrl).pathname === '/media') {
-      // This fixture replaces tabCapture, so Chrome has no capture session to
-      // keep the replay renderer producing video frames. Explicitly foreground
-      // the newly created page, just as we do for the baseline below. This is
-      // control-flow evidence, not background capture/cadence acceptance.
-      await replayPage.bringToFront();
-      assert.equal(
-        await replayPage.evaluate(() => document.visibilityState),
-        'visible',
-      );
-    }
     const started = await send({
       type: 'PREPARE_START',
       tabId: pending.tabId,
@@ -302,6 +291,18 @@ try {
       mode: 'AUTONOMOUS',
     });
     assert.equal(started.ok, true, started.error);
+    if (new URL(job.startUrl).pathname === '/media') {
+      // This fixture replaces tabCapture, so Chrome has no capture session to
+      // keep the replay renderer producing video frames. START opens the
+      // dashboard, so foreground the replay AFTER that command completes.
+      // This matches the baseline below. This is
+      // control-flow evidence, not background capture/cadence acceptance.
+      await replayPage.bringToFront();
+      assert.equal(
+        await replayPage.evaluate(() => document.visibilityState),
+        'visible',
+      );
+    }
     let result;
     for (let count = 0; count < 100; count++) {
       const state = (await send({ type: 'GET_STATE' })).value;
