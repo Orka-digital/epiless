@@ -1,14 +1,22 @@
-import { readFile } from 'node:fs/promises';
+import { build } from 'esbuild';
 import vm from 'node:vm';
 import { expect, it, vi } from 'vitest';
 
 it('wakes on real-message shapes with the interval fully suspended and coalesces busy polls', async () => {
   // This exercises only the controller scheduler with mocked APIs. It never
   // creates a browser, capture stream, native evidence record or success claim.
-  const source = await readFile(
-    new URL('./native-context-controller.js', import.meta.url),
-    'utf8',
-  );
+  const bundle = await build({
+    entryPoints: [
+      new URL('./native-context-controller.js', import.meta.url).pathname,
+    ],
+    bundle: true,
+    format: 'iife',
+    external: ['./fixture-tab-switch.mjs'],
+    globalName: 'NativeContextController',
+    write: false,
+  });
+  const source =
+    bundle.outputFiles[0]!.text + '\nNativeContextController.controllerReady;';
   let listener: (message: any, sender: any) => void;
   const pending: Array<(value: unknown) => void> = [];
   let concurrent = 0,
@@ -76,10 +84,18 @@ it('wakes on real-message shapes with the interval fully suspended and coalesces
 it('records the original before preparation and passively observes the real prepared owner without issuing PREPARE or START', async () => {
   // API mocks validate only fixture authority and collection order, never native
   // capture acceptance. There is no real browser or stored native evidence here.
-  const source = await readFile(
-    new URL('./native-context-controller.js', import.meta.url),
-    'utf8',
-  );
+  const bundle = await build({
+    entryPoints: [
+      new URL('./native-context-controller.js', import.meta.url).pathname,
+    ],
+    bundle: true,
+    format: 'iife',
+    external: ['./fixture-tab-switch.mjs'],
+    globalName: 'NativeContextController',
+    write: false,
+  });
+  const source =
+    bundle.outputFiles[0]!.text + '\nNativeContextController.controllerReady;';
   const origin = 'http://127.0.0.1:1';
   let listener: (message: any, sender: any) => void;
   // The fake browser must report no owner until PREPARE completes below.
