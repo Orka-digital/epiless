@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import type { CommandAction } from './command-protocol';
 import { TERMINAL_STATES, type ScanJob } from './model';
+import { ScanReportActions } from './ScanReportActions';
 import { labels, stopSummary } from './ui-labels';
 /** Present scan status and explicit lifecycle/export actions around caller-owned measurements. */
 export function ScanReportCard({
@@ -108,53 +109,7 @@ export function ScanReportCard({
           bewaard.
         </p>
       )}
-      <div className="actions">
-        {chosen.state === 'RUNNING' && (
-          <button
-            disabled={busy}
-            onClick={() => void act('PAUSE', { id: chosen.id })}
-          >
-            Pauzeer
-          </button>
-        )}
-        {['PAUSED', 'INTERRUPTED'].includes(chosen.state) &&
-          !chosen.disposableSource?.closed && (
-            <button disabled={busy} onClick={() => void resume(chosen)}>
-              Hervat via scantab
-            </button>
-          )}
-        {!TERMINAL_STATES.includes(chosen.state) && (
-          <button
-            className="danger"
-            disabled={busy || chosen.state === 'STOPPING'}
-            onClick={() => void act('STOP', { id: chosen.id })}
-          >
-            Stop scan
-          </button>
-        )}
-        {popup && (
-          <button onClick={() => void act('OPEN_DASHBOARD')}>
-            Bekijk voortgang ↗
-          </button>
-        )}
-        {!popup && TERMINAL_STATES.includes(chosen.state) && (
-          <>
-            <button onClick={() => void exportJob(chosen.id)}>
-              Exporteer JSON
-            </button>
-            <button onClick={() => void exportJob(chosen.id, true)}>
-              Exporteer HTML
-            </button>
-            <button
-              className="primary"
-              disabled={busy}
-              onClick={() => void act('PUBLISH_PREVIEW', { id: chosen.id })}
-            >
-              Uploadvoorbeeld openen ↗
-            </button>
-          </>
-        )}
-      </div>
+      <ScanReportActions {...{ chosen, busy, resume, act, popup, exportJob }} />
       {!popup && TERMINAL_STATES.includes(chosen.state) && (
         <details className="export-options">
           <summary>Privacy- en exportopties</summary>
