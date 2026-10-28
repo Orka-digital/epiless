@@ -152,16 +152,7 @@ export function validMediaEvidence(value: unknown): value is MediaEvidence {
             typeof sample.ended === 'boolean' &&
             typeof sample.seeking === 'boolean' &&
             typeof sample.loop === 'boolean' &&
-            (sample.presentation === undefined ||
-              (sample.presentation &&
-                typeof sample.presentation === 'object' &&
-                finite(sample.presentation.timeMs) &&
-                Number.isInteger(sample.presentation.count) &&
-                sample.presentation.count > 0 &&
-                sample.presentation.count <= 100_000 &&
-                Number.isInteger(sample.presentation.wraps) &&
-                sample.presentation.wraps >= 0 &&
-                sample.presentation.wraps <= 1000)) &&
+            validSamplePresentation(sample.presentation) &&
             finite(sample.playbackRate, 16) &&
             sample.playbackRate > 0 &&
             (index === 0 || sample.atMs >= item.samples[index - 1].atMs),
@@ -265,5 +256,22 @@ export function sameSource(a: MediaState, b: MediaState): boolean {
     a.durationMs === b.durationMs &&
     a.playbackRate === b.playbackRate &&
     a.loop === b.loop
+  );
+}
+
+function validSamplePresentation(
+  presentation: import('./media-replay-types').MediaSample['presentation'],
+): boolean {
+  return Boolean(
+    presentation === undefined ||
+    (presentation &&
+      typeof presentation === 'object' &&
+      finite(presentation.timeMs) &&
+      Number.isInteger(presentation.count) &&
+      presentation.count > 0 &&
+      presentation.count <= 100_000 &&
+      Number.isInteger(presentation.wraps) &&
+      presentation.wraps >= 0 &&
+      presentation.wraps <= 1000),
   );
 }

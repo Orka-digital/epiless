@@ -1,6 +1,9 @@
 import {
   MEDIA_POSITION_EPSILON_MS,
   type MediaEvidence,
+  type MediaPresentation,
+  type MediaSample,
+  type MediaState,
 } from './media-replay-types';
 import { sameSource } from './media-replay-validation';
 
@@ -55,22 +58,7 @@ export function presentedSequence(
   }
   // While playback is moving, stale/missing compositor evidence >250ms is
   // unsupported, even if currentTime advances and tabCapture itself is healthy.
-  let cursor = -1,
-    playingSince: number | undefined;
-  for (const sample of samples) {
-    while (cursor + 1 < frames.length && frames[cursor + 1].atMs <= sample.atMs)
-      cursor++;
-    if (sample.paused || sample.ended) {
-      playingSince = undefined;
-      continue;
-    }
-    playingSince ??= sample.atMs;
-    if (
-      sample.atMs - playingSince > 250 &&
-      (cursor < 0 || sample.atMs - frames[cursor].atMs > 250)
-    )
-      return;
-  }
+  if (!hasFreshPresentations(samples, frames)) return;
   return { points, wraps };
 }
 
@@ -96,15 +84,7 @@ export function measuredMediaInterval(item: MediaEvidence['items'][number]):
   for (const sample of item.samples.slice(1)) {
     const deltaAt = sample.atMs - previous.atMs;
     if (sample.presentation) {
-      if (
-        presentation &&
-        (sample.presentation.count < presentation.count ||
-          sample.presentation.wraps < presentation.wraps ||
-          (sample.presentation.count === presentation.count &&
-            (sample.presentation.timeMs !== presentation.timeMs ||
-              sample.presentation.wraps !== presentation.wraps)))
-      )
-        return;
+      if (regressedPresentation(presentation, sample.presentation)) return;
       presentation = sample.presentation;
     }
     if (
@@ -117,14 +97,7 @@ export function measuredMediaInterval(item: MediaEvidence['items'][number]):
     const wrapped = sample.timeMs + MEDIA_POSITION_EPSILON_MS < previous.timeMs;
     if (wrapped) {
       const duration = item.before.durationMs;
-      if (
-        !item.before.loop ||
-        !duration ||
-        previous.timeMs < duration - 250 * sample.playbackRate ||
-        sample.timeMs > 250 * sample.playbackRate ||
-        duration / sample.playbackRate <= 500
-      )
-        return;
+      if (!validSampleWrap(item.before, previous, sample, duration)) return;
       advance += duration;
       offset += duration;
       wraps++;
@@ -133,19 +106,8 @@ export function measuredMediaInterval(item: MediaEvidence['items'][number]):
     // seeking flag nor later coverage can justify skipping unseen content.
     if (advance > deltaAt * sample.playbackRate + MEDIA_POSITION_EPSILON_MS)
       return;
-    if (
-      sample.seeking &&
-      !wrapped &&
-      Math.abs(sample.timeMs - first.timeMs) > MEDIA_POSITION_EPSILON_MS &&
-      !(
-        item.before.loop &&
-        sample.timeMs <= MEDIA_POSITION_EPSILON_MS &&
-        previous.timeMs <= 250 * sample.playbackRate
-      )
-    )
-      return;
-    if (sample.timeMs !== previous.timeMs || sample.paused || sample.ended)
-      lastProgressAt = sample.atMs;
+    if (unexplainedSeek(sample, previous, first, item.before, wrapped)) return;
+    lastProgressAt = sampleProgressTime(sample, previous, lastProgressAt);
     if (!sample.paused && !sample.ended && sample.atMs - lastProgressAt > 250)
       return;
     previous = sample;
@@ -162,4 +124,87 @@ export function measuredMediaInterval(item: MediaEvidence['items'][number]):
       ? { presentedEndMs: presented.points.at(-1)! }
       : {}),
   };
+}
+
+function hasFreshPresentations(
+  samples: MediaSample[],
+  frames: MediaPresentation[],
+): boolean {
+  let cursor = -1,
+    playingSince: number | undefined;
+  for (const sample of samples) {
+    while (cursor + 1 < frames.length && frames[cursor + 1].atMs <= sample.atMs)
+      cursor++;
+    if (sample.paused || sample.ended) {
+      playingSince = undefined;
+      continue;
+    }
+    playingSince ??= sample.atMs;
+    if (
+      sample.atMs - playingSince > 250 &&
+      (cursor < 0 || sample.atMs - frames[cursor].atMs > 250)
+    )
+      return false;
+  }
+  return true;
+}
+
+function regressedPresentation(
+  presentation: MediaSample['presentation'],
+  next: NonNullable<MediaSample['presentation']>,
+): boolean {
+  return Boolean(
+    presentation &&
+    (next.count < presentation.count ||
+      next.wraps < presentation.wraps ||
+      (next.count === presentation.count &&
+        (next.timeMs !== presentation.timeMs ||
+          next.wraps !== presentation.wraps))),
+  );
+}
+
+function unexplainedSeek(
+  sample: MediaSample,
+  previous: MediaSample,
+  first: MediaSample,
+  before: MediaState,
+  wrapped: boolean,
+): boolean {
+  return (
+    sample.seeking &&
+    !wrapped &&
+    Math.abs(sample.timeMs - first.timeMs) > MEDIA_POSITION_EPSILON_MS &&
+    !(
+      before.loop &&
+      sample.timeMs <= MEDIA_POSITION_EPSILON_MS &&
+      previous.timeMs <= 250 * sample.playbackRate
+    )
+  );
+}
+
+function validSampleWrap(
+  before: MediaState,
+  previous: MediaSample,
+  sample: MediaSample,
+  duration: number | null,
+): duration is number {
+  if (
+    !before.loop ||
+    !duration ||
+    previous.timeMs < duration - 250 * sample.playbackRate ||
+    sample.timeMs > 250 * sample.playbackRate ||
+    duration / sample.playbackRate <= 500
+  )
+    return false;
+  return true;
+}
+
+function sampleProgressTime(
+  sample: MediaSample,
+  previous: MediaSample,
+  lastProgressAt: number,
+): number {
+  if (sample.timeMs !== previous.timeMs || sample.paused || sample.ended)
+    return sample.atMs;
+  return lastProgressAt;
 }

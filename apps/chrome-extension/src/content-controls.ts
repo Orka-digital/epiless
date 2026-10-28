@@ -90,35 +90,12 @@ export function createContentControls(
     // Incomplete traversal cannot prove the absence of a nested form, password
     // field or blocking dialog. Keep observing pixels, but do not activate it.
     if (tree.limitations.length) return false;
-    if (
-      element.matches(
-        'input,select,textarea,label,[form],[formaction],[formmethod]',
-      ) ||
-      (element instanceof HTMLButtonElement && element.form)
-    )
-      return false;
-    if (
-      !element.isConnected ||
-      !visible(element) ||
-      composedClosest(
-        element,
-        'form,[contenteditable]:not([contenteditable="false"]),[aria-hidden="true"],[inert],a[href]',
-      ) ||
-      element.hasAttribute('disabled') ||
-      element.getAttribute('aria-disabled') === 'true'
-    )
-      return false;
+    if (!availableControlElement(element)) return false;
     const consent =
       kind === 'consent-reject' ? consentContainer(element) : undefined;
     if (kind === 'consent-reject' && !consent) return false;
     const blockingModal = modal();
-    if (
-      blockingModal &&
-      (!consent ||
-        (!composedContains(consent, blockingModal) &&
-          !composedContains(blockingModal, consent)))
-    )
-      return false;
+    if (blockedByModal(blockingModal, consent)) return false;
     if (kind === 'media') return element instanceof HTMLVideoElement;
     const controlsId = consent?.id ?? element.getAttribute('aria-controls');
     if (!controlsId) return false;
@@ -134,38 +111,7 @@ export function createContentControls(
     )
       return false;
     if (kind === 'carousel' && carouselSlides(element).length < 2) return false;
-    const identifiers = [
-      element.id,
-      element.getAttribute('name'),
-      controlsId,
-      element.getAttribute('aria-label'),
-      element.textContent,
-    ].join(' ');
-    if (
-      /log.?in|sign.?in|inloggen|aanmelden|permission|authorize|authorise|toestemming|password|wachtwoord|captcha/i.test(
-        identifiers,
-      )
-    )
-      return false;
-    return evaluateAction({
-      kind,
-      role:
-        element.getAttribute('role') ??
-        (element instanceof HTMLButtonElement ? 'button' : undefined),
-      type: element.getAttribute('type') ?? undefined,
-      href: element.getAttribute('href') ?? undefined,
-      text: (
-        element.getAttribute('aria-label') ??
-        element.textContent ??
-        ''
-      ).slice(0, 300),
-      ariaControls: controlsId,
-      ariaExpanded: element.hasAttribute('aria-expanded')
-        ? element.getAttribute('aria-expanded') === 'true'
-        : undefined,
-      inForm: !!composedClosest(element, 'form'),
-      download: element.hasAttribute('download'),
-    }).allowed;
+    return allowedControlSemantics(element, kind, controlsId);
   }
   return {
     modal,
@@ -177,4 +123,77 @@ export function createContentControls(
     controlKind,
     safeControl,
   };
+}
+
+function allowedControlSemantics(
+  element: HTMLElement,
+  kind: ControlKind,
+  controlsId: string,
+): boolean {
+  const identifiers = [
+    element.id,
+    element.getAttribute('name'),
+    controlsId,
+    element.getAttribute('aria-label'),
+    element.textContent,
+  ].join(' ');
+  if (
+    /log.?in|sign.?in|inloggen|aanmelden|permission|authorize|authorise|toestemming|password|wachtwoord|captcha/i.test(
+      identifiers,
+    )
+  )
+    return false;
+  return evaluateAction({
+    kind,
+    role:
+      element.getAttribute('role') ??
+      (element instanceof HTMLButtonElement ? 'button' : undefined),
+    type: element.getAttribute('type') ?? undefined,
+    href: element.getAttribute('href') ?? undefined,
+    text: (
+      element.getAttribute('aria-label') ??
+      element.textContent ??
+      ''
+    ).slice(0, 300),
+    ariaControls: controlsId,
+    ariaExpanded: element.hasAttribute('aria-expanded')
+      ? element.getAttribute('aria-expanded') === 'true'
+      : undefined,
+    inForm: !!composedClosest(element, 'form'),
+    download: element.hasAttribute('download'),
+  }).allowed;
+}
+
+function availableControlElement(element: HTMLElement): boolean {
+  if (
+    element.matches(
+      'input,select,textarea,label,[form],[formaction],[formmethod]',
+    ) ||
+    (element instanceof HTMLButtonElement && element.form)
+  )
+    return false;
+  if (
+    !element.isConnected ||
+    !visible(element) ||
+    composedClosest(
+      element,
+      'form,[contenteditable]:not([contenteditable="false"]),[aria-hidden="true"],[inert],a[href]',
+    ) ||
+    element.hasAttribute('disabled') ||
+    element.getAttribute('aria-disabled') === 'true'
+  )
+    return false;
+  return true;
+}
+
+function blockedByModal(
+  blockingModal: HTMLElement | undefined,
+  consent: HTMLElement | undefined,
+): boolean {
+  return Boolean(
+    blockingModal &&
+    (!consent ||
+      (!composedContains(consent, blockingModal) &&
+        !composedContains(blockingModal, consent))),
+  );
 }
