@@ -6,7 +6,7 @@ epi-less scans websites locally, records when and where suspicious changes occur
 
 A community project for investigating flashing web content. Contributions to detection, accessibility and documentation are welcome.
 
-> **Development preview · repository temporarily private.** Access is required to clone or contribute. The local P0 workflow runs; scanner 0.4 remains a candidate implementation with unresolved capture and validation gates. There is no official hosted service or Chrome Web Store release yet. A public, community-developed project remains the intention. The scanner produces review candidates, not a validated WCAG verdict or medical safety guarantee.
+> **Development preview · open for contributions.** The local P0 workflow runs; scanner 0.4 remains a candidate implementation with unresolved capture and validation gates. There is no official hosted service or Chrome Web Store release yet. The scanner produces review candidates, not a validated WCAG verdict or medical safety guarantee.
 
 [Quickstart](#quickstart) · [First scan](#your-first-scan) · [Detection quality](#detection-quality) · [Contributing](#contributing) · [Documentation](#documentation)
 
@@ -135,6 +135,8 @@ Publication defaults replace route paths and redact original free text. Pixel tr
 Withdrawal stops subsequent server access; downloaded copies remain outside the service's control. Removing local history and removing an online publication are separate actions. Repository visibility does not determine report visibility.
 
 ## Architecture and hosting
+
+Database access uses one shared Drizzle schema. Ordinary queries use Drizzle; atomic publication, moderation and erasure SQL lives in small documented modules. See [database contracts](docs/DATABASE.md).
 
 | Workspace                                              | Responsibility                                                                                               |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |

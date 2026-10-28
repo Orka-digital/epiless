@@ -1,0 +1,177 @@
+---
+import type { ReportPagination } from '../../lib/report-pagination';
+import {
+  captureWindowSummary,
+  captureDetailSummary,
+} from '@epi-less/core/quality';
+import {
+  renderFindingDiagnostics,
+  transitionSummary,
+} from '@epi-less/core/diagnostics';
+/** Render numeric evidence with its capture limitations, without starting playback. */
+interface Props {
+  scenario: ReportPagination['routes'][number]['scenarios'][number];
+  totalScenarios: number;
+  paginated: boolean;
+}
+const { scenario: s, totalScenarios, paginated } = Astro.props;
+---
+
+<section class="scenario" data-scenario-id={s.id}>
+  <h3>{s.type}</h3>
+  {paginated && (
+    <p class="fine">
+      Scenario {s.scenarioIndex + 1} van {totalScenarios}
+      {s.totalFindings > 0
+        ? ` · bevindingen ${s.firstFinding + 1}–${s.firstFinding + s.findings.length} van ${s.totalFindings}`
+        : ' · geen kandidaten'}
+      .
+    </p>
+  )}
+  <p class="fine scenario-quality">
+    {s.quality.frameCount} frames · {s.quality.effectiveFps.toFixed(1)} fps
+    gemeten · grootste tijdgat {Math.round(s.quality.maxGapMs)} ms ·{' '}
+    {s.quality.width} × {s.quality.height} px
+    {s.quality.downsampled ? ' · verkleinde analyse' : ''}
+    {s.quality.interrupted ? ' · onderbroken' : ''}
+  </p>
+  {s.quality.captureWindowMs !== undefined && (
+    <p class="fine">{captureWindowSummary(s.quality)}</p>
+  )}
+  {captureDetailSummary(s.quality) && (
+    <p class="fine">{captureDetailSummary(s.quality)}</p>
+  )}
+  {s.findings.length > 0 ? (
+    <ul class="finding-list">
+      {s.findings.map((f) => (
+        <li data-finding-id={f.id}>
+          <strong>
+            {f.type === 'RED_FLASH' ? 'Rode flitskandidaat' : 'Flitskandidaat'}
+          </strong>
+          <p>{f.message}</p>
+          <span class="fine">
+            {(f.startMs / 1000).toFixed(2)}–{(f.endMs / 1000).toFixed(2)} s
+            vanaf het eerste geanalyseerde frame · {transitionSummary(f)} ·
+            beoordeling nodig
+          </span>
+          <details class="finding-measurement">
+            <summary>Gebied en analysecoördinaten</summary>
+            <dl>
+              <div>
+                <dt>Gemeten aandeel</dt>
+                <dd>
+                  {new Intl.NumberFormat('nl-BE', {
+                    style: 'percent',
+                    maximumFractionDigits: 2,
+                  }).format(f.affectedRatio)}{' '}
+                  van het geanalyseerde frame
+                </dd>
+              </div>
+              {f.region ? (
+                <div>
+                  <dt>Regio in analysepixels</dt>
+                  <dd>
+                    x={f.region.x}, y={f.region.y}, breedte=
+                    {f.region.width}, hoogte={f.region.height}
+                  </dd>
+                </div>
+              ) : (
+                <div>
+                  <dt>Regio</dt>
+                  <dd>Geen regio opgeslagen.</dd>
+                </div>
+              )}
+              <div>
+                <dt>Analyseframe</dt>
+                <dd>
+                  {s.quality.width} × {s.quality.height} px
+                  {s.quality.downsampled ? ' · verkleind voor analyse' : ''}
+                </dd>
+              </div>
+            </dl>
+            <p>
+              Deze waarden horen bij het analyseframe, niet bij CSS-pixels of
+              een normatief gezichtsveld.{' '}
+              {s.quality.downsampled
+                ? 'Door de verkleining kunnen kleine of korte veranderingen verloren gaan. '
+                : ''}
+              Dit is geen gevalideerde WCAG-oppervlaktebeoordeling.
+            </p>
+          </details>
+          <div set:html={renderFindingDiagnostics(f)} />
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p>
+      Geen kandidaten geregistreerd in dit scenario. Raadpleeg de meetkwaliteit
+      en beperkingen.
+    </p>
+  )}
+</section>
+
+<style>
+  .scenario {
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .scenario:last-child {
+    padding-bottom: 0;
+  }
+  .scenario h3 {
+    font-size: 13px;
+    margin: 0;
+  }
+  .scenario-quality {
+    margin: 8px 0 12px;
+  }
+  .scenario > p:not(.fine) {
+    font-size: 13px;
+  }
+  .finding-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .finding-list li {
+    padding: 12px 14px;
+    border-left: 3px solid #b78d35;
+    background: #faf6ea;
+    font-size: 13px;
+  }
+  .finding-list li + li {
+    margin-top: 10px;
+  }
+  .finding-list p {
+    margin-block: 6px;
+  }
+  .finding-measurement {
+    margin-top: 12px;
+  }
+  .finding-measurement summary {
+    padding: 4px 0;
+    font-size: 12px;
+    text-decoration: underline;
+  }
+  .finding-measurement dl {
+    margin-block: 10px;
+    font-size: 12px;
+  }
+  .finding-measurement dl > div {
+    margin-top: 8px;
+  }
+  .finding-measurement dt {
+    font-weight: 650;
+  }
+  .finding-measurement dd {
+    margin: 2px 0 0;
+    overflow-wrap: anywhere;
+  }
+  .finding-measurement p {
+    font-size: 12px;
+  }
+  .finding-list .fine {
+    display: block;
+    margin-top: 8px;
+  }
+</style>

@@ -133,6 +133,10 @@ export const sourceTimelineSchema = z
       value.candidates.length
     )
       issue('Duplicate timeline candidate');
+  })
+  .superRefine((value, context) => {
+    const issue = (message: string) =>
+      context.addIssue({ code: 'custom', message });
     if (
       value.sampleCount === 0 &&
       (value.firstSampleEpochMs !== undefined ||
@@ -157,9 +161,13 @@ export const sourceTimelineSchema = z
       issue(
         'Complete timeline requires sampled coverage of its estimated window',
       );
+  })
+  .superRefine((value, context) => {
+    const issue = (message: string) =>
+      context.addIssue({ code: 'custom', message });
     for (const candidate of value.candidates) {
       for (let i = 0; i < candidate.observations.length; i++) {
-        const sample = candidate.observations[i]!;
+        const sample = candidate.observations[i];
         if (
           sample.readWindow &&
           sample.readWindow.endEpochMs > sample.atEpochMs
@@ -177,7 +185,7 @@ export const sourceTimelineSchema = z
           sample.atEpochMs > value.windowEndEpochMs + 250
         )
           issue('Timeline sample outside allowed temporal context');
-        if (i && sample.atEpochMs <= candidate.observations[i - 1]!.atEpochMs)
+        if (i && sample.atEpochMs <= candidate.observations[i - 1].atEpochMs)
           issue('Timeline observations must be strictly ordered');
         if (
           sample.atEpochMs < value.firstSampleEpochMs! ||

@@ -1,0 +1,15 @@
+{
+  "prettier.requireConfig": true,
+  "prettier.useEditorConfig": true,
+  "[javascript][javascriptreact][typescript][typescriptreact][astro][json][jsonc][markdown][yaml][css][scss][html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "astro"
+  ]
+}

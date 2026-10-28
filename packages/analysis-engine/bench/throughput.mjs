@@ -139,7 +139,10 @@ for (const [width, height] of [
           (f) => f.diagnostic?.complete,
         ).length,
       });
+      // Release large buffers before the next trial and its memory baseline.
+      // eslint-disable-next-line no-useless-assignment
       analyzer = undefined;
+      // eslint-disable-next-line no-useless-assignment -- Release the previous frame buffer.
       rgba = undefined;
       texture = undefined;
     }

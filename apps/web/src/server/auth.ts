@@ -1,7 +1,7 @@
-import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from '@better-auth/drizzle-adapter';
-import { drizzle } from 'drizzle-orm/d1';
-import * as schema from './auth-schema';
+import { betterAuth } from 'better-auth';
+import { database } from './db/client';
+import * as schema from './db/schema';
 import { assertConfigured, HttpError, type RuntimeEnv } from './types';
 
 async function sendEmail(
@@ -42,6 +42,7 @@ async function sendEmail(
     );
 }
 
+/** Configure authentication against the shared database schema and runtime secrets. */
 export function createAuth(env: RuntimeEnv) {
   assertConfigured(env);
   const production = env.ENVIRONMENT === 'production';
@@ -50,7 +51,7 @@ export function createAuth(env: RuntimeEnv) {
     baseURL: env.PUBLIC_APP_ORIGIN,
     basePath: '/api/auth',
     secret: env.BETTER_AUTH_SECRET,
-    database: drizzleAdapter(drizzle(env.DB, { schema }), {
+    database: drizzleAdapter(database(env), {
       provider: 'sqlite',
       schema,
     }),
@@ -88,12 +89,14 @@ export function createAuth(env: RuntimeEnv) {
   });
 }
 
+/** Read the authenticated session from request headers without requiring sign-in. */
 export async function getSession(request: Request, env: RuntimeEnv) {
   // Anonymous report/index requests need neither auth initialization nor a DB lookup.
   if (!request.headers.get('cookie')) return null;
   return createAuth(env).api.getSession({ headers: request.headers });
 }
 
+/** Require an authenticated account and, by default, verified email; reject missing authorization. */
 export async function requireUser(
   request: Request,
   env: RuntimeEnv,

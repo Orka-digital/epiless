@@ -1,8 +1,8 @@
 import { FrameAnalyzer } from '@epi-less/analysis-engine';
+import type { ProcessingQuality } from '@epi-less/core';
+import { warmAnalysisRuntime } from './analysis-warmup';
 import { captureDimensions, NATIVE_PIXEL_BUDGET } from './capture-quality';
 import { FrameConverter } from './frame-conversion';
-import { warmAnalysisRuntime } from './analysis-warmup';
-import type { ProcessingQuality } from '../../../packages/core/src/spatial';
 import { cssReferenceField } from './reference-field';
 
 let analyzer: FrameAnalyzer | undefined;
@@ -80,81 +80,7 @@ async function handle(event: MessageEvent) {
       }
       scope.postMessage({ id: message.id, ok: true });
     } else if (message.type === 'FRAME' && analyzer) {
-      const started = performance.now();
-      const previousInput = analyzer.getInputRgba();
-      let conversionMs = 0,
-        analysisMs = 0;
-      sourceTimestampOrigin ??= message.timestampMs;
-      try {
-        let rgba: Uint8ClampedArray, width: number, height: number;
-        if (message.frame) {
-          const frame: VideoFrame = message.frame,
-            visible = frame.visibleRect;
-          decoded = {
-            codedWidth: frame.codedWidth,
-            codedHeight: frame.codedHeight,
-            displayWidth: frame.displayWidth,
-            displayHeight: frame.displayHeight,
-            ...(visible
-              ? {
-                  visibleRect: {
-                    x: visible.x,
-                    y: visible.y,
-                    width: visible.width,
-                    height: visible.height,
-                  },
-                }
-              : {}),
-            format: frame.format ?? 'UNKNOWN',
-            primaries: frame.colorSpace.primaries ?? 'UNKNOWN',
-            transfer: frame.colorSpace.transfer ?? 'UNKNOWN',
-            matrix: frame.colorSpace.matrix ?? 'UNKNOWN',
-          };
-          const geometry = captureDimensions(
-            message.sourceWidth,
-            message.sourceHeight,
-          );
-          const input = analyzer.getInputRgba();
-          const converted = await converter.convert(
-            frame,
-            message.sourceWidth,
-            message.sourceHeight,
-            input?.length === geometry.width * geometry.height * 4
-              ? input
-              : undefined,
-          );
-          ({ rgba, width, height } = converted);
-          conversionMethods.add(converted.method);
-        } else {
-          converter.releaseInput();
-          rgba = new Uint8ClampedArray(message.buffer);
-          width = message.width;
-          height = message.height;
-          conversionMethods.add('RGBA_TRANSFER');
-        }
-        const convertedAt = performance.now();
-        conversionMs = convertedAt - started;
-        analyzer.pushFrame({
-          rgba,
-          width,
-          height,
-          timestampMs: message.timestampMs,
-          sourceWidth: message.sourceWidth,
-          sourceHeight: message.sourceHeight,
-        });
-        analysisMs = performance.now() - convertedAt;
-        if (analyzer.getInputRgba() !== previousInput) converter.releaseInput();
-      } finally {
-        message.frame?.close();
-      }
-      const elapsed = performance.now() - started;
-      measuredFrames++;
-      conversionTotalMs += conversionMs;
-      analysisTotalMs += analysisMs;
-      totalMs += elapsed;
-      maxMs = Math.max(maxMs, elapsed);
-      if (elapsed > 1000 / 60) framesOver16_7Ms++;
-      scope.postMessage({ type: 'FRAME_DONE' });
+      await analyzeTransferredFrame(message, analyzer);
     } else if (message.type === 'END' && analyzer) {
       if (message.interruption) analyzer.markInterrupted(message.interruption);
       const result = analyzer.finish();
@@ -189,4 +115,94 @@ async function handle(event: MessageEvent) {
       error: String(error),
     });
   }
+}
+
+interface TransferredFrame {
+  frame?: VideoFrame;
+  buffer: ArrayBuffer;
+  width: number;
+  height: number;
+  sourceWidth: number;
+  sourceHeight: number;
+  timestampMs: number;
+}
+async function analyzeTransferredFrame(
+  message: TransferredFrame,
+  current: FrameAnalyzer,
+): Promise<void> {
+  const started = performance.now();
+  const previousInput = current.getInputRgba();
+  let conversionMs: number, analysisMs: number;
+
+  sourceTimestampOrigin ??= message.timestampMs;
+  try {
+    let rgba: Uint8ClampedArray, width: number, height: number;
+    if (message.frame) {
+      const frame: VideoFrame = message.frame,
+        visible = frame.visibleRect;
+      decoded = {
+        codedWidth: frame.codedWidth,
+        codedHeight: frame.codedHeight,
+        displayWidth: frame.displayWidth,
+        displayHeight: frame.displayHeight,
+        ...(visible
+          ? {
+              visibleRect: {
+                x: visible.x,
+                y: visible.y,
+                width: visible.width,
+                height: visible.height,
+              },
+            }
+          : {}),
+        format: frame.format ?? 'UNKNOWN',
+        primaries: frame.colorSpace.primaries ?? 'UNKNOWN',
+        transfer: frame.colorSpace.transfer ?? 'UNKNOWN',
+        matrix: frame.colorSpace.matrix ?? 'UNKNOWN',
+      };
+      const geometry = captureDimensions(
+        message.sourceWidth,
+        message.sourceHeight,
+      );
+      const input = current.getInputRgba();
+      const converted = await converter.convert(
+        frame,
+        message.sourceWidth,
+        message.sourceHeight,
+        input?.length === geometry.width * geometry.height * 4
+          ? input
+          : undefined,
+      );
+      ({ rgba, width, height } = converted);
+      conversionMethods.add(converted.method);
+    } else {
+      converter.releaseInput();
+      rgba = new Uint8ClampedArray(message.buffer);
+      width = message.width;
+      height = message.height;
+      conversionMethods.add('RGBA_TRANSFER');
+    }
+    const convertedAt = performance.now();
+    conversionMs = convertedAt - started;
+    current.pushFrame({
+      rgba,
+      width,
+      height,
+      timestampMs: message.timestampMs,
+      sourceWidth: message.sourceWidth,
+      sourceHeight: message.sourceHeight,
+    });
+    analysisMs = performance.now() - convertedAt;
+    if (current.getInputRgba() !== previousInput) converter.releaseInput();
+  } finally {
+    message.frame?.close();
+  }
+  const elapsed = performance.now() - started;
+  measuredFrames++;
+  conversionTotalMs += conversionMs;
+  analysisTotalMs += analysisMs;
+  totalMs += elapsed;
+  maxMs = Math.max(maxMs, elapsed);
+  if (elapsed > 1000 / 60) framesOver16_7Ms++;
+  scope.postMessage({ type: 'FRAME_DONE' });
 }

@@ -1,4 +1,5 @@
 // Worker services are injected lazily; module construction never starts a scan.
+/** Serialize offscreen document access and bound requests by timeout. */
 export function createRunnerOffscreen() {
   let creatingOffscreen: Promise<void> | undefined;
   async function offscreen(

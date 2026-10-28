@@ -1,4 +1,6 @@
 import type { ScanMode } from './model';
+
+import { matchingRecord } from './owned-record';
 import type { DiagnosticContext } from './source-diagnostics';
 
 export const ADVANCED_SCAN_OWNER_KEY = 'advanced-scan-owner';
@@ -34,66 +36,15 @@ export interface DisposableScanOwner {
   reason?: string;
 }
 
-/** Compare persisted JSON meaning, including additional fields, without relying
- * on object key order. Non-JSON values cannot establish ownership. */
-export function matchingRecord(a: unknown, b: unknown): boolean {
-  const seenLeft = new Set<object>(),
-    seenRight = new Set<object>();
-  const same = (left: unknown, right: unknown): boolean => {
-    if (typeof left !== typeof right) return false;
-    if (typeof left === 'number')
-      return Number.isFinite(left) && left === right;
-    if (left === null || right === null) return left === right;
-    if (typeof left !== 'object')
-      return (
-        ['undefined', 'string', 'boolean'].includes(typeof left) &&
-        left === right
-      );
-    if (seenLeft.has(left) || seenRight.has(right as object)) return false;
-    seenLeft.add(left);
-    seenRight.add(right as object);
-    try {
-      if (Array.isArray(left) || Array.isArray(right)) {
-        return (
-          Array.isArray(left) &&
-          Array.isArray(right) &&
-          left.length === right.length &&
-          left.every(
-            (item, index) => item !== undefined && same(item, right[index]),
-          )
-        );
-      }
-      const plain = (value: object) =>
-        [Object.prototype, null].includes(Object.getPrototypeOf(value));
-      if (!plain(left) || !plain(right as object)) return false;
-      const first = left as Record<string, unknown>,
-        second = right as Record<string, unknown>;
-      const keys = Object.keys(first)
-        .filter((key) => first[key] !== undefined)
-        .sort();
-      const other = Object.keys(second)
-        .filter((key) => second[key] !== undefined)
-        .sort();
-      return (
-        keys.length === other.length &&
-        keys.every(
-          (key, index) => key === other[index] && same(first[key], second[key]),
-        )
-      );
-    } finally {
-      seenLeft.delete(left);
-      seenRight.delete(right as object);
-    }
-  };
-  return same(a, b);
-}
-
 const id = (value: unknown): value is number =>
   Number.isSafeInteger(value) && (value as number) >= 0;
+
 const reason = (error: unknown) =>
   (error instanceof Error ? error.message : String(error)).slice(0, 300);
+
 const changed = () => new Error('DISPOSABLE_SCAN_OWNER_CHANGED');
 
+/** Require an exact owned tab and matching authorization; never authorize from a partial receipt. */
 export function validOwnedStart(
   owner: DisposableScanOwner | undefined,
   start: {
@@ -125,16 +76,7 @@ export function validOwnedStart(
     !matchingRecord(owner.replayOf, start.replayOf)
   )
     return false;
-  try {
-    const source = new URL(owner.source.url),
-      route = new URL(owner.route);
-    return (
-      ['http:', 'https:'].includes(source.protocol) &&
-      source.origin === route.origin
-    );
-  } catch {
-    return false;
-  }
+  return sameSourceOrigin(owner);
 }
 
 type Storage = {
@@ -169,6 +111,7 @@ async function manual(
   return retained;
 }
 
+/** Persist ownership before creating a disposable tab; retain manual recovery evidence when cleanup is uncertain. */
 export async function createDisposableScan(
   options: Storage & {
     owner: DisposableScanOwner;
@@ -182,14 +125,7 @@ export async function createDisposableScan(
   let initiallyAbsent = false;
   let intentPersisted = false;
   try {
-    if (
-      owner.version !== 1 ||
-      owner.phase !== 'CREATE_INTENT' ||
-      !owner.nonce ||
-      owner.scanTabId !== undefined ||
-      owner.scanWindowId !== undefined
-    )
-      throw new Error('DISPOSABLE_SCAN_INVALID_CREATE_INTENT');
+    assertCreateIntent(owner);
     const initial = await options.load();
     initiallyAbsent = initial === undefined;
     if (initial !== undefined && !matchingRecord(initial, owner))
@@ -232,6 +168,7 @@ export async function createDisposableScan(
   }
 }
 
+/** Close only a verified owned tab; retain the receipt until removal is confirmed. */
 export async function closeDisposableScan(
   options: Storage & {
     owner: DisposableScanOwner;
@@ -290,4 +227,29 @@ export async function closeDisposableScan(
     await manual(owner, error, options, versions);
     return false;
   }
+}
+export { matchingRecord } from './owned-record';
+
+function sameSourceOrigin(owner: DisposableScanOwner): boolean {
+  try {
+    const source = new URL(owner.source.url),
+      route = new URL(owner.route);
+    return (
+      ['http:', 'https:'].includes(source.protocol) &&
+      source.origin === route.origin
+    );
+  } catch {
+    return false;
+  }
+}
+
+function assertCreateIntent(owner: DisposableScanOwner): void {
+  if (
+    owner.version !== 1 ||
+    owner.phase !== 'CREATE_INTENT' ||
+    !owner.nonce ||
+    owner.scanTabId !== undefined ||
+    owner.scanWindowId !== undefined
+  )
+    throw new Error('DISPOSABLE_SCAN_INVALID_CREATE_INTENT');
 }

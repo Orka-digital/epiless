@@ -1,17 +1,18 @@
 import { normalizePublicUrl, renderCoverage } from '@epi-less/core';
 import {
-  captureWindowSummary,
-  captureDetailSummary,
-} from '@epi-less/core/quality';
-import {
   diagnosticStyles,
   renderFindingDiagnostics,
   transitionSummary,
 } from '@epi-less/core/diagnostics';
-import { historySummary, candidateSummaries } from './history';
-import type { ScanJob, HistorySettings } from './model';
+import {
+  captureDetailSummary,
+  captureWindowSummary,
+} from '@epi-less/core/quality';
+import { candidateSummaries, historySummary } from './history';
+import type { HistorySettings, ScanJob } from './model';
 import { buildReport } from './report';
 
+/** Build export-safe job copies without mutating retained local evidence. */
 export function prepareExportJobs(
   jobs: readonly ScanJob[],
   pseudonymize = false,
@@ -67,33 +68,14 @@ export function prepareExportJobs(
         ? ['Original diagnostic text omitted.']
         : [];
       for (const observation of task.observations) {
-        delete observation.replay;
-        delete observation.mediaEvidence;
-        delete observation.phaseEvidence;
-        if (observation.reason)
-          observation.reason = 'Original diagnostic text omitted.';
-        if (observation.navigation)
-          observation.navigation = {
-            from: mask(observation.navigation.from),
-            to: mask(observation.navigation.to),
-          };
-        if (observation.measurement) {
-          observation.measurement.limitations = [
-            'Original diagnostic text omitted. Capture quality remains below.',
-          ];
-          for (const finding of observation.measurement.findings) {
-            finding.message = `${finding.type} candidate; human review required.`;
-            delete finding.diagnostic;
-            delete finding.source;
-            delete finding.sourceTimeline;
-          }
-        }
+        redactObservation(observation, mask);
       }
     }
   }
   return copies;
 }
 
+/** Serialize prepared history using the selected export format and privacy scope. */
 export function buildHistoryExport(
   jobs: readonly ScanJob[],
   settings: HistorySettings,
@@ -185,4 +167,31 @@ export function buildHtmlReport(source: ScanJob, pseudonymize = false): string {
     })
     .join('');
   return `<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>epi-less rapport — ${escape(report.origin)}</title><style>${diagnosticStyles}html{color:#172b28;background:#fff;font:16px/1.55 system-ui,sans-serif}body{max-width:1000px;margin:auto;padding:32px}h1,h2,h3,h4{line-height:1.25}h1{font-size:1.8rem}h2{font-size:1.4rem;border-bottom:1px solid #b5c2be;padding-bottom:8px}h3{font-size:1.15rem}h4{font-size:1rem}a{color:#005d4a}a:focus-visible{outline:3px solid #005d4a;outline-offset:3px}p,li,th,td{overflow-wrap:anywhere}dl{display:grid;grid-template-columns:minmax(120px,1fr) 2fr;gap:8px}dt{font-weight:600}dd{margin:0}.notice{border-left:4px solid #697d35;padding:12px;background:#f4f6ed}.route{border-bottom:1px solid #b5c2be;padding:12px 0 24px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.85rem}caption{text-align:left;margin:12px 0;font-weight:600}th,td{border:1px solid #b5c2be;text-align:left;vertical-align:top;padding:8px}.timeline{display:block;min-width:100px;height:8px;background:#e8ecea;margin-top:5px}.timeline i{display:block;height:8px;background:#455d57}.skip{display:block}footer{font-size:.85rem;margin-top:28px}@media(max-width:600px){body{padding:16px}dl{grid-template-columns:1fr}dd{margin-bottom:8px}}@media print{body{max-width:none;padding:0;font-size:10pt}.skip{display:none}h2,h3,h4,caption{break-after:avoid}tr{break-inside:avoid}.table-wrap{overflow:visible}thead{display:table-header-group}table{font-size:8pt}.notice{background:none}}</style></head><body><a class="skip" href="#results">Naar de meetresultaten</a><header><p>epi-less · lokaal auditrapport</p><h1>${escape(report.origin)}</h1><p>${escape(report.startedAt)} – ${escape(report.endedAt)}</p></header><main><p class="notice"><strong>${escape(report.status)}</strong> · Geen gevalideerd WCAG-oordeel en geen veiligheidsgarantie. Dit rapport bevat geen video, geluid, scripts of automatisch afspelende beelden.</p><h2>Scope en uitvoering</h2><dl><dt>Audit</dt><dd>${escape(report.id)}</dd><dt>Modus</dt><dd>${escape(job.mode)}${job.mode !== 'AUTONOMOUS' ? ` · alleen de huidige viewport · ${(job.viewportDurationMs ?? (job.mode === 'EXTENDED' ? 30_000 : 15_000)) / 1000} seconden` : ''}</dd><dt>Job</dt><dd>${escape(report.job.state)} · ${escape(report.job.stopReason)}</dd><dt>Dekking</dt><dd>${report.job.visitedRoutes} van ${report.job.discoveredRoutes} ontdekte routes; ${summary.scenarios} scenario's. Onbekende routes blijven buiten deze telling.</dd><dt>Kandidaten</dt><dd>${summary.uniqueCandidates} gegroepeerde kandidaten; ${summary.occurrences} waarnemingen. Geen bevestigde overtredingen.</dd><dt>Engine / runner</dt><dd>${escape(report.engineVersion)} / ${escape(report.runnerVersion)}</dd>${report.scannerBuildSha256 ? `<dt>Scannerbuild</dt><dd><code>${escape(report.scannerBuildSha256)}</code></dd>` : ''}<dt>Meetdetails</dt><dd>${job.detailsExpiredAt ? `Verlopen op ${escape(job.detailsExpiredAt)}; compacte geschiedenis bewaard.` : 'Beschikbaar in dit rapport.'}</dd></dl><p>${escape(summary.grouping)}</p><h2 id="results" tabindex="-1">Meetresultaten</h2>${routes}<h2>Criteria en vervolgstappen</h2><p>GENERAL_FLASH en RED_FLASH zijn technische kandidaten voor beoordeling in het kader van WCAG 2.3.1. Flitsfrequentie, oppervlak, kleur, capturekwaliteit en geteste scope moeten samen worden beoordeeld. ANIMATION_CONTROL is uitsluitend een aanwijzing voor beoordeling van bediening van bewegende inhoud, geen normatief oordeel.</p><ul><li>Onderzoek kandidaten in de genoemde route en het scenario; vermijd onbeveiligd afspelen van verdachte inhoud.</li><li>Verminder of verwijder flitsende effecten en bied bediening om bewegende inhoud te pauzeren of stoppen.</li><li>Herhaal een meting onder vergelijkbare omstandigheden na een wijziging. Niet opnieuw waargenomen betekent niet automatisch opgelost.</li><li>Laat een normatieve beoordeling uitvoeren voordat je conformiteit claimt.</li></ul><h2>Meetbeperkingen</h2><ul>${report.limitations.map((limitation) => `<li>${escape(limitation)}</li>`).join('')}</ul></main><footer>Rapportschema ${report.schemaVersion} · Gebruik de afdrukfunctie van je browser voor een papieren versie of PDF. Deze export wordt niet bijgewerkt bij intrekking van een online rapport.</footer></body></html>`;
+}
+
+function redactObservation(
+  observation: ScanJob['tasks'][number]['observations'][number],
+  mask: (value: string) => string,
+): void {
+  delete observation.replay;
+  delete observation.mediaEvidence;
+  delete observation.phaseEvidence;
+  if (observation.reason)
+    observation.reason = 'Original diagnostic text omitted.';
+  if (observation.navigation)
+    observation.navigation = {
+      from: mask(observation.navigation.from),
+      to: mask(observation.navigation.to),
+    };
+  if (observation.measurement) {
+    observation.measurement.limitations = [
+      'Original diagnostic text omitted. Capture quality remains below.',
+    ];
+    for (const finding of observation.measurement.findings) {
+      finding.message = `${finding.type} candidate; human review required.`;
+      delete finding.diagnostic;
+      delete finding.source;
+      delete finding.sourceTimeline;
+    }
+  }
 }

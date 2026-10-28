@@ -10,6 +10,7 @@ import { attachPointerSession } from './trusted-pointer';
 import { waitForStableViewport } from './viewport-driver';
 
 // Worker services are injected lazily; module construction never starts a scan.
+/** Authorize capture only for the current execution owner and granted browser source. */
 export function createRunnerAuthorization(
   services: Pick<
     RunnerOperations,
@@ -170,6 +171,7 @@ export function createRunnerAuthorization(
       throw new Error(
         'De capture kon niet starten. Activeer de te scannen tab en start via de epi-less-toolbar. ' +
           services.errorText(error),
+        { cause: error },
       );
     } finally {
       releaseAuthorization();

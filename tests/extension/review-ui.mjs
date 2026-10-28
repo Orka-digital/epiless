@@ -1,90 +1,38 @@
+import {
+  assertReviewSources,
+  extensionHashes,
+} from './review-build-integrity.mjs';
+import { loadReviewEvidence } from './review-evidence.mjs';
+import { importReviewJobs } from './review-job-import.mjs';
 // Real dashboard clicks over retained native capture evidence. These are two
 // separate historical-state UI tests, NOT a newly captured end-to-end lifecycle.
 // No capture timestamps, scanner hashes, runtime APIs or browser clocks are mocked.
+import { chromium, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
-import {
-  cp,
-  mkdtemp,
-  readFile,
-  readdir,
-  rm,
-  writeFile,
-} from 'node:fs/promises';
+import { cp, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { chromium, expect } from '@playwright/test';
 
 const evidence = await mkdtemp(path.join(tmpdir(), 'flashguard-review-ui-'));
 const extension = path.join(evidence, 'extension');
 const profile = path.join(evidence, 'profile');
-const sourceDirectory = new URL('./evidence/', import.meta.url);
-const names = [
-  'scanner-v04-native-detail-local-job.json',
-  'scanner-v04-native-fixed-local-job.json',
-  'scanner-v04-native-recurrence-local-job.json',
-  'scanner-v04-native-review-verification.json',
-];
-const sourceFiles = await Promise.all(
-  names.map(async (name) => {
-    const bytes = await readFile(new URL(name, sourceDirectory));
-    return {
-      name,
-      sha256: createHash('sha256').update(bytes).digest('hex'),
-      value: JSON.parse(bytes),
-    };
-  }),
-);
-const [baseline, fixed, recurrence, originalReviews] = sourceFiles.map(
-  (entry) => entry.value,
-);
-assert.equal(baseline.reviews?.length ?? 0, 0);
-assert.equal(originalReviews.jobId, baseline.id);
-assert.equal(originalReviews.scannerBuildSha256, baseline.scannerBuildSha256);
-assert.equal(fixed.scannerBuildSha256, baseline.scannerBuildSha256);
-assert.equal(recurrence.scannerBuildSha256, baseline.scannerBuildSha256);
-const prefix = originalReviews.reviews.slice(0, 2);
-assert.deepEqual(
-  prefix.map((entry) => entry.decision),
-  ['CONFIRMED', 'RESOLVED'],
-);
-assert.equal(prefix[1].verificationJobId, fixed.id);
-assert.ok(Date.parse(recurrence.startedAt) > Date.parse(prefix[1].at));
-const anchor = {
-  taskId: prefix[0].taskId,
-  observationId: prefix[0].observationId,
-  findingId: prefix[0].findingId,
-};
-assert.ok(
-  prefix.every((entry) =>
-    Object.entries(anchor).every(([key, value]) => entry[key] === value),
-  ),
-);
-const sourceObservation = baseline.tasks
-  .find((task) => task.id === anchor.taskId)
-  ?.observations.find((observation) => observation.id === anchor.observationId);
-assert.ok(
-  sourceObservation?.measurement.findings.some(
-    (finding) => finding.id === anchor.findingId,
-  ),
-);
+const {
+  sourceFiles,
+  baseline,
+  fixed,
+  recurrence,
+  prefix,
+  anchor,
+  sourceObservation,
+} = await loadReviewEvidence();
 
 await cp(
   fileURLToPath(new URL('../../apps/chrome-extension/dist/', import.meta.url)),
   extension,
   { recursive: true },
 );
-async function extensionHashes() {
-  const hashes = {};
-  for (const name of (await readdir(extension)).sort()) {
-    hashes[name] = createHash('sha256')
-      .update(await readFile(path.join(extension, name)))
-      .digest('hex');
-  }
-  return hashes;
-}
-const buildHashes = await extensionHashes();
+const buildHashes = await extensionHashes(extension);
 const actions = [];
 let context;
 let traceStarted = false;
@@ -116,32 +64,7 @@ try {
     return response.value;
   };
   await state(); // Await genuine startup/IndexedDB initialization before setup.
-  const importJobs = (jobs) =>
-    dashboard.evaluate(
-      (values) =>
-        new Promise((resolve, reject) => {
-          const open = indexedDB.open('flashguard-audit-v1');
-          open.onerror = () => reject(open.error);
-          open.onsuccess = () => {
-            const db = open.result;
-            const tx = db.transaction('jobs', 'readwrite');
-            for (const job of values) tx.objectStore('jobs').put(job);
-            tx.oncomplete = () => {
-              db.close();
-              resolve();
-            };
-            tx.onerror = () => {
-              db.close();
-              reject(tx.error);
-            };
-            tx.onabort = () => {
-              db.close();
-              reject(tx.error);
-            };
-          };
-        }),
-      jobs,
-    );
+  const importJobs = (jobs) => importReviewJobs(dashboard, jobs);
   const openPanel = async () => {
     await dashboard.reload();
     const observation = dashboard.locator(
@@ -276,17 +199,11 @@ try {
   );
   assert.deepEqual(capturedTabs, [], 'No tabCapture producer was opened');
   assert.deepEqual(
-    await extensionHashes(),
+    await extensionHashes(extension),
     buildHashes,
     'Production bundle was not instrumented',
   );
-  for (const source of sourceFiles) {
-    const bytes = await readFile(new URL(source.name, sourceDirectory));
-    assert.equal(
-      createHash('sha256').update(bytes).digest('hex'),
-      source.sha256,
-    );
-  }
+  await assertReviewSources(sourceFiles);
   const result = {
     scope:
       'Current real dashboard migration test over unchanged retained native captures: a candidate can still be confirmed, but missing document/animation phase evidence refuses a new resolution in both UI and runtime. Historical review events remain intact; old recurrence cannot establish a new comparable transition. No capture or synthetic timestamp/hash mutation.',

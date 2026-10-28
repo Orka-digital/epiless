@@ -1,16 +1,10 @@
 import type { Finding, PixelDiagnostic, SourceDiagnostic } from './report.js';
-import type { SourceTimeline } from './source-timeline-schema.js';
+
+import { renderSourceTimeline } from './diagnostic-timeline.js';
+
+import { escape, fixed } from './diagnostic-format.js';
 import type { SpatialEvidence } from './spatial.js';
 
-const escape = (value: unknown): string =>
-  String(value ?? '').replace(
-    /[&<>"']/g,
-    (c) =>
-      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[
-        c
-      ]!,
-  );
-const fixed = (value: number, digits = 2) => escape(value.toFixed(digits));
 const linear = (byte: number) => {
   const value = byte / 255;
   return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
@@ -31,358 +25,17 @@ export function diagnosticSeries(diagnostic: PixelDiagnostic) {
   });
 }
 
+/** Describe the recorded transition count, preserving the historical counting distinction. */
 export function transitionSummary(finding: Finding): string {
   return finding.qualifyingTransitions !== undefined
     ? `Minstens ${finding.qualifyingTransitions} kwalificerende overgangen in het detectievenster`
     : `${finding.flashesInWindow} omkeerparen in het venster (historische telling)`;
 }
 
-/** Deep allowlist for optional public diagnostics. Never propagate local-only fields. */
-export function copyDiagnostics(
-  finding: Finding,
-): Pick<Finding, 'diagnostic' | 'source' | 'sourceTimeline' | 'spatial'> {
-  const rect = (r: {
-    x: number;
-    y: number;
-    width: number;
-    height: number;
-  }) => ({ x: r.x, y: r.y, width: r.width, height: r.height });
-  const d = finding.diagnostic,
-    s = finding.source;
-  return {
-    ...(d
-      ? {
-          diagnostic: {
-            version: d.version,
-            coordinateSpace: d.coordinateSpace,
-            point: { x: d.point.x, y: d.point.y },
-            analysisWidth: d.analysisWidth,
-            analysisHeight: d.analysisHeight,
-            sourceWidth: d.sourceWidth,
-            sourceHeight: d.sourceHeight,
-            windowStartMs: d.windowStartMs,
-            windowEndMs: d.windowEndMs,
-            complete: d.complete,
-            samples: d.samples.map((v) => ({
-              timestampMs: v.timestampMs,
-              red: v.red,
-              green: v.green,
-              blue: v.blue,
-            })),
-            ...(d.omissions ? { omissions: [...d.omissions] } : {}),
-          },
-        }
-      : {}),
-    ...(s
-      ? {
-          source: {
-            status: s.status,
-            ...(s.reason ? { reason: s.reason } : {}),
-            coordinateSpace: s.coordinateSpace,
-            sampledAt: s.sampledAt,
-            delayMs: s.delayMs,
-            ...(s.viewport
-              ? {
-                  viewport: {
-                    width: s.viewport.width,
-                    height: s.viewport.height,
-                    dpr: s.viewport.dpr,
-                    scrollX: s.viewport.scrollX,
-                    scrollY: s.viewport.scrollY,
-                  },
-                }
-              : {}),
-            sampledPoints: s.sampledPoints,
-            ...(s.region ? { region: rect(s.region) } : {}),
-            candidates: s.candidates.map((v) => ({
-              selectorPath: [...v.selectorPath],
-              tag: v.tag,
-              rect: rect(v.rect),
-              hitCount: v.hitCount,
-              ...(v.media ? { media: v.media } : {}),
-              animation: {
-                running: v.animation.running,
-                paused: v.animation.paused,
-                finished: v.animation.finished,
-              },
-            })),
-            limitations: [...s.limitations],
-          },
-        }
-      : {}),
-    ...(finding.sourceTimeline
-      ? { sourceTimeline: copySourceTimeline(finding.sourceTimeline) }
-      : {}),
-    ...(finding.spatial
-      ? { spatial: copySpatialEvidence(finding.spatial) }
-      : {}),
-  };
-}
-
-export function copySpatialEvidence(s: SpatialEvidence): SpatialEvidence {
-  return {
-    version: s.version,
-    coordinateSpace: s.coordinateSpace,
-    analysisWidth: s.analysisWidth,
-    analysisHeight: s.analysisHeight,
-    sampledAtMs: s.sampledAtMs,
-    componentPixels: s.componentPixels,
-    simultaneousPixels: s.simultaneousPixels,
-    simultaneousRatio: s.simultaneousRatio,
-    maskBasis: s.maskBasis,
-    ...(s.visualField
-      ? {
-          visualField: {
-            basis: s.visualField.basis,
-            reference: s.visualField.reference,
-            widthPx: s.visualField.widthPx,
-            heightPx: s.visualField.heightPx,
-            maximumPixels: s.visualField.maximumPixels,
-            maximumRatio: s.visualField.maximumRatio,
-            thresholdRatio: s.visualField.thresholdRatio,
-            exceedsThreshold: s.visualField.exceedsThreshold,
-            window: {
-              x: s.visualField.window.x,
-              y: s.visualField.window.y,
-              width: s.visualField.window.width,
-              height: s.visualField.window.height,
-            },
-          },
-        }
-      : {}),
-    pattern: {
-      kind: s.pattern.kind,
-      automaticallyExcluded: false,
-      ...(s.pattern.cellWidthPx !== undefined
-        ? { cellWidthPx: s.pattern.cellWidthPx }
-        : {}),
-      ...(s.pattern.cellHeightPx !== undefined
-        ? { cellHeightPx: s.pattern.cellHeightPx }
-        : {}),
-      ...(s.pattern.inversePhase
-        ? {
-            inversePhase: {
-              kind: s.pattern.inversePhase.kind,
-              previousSampledAtMs: s.pattern.inversePhase.previousSampledAtMs,
-              currentSampledAtMs: s.pattern.inversePhase.currentSampledAtMs,
-              comparedPixels: s.pattern.inversePhase.comparedPixels,
-              firstColorPixels: s.pattern.inversePhase.firstColorPixels,
-              secondColorPixels: s.pattern.inversePhase.secondColorPixels,
-            },
-          }
-        : {}),
-      ...(s.pattern.belowPointOneDegree !== undefined
-        ? { belowPointOneDegree: s.pattern.belowPointOneDegree }
-        : {}),
-    },
-    motion: {
-      kind: s.motion.kind,
-      automaticallyExcluded: false,
-      ...(s.motion.dx !== undefined ? { dx: s.motion.dx } : {}),
-      ...(s.motion.dy !== undefined ? { dy: s.motion.dy } : {}),
-      ...(s.motion.comparedPixels !== undefined
-        ? { comparedPixels: s.motion.comparedPixels }
-        : {}),
-      ...(s.motion.overlapRatio !== undefined
-        ? { overlapRatio: s.motion.overlapRatio }
-        : {}),
-    },
-  };
-}
-
+/** Render escaped spatial evidence and its geometry assumptions without asserting conformance. */
 export function renderSpatialEvidence(spatial: SpatialEvidence): string {
   const field = spatial.visualField;
   return `<section><h4>Gelijktijdig gemeten oppervlak</h4><p>Op ${fixed(spatial.sampledAtMs / 1000)} s kwalificeerden ${spatial.simultaneousPixels} pixels in hetzelfde analyseframe (${fixed(spatial.simultaneousRatio * 100)}% van ${spatial.analysisWidth} × ${spatial.analysisHeight} pixels). Deze component telt ${spatial.componentPixels} pixels. Losse regio's worden samengeteld op basis van het pixelmasker; de omhullende rechthoek is geen oppervlaktemaat. Bij samengevoegde waarnemingen blijft het frame met het grootste veldoppervlak bewaard, of zonder veld het grootste aantal gelijktijdige pixels. Het meetspoor en de bronkoppeling kunnen het eerdere, eerste detectievenster beschrijven.</p>${field ? `<p>Binnen het vermelde referentieveld van ${field.widthPx} × ${field.heightPx} analysepixels bedraagt het grootste gelijktijdige oppervlak ${field.maximumPixels} pixels (${fixed(field.maximumRatio * 100)}%). Dit ${field.exceedsThreshold ? 'overschrijdt' : 'overschrijdt niet'} de 25%-drempel binnen deze geometrie. Referentie: ${escape(field.reference)} (${escape(field.basis)}). Deze invoeraanname bewijst geen werkelijke kijkafstand of conformiteit van de website.</p>` : '<p>Geen bruikbaar gezichtsveld of referentieveld beschikbaar. Het aandeel van het analysebeeld is geen normatief gezichtsveld en levert geen WCAG-oppervlakteoordeel op.</p>'}<p>${spatial.pattern.kind === 'EXACT_BALANCED_CHECKERBOARD' ? `Schaakbord met twee kleuren en gelijke oppervlakken in dit frame aangetoond, cellen ${spatial.pattern.cellWidthPx} × ${spatial.pattern.cellHeightPx} analysepixels.${spatial.pattern.belowPointOneDegree !== undefined ? ` Binnen de opgegeven geometrie zijn die cellen ${spatial.pattern.belowPointOneDegree ? 'kleiner dan' : 'niet kleiner dan'} 0,1 graad.` : ''}` : 'Geen exact schaakbord met gelijke kleuroppervlakken aangetoond.'} ${spatial.pattern.inversePhase ? `Tussen ${fixed(spatial.pattern.inversePhase.previousSampledAtMs / 1000)} en ${fixed(spatial.pattern.inversePhase.currentSampledAtMs / 1000)} s wisselden dezelfde twee ondoorzichtige kleuren exact op alle ${spatial.pattern.inversePhase.comparedPixels} componentpixels, met ${spatial.pattern.inversePhase.firstColorPixels} pixels per kleur. Dit bewijst uitsluitend deze twee opeenvolgende geanalyseerde bronframes, geen balans over de volledige flitsperiode.` : 'Geen exacte kleuromkering tussen twee opeenvolgende geanalyseerde bronframes aangetoond; één ruimtelijk gebalanceerd frame bewijst geen temporele balans.'} ${spatial.motion.kind === 'EXACT_TRANSLATION_COMPATIBLE' ? `De pixels passen exact bij een verschuiving (${spatial.motion.dx}, ${spatial.motion.dy}) over ${spatial.motion.comparedPixels} vergeleken pixels. Dit is verenigbaar met beweging; een periodiek patroon kan dezelfde overeenkomst geven.` : 'Geen exacte translatie aangetoond binnen de begrensde bewegingszoektocht.'} Patronen en beweging sluiten kandidaten niet automatisch uit.</p></section>`;
-}
-
-/** Explicit public allowlist: inspection capabilities and unknown nested fields never leave the profile. */
-export function copySourceTimeline(timeline: SourceTimeline): SourceTimeline {
-  return {
-    version: timeline.version,
-    status: timeline.status,
-    ...(timeline.reason ? { reason: timeline.reason } : {}),
-    clockBasis: timeline.clockBasis,
-    windowStartEpochMs: timeline.windowStartEpochMs,
-    windowEndEpochMs: timeline.windowEndEpochMs,
-    alignmentUncertaintyMs: timeline.alignmentUncertaintyMs,
-    ...(timeline.frameClock
-      ? {
-          frameClock: {
-            method: timeline.frameClock.method,
-            matchedFrames: timeline.frameClock.matchedFrames,
-            receiptOffsetSpreadMs: timeline.frameClock.receiptOffsetSpreadMs,
-            startBoundaryErrorMs: timeline.frameClock.startBoundaryErrorMs,
-            endBoundaryErrorMs: timeline.frameClock.endBoundaryErrorMs,
-          },
-        }
-      : {}),
-    sampledAt: timeline.sampledAt,
-    sampleIntervalMs: timeline.sampleIntervalMs,
-    maxSampleGapMs: timeline.maxSampleGapMs,
-    sampleCount: timeline.sampleCount,
-    ...(timeline.firstSampleEpochMs !== undefined
-      ? { firstSampleEpochMs: timeline.firstSampleEpochMs }
-      : {}),
-    ...(timeline.lastSampleEpochMs !== undefined
-      ? { lastSampleEpochMs: timeline.lastSampleEpochMs }
-      : {}),
-    complete: timeline.complete,
-    candidates: timeline.candidates.map((c) => ({
-      id: c.id,
-      selectorPath: [...c.selectorPath],
-      tag: c.tag,
-      ...(c.media ? { media: c.media } : {}),
-      observations: c.observations.map((o) => ({
-        atEpochMs: o.atEpochMs,
-        ...(o.readWindow
-          ? {
-              readWindow: {
-                startEpochMs: o.readWindow.startEpochMs,
-                endEpochMs: o.readWindow.endEpochMs,
-                trigger: o.readWindow.trigger,
-                ...(o.readWindow.renderEpochMs !== undefined
-                  ? { renderEpochMs: o.readWindow.renderEpochMs }
-                  : {}),
-              },
-            }
-          : {}),
-        rect: {
-          x: o.rect.x,
-          y: o.rect.y,
-          width: o.rect.width,
-          height: o.rect.height,
-        },
-        viewport: {
-          width: o.viewport.width,
-          height: o.viewport.height,
-          dpr: o.viewport.dpr,
-          scrollX: o.viewport.scrollX,
-          scrollY: o.viewport.scrollY,
-        },
-        mutationsSincePrevious: o.mutationsSincePrevious,
-        animations: o.animations.map((a) => ({
-          kind: a.kind,
-          playState: a.playState,
-          durationMs: a.durationMs,
-          delayMs: a.delayMs,
-          iterations: a.iterations,
-          currentTimeMs: a.currentTimeMs,
-          progress: a.progress,
-          properties: [...a.properties],
-        })),
-        ...(o.mediaTimeMs !== undefined ? { mediaTimeMs: o.mediaTimeMs } : {}),
-        ...(o.mediaPaused !== undefined ? { mediaPaused: o.mediaPaused } : {}),
-        ...(o.videoPresentation
-          ? {
-              videoPresentation: {
-                callbackEpochMs: o.videoPresentation.callbackEpochMs,
-                presentationEpochMs: o.videoPresentation.presentationEpochMs,
-                expectedDisplayEpochMs:
-                  o.videoPresentation.expectedDisplayEpochMs,
-                mediaTimeMs: o.videoPresentation.mediaTimeMs,
-                presentedFrames: o.videoPresentation.presentedFrames,
-              },
-            }
-          : {}),
-      })),
-    })),
-    limitations: [...timeline.limitations],
-  };
-}
-
-function observationInWindow(
-  observation: SourceTimeline['candidates'][number]['observations'][number],
-  window: Pick<SourceTimeline, 'windowStartEpochMs' | 'windowEndEpochMs'>,
-): boolean {
-  const start = observation.readWindow?.startEpochMs ?? observation.atEpochMs;
-  const end = observation.readWindow?.endEpochMs ?? observation.atEpochMs;
-  return end >= window.windowStartEpochMs && start <= window.windowEndEpochMs;
-}
-
-export function sourceRepairClues(
-  candidate: SourceTimeline['candidates'][number],
-  window?: Pick<SourceTimeline, 'windowStartEpochMs' | 'windowEndEpochMs'>,
-): string[] {
-  const observations = window
-    ? candidate.observations.filter((o) => observationInWindow(o, window))
-    : candidate.observations;
-  const clues: string[] = [];
-  const animations = observations.flatMap((o) => o.animations);
-  const properties = new Set<string>(animations.flatMap((a) => a.properties));
-  if (
-    [
-      'opacity',
-      'backgroundColor',
-      'color',
-      'fill',
-      'stroke',
-      'filter',
-      'visibility',
-    ].some((p) => properties.has(p))
-  )
-    clues.push(
-      'Er zijn animaties van licht- of kleurgerelateerde eigenschappen waargenomen. Controleer deze keyframes en hun herhaling; verwijder snelle contrastrijke wisselingen en meet de wijziging opnieuw. Dit bewijst nog niet dat deze animatie de kandidaat veroorzaakte.',
-    );
-  if (properties.has('transform') || properties.has('clipPath'))
-    clues.push(
-      'Er is beweging of clipping geobserveerd. Controleer of wisselende pixels door beweging ontstaan en vergelijk hetzelfde scenario zonder het effect; een bewegende rand is geen bewezen flitsbron.',
-    );
-  if (candidate.media === 'VIDEO') {
-    const presentations = observations.flatMap((o) =>
-      o.videoPresentation ? [o.videoPresentation] : [],
-    );
-    const times = observations.flatMap((o) =>
-      o.mediaTimeMs === undefined ? [] : [o.mediaTimeMs],
-    );
-    clues.push(
-      `Controleer het videofragment${times.length ? ` rond ${(Math.min(...times) / 1000).toFixed(2)}–${(Math.max(...times) / 1000).toFixed(2)} s` : ''} met statische frames. Tijdcodes zijn tijdens DOM-steekproeven gelezen en kunnen afwijken van het vastgelegde videoframe. Pas de bronclip aan en meet opnieuw.`,
-    );
-    if (presentations.length)
-      clues.push(
-        `De videospeler meldde gepresenteerde mediaposities tussen ${(Math.min(...presentations.map((p) => p.mediaTimeMs)) / 1000).toFixed(2)} en ${(Math.max(...presentations.map((p) => p.mediaTimeMs)) / 1000).toFixed(2)} s via requestVideoFrameCallback. De tabel bewaart ook de ouderdom van die laatste melding. Dit is presentatiemetadata van het element, geen bewezen overeenkomst met een vastgelegd tabframe.`,
-      );
-  }
-  if (candidate.media === 'CANVAS')
-    clues.push(
-      'Controleer de tekenlus en kleurwisselingen van dit canvas. Een canvas deelt zijn rendercode niet via het DOM; deze geometrische koppeling wijst geen JavaScript-regel aan.',
-    );
-  if (observations.some((o) => o.mutationsSincePrevious > 0))
-    clues.push(
-      'Tijdens dit venster wijzigde het element of zijn directe omgeving. Onderzoek de bijbehorende stijl- of DOM-update; de teller bevat geen attributen, tekst of scriptbron en bewijst geen oorzaak.',
-    );
-  if (!clues.length)
-    clues.push(
-      'Dit element overlapt het gemeten gebied. Onderzoek ook bedekkende lagen, pseudo-elementen en ingesloten inhoud; er is geen concrete animatie- of mediabron vastgesteld.',
-    );
-  return clues;
-}
-
-function renderSourceTimeline(timeline: SourceTimeline): string {
-  const candidates = timeline.candidates
-    .map((candidate) => {
-      const rows = candidate.observations
-        .map((o) => {
-          const timing = o.animations
-            .map(
-              (a) =>
-                `${escape(a.kind)}: ${escape(a.properties.join(', ')) || 'eigenschap onbekend'}; ${a.durationMs === null ? 'duur onbekend' : `${fixed(a.durationMs)} ms`} × ${a.iterations === null ? 'onbegrensd/onbekend' : fixed(a.iterations)}; ${escape(a.playState)}`,
-            )
-            .join('<br>');
-          return `<tr><td>${fixed(o.atEpochMs - timeline.windowStartEpochMs)} ms${observationInWindow(o, timeline) ? '' : ' · context buiten het detectievenster'}${o.readWindow ? `<br>DOM gelezen ${fixed(o.readWindow.startEpochMs - timeline.windowStartEpochMs)}–${fixed(o.readWindow.endEpochMs - timeline.windowStartEpochMs)} ms (${escape(o.readWindow.trigger)})` : ''}</td><td>${fixed(o.rect.x)}, ${fixed(o.rect.y)} · ${fixed(o.rect.width)} × ${fixed(o.rect.height)}<br>Scroll ${fixed(o.viewport.scrollX)}, ${fixed(o.viewport.scrollY)}</td><td>${o.mutationsSincePrevious}</td><td>${timing || 'Geen animatie gemeten'}${o.mediaTimeMs !== undefined ? `<br>Video ${fixed(o.mediaTimeMs / 1000)} s · ${o.mediaPaused ? 'gepauzeerd' : 'speelt'}` : ''}${o.videoPresentation ? `<br>Laatste presentatiemelding: ${fixed(o.videoPresentation.mediaTimeMs / 1000)} s · ${fixed(o.atEpochMs - o.videoPresentation.callbackEpochMs)} ms oud` : ''}</td></tr>`;
-        })
-        .join('');
-      return `<section><h5>${escape(candidate.tag)}${candidate.media ? ` · ${escape(candidate.media)}` : ''}</h5><code>${candidate.selectorPath.map(escape).join(' → shadow root → ')}</code><ul>${sourceRepairClues(
-        candidate,
-        timeline,
-      )
-        .map((clue) => `<li>${escape(clue)}</li>`)
-        .join(
-          '',
-        )}</ul><details><summary>${candidate.observations.length} DOM-steekproeven bekijken</summary><div class="diagnostic-table" tabindex="0" role="region" aria-label="DOM-metingen tijdens het detectievenster"><table><thead><tr><th>Tijd vanaf geschat vensterbegin</th><th>CSS-regio en scroll</th><th>Mutaties sinds vorige steekproef</th><th>Animatie en media</th></tr></thead><tbody>${rows}</tbody></table></div></details></section>`;
-    })
-    .join('');
-  const clock = timeline.frameClock;
-  return `<section><h4>Elementen tijdens het detectievenster</h4><p>${timeline.status === 'CORRELATED' ? 'Elementen overlappen de kandidaatregio in tijdgebonden DOM-steekproeven.' : `Geen tijdgebonden koppeling: ${escape(timeline.reason ?? 'onbekend')}.`} Dit is een samenloop in tijd en plaats, geen bewezen oorzaak. De frameklok is geschat uit ontvangsttijd; de vertraging van capture en compositor ${timeline.alignmentUncertaintyMs === null ? 'is onbekend' : `heeft een geschatte onzekerheid van ${fixed(timeline.alignmentUncertaintyMs)} ms`}. DOM en videoframes zijn niet atomair gemeten.</p>${clock ? `<p>Venstergrenzen gekoppeld aan werkelijk ontvangen frames (${clock.matchedFrames} klokmetingen). De gemeten ontvangstoffset varieert ${fixed(clock.receiptOffsetSpreadMs)} ms; afwijking tot het gevraagde bronframe: ${fixed(clock.startBoundaryErrorMs)} / ${fixed(clock.endBoundaryErrorMs)} ms. Deze variatie is geen bovengrens voor capturelatentie.</p>` : ''}<p>${timeline.complete ? 'Het geschatte detectievenster is met DOM-steekproeven afgedekt' : 'Onvolledige DOM-dekking van het geschatte detectievenster'} · streefinterval ${fixed(timeline.sampleIntervalMs)} ms · grootste gemeten steekproefgat ${fixed(timeline.maxSampleGapMs)} ms. rAF markeert een renderfase; een timerfallback en vertraagde callbacks blijven apart herkenbaar.</p>${candidates}<details><summary>Beperkingen van de tijdkoppeling</summary><ul>${timeline.limitations.map((v) => `<li>${escape(v)}</li>`).join('')}</ul></details></section>`;
 }
 
 function renderSource(source: SourceDiagnostic): string {
@@ -408,7 +61,7 @@ export function renderFindingDiagnostics(finding: Finding): string {
   let trace = '';
   if (diagnostic) {
     const series = diagnosticSeries(diagnostic);
-    const start = series[0]!.time,
+    const start = series[0].time,
       end = series.at(-1)!.time;
     const span = Math.max(1, end - start);
     const path = (kind: 'luminance' | 'redRatio') =>
@@ -431,3 +84,12 @@ export function renderFindingDiagnostics(finding: Finding): string {
 /** Reused by script-free standalone exports; applications load equivalent external CSS. */
 export const diagnosticStyles =
   '.finding-diagnostics{margin-top:12px;min-width:0}.finding-diagnostics summary{cursor:pointer}.finding-diagnostics section{margin:16px 0}.finding-diagnostics code{overflow-wrap:anywhere;white-space:normal}.diagnostic-trace,.diagnostic-region{display:block;width:100%;height:auto}.diagnostic-trace{max-width:520px}.diagnostic-region{max-width:320px}.diagnostic-table{overflow:auto;max-width:100%}.diagnostic-table:focus-visible{outline:3px solid #185f50;outline-offset:2px}';
+
+export {
+  copyDiagnostics,
+  copySourceTimeline,
+  copySpatialEvidence,
+} from './diagnostic-copy.js';
+
+export { escape, fixed } from './diagnostic-format.js';
+export { sourceRepairClues } from './diagnostic-timeline.js';

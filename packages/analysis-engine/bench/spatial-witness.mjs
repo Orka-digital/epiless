@@ -145,7 +145,9 @@ export function observeFrozenSpatial(analyzer, frozenCheckerboard) {
     const mask = history.active.slice(),
       width = this.width,
       height = this.height,
-      field = !this.downsampled ? this.visualField : undefined;
+      field = !(this.quality?.downsampled ?? this.downsampled)
+        ? this.visualField
+        : undefined;
     const measured = independentMaskWitness(mask, width, height, field);
     assert.equal(
       measured.total,

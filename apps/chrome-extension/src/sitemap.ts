@@ -1,8 +1,12 @@
 import { planRoute } from '@epi-less/core';
+import { robotsAllows } from './robots-policy';
 
 const MAX_DOCUMENT_BYTES = 256 * 1024;
+
 const MAX_DOCUMENTS = 3;
+
 const MAX_CANDIDATES = 500;
+
 const decodeXml = (value: string) =>
   value.replace(
     /&(#x[\da-f]+|#\d+|amp|lt|gt|quot|apos);/gi,
@@ -24,6 +28,7 @@ const decodeXml = (value: string) =>
     },
   );
 
+/** Parse bounded sitemap locations without granting crawl authorization. */
 export function parseSitemap(xml: string): {
   kind: 'index' | 'urls';
   urls: string[];
@@ -44,98 +49,6 @@ export function parseSitemap(xml: string): {
     urls.push(decodeXml(match[1].trim()));
   }
   return { kind: index ? 'index' : 'urls', urls };
-}
-
-type RobotGroup = {
-  agents: string[];
-  rules: { allow: boolean; path: string }[];
-};
-function robotGroups(text: string): RobotGroup[] {
-  const groups: RobotGroup[] = [];
-  let current: RobotGroup | undefined;
-  let hasRules = false;
-  for (const line of text.split(/\r?\n/)) {
-    const clean = line.replace(/#.*/, '').trim();
-    const colon = clean.indexOf(':');
-    if (colon < 0) continue;
-    const field = clean.slice(0, colon).trim().toLowerCase();
-    const value = clean.slice(colon + 1).trim();
-    if (field === 'user-agent') {
-      if (!current || hasRules) {
-        current = { agents: [], rules: [] };
-        groups.push(current);
-        hasRules = false;
-      }
-      current.agents.push(value.toLowerCase());
-    } else if ((field === 'allow' || field === 'disallow') && current) {
-      hasRules = true;
-      if (value) current.rules.push({ allow: field === 'allow', path: value });
-    }
-  }
-  return groups;
-}
-export function robotsAllows(url: string, text: string): boolean {
-  const groups = robotGroups(text);
-  const named = groups.filter((group) => group.agents.includes('flashguard'));
-  const selected = named.length
-    ? named
-    : groups.filter((group) => group.agents.includes('*'));
-  const normalizePath = (value: string) =>
-    value
-      .replace(/[^\x00-\x7F]/gu, (character) => encodeURIComponent(character))
-      .replace(/%([\da-f]{2})/gi, (_, hex: string) => {
-        const character = String.fromCharCode(Number.parseInt(hex, 16));
-        // Decode only unreserved octets. Encoded *, / and $ remain literals,
-        // so an encoded Allow pattern cannot gain wildcard semantics.
-        return /[a-z\d._~-]/i.test(character)
-          ? character
-          : `%${hex.toUpperCase()}`;
-      });
-  const path = normalizePath(new URL(url).pathname);
-  const rules = selected
-    .flatMap((group) => group.rules)
-    .map((rule) => ({ ...rule, path: normalizePath(rule.path) }));
-  // Do not compile site-controlled wildcard patterns to backtracking regexes.
-  // Unsupported complexity declines sitemap exploration, never broadens permission.
-  if (rules.length > 128 || rules.some((rule) => rule.path.length > 512))
-    return false;
-  let steps = 0;
-  const matches = (pattern: string): boolean | undefined => {
-    const end = pattern.endsWith('$');
-    if (end) pattern = pattern.slice(0, -1);
-    let input = 0;
-    let cursor = 0;
-    let star = -1;
-    let retry = 0;
-    while (input < path.length) {
-      if (++steps > 16_384) return undefined;
-      if (cursor === pattern.length && !end) return true;
-      if (pattern[cursor] === path[input]) {
-        cursor++;
-        input++;
-      } else if (pattern[cursor] === '*') {
-        star = cursor++;
-        retry = input;
-      } else if (star !== -1) {
-        cursor = star + 1;
-        input = ++retry;
-      } else return false;
-    }
-    while (pattern[cursor] === '*') cursor++;
-    return cursor === pattern.length;
-  };
-  const matching = [];
-  for (const rule of rules) {
-    const match = matches(rule.path);
-    if (match === undefined) return false;
-    if (match) matching.push(rule);
-  }
-  matching.sort(
-    (a, b) =>
-      b.path.replace(/[*$]/g, '').length - a.path.replace(/[*$]/g, '').length ||
-      Number(b.allow) - Number(a.allow),
-  );
-  return matching[0]?.allow ?? true;
 }
 
 async function readDocument(
@@ -226,24 +139,15 @@ export async function discoverSitemap(
       const xml = await readDocument(decision.url, fetcher);
       if (xml === undefined) continue;
       const sitemap = parseSitemap(xml);
-      for (const entry of sitemap.urls) {
-        const route = planRoute({
-          candidate: entry,
-          baseUrl: decision.url,
-          origin,
-          depth: 0,
-        });
-        if (!route.allowed || !route.url || !robotsAllows(route.url, robots))
-          continue;
-        if (sitemap.kind === 'index') queue.push(route.url);
-        else if (!urls.includes(route.url)) {
-          if (urls.length >= MAX_CANDIDATES) {
-            limitations.push('SITEMAP_CANDIDATE_LIMIT');
-            break;
-          }
-          urls.push(route.url);
-        }
-      }
+      collectSitemapRoutes(
+        sitemap,
+        decision.url,
+        origin,
+        robots,
+        queue,
+        urls,
+        limitations,
+      );
     } catch (error) {
       limitations.push(
         error instanceof Error
@@ -256,3 +160,33 @@ export async function discoverSitemap(
   if (queue.length) limitations.push('SITEMAP_DOCUMENT_LIMIT');
   return { urls, limitations: [...new Set(limitations)] };
 }
+
+function collectSitemapRoutes(
+  sitemap: ReturnType<typeof parseSitemap>,
+  baseUrl: string,
+  origin: string,
+  robots: string,
+  queue: string[],
+  urls: string[],
+  limitations: string[],
+): void {
+  for (const entry of sitemap.urls) {
+    const route = planRoute({
+      candidate: entry,
+      baseUrl,
+      origin,
+      depth: 0,
+    });
+    if (!route.allowed || !route.url || !robotsAllows(route.url, robots))
+      continue;
+    if (sitemap.kind === 'index') queue.push(route.url);
+    else if (!urls.includes(route.url)) {
+      if (urls.length >= MAX_CANDIDATES) {
+        limitations.push('SITEMAP_CANDIDATE_LIMIT');
+        break;
+      }
+      urls.push(route.url);
+    }
+  }
+}
+export { robotsAllows } from './robots-policy';

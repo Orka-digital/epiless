@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { api, type ChallengeData } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
 import Challenge from './Challenge';
 function safeReturnTo(value: string) {
   try {
@@ -11,13 +12,13 @@ function safeReturnTo(value: string) {
     return '/account';
   }
 }
+/** Submit account credentials with challenge verification and surface server failures. */
 export default function AuthForm({
   returnTo = '/account',
 }: {
   returnTo?: string;
 }) {
-  const [hydrated, setHydrated] = useState(false);
-  useEffect(() => setHydrated(true), []);
+  const hydrated = useHydrated();
   const [mode, setMode] = useState<'sign-in' | 'sign-up' | 'reset'>('sign-in');
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
@@ -118,7 +119,7 @@ export default function AuthForm({
           Account maken
         </button>
       </div>
-      <form ref={form} onSubmit={submit} method="post">
+      <form ref={form} onSubmit={(event) => void submit(event)} method="post">
         <fieldset className="form-fields" disabled={!hydrated || busy}>
           <legend className="sr-only">Accountgegevens</legend>
           {mode === 'sign-up' && (
@@ -172,7 +173,11 @@ export default function AuthForm({
           </button>
         </fieldset>
         {challenge && (
-          <Challenge challenge={challenge} onToken={complete} onError={fail} />
+          <Challenge
+            challenge={challenge}
+            onToken={(token) => void complete(token)}
+            onError={fail}
+          />
         )}
         <div aria-live="polite">
           {error && <p className="notice error">{error}</p>}

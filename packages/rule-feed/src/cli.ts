@@ -41,10 +41,10 @@ async function main(): Promise<void> {
   let signingKey: CryptoKey;
   let publicKey: JsonWebKey;
   if (values['dev-key']) {
-    const pair = (await crypto.subtle.generateKey('Ed25519', true, [
+    const pair = await crypto.subtle.generateKey('Ed25519', true, [
       'sign',
       'verify',
-    ])) as CryptoKeyPair;
+    ]);
     signingKey = pair.privateKey;
     publicKey = await crypto.subtle.exportKey('jwk', pair.publicKey);
   } else {

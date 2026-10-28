@@ -1,5 +1,5 @@
-import { replayStateKey } from './verification';
 import type { PageInventory, ReplayScenario, ReplayStep } from './model';
+import { replayStateKey } from './verification';
 
 const MAX_CAROUSEL_STEPS = 4;
 const MAX_FOCUS_STEPS = 2;
@@ -36,6 +36,7 @@ export interface ExplorationState {
   hovered: Set<string>;
   hoverCount: number;
 }
+/** Create empty per-route exploration bookkeeping; no browser action is performed. */
 export function newExplorationState(): ExplorationState {
   return {
     attempts: new Map(),
@@ -46,6 +47,7 @@ export function newExplorationState(): ExplorationState {
     hoverCount: 0,
   };
 }
+/** Build a replayable hover step from a recorded target. */
 export function hoveredAction(
   actions: PageInventory['actions'],
   state: ExplorationState,
@@ -58,6 +60,7 @@ export function hoveredAction(
       !state.hovered.has(action.id),
   );
 }
+/** Test whether a recorded action still requires an attempt. */
 export function actionPending(
   action: PageInventory['actions'][number],
   state: ExplorationState,
@@ -68,6 +71,7 @@ export function actionPending(
         !state.carouselStates.get(action.id)?.has(action.state ?? '')
     : attempts === 0;
 }
+/** Record an attempted action so exploration cannot retry it indefinitely. */
 export function recordActionAttempt(
   action: PageInventory['actions'][number],
   state: ExplorationState,
@@ -79,6 +83,7 @@ export function recordActionAttempt(
     state.carouselStates.set(action.id, observed);
   }
 }
+/** Build a replayable focus step from a recorded target. */
 export function focusedAction(
   actions: PageInventory['actions'],
   state: ExplorationState,
@@ -93,6 +98,7 @@ export function focusedAction(
   );
 }
 
+/** Compare the geometry relevant to replay, including device pixel ratio. */
 export function sameViewport(
   expected: ReplayScenario['viewport'],
   actual: ReplayScenario['viewport'],

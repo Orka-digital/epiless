@@ -113,7 +113,7 @@ type CommandPayload<K extends CommandType> = Omit<
   'type' | 'target'
 >;
 export type CommandArgs<K extends CommandType = CommandType> = {
-  [T in K]: {} extends CommandPayload<T>
+  [T in K]: Record<string, never> extends CommandPayload<T>
     ? [type: T, values?: CommandPayload<T>]
     : [type: T, values: CommandPayload<T>];
 }[K];
@@ -134,6 +134,7 @@ export type CommandResult<K extends CommandType> = K extends 'GET_STATE'
               ? { saved: true }
               : Record<string, never>;
 
+/** Validate untrusted extension messages and bounded candidate geometry before dispatch. */
 export function parseBackgroundCommand(input: unknown): BackgroundCommand {
   const result = backgroundCommandSchema.safeParse(input);
   if (!result.success)

@@ -1,5 +1,5 @@
-import type { Observation } from './model';
 import { validPhaseEvidence, validPhasePlan } from './animation-phase';
+import type { Observation } from './model';
 
 const phaseReasons: Record<string, string> = {
   DOCUMENT_PHASE_WAIT_LIMIT_REACHED:
@@ -54,6 +54,7 @@ export const explainPhaseReason = (reason: string): string =>
 const time = (value: number) =>
   (value / 1000).toLocaleString('nl-BE', { maximumFractionDigits: 2 });
 
+/** Render retained phase evidence and its limitations without replaying page effects. */
 export function PhaseEvidencePanel({
   observation,
 }: {

@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "astro-build.astro-vscode",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint"
+  ]
+}
