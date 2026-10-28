@@ -1,17 +1,20 @@
+import { ToolHeader } from './ToolHeader';
+import { ScanRecoveryNotices } from './ScanRecoveryNotices';
+import { ScanReportCard } from './ScanReportCard';
 import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { TERMINAL_STATES, type ScanJob } from './model';
+import type { ScanJob } from './model';
 import { ScanHistory } from './ScanHistory';
 import { ScanMeasurements } from './ScanMeasurements';
 import { ScanSettings } from './ScanSettings';
 import { ScanSidebar } from './ScanSidebar';
 import { ScanStart } from './ScanStart';
 import { ToolIcon } from './ToolIcon';
-import { labels, stopSummary } from './ui-labels';
 import { useScanExports } from './useScanExports';
 import { useScannerConnection } from './useScannerConnection';
 import { useScanSelection } from './useScanSelection';
 
+/** Compose workspace sections while hooks retain connection, selection and export ownership. */
 function App() {
   const advancedBuild =
     chrome.runtime.getManifest().permissions?.includes('debugger') ?? false;
@@ -80,46 +83,7 @@ function App() {
         />
       )}
       <main>
-        <header className="tool-header">
-          {popup ? (
-            <a
-              className="brand"
-              href="#"
-              onClick={(event) => {
-                event.preventDefault();
-                void act('OPEN_DASHBOARD');
-              }}
-            >
-              <span className="brand-symbol">
-                <ToolIcon name="scan" />
-              </span>
-              epi-less
-            </a>
-          ) : (
-            <div className="breadcrumb">
-              Lokale werkruimte <span>/</span>{' '}
-              <h1>
-                {workspaceView === 'history'
-                  ? 'Geschiedenis'
-                  : workspaceView === 'settings'
-                    ? 'Instellingen'
-                    : 'Scaninspectie'}
-              </h1>
-            </div>
-          )}
-          {popup ? (
-            <button
-              className="icon-button"
-              aria-label="Open werkruimte"
-              title="Open werkruimte"
-              onClick={() => void act('OPEN_DASHBOARD')}
-            >
-              <ToolIcon name="external" />
-            </button>
-          ) : (
-            <span className="preview-tag">Ontwikkelversie</span>
-          )}
-        </header>
+        <ToolHeader popup={popup} workspaceView={workspaceView} act={act} />
         <div className="workspace-content">
           {popup && <h1 className="sr-only">Website scannen</h1>}
           {error && (
@@ -132,40 +96,7 @@ function App() {
               {notice}
             </div>
           )}
-          {state?.advancedRecovery && (
-            <section role="status" className="message">
-              <strong>Tijdelijke scantab controleren</strong>
-              <p>
-                epi-less kon de tijdelijke scantab niet meer met zekerheid
-                herkennen en heeft daarom geen tab gesloten. Controleer de open
-                scantab voordat je opnieuw begint.
-              </p>
-              <details>
-                <summary>Technische reden</summary>
-                <p>{state.advancedRecovery.reason}</p>
-              </details>
-            </section>
-          )}
-          {!!state?.workspaceRecovery?.length && (
-            <section role="status" className="message">
-              <strong>Scantab handmatig terugplaatsen</strong>
-              <p>
-                De scan werd onderbroken tijdens het verplaatsen van een tab.
-                epi-less kan het tijdelijke venster niet meer betrouwbaar
-                herkennen. Sleep de scantab zelf terug naar het oorspronkelijke
-                venster. Deze melding verdwijnt zodra de tab daar terugstaat.
-              </p>
-              <ul>
-                {state.workspaceRecovery.map((recovery) => (
-                  <li key={recovery.jobId}>
-                    {jobs.find((job) => job.id === recovery.jobId)?.startUrl ??
-                      'Onderbroken scan'}{' '}
-                    · oorspronkelijke tabpositie {recovery.originalIndex + 1}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
+          <ScanRecoveryNotices state={state} jobs={jobs} />
           {(popup || devtools) &&
             workspaceView === 'scan' &&
             (popup ? !popupReport : !active) && (
@@ -231,156 +162,19 @@ function App() {
             </button>
           )}
           {chosen && workspaceView === 'scan' && (!popup || popupReport) && (
-            <section className="audit-card" aria-labelledby="audit-title">
-              <div className="card-heading">
-                <div>
-                  <p className="label">
-                    {active?.id === chosen.id ? 'ACTIEVE SCAN' : 'SCANRAPPORT'}
-                  </p>
-                  <h2 id="audit-title">{new URL(chosen.origin).host}</h2>
-                </div>
-                <span
-                  className={`status ${chosen.state === 'RUNNING' ? 'active' : ''}`}
-                >
-                  {labels[chosen.state]}
-                </span>
-              </div>
-              <p className="audit-date">
-                {new Date(chosen.startedAt).toLocaleString('nl-BE')} ·{' '}
-                {chosen.mode === 'AUTONOMOUS'
-                  ? 'Autonome websitescan'
-                  : 'Viewportmeting'}
-              </p>
-              <div className="stats">
-                <div className={findingsCount(chosen) ? 'metric-review' : ''}>
-                  <strong>{findingsCount(chosen)}</strong>
-                  <span>bevindingen ter beoordeling</span>
-                </div>
-                <div>
-                  <strong>
-                    {
-                      chosen.tasks.filter((task) =>
-                        ['OBSERVED', 'PARTIAL'].includes(task.state),
-                      ).length
-                    }
-                    <span> / {chosen.tasks.length}</span>
-                  </strong>
-                  <span>routes bezocht</span>
-                </div>
-                <div>
-                  <strong>
-                    {chosen.tasks.reduce(
-                      (sum, task) => sum + task.observations.length,
-                      0,
-                    )}
-                  </strong>
-                  <span>observaties</span>
-                </div>
-                <div>
-                  <strong>
-                    {`${Math.floor(chosen.elapsedMs / 60_000)}:${String(Math.floor(chosen.elapsedMs / 1000) % 60).padStart(2, '0')}`}
-                  </strong>
-                  <span>actieve scantijd</span>
-                </div>
-              </div>
-              <p className="small">
-                {chosen.tasks.find((task) => task.state === 'RUNNING')?.url ??
-                  stopSummary(chosen.stopReason)}
-              </p>
-              {chosen.disposableSource?.closed && (
-                <p className="small">
-                  De tijdelijke scantab is gesloten. De oorspronkelijke tab
-                  bleef behouden. Je kunt het rapport bekijken of een bewaard
-                  scenario opnieuw laten onderzoeken.
-                </p>
-              )}
-              {chosen.disposableSource && chosen.state === 'PAUSED' && (
-                <p className="small">
-                  De tijdelijke scantab blijft open tijdens de pauze. Je kunt
-                  daar DevTools openen om nog beschikbare bronelementen te
-                  inspecteren. Sluit DevTools voordat je via de toolbar hervat.
-                </p>
-              )}
-              {chosen.disposableSource?.cleanupStatus === 'MANUAL' && (
-                <p className="message">
-                  Het automatisch sluiten van de tijdelijke scantab kon niet
-                  worden bevestigd. Controleer of die tab nog openstaat; het
-                  rapport is bewaard.
-                </p>
-              )}
-              <div className="actions">
-                {chosen.state === 'RUNNING' && (
-                  <button
-                    disabled={busy}
-                    onClick={() => void act('PAUSE', { id: chosen.id })}
-                  >
-                    Pauzeer
-                  </button>
-                )}
-                {['PAUSED', 'INTERRUPTED'].includes(chosen.state) &&
-                  !chosen.disposableSource?.closed && (
-                    <button disabled={busy} onClick={() => void resume(chosen)}>
-                      Hervat via scantab
-                    </button>
-                  )}
-                {!TERMINAL_STATES.includes(chosen.state) && (
-                  <button
-                    className="danger"
-                    disabled={busy || chosen.state === 'STOPPING'}
-                    onClick={() => void act('STOP', { id: chosen.id })}
-                  >
-                    Stop scan
-                  </button>
-                )}
-                {popup && (
-                  <button onClick={() => void act('OPEN_DASHBOARD')}>
-                    Bekijk voortgang ↗
-                  </button>
-                )}
-                {!popup && TERMINAL_STATES.includes(chosen.state) && (
-                  <>
-                    <button onClick={() => void exportJob(chosen.id)}>
-                      Exporteer JSON
-                    </button>
-                    <button onClick={() => void exportJob(chosen.id, true)}>
-                      Exporteer HTML
-                    </button>
-                    <button
-                      className="primary"
-                      disabled={busy}
-                      onClick={() =>
-                        void act('PUBLISH_PREVIEW', { id: chosen.id })
-                      }
-                    >
-                      Uploadvoorbeeld openen ↗
-                    </button>
-                  </>
-                )}
-              </div>
-              {!popup && TERMINAL_STATES.includes(chosen.state) && (
-                <details className="export-options">
-                  <summary>Privacy- en exportopties</summary>
-                  <label className="checkbox">
-                    <input
-                      type="checkbox"
-                      checked={pseudonymize}
-                      onChange={(event) =>
-                        setPseudonymize(event.target.checked)
-                      }
-                    />{' '}
-                    Vervang websites, paden en diagnostische tekst in exports
-                    door pseudoniemen
-                  </label>
-                  <p className="caption">
-                    Pseudonimisering geldt voor lokale exports, niet voor het
-                    uploadvoorbeeld. Tijdstippen en metingen blijven behouden.
-                  </p>
-                  <p className="caption">
-                    Delen opent eerst een voorbeeld op {state?.webOrigin}. Er
-                    wordt nu nog niets gepubliceerd.
-                  </p>
-                </details>
-              )}
+            <ScanReportCard
+              chosen={chosen}
+              active={active}
+              popup={popup}
+              busy={busy}
+              findingsCount={findingsCount}
+              resume={resume}
+              act={act}
+              exportJob={exportJob}
+              pseudonymize={pseudonymize}
+              setPseudonymize={setPseudonymize}
+              webOrigin={state?.webOrigin}
+            >
               {!popup && (
                 <ScanMeasurements
                   routeView={routeView}
@@ -398,27 +192,7 @@ function App() {
                   jobs={jobs}
                 />
               )}
-              {!popup && (
-                <details className="limitations">
-                  <summary>Meetgrenzen en dekking</summary>
-                  {chosen.stopReason && (
-                    <p>
-                      Technische afsluitreden: <code>{chosen.stopReason}</code>
-                    </p>
-                  )}
-                  <ul>
-                    {chosen.limitations.map((reason) => (
-                      <li key={reason}>{reason}</li>
-                    ))}
-                  </ul>
-                  <p className="small">
-                    Een afgeronde job betekent dat het scanplan is uitgevoerd.
-                    Onbekende pagina’s en niet bereikte toestanden blijven
-                    onbekend.
-                  </p>
-                </details>
-              )}
-            </section>
+            </ScanReportCard>
           )}
           {!popup && workspaceView === 'history' && (
             <ScanHistory
