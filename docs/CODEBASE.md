@@ -23,6 +23,25 @@ The services are explicit parameters, not imports back into `background.ts`. Kee
 
 `ui.tsx` composes the view. `useScannerConnection.ts` owns polling, command feedback and gesture-bound capture actions; stale polling responses are discarded. `useScanSelection.ts` owns selection and filters; `useScanExports.ts` owns export actions and privacy selection. `command-protocol.ts` defines the discriminated background-command union and validates incoming commands before dispatch. `command-client.ts` links command arguments to response types. Internal content/worker transports retain their existing separate contracts. `ScanStart`, `ScanMeasurements`, `ScanHistory`, `ScanSettings` and `ScanSidebar` render the separate workspaces. `ui-state.ts` describes the worker response; `ui-labels.ts` holds display labels. Report controls retain their existing callbacks and observation identifiers.
 
+### Page content and media replay
+
+`content.ts` owns installation, message dispatch, cancellation generations and restoration. `content-tree.ts` owns bounded document/open-shadow traversal and refreshable selector caches. Its state is read through getters so policy helpers cannot retain stale arrays. `content-dom.ts` provides composed-tree visibility and hit testing; `content-controls.ts` implements conservative control safety and state predicates; `content-inventory.ts` owns stable element IDs and the current route/control inventory. The existing form, modal, CAPTCHA, transaction and traversal-limit denials remain unchanged.
+
+`media-replay.ts` remains the consumed entrypoint. `media-replay-types.ts` holds the transport shapes and limits; `media-replay-validation.ts` validates and copies allowlisted fields; `media-replay-interval.ts` checks playback/compositor continuity; `media-replay-plan.ts` builds bounded plans and their key material; `media-replay-comparison.ts` compares original and repeated evidence. Matching a locator or an advancing playback clock still cannot prove that all original presentations recurred.
+
+## Publication service
+
+`apps/web/src/server/publications.ts` retains the handler-facing function exports. Implementation modules import each other directly:
+
+- `publication-types.ts`: stored row and transport contracts.
+- `publication-presentation.ts`: visibility parsing and owner/public metadata projection.
+- `publication-queries.ts`: access-controlled detail and bounded public/owner pagination.
+- `publication-intents.ts`: snapshot validation, challenge verification and cancellation.
+- `publication-mutations.ts`: publication commit, revision-bound owner updates and write-pause policy.
+- `publication-moderation.ts`: abuse reports and explicit moderator access.
+
+JSDoc records ownership, trust boundaries and race behavior. The SQL statements, batches, quotas, immutable hashes, revision guards and erasure records are preserved by the split. Internal row types are not re-exported through the handler entrypoint.
+
 ## Detector
 
 `packages/analysis-engine/src/index.ts` is the public API. It re-exports the existing API without changing the engine version.

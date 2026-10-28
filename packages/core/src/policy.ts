@@ -34,6 +34,11 @@ export interface PolicyDecision {
   url?: string;
 }
 
+/**
+ * Evaluate a candidate route against origin, depth and transaction boundaries.
+ * @param input - Candidate URL, current scope and already visited routes.
+ * @returns An allowed normalized route or a specific rejection reason; never navigates.
+ */
 export function planRoute(input: RoutePolicyInput): PolicyDecision {
   try {
     if (
@@ -97,6 +102,12 @@ export interface InspectionAction {
 }
 
 /** A conservative inspection allowlist. Navigation still requires planRoute(). */
+/**
+ * Decide whether a described control is safe for bounded autonomous exploration.
+ * DOM visibility, reachability and current state must still be checked by the caller.
+ * @param action - Observed control semantics, not a trusted permission grant.
+ * @returns An allow/deny decision with its reason; never activates the control.
+ */
 export function evaluateAction(action: InspectionAction): PolicyDecision {
   if (
     action.download ||

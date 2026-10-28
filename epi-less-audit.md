@@ -2134,7 +2134,7 @@ epi-less scans websites locally, records when and where suspicious changes occur
 
 A community project for investigating flashing web content. Contributions to detection, accessibility and documentation are welcome.
 
-> **Development preview · repository temporarily private.** Access is required to clone or contribute. The local P0 workflow runs; scanner 0.4 remains a candidate implementation with unresolved capture and validation gates. There is no official hosted service or Chrome Web Store release yet. A public, community-developed project remains the intention. The scanner produces review candidates, not a validated WCAG verdict or medical safety guarantee.
+> **Development preview · open for contributions.** The local P0 workflow runs; scanner 0.4 remains a candidate implementation with unresolved capture and validation gates. There is no official hosted service or Chrome Web Store release yet. The scanner produces review candidates, not a validated WCAG verdict or medical safety guarantee.
 
 [Quickstart](#quickstart) · [First scan](#your-first-scan) · [Detection quality](#detection-quality) · [Contributing](#contributing) · [Documentation](#documentation)
 
@@ -2328,7 +2328,7 @@ Start with the [codebase map](docs/CODEBASE.md) for module ownership and mainten
 
 Original code and documentation use the [MIT License](LICENSE). Dependencies and the [TRACE reference fixtures](tests/reference/trace-pse/upstream/LICENSE) retain their own licenses; see [third-party notices](docs/THIRD_PARTY_NOTICES.md).
 
-Project credits: Orka Digital and Thibaux Mampaey. See [governance](GOVERNANCE.md) for project stewardship and contributions.
+Project credits: Orka Digital. See [governance](GOVERNANCE.md) for project stewardship and contributions.
 
 Technical compatibility: legacy storage keys and signed-feed identifiers remain unchanged so existing local data and signatures stay valid. Historical validation artifacts retain their original bytes. The product and workspace packages use **epi-less**; local development variables use `EPI_LESS_*`.
 ````
