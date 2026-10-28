@@ -6,6 +6,7 @@ export interface CaptureViewport {
   height: number;
   dpr: number;
 }
+/** Validate native capture geometry; reject unsupported or malformed viewport input. */
 export function validateCaptureViewport(input: unknown): CaptureViewport {
   const value = input as Partial<CaptureViewport> | null;
   if (
@@ -85,6 +86,7 @@ export class CaptureCoverage {
   }
 }
 
+/** Attach arrival-clock coverage without replacing decoded-frame timestamps. */
 export function withCaptureCoverage(
   measurement: AnalysisResult,
   coverage: CaptureWindow,
