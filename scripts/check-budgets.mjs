@@ -1,5 +1,4 @@
-import { readFileSync, readdirSync, statSync } from 'node:fs';
-import { join, basename } from 'node:path';
+import { readFileSync, readdirSync } from 'node:fs';
 import { gzipSync } from 'node:zlib';
 const root = new URL('../apps/web/dist/client/', import.meta.url);
 const assetRoot = new URL('_astro/', root);

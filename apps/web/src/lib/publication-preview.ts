@@ -27,6 +27,8 @@ export function publicPath(path: string, origin: string): string {
   if (
     !path.startsWith('/') ||
     path.startsWith('//') ||
+    // Reject control characters before URL normalization can silently remove them.
+    // eslint-disable-next-line no-control-regex
     /[?#\\\s\u0000-\u001f]/u.test(path)
   )
     throw new Error(
@@ -48,7 +50,7 @@ export function buildPublicSnapshot(
     (route, i) =>
       route.included &&
       publicPath(route.path, report.origin) !==
-        new URL(new URL(report.routes[i]!.url).pathname, report.origin).href,
+        new URL(new URL(report.routes[i].url).pathname, report.origin).href,
   );
   const limitations = options.scanNotes
     ? [...report.limitations]

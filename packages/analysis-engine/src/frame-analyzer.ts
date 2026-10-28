@@ -170,8 +170,8 @@ export class FrameAnalyzer extends FrameMemory {
     if (changedRuns && changedRuns.length < 192) {
       dirty = new Uint8Array(this.tileUniform.length);
       for (let i = 0; i < changedRuns.length; i += 3) {
-        let p = changedRuns[i],
-          end = changedRuns[i + 1];
+        let p = changedRuns[i];
+        const end = changedRuns[i + 1];
         while (p < end) {
           const row = Math.floor(p / this.width),
             x = p % this.width,

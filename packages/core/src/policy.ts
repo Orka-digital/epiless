@@ -1,5 +1,5 @@
 const forbiddenAction =
-  /(?:^|[\s/_?&=.#:;+\-])(log[\s_-]?out|sign[\s_-]?out|log[\s_-]?in|sign[\s_-]?in|sign[\s_-]?up|register|authorize|authorise|oauth|permissions?|grant|allow|install|connect|delete|remove|unsubscribe|checkout|basket|cart|purchase|buy|payment|pay|downloads?|export|submit|send|confirm|revoke|destroy|disconnect|reset|cancel|inloggen|aanmelden|toestaan|uitloggen|verwijderen|betalen|bestellen|versturen)(?:$|[\s/_?&=.#:;+\-])/i;
+  /(?:^|[\s/_?&=.#:;+-])(log[\s_-]?out|sign[\s_-]?out|log[\s_-]?in|sign[\s_-]?in|sign[\s_-]?up|register|authorize|authorise|oauth|permissions?|grant|allow|install|connect|delete|remove|unsubscribe|checkout|basket|cart|purchase|buy|payment|pay|downloads?|export|submit|send|confirm|revoke|destroy|disconnect|reset|cancel|inloggen|aanmelden|toestaan|uitloggen|verwijderen|betalen|bestellen|versturen)(?:$|[\s/_?&=.#:;+-])/i;
 const secretKey =
   /token|key|auth|session|email|code|password|secret|signature|credential/i;
 

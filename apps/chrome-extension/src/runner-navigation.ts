@@ -150,7 +150,7 @@ export function createRunnerNavigation(
     ): Promise<string | undefined> => {
       await navigationGuard();
       const before = (await chrome.tabs.get(job.tabId)).url ?? job.startUrl;
-      let initiated = false;
+      let initiated: boolean;
       let documentStarted = false;
       let documentCompleted = false;
       const navigationListener = (

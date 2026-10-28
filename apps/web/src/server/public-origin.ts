@@ -84,7 +84,7 @@ export function isPublicOrigin(origin: string): boolean {
   // Wildcard development hosts can encode a private literal in their labels.
   if (host.endsWith('.nip.io') || host.endsWith('.sslip.io')) {
     const encoded = host.match(
-      /(?:^|[.\-])(\d{1,3})[.\-](\d{1,3})[.\-](\d{1,3})[.\-](\d{1,3})(?:[.\-]|$)/u,
+      /(?:^|[.-])(\d{1,3})[.-](\d{1,3})[.-](\d{1,3})[.-](\d{1,3})(?:[.-]|$)/u,
     );
     if (encoded && !publicV4(encoded.slice(1).map(Number))) return false;
   }

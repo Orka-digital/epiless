@@ -215,7 +215,7 @@ export class SourceTimelineBuffer {
       sampleCount: samples.length,
       ...(samples.length
         ? {
-            firstSampleEpochMs: samples[0]!.atEpochMs,
+            firstSampleEpochMs: samples[0].atEpochMs,
             lastSampleEpochMs: samples.at(-1)!.atEpochMs,
           }
         : {}),
@@ -235,7 +235,7 @@ export class SourceTimelineBuffer {
       if (i)
         result.maxSampleGapMs = Math.max(
           result.maxSampleGapMs,
-          snapshot.atEpochMs - samples[i - 1]!.atEpochMs,
+          snapshot.atEpochMs - samples[i - 1].atEpochMs,
         );
       for (const limitation of snapshot.limitations)
         limitations.add(limitation);
@@ -348,7 +348,7 @@ export class SourceTimelineBuffer {
       .map((entry) => entry.candidate);
     result.status = result.candidates.length ? 'CORRELATED' : 'UNAVAILABLE';
     const startCovered =
-      samples.length > 0 && samples[0]!.atEpochMs <= event.windowStartEpochMs;
+      samples.length > 0 && samples[0].atEpochMs <= event.windowStartEpochMs;
     const endCovered =
       samples.length > 0 && samples.at(-1)!.atEpochMs >= event.windowEndEpochMs;
     if (!startCovered || !endCovered)

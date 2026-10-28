@@ -316,7 +316,7 @@ class MediaObservation {
             (plan.coverage![index].presentedEndMs === undefined ||
               (interval.presentedEndMs !== undefined &&
                 interval.presentedEndMs >=
-                  plan.coverage![index].presentedEndMs! -
+                  plan.coverage![index].presentedEndMs -
                     MEDIA_POSITION_EPSILON_MS &&
                 interval.presentedWraps >=
                   (plan.coverage![index].presentedWraps ?? 0))),

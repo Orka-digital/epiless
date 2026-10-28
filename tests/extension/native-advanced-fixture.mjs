@@ -30,7 +30,9 @@ const productionSha256 = await hashDirectory(production);
 await cp(production, extension, { recursive: true });
 const requests = [],
   geometries = [];
-let origin, browser, environment;
+// Request callbacks can run before initialization; keep undefined rather than a TDZ.
+// eslint-disable-next-line prefer-const
+let environment;
 const expectedColors = [
   [40, 80, 120, 255],
   [140, 180, 220, 255],
@@ -132,7 +134,7 @@ const server = createServer(async (request, response) => {
   <script>function report(){fetch('/geometry',{method:'POST',body:JSON.stringify({at:Date.now(),innerWidth,innerHeight,outerWidth,outerHeight,devicePixelRatio,visibility:document.visibilityState,screen:{width:screen.width,height:screen.height},compactVisible:getComputedStyle(document.querySelector('.compact')).display!=='none',compactExpanded:document.querySelector('.compact button').getAttribute('aria-expanded')})}).catch(()=>{})}report();addEventListener('resize',report);document.addEventListener('visibilitychange',report);setInterval(report,1000);</script></html>`);
 });
 await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
-origin = `http://127.0.0.1:${server.address().port}`;
+const origin = `http://127.0.0.1:${server.address().port}`;
 const manifestFile = path.join(extension, 'manifest.json');
 const manifest = JSON.parse(await readFile(manifestFile, 'utf8'));
 if (!manifest.permissions.includes('debugger'))
@@ -226,7 +228,7 @@ await writeFile(
   path.join(evidence, 'environment-start.json'),
   JSON.stringify(environment, null, 2),
 );
-browser = spawn(
+const browser = spawn(
   chromium.executablePath(),
   [
     `--user-data-dir=${path.join(evidence, 'browser-profile')}`,

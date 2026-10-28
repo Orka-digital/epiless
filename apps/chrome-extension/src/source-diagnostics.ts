@@ -91,8 +91,8 @@ export function sameCssReferenceContext(
     first.viewportRevision! < 0 ||
     first.viewportRevision !== last.viewportRevision ||
     !Number.isSafeInteger(before?.zoomRevision) ||
-    before!.zoomRevision < 0 ||
-    before!.zoomRevision !== after?.zoomRevision ||
+    before.zoomRevision < 0 ||
+    before.zoomRevision !== after?.zoomRevision ||
     before?.pageZoom !== 1 ||
     after?.pageZoom !== 1
   )

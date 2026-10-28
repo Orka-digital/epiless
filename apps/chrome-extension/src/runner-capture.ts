@@ -156,7 +156,9 @@ export function createRunnerCapture(
         ].includes(reason)
       )
         throw error;
-      throw new Error(`CAPTURE_SOURCE_REOPEN_FAILED: ${reason}`);
+      throw new Error(`CAPTURE_SOURCE_REOPEN_FAILED: ${reason}`, {
+        cause: error,
+      });
     }
     services.capture.captureSources.set(id, {
       generation,

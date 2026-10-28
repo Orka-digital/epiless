@@ -189,7 +189,7 @@ export function createRunnerCommands(
           observationId: ref.observationId,
         },
         route: plan.route,
-        tabId: tab.id!,
+        tabId: tab.id,
       });
       return { tabId: tab.id };
     }
@@ -386,7 +386,7 @@ export function createRunnerCommands(
               },
             }
           : {}),
-        tabId: tab.id!,
+        tabId: tab.id,
         origin: parsed.origin,
         startUrl: normalizePublicUrl(decision.url),
         startedAt: services.now(),

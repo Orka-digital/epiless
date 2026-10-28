@@ -78,7 +78,7 @@ export function paginateReport(
   for (const segment of selected) {
     let route = routes.get(segment.routeIndex);
     if (!route) {
-      const original = report.routes[segment.routeIndex]!;
+      const original = report.routes[segment.routeIndex];
       route = {
         ...original,
         scenarios: [],

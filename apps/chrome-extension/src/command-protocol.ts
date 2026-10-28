@@ -113,7 +113,7 @@ type CommandPayload<K extends CommandType> = Omit<
   'type' | 'target'
 >;
 export type CommandArgs<K extends CommandType = CommandType> = {
-  [T in K]: {} extends CommandPayload<T>
+  [T in K]: Record<string, never> extends CommandPayload<T>
     ? [type: T, values?: CommandPayload<T>]
     : [type: T, values: CommandPayload<T>];
 }[K];

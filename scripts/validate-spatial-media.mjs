@@ -311,8 +311,8 @@ export function sourceFrame(mask, background, rgba) {
 }
 
 /**
- * @param {string[]} args
  * @param {string} executable
+ * @param {string[]} args
  */
 function child(executable, args) {
   const process = spawn(executable, args, { stdio: ['pipe', 'pipe', 'pipe'] });

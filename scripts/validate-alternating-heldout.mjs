@@ -252,8 +252,8 @@ function command(executable, args) {
   return result.stdout;
 }
 /**
- * @param {string[]} args
  * @param {string} executable
+ * @param {string[]} args
  */
 function child(executable, args) {
   const process = spawn(executable, args, { stdio: ['pipe', 'pipe', 'pipe'] });

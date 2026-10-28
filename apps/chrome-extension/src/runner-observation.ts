@@ -456,7 +456,7 @@ export function createRunnerObservation(
       if (unexpectedRoute) {
         observation.navigation = { from: startUrl, to: actualNormalized };
         observation.achieved = false;
-        observation.reason = hasHashRoute(actualUrl!)
+        observation.reason = hasHashRoute(actualUrl)
           ? 'HASH_ROUTER_TRANSITION_UNOBSERVED: fragment omitted; route identity is unsupported.'
           : 'ROUTE_CHANGED_DURING_OBSERVATION: transition frames include both routes; source attribution is unconfirmed.';
         if (observation.measurement) {
@@ -595,7 +595,7 @@ export function createRunnerObservation(
           task.reasons.push(
             `Observed transition ${startUrl} → ${actualNormalized}; mixed-route frames cannot identify the source of a candidate.`,
           );
-          if (job.mode === 'AUTONOMOUS') enqueueRoutes(job, [actualUrl!], task);
+          if (job.mode === 'AUTONOMOUS') enqueueRoutes(job, [actualUrl], task);
         }
       });
     }

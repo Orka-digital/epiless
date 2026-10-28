@@ -23,7 +23,7 @@ it('wakes on real-message shapes with the interval fully suspended and coalesces
   });
   const interval = vi.fn(); // Intentionally never executes its callback.
   await vm.runInNewContext(source, {
-    fetch: async (url: string) => ({
+    fetch: async () => ({
       ok: true,
       json: async () => ({ mode: 'cancel', origin: 'http://127.0.0.1:1' }),
     }),
@@ -82,6 +82,8 @@ it('records the original before preparation and passively observes the real prep
   );
   const origin = 'http://127.0.0.1:1';
   let listener: (message: any, sender: any) => void;
+  // The fake browser must report no owner until PREPARE completes below.
+  // eslint-disable-next-line prefer-const
   let owner: any;
   let geometry = {
     at: Date.now(),

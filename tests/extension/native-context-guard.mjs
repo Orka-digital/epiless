@@ -83,8 +83,10 @@ if (!manifest.permissions.includes('debugger'))
 // by this loopback evidence endpoint; site access is granted through real UI.
 const geometry = [];
 let originalTab, originalDocumentId;
-let environment,
-  browser,
+// Request callbacks may observe startup before the environment has been collected.
+// eslint-disable-next-line prefer-const
+let environment;
+let browser,
   stopping = false;
 const server = createServer(async (request, response) => {
   try {

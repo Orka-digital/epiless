@@ -170,6 +170,7 @@ export function createRunnerAuthorization(
       throw new Error(
         'De capture kon niet starten. Activeer de te scannen tab en start via de epi-less-toolbar. ' +
           services.errorText(error),
+        { cause: error },
       );
     } finally {
       releaseAuthorization();

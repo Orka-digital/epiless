@@ -343,25 +343,21 @@ export async function restoreViewportWorkspace(options: {
     await within(() =>
       driver.resize(workspace.windowId, workspace.originalWindow),
     );
-    try {
-      await waitForStableViewport({
-        read: options.read,
-        wait: options.wait,
-        guard: () => assertViewportWorkspace(workspace, driver),
-        expected,
-        // Chromium156 retains the debugger notice for5s after the last detach.
-        // Keep the already-owned tab active behind its cover until actual layout
-        // settles. Capture has ended; elapsed time never substitutes for geometry.
-        ...(terminalDebuggerReleased && expected
-          ? {
-              timeoutMs: 7000,
-            }
-          : {}),
-        deadline,
-      });
-    } catch (error) {
-      throw error;
-    }
+    await waitForStableViewport({
+      read: options.read,
+      wait: options.wait,
+      guard: () => assertViewportWorkspace(workspace, driver),
+      expected,
+      // Chromium156 retains the debugger notice for5s after the last detach.
+      // Keep the already-owned tab active behind its cover until actual layout
+      // settles. Capture has ended; elapsed time never substitutes for geometry.
+      ...(terminalDebuggerReleased && expected
+        ? {
+            timeoutMs: 7000,
+          }
+        : {}),
+      deadline,
+    });
   } catch (error) {
     failure ??= error;
   }

@@ -199,7 +199,7 @@ export async function handleApi(
       const user = await requireUser(request, env, { verified: false });
       const input = await readJson(request, 4096);
       assertExpectedAccount(input, user.id);
-      return json(await cancelIntent(env, user.id, cancelMatch[1]!, input));
+      return json(await cancelIntent(env, user.id, cancelMatch[1], input));
     }
     const verifyMatch = path.match(
       /^\/api\/publications\/intents\/([a-f0-9-]{36})\/verify$/iu,
@@ -209,7 +209,7 @@ export async function handleApi(
       const input = await readJson(request, 4096);
       assertExpectedAccount(input, user.id);
       return json(
-        await verifyIntent(env, request, user.id, verifyMatch[1]!, input),
+        await verifyIntent(env, request, user.id, verifyMatch[1], input),
       );
     }
     if (path === '/api/publications' && request.method === 'POST') {
@@ -232,7 +232,7 @@ export async function handleApi(
       /^\/api\/publications\/([a-f0-9-]{36})(?:\/(abuse|moderate|export))?$/iu,
     );
     if (reportMatch) {
-      const id = reportMatch[1]!;
+      const id = reportMatch[1];
       const operation = reportMatch[2];
       if (read && operation === 'moderate') {
         const user = await requireUser(request, env);

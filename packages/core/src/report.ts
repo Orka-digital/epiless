@@ -86,7 +86,7 @@ export const pixelDiagnosticSchema = z
     if (
       value.complete &&
       (value.samples.length < 2 ||
-        value.samples[0]!.timestampMs >= value.windowStartMs ||
+        value.samples[0].timestampMs >= value.windowStartMs ||
         value.samples.at(-1)!.timestampMs !== value.windowEndMs)
     )
       context.addIssue({
@@ -95,7 +95,7 @@ export const pixelDiagnosticSchema = z
           'Complete diagnostic evidence requires the detecting window and preceding sample',
       });
     for (let i = 1; i < value.samples.length; i++)
-      if (value.samples[i]!.timestampMs <= value.samples[i - 1]!.timestampMs)
+      if (value.samples[i].timestampMs <= value.samples[i - 1].timestampMs)
         context.addIssue({
           code: 'custom',
           message: 'Diagnostic samples must be strictly ordered',

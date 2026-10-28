@@ -83,9 +83,9 @@ export function reachable(element: HTMLElement): boolean {
     [left + insetX, bottom - insetY],
     [right - insetX, bottom - insetY],
   ].some(([x, y]) => {
-    let hit = document.elementFromPoint(x!, y!);
+    let hit = document.elementFromPoint(x, y);
     for (let depth = 0; hit?.shadowRoot && depth < 64; depth++) {
-      const nested = hit.shadowRoot.elementFromPoint(x!, y!);
+      const nested = hit.shadowRoot.elementFromPoint(x, y);
       if (!nested || nested === hit) break;
       hit = nested;
     }

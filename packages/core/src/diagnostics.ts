@@ -408,7 +408,7 @@ export function renderFindingDiagnostics(finding: Finding): string {
   let trace = '';
   if (diagnostic) {
     const series = diagnosticSeries(diagnostic);
-    const start = series[0]!.time,
+    const start = series[0].time,
       end = series.at(-1)!.time;
     const span = Math.max(1, end - start);
     const path = (kind: 'luminance' | 'redRatio') =>

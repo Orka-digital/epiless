@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 
 /** Actual HTMLVideoElement/seek/rVFC control proof, not tabCapture or pixel QA. */
-export async function testMediaReplay({ context, page, worker, tabId, send }) {
+export async function testMediaReplay({ page, worker, tabId, send }) {
   const esbuild = createRequire(
     new URL('../../apps/chrome-extension/package.json', import.meta.url),
   )('esbuild');

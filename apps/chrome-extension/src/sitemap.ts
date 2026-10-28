@@ -82,6 +82,8 @@ export function robotsAllows(url: string, text: string): boolean {
     : groups.filter((group) => group.agents.includes('*'));
   const normalizePath = (value: string) =>
     value
+      // Encode only non-ASCII characters; the explicit ASCII range is intentional.
+      // eslint-disable-next-line no-control-regex
       .replace(/[^\x00-\x7F]/gu, (character) => encodeURIComponent(character))
       .replace(/%([\da-f]{2})/gi, (_, hex: string) => {
         const character = String.fromCharCode(Number.parseInt(hex, 16));

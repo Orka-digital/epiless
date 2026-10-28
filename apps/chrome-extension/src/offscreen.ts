@@ -149,6 +149,7 @@ async function negotiateViewport(
     };
     throw new Error(
       `CAPTURE_VIEWPORT_CONSTRAINT_FAILED: ${JSON.stringify(details)}; ${String(error).slice(0, 200)}`,
+      { cause: error },
     );
   }
   if (revision !== captureRevision)
