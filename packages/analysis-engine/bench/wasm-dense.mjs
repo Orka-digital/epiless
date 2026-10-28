@@ -1,3 +1,5 @@
+import { proofIdentity } from './proof-identity.mjs';
+import { assertState } from './state-comparison.mjs';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFile, readdir, writeFile } from 'node:fs/promises';
@@ -90,119 +92,7 @@ let findings = 0,
   stateChecks = 0,
   currentStateChecks = 0,
   mixedSharedFrames = 0;
-/**
- * @param {import("./probe-types.js").NumericArray | undefined} a
- * @param {import("./probe-types.js").NumericArray | undefined} b
- * @param {string} label
- */
-function sameArray(a, b, label) {
-  assert.equal(a?.constructor, b?.constructor, label);
-  if (a === undefined) return;
-  assert.ok(b);
-  assert.equal(a.length, b.length, label);
-  const aa = Buffer.from(a.buffer, a.byteOffset, a.byteLength),
-    bb = Buffer.from(b.buffer, b.byteOffset, b.byteLength);
-  if (!aa.equals(bb)) {
-    if (a instanceof Float64Array) {
-      for (let i = 0; i < a.length; i++)
-        assert.ok(Object.is(a[i], b[i]), `${label}[${i}]:${a[i]} vs${b[i]}`);
-    } else assert.deepEqual(b, a, label);
-  }
-}
-/**
- * @param {import("./probe-types.js").AnalyzerProbe} a
- * @param {import("./probe-types.js").AnalyzerProbe} b
- * @param {string} label
- * @param {number} embeddedDelta
- */
-function assertState(a, b, label, embeddedDelta) {
-  for (const key of /** @type {const} */ ([
-    'frameTimes',
-    'luminance',
-    'direction',
-    'redAnchor',
-    'saturated',
-    'redPending',
-    'redDu',
-    'redDv',
-    'redStart',
-    'previousRgb',
-    'representatives',
-    'queue',
-    'previousFrame',
-    'tileUniform',
-    'tilePeers',
-    'tileDependents',
-    'tileCandidates',
-    'tileCandidateCounts',
-  ]))
-    sameArray(a[key], b[key], `${label}/${key}`);
-  for (const kind of /** @type {const} */ (['general', 'red'])) {
-    const aa = a[kind],
-      bb = b[kind];
-    for (const key of kind === 'general'
-      ? /** @type {const} */ ([
-          'starts',
-          'count',
-          'next',
-          'active',
-          'activeSeeds',
-        ])
-      : /** @type {const} */ ([
-          'starts',
-          'previous',
-          'tripleEndingPrevious',
-          'candidateStarts',
-          'active',
-          'activeSeeds',
-        ]))
-      sameArray(aa[key], bb[key], `${label}/${kind}/${key}`);
-    for (const key of /** @type {const} */ ([
-      'hasActive',
-      'activeSeedCount',
-      'activeCount',
-      'earliestActive',
-      'firstActive',
-      'lastActive',
-    ]))
-      assert.equal(bb[key], aa[key], `${label}/${kind}/${key}`);
-  }
-  for (const key of /** @type {const} */ ([
-    'frameIndex',
-    'representativeCount',
-    'tilesPrepared',
-    'invalid',
-    'interrupted',
-    'count',
-    'first',
-    'last',
-    'gap',
-  ]))
-    assert.equal(b[key], a[key], `${label}/${key}`);
-  for (const key of /** @type {const} */ ([
-    'frameTimes',
-    'luminance',
-    'direction',
-    'redAnchor',
-    'saturated',
-    'redPending',
-    'redDu',
-    'redDv',
-    'redStart',
-    'previousRgb',
-    'representatives',
-  ]))
-    assert.equal(
-      b[key].buffer,
-      b.getInputRgba()?.buffer,
-      `${label}/${key} shared WASM view`,
-    );
-  assert.equal(
-    b.stateBytes,
-    a.stateBytes + b.wasmArena.extraAllocatedBytes + embeddedDelta,
-    `${label}/explicit memory accounting`,
-  );
-}
+
 for (const [w, h] of [
   [1, 1],
   [19, 17],
@@ -448,10 +338,7 @@ const result = {
   scope:
     'Three-engine numeric differential. Frozen pre-WASM 342 remains unchanged and is the exact temporal-array and first-callback oracle. Before its cluster consumes each real active mask, a separate brute-force mask/component calculation reconstructs full single-frame spatial witnesses; only strictly stronger witnessed replacements can differ from frozen accumulated reports. Frozen pattern helpers and currentMotion tie pattern/motion to that same frame. Current AUTO and current forced JS additionally match all per-push temporal state, complete findings and complete finish reports, allowing only explicitly calculated backend memory accounting. No spatial field is blindly removed or normalised. Actual mask bytes, source-frame hashes, rank changes and full replacement witnesses are retained for each spatial update. Numeric buffers only, never rendered.',
   proofFormat: 'THREE_ENGINE_SPATIAL_WITNESS_V1',
-  harnessSha256: hash(await readFile(new URL(import.meta.url))),
-  witnessValidatorSha256: hash(
-    await readFile(new URL('./spatial-witness.mjs', import.meta.url)),
-  ),
+  ...(await proofIdentity(import.meta.url)),
   cases: records.length,
   findings,
   liveEvents,

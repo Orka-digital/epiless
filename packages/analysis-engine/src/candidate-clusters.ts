@@ -1,5 +1,5 @@
 import type { Finding } from '@epi-less/core';
-import type { SpatialEvidence } from '../../core/src/spatial.js';
+import type { SpatialEvidence } from '@epi-less/core';
 import { DiagnosticHistory } from './diagnostic-history.js';
 import {
   balancedCheckerboard,

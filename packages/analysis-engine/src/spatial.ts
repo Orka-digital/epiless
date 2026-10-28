@@ -1,5 +1,5 @@
 /** Exact binary-mask arithmetic. It makes no display-size or safety assumption. */
-import type { SpatialEvidence } from '../../core/src/spatial.js';
+import type { SpatialEvidence } from '@epi-less/core';
 export interface MaskFieldAnalysis {
   totalPixels: number;
   maximumPixels: number;
