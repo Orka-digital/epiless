@@ -94,6 +94,9 @@ try {
     control.evaluate((message) => chrome.runtime.sendMessage(message), message);
   await send({ type: 'GET_STATE' }); // Await startup recovery before installing fixture boundary.
   await worker.evaluate(() => {
+    // Media evidence uses a high-resolution epoch. Integer Date.now() boundaries
+    // can precede an earlier fractional-millisecond event in the same tick.
+    const epochNow = () => performance.timeOrigin + performance.now();
     globalThis.__segments = [];
     globalThis.__captureTab = undefined;
     const send = chrome.runtime.sendMessage.bind(chrome.runtime);
@@ -109,7 +112,7 @@ try {
       if (message.type === 'SEGMENT_BEGIN') {
         globalThis.__activeSegment = {
           id: message.segmentId,
-          begunAt: Date.now(),
+          begunAt: epochNow(),
         };
         return { ok: true, value: {} };
       }
@@ -121,7 +124,7 @@ try {
             func: () => Number(document.documentElement.dataset.clicked || 0),
           })
         )[0].result;
-        globalThis.__segments.push({ ...record, endedAt: Date.now(), clicked });
+        globalThis.__segments.push({ ...record, endedAt: epochNow(), clicked });
         return {
           ok: true,
           value: {
@@ -139,7 +142,7 @@ try {
               downsampled: true,
               interrupted: false,
               droppedFrames: 0,
-              captureWindowMs: Date.now() - record.begunAt,
+              captureWindowMs: epochNow() - record.begunAt,
               leadingIdleMs: 0,
               trailingIdleMs: 0,
             },
@@ -487,8 +490,20 @@ try {
     (id) => globalThis.__segments.find((segment) => segment.id === id),
     mediaActual.id,
   );
-  assert.ok(mediaActual.mediaEvidence.startedEpochMs >= mediaSegment.begunAt);
-  assert.ok(mediaActual.mediaEvidence.endedEpochMs <= mediaSegment.endedAt);
+  const mediaBounds = JSON.stringify({
+    evidenceStart: mediaActual.mediaEvidence.startedEpochMs,
+    evidenceEnd: mediaActual.mediaEvidence.endedEpochMs,
+    segmentStart: mediaSegment.begunAt,
+    segmentEnd: mediaSegment.endedAt,
+  });
+  assert.ok(
+    mediaActual.mediaEvidence.startedEpochMs >= mediaSegment.begunAt,
+    mediaBounds,
+  );
+  assert.ok(
+    mediaActual.mediaEvidence.endedEpochMs <= mediaSegment.endedAt,
+    mediaBounds,
+  );
   const changedMedia = structuredClone(mediaBase);
   changedMedia.id = 'replay-media-mismatched';
   changedMedia.tasks[0].observations[0].replay.mediaPlan.items[0].locatorSha256 =
