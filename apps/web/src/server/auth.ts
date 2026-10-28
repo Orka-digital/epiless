@@ -1,7 +1,7 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from '@better-auth/drizzle-adapter';
-import { drizzle } from 'drizzle-orm/d1';
-import * as schema from './auth-schema';
+import { database } from './db/client';
+import * as schema from './db/schema';
 import { assertConfigured, HttpError, type RuntimeEnv } from './types';
 
 async function sendEmail(
@@ -50,7 +50,7 @@ export function createAuth(env: RuntimeEnv) {
     baseURL: env.PUBLIC_APP_ORIGIN,
     basePath: '/api/auth',
     secret: env.BETTER_AUTH_SECRET,
-    database: drizzleAdapter(drizzle(env.DB, { schema }), {
+    database: drizzleAdapter(database(env), {
       provider: 'sqlite',
       schema,
     }),
