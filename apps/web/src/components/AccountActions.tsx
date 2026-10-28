@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useHydrated } from '../lib/use-hydrated';
+import { useState } from 'react';
 import { api } from '../lib/client-api';
 export default function AccountActions({
   id,
@@ -15,8 +16,7 @@ export default function AccountActions({
   visibility: 'PRIVATE' | 'UNLISTED' | 'PUBLIC';
   publicAccessNeedsConfirmation?: boolean;
 }) {
-  const [hydrated, setHydrated] = useState(false);
-  useEffect(() => setHydrated(true), []);
+  const hydrated = useHydrated();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [confirm, setConfirm] = useState<
@@ -60,7 +60,7 @@ export default function AccountActions({
           <div className="actions">
             <button
               className="button danger small"
-              onClick={act}
+              onClick={() => void act()}
               disabled={busy || !hydrated}
             >
               {confirm === 'delete'
@@ -127,7 +127,7 @@ export default function AccountActions({
               className="button outline small"
               disabled={!hydrated}
               onClick={() =>
-                navigator.clipboard
+                void navigator.clipboard
                   .writeText(new URL(shareUrl, location.origin).href)
                   .then(() => setCopied(true))
                   .catch(() =>

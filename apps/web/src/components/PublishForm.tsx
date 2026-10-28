@@ -1,3 +1,4 @@
+import { useHydrated } from '../lib/use-hydrated';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { AuditReport } from '@epi-less/core';
 import { api, ApiError, type ChallengeData } from '../lib/client-api';
@@ -60,7 +61,7 @@ export default function PublishForm({
   accountId: string;
   name: string;
 }) {
-  const [hydrated, setHydrated] = useState(false);
+  const hydrated = useHydrated();
   const [currentAccount, setCurrentAccount] = useState(accountId);
   const [report, setReport] = useState<AuditReport | null>(null);
   const [redaction, setRedaction] = useState<RedactionOptions | null>(null);
@@ -104,8 +105,9 @@ export default function PublishForm({
       );
   }
   useEffect(() => {
-    setHydrated(true);
-    const reload = () => refresh().catch((e: Error) => setError(e.message));
+    const reload = () => {
+      void refresh().catch((e: Error) => setError(e.message));
+    };
     reload();
     const timer = window.setInterval(() => setNow(Date.now()), 1000);
     const focus = () => {
@@ -140,6 +142,18 @@ export default function PublishForm({
     };
   }, []);
 
+  async function importFile(file: File) {
+    setError('');
+    if (file.size > 1048576) {
+      setError('Een rapport mag maximaal 1 MiB groot zijn.');
+      return;
+    }
+    try {
+      await accept(JSON.parse(await file.text()));
+    } catch (error) {
+      setError((error as Error).message);
+    }
+  }
   async function accept(value: unknown) {
     // The schema parser is loaded only when a report is selected, keeping the
     // initial account/publish island below its JavaScript budget.
@@ -162,6 +176,8 @@ export default function PublishForm({
     history.replaceState(null, '', location.pathname);
     const bridge = (window as Window & { chrome?: ChromeBridge }).chrome;
     if (!bridge?.runtime || !signedIn) {
+      // Synchronize a one-time external extension handoff failure with the UI.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setError(
         !signedIn
           ? 'Meld je eerst aan. Open dit rapport daarna opnieuw vanuit de extensie; er zijn nog geen gegevens verstuurd.'
@@ -418,19 +434,9 @@ export default function PublishForm({
           type="file"
           accept="application/json,.json"
           disabled={busy || Boolean(active) || !signedIn || !hydrated}
-          onChange={async (e) => {
-            setError('');
+          onChange={(e) => {
             const file = e.target.files?.[0];
-            if (!file) return;
-            if (file.size > 1048576) {
-              setError('Een rapport mag maximaal 1 MiB groot zijn.');
-              return;
-            }
-            try {
-              await accept(JSON.parse(await file.text()));
-            } catch (e) {
-              setError((e as Error).message);
-            }
+            if (file) void importFile(file);
           }}
         />
         <small>
@@ -439,7 +445,7 @@ export default function PublishForm({
         </small>
       </label>
       {report && redaction && (
-        <form onSubmit={publish}>
+        <form onSubmit={(event) => void publish(event)}>
           <div className="report-section">
             <p className="eyebrow">Controleer voor je deelt</p>
             <h2>{new URL(report.origin).hostname}</h2>
@@ -460,7 +466,7 @@ export default function PublishForm({
                 <label className="check-label">
                   <input
                     type="checkbox"
-                    checked={redaction.routes[i]!.included}
+                    checked={redaction.routes[i].included}
                     onChange={(e) =>
                       edit({
                         ...redaction,
@@ -480,8 +486,8 @@ export default function PublishForm({
                 <label className="field">
                   Gedeeld pad voor route {i + 1}
                   <input
-                    value={redaction.routes[i]!.path}
-                    disabled={!redaction.routes[i]!.included}
+                    value={redaction.routes[i].path}
+                    disabled={!redaction.routes[i].included}
                     maxLength={4000}
                     onChange={(e) =>
                       edit({
@@ -496,7 +502,7 @@ export default function PublishForm({
                 <button
                   type="button"
                   className="button ghost"
-                  disabled={!redaction.routes[i]!.included}
+                  disabled={!redaction.routes[i].included}
                   onClick={() =>
                     edit({
                       ...redaction,
@@ -712,7 +718,7 @@ export default function PublishForm({
               {active?.jobId === job.id && active.intent.challenge && (
                 <Challenge
                   challenge={active.intent.challenge}
-                  onToken={verify}
+                  onToken={(token) => void verify(token)}
                   onError={(message) => void failed(job.id, new Error(message))}
                 />
               )}

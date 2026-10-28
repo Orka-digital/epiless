@@ -43,15 +43,14 @@ export default function Challenge({
 }) {
   const container = useRef<HTMLDivElement>(null);
   const callbacks = useRef({ onToken, onError });
-  callbacks.current = { onToken, onError };
+  useEffect(() => {
+    callbacks.current = { onToken, onError };
+  }, [onToken, onError]);
   const [status, setStatus] = useState('Verificatie voorbereiden…');
   useEffect(() => {
     let cancelled = false;
     let widget: string | undefined;
     if (challenge.local) {
-      setStatus(
-        'Lokale testverificatie. Er wordt geen externe challenge uitgevoerd.',
-      );
       queueMicrotask(() => {
         if (!cancelled) callbacks.current.onToken('flashguard-local-test');
       });
@@ -85,11 +84,19 @@ export default function Challenge({
       cancelled = true;
       if (widget) window.turnstile?.remove(widget);
     };
-  }, [challenge.id]);
+  }, [
+    challenge.id,
+    challenge.local,
+    challenge.siteKey,
+    challenge.action,
+    challenge.cdata,
+  ]);
   return (
     <div className="verification">
       <p className="fine" role="status">
-        {status}
+        {challenge.local
+          ? 'Lokale testverificatie. Er wordt geen externe challenge uitgevoerd.'
+          : status}
       </p>
       <div ref={container} />
     </div>

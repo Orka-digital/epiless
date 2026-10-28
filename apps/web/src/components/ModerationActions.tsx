@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useHydrated } from '../lib/use-hydrated';
+import { useState } from 'react';
 import { api } from '../lib/client-api';
 
 export default function ModerationActions({
@@ -10,8 +11,7 @@ export default function ModerationActions({
   revision: number;
   active: boolean;
 }) {
-  const [hydrated, setHydrated] = useState(false);
-  useEffect(() => setHydrated(true), []);
+  const hydrated = useHydrated();
   const [action, setAction] = useState<'hide' | 'dismiss'>(
     active ? 'hide' : 'dismiss',
   );
@@ -49,7 +49,11 @@ export default function ModerationActions({
       </div>
     );
   return (
-    <form className="form-panel" onSubmit={submit} method="post">
+    <form
+      className="form-panel"
+      onSubmit={(event) => void submit(event)}
+      method="post"
+    >
       <noscript>
         <p className="notice">
           Schakel JavaScript in om een moderatiebeslissing veilig op te slaan.
