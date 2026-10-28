@@ -18,6 +18,20 @@ Use JSDoc for exported functions, factories and non-obvious contracts. Explain t
 
 A structural refactor must retain behavior and existing regression coverage. Internal modules should import their direct dependencies, not their own entrypoint; avoid circular dependencies and expanding a package's public API just to share a helper. Update [the codebase map](docs/CODEBASE.md) when responsibilities move.
 
-Use `pnpm format` to format changed code, then inspect the diff. The original product specification is excluded from automatic formatting. Pin dependency and Action changes and explain their purpose. Fork pull requests receive no deployment, signing, mail or account secrets.
+## Formatting
+
+Prettier is pinned in the root workspace and uses the shared [.prettierrc.json](.prettierrc.json), including the Astro plugin. It formats JavaScript, TypeScript, JSX/TSX, Astro, HTML, CSS, JSON, YAML and Markdown. The shared style uses two spaces, semicolons, single quotes in JavaScript, trailing commas and LF line endings. The 80-column print width is a formatting target, not a hard line-length limit; Markdown prose keeps its existing wrapping.
+
+- Run `pnpm format` to format all eligible files, then inspect the diff.
+- For a focused change, use `pnpm exec prettier --write path/to/file.ts path/to/component.astro`.
+- Run `pnpm format:check` for a read-only formatting check. `pnpm check` includes it, and the required CI checks reject formatting differences.
+
+VS Code recommends Prettier, Astro and EditorConfig extensions through [.vscode/extensions.json](.vscode/extensions.json). Install them to enable the checked-in format-on-save settings for supported languages. Other editors can use [.editorconfig](.editorconfig) and the local workspace Prettier installation. Keep save actions consistent with [.prettierignore](.prettierignore); do not add a separate whitespace cleanup that rewrites excluded evidence.
+
+Generated output, the lockfile, the original product specification and byte-exact evidence listed in `.prettierignore` are excluded from automatic formatting. Retained evidence has broader EditorConfig exclusions to avoid incidental save-time changes. Do not reformat a frozen reference or capture export to satisfy a style check: its bytes may be bound to a SHA-256 hash.
+
+Prettier handles layout, including existing comments. It does not require JSDoc, validate its meaning, find unused code or enforce module size. Those responsibilities remain with TypeScript, Knip, regression checks and review of the documented module boundaries above.
+
+Pin dependency and Action changes and explain their purpose. Fork pull requests receive no deployment, signing, mail or account secrets.
 
 Maintainers use squash merges into `main` after the required checks and independent review. Do not ask contributors to sign an additional contributor agreement. By submitting a contribution, you agree to license it under the repository's existing MIT terms and follow the [Code of Conduct](CODE_OF_CONDUCT.md).
