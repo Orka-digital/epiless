@@ -257,6 +257,7 @@ try {
     );
   const run = async (job) => {
     await store(job);
+    const replayPageCreated = context.waitForEvent('page');
     const prepared = await send({
       type: 'PREPARE_RECHECK',
       replayOf: {
@@ -266,6 +267,7 @@ try {
       },
     });
     assert.equal(prepared.ok, true, prepared.error);
+    const replayPage = await replayPageCreated;
     const pending = (await send({ type: 'GET_STATE' })).value.recheck;
     assert.equal(pending.replayOf.jobId, job.id);
     for (let count = 0; count < 100; count++) {
@@ -289,6 +291,18 @@ try {
       mode: 'AUTONOMOUS',
     });
     assert.equal(started.ok, true, started.error);
+    if (new URL(job.startUrl).pathname === '/media') {
+      // This fixture replaces tabCapture, so Chrome has no capture session to
+      // keep the replay renderer producing video frames. START opens the
+      // dashboard, so foreground the replay AFTER that command completes.
+      // This matches the baseline below. This is
+      // control-flow evidence, not background capture/cadence acceptance.
+      await replayPage.bringToFront();
+      assert.equal(
+        await replayPage.evaluate(() => document.visibilityState),
+        'visible',
+      );
+    }
     let result;
     for (let count = 0; count < 100; count++) {
       const state = (await send({ type: 'GET_STATE' })).value;
@@ -457,7 +471,14 @@ try {
     JSON.stringify(mediaActual.mediaEvidence.reasons),
   );
   assert.equal(mediaActual.replay.stateKey, mediaObservation.replay.stateKey);
-  assert.deepEqual(mediaComparisonReasons(mediaObservation, mediaActual), []);
+  assert.deepEqual(
+    mediaComparisonReasons(mediaObservation, mediaActual),
+    [],
+    JSON.stringify({
+      baseline: mediaObservation.mediaEvidence,
+      repeated: mediaActual.mediaEvidence,
+    }),
+  );
   assert.ok(
     measuredMediaInterval(mediaActual.mediaEvidence.items[0]).presentations >
       20,
