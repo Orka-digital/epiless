@@ -30,7 +30,17 @@ VS Code recommends Prettier, Astro and EditorConfig extensions through [.vscode/
 
 Generated output, the lockfile, the original product specification and byte-exact evidence listed in `.prettierignore` are excluded from automatic formatting. Retained evidence has broader EditorConfig exclusions to avoid incidental save-time changes. Do not reformat a frozen reference or capture export to satisfy a style check: its bytes may be bound to a SHA-256 hash.
 
-Prettier handles layout, including existing comments. It does not require JSDoc, validate its meaning, find unused code or enforce module size. Those responsibilities remain with TypeScript, Knip, regression checks and review of the documented module boundaries above.
+Prettier handles layout, including existing comments. It does not require JSDoc, validate its meaning, find unused code or enforce module size. Those responsibilities remain with ESLint, TypeScript, Knip, regression checks and review of the documented module boundaries above.
+
+## Linting
+
+Run `pnpm lint` for a read-only ESLint check, or `pnpm lint:fix` to apply available fixes and then inspect the diff. Both commands reject warnings. `pnpm check` includes linting, so the existing required CI gate enforces it. VS Code recommends the ESLint extension and enables diagnostics for JavaScript, TypeScript, React and Astro; Prettier remains the formatter.
+
+The shared [ESLint configuration](eslint.config.mjs) applies JavaScript and TypeScript recommended rules, Astro's recommended rules, React Hooks' recommended rules (including compiler diagnostics), and checks the names and type syntax of existing JSDoc tags. Production TypeScript also uses the project's type information to catch floating promises, misused async callbacks, awaiting non-promises and unnecessary type assertions. Existing comments are checked; missing JSDoc and its explanatory quality still require review.
+
+Test files retain an explicit `any` exception for malformed boundary inputs and partial browser mocks. The production ban remains enabled. Generated sources, third-party reference code and retained extension evidence are excluded. Intentional exceptions in maintained code must use a narrow disable comment explaining the reason; unused disable comments fail linting. Never silence a whole file or weaken a rule just to make CI green.
+
+These checks complement strict TypeScript, Knip and browser tests. They do not prove scanner accuracy or replace accessibility and security verification.
 
 Pin dependency and Action changes and explain their purpose. Fork pull requests receive no deployment, signing, mail or account secrets.
 
