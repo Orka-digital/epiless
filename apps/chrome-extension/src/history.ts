@@ -1,11 +1,11 @@
 import { normalizePublicUrl } from '@epi-less/core';
-import { reviewSummary } from './verification';
 import {
   TERMINAL_STATES,
   type CandidateSummary,
   type HistorySettings,
   type ScanJob,
 } from './model';
+import { reviewSummary } from './verification';
 
 /** Conservative local grouping, not DOM attribution or a claim of unique underlying defects. */
 export function candidateSummaries(job: ScanJob): CandidateSummary[] {
@@ -74,6 +74,7 @@ export function candidateSummaries(job: ScanJob): CandidateSummary[] {
   return [...candidates.values()];
 }
 
+/** Discard expired detail while preserving the job summary and explicit expiration timestamp. */
 export function expireJobDetails(
   job: ScanJob,
   settings: HistorySettings,
@@ -102,6 +103,7 @@ export function expireJobDetails(
   return true;
 }
 
+/** Summarize retained history without implying that expired evidence is still available. */
 export function historySummary(jobs: readonly ScanJob[]) {
   const origins = [...new Set(jobs.map((job) => job.origin))].sort();
   return origins.map((origin) => {

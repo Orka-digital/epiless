@@ -1,6 +1,7 @@
 import { normalizePublicUrl, planRoute } from '@epi-less/core';
 import type { PageInventory, RouteTask, ScanJob } from './model';
 
+/** Identify hash navigation that cannot be represented by the canonical route queue. */
 export function hasHashRoute(url: string, base?: string): boolean {
   try {
     return /^#!?\//.test(new URL(url, base).hash);
@@ -136,6 +137,7 @@ export function mergePreviouslyMeasuredRoute(
   return true;
 }
 
+/** Select the next eligible task without mutating its execution state. */
 export function nextTask(job: ScanJob): RouteTask | undefined {
   if (
     job.stopIntent ||
@@ -145,6 +147,7 @@ export function nextTask(job: ScanJob): RouteTask | undefined {
     return undefined;
   return job.tasks.find((task) => task.state === 'QUEUED');
 }
+/** Add only policy-allowed unseen routes within the job bounds. */
 export function enqueueRoutes(
   job: ScanJob,
   links: readonly string[],
@@ -187,14 +190,7 @@ export function enqueueRoutes(
         task.url === decision.url || task.aliases?.includes(decision.url!),
     );
     if (existing) {
-      if (
-        existing.state === 'QUEUED' &&
-        !existing.navigationSource &&
-        source?.allowed
-      ) {
-        existing.navigationSource = source.url;
-        existing.navigationScrollY = sourceScrollY;
-      }
+      preserveNavigationSource(existing, source, sourceScrollY);
       continue;
     }
     if (job.tasks.length >= job.limits.maxRoutes) {
@@ -214,6 +210,7 @@ export function enqueueRoutes(
     });
   }
 }
+/** Reject stale execution generations before they can mutate scan state. */
 export function assertLease(
   job: ScanJob | undefined,
   generation: string,
@@ -226,6 +223,7 @@ export function assertLease(
   )
     throw new Error('RUNNER_CANCELLED');
 }
+/** Derive completion from recorded coverage and stop conditions, never from absence of findings alone. */
 export function computeCompletion(job: ScanJob): 'COMPLETED' | 'PARTIAL' {
   return job.tasks.some((task) => task.state !== 'OBSERVED') ||
     job.limitations.some((reason) =>
@@ -234,6 +232,7 @@ export function computeCompletion(job: ScanJob): 'COMPLETED' | 'PARTIAL' {
     ? 'PARTIAL'
     : 'COMPLETED';
 }
+/** Accept transfers only from the configured web origin and trusted extension context. */
 export function trustedTransferSender(
   sender: { url?: string; tab?: { id?: number } },
   origin: string,
@@ -247,5 +246,20 @@ export function trustedTransferSender(
     );
   } catch {
     return false;
+  }
+}
+
+function preserveNavigationSource(
+  existing: RouteTask,
+  source: ReturnType<typeof planRoute> | undefined,
+  sourceScrollY: number,
+): void {
+  if (
+    existing.state === 'QUEUED' &&
+    !existing.navigationSource &&
+    source?.allowed
+  ) {
+    existing.navigationSource = source.url;
+    existing.navigationScrollY = sourceScrollY;
   }
 }

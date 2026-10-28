@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { command } from './command-client';
+/** Coordinate explicit history exports and surface failures to the workspace. */
 export function useScanExports(setError: (message: string) => void) {
   const [pseudonymize, setPseudonymize] = useState(false);
   const download = (body: string, name: string, type: string) => {
