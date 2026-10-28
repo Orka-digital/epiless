@@ -20,6 +20,8 @@ Components should own a coherent UI responsibility and receive explicit typed da
 
 A structural refactor must retain behavior and existing regression coverage. Internal modules should import their direct dependencies, not their own entrypoint; avoid circular dependencies and expanding a package's public API just to share a helper. Update [the codebase map](docs/CODEBASE.md) when responsibilities move.
 
+Use the [shared database schema and query conventions](docs/DATABASE.md) for web database work. Ordinary reads and writes use Drizzle. Keep necessary SQL exceptions in small database modules with JSDoc explaining atomicity, revision guards and statement ordering; migrations remain responsible for triggers.
+
 ## Formatting
 
 Prettier is pinned in the root workspace and uses the shared [.prettierrc.json](.prettierrc.json), including the Astro plugin. It formats JavaScript, TypeScript, JSX/TSX, Astro, HTML, CSS, JSON, YAML and Markdown. The shared style uses two spaces, semicolons, single quotes in JavaScript, trailing commas and LF line endings. The 80-column print width is a formatting target, not a hard line-length limit; Markdown prose keeps its existing wrapping.

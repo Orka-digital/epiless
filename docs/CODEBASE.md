@@ -33,14 +33,14 @@ The services are explicit parameters, not imports back into `background.ts`. Kee
 
 `apps/web/src/server/publications.ts` retains the handler-facing function exports. Implementation modules import each other directly:
 
-- `publication-types.ts`: stored row and transport contracts.
+- `publication-types.ts`: schema-inferred storage type and explicit transport contracts.
 - `publication-presentation.ts`: visibility parsing and owner/public metadata projection.
 - `publication-queries.ts`: access-controlled detail and bounded public/owner pagination.
 - `publication-intents.ts`: snapshot validation, challenge verification and cancellation.
 - `publication-mutations.ts`: publication commit, revision-bound owner updates and write-pause policy.
 - `publication-moderation.ts`: abuse reports and explicit moderator access.
 
-JSDoc records ownership, trust boundaries and race behavior. The SQL statements, batches, quotas, immutable hashes, revision guards and erasure records are preserved by the split. Internal row types are not re-exported through the handler entrypoint.
+JSDoc records ownership, trust boundaries and race behavior. Ordinary database operations use the shared Drizzle schema in `server/db/schema.ts`. Focused database modules own queries; publication, moderation and erasure SQL batches retain their atomic guards. See [database contracts](DATABASE.md) for migration and trigger ownership. Internal row types are not re-exported through the handler entrypoint.
 
 ## Detector
 

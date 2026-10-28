@@ -136,6 +136,8 @@ Withdrawal stops subsequent server access; downloaded copies remain outside the 
 
 ## Architecture and hosting
 
+Database access uses one shared Drizzle schema. Ordinary queries use Drizzle; atomic publication, moderation and erasure SQL lives in small documented modules. See [database contracts](docs/DATABASE.md).
+
 | Workspace                                              | Responsibility                                                                                               |
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | [`apps/chrome-extension`](apps/chrome-extension)       | Chrome MV3 runner, capture worker, toolbar/DevTools UI, local storage and exports.                           |

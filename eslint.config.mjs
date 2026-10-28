@@ -143,6 +143,21 @@ export default defineConfig([
       'jsdoc/valid-types': 'error',
     },
   },
+  {
+    files: ['apps/web/src/server/**/*.ts'],
+    ignores: ['apps/web/src/server/db/**'],
+    rules: {
+      'no-restricted-syntax': [
+        'error',
+        {
+          selector:
+            "CallExpression[callee.object.property.name='DB'][callee.property.name=/^(prepare|batch|exec)$/]",
+          message:
+            'Keep database operations in server/db; use Drizzle by default and document atomic SQL exceptions.',
+        },
+      ],
+    },
+  },
   // Exact legacy ceilings prevent growth; new files must meet the 250-line limit.
   // Lower/remove these entries when splitting a module, never raise them to pass CI.
   ...Object.entries(legacyFileLimits).map(([file, max]) => ({
