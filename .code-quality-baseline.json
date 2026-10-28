@@ -1,0 +1,1213 @@
+[
+  {
+    "file": "apps/chrome-extension/src/analysis-worker.ts",
+    "rule": "complexity",
+    "signature": "19b71bcc2134fccbac49",
+    "value": 30,
+    "label": "Async function 'handle' has a complexity of 30. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase-content.ts",
+    "rule": "complexity",
+    "signature": "8c986e49564aa6ac5732",
+    "value": 40,
+    "label": "Function 'sample' has a complexity of 40. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "199d8935f4c5f014f84f",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "30182468abd4a81e4974",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase.ts",
+    "rule": "complexity",
+    "signature": "6f9a4a5d7a8cef121ecb",
+    "value": 41,
+    "label": "Function 'phaseComparisonReasons' has a complexity of 41. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "6f9a4a5d7a8cef121ecb",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "8a8623b6089dc2977167",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "b46902d125bcfef0acbe",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/animation-phase.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "dff68c83a7963f6f738e",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/background.ts",
+    "rule": "complexity",
+    "signature": "4d9f5dcddabd02624047",
+    "value": 28,
+    "label": "Async arrow function has a complexity of 28. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/capture-quality.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9be29d5ea48e1032cc22",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/capture-quality.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "ea0e03883507b37c11f7",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/content-controls.ts",
+    "rule": "complexity",
+    "signature": "ce58dcf69c3a26b52e44",
+    "value": 36,
+    "label": "Function 'safeControl' has a complexity of 36. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/content.ts",
+    "rule": "complexity",
+    "signature": "63999ab1f44dd91bc7af",
+    "value": 110,
+    "label": "Async function 'execute' has a complexity of 110. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/disposable-scan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "a14a327ada6f5c72bdcb",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/disposable-scan.ts",
+    "rule": "complexity",
+    "signature": "c3ec2414158fa80e1bd0",
+    "value": 22,
+    "label": "Function 'validOwnedStart' has a complexity of 22. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/disposable-scan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "c3ec2414158fa80e1bd0",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/disposable-scan.ts",
+    "rule": "complexity",
+    "signature": "e84810dc94bcdd2569dc",
+    "value": 23,
+    "label": "Async function 'createDisposableScan' has a complexity of 23. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/disposable-scan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "e84810dc94bcdd2569dc",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/export.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "81428a302911639fcce9",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/export.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "bad0f9cb7ef24d076ef2",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/export.ts",
+    "rule": "max-depth",
+    "signature": "bad0f9cb7ef24d076ef2",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "apps/chrome-extension/src/history.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "85c36f96a6d118a56d82",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/history.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9c777bd29fc630830371",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/media-loop-seek.ts",
+    "rule": "complexity",
+    "signature": "d98d6d1a117ec204fd69",
+    "value": 41,
+    "label": "Function 'observedLoopSeeks' has a complexity of 41. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/media-replay-comparison.ts",
+    "rule": "complexity",
+    "signature": "58345c693d71da332fd5",
+    "value": 49,
+    "label": "Function 'mediaComparisonReasons' has a complexity of 49. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/media-replay-content.ts",
+    "rule": "complexity",
+    "signature": "3b2453bf20e87ec88be4",
+    "value": 31,
+    "label": "Async method 'prepare' has a complexity of 31. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/media-replay-interval.ts",
+    "rule": "complexity",
+    "signature": "7eb0e77cbebf87446ce9",
+    "value": 35,
+    "label": "Function 'measuredMediaInterval' has a complexity of 35. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/media-replay-interval.ts",
+    "rule": "complexity",
+    "signature": "e75afc1a6fffa3e764a8",
+    "value": 28,
+    "label": "Function 'presentedSequence' has a complexity of 28. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/media-replay-validation.ts",
+    "rule": "complexity",
+    "signature": "d4a1dd6e858e5bd74435",
+    "value": 22,
+    "label": "Arrow function has a complexity of 22. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/model.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "860535ffc97533ff1c73",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/offscreen.ts",
+    "rule": "complexity",
+    "signature": "7151a4bafc2570636617",
+    "value": 50,
+    "label": "Async arrow function has a complexity of 50. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/PhaseEvidencePanel.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "130c334549797cb48620",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/report.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "e8d1f8a90405991ac6bf",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-advanced.ts",
+    "rule": "complexity",
+    "signature": "535c860991a49a47ffa6",
+    "value": 33,
+    "label": "Async function 'prepareAdvancedScan' has a complexity of 33. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-advanced.ts",
+    "rule": "complexity",
+    "signature": "bf067d91eca9f1e4a750",
+    "value": 24,
+    "label": "Async function 'performAdvancedClose' has a complexity of 24. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-advanced.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d2655bb029309ea7d82d",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-advanced.ts",
+    "rule": "complexity",
+    "signature": "e58a372446ec6a9e2794",
+    "value": 36,
+    "label": "Async arrow function has a complexity of 36. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-authorization.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "7481f09f49cbc480df4d",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-capture.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "7fd26b883e1c6787c68d",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-exploration.ts",
+    "rule": "complexity",
+    "signature": "a3753c76ff959f465df2",
+    "value": 62,
+    "label": "Async function 'exploreRoute' has a complexity of 62. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-navigation.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "82b2aba7f0883932e86f",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-offscreen.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "3f8e286b73ffa891fbf3",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-policy.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "2495a769ce1dceea22f2",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-policy.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "3c77c64b59c07ab0a3a5",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-policy.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "73d755603d5af6d11967",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-policy.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "8eeba12ed7996a4eac57",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-policy.ts",
+    "rule": "complexity",
+    "signature": "d5cb51cb543b2abf6dde",
+    "value": 22,
+    "label": "Function 'enqueueRoutes' has a complexity of 22. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-policy.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d5cb51cb543b2abf6dde",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-policy.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "f0844e5db64ae412e95b",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-scheduler.ts",
+    "rule": "complexity",
+    "signature": "44cb2b9d9905f2c77422",
+    "value": 30,
+    "label": "Async function 'runJob' has a complexity of 30. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-scheduler.ts",
+    "rule": "max-depth",
+    "signature": "44cb2b9d9905f2c77422",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "apps/chrome-extension/src/runner-scheduler.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "5c83d3b28d7cb3346134",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanHistory.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "8603fbc9ca302fb107aa",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanMeasurements.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "36a0bee4c413262acc89",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanMeasurements.tsx",
+    "rule": "complexity",
+    "signature": "50a13536fd8ae294cacf",
+    "value": 21,
+    "label": "Arrow function has a complexity of 21. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanReportCard.tsx",
+    "rule": "complexity",
+    "signature": "79bb1571ddc40fd41e7c",
+    "value": 27,
+    "label": "Function 'ScanReportCard' has a complexity of 27. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanSettings.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d047e4155c1b4e9f2c47",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanSidebar.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "ba548d3321856a29f89f",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanStart.tsx",
+    "rule": "complexity",
+    "signature": "334620e898bc7871a36f",
+    "value": 24,
+    "label": "Function 'ScanStart' has a complexity of 24. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/ScanStart.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "334620e898bc7871a36f",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/scenario-plan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "09b9888384cabf371b21",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/scenario-plan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "1aefd7ab758ff843ad0c",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/scenario-plan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "1c79294c0ec7fb4c4838",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/scenario-plan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "7afa0e0fcc894fd1fbba",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/scenario-plan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "e9bfa11b81acc47d653c",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/scenario-plan.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "ec2bcbb4fdf14b4478fe",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/sitemap.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "1f67aa86770c58db0010",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/sitemap.ts",
+    "rule": "complexity",
+    "signature": "88c5df24a7d7dfa85954",
+    "value": 22,
+    "label": "Async function 'discoverSitemap' has a complexity of 22. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/sitemap.ts",
+    "rule": "max-depth",
+    "signature": "88c5df24a7d7dfa85954",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "apps/chrome-extension/src/sitemap.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9c21325f01a4ecf0d0c6",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-diagnostics.ts",
+    "rule": "complexity",
+    "signature": "0bac2e254587e489ca87",
+    "value": 32,
+    "label": "Function 'sameCssReferenceContext' has a complexity of 32. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-diagnostics.ts",
+    "rule": "complexity",
+    "signature": "91fba70c4850fc0e5f8d",
+    "value": 71,
+    "label": "Function 'diagnosticSources' has a complexity of 71. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-diagnostics.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "91fba70c4850fc0e5f8d",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-diagnostics.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "da7fc11d158211e175ae",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline-core.ts",
+    "rule": "complexity",
+    "signature": "36eae9613f77c18d3663",
+    "value": 25,
+    "label": "Function 'validEvent' has a complexity of 25. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline-core.ts",
+    "rule": "complexity",
+    "signature": "39d2f74630a296ab26d4",
+    "value": 46,
+    "label": "Method 'join' has a complexity of 46. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "max-depth",
+    "signature": "2bb8a015d36f52327520",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "max-depth",
+    "signature": "75ffc7e446c0112a8973",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9c50d2cfb7f3b49b76bb",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9e698c563aa046ab7331",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "bbab1bad1566a48f8d68",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "complexity",
+    "signature": "c90629ca6a9897dcc4f4",
+    "value": 57,
+    "label": "Method 'sample' has a complexity of 57. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "max-depth",
+    "signature": "c90629ca6a9897dcc4f4",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "e900bc6462bee787db22",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/source-timeline.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "f524c58ad5708b9b87f0",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ToolIcon.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "40e8ccce48074c78a706",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/trusted-pointer.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "1caf100a3400658a0754",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/trusted-pointer.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d7581eace7c52d267226",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ui-labels.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "51bf07f09be8c341a0cc",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ui-labels.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "a3c6697c02c526febb07",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/ui.tsx",
+    "rule": "complexity",
+    "signature": "0a69abdc78527000f932",
+    "value": 35,
+    "label": "Function 'App' has a complexity of 35. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/useScanExports.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d214b3a8a9a0136f4066",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/useScanSelection.ts",
+    "rule": "complexity",
+    "signature": "acb7852218b1dcd407ef",
+    "value": 29,
+    "label": "Function 'useScanSelection' has a complexity of 29. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/useScanSelection.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "acb7852218b1dcd407ef",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification-control.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "f4665cd56a70a2700f10",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "complexity",
+    "signature": "00d27d1c9897cc17941f",
+    "value": 47,
+    "label": "Function 'compareVerification' has a complexity of 47. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "complexity",
+    "signature": "4fda80d042540cdcc4b5",
+    "value": 28,
+    "label": "Function 'appendReview' has a complexity of 28. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "4fda80d042540cdcc4b5",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "84a1df9ce1bc42b09fdc",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "complexity",
+    "signature": "9ec5c41d93cb7e756a6c",
+    "value": 55,
+    "label": "Function 'buildVerificationPlan' has a complexity of 55. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9ec5c41d93cb7e756a6c",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "cd1525f7eeeb886c1fa0",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/verification.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d12825ed3f1610620827",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/VerificationPanel.tsx",
+    "rule": "complexity",
+    "signature": "59002f5c9dbf02c06827",
+    "value": 32,
+    "label": "Function 'VerificationPanel' has a complexity of 32. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/VerificationPanel.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "59002f5c9dbf02c06827",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/viewport-driver.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "31da8ed7a1df20e70f10",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/viewport-driver.ts",
+    "rule": "complexity",
+    "signature": "79684c99c31407c70787",
+    "value": 24,
+    "label": "Async function 'emulateCapturedViewport' has a complexity of 24. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/viewport-driver.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "85b119a38db5ecf18e3e",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/viewport-driver.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "b66db42f34cfdc296c58",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/chrome-extension/src/viewport-driver.ts",
+    "rule": "complexity",
+    "signature": "e25636ffa5fae14b9a61",
+    "value": 38,
+    "label": "Async function 'waitForStableViewport' has a complexity of 38. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/viewport-workspace.ts",
+    "rule": "complexity",
+    "signature": "095fe51715d955eda0d4",
+    "value": 22,
+    "label": "Async function 'restoreViewportWorkspace' has a complexity of 22. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/chrome-extension/src/viewport-workspace.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "6b39d1003ab6afe87a97",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/components/AbuseForm.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "f40a36bc0c37bf347b56",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/components/AccountActions.tsx",
+    "rule": "complexity",
+    "signature": "0a47a3803ecb1b87acf5",
+    "value": 24,
+    "label": "Function 'AccountActions' has a complexity of 24. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/web/src/components/AccountActions.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "0a47a3803ecb1b87acf5",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/components/AccountData.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "74ca3262e1673eb7a7a7",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/components/AuthForm.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "7212a487345232b64e1d",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/components/Challenge.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "83da853dbdf6f9d9277b",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/components/ModerationActions.tsx",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "10542cfd40d2d872edb5",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/client-api.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "2df47a8a9575e0187295",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/client-api.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "e07c27bcfa8cfb5d7063",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/publication-preview.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "3ffb92a03aabad4b1c81",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/social-metadata.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "0f38609cb4f05f28f579",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/upload-queue.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "140d41dbb6a25c79f194",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/upload-queue.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "73fca7ab618ba5c85309",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/upload-queue.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9ae8f3279ee19840433a",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/upload-queue.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "9d0f74ebeb6315e989a9",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/upload-queue.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "ac65c0c998dcba36310a",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/lib/upload-queue.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "fa8b01bf1434b5263ff9",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/account.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "a7ede323899968943cd6",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/auth.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "c5cafeab915b5f4494ac",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/auth.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "dda26bbc10d500e83496",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/auth.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "fd5c414d3e60a72c42e8",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/index.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "e387d1f71a272a39948f",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/public-origin.ts",
+    "rule": "complexity",
+    "signature": "6b73b63e8773c7c0bb03",
+    "value": 23,
+    "label": "Function 'isPublicOrigin' has a complexity of 23. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/web/src/server/public-origin.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "c055436e91c68f06be32",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/public-origin.ts",
+    "rule": "complexity",
+    "signature": "d2af7a9ab68b9443e7df",
+    "value": 28,
+    "label": "Function 'publicV4' has a complexity of 28. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/web/src/server/publication-intents.ts",
+    "rule": "complexity",
+    "signature": "516d7c74234ab3d4d8f9",
+    "value": 24,
+    "label": "Async function 'createIntent' has a complexity of 24. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/web/src/server/router.ts",
+    "rule": "complexity",
+    "signature": "06e2e0a3d8e8b8a9f65e",
+    "value": 80,
+    "label": "Async function 'handleApi' has a complexity of 80. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/web/src/server/router.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "06e2e0a3d8e8b8a9f65e",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/router.ts",
+    "rule": "max-depth",
+    "signature": "06e2e0a3d8e8b8a9f65e",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "229b843551d4fa69a2cb",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "3a043561df9dcffbe9f2",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "3fbf07bf2fba3717aa5e",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "41387048c668d44d86ee",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "97a3390026e46aa97002",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "complexity",
+    "signature": "d1127138d22ba6f378b1",
+    "value": 24,
+    "label": "Async function 'verifyChallenge' has a complexity of 24. Maximum allowed is 20."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d1127138d22ba6f378b1",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/security.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "d405b641ea9125aa0b69",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/types.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "0ef4e3f4d6a93fd84226",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/types.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "61ee711dce9f18fd3f19",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "apps/web/src/server/types.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "bdf3450d01c72243bec0",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/analysis-engine/src/candidate-clusters.ts",
+    "rule": "complexity",
+    "signature": "ee1d3a9cd1bc01473225",
+    "value": 47,
+    "label": "Function 'collectCandidates' has a complexity of 47. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/analysis-engine/src/candidate-clusters.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "ee1d3a9cd1bc01473225",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/analysis-engine/src/color-cache.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "a1aea85f6c1ba8a1e7e9",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/analysis-engine/src/frame-memory.ts",
+    "rule": "complexity",
+    "signature": "29d4b81e9ead18405dc0",
+    "value": 39,
+    "label": "Method 'allocate' has a complexity of 39. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/analysis-engine/src/luminance.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "6fee67c0550eebcdeb85",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/analysis-engine/src/spatial.ts",
+    "rule": "complexity",
+    "signature": "5a1956659df303974ac8",
+    "value": 24,
+    "label": "Function 'exactCheckerboardInverse' has a complexity of 24. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/analysis-engine/src/spatial.ts",
+    "rule": "complexity",
+    "signature": "b5ceb4dc8f12f713b889",
+    "value": 37,
+    "label": "Function 'exactTranslation' has a complexity of 37. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/analysis-engine/src/spatial.ts",
+    "rule": "max-depth",
+    "signature": "b5ceb4dc8f12f713b889",
+    "value": 5,
+    "label": "Blocks are nested too deeply (5). Maximum allowed is 4."
+  },
+  {
+    "file": "packages/analysis-engine/src/spatial.ts",
+    "rule": "complexity",
+    "signature": "c3117b0409cc2ae0c58b",
+    "value": 23,
+    "label": "Function 'balancedCheckerboard' has a complexity of 23. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/analysis-engine/src/transition-history.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "349424af29dec0afaf67",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/analysis-engine/src/transition-history.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "709d09f432ae6752c6f8",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/core/src/diagnostics.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "03d02e12c7b7b8449083",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/core/src/diagnostics.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "27cbaa9cfaf55c8cb32d",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/core/src/diagnostics.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "2bae520ce60bf5190297",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/core/src/diagnostics.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "2f10ba43e13f14b251f1",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/core/src/policy.ts",
+    "rule": "complexity",
+    "signature": "7765bb96f4aebecf7bf1",
+    "value": 32,
+    "label": "Function 'evaluateAction' has a complexity of 32. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/core/src/serialization.ts",
+    "rule": "jsdoc/require-jsdoc",
+    "signature": "4b0fe3af4098236726ea",
+    "value": 1,
+    "label": "Missing JSDoc comment."
+  },
+  {
+    "file": "packages/core/src/source-timeline-schema.ts",
+    "rule": "complexity",
+    "signature": "ef3404a5c6918f576fc8",
+    "value": 34,
+    "label": "Arrow function has a complexity of 34. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/core/src/spatial.ts",
+    "rule": "complexity",
+    "signature": "bd2c84934b72ed594369",
+    "value": 28,
+    "label": "Arrow function has a complexity of 28. Maximum allowed is 20."
+  },
+  {
+    "file": "packages/rule-feed/src/index.ts",
+    "rule": "complexity",
+    "signature": "c20e1fd86addf9475e2e",
+    "value": 22,
+    "label": "Async function 'verifyManifest' has a complexity of 22. Maximum allowed is 20."
+  }
+]

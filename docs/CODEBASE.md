@@ -1,6 +1,6 @@
 # Codebase map
 
-Start here when changing epi-less. The scanner's public behaviour and numeric reference results are contracts; splitting a file does not constitute new detector validation.
+Start here when changing epi-less. See [maintainability gates and refactor evidence](MAINTAINABILITY.md) for required checks and remaining debt. The scanner's public behaviour and numeric reference results are contracts; splitting a file does not constitute new detector validation.
 
 ## Extension
 
@@ -8,16 +8,20 @@ Start here when changing epi-less. The scanner's public behaviour and numeric re
 
 | Module                    | Responsibility                                                   |
 | ------------------------- | ---------------------------------------------------------------- |
-| `runner-commands.ts`      | UI commands, snapshot transfer and start intents                 |
+| `runner-commands.ts`      | Validated command dispatch to focused handlers                   |
 | `runner-authorization.ts` | Real toolbar authorization and capture startup                   |
 | `runner-scheduler.ts`     | Job queue, task completion and terminal cleanup                  |
 | `runner-exploration.ts`   | Bounded route interactions, scrolling, media and compact samples |
 | `runner-navigation.ts`    | Lease/origin/budget guards, page messaging and navigation        |
-| `runner-observation.ts`   | Measurement segments, source evidence and targeted replay        |
+| `runner-observation.ts`   | Capture lifecycle and observation orchestration                  |
 | `runner-capture.ts`       | Capture-source ownership, viewport workspaces and restoration    |
 | `runner-advanced.ts`      | Disposable scan-tab ownership, recovery and closure              |
 | `runner-offscreen.ts`     | Offscreen-document lifetime, messages and timeouts               |
 | `runner-policy.ts`        | Pure queue, coverage and lease policies                          |
+
+`runner-command-*` separates preparation, start, lifecycle, state messages and history commands. `runner-job-factory.ts` builds initial job data without browser/storage mutations. `runner-replay.ts` owns replay prerequisites; `observation-source`, `observation-evidence`, `observation-coverage`, `observation-recipe` and `observation-result` own the corresponding capture stages. `measurement-protocol.ts` validates worker results and defines explicit unopened/capturing/completed/interrupted segment states.
+
+`store.ts` remains the storage entrypoint. `store-db` owns IndexedDB transaction primitives; `store-control`, `store-jobs`, `store-retention` and `store-transfers` own their mutations. `store-control-schema` validates persisted start/recheck/preferences/retention records. Corrupt authorization records never start scans; corrupt retention settings preserve details. Historical job/report records retain their existing compatibility format.
 
 The services are explicit parameters, not imports back into `background.ts`. Keep browser access behind the existing ownership checks. A cleanup failure must remain observable in the stored job. Do not turn an interrupted scan into a completed scan merely to simplify a state transition.
 
@@ -47,6 +51,9 @@ JSDoc records ownership, trust boundaries and race behavior. Ordinary database o
 `packages/analysis-engine/src/index.ts` is the public API. It re-exports the existing API without changing the engine version.
 
 - `frame-analyzer.ts`: frame ingestion and detection orchestration.
+- `frame-quality.ts` and `frame-input.ts`: input admission, cadence, geometry changes and missing-coverage accounting.
+- `frame-pixels.ts`: exact dense/sparse pixel transitions and backend counters.
+- `frame-tiles.ts`, `tile-geometry.ts` and `active-tiles.ts`: lossless sharing, changed-tile geometry and exact active-mask expansion. The internal `FrameMemory → FrameTiles → FramePixels` hierarchy preserves direct typed-array access in pixel loops; these implementation classes are not package exports.
 - `frame-memory.ts`: buffer allocation, memory budgets and backend initialization; protected fields remain directly accessible in pixel loops.
 - `analysis-result.ts`: final quality, limitations and result assembly.
 - `transition-history.ts`: general/red rolling-window history and opposing pairs.
@@ -77,3 +84,9 @@ Knip checks unused files, exports, types and dependencies, plus undeclared impor
 The root declares esbuild because root browser tests import it directly. The website uses system fonts; no webfont package or old product-preview image is needed.
 
 See [validation map](VALIDATION.md) for which checks prove which claims.
+
+## Regression ownership
+
+Backend publication suites are grouped by access, quotas, idempotency, moderation, account management, origin policy and pagination. `tests/backend/publication-fixture.ts` owns synthetic setup and the normal approval/publication flow. Tests use actual migrations and SQLite transactions.
+
+The three-engine differential harness retains exact temporal-state, callback, memory and spatial-witness assertions. `bench/state-comparison.mjs` owns state comparisons; `bench/quality-probe.mjs` reads relocated quality counters without changing their values or relaxing assertions. Frozen reference sources remain unchanged.
