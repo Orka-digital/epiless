@@ -200,6 +200,6 @@ Start with the [codebase map](docs/CODEBASE.md) for module ownership and mainten
 
 Original code and documentation use the [MIT License](LICENSE). Dependencies and the [TRACE reference fixtures](tests/reference/trace-pse/upstream/LICENSE) retain their own licenses; see [third-party notices](docs/THIRD_PARTY_NOTICES.md).
 
-Project credits: Orka Digital and Thibaux Mampaey. See [governance](GOVERNANCE.md) for project stewardship and contributions.
+Project credits: Orka Digital. See [governance](GOVERNANCE.md) for project stewardship and contributions.
 
 Technical compatibility: legacy storage keys and signed-feed identifiers remain unchanged so existing local data and signatures stay valid. Historical validation artifacts retain their original bytes. The product and workspace packages use **epi-less**; local development variables use `EPI_LESS_*`.
