@@ -1,7 +1,8 @@
-import { useHydrated } from '../lib/use-hydrated';
 import { useState } from 'react';
 import { api } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
 
+/** Submit explicit moderation decisions; authorization remains enforced by the server. */
 export default function ModerationActions({
   id,
   revision,

@@ -1,9 +1,10 @@
-import { accountExportRows } from './db/account-export';
-import { eraseAccount } from './db/account-erasure';
 import { createAuth, requireUser } from './auth';
+import { eraseAccount } from './db/account-erasure';
+import { accountExportRows } from './db/account-export';
 import { rateLimit } from './security';
 import { HttpError, type RuntimeEnv } from './types';
 
+/** Require current credentials before account export or deletion. */
 export async function revalidateAccount(
   request: Request,
   env: RuntimeEnv,

@@ -1,23 +1,30 @@
-import {
-  contentHash,
-  stableJson,
-  validatePublicReport,
-  type AuditReport,
-} from '@epi-less/core';
+import { contentHash, stableJson } from '@epi-less/core';
+
 import { assertPublicOrigin } from './public-origin';
+
 import { assertUploadsAvailable } from './publication-mutations';
+
 import { parseVisibility } from './publication-presentation';
+
 import { getPublication } from './publication-queries';
+
 import { databaseErrorIncludes } from './db/client';
+
 import {
-  findIntent,
+  cancelStoredIntent,
   expireIntents,
+  findIntent,
+  grantIntent,
   insertIntent,
   renewIntent,
-  grantIntent,
-  cancelStoredIntent,
 } from './db/intents';
+
 import { createChallenge, MAX_BODY, verifyChallenge } from './security';
+
+import {
+  assertReusableIntent,
+  validatedIntentReport,
+} from './intent-validation';
 import { HttpError, type RuntimeEnv } from './types';
 
 /**
@@ -48,16 +55,7 @@ export async function createIntent(
       'Een geldige opdrachtsleutel is verplicht.',
     );
   const visibility = parseVisibility(input.visibility);
-  let report: AuditReport;
-  try {
-    report = validatePublicReport(input.report);
-  } catch {
-    throw new HttpError(
-      422,
-      'INVALID_REPORT',
-      'Het rapport is ongeldig of bevat niet-geredigeerde URL-parameters. Exporteer het opnieuw.',
-    );
-  }
+  const report = validatedIntentReport(input.report);
   if (visibility === 'PUBLIC') assertPublicOrigin(report.origin);
   const json = stableJson(report);
   const size = new TextEncoder().encode(json).length;
@@ -80,18 +78,7 @@ export async function createIntent(
     idempotencyKey: input.idempotencyKey,
   });
   if (existing) {
-    if (existing.content_hash !== hash || existing.visibility !== visibility)
-      throw new HttpError(
-        409,
-        'IDEMPOTENCY_CONFLICT',
-        'Deze opdracht hoort bij een andere snapshot of zichtbaarheid.',
-      );
-    if (existing.canceled_at !== null)
-      throw new HttpError(
-        409,
-        'INTENT_CANCELLED',
-        'Deze opdracht is geannuleerd. Controleer een nieuwe preview om opnieuw te bewaren.',
-      );
+    assertReusableIntent(existing, hash, visibility);
     if (existing.state === 'CONSUMED')
       return {
         id: existing.id,

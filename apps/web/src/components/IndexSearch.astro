@@ -1,0 +1,178 @@
+---
+interface Props {
+  query: string;
+  filters: Record<string, string>;
+}
+const { query, filters } = Astro.props;
+---
+
+<form class="search-form" action="/sites" method="get" role="search">
+  <label for="search">Domeinnaam</label>
+  <div class="search-controls">
+    <input
+      id="search"
+      name="q"
+      type="search"
+      value={query}
+      placeholder="voorbeeld.be"
+      maxlength="100"
+    />
+    <button class="button" type="submit">
+      Zoeken
+    </button>
+    {(query || Object.values(filters).some(Boolean)) && (
+      <a href="/sites">Wis filters</a>
+    )}
+  </div>
+  <details
+    class="index-filter-disclosure"
+    open={Object.values(filters).some(Boolean)}
+  >
+    <summary>
+      Filters <span>Meetuitkomst, datum en criterium</span>
+    </summary>
+    <div class="index-filters">
+      <div>
+        <label for="filter-status">Meetuitkomst</label>
+        <select id="filter-status" name="status">
+          <option value="">Alle uitkomsten</option>
+          <option
+            value="NEEDS_REVIEW"
+            selected={filters.status === 'NEEDS_REVIEW'}
+          >
+            Beoordeling nodig
+          </option>
+          <option
+            value="INCONCLUSIVE"
+            selected={filters.status === 'INCONCLUSIVE'}
+          >
+            Onbeslisbaar
+          </option>
+          <option
+            value="NO_ISSUES_OBSERVED"
+            selected={filters.status === 'NO_ISSUES_OBSERVED'}
+          >
+            Geen problemen waargenomen
+          </option>
+          <option value="ERROR" selected={filters.status === 'ERROR'}>
+            Meting mislukt
+          </option>
+        </select>
+      </div>
+      <div>
+        <label for="filter-from">Gemeten vanaf (UTC)</label>
+        <input id="filter-from" name="from" type="date" value={filters.from} />
+      </div>
+      <div>
+        <label for="filter-to">Gemeten tot en met (UTC)</label>
+        <input id="filter-to" name="to" type="date" value={filters.to} />
+      </div>
+      <div>
+        <label for="filter-criterion">Criterium</label>
+        <select id="filter-criterion" name="criterion">
+          <option value="">Alle rapporten</option>
+          <option value="2.3.1" selected={filters.criterion === '2.3.1'}>
+            2.3.1 — meting voor beoordeling
+          </option>
+          <option value="2.3.2" selected={filters.criterion === '2.3.2'}>
+            2.3.2 — meting voor beoordeling
+          </option>
+        </select>
+      </div>
+    </div>
+    <p class="fine filter-note">
+      Criteria tonen rapporten met gemeten flitsscenario's. De kandidaten zijn
+      nog geen normatief oordeel.
+    </p>
+    <button class="button outline small" type="submit">
+      Filters toepassen
+    </button>
+  </details>
+</form>
+
+<style>
+  .index-filter-disclosure {
+    margin-top: 16px;
+    border-top: 1px solid var(--line);
+    padding-top: 12px;
+  }
+  .index-filter-disclosure > summary {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .index-filter-disclosure > summary span {
+    font-weight: 400;
+    color: var(--muted);
+    margin-left: 8px;
+    font-size: 11px;
+  }
+
+  .index-filters {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .index-filters input,
+  .index-filters select {
+    width: 100%;
+    min-width: 0;
+    font-size: 12px;
+  }
+  .filter-note {
+    margin-top: 10px;
+  }
+  @media (max-width: 900px) {
+    .index-filters {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 480px) {
+    .index-filters {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  .search-form {
+    display: block;
+    max-width: none;
+    margin: 0 0 22px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .search-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+  .search-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .search-controls input {
+    flex: 1;
+    max-width: 500px;
+    min-width: 0;
+    font-size: 13px;
+  }
+  .search-controls .button {
+    min-width: 90px;
+  }
+  .search-controls a {
+    font-size: 12px;
+  }
+  @media (max-width: 600px) {
+    .search-form {
+      padding: 16px;
+    }
+    .search-controls {
+      flex-wrap: wrap;
+    }
+    .search-controls input {
+      flex-basis: calc(100% - 100px);
+      width: 0;
+    }
+  }
+</style>

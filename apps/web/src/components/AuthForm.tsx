@@ -1,6 +1,6 @@
-import { useHydrated } from '../lib/use-hydrated';
 import { useRef, useState } from 'react';
 import { api, type ChallengeData } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
 import Challenge from './Challenge';
 function safeReturnTo(value: string) {
   try {
@@ -12,6 +12,7 @@ function safeReturnTo(value: string) {
     return '/account';
   }
 }
+/** Submit account credentials with challenge verification and surface server failures. */
 export default function AuthForm({
   returnTo = '/account',
 }: {

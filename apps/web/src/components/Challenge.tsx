@@ -32,6 +32,7 @@ function load(): Promise<Turnstile> {
     document.head.appendChild(script);
   }));
 }
+/** Own the Turnstile widget lifecycle and return tokens only through the supplied callback. */
 export default function Challenge({
   challenge,
   onToken,

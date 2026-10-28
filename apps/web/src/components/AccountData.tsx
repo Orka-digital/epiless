@@ -1,7 +1,8 @@
-import { useHydrated } from '../lib/use-hydrated';
 import { useState, type SubmitEvent } from 'react';
 import { api } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
 
+/** Export or erase account data only after explicit revalidation and confirmation. */
 export default function AccountData({ accountId }: { accountId: string }) {
   const [action, setAction] = useState<'export' | 'delete' | null>(null);
   const [busy, setBusy] = useState(false);

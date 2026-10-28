@@ -1,18 +1,10 @@
-import {
-  pruneChallenges,
-  insertChallenge,
-  consumeChallenge,
-} from './db/challenges';
-import {
-  HttpError,
-  isLocalFixture,
-  assertConfigured,
-  type RuntimeEnv,
-} from './types';
+import { assertConfigured, HttpError, type RuntimeEnv } from './types';
 
 export const MAX_BODY = 1_048_576;
+
 const localLimits = new Map<string, { count: number; reset: number }>();
 
+/** Hash UTF-8 text to lowercase SHA-256 hex; no source text is retained. */
 export async function sha256(value: string): Promise<string> {
   const digest = await crypto.subtle.digest(
     'SHA-256',
@@ -23,6 +15,7 @@ export async function sha256(value: string): Promise<string> {
   ).join('');
 }
 
+/** Derive the publication share capability with the server HMAC secret. */
 export async function shareToken(
   env: RuntimeEnv,
   publicationId: string,
@@ -44,6 +37,7 @@ export async function shareToken(
   ).join('');
 }
 
+/** Require configured same-origin JSON mutation requests before processing their bodies. */
 export function assertMutation(request: Request, env: RuntimeEnv): void {
   assertConfigured(env, request);
   if (
@@ -72,6 +66,7 @@ export function assertMutation(request: Request, env: RuntimeEnv): void {
     throw new HttpError(415, 'JSON_REQUIRED', 'Verstuur JSON.');
 }
 
+/** Read bounded UTF-8 JSON object input; cancel oversized streams and reject malformed bodies. */
 export async function readJson(
   request: Pick<Request, 'headers' | 'body'>,
   maxBytes = MAX_BODY + 16_384,
@@ -111,6 +106,7 @@ export async function readJson(
   }
 }
 
+/** Enforce the bound limiter; production fails closed when abuse protection is unavailable. */
 export async function rateLimit(
   request: Request,
   env: RuntimeEnv,
@@ -154,143 +150,4 @@ export async function rateLimit(
       'Te veel verzoeken. Probeer het over een minuut opnieuw.',
     );
 }
-
-export async function createChallenge(
-  env: RuntimeEnv,
-  request: Request,
-  action: 'auth' | 'publish' | 'abuse',
-  ownerId?: string,
-  intentId?: string,
-) {
-  const now = Date.now();
-  const id = crypto.randomUUID();
-  const cdata = crypto.randomUUID().replaceAll('-', '');
-  await pruneChallenges(env, now - 60_000);
-  await insertChallenge(env, {
-    id,
-    action,
-    owner_id: ownerId || null,
-    intent_id: intentId || null,
-    cdata,
-    created_at: now,
-    expires_at: now + 5 * 60_000,
-    verify_key: crypto.randomUUID(),
-  });
-  return {
-    id,
-    action,
-    cdata,
-    siteKey: env.TURNSTILE_SITE_KEY,
-    local: isLocalFixture(env, request),
-    expiresAt: now + 5 * 60_000,
-  };
-}
-
-export async function verifyChallenge(
-  env: RuntimeEnv,
-  request: Request,
-  args: {
-    challengeId: unknown;
-    token: unknown;
-    action: 'auth' | 'publish' | 'abuse';
-    ownerId?: string;
-    intentId?: string;
-  },
-  fetcher: typeof fetch = fetch,
-) {
-  if (
-    typeof args.challengeId !== 'string' ||
-    typeof args.token !== 'string' ||
-    !args.token ||
-    args.token.length > 2048
-  )
-    throw new HttpError(
-      400,
-      'CHALLENGE_REQUIRED',
-      'Voltooi de verificatie opnieuw.',
-    );
-  const row = await consumeChallenge(
-    env,
-    args.challengeId,
-    args.action,
-    args.ownerId,
-    args.intentId,
-  );
-  if (!row)
-    throw new HttpError(
-      403,
-      'CHALLENGE_EXPIRED',
-      'Deze verificatie is verlopen of al gebruikt.',
-    );
-  if (isLocalFixture(env, request) && args.token === 'flashguard-local-test')
-    return;
-  if (!env.TURNSTILE_SECRET_KEY || !env.TURNSTILE_HOSTNAMES)
-    throw new HttpError(
-      503,
-      'VERIFICATION_UNAVAILABLE',
-      'Verificatie is nog niet ingesteld.',
-    );
-  if (
-    env.ENVIRONMENT === 'production' &&
-    (/^[123]x0{10,}/u.test(env.TURNSTILE_SECRET_KEY) ||
-      /^[123]x0{10,}/u.test(env.TURNSTILE_SITE_KEY))
-  ) {
-    throw new HttpError(
-      503,
-      'VERIFICATION_UNAVAILABLE',
-      'Testkeys zijn niet toegestaan in productie.',
-    );
-  }
-  const allowed = env.TURNSTILE_HOSTNAMES.split(',').map((host) => host.trim());
-  if (
-    env.ENVIRONMENT === 'production' &&
-    allowed.some((host) => ['localhost', '127.0.0.1', '[::1]'].includes(host))
-  )
-    throw new HttpError(
-      503,
-      'VERIFICATION_UNAVAILABLE',
-      'Ongeldige productiehostnames.',
-    );
-  let result: {
-    success?: boolean;
-    hostname?: string;
-    action?: string;
-    cdata?: string;
-  };
-  try {
-    const response = await fetcher(
-      'https://challenges.cloudflare.com/turnstile/v0/siteverify',
-      {
-        method: 'POST',
-        signal: AbortSignal.timeout(8000),
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          secret: env.TURNSTILE_SECRET_KEY,
-          response: args.token,
-          remoteip: request.headers.get('cf-connecting-ip') || undefined,
-          idempotency_key: row.verify_key,
-        }),
-      },
-    );
-    if (!response.ok) throw new Error('provider unavailable');
-    result = await response.json();
-  } catch {
-    throw new HttpError(
-      503,
-      'VERIFICATION_UNAVAILABLE',
-      'Verificatie is tijdelijk niet beschikbaar. Probeer later opnieuw.',
-    );
-  }
-  if (
-    !result.success ||
-    !result.hostname ||
-    !allowed.includes(result.hostname) ||
-    result.action !== row.action ||
-    result.cdata !== row.cdata
-  )
-    throw new HttpError(
-      403,
-      'CHALLENGE_REJECTED',
-      'Verificatie geweigerd. Probeer opnieuw.',
-    );
-}
+export { createChallenge, verifyChallenge } from './challenge-security';

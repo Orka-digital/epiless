@@ -20,6 +20,7 @@ export interface RuntimeEnv {
   };
 }
 
+/** Carry a deliberate public HTTP error code, status and localized message. */
 export class HttpError extends Error {
   constructor(
     public status: number,
@@ -33,6 +34,7 @@ export class HttpError extends Error {
 export type Visibility = 'PRIVATE' | 'UNLISTED' | 'PUBLIC';
 export type PublicationState = 'ACTIVE' | 'REVOKED' | 'HIDDEN_BY_MODERATION';
 
+/** Reject requests when required deployment bindings are missing or inconsistent. */
 export function assertConfigured(env: RuntimeEnv, request?: Request): void {
   if (
     !env.DB ||
@@ -88,6 +90,7 @@ export function assertConfigured(env: RuntimeEnv, request?: Request): void {
   }
 }
 
+/** Identify the explicitly configured local fixture; production never inherits its bypass. */
 export function isLocalFixture(env: RuntimeEnv, request: Request): boolean {
   const hostname = new URL(request.url).hostname;
   return (

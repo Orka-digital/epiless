@@ -30,6 +30,7 @@ export function socialImageUrl(
   return new URL(PREVIEW_PATH, origin).href;
 }
 
+/** Format known timestamps for display with an explicit unavailable fallback. */
 export function timestampLabel(value: string): string {
   return new Intl.DateTimeFormat('nl-BE', {
     year: 'numeric',

@@ -1,3 +1,4 @@
+/** Expose structured API failure details without treating an error response as successful data. */
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -9,6 +10,7 @@ export class ApiError extends Error {
     this.name = 'ApiError';
   }
 }
+/** Send a same-origin JSON request and reject unsuccessful responses as ApiError. */
 export async function api<T = Record<string, unknown>>(
   path: string,
   body?: unknown,

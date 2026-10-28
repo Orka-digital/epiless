@@ -1,7 +1,8 @@
-import { useHydrated } from '../lib/use-hydrated';
 import { useState } from 'react';
 import { api, type ChallengeData } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
 import Challenge from './Challenge';
+/** Submit an explicit abuse report with challenge verification and visible errors. */
 export default function AbuseForm({
   id,
   accessToken,
