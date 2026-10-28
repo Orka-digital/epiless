@@ -1,14 +1,16 @@
+import { phaseExecutionIdentity } from './animation-phase-identity.mjs';
+import { createPhaseJobs } from './animation-phase-jobs.mjs';
+import { createPhaseObserver } from './animation-phase-observer.mjs';
 // Real browser document/WAAPI clocks and tiny CSS changes, with explicitly
 // synthetic pixel findings/capture quality. This is not native tabCapture proof.
+import { chromium } from '@playwright/test';
 import assert from 'node:assert/strict';
+import { writeFile } from 'node:fs/promises';
+import { createRequire } from 'node:module';
 import {
   testPendingPhaseBounds,
   testPhaseDiscoveryBounds,
 } from './animation-phase-bounds-browser.mjs';
-import { createRequire } from 'node:module';
-import { chromium } from '@playwright/test';
-import { writeFile, readFile } from 'node:fs/promises';
-import { createHash } from 'node:crypto';
 const esbuild = createRequire(
   new URL('../../apps/chrome-extension/package.json', import.meta.url),
 )('esbuild');
@@ -44,17 +46,10 @@ const content = await esbuild.build({
   platform: 'browser',
   format: 'iife',
 });
-const execution = {
-  nodeBundleSha256: createHash('sha256')
-    .update(node.outputFiles[0].text)
-    .digest('hex'),
-  contentBundleSha256: createHash('sha256')
-    .update(content.outputFiles[0].text)
-    .digest('hex'),
-  fixtureScriptSha256: createHash('sha256')
-    .update(await readFile(new URL(import.meta.url)))
-    .digest('hex'),
-};
+const execution = await phaseExecutionIdentity(
+  node.outputFiles[0].text,
+  content.outputFiles[0].text,
+);
 const browser = await chromium.launch({ headless: true });
 const page = await browser.newPage();
 const url = 'http://127.0.0.1:47821/phase';
@@ -83,186 +78,16 @@ setTimeout(()=>{window.timerFiredAt=performance.now();document.querySelector('#s
     }`,
   }),
 );
-let count = 0;
 const load = async () => {
   await page.goto(url);
   await page.addScriptTag({ content: content.outputFiles[0].text });
 };
-const observe = async (
-  startAge,
-  duration,
-  action = false,
-  allowIncomplete = false,
-) => {
-  await page.waitForFunction((age) => performance.now() >= age, startAge);
-  const segment = `phase-${++count}`;
-  await page.evaluate(
-    ({ segment, action }) => {
-      phase.begin('proof', segment);
-      const colors = [];
-      let running = true;
-      const frame = () => {
-        if (!running) return;
-        colors.push({
-          documentMs: performance.now(),
-          epochMs: performance.timeOrigin + performance.now(),
-          color: getComputedStyle(document.querySelector('#signal'))
-            .backgroundColor,
-        });
-        requestAnimationFrame(frame);
-      };
-      frame();
-      globalThis.stopPhase = () => {
-        running = false;
-        return {
-          evidence: phase.stop('proof', segment),
-          colors,
-          timerFiredAt: globalThis.timerFiredAt ?? null,
-        };
-      };
-      if (action) {
-        phase.trigger('proof', segment, 'before');
-        document.querySelector('button').click();
-        phase.trigger('proof', segment, 'after');
-      }
-    },
-    { segment, action },
-  );
-  await page.waitForTimeout(duration);
-  const result = await page.evaluate(() => stopPhase());
-  assert.equal(
-    validPhaseEvidence(result.evidence),
-    true,
-    JSON.stringify(result.evidence),
-  );
-  assert.equal(
-    result.evidence.complete,
-    !allowIncomplete,
-    JSON.stringify(result.evidence.reasons),
-  );
-  return result;
-};
-function jobs(original, repeated, triggered = false) {
-  const bright = original.colors.filter(
-    (x) => x.color === 'rgb(125, 125, 125)',
-  );
-  assert.ok(bright.length >= 3);
-  const path = original.evidence.animations[0]?.selectorPath;
-  assert.ok(path);
-  const finding = {
-    id: 'finding',
-    type: 'GENERAL_FLASH',
-    severity: 'warning',
-    reviewStatus: 'NEEDS_REVIEW',
-    region: { x: 8, y: 29, width: 2, height: 2 },
-    sourceTimeline: {
-      version: 1,
-      status: 'CORRELATED',
-      complete: true,
-      clockBasis: 'FRAME_RECEIPT_ESTIMATE',
-      windowStartEpochMs: bright[0].epochMs,
-      windowEndEpochMs: bright.at(-1).epochMs,
-      frameClock: {
-        method: 'PER_FRAME_RECEIPT',
-        startBoundaryErrorMs: 0,
-        endBoundaryErrorMs: 0,
-      },
-      candidates: [{ selectorPath: path }],
-    },
-  };
-  const phasePlan = phasePlanFromEvidence(
-    original.evidence,
-    [finding],
-    triggered,
-  );
-  const plan = {
-    version: 1,
-    route: url,
-    profile: 'current',
-    viewport: { width: 1280, height: 720, dpr: 1 },
-    steps: triggered
-      ? [
-          {
-            kind: 'control',
-            target: {
-              kind: 'accordion',
-              selectorPath: ['button:nth-child(1)'],
-            },
-          },
-        ]
-      : [],
-    ...(triggered ? { measuredStep: 0 } : {}),
-    durationMs: 1000,
-    stateKey: '',
-    phasePlan,
-  };
-  plan.stateKey = replayStateKey(plan);
-  const job = (id, observed, positive) => ({
-    id,
-    state: 'COMPLETED',
-    origin: new URL(url).origin,
-    startUrl: url,
-    engineVersion: 'browser-phase-fixture',
-    runnerVersion: 'browser-phase-fixture',
-    scannerBuildSha256: 'a'.repeat(64),
-    startedAt:
-      id === 'baseline' ? '2026-01-01T00:00:00Z' : '2026-01-01T01:00:00Z',
-    endedAt:
-      id === 'baseline' ? '2026-01-01T00:00:10Z' : '2026-01-01T01:00:10Z',
-    tasks: [
-      {
-        id: 'route',
-        url,
-        observations: [
-          {
-            id: 'observation',
-            scenario: 'phase-fixture',
-            achieved: true,
-            coverage: 'TESTED',
-            replay: structuredClone(plan),
-            phaseEvidence: observed.evidence,
-            measurement: {
-              status: positive ? 'NEEDS_REVIEW' : 'NO_ISSUES_OBSERVED',
-              findings: positive ? [finding] : [],
-              limitations: [],
-              quality: {
-                frameCount: 120,
-                effectiveFps: 60,
-                maxGapMs: 17,
-                width: 1280,
-                height: 720,
-                downsampled: false,
-                interrupted: false,
-                captureWindowMs: 2000,
-                leadingIdleMs: 0,
-                trailingIdleMs: 0,
-              },
-            },
-          },
-        ],
-      },
-    ],
-  });
-  const base = job('baseline', original, true),
-    next = job(
-      'repeated',
-      repeated,
-      repeated.colors.some((x) => x.color === 'rgb(125, 125, 125)'),
-    );
-  next.verificationOf = {
-    jobId: base.id,
-    taskId: 'route',
-    observationId: 'observation',
-  };
-  return {
-    comparison: compareVerification(
-      base,
-      { taskId: 'route', observationId: 'observation', findingId: 'finding' },
-      next,
-    ),
-    phasePlan,
-  };
-}
+const observe = createPhaseObserver(page, validPhaseEvidence);
+const jobs = createPhaseJobs(url, {
+  compareVerification,
+  replayStateKey,
+  phasePlanFromEvidence,
+});
 const results = {
   execution,
   supersedesScope:

@@ -1,14 +1,18 @@
+import { build } from 'esbuild';
+import {
+  hashDirectory,
+  readEmbeddedBuildIdentity,
+} from './native-build-identity.mjs';
+import { createNativeContextServer } from './native-context-server.mjs';
 // Manual real-toolbar integration fixture. Never attaches Playwright/CDP and
 // never sends START/RESUME or requests a capture token. See --prepare-only.
 import { chromium } from '@playwright/test';
 import { spawn } from 'node:child_process';
-import { createHash, randomUUID } from 'node:crypto';
-import { cp, mkdtemp, readFile, readdir, writeFile } from 'node:fs/promises';
-import { createServer } from 'node:http';
+import { createHash } from 'node:crypto';
+import { cp, mkdtemp, readFile, writeFile } from 'node:fs/promises';
 import { arch, cpus, release, tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { nativeCandidatePage } from './native-candidate-page.mjs';
 
 const mode =
   process.argv.find((value) => value.startsWith('--mode='))?.slice(7) ?? 'zoom';
@@ -45,32 +49,10 @@ const production = fileURLToPath(
   new URL('../../apps/chrome-extension/dist-advanced/', import.meta.url),
 );
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
-async function hashDirectory(directory) {
-  const hash = createHash('sha256');
-  for (const name of (await readdir(directory)).sort()) {
-    hash
-      .update(name)
-      .update('\0')
-      .update(await readFile(path.join(directory, name)))
-      .update('\0');
-  }
-  return hash.digest('hex');
-}
 const productionSha256 = await hashDirectory(production);
-let embeddedScannerBuildSha256;
-if (ownedScan) {
-  const bundle = await readFile(path.join(production, 'background.js'), 'utf8');
-  const identities = [
-    ...new Set(
-      [...bundle.matchAll(/["']([a-f0-9]{64})["']/g)].map((match) => match[1]),
-    ),
-  ];
-  if (identities.length !== 1)
-    throw new Error(
-      'Owned fixture requires one unambiguous cold-build source identity in the actual background bundle.',
-    );
-  embeddedScannerBuildSha256 = identities[0];
-}
+const embeddedScannerBuildSha256 = ownedScan
+  ? await readEmbeddedBuildIdentity(production)
+  : undefined;
 await cp(production, extension, { recursive: true });
 const manifest = JSON.parse(
   await readFile(path.join(extension, 'manifest.json'), 'utf8'),
@@ -81,148 +63,39 @@ if (!manifest.permissions.includes('debugger'))
   );
 // Keep the manifest and every production permission unchanged. CORS is allowed
 // by this loopback evidence endpoint; site access is granted through real UI.
-const geometry = [];
-let originalTab, originalDocumentId;
 // Request callbacks may observe startup before the environment has been collected.
 // eslint-disable-next-line prefer-const
 let environment;
 let browser,
   stopping = false;
-const server = createServer(async (request, response) => {
-  try {
-    response.setHeader('access-control-allow-origin', '*');
-    response.setHeader('access-control-allow-headers', 'content-type');
-    if (request.method === 'OPTIONS') {
-      response.end();
-      return;
-    }
-    if (request.method === 'POST') {
-      let body = '';
-      for await (const chunk of request) {
-        body += chunk;
-        if (body.length > 15_000_000) {
-          response.writeHead(413);
-          response.end();
-          return;
-        }
-      }
-      const value = JSON.parse(body);
-      if (request.url === '/geometry') {
-        geometry.push(value);
-        if (geometry.length > 600) geometry.shift();
-      } else if (ownedScan && request.url === '/original-tab') {
-        if (originalTab)
-          throw new Error('Original fixture tab already recorded');
-        if (
-          !Number.isSafeInteger(value.tabId) ||
-          !Number.isSafeInteger(value.windowId)
-        )
-          throw new Error('Original fixture tab identity unavailable');
-        originalTab = value;
-      } else if (request.url === '/progress')
-        console.log(JSON.stringify(value));
-      else if (request.url === '/checkpoint') {
-        await writeFile(
-          path.join(evidenceDirectory, 'checkpoint.json'),
-          JSON.stringify(value, null, 2),
-        );
-      } else if (request.url === '/terminal') {
-        if ((await hashDirectory(production)) !== productionSha256)
-          throw new Error('Production build changed during fixture');
-        value.environment = environment;
-        value.pageGeometry = geometry;
-        value.geometryBeforeStart = geometry.findLast(
-          (entry) => entry.at < Date.parse(value.job.startedAt),
-        );
-        await writeFile(
-          path.join(evidenceDirectory, 'evidence.json'),
-          JSON.stringify(value, null, 2),
-        );
-        await writeFile(
-          path.join(evidenceDirectory, 'local-job.json'),
-          JSON.stringify(value.job, null, 2),
-        );
-        await writeFile(
-          path.join(evidenceDirectory, 'report.json'),
-          JSON.stringify(value.report, null, 2),
-        );
-        console.log(
-          JSON.stringify({
-            terminal: value.job.state,
-            mode,
-            evidenceDirectory,
-            errors: value.errors,
-            actionPerformed: Boolean(value.roundTrip || value.cancellation),
-          }),
-        );
-      } else {
-        response.writeHead(404);
-      }
-      response.end('ok');
-      return;
-    }
-    if (request.url.startsWith('/geometry-before-start?')) {
-      const at = Number(
-        new URL(request.url, 'http://localhost').searchParams.get('at'),
-      );
-      response.setHeader('content-type', 'application/json');
-      response.end(
-        JSON.stringify(geometry.findLast((entry) => entry.at < at) ?? null),
-      );
-      return;
-    }
-    if (ownedScan && request.url === '/original-page') {
-      response.setHeader('content-type', 'application/json');
-      response.end(
-        JSON.stringify({
-          tab: originalTab ?? null,
-          documentId: originalDocumentId ?? null,
-          geometry:
-            geometry.findLast(
-              (entry) => entry.documentId === originalDocumentId,
-            ) ?? null,
-        }),
-      );
-      return;
-    }
-    if (request.url === '/robots.txt') {
-      response.end('User-agent: *\n');
-      return;
-    }
-    if (request.url !== '/') {
-      response.writeHead(404);
-      response.end('No other route');
-      return;
-    }
-    response.setHeader('content-type', 'text/html');
-    const documentId = ownedScan ? randomUUID() : undefined;
-    if (ownedScan) originalDocumentId ??= documentId;
-    // The same tiny control-triggered CSS signal used in existing native detail
-    // fixtures. Cancel mode uses a static signal, retaining only slow low contrast motion.
-    response.end(
-      nativeCandidatePage({
-        fixed: mode === 'cancel' || mode === 'complete',
-      }).replace(
-        '</body>',
-        `<script>
-      ${ownedScan ? `globalThis.__nativeContextDocumentId=${JSON.stringify(documentId)};` : ''}
-      function geometry(){fetch('/geometry',{method:'POST',body:JSON.stringify({at:Date.now(),width:innerWidth,height:innerHeight,dpr:devicePixelRatio,outerWidth,outerHeight,visibility:document.visibilityState${ownedScan ? `,documentId:${JSON.stringify(documentId)},url:location.href,timeOrigin:performance.timeOrigin` : ''}})}).catch(()=>{})}
-      geometry();addEventListener('resize',geometry);setInterval(geometry,500);
-      </script></body>`,
-      ),
-    );
-  } catch (error) {
-    console.error(String(error));
-    response.writeHead(500);
-    response.end(String(error));
-  }
+const server = createNativeContextServer({
+  ownedScan,
+  mode,
+  evidenceDirectory,
+  production,
+  productionSha256,
+  getEnvironment: () => environment,
 });
+
 await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
 const origin = `http://127.0.0.1:${server.address().port}`;
 const sources = {};
 for (const name of [
   'native-context-guard.mjs',
+  'native-context-server.mjs',
+  'native-build-identity.mjs',
+  'native-context-proof-common.mjs',
+  'native-owned-scan-proof.mjs',
+  'native-owned-preparation-proof.mjs',
+  'native-cancellation-proof.mjs',
+  'native-tab-switch-proof.mjs',
   'native-context-controller.js',
+  'native-context-original.js',
+  'native-context-owned.js',
+  'native-context-snapshot.js',
+  'native-context-roundtrip.js',
+  'native-context-probe.js',
+  'native-context-poll.js',
   'native-context-background.js',
   'native-context-tab-switch.mjs',
   'native-context-placeholder.html',
@@ -241,10 +114,17 @@ await writeFile(
     '\n' +
     (await readFile(path.join(extension, 'offscreen.js'), 'utf8')),
 );
-await cp(
-  fileURLToPath(new URL('native-context-controller.js', import.meta.url)),
-  path.join(extension, 'fixture-controller.js'),
-);
+await build({
+  entryPoints: [
+    fileURLToPath(new URL('native-context-controller.js', import.meta.url)),
+  ],
+  outfile: path.join(extension, 'fixture-controller.js'),
+  bundle: true,
+  format: 'iife',
+  external: ['./fixture-tab-switch.mjs'],
+  platform: 'browser',
+  target: 'chrome120',
+});
 await cp(
   fileURLToPath(new URL('native-context-tab-switch.mjs', import.meta.url)),
   path.join(extension, 'fixture-tab-switch.mjs'),

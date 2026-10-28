@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
 import { createServer } from 'node:http';
-import { serveEncodedAsset } from './native-encoded-source.mjs';
-import { mkdtemp, readFile, writeFile } from 'node:fs/promises';
-import { tmpdir } from 'node:os';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import { testMediaLoopReplay } from './media-replay-loop-browser.mjs';
+import { testMediaReplayRejection } from './media-replay-rejection-browser.mjs';
+import { serveEncodedAsset } from './native-encoded-source.mjs';
 
 /** Actual HTMLVideoElement/seek/rVFC control proof, not tabCapture or pixel QA. */
 export async function testMediaReplay({ page, worker, tabId, send }) {
@@ -202,267 +202,28 @@ export async function testMediaReplay({ page, worker, tabId, send }) {
       [],
     );
 
-    // Actual 5s loop seam, with both currentTime and compositor callback wraps.
-    await page.evaluate(() => {
-      const v = document.querySelector('video');
-      v.loop = true;
-      v.pause();
+    const loopPlan = await testMediaLoopReplay({
+      page,
+      request,
+      segment,
+      start,
+      stop,
+      measuredMediaInterval,
+      mediaPlanFromEvidence,
     });
-    const loopSnapshot = await request({ type: 'FG_MEDIA_SNAPSHOT' });
-    const loopPlan = {
-      version: 1,
-      status: 'REPLAYABLE',
-      reasons: [],
-      items: loopSnapshot.items,
-    };
-    loopPlan.items[0].timeMs = loopPlan.items[0].durationMs - 1000;
-    loopPlan.items[0].paused = false;
-    const loopPrepared = await request({
-      type: 'FG_MEDIA_REPLAY_PREPARE',
-      mediaPlan: loopPlan,
-    });
-    assert.equal(
-      loopPrepared.achieved,
-      true,
-      JSON.stringify({
-        loopPrepared,
-        loopPlan,
-        actual: await request({ type: 'FG_MEDIA_SNAPSHOT' }),
-      }),
-    );
-    segment = await start();
-    assert.equal(
-      (await request({ type: 'FG_MEDIA_REPLAY_RELEASE' })).achieved,
-      true,
-    );
-    await page.waitForTimeout(5000);
-    const loop = await stop(segment),
-      interval = measuredMediaInterval(loop.items[0]);
-    const trace = await page.evaluate(() => globalThis.__stopMediaLoopTrace());
-    if (!loop.complete || !interval) {
-      const retained = await mkdtemp(
-        path.join(tmpdir(), 'epiless-media-loop-failure-'),
-      );
-      await writeFile(
-        path.join(retained, 'trace.json'),
-        JSON.stringify(
-          {
-            scope: 'Actual HTMLVideoElement DOM/rVFC proof; no native capture',
-            loop,
-            interval: interval ?? null,
-            independentEvents: trace,
-          },
-          null,
-          2,
-        ),
-        { flag: 'wx' },
-      );
-      console.error(`Retained media loop failure: ${retained}/trace.json`);
-    }
-    let loopProgress = interval;
-    if (!loop.complete || !interval) {
-      // Functional browser CI can miss a real compositor callback at a seam.
-      // Accept only that independently corroborated, correctly rejected case;
-      // native capture acceptance and original production evidence stay strict.
-      const item = loop.items[0],
-        frames = item.presentations;
-      const gaps = frames.flatMap((frame, index) =>
-        index > 0 &&
-        frame.presentedFrames !== frames[index - 1].presentedFrames + 1
-          ? [{ previous: frames[index - 1], next: frame }]
-          : [],
-      );
-      assert.ok(
-        gaps.length > 0,
-        'No independently testable counter gap explains the failure',
-      );
-      for (const { previous, next } of gaps) {
-        assert.ok(next.presentedFrames > previous.presentedFrames + 1);
-        const matches = trace.filter(
-          (event) =>
-            event.type === 'presentation' &&
-            event.epochMs >= loop.startedEpochMs &&
-            event.epochMs <= loop.endedEpochMs,
-        );
-        const first = matches.findIndex(
-          (event) => event.presentedFrames === previous.presentedFrames,
-        );
-        assert.ok(first >= 0);
-        assert.equal(matches[first].timeMs, previous.timeMs);
-        assert.equal(matches[first + 1]?.presentedFrames, next.presentedFrames);
-        assert.equal(matches[first + 1]?.timeMs, next.timeMs);
-      }
-      assert.ok(
-        loop.reasons.every((reason) => reason === 'MEDIA_LOOP_SEEK_UNPROVEN'),
-      );
-      assert.equal(mediaPlanFromEvidence(loop).status, 'UNSUPPORTED');
-      // Counter-only diagnostic: no PTS is invented or inserted. This proves no
-      // other clock/rate/stall/sample failure is hidden behind the known gap.
-      // This copy is never exported, replayed or accepted by production.
-      const diagnostic = structuredClone(item);
-      diagnostic.presentations.forEach(
-        (frame, index) =>
-          (frame.presentedFrames = frames[0].presentedFrames + index),
-      );
-      loopProgress = measuredMediaInterval(diagnostic);
-      assert.ok(
-        loopProgress,
-        'A failure besides the independently witnessed counter gap remains',
-      );
-      console.log(
-        'Actual loop callback gap independently confirmed; original media remains UNSUPPORTED.',
-      );
-    }
-    assert.ok(loopProgress.wraps >= 2);
-    assert.ok(loopProgress.presentedWraps >= 2);
-    assert.ok(loopProgress.presentations >= 100);
-
-    // Changed locator/rate, seek jumps, transient insertion and incomplete bounds
-    // cannot become a comparable absence.
-    await page.evaluate(() => {
-      const v = document.querySelector('video');
-      v.pause();
-      v.playbackRate = 2;
-    });
-    assert.equal(
-      (await request({ type: 'FG_MEDIA_REPLAY_PREPARE', mediaPlan: loopPlan }))
-        .achieved,
-      false,
-    );
-    await page.evaluate(
-      () => (document.querySelector('video').playbackRate = 1),
-    );
-    assert.equal(
-      (await request({ type: 'FG_MEDIA_REPLAY_PREPARE', mediaPlan: loopPlan }))
-        .achieved,
-      true,
-    );
-    segment = await start();
-    await page.evaluate(() => {
-      const v = document.querySelector('video');
-      v.currentTime = 0.3;
-      const transient = document.createElement('video');
-      document.body.append(transient);
-      transient.remove();
-    });
-    await page.waitForTimeout(100);
-    const mutated = await stop(segment);
-    assert.equal(mutated.complete, false);
-    assert.ok(mutated.reasons.includes('MEDIA_SEEK_DURING_OBSERVATION'));
-    assert.ok(mutated.reasons.includes('MEDIA_MEMBERSHIP_CHANGED'));
-    await page.evaluate((sourceUrl) => {
-      document.querySelector('video').src = sourceUrl + '?changed';
-    }, sourceUrl);
-    await page.waitForFunction(
-      () => document.querySelector('video').readyState >= 2,
-    );
-    assert.equal(
-      (await request({ type: 'FG_MEDIA_REPLAY_PREPARE', mediaPlan: loopPlan }))
-        .achieved,
-      false,
-    );
-    await request({ type: 'FG_RESTORE' });
-    assert.equal(
-      await page.evaluate(() => document.querySelector('video').paused),
-      true,
-    );
-
-    // Restore preserves the original playback settings and never restarts playback.
-    await load();
-    await page.evaluate(() => {
-      const v = document.querySelector('video');
-      v.muted = false;
-      v.currentTime = 0.4;
-    });
-    await page.waitForFunction(() => !document.querySelector('video').seeking);
-    const restoreState = (await request({ type: 'FG_MEDIA_SNAPSHOT' }))
-      .items[0];
-    const changed = structuredClone(restoreState);
-    changed.timeMs = 1_000;
-    assert.equal(
-      (
-        await request({
-          type: 'FG_MEDIA_REPLAY_PREPARE',
-          mediaPlan: {
-            version: 1,
-            status: 'REPLAYABLE',
-            reasons: [],
-            items: [changed],
-          },
-        })
-      ).achieved,
-      true,
-    );
-    await request({ type: 'FG_CANCEL' });
-    await request({ type: 'FG_RESTORE' });
-    assert.deepEqual(
-      await page.evaluate(() => {
-        const v = document.querySelector('video');
-        return {
-          paused: v.paused,
-          muted: v.muted,
-          time: v.currentTime,
-          rate: v.playbackRate,
-          loop: v.loop,
-        };
-      }),
-      { paused: true, muted: false, time: 0.4, rate: 1, loop: false },
-    );
-    // A long-video metadata boundary is explicitly unsupported, never a
-    // silently clamped, apparently exact 24-hour replay recipe.
-    // A synthetic metadata edge case in the same isolated world as content;
-    // this does not pretend to decode a 24-hour video.
-    await worker.evaluate(
-      (tabId) =>
-        chrome.scripting.executeScript({
-          target: { tabId },
-          func: () =>
-            Object.defineProperty(document.querySelector('video'), 'duration', {
-              value: 86400.001,
-              configurable: true,
-            }),
-        }),
+    await testMediaReplayRejection({
+      loopPlan,
+      page,
+      request,
+      segment,
+      start,
+      stop,
+      sourceUrl,
+      load,
+      worker,
       tabId,
-    );
-    const overlong = await request({ type: 'FG_MEDIA_SNAPSHOT' });
-    assert.equal(overlong.complete, false);
-    assert.ok(overlong.reasons.includes('MEDIA_TIME_LIMIT_REACHED'));
-    assert.equal(overlong.items[0].durationMs, null);
-    assert.equal(
-      (
-        await request({
-          type: 'FG_MEDIA_REPLAY_PREPARE',
-          mediaPlan: {
-            version: 1,
-            status: 'REPLAYABLE',
-            reasons: [],
-            items: [restoreState],
-          },
-        })
-      ).reason,
-      'MEDIA_TIME_LIMIT_REACHED',
-    );
-    segment = await start();
-    const overlongEvidence = await stop(segment);
-    assert.equal(overlongEvidence.complete, false);
-    assert.ok(overlongEvidence.reasons.includes('MEDIA_TIME_LIMIT_REACHED'));
-    assert.equal(mediaPlanFromEvidence(overlongEvidence).status, 'UNSUPPORTED');
-    await worker.evaluate(
-      (tabId) =>
-        chrome.scripting.executeScript({
-          target: { tabId },
-          func: () => delete document.querySelector('video').duration,
-        }),
-      tabId,
-    );
-    await page.evaluate(() => {
-      for (let i = 0; i < 8; i++)
-        document.body.append(document.createElement('video'));
+      mediaPlanFromEvidence,
     });
-    assert.equal(
-      (await request({ type: 'FG_MEDIA_SNAPSHOT' })).complete,
-      false,
-    );
   } finally {
     await page.goto('about:blank');
     server.closeAllConnections();
