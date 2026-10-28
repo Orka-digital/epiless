@@ -12,9 +12,11 @@ Do not turn an inconclusive result into a pass, hide missing coverage, upload ca
 
 ## Documented module boundaries
 
-Give each module one clear responsibility. Split files when they mix state ownership, transport validation, policy and rendering; a line count alone is not a reason to create another wrapper. Aim for implementation modules of roughly 300–400 lines when those responsibilities can stand independently. Large existing modules can be improved in focused follow-up PRs; frozen evidence and generated sources are not refactoring targets.
+Give each module one clear responsibility. Split files when they mix state ownership, transport validation, policy and rendering; a line count alone is not a reason to create another wrapper. ESLint enforces a maximum of 250 code lines per maintained JavaScript, TypeScript, TSX or Astro file, excluding blank lines and comments. Existing oversized files have exact, non-growing ceilings in [.eslint-file-limits.json](.eslint-file-limits.json); this is visible refactoring debt, not an exemption for new modules. Lower or remove a ceiling when splitting its file. Do not add entries, raise ceilings, disable the rule or compress code to make a check pass. Frozen evidence and generated sources remain outside this gate.
 
 Use JSDoc for exported functions, factories and non-obvious contracts. Explain the purpose, meaningful parameters, return behavior, side effects and failure conditions. Document safety and privacy limits near the code that enforces them. TypeScript declarations own the types; do not duplicate them in `{Type}` tags. JavaScript helpers still need explicit JSDoc types under `checkJs`. Avoid comments that merely repeat a function name.
+
+Components should own a coherent UI responsibility and receive explicit typed data and callbacks. Keep asynchronous workflows and state ownership in focused hooks/services, use composition for nested content, and reuse existing controls when their behavior is shared. Avoid nested component definitions and one-line wrappers created only to satisfy a line count.
 
 A structural refactor must retain behavior and existing regression coverage. Internal modules should import their direct dependencies, not their own entrypoint; avoid circular dependencies and expanding a package's public API just to share a helper. Update [the codebase map](docs/CODEBASE.md) when responsibilities move.
 
@@ -40,7 +42,7 @@ The shared [ESLint configuration](eslint.config.mjs) applies JavaScript and Type
 
 Test files retain an explicit `any` exception for malformed boundary inputs and partial browser mocks. The production ban remains enabled. Generated sources, third-party reference code and retained extension evidence are excluded. Intentional exceptions in maintained code must use a narrow disable comment explaining the reason; unused disable comments fail linting. Never silence a whole file or weaken a rule just to make CI green.
 
-These checks complement strict TypeScript, Knip and browser tests. They do not prove scanner accuracy or replace accessibility and security verification.
+These checks complement strict TypeScript, Knip and browser tests. The file-length rule checks size, not component quality; responsibilities and useful reuse still need review. These checks do not prove scanner accuracy or replace accessibility and security verification.
 
 Pin dependency and Action changes and explain their purpose. Fork pull requests receive no deployment, signing, mail or account secrets.
 

@@ -6,6 +6,7 @@ import jsdoc from 'eslint-plugin-jsdoc';
 import hooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import legacyFileLimits from './.eslint-file-limits.json' with { type: 'json' };
 
 export default defineConfig([
   // Frozen evidence and generated output must never be rewritten by lint:fix.
@@ -35,6 +36,10 @@ export default defineConfig([
       'no-new-func': 'error',
       'no-var': 'error',
       'prefer-const': 'error',
+      'max-lines': [
+        'error',
+        { max: 250, skipBlankLines: true, skipComments: true },
+      ],
       'no-unused-vars': [
         'error',
         {
@@ -138,6 +143,14 @@ export default defineConfig([
       'jsdoc/valid-types': 'error',
     },
   },
+  // Exact legacy ceilings prevent growth; new files must meet the 250-line limit.
+  // Lower/remove these entries when splitting a module, never raise them to pass CI.
+  ...Object.entries(legacyFileLimits).map(([file, max]) => ({
+    files: [file],
+    rules: {
+      'max-lines': ['error', { max, skipBlankLines: true, skipComments: true }],
+    },
+  })),
   // Formatting has one owner: Prettier. Keep this configuration last.
   prettier,
 ]);
