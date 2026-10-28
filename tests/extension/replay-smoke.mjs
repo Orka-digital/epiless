@@ -257,6 +257,7 @@ try {
     );
   const run = async (job) => {
     await store(job);
+    const replayPageCreated = context.waitForEvent('page');
     const prepared = await send({
       type: 'PREPARE_RECHECK',
       replayOf: {
@@ -266,6 +267,7 @@ try {
       },
     });
     assert.equal(prepared.ok, true, prepared.error);
+    const replayPage = await replayPageCreated;
     const pending = (await send({ type: 'GET_STATE' })).value.recheck;
     assert.equal(pending.replayOf.jobId, job.id);
     for (let count = 0; count < 100; count++) {
@@ -282,6 +284,17 @@ try {
         chrome.windows.get((await chrome.tabs.get(tabId)).windowId),
       pending.tabId,
     );
+    if (new URL(job.startUrl).pathname === '/media') {
+      // This fixture replaces tabCapture, so Chrome has no capture session to
+      // keep the replay renderer producing video frames. Explicitly foreground
+      // the newly created page, just as we do for the baseline below. This is
+      // control-flow evidence, not background capture/cadence acceptance.
+      await replayPage.bringToFront();
+      assert.equal(
+        await replayPage.evaluate(() => document.visibilityState),
+        'visible',
+      );
+    }
     const started = await send({
       type: 'PREPARE_START',
       tabId: pending.tabId,
