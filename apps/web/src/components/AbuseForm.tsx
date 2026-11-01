@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { api, type ChallengeData } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
 import Challenge from './Challenge';
+/** Submit an explicit abuse report with challenge verification and visible errors. */
 export default function AbuseForm({
   id,
   accessToken,
@@ -8,8 +10,7 @@ export default function AbuseForm({
   id: string;
   accessToken?: string;
 }) {
-  const [hydrated, setHydrated] = useState(false);
-  useEffect(() => setHydrated(true), []);
+  const hydrated = useHydrated();
   const [category, setCategory] = useState('privacy');
   const [reason, setReason] = useState('');
   const [challenge, setChallenge] = useState<ChallengeData | null>(null);
@@ -57,7 +58,11 @@ export default function AbuseForm({
       </div>
     );
   return (
-    <form className="form-panel" onSubmit={submit} method="post">
+    <form
+      className="form-panel"
+      onSubmit={(event) => void submit(event)}
+      method="post"
+    >
       <noscript>
         <p className="notice">
           Schakel JavaScript in om de melding veilig te versturen en de
@@ -102,7 +107,11 @@ export default function AbuseForm({
         </button>
       </fieldset>
       {challenge && (
-        <Challenge challenge={challenge} onToken={complete} onError={fail} />
+        <Challenge
+          challenge={challenge}
+          onToken={(token) => void complete(token)}
+          onError={fail}
+        />
       )}
       <p role="alert" className={error ? 'notice error' : ''}>
         {error}

@@ -1,3 +1,4 @@
+import { Script } from 'node:vm';
 import { describe, expect, it } from 'vitest';
 import { readFile } from 'node:fs/promises';
 import { nativeLoopPage, appendLoopTrace } from './native-loop-page.mjs';
@@ -26,7 +27,7 @@ describe('native loop fixture and evidence verifier (no browser or capture)', ()
     expect(html).not.toContain('/__native-encoded/signal.webm');
     expect(html).not.toMatch(/\.play\(|\bautoplay\b|captureStream/);
     expect(
-      () => new Function(html.match(/<script>([\s\S]*)<\/script>/)![1]),
+      () => new Script(html.match(/<script>([\s\S]*)<\/script>/)![1]),
     ).not.toThrow();
     expect(() => nativeLoopPage(encodedPageSource(assets, false))).toThrow();
   });

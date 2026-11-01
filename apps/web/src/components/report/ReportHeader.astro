@@ -1,0 +1,118 @@
+---
+import type { AuditReport } from '@epi-less/core';
+import type { ReportPagination } from '../../lib/report-pagination';
+import { dateLabel, hostLabel } from '../../lib/display';
+import Status from '../Status.astro';
+/** Report identity, full-report totals and the non-normative measurement notice. */
+interface Props {
+  report: AuditReport;
+  pagination: ReportPagination;
+  example: boolean;
+}
+const { report, pagination, example } = Astro.props;
+---
+
+<header class="audit-heading">
+  <div class="audit-heading-top">
+    <p class="eyebrow">{example ? 'Voorbeeldrapport' : 'Website-audit'}</p>
+    <span class="audit-source">
+      {example ? 'Synthetische data' : 'Aangeleverd door een gebruiker'}
+    </span>
+  </div>
+  <h1 class="report-domain">{hostLabel(report.origin)}</h1>
+  <div class="audit-heading-bottom">
+    <p class="audit-date">Gemeten op {dateLabel(report.startedAt)}</p>
+    <Status value={report.status} />
+  </div>
+</header>
+<dl class="stats audit-stats">
+  <div>
+    <dt>Routes bezocht</dt>
+    <dd>{report.job.visitedRoutes}</dd>
+  </div>
+  <div>
+    <dt>Routes ontdekt</dt>
+    <dd>{report.job.discoveredRoutes}</dd>
+  </div>
+  <div>
+    <dt>Scenario’s</dt>
+    <dd>{pagination.scenarioCount}</dd>
+  </div>
+  <div>
+    <dt>Kandidaten</dt>
+    <dd>{pagination.findingCount}</dd>
+  </div>
+</dl>
+<div class="audit-context">
+  <p>
+    <strong>Meetbeperking.</strong> Dit rapport beschrijft alleen wat de scan
+    heeft waargenomen. De detector is nog niet normatief gevalideerd. Dit
+    resultaat is geen veiligheidskeurmerk en geen bevestigde WCAG-beoordeling.
+  </p>
+</div>
+
+<style>
+  .audit-heading {
+    padding-bottom: 18px;
+  }
+  .audit-heading-top,
+  .audit-heading-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .audit-heading .eyebrow {
+    font-size: 11px;
+  }
+  .audit-source {
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .report-domain {
+    font: 700 clamp(26px, 3vw, 34px)/1.2 var(--body);
+    letter-spacing: -0.035em;
+    overflow-wrap: anywhere;
+    margin: 12px 0;
+  }
+  .audit-date {
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .audit-stats {
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+  }
+  .audit-stats > div {
+    padding: 14px 18px;
+  }
+  .audit-stats dt {
+    font: 500 11px/1.5 var(--body);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .audit-stats dd {
+    font: 650 26px/1.2 var(--body);
+    margin-top: 6px;
+  }
+  .audit-context {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+  }
+  .audit-context p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  @media (max-width: 600px) {
+    .audit-stats > div {
+      padding: 12px 16px;
+    }
+  }
+</style>

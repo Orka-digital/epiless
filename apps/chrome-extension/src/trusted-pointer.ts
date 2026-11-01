@@ -29,6 +29,7 @@ const chromePointerDriver: PointerDriver = {
   },
   detach: (tabId) => chrome.debugger.detach({ tabId }),
 };
+/** Attach debugger input only for the requested tab and document ownership. */
 export async function attachPointerSession(
   tabId: number,
   driver = chromePointerDriver,
@@ -41,6 +42,7 @@ export async function attachPointerSession(
     throw new Error('DEBUGGER_ALREADY_ATTACHED');
   await driver.attach(tabId);
 }
+/** Release the owned debugger session and report detach failures to the caller. */
 export async function detachPointerSession(
   tabId: number,
   driver = chromePointerDriver,

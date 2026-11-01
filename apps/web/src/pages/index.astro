@@ -1,4 +1,5 @@
 ---
+import ScanLauncher from '../components/ScanLauncher.astro';
 import Shell from '../layouts/Shell.astro';
 import Icon from '../components/Icon.astro';
 import '../styles/home.css';
@@ -16,87 +17,7 @@ import '../styles/home.css';
     </a>
   </div>
   <div class="wrap page-content workbench">
-    <section class="scan-launcher" aria-labelledby="scan-title">
-      <div class="section-bar">
-        <div>
-          <Icon name="scan" />
-          <h2 id="scan-title">Nieuwe scan</h2>
-        </div>
-        <span class="subtle-tag">Via de Chrome-extensie</span>
-      </div>
-      <div class="launcher-body">
-        <form id="launch-scan" class="launch-form" action="/download">
-          <label for="scan-url">Welke website wil je onderzoeken?</label>
-          <div class="url-control">
-            <Icon name="globe" />
-            <input
-              id="scan-url"
-              type="text"
-              inputmode="url"
-              autocomplete="url"
-              placeholder="https://voorbeeld.be"
-              required
-              aria-describedby="scan-help"
-            />
-            <button class="button" type="submit">
-              Website openen <Icon name="external" />
-            </button>
-          </div>
-          <p id="scan-help">
-            Open de site en start epi-less via de browserwerkbalk. Daarna
-            onderzoekt de extensie de website automatisch.
-          </p>
-        </form>
-        <div id="launch-feedback" class="launch-feedback" role="status" hidden>
-          <Icon name="scan" />
-          <div>
-            <strong>Start de scan in de geopende tab.</strong>
-            <p>
-              Klik op epi-less naast de adresbalk en kies{' '}
-              <b>Scan deze website</b>. Je volgt de voortgang in de lokale
-              werkruimte.
-            </p>
-          </div>
-        </div>
-        <noscript>
-          <p class="fine">
-            Open de te onderzoeken website zelf en start epi-less via de
-            browserwerkbalk. De knop hierboven opent de installatiehandleiding.
-          </p>
-        </noscript>
-        <ol class="scan-flow" aria-label="Scanworkflow">
-          <li>
-            <span>01</span>
-            <div>
-              <strong>Website openen</strong>
-              <small>Kies de pagina waar je start</small>
-            </div>
-          </li>
-          <li>
-            <span>02</span>
-            <div>
-              <strong>Starten via epi-less</strong>
-              <small>Geef toegang in de browser</small>
-            </div>
-          </li>
-          <li>
-            <span>03</span>
-            <div>
-              <strong>Resultaten onderzoeken</strong>
-              <small>Bekijk bevindingen en dekking</small>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="launcher-footer">
-        <span>
-          <Icon name="lock" /> Scans blijven op je apparaat tot je zelf deelt.
-        </span>
-        <a href="/download">
-          Extensie installeren <Icon name="arrow" />
-        </a>
-      </div>
-    </section>
+    <ScanLauncher />
     <div class="workbench-lower">
       <section class="recent-reports" aria-labelledby="recent-title">
         <div class="section-bar">

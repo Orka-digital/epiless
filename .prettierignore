@@ -5,6 +5,7 @@ dist-advanced
 .astro
 .wrangler
 artifacts
+coverage
 test-results
 playwright-report
 epi-less-audit.md

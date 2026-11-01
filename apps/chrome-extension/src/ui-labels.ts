@@ -8,6 +8,7 @@ export const labels: Record<string, string> = {
   INTERRUPTED: 'Onderbroken',
   ERROR: 'Scan mislukt',
 };
+/** Translate known scenario identifiers while retaining a useful fallback for stored reports. */
 export function scenarioLabel(value: string) {
   const compact = value.startsWith('compact-');
   const scenario = value.replace(/^compact-/, '');
@@ -30,6 +31,7 @@ export function scenarioLabel(value: string) {
       : scenario.replaceAll('-', ' ');
   return `${label}${compact ? ' · compact scherm' : ''}`;
 }
+/** Describe the recorded stop condition without inferring additional coverage. */
 export function stopSummary(reason: string | undefined) {
   if (!reason) return 'Voortgang wordt lokaal bewaard.';
   const names: Record<string, string> = {

@@ -2,6 +2,7 @@ import type { CommandAction } from './command-protocol';
 import { TERMINAL_STATES, type ScanJob } from './model';
 import { labels } from './ui-labels';
 import type { AppState } from './ui-state';
+/** Render retained job summaries and dispatch explicit selection/export actions. */
 export function ScanHistory({
   jobs,
   site,

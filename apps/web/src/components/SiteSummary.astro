@@ -1,0 +1,85 @@
+---
+import Status from './Status.astro';
+import type { getSiteSummary } from '../server';
+import { dateLabel } from '../lib/display';
+interface Props {
+  summary: Awaited<ReturnType<typeof getSiteSummary>> | null;
+}
+const { summary } = Astro.props;
+---
+
+{summary?.totals && summary.latest && (
+  <div class="site-summary">
+    <h2>Openbare meetgeschiedenis</h2>
+    <dl class="site-stats">
+      <div>
+        <dt>Rapporten</dt>
+        <dd>{summary.totals.reports}</dd>
+      </div>
+      <div>
+        <dt>Eerste meting</dt>
+        <dd>
+          {dateLabel(new Date(summary.totals.first_audit!).toISOString())}
+        </dd>
+      </div>
+      <div>
+        <dt>Laatste meting</dt>
+        <dd>{dateLabel(new Date(summary.totals.last_audit!).toISOString())}</dd>
+      </div>
+      <div>
+        <dt>Rapporten met kandidaten</dt>
+        <dd>{summary.totals.reports_with_candidates || 0}</dd>
+      </div>
+    </dl>
+    <p>
+      <strong>Scope van de recentste meting:</strong>{' '}
+      {summary.latest.measuredRoutes} van {summary.latest.discoveredRoutes}{' '}
+      ontdekte routes gemeten · {summary.latest.scenarioCount} scenario's ·{' '}
+      {summary.latest.candidateCount} kandidaten.
+    </p>
+    <p class="fine">
+      Stopreden: {summary.latest.stopReason} · engine{' '}
+      {summary.latest.engineVersion}. De routeverzameling is geen volledige
+      site-inventaris. Verschillende bijdragers en scopes blijven afzonderlijk;
+      een nieuwe meting lost eerdere kandidaten niet automatisch op.
+    </p>
+    <Status value={summary.latest.status} />
+  </div>
+)}
+
+<style>
+  .site-summary {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .site-summary h2 {
+    font-size: 16px;
+  }
+  .site-summary p {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  .site-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+  }
+  .site-stats dt {
+    color: var(--muted);
+    font-size: 11px;
+  }
+  .site-stats dd {
+    margin: 4px 0 0;
+    font-size: 14px;
+    font-weight: 650;
+  }
+  @media (max-width: 700px) {
+    .site-stats {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

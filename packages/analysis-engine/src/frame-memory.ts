@@ -106,6 +106,30 @@ export abstract class FrameMemory {
     this.frameIndex = 0;
     this.general = new TransitionHistory(size, this.frameTimes, arena);
     this.red = new OpposingPairHistory(size, this.frameTimes, arena);
+    this.allocateTemporalViews(size, arena);
+    this.queue = new Int32Array(size);
+    this.previousRgb =
+      (arena?.views.previous_rgb as Uint32Array | undefined) ??
+      new Uint32Array(size).fill(0xffffffff);
+    this.representatives =
+      (arena?.views.representatives as Uint32Array | undefined) ??
+      new Uint32Array(size);
+    for (let pixel = 0; pixel < size; pixel++)
+      this.representatives[pixel] = pixel;
+    this.tileColumns = Math.ceil(width / 8);
+    this.tileUniform = new Uint8Array(this.tileColumns * Math.ceil(height / 8));
+    this.tilePeers = new Int32Array(this.tileUniform.length).fill(-1);
+    this.tileDependents = new Uint32Array(this.tileUniform.length);
+    this.tilesPrepared = false;
+    this.tileCandidateCounts.fill(0);
+    this.previousFrame = new Uint32Array(size);
+    this.previousFrameAtMs = undefined;
+    this.accountStateBytes(size, arena);
+  }
+  private allocateTemporalViews(
+    size: number,
+    arena: WasmDenseArena | undefined,
+  ): void {
     this.luminance =
       (arena?.views.luminance as Float64Array | undefined) ??
       new Float64Array(size).fill(NaN);
@@ -126,23 +150,11 @@ export abstract class FrameMemory {
     this.redStart =
       (arena?.views.redstart as Uint16Array | undefined) ??
       new Uint16Array(size);
-    this.queue = new Int32Array(size);
-    this.previousRgb =
-      (arena?.views.previous_rgb as Uint32Array | undefined) ??
-      new Uint32Array(size).fill(0xffffffff);
-    this.representatives =
-      (arena?.views.representatives as Uint32Array | undefined) ??
-      new Uint32Array(size);
-    for (let pixel = 0; pixel < size; pixel++)
-      this.representatives[pixel] = pixel;
-    this.tileColumns = Math.ceil(width / 8);
-    this.tileUniform = new Uint8Array(this.tileColumns * Math.ceil(height / 8));
-    this.tilePeers = new Int32Array(this.tileUniform.length).fill(-1);
-    this.tileDependents = new Uint32Array(this.tileUniform.length);
-    this.tilesPrepared = false;
-    this.tileCandidateCounts.fill(0);
-    this.previousFrame = new Uint32Array(size);
-    this.previousFrameAtMs = undefined;
+  }
+  private accountStateBytes(
+    size: number,
+    arena: WasmDenseArena | undefined,
+  ): void {
     this.stateBytes =
       this.frameTimes.byteLength +
       this.colors.allocatedBytes +

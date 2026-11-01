@@ -1,5 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { api } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
+/** Render authenticated account controls and preserve confirmation for destructive actions. */
 export default function AccountActions({
   id,
   revision,
@@ -15,8 +17,7 @@ export default function AccountActions({
   visibility: 'PRIVATE' | 'UNLISTED' | 'PUBLIC';
   publicAccessNeedsConfirmation?: boolean;
 }) {
-  const [hydrated, setHydrated] = useState(false);
-  useEffect(() => setHydrated(true), []);
+  const hydrated = useHydrated();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [confirm, setConfirm] = useState<
@@ -48,19 +49,11 @@ export default function AccountActions({
     <div>
       {confirm ? (
         <>
-          <p className="fine">
-            {confirm === 'delete'
-              ? 'De online rapportinhoud definitief verwijderen? Je lokale audit blijft bestaan.'
-              : confirm === 'rotate-link'
-                ? 'De oude verborgen link wordt ongeldig. Ontvangers hebben daarna de nieuwe link nodig.'
-                : confirm === 'visibility'
-                  ? `Zichtbaarheid wijzigen naar ${nextVisibility === 'PRIVATE' ? 'privé' : nextVisibility === 'PUBLIC' ? 'openbaar in de index' : 'alleen via een link'}? Bestaande verborgen links vervallen. Eerder gedownloade kopieën blijven bij de ontvanger.`
-                  : 'Dit rapport intrekken? De bestaande link geeft daarna geen toegang meer. Eerder gedownloade kopieën kunnen niet worden teruggehaald.'}
-          </p>
+          <p className="fine">{confirmationText(confirm, nextVisibility)}</p>
           <div className="actions">
             <button
               className="button danger small"
-              onClick={act}
+              onClick={() => void act()}
               disabled={busy || !hydrated}
             >
               {confirm === 'delete'
@@ -127,7 +120,7 @@ export default function AccountActions({
               className="button outline small"
               disabled={!hydrated}
               onClick={() =>
-                navigator.clipboard
+                void navigator.clipboard
                   .writeText(new URL(shareUrl, location.origin).href)
                   .then(() => setCopied(true))
                   .catch(() =>
@@ -165,4 +158,17 @@ export default function AccountActions({
       )}
     </div>
   );
+}
+
+function confirmationText(
+  confirm: 'delete' | 'rotate-link' | 'visibility' | 'revoke',
+  nextVisibility: 'PRIVATE' | 'PUBLIC' | 'UNLISTED',
+): string {
+  return confirm === 'delete'
+    ? 'De online rapportinhoud definitief verwijderen? Je lokale audit blijft bestaan.'
+    : confirm === 'rotate-link'
+      ? 'De oude verborgen link wordt ongeldig. Ontvangers hebben daarna de nieuwe link nodig.'
+      : confirm === 'visibility'
+        ? `Zichtbaarheid wijzigen naar ${nextVisibility === 'PRIVATE' ? 'privé' : nextVisibility === 'PUBLIC' ? 'openbaar in de index' : 'alleen via een link'}? Bestaande verborgen links vervallen. Eerder gedownloade kopieën blijven bij de ontvanger.`
+        : 'Dit rapport intrekken? De bestaande link geeft daarna geen toegang meer. Eerder gedownloade kopieën kunnen niet worden teruggehaald.';
 }

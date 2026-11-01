@@ -61,6 +61,17 @@ export interface AnalyzerProbe
   frameIndex: number;
   representativeCount: number;
   tilesPrepared: boolean;
+  /** Current engine quality has its own owner; frozen engines retain root fields. */
+  quality?: Pick<
+    AnalyzerProbe,
+    | 'invalid'
+    | 'interrupted'
+    | 'count'
+    | 'first'
+    | 'last'
+    | 'gap'
+    | 'downsampled'
+  >;
   invalid: boolean;
   interrupted: boolean;
   count: number;
@@ -97,6 +108,7 @@ export type SpatialProbe = Pick<
   | 'frameIndex'
   | 'mergeFrom'
   | 'downsampled'
+  | 'quality'
   | 'visualField'
   | 'currentRgba'
   | 'currentMotion'

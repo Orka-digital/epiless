@@ -11,7 +11,7 @@
     "dev": "node scripts/dev.mjs",
     "dev:extension": "pnpm --filter @epi-less/chrome-extension dev",
     "setup:local": "node scripts/setup-local.mjs",
-    "check": "pnpm typecheck && pnpm format:check && node scripts/check-docs.mjs && pnpm check:unused",
+    "check": "pnpm typecheck && pnpm lint && pnpm format:check && node scripts/check-docs.mjs && pnpm check:unused && pnpm check:architecture",
     "typecheck": "pnpm -r --if-present typecheck && pnpm typecheck:scripts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -32,18 +32,30 @@
     "feed:preview": "node scripts/serve-feed.mjs",
     "validate:spatial-media": "node --import tsx scripts/validate-spatial-media.mjs",
     "check:unused": "knip",
-    "typecheck:scripts": "tsc -p tsconfig.scripts.json"
+    "typecheck:scripts": "tsc -p tsconfig.scripts.json",
+    "lint": "eslint . --max-warnings 0 && pnpm check:contracts",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "check:architecture": "node scripts/check-architecture.mjs",
+    "check:contracts": "node scripts/check-code-quality.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "10.0.1",
     "@playwright/test": "1.64.1",
     "@types/node": "24.19.2",
     "esbuild": "0.28.2",
+    "eslint": "10.13.0",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-astro": "3.2.1",
+    "eslint-plugin-jsdoc": "65.4.2",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.13.0",
     "knip": "6.43.0",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
     "tsx": "4.23.15",
     "typescript": "6.0.3",
+    "typescript-eslint": "8.72.1",
     "vitest": "5.0.5"
   }
 }

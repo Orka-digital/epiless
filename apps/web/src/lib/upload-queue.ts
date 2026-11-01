@@ -69,6 +69,7 @@ async function transaction<T>(
   });
 }
 
+/** Read durable local upload jobs without starting network work. */
 export async function listUploads(): Promise<UploadJob[]> {
   const jobs = await transaction<UploadJob[]>('readonly', (store, set) => {
     const request = store.getAll();
@@ -77,6 +78,7 @@ export async function listUploads(): Promise<UploadJob[]> {
   return jobs.sort((a, b) => b.approvedAt - a.approvedAt);
 }
 
+/** Read one queued upload by identity; missing work stays absent. */
 export function getUpload(id: string): Promise<UploadJob | undefined> {
   return transaction('readonly', (store, set) => {
     const request = store.get(id);
@@ -84,6 +86,7 @@ export function getUpload(id: string): Promise<UploadJob | undefined> {
   });
 }
 
+/** Persist explicit approval for the exact preview before upload may begin. */
 export async function approveUpload(input: {
   accountId: string;
   accountName: string;
@@ -122,6 +125,7 @@ export async function approveUpload(input: {
   return job;
 }
 
+/** Persist queue progress without transferring approval to different report content. */
 export function updateUpload(
   id: string,
   update: JobUpdate,
@@ -144,6 +148,7 @@ export function updateUpload(
   });
 }
 
+/** Remove only the selected local queue entry. */
 export function forgetUpload(id: string): Promise<void> {
   return transaction('readwrite', (store) => {
     const request = store.get(id);
@@ -173,6 +178,7 @@ export async function clearAccountUploads(accountId: string): Promise<void> {
   }
 }
 
+/** Reject queue work whose content or account no longer matches explicit approval. */
 export async function assertApproved(job: UploadJob): Promise<void> {
   if ((await contentHash(job.report)) !== job.contentHash)
     throw new Error(

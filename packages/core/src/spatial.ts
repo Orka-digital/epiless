@@ -95,6 +95,8 @@ export const spatialEvidenceSchema = z
         code: 'custom',
         message: 'Visual-field evidence contradicts exact mask counts',
       });
+  })
+  .superRefine((v, ctx) => {
     if (
       v.pattern.kind === 'EXACT_BALANCED_CHECKERBOARD' &&
       (!v.pattern.cellWidthPx || !v.pattern.cellHeightPx)

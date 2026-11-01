@@ -2,6 +2,7 @@ import type { CommandAction } from './command-protocol';
 import { type ScanMode } from './model';
 import type { PendingRecheck } from './store';
 import { ToolIcon } from './ToolIcon';
+/** Render explicit scan-start controls and prerequisites. */
 export function ScanStart({
   devtools,
   targetOrigin,
@@ -194,19 +195,13 @@ export function ScanStart({
             disabled={busy || !targetOrigin}
             onClick={() => void start()}
           >
-            {busy
-              ? 'Voorbereiden…'
-              : useAdvanced && !advancedPreparation
-                ? 'Aparte scantab openen'
-                : advancedPreparation
-                  ? recheck
-                    ? 'Hercontrole starten'
-                    : 'Start scan'
-                  : recheck
-                    ? 'Hercontrole starten'
-                    : mode !== 'AUTONOMOUS'
-                      ? 'Start viewportmeting'
-                      : 'Scan deze website'}{' '}
+            {startLabel({
+              busy,
+              useAdvanced,
+              advancedPreparation,
+              recheck,
+              mode,
+            })}{' '}
             <ToolIcon name="play" />
           </button>
         </>
@@ -218,4 +213,29 @@ export function ScanStart({
       </p>
     </section>
   );
+}
+
+function startLabel({
+  busy,
+  useAdvanced,
+  advancedPreparation,
+  recheck,
+  mode,
+}: Pick<
+  Parameters<typeof ScanStart>[0],
+  'busy' | 'useAdvanced' | 'advancedPreparation' | 'recheck' | 'mode'
+>): string {
+  return busy
+    ? 'Voorbereiden…'
+    : useAdvanced && !advancedPreparation
+      ? 'Aparte scantab openen'
+      : advancedPreparation
+        ? recheck
+          ? 'Hercontrole starten'
+          : 'Start scan'
+        : recheck
+          ? 'Hercontrole starten'
+          : mode !== 'AUTONOMOUS'
+            ? 'Start viewportmeting'
+            : 'Scan deze website';
 }

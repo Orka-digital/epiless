@@ -1,12 +1,13 @@
-import { useEffect, useState, type SubmitEvent } from 'react';
+import { useState, type SubmitEvent } from 'react';
 import { api } from '../lib/client-api';
+import { useHydrated } from '../lib/use-hydrated';
 
+/** Export or erase account data only after explicit revalidation and confirmation. */
 export default function AccountData({ accountId }: { accountId: string }) {
   const [action, setAction] = useState<'export' | 'delete' | null>(null);
   const [busy, setBusy] = useState(false);
-  const [hydrated, setHydrated] = useState(false);
+  const hydrated = useHydrated();
   const [message, setMessage] = useState('');
-  useEffect(() => setHydrated(true), []);
   async function submit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!action) return;
@@ -89,7 +90,10 @@ export default function AccountData({ accountId }: { accountId: string }) {
           </button>
         </div>
       ) : (
-        <form onSubmit={submit} style={{ maxWidth: 480, marginTop: 16 }}>
+        <form
+          onSubmit={(event) => void submit(event)}
+          style={{ maxWidth: 480, marginTop: 16 }}
+        >
           {action === 'delete' && (
             <p className="notice">
               Alle online rapporten, deellinks, uploads en sessies worden

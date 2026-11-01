@@ -1,14 +1,15 @@
-import type { CommandAction } from './command-protocol';
 import { useState } from 'react';
+import type { CommandAction } from './command-protocol';
 import type { ScanJob } from './model';
 import { explainPhaseReason } from './PhaseEvidencePanel';
 import {
   compareVerification,
-  issueReviewKey,
   hasFreshVerification,
+  issueReviewKey,
   type IssueAnchor,
   type IssueReview,
 } from './verification';
+import { VerificationActions } from './VerificationActions';
 
 const labels = {
   CONFIRMED: 'Probleem bevestigd',
@@ -16,6 +17,7 @@ const labels = {
   RESOLVED: 'Opgelost na hercontrole',
   REOPENED: 'Teruggekeerd na herstel',
 };
+/** Render explicit review and recheck actions with the recorded comparison limitations. */
 export function VerificationPanel({
   job,
   anchor,
@@ -124,46 +126,9 @@ export function VerificationPanel({
           placeholder="Wat heb je vastgesteld of aangepast?"
         />
       </label>
-      <div className="actions">
-        <button
-          disabled={disabled || note.trim().length < 3}
-          onClick={() => void review('CONFIRMED')}
-        >
-          Probleem bevestigen
-        </button>
-        <button
-          disabled={disabled || note.trim().length < 3}
-          onClick={() => void review('FALSE_POSITIVE')}
-        >
-          Geen probleem vastleggen
-        </button>
-        <button
-          disabled={
-            disabled ||
-            note.trim().length < 3 ||
-            comparison?.status !== 'NOT_OBSERVED' ||
-            !fresh ||
-            !latest ||
-            !['CONFIRMED', 'REOPENED'].includes(latest.decision)
-          }
-          onClick={() => void review('RESOLVED')}
-        >
-          Als opgelost beoordelen
-        </button>
-        <button
-          disabled={
-            disabled ||
-            note.trim().length < 3 ||
-            comparison?.status !== 'REOBSERVED' ||
-            latest?.decision !== 'RESOLVED' ||
-            !check ||
-            Date.parse(check.startedAt) <= Date.parse(latest.at)
-          }
-          onClick={() => void review('REOPENED')}
-        >
-          Terugkeer bevestigen
-        </button>
-      </div>
+      <VerificationActions
+        {...{ disabled, note, comparison, fresh, latest, check, review }}
+      />
       {reviews.length > 0 && (
         <ol>
           {reviews.map((value) => (

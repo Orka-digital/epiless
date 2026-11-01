@@ -6,6 +6,7 @@ export const linear = Float64Array.from({ length: 256 }, (_, channel) => {
   return srgb <= 0.04045 ? srgb / 12.92 : ((srgb + 0.055) / 1.055) ** 2.4;
 });
 
+/** Cache exact sRGB conversions without approximating channel values. */
 export class ExactSrgbCache {
   private readonly tags = new Uint32Array(4096).fill(0xffffffff);
   readonly luminance = new Float64Array(4096);

@@ -39,7 +39,7 @@
       "project": ["src/**/*.{ts,tsx}", "*.mjs"],
     },
     "apps/web": {
-      "project": ["src/**/*.{ts,tsx,astro}", "*.{ts,mjs}"],
+      "project": ["src/**/*.{ts,tsx,astro}", "test/**/*.test.ts", "*.{ts,mjs}"],
       // cloudflare:workers is a runtime-provided module, not an npm dependency.
       "ignoreDependencies": ["cloudflare"],
     },

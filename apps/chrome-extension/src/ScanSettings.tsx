@@ -1,5 +1,6 @@
 import type { CommandAction } from './command-protocol';
 import type { AppState } from './ui-state';
+/** Render controlled scan settings; changes are delegated to the owning state. */
 export function ScanSettings({
   busy,
   state,

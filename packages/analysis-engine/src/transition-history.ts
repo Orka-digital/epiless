@@ -1,6 +1,7 @@
 import type { WasmDenseArena } from './wasm-dense.js';
 // Half-open rolling windows avoid endpoint double counting.
 const WITHIN_ROLLING_SECOND_MS = 1000 - 1e-6;
+/** Retain bounded alternating-transition history using actual source timestamps. */
 export class TransitionHistory {
   readonly starts: Uint16Array;
   readonly count: Uint8Array;
@@ -50,6 +51,7 @@ export class TransitionHistory {
     return this.times[this.starts[pixel * 7 + this.next[pixel]]];
   }
 }
+/** Retain opposing-pair history without joining unsupported temporal epochs. */
 export class OpposingPairHistory {
   readonly starts: Uint16Array;
   readonly previous: Uint16Array;

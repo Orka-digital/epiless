@@ -36,6 +36,7 @@ export function stableJson(value: unknown): string {
   return encode(value);
 }
 
+/** Hash the exact input bytes to lowercase SHA-256 hex. */
 export async function sha256Bytes(bytes: Uint8Array): Promise<string> {
   const digest = await crypto.subtle.digest('SHA-256', new Uint8Array(bytes));
   return Array.from(new Uint8Array(digest), (byte) =>

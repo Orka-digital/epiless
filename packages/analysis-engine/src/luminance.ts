@@ -1,4 +1,5 @@
 import { linear } from './color-cache.js';
+/** Compute relative luminance from linearized sRGB channels. */
 export function relativeLuminance(
   red: number,
   green: number,

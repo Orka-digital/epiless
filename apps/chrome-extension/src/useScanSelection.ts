@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { TERMINAL_STATES, type ScanJob } from './model';
 import type { AppState } from './ui-state';
+/** Derive route and observation selection from the current job without changing scan execution. */
 export function useScanSelection(state: AppState | undefined, popup: boolean) {
   const [selected, setSelected] = useState(location.hash.slice(1));
   const [site, setSite] = useState('');
@@ -20,32 +21,8 @@ export function useScanSelection(state: AppState | undefined, popup: boolean) {
     )
       setSite('');
   }, [state, site]);
-  const jobs = state?.jobs ?? [];
-  const active = jobs.find((job) => !TERMINAL_STATES.includes(job.state));
-  const recheck =
-    state?.recheck?.tabId === state?.tab.id ? state?.recheck : undefined;
-  const advancedPreparation =
-    state?.advancedPreparation?.tabId === state?.tab.id
-      ? state?.advancedPreparation
-      : undefined;
-  const chosen =
-    jobs.find((job) => job.id === selected) ??
-    active ??
-    (popup
-      ? jobs.find(
-          (job) =>
-            job.state === 'INTERRUPTED' &&
-            !job.disposableSource?.closed &&
-            job.tabId === state?.tab.id,
-        )
-      : undefined) ??
-    jobs[0];
-  const popupReport = Boolean(
-    active ||
-    (chosen?.state === 'INTERRUPTED' &&
-      !chosen.disposableSource?.closed &&
-      chosen.tabId === state?.tab.id),
-  );
+  const { jobs, active, recheck, advancedPreparation, chosen, popupReport } =
+    selectJobContext(state, selected, popup);
   const findingsCount = (job: ScanJob) =>
     job.detailsExpiredAt
       ? (job.retainedCandidates ?? []).reduce(
@@ -117,4 +94,47 @@ export function useScanSelection(state: AppState | undefined, popup: boolean) {
     deletion,
     setDeletion,
   };
+}
+
+function selectJobContext(
+  state: AppState | undefined,
+  selected: string,
+  popup: boolean,
+) {
+  const jobs = state?.jobs ?? [];
+  const active = jobs.find((job) => !TERMINAL_STATES.includes(job.state));
+  const recheck =
+    state?.recheck?.tabId === state?.tab.id ? state?.recheck : undefined;
+  const advancedPreparation =
+    state?.advancedPreparation?.tabId === state?.tab.id
+      ? state?.advancedPreparation
+      : undefined;
+  const chosen =
+    jobs.find((job) => job.id === selected) ??
+    active ??
+    (popup
+      ? jobs.find(
+          (job) =>
+            job.state === 'INTERRUPTED' &&
+            !job.disposableSource?.closed &&
+            job.tabId === state?.tab.id,
+        )
+      : undefined) ??
+    jobs[0];
+  const popupReport = showPopupReport(active, chosen, state);
+  return { jobs, active, recheck, advancedPreparation, chosen, popupReport };
+}
+
+function showPopupReport(
+  active: ScanJob | undefined,
+  chosen: ScanJob | undefined,
+  state: AppState | undefined,
+): boolean {
+  const popupReport = Boolean(
+    active ||
+    (chosen?.state === 'INTERRUPTED' &&
+      !chosen.disposableSource?.closed &&
+      chosen.tabId === state?.tab.id),
+  );
+  return popupReport;
 }

@@ -3,9 +3,10 @@ import {
   normalizePublicUrl,
   type AuditReport,
 } from '@epi-less/core';
-import type { ScanJob } from './model';
 import { copyDiagnostics } from '@epi-less/core/diagnostics';
+import type { ScanJob } from './model';
 
+/** Build an audit snapshot from recorded observations; unobserved coverage remains explicit. */
 export function buildReport(job: ScanJob): AuditReport {
   const observations = job.tasks.flatMap((task) => task.observations);
   const findings = observations.flatMap(

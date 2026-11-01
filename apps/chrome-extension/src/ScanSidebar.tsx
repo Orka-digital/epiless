@@ -2,6 +2,7 @@ import { type ScanJob } from './model';
 import { ToolIcon } from './ToolIcon';
 import { labels } from './ui-labels';
 import type { AppState } from './ui-state';
+/** Render scan navigation and account controls without starting capture. */
 export function ScanSidebar({
   setWorkspaceView,
   workspaceView,

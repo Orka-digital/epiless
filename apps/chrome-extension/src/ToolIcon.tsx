@@ -12,6 +12,7 @@ const paths = {
   info: 'M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM12 11v6m0-10v1',
 };
 
+/** Render a decorative tool icon; the caller owns its accessible label. */
 export function ToolIcon({ name }: { name: keyof typeof paths }) {
   return (
     <svg

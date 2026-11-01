@@ -3,6 +3,7 @@ export default defineConfig({
   test: {
     include: [
       'packages/**/*.test.ts',
+      'apps/*/test/**/*.test.ts',
       'tests/backend/**/*.test.ts',
       'tests/extension/**/*.test.ts',
       'tests/operations/**/*.test.ts',

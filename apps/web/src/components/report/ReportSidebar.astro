@@ -1,0 +1,119 @@
+---
+import type { AuditReport } from '@epi-less/core';
+import { statusLabel } from '../../lib/display';
+/** Explain the scan plan and review context separately from measured findings. */
+interface Props {
+  report: AuditReport;
+}
+const { report } = Astro.props;
+---
+
+<aside class="audit-sidebar" aria-label="Context van het rapport">
+  <div class="audit-note">
+    <h2 class="sidebar-label">Scanplan</h2>
+    <dl class="scan-settings">
+      <div>
+        <dt>Status</dt>
+        <dd>{statusLabel(report.job.state)}</dd>
+      </div>
+      <div>
+        <dt>Max. routes</dt>
+        <dd>{report.job.maxRoutes}</dd>
+      </div>
+      <div>
+        <dt>Max. diepte</dt>
+        <dd>{report.job.maxDepth}</dd>
+      </div>
+      <div>
+        <dt>Tijdbudget</dt>
+        <dd>{Math.round(report.job.maxDurationMs / 60000)} min.</dd>
+      </div>
+      <div>
+        <dt>Engine</dt>
+        <dd>{report.engineVersion}</dd>
+      </div>
+    </dl>
+    <div class="stop-reason">
+      <span class="sidebar-label">Stopreden</span>
+      <code>{report.job.stopReason}</code>
+    </div>
+  </div>
+  <div class="reading-note">
+    <h2 class="sidebar-label">Beoordeling</h2>
+    <p>
+      Een kandidaat vraagt om verdere beoordeling. Ook als er geen kandidaten
+      zijn, blijven de meetkwaliteit en beperkingen van belang.
+    </p>
+    <a href="/docs">
+      Over de meetmethode <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</aside>
+
+<style>
+  .audit-note {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--surface);
+  }
+  .sidebar-label {
+    font: 650 13px/1.4 var(--body);
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .scan-settings {
+    margin: 14px 0;
+    font-size: 12px;
+  }
+  .scan-settings > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-block: 10px;
+  }
+  .scan-settings dt {
+    color: var(--muted);
+  }
+  .scan-settings dd {
+    margin: 0;
+    text-align: right;
+    overflow-wrap: anywhere;
+  }
+  .stop-reason {
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+  .stop-reason code {
+    display: block;
+    font-size: 11px;
+    margin-top: 6px;
+  }
+  .reading-note {
+    padding: 18px 2px;
+  }
+  .reading-note > p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin-top: 8px;
+  }
+  .reading-note a {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  @media (max-width: 1000px) {
+    .audit-sidebar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    .audit-sidebar {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+    }
+  }
+</style>

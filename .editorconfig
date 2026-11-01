@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+# Preserve retained evidence and third-party sources when opened in an editor.
+# Prettier's byte-exact exclusions are maintained in .prettierignore.
+[{tests/reference/**,tests/extension/evidence/**,tests/extension/fixtures/native-encoded/**,packages/analysis-engine/validation/**,epi-less-audit.md,pnpm-lock.yaml}]
+charset = unset
+indent_style = unset
+indent_size = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset

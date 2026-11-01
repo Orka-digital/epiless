@@ -2,6 +2,7 @@ import type { BackgroundCommand } from './command-protocol';
 import { getJob, mutateJob, setPendingRecheck } from './store';
 import { appendReview } from './verification';
 
+/** Dispatch validated verification commands while preserving job ownership and review prerequisites. */
 export async function handleVerificationCommand(
   message: BackgroundCommand,
 ): Promise<{ handled: boolean; value?: unknown }> {

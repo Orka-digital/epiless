@@ -191,6 +191,7 @@ export const DEFAULT_HISTORY_SETTINGS: HistorySettings = {
   schemaVersion: 1,
   detailRetentionDays: 90,
 };
+/** Return the configured bounded viewport observation duration. */
 export function viewportDuration(mode: ScanMode, seconds?: unknown): number {
   if (mode !== 'EXTENDED') return 15_000;
   const value =
