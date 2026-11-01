@@ -1,10 +1,10 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
 
 import { gzipSync } from 'node:zlib';
 
 import { mkdir, writeFile } from 'node:fs/promises';
 
-import './site.fixture';
+import { test } from './site.fixture';
 test.describe('site', () => {
   test('production first-render requests fit budgets including inline island bootstrap', async ({
     browser,

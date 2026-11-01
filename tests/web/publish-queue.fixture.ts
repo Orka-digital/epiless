@@ -1,20 +1,10 @@
-import { expect, test, type BrowserContext, type Page } from '@playwright/test';
+import { expect, type BrowserContext, type Page } from '@playwright/test';
 
 import { exampleReport } from '../../apps/web/src/lib/example-report';
 
 import type { UploadJob } from '../../apps/web/src/lib/upload-queue';
 
 const password = 'Local-queue-test-password-48!';
-
-test.beforeEach(async ({ context }) => {
-  // Distinct local simulated network actors keep the real rate limiter enabled
-  // without making independent test accounts consume each other's IP quota.
-  const network = `2001:db8:${crypto.randomUUID().slice(0, 4)}:${crypto.randomUUID().slice(0, 4)}::1`;
-  await context.setExtraHTTPHeaders({
-    'CF-Connecting-IP': network,
-    'X-Forwarded-For': network,
-  });
-});
 
 export async function auth(
   context: BrowserContext,

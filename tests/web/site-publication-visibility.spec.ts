@@ -1,7 +1,7 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
 
 import { exampleReport } from '../../apps/web/src/lib/example-report';
-import './site.fixture';
+import { test } from './site.fixture';
 test.describe('site', () => {
   test('real account and explicit private, unlisted and public snapshots with withdrawal', async ({
     page,
@@ -96,7 +96,17 @@ test.describe('site', () => {
     await page
       .getByLabel('Wat klopt er niet?')
       .fill('Synthetic browser test: this example needs a manual review.');
+    const challengeResponse = page.waitForResponse(
+      (response) =>
+        response.request().method() === 'POST' &&
+        new URL(response.url()).pathname === '/api/security/challenge',
+    );
     await page.getByRole('button', { name: 'Melding versturen' }).click();
+    const challenge = await challengeResponse;
+    expect(await challenge.request().headerValue('cf-connecting-ip')).toMatch(
+      /^2001:db8:/,
+    );
+    expect(challenge.ok(), await challenge.text()).toBe(true);
     await expect(page.getByText('Je melding is ontvangen.')).toBeVisible();
     await page.goto('/account');
     const publicCard = page

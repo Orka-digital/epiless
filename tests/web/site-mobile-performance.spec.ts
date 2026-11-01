@@ -1,8 +1,8 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
 
 import { mkdir, writeFile } from 'node:fs/promises';
 
-import './site.fixture';
+import { test } from './site.fixture';
 test.describe('site', () => {
   test('fixed mobile lab: median of three cold LCP and CLS runs', async ({
     browser,

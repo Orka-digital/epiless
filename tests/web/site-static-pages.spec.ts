@@ -1,8 +1,8 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
 
 import AxeBuilder from '@axe-core/playwright';
 
-import './site.fixture';
+import { test } from './site.fixture';
 test.describe('site', () => {
   test('public pages work without JavaScript and keep their rendering budgets', async ({
     browser,

@@ -1,4 +1,6 @@
-import { chromium, expect, test, type BrowserContext } from '@playwright/test';
+import { chromium, expect, type BrowserContext } from '@playwright/test';
+
+import { test } from './site.fixture';
 
 import { mkdtemp, rm } from 'node:fs/promises';
 
