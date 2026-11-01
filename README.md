@@ -93,6 +93,8 @@ The engine looks for general luminance and saturated-red flash candidates in cap
 | `NO_ISSUES_OBSERVED` | No candidates were observed in the measured scope.              |
 | `INCONCLUSIVE`       | Capture or coverage was insufficient for a reliable conclusion. |
 
+The [result glossary](docs/SCANNER-QUALITY.md#result-glossary) explains candidates, partial coverage and targeted recheck outcomes with examples.
+
 A stopped or failed runner can still retain useful segments; inspect its job state and stop reason separately. Every report keeps `passed: null`. Read the findings even when a report is inconclusive: insufficient capture does not erase an observed candidate. A completed route plan is not a safety or conformance verdict.
 
 Engine **0.4.0-candidate** preserves native pixels within a **2,073,600-pixel budget** (1920 × 1080) and bounds retained analysis state to 256 MiB. Larger sources are rescaled and disclosed. Its bundled WASM kernel preserves Float64 calculations and shared histories. Current changes retain one complete spatial witness and constrain source clues to the actual event window; numeric regressions and real Chrome control-flow tests cover these changes.
