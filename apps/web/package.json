@@ -13,7 +13,7 @@
   "dependencies": {
     "@astrojs/cloudflare": "14.4.2",
     "@astrojs/react": "7.1.1",
-    "@better-auth/drizzle-adapter": "1.7.12",
+    "@better-auth/drizzle-adapter": "1.7.14",
     "@epi-less/core": "workspace:*",
     "astro": "7.4.2",
     "better-auth": "1.7.12",
