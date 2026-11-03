@@ -11,7 +11,7 @@
     "db:migrate:local": "wrangler d1 migrations apply flashguard --local"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "14.4.2",
+    "@astrojs/cloudflare": "14.4.3",
     "@astrojs/react": "7.1.1",
     "@better-auth/drizzle-adapter": "1.7.12",
     "@epi-less/core": "workspace:*",
